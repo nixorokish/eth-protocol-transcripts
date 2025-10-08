@@ -1,0 +1,223 @@
+{
+  "1750_2025-10-06": {
+    "processed_at": "2025-10-07T21:12:21.160059",
+    "meeting_type": "ACDT",
+    "meeting_num": "56",
+    "date": "2025-10-06"
+  },
+  "1746_2025-09-29": {
+    "processed_at": "2025-10-07T21:12:22.198358",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": "13",
+    "date": "2025-09-29"
+  },
+  "1738_2025-09-29": {
+    "processed_at": "2025-10-07T21:12:25.440477",
+    "meeting_type": "EIP-7928",
+    "meeting_num": "3",
+    "date": "2025-09-24"
+  },
+  "1730_2025-09-24": {
+    "processed_at": "2025-10-07T21:12:28.042938",
+    "meeting_type": "Trustless-Agents",
+    "meeting_num": "1",
+    "date": "2025-09-23"
+  },
+  "1729_2025-09-16": {
+    "processed_at": "2025-10-07T21:12:29.048100",
+    "meeting_type": "Trustless-Agents",
+    "meeting_num": "1",
+    "date": "2025-09-23"
+  },
+  "1724_2025-09-15": {
+    "processed_at": "2025-10-07T21:12:31.606123",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": null,
+    "date": "2025-09-15"
+  },
+  "1723_2025-09-29": {
+    "processed_at": "2025-10-07T21:12:32.650374",
+    "meeting_type": "ACDE",
+    "meeting_num": "221",
+    "date": "2025-09-25"
+  },
+  "1722_2025-09-10": {
+    "processed_at": "2025-10-07T21:12:33.634283",
+    "meeting_type": "PQ-Interop",
+    "meeting_num": "9",
+    "date": "2025-09-10"
+  },
+  "1712_2025-09-04": {
+    "processed_at": "2025-10-07T21:12:51.022531",
+    "meeting_type": "PQ-Interop",
+    "meeting_num": null,
+    "date": "2025-09-03",
+    "files_uploaded": 3
+  },
+  "1708_2025-09-12": {
+    "processed_at": "2025-10-07T21:12:53.025387",
+    "meeting_type": "EIP-7928",
+    "meeting_num": null,
+    "date": "2025-09-10"
+  },
+  "1698_2025-08-29": {
+    "processed_at": "2025-10-07T21:13:12.337725",
+    "meeting_type": "PQ-Interop",
+    "meeting_num": "7",
+    "date": "2025-08-27",
+    "files_uploaded": 3
+  },
+  "1691_2025-08-29": {
+    "processed_at": "2025-10-07T21:13:27.966556",
+    "meeting_type": "EIP-7928",
+    "meeting_num": "1",
+    "date": "2025-08-27",
+    "files_uploaded": 3
+  },
+  "1752_2025-10-08": {
+    "processed_at": "2025-10-07T23:05:44.334751",
+    "meeting_type": "EIP-Editing-Office-Hour",
+    "meeting_num": "74",
+    "date": "2025-10-07"
+  },
+  "1743_2025-10-08": {
+    "processed_at": "2025-10-07T23:05:51.886230",
+    "meeting_type": "FOCIL",
+    "meeting_num": null,
+    "date": "2025-10-07",
+    "status": "downloaded"
+  },
+  "1741_2025-10-02": {
+    "processed_at": "2025-10-07T23:06:02.003320",
+    "meeting_type": "L2-Interop",
+    "meeting_num": null,
+    "date": "2025-10-01",
+    "status": "downloaded"
+  },
+  "1737_2025-09-24": {
+    "processed_at": "2025-10-07T23:06:14.161292",
+    "meeting_type": "FOCIL",
+    "meeting_num": null,
+    "date": "2025-09-23",
+    "status": "downloaded"
+  },
+  "1736_2025-09-30": {
+    "processed_at": "2025-10-07T23:06:21.961042",
+    "meeting_type": "ACDT",
+    "meeting_num": "48",
+    "date": "2025-09-29",
+    "status": "downloaded"
+  },
+  "1731_2025-09-23": {
+    "processed_at": "2025-10-07T23:06:29.402435",
+    "meeting_type": "ACDT",
+    "meeting_num": "54",
+    "date": "2025-09-22",
+    "status": "downloaded"
+  },
+  "1725_2025-09-19": {
+    "processed_at": "2025-10-07T23:06:42.024998",
+    "meeting_type": "L2-Interop",
+    "meeting_num": null,
+    "date": "2025-09-17",
+    "status": "downloaded"
+  },
+  "1720_2025-09-12": {
+    "processed_at": "2025-10-07T23:06:51.784374",
+    "meeting_type": "FOCIL",
+    "meeting_num": null,
+    "date": "2025-09-09",
+    "status": "downloaded"
+  },
+  "1719_2025-09-16": {
+    "processed_at": "2025-10-07T23:06:59.280626",
+    "meeting_type": "ACDT",
+    "meeting_num": "48",
+    "date": "2025-09-15",
+    "status": "downloaded"
+  },
+  "1716_2025-09-23": {
+    "processed_at": "2025-10-07T23:07:07.133052",
+    "meeting_type": "ACDC",
+    "meeting_num": "165",
+    "date": "2025-09-18",
+    "status": "downloaded"
+  },
+  "1713_2025-09-04": {
+    "processed_at": "2025-10-07T23:07:14.891194",
+    "meeting_type": "L2-Interop",
+    "meeting_num": null,
+    "date": "2025-09-03",
+    "status": "downloaded"
+  },
+  "1710_2025-09-09": {
+    "processed_at": "2025-10-07T23:07:22.470263",
+    "meeting_type": "ACDT",
+    "meeting_num": "51",
+    "date": "2025-09-08",
+    "status": "downloaded"
+  },
+  "1707_2025-09-12": {
+    "processed_at": "2025-10-07T23:07:32.422106",
+    "meeting_type": "ACDE",
+    "meeting_num": "220",
+    "date": "2025-09-11",
+    "status": "downloaded"
+  },
+  "1703_2025-09-02": {
+    "processed_at": "2025-10-07T23:07:40.094715",
+    "meeting_type": "ACDT",
+    "meeting_num": "51",
+    "date": "2025-09-01",
+    "status": "downloaded"
+  },
+  "1700_2025-09-04": {
+    "processed_at": "2025-10-07T23:07:51.911276",
+    "meeting_type": "ACDC",
+    "meeting_num": "164",
+    "date": "2025-09-04",
+    "status": "downloaded"
+  },
+  "1692_2025-08-26": {
+    "processed_at": "2025-10-07T23:08:03.545242",
+    "meeting_type": "ACDT",
+    "meeting_num": "50",
+    "date": "2025-08-25",
+    "status": "downloaded"
+  },
+  "1687_2025-08-29": {
+    "processed_at": "2025-10-07T23:08:13.113509",
+    "meeting_type": "ACDE",
+    "meeting_num": "219",
+    "date": "2025-08-28",
+    "status": "downloaded"
+  },
+  "1680_2025-08-20": {
+    "processed_at": "2025-10-07T23:08:20.733943",
+    "meeting_type": "ACDT",
+    "meeting_num": "49",
+    "date": "2025-08-18",
+    "status": "downloaded"
+  },
+  "1673_2025-08-25": {
+    "processed_at": "2025-10-07T23:08:32.730865",
+    "meeting_type": "ACDC",
+    "meeting_num": "163",
+    "date": "2025-08-21",
+    "status": "downloaded"
+  },
+  "1652_2025-08-14": {
+    "processed_at": "2025-10-07T23:08:47.233279",
+    "meeting_type": "ACDE",
+    "meeting_num": "218",
+    "date": "2025-08-14",
+    "status": "downloaded"
+  },
+  "1648_2025-08-05": {
+    "processed_at": "2025-10-07T23:08:54.589092",
+    "meeting_type": "Unknown",
+    "meeting_num": null,
+    "date": "2025-08-04",
+    "status": "downloaded"
+  }
+}

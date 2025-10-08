@@ -1,0 +1,122 @@
+[
+  {
+    "issue_number": 1747,
+    "title": "Stateless Implementers Call #43 | October 6, 2025",
+    "body_preview": "### UTC Date & Time\n\n[Sep 22, 2025, 15:00 UTC](https://notime.zone/OZUJrDpRahuzn)\n\n### Agenda\n\n1. Team updates\n2. Updates on binary trie t8n self-fixtures consumption progress. (@CPerezz )\n3. Discussi",
+    "closed_at": "2025-10-08T04:14:07Z"
+  },
+  {
+    "issue_number": 1745,
+    "title": "Ethproofs call #5, Native Rollups | September 26th, 2025",
+    "body_preview": ">Duration in minutes : 120\n\n# Agenda \n| Agenda Item | Topic | Link |\n| --- | --- | --- |\n| 01 | Introduction (Justin) | link |\n| 02 | AntChain OpenLabs: New zkVM Announcement | [link](https://docs.goo",
+    "closed_at": "2025-09-26T18:49:22Z"
+  },
+  {
+    "issue_number": 1735,
+    "title": "EIP-7732 Breakout Room Call #24, September 26, 2025",
+    "body_preview": "### UTC Date & Time\n\n[September 26, 2025, 14:00 UTC](https://savvytime.com/converter/utc/sep-26-2025/2pm)\n\n### Agenda\n\n#### Specifications & testing\n\nNew spec release: [v1.6.0-beta.0](https://github.c",
+    "closed_at": "2025-09-26T18:40:28Z"
+  },
+  {
+    "issue_number": 1734,
+    "title": "<call name> <call #>, <call date>",
+    "body_preview": "### UTC Date & Time\n\n19/09/2025\n\n### Agenda\n\n_No response_\n\n### Call Series\n\nAll Core Devs - Consensus\n\n### Duration\n\n60 minutes\n\n### Occurrence Rate\n\nbi-weekly\n\n### Use Custom Meeting Link (Optional)",
+    "closed_at": "2025-09-19T19:14:26Z"
+  },
+  {
+    "issue_number": 1733,
+    "title": "<call name> <call #>, <call date>",
+    "body_preview": "### UTC Date & Time\n\n19/09/2025\n\n### Agenda\n\n_No response_\n\n### Call Series\n\nAll Core Devs - Consensus\n\n### Duration\n\n60 minutes\n\n### Occurrence Rate\n\nbi-weekly\n\n### Use Custom Meeting Link (Optional)",
+    "closed_at": "2025-09-19T19:14:04Z"
+  },
+  {
+    "issue_number": 1732,
+    "title": "<call name> <call #>, <call date>",
+    "body_preview": "### UTC Date & Time\n\n19/09/2025\n\n### Agenda\n\n_No response_\n\n### Call Series\n\nAll Core Devs - Consensus\n\n### Duration\n\n60 minutes\n\n### Occurrence Rate\n\nbi-weekly\n\n### Use Custom Meeting Link (Optional)",
+    "closed_at": "2025-09-19T19:13:39Z"
+  },
+  {
+    "issue_number": 1727,
+    "title": "EIPIP Meeting 120 | Sep 17, 2025",
+    "body_preview": "### UTC Date & Time\n\nSep 17, 2025, 16:00 UTC\n\n### Agenda\n\n# Call for Input\n- Discussion on new [EIP editor \u2013 Mercy](https://github.com/ethcatherders/EIPIP/issues/391)\n- [Allow links to Protocol Buffer",
+    "closed_at": "2025-09-23T03:16:39Z"
+  },
+  {
+    "issue_number": 1718,
+    "title": "Stateless Implementers Call #42 | September 22, 2025",
+    "body_preview": "### UTC Date & Time\n\n[Sep 22, 2025, 15:00 UTC](https://notime.zone/OZUJrDpRahuzn)\n\n### Agenda\n\n1. Team updates\n2. Han's presentation about the state https://ethereum-magicians.org/t/not-all-state-is-e",
+    "closed_at": "2025-09-23T15:46:43Z"
+  },
+  {
+    "issue_number": 1717,
+    "title": "leanConsensus Call #7 (leanMultisig specs) | Sept 5th, 2025",
+    "body_preview": ">Duration in minutes : 120\n\n# Agenda \n| Agenda Item | Topic | Link |\n| --- | --- | --- |\n| 01 | Introduction (Justin) | [link](https://docs.google.com/presentation/d/1PpNcAOsoc7nXAeztavFXHMUCOFACy9pdr",
+    "closed_at": "2025-09-05T20:09:22Z"
+  },
+  {
+    "issue_number": 1714,
+    "title": "EIP-7732 Breakout Room Call #23, September 12, 2025",
+    "body_preview": "### UTC Date & Time\n\n[September 12, 2025, 14:00 UTC](https://savvytime.com/converter/utc/sep-12-2025/2pm)\n\n### Agenda\n\n### Specifications & testing\n\n#### Open\n\n* [eip7732: add tests for process_withdr",
+    "closed_at": "2025-09-15T14:01:51Z"
+  },
+  {
+    "issue_number": 1711,
+    "title": "QMDB Breakout Call #1, September 8, 2025",
+    "body_preview": "### UTC Date & Time\n\n[September 8, 2025, 15:00 UTC](https://savvytime.com/converter/utc/sep-8-2025/3pm)\n\n### Agenda\n\n- Presentation about [QMDB](https://github.com/LayerZero-Labs/qmdb) (Quick Merkle D",
+    "closed_at": "2025-09-09T19:56:04Z"
+  },
+  {
+    "issue_number": 1704,
+    "title": "<call name> <call #>, <call date>",
+    "body_preview": "### UTC Date & Time\n\nAug 29,2025 3:36am\n\n### Agenda\n\n_No response_\n\n### Call Series\n\nAll Core Devs - Consensus\n\n<details>\n<summary>\ud83d\udd27 Meeting Configuration</summary>\n\n### Duration\n\n60 minutes\n\n### Occu",
+    "closed_at": "2025-08-29T13:34:43Z"
+  },
+  {
+    "issue_number": 1699,
+    "title": "Stateless Implementers Call #41, August 25, 2025",
+    "body_preview": "### UTC Date & Time\n[August 25, 2025, 15:00 UTC](https://notime.zone/OYUe-657tvEvq)\n\n### Agenda\nMeeting Info\nAugust 25, 2025, 15:00 UTC\nDuration: 60 minutes\nMeet link: shared in [#state-tree-migration",
+    "closed_at": "2025-08-25T13:48:44Z"
+  },
+  {
+    "issue_number": 1696,
+    "title": "EIP-7732 Breakout Room Call #22, August 29, 2025",
+    "body_preview": "### UTC Date & Time\n\n[August 29, 2025, 14:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250829T140000&p1=tz_gmt&p2=1440)\n\n### Agenda\n \n1. **Payload Post-State Availability in the",
+    "closed_at": "2025-09-02T15:59:27Z"
+  },
+  {
+    "issue_number": 1684,
+    "title": "Stateless Implementers Call #41, August 25, 2025",
+    "body_preview": "### UTC Date & Time\n\n[August 25, 2025, 15:00 UTC](https://notime.zone/OX_yoRzVTXaNe)\n\n### Agenda\n\nMeet link: shared in [#state-tree-migration](https://discord.gg/6ty8Z6Ev) Eth R&D Discord right before",
+    "closed_at": "2025-08-29T13:35:37Z"
+  },
+  {
+    "issue_number": 1679,
+    "title": "acdbot: collapse issue meeting config after creation",
+    "body_preview": "- feature: after issue is created, hide the config settings",
+    "closed_at": "2025-08-11T21:25:16Z"
+  },
+  {
+    "issue_number": 1672,
+    "title": "Stateless Implementers Call #40, August 11, 2025",
+    "body_preview": "### UTC Date & Time\n\n[August 11, 2025, 15:00 UTC](https://notime.zone/OX9nh1oWlnobe)\n\n### Agenda\n\nMeeting Info\nAugust 11, 2025, 15:00 UTC\nDuration: 60 minutes\nMeet link: shared in [#state-tree-migrati",
+    "closed_at": "2025-08-14T18:01:57Z"
+  },
+  {
+    "issue_number": 1667,
+    "title": "acdbot: simplify one-off calls",
+    "body_preview": "refactor + couple bug fixes:\r\n- change the data structure of one-off calls to more closely resemble recurring calls, removing many logic forks throughout\r\n- restrict meeting_id's to the root level; no",
+    "closed_at": "2025-08-06T17:09:56Z"
+  },
+  {
+    "issue_number": 1659,
+    "title": "EIP-7732 Breakout Room  call #21,  August 15, 2025",
+    "body_preview": "### UTC Date & Time\n\n[August 15, 2025, 14:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250815T140000&p1=tz_gmt&p2=1440)\n\n### Agenda\n\n- PTC sample by stake but count votes indivi",
+    "closed_at": "2025-08-18T01:13:11Z"
+  },
+  {
+    "issue_number": 1656,
+    "title": "eth_simulate Implementers' | Meeting #58 | Aug 11, 2025",
+    "body_preview": "# eth_simulate Implementers' # 58, Aug 11, 2025\n\n- Date and time in UTC in format [Aug 11, 2025, 16:00 UTC](https://savvytime.com/converter/utc/aug-11-2025/12pm)\n\n# Agenda \n\n- [Notes from Meeting 57]\n",
+    "closed_at": "2025-08-14T20:07:03Z"
+  }
+]

@@ -1,0 +1,44 @@
+00:04:59	read.ai meeting notes:	Kai added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:05:55	Gajinder Singh:	gm gm
+00:06:09	Will Corcoran:	https://github.com/ethereum/pm/issues/1698
+00:06:17	Jun:	gm
+00:06:22	Bubbles Notetaker:	Hi, I'm taking notes and action items for Tamaghna Choudhuri.
+
+Get Bubbles' AI meeting notetaker: https://bubbl.es/notetaker
+
+Remove me: https://bubbl.es/remove-notetaker?t=9pgiHaXHvAWev9hTkxaAtpsqJ4FZniKBw
+00:06:33	kwame:	Good morning, all.
+00:07:40	Fireflies.ai Notetaker Fu Chua:	Talk to Fireflies: (Web-search enabled) • Say: Hey Fireflies how can you help? • Type: /ff help to get started.  View real-time notes and transcription for this meeting here: https://app.fireflies.ai/live/01K3GSQ67GVC5CH3Q1MQNWDRW7?ref=live_chat
+00:13:03	Gajinder Singh:	https://github.com/leanEthereum/leanSpec/pull/15
+00:29:56	unnawut:	I and Jun from ream went through the PR with Gaijinder just before the call. We already have 3SF-mini almost-exact ported from vitalik’s python. There’s some diff from this PR but not huge so I think it’ll be okay. Still need to test though.
+00:30:14	Will Corcoran:	Reacted to "I and Jun from ream ..." with 👍
+00:30:26	unnawut:	Not sure if Kamil will be joining his client from devnet0 though...
+00:33:30	Jun:	Reacted to "I and Jun from ream ..." with 👍
+00:33:45	Will Corcoran:	Reacted to "Not sure if Kamil wi..." with 👍
+00:34:05	Will Corcoran:	@Kamil Salakhiev do you want to speak to this?  (Status, etc)
+00:38:26	Gajinder Singh:	Reacted to "I and Jun from ream ..." with 👍
+00:43:05	unnawut:	Can I get a link to forkmon code?
+00:43:22	unnawut:	Thanks!
+00:48:41	unnawut:	The project board is missing most assignees. Would be great if we walkthrough the board and assign names just to make sure everything is covered
+00:49:25	Will Corcoran:	Reacted to "The project board is..." with ❤️
+00:52:45	Will Corcoran:	Quadrivium too
+00:53:14	Will Corcoran:	Quadrivium == Kamil
+00:53:19	Gajinder Singh:	Reacted to "Quadrivium == Kamil" with 👏🏾
+00:53:24	unnawut:	I lost touch on the shared grafana, is there some materials ream should review?
+00:56:17	Ladislaus:	re:forkmon
+
+I believe this is it
+
+https://forkmon.mainnet.ethpandaops.io/ 
+
+https://github.com/ethpandaops/ethereum-helm-charts/tree/master/charts/forkmon
+01:00:11	Bubbles Notetaker:	🔔 Meeting scheduled to end in 5 mins. I'll stay until you're finished, and share a recording with notes for follow-ups.
+01:04:53	unnawut:	I can own the reference spec tests, but will definitely need to reach out for help from Felipe, Justin, Thomas 🙂
+01:06:18	Thomas Coratger:	I'll check that as well. I'll take a look to see what exactly needs to be done and process it step by step. Let's keep you posted.
+01:06:21	Will Corcoran:	https://github.com/leanEthereum/pm/blob/main/breakout-rooms/leanConsensus/pq-interop/pq-devnet-0.md
+01:22:17	Fireflies.ai Notetaker Fu Chua:	The meeting schedule is about to end. Action Items for this meeting: - Generate the Genesis tooling by 5th September. @Gajinder Singh - Work on the Python code for the project. @Toma or O - Prepare for interop by 19 September and ensure all spec tests are passed. @Unassigned - Complete the spec test by 12 September. @Unassigned - Have the tooling ready for DevNet 1 by 3rd October. @Gajinder Singh - Change ZIM code based on the particular PR and re-verify the correctness of the code. @Gajinder Singh - Add definitions for get justification and set justification helper functions. @Gajinder Singh - Verify the correctness of the Python syntax with the help of the June team. @Gajinder Singh - Finalize the folk choice discussed with Orwell and ensure the specifications are ready for DevNet 1. @Gajinder Singh - Resolve the questions regarding key types for the specifications. @Gajinder Singh - Freeze specs for DevNet1 by 5th September and work on the PRs for DevNet 1Spec during the first week
+01:22:18	Fireflies.ai Notetaker Fu Chua:	of September. @Gajinder Singh - Get agreement from Mercy and other people from Rheem on the dashboard requirements. @Mercy - Contact Quadrivium for building the Docker image. @Kamil Salakhiev - Add the dashboard requirements to the project board for DevNet Zero. @Will Corcoran
