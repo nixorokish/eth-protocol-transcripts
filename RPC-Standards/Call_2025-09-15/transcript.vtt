@@ -1,0 +1,1290 @@
+WEBVTT
+
+1
+00:01:08.690 --> 00:01:09.949
+Akash | ECH: Hey, Mercy.
+
+2
+00:01:11.480 --> 00:01:12.320
+Mercy Boma Naps-Nkari: Hello?
+
+3
+00:01:12.470 --> 00:01:13.450
+Mercy Boma Naps-Nkari: Good evening.
+
+4
+00:01:13.700 --> 00:01:22.880
+Akash | ECH: Good evening. We are livestreaming this call on, Ethereum Protocol YouTube channel and ACH InstituteX handle.
+
+5
+00:01:22.980 --> 00:01:28.819
+Akash | ECH: So, let me know whenever you are ready, so we can… Switch into string.
+
+6
+00:01:29.670 --> 00:01:30.990
+Mercy Boma Naps-Nkari: Okay, thank you.
+
+7
+00:03:32.590 --> 00:03:36.449
+Mercy Boma Naps-Nkari: Hello, sorry, we'll start soon, I think…
+
+8
+00:03:41.040 --> 00:03:45.510
+Mercy Boma Naps-Nkari: Zian will join… he said he's joining in the next 5 minutes. I'm not sure.
+
+9
+00:03:46.260 --> 00:03:48.149
+Mercy Boma Naps-Nkari: Okay, here's here.
+
+10
+00:03:52.880 --> 00:03:53.860
+Mercy Boma Naps-Nkari: Hi, Zin.
+
+11
+00:03:54.660 --> 00:03:55.920
+Zane Starr: Hey, how's it going?
+
+12
+00:03:57.670 --> 00:03:58.660
+Mercy Boma Naps-Nkari: Mine.
+
+13
+00:04:00.090 --> 00:04:01.050
+Mercy Boma Naps-Nkari: Akash.
+
+14
+00:04:01.050 --> 00:04:02.270
+Zane Starr: Good, how about yourself?
+
+15
+00:04:03.540 --> 00:04:04.040
+Akash | ECH: Yep.
+
+16
+00:04:04.040 --> 00:04:05.150
+Mercy Boma Naps-Nkari: Okay, I'm fine.
+
+17
+00:04:06.510 --> 00:04:09.160
+Mercy Boma Naps-Nkari: You can start streaming now, thank you.
+
+18
+00:04:12.810 --> 00:04:14.100
+Akash | ECH: Yep, via line.
+
+19
+00:04:15.250 --> 00:04:15.870
+Mercy Boma Naps-Nkari: Okay.
+
+20
+00:04:16.180 --> 00:04:23.339
+Mercy Boma Naps-Nkari: Good afternoon, everyone. Welcome to RPC Standard Code 12, being… today being September.
+
+21
+00:04:23.440 --> 00:04:25.350
+Mercy Boma Naps-Nkari: 15th, 2025.
+
+22
+00:04:25.640 --> 00:04:36.059
+Mercy Boma Naps-Nkari: We don't have much things on our agenda today, but I would really love us to discuss about the stages of our PR, because we have so much still PRs on the repo.
+
+23
+00:04:36.890 --> 00:04:43.460
+Mercy Boma Naps-Nkari: So, I think, Kira, you're… you have a major right to…
+
+24
+00:04:44.660 --> 00:04:48.179
+Mercy Boma Naps-Nkari: to the repo. I don't know if I'm correct on this.
+
+25
+00:04:48.410 --> 00:04:49.779
+keri: Yes, yeah, I do.
+
+26
+00:04:51.130 --> 00:04:57.390
+Mercy Boma Naps-Nkari: Okay, I don't… I'm not sure how we're going to move forward, but I would love for us to kind of, like…
+
+27
+00:04:57.810 --> 00:05:01.240
+Mercy Boma Naps-Nkari: move up with the peers we have, because we have, like…
+
+28
+00:05:02.720 --> 00:05:08.549
+Mercy Boma Naps-Nkari: a whole lot of PR that has been still for a very long time, and it's not really looking good at this point.
+
+29
+00:05:12.180 --> 00:05:14.429
+keri: Yeah, I think, I…
+
+30
+00:05:14.670 --> 00:05:19.740
+keri: we… I'm on the testing team, and so we've been focused on, getting Fusaka
+
+31
+00:05:19.990 --> 00:05:24.379
+keri: ready to go, but I think in the next week or so.
+
+32
+00:05:24.670 --> 00:05:29.610
+keri: that'll calm down a fair amount, so I can start going through PRs,
+
+33
+00:05:30.140 --> 00:05:32.029
+keri: And just see where we're at with those.
+
+34
+00:05:32.380 --> 00:05:37.880
+keri: I think one of my main priorities for this repo is getting the Hive RPC compact.
+
+35
+00:05:38.110 --> 00:05:40.419
+keri: Test passing.
+
+36
+00:05:40.570 --> 00:05:41.680
+keri: And so, I think…
+
+37
+00:05:41.680 --> 00:05:42.460
+Mercy Boma Naps-Nkari: Okay.
+
+38
+00:05:42.640 --> 00:05:46.700
+keri: to me, I think stale PRs…
+
+39
+00:05:46.920 --> 00:05:55.910
+keri: it's not gonna hurt them to stay there longer. I'd rather get, like, the live stuff going and get the, the hive tests.
+
+40
+00:05:56.150 --> 00:06:02.799
+keri: running first, and get kind of clients involved, and then go through the stale PRs.
+
+41
+00:06:05.890 --> 00:06:10.839
+Mercy Boma Naps-Nkari: Is there something you need, like, we can help you with, that's… I don't know.
+
+42
+00:06:13.060 --> 00:06:15.640
+keri: I don't think so.
+
+43
+00:06:16.170 --> 00:06:19.560
+keri: Right now, I think the biggest thing is,
+
+44
+00:06:20.030 --> 00:06:22.749
+keri: Do you know the hive test I'm talking about?
+
+45
+00:06:23.710 --> 00:06:24.810
+Mercy Boma Naps-Nkari: Yes, I know.
+
+46
+00:06:25.200 --> 00:06:26.720
+keri: Okay.
+
+47
+00:06:26.720 --> 00:06:30.650
+Zane Starr: Which Hive test is, like, failing out of curiosity?
+
+48
+00:06:31.050 --> 00:06:33.570
+keri: Yeah, let me, like… Like it.
+
+49
+00:06:33.720 --> 00:06:45.049
+Mercy Boma Naps-Nkari: There is, like, on Hype test, the last time I checked, there were so many failing tests during our, its… its simulate call. We had that similar complaints during each simulate calls, so…
+
+50
+00:06:48.690 --> 00:06:56.099
+keri: Yeah, so if you pull up this, this link here, like, RPC Compat for me, it looks like the first
+
+51
+00:06:56.770 --> 00:07:08.960
+keri: one, the first category. And so clients are failing, but some of those are just, like, ordering problems. Like, some of them aren't real failures, and so some of them
+
+52
+00:07:08.960 --> 00:07:19.920
+keri: we need to change on the execution API side, and then some of them clients need to change, or we just need to mark. Some of them are from clients that support certain use cases, and so…
+
+53
+00:07:20.050 --> 00:07:25.569
+keri: A lot of things we need to just change on the… on our side.
+
+54
+00:07:26.250 --> 00:07:29.649
+keri: And then other things we need to kind of bring up to the clients.
+
+55
+00:07:31.070 --> 00:07:32.860
+keri: To have them change on their side.
+
+56
+00:07:35.030 --> 00:07:53.130
+Mercy Boma Naps-Nkari: Okay, so what I'm saying is that the essence of this call is basically to push up anything that concerns Hive and the RPC repo forward. So, if there's a way we can help, or issues or anything, it would be easy… it's… to be helpful to let us know, and maybe I can walk around it also.
+
+57
+00:07:53.600 --> 00:07:59.460
+Mercy Boma Naps-Nkari: Because at this point, I understand it's… the first… the test filling is client-specific.
+
+58
+00:08:00.350 --> 00:08:05.299
+Mercy Boma Naps-Nkari: but I'm not… I don't… I know about HiveTest, but I don't really know, the technical…
+
+59
+00:08:05.540 --> 00:08:07.330
+Mercy Boma Naps-Nkari: Aspect of it that much.
+
+60
+00:08:10.200 --> 00:08:10.850
+keri: Yeah.
+
+61
+00:08:11.030 --> 00:08:15.009
+keri: Yeah, I think that's kind of the… the heart of the issue, is that,
+
+62
+00:08:15.750 --> 00:08:24.689
+keri: Like, we just need someone who can, like, look at these tests and, figure out what we need to do and what the next steps are for either us or the clients.
+
+63
+00:08:31.110 --> 00:08:38.139
+Mercy Boma Naps-Nkari: Okay… Okay, I think I'll have to look into this… mmm… and get back to you.
+
+64
+00:08:38.370 --> 00:08:41.369
+Mercy Boma Naps-Nkari: Does anyone have something to say in respect to this?
+
+65
+00:08:46.540 --> 00:08:54.259
+Zane Starr: Yeah, just, another quick question. I'm still slightly ignorant on RPC Compact.
+
+66
+00:08:54.410 --> 00:09:08.330
+Zane Starr: So the issues that are happening are also reflected back within the execution APIs, and RPC Compat is expecting responses in a particular order, and that
+
+67
+00:09:08.680 --> 00:09:17.969
+Zane Starr: like, return from the various clients is not in that same order of the captured reference run from, like, say, Geth?
+
+68
+00:09:18.400 --> 00:09:24.360
+Zane Starr: And that comparison between the outputs is what is then failing.
+
+69
+00:09:24.520 --> 00:09:28.530
+Zane Starr: Or is it… the…
+
+70
+00:09:28.530 --> 00:09:30.050
+Mercy Boma Naps-Nkari: I feel like.
+
+71
+00:09:30.050 --> 00:09:31.870
+Zane Starr: classification itself.
+
+72
+00:09:32.640 --> 00:09:33.940
+Zane Starr: is…
+
+73
+00:09:34.090 --> 00:09:41.640
+Zane Starr: much more specific than the data that's returned. I'm just… just curious, as we're starting to think about…
+
+74
+00:09:41.840 --> 00:09:50.240
+Zane Starr: Doing some more work around, negative testing for, like, errors within the execution API spec.
+
+75
+00:09:53.910 --> 00:10:01.830
+Mercy Boma Naps-Nkari: So, I'm not sure what you mean, but talking about GET, GET has, like, the highest… think of the test tier passes. They have 120.
+
+76
+00:10:04.810 --> 00:10:11.560
+keri: Yeah, but it, I mean, it kind of comes down to, like, sometimes we're too strict, and sometimes the clients aren't following the spec.
+
+77
+00:10:15.370 --> 00:10:15.860
+Mercy Boma Naps-Nkari: What?
+
+78
+00:10:15.860 --> 00:10:16.510
+keri: The RPC.
+
+79
+00:10:16.510 --> 00:10:16.860
+Mercy Boma Naps-Nkari: Absolutely.
+
+80
+00:10:18.910 --> 00:10:20.519
+Mercy Boma Naps-Nkari: What could lead to that, though?
+
+81
+00:10:23.530 --> 00:10:24.880
+keri: Sorry, say that one more time?
+
+82
+00:10:25.770 --> 00:10:28.699
+Mercy Boma Naps-Nkari: You see, what could lead to that? What could lead to that?
+
+83
+00:10:31.040 --> 00:10:32.259
+keri: So, I mean…
+
+84
+00:10:34.120 --> 00:10:38.890
+Mercy Boma Naps-Nkari: Sorry, is there not a way to, like, make them, sort of, reach a consensus?
+
+85
+00:10:42.260 --> 00:10:44.080
+keri: Sorry, to make them wet.
+
+86
+00:10:44.790 --> 00:10:48.410
+Mercy Boma Naps-Nkari: Is there a… is Gia not a way to, like, make them reach a consensus?
+
+87
+00:10:49.450 --> 00:10:55.479
+keri: Yes, yeah. And so we just need to go in and look at them. They're running against, I think, the,
+
+88
+00:10:56.240 --> 00:11:01.429
+keri: I forgot what it's called. But the testing tool that LegClient wrote.
+
+89
+00:11:02.080 --> 00:11:02.920
+keri: And…
+
+90
+00:11:03.410 --> 00:11:04.060
+Zane Starr: So there…
+
+91
+00:11:04.060 --> 00:11:04.400
+keri: I think…
+
+92
+00:11:04.400 --> 00:11:05.520
+Zane Starr: RPC test jet.
+
+93
+00:11:06.860 --> 00:11:16.050
+keri: Yes, but they're running against the I.O. files, I'm pretty sure. Like, I'm pretty sure they go… they compare the results from those I.O. files.
+
+94
+00:11:16.150 --> 00:11:17.680
+keri: From RPC testgen.
+
+95
+00:11:21.290 --> 00:11:21.989
+keri: Does that make sense?
+
+96
+00:11:21.990 --> 00:11:22.830
+Mercy Boma Naps-Nkari: Whoa.
+
+97
+00:11:23.290 --> 00:11:26.649
+Mercy Boma Naps-Nkari: Yeah. No, now the whole thing is making sense to me.
+
+98
+00:11:26.650 --> 00:11:27.620
+keri: Okay.
+
+99
+00:11:30.700 --> 00:11:37.409
+Mercy Boma Naps-Nkari: Okay, I don't think it's simulates alone, I don't know.
+
+100
+00:11:39.010 --> 00:11:42.470
+Mercy Boma Naps-Nkari: But they stopped working for some months, I think I will have to get back to them.
+
+101
+00:11:46.050 --> 00:11:49.340
+Mercy Boma Naps-Nkari: It wasn't from East Timales, I can… I think I can remember.
+
+102
+00:11:49.620 --> 00:11:54.810
+Simsonraj Easvarasakthi: I'm seeing a lot of, RPC compact as failing.
+
+103
+00:11:55.390 --> 00:12:02.239
+Simsonraj Easvarasakthi: on Eat Simulate, specifically. They expected it's… Eat Simulate does not exist.
+
+104
+00:12:02.340 --> 00:12:07.880
+Simsonraj Easvarasakthi: But the actual result does… It is returning some response as per the
+
+105
+00:12:09.150 --> 00:12:12.480
+Simsonraj Easvarasakthi: tested. I think it should be a simple fix.
+
+106
+00:12:14.290 --> 00:12:20.469
+Simsonraj Easvarasakthi: I don't know, but yeah, looking… looking at the… some of the tests, just eat some late. I'm pasting a link here.
+
+107
+00:12:20.720 --> 00:12:24.849
+Simsonraj Easvarasakthi: Maybe due to the Ethernet, because there was a latest addition to the…
+
+108
+00:12:25.250 --> 00:12:28.719
+Simsonraj Easvarasakthi: Methods, and it's not expecting that method to be present.
+
+109
+00:12:45.380 --> 00:12:50.239
+Mercy Boma Naps-Nkari: I, I actually thought they faced it, because Sina was saying… Sina and, Mika.
+
+110
+00:12:50.390 --> 00:12:54.650
+Mercy Boma Naps-Nkari: The last call they had was about… the Duster was about this.
+
+111
+00:12:58.010 --> 00:12:59.330
+Mercy Boma Naps-Nkari: Oh, I'm not sure.
+
+112
+00:13:04.410 --> 00:13:05.780
+Mercy Boma Naps-Nkari: True.
+
+113
+00:13:05.930 --> 00:13:14.840
+Simsonraj Easvarasakthi: Actually, for different clients, it's different… it's failing for different reasons, so… Eat Simulate is a… I see as a constant, but I also see…
+
+114
+00:13:15.200 --> 00:13:17.949
+Simsonraj Easvarasakthi: Some of the tests might need to be updated.
+
+115
+00:13:18.320 --> 00:13:22.559
+Simsonraj Easvarasakthi: Like, Zane mentioned, it could be the order, could be some formatting.
+
+116
+00:13:23.300 --> 00:13:28.629
+Simsonraj Easvarasakthi: I do see some formatting needed on the test front, I think.
+
+117
+00:13:30.730 --> 00:13:38.339
+Mercy Boma Naps-Nkari: Yeah, because when they wrote the test, when they… when they wrote the test, there was… it was their test that broke, the ROPC CI,
+
+118
+00:13:38.820 --> 00:13:48.389
+Mercy Boma Naps-Nkari: that we had to… it was expecting an array, but it… it gave… it was expecting an object, but it gave up an array, stuff like that.
+
+119
+00:13:53.200 --> 00:13:58.419
+Zane Starr: Yeah, I think the execution API's, like, spec schema changed.
+
+120
+00:13:58.520 --> 00:14:03.690
+Zane Starr: I think, mika had, put…
+
+121
+00:14:05.340 --> 00:14:09.649
+Zane Starr: Yeah, like you said, an array and an object was, like, one of the issues.
+
+122
+00:14:10.190 --> 00:14:16.309
+Zane Starr: There was also, like, some malformation in the schema itself that was causing.
+
+123
+00:14:16.310 --> 00:14:17.010
+Mercy Boma Naps-Nkari: Yeah.
+
+124
+00:14:17.950 --> 00:14:21.620
+Zane Starr: And then, there was also the…
+
+125
+00:14:22.250 --> 00:14:27.019
+Zane Starr: Sort of negative testing within the, SPAC.
+
+126
+00:14:27.310 --> 00:14:28.210
+Zane Starr: So
+
+127
+00:14:28.410 --> 00:14:37.149
+Zane Starr: The tests that were generated were for bad params being thrown in, but the way the RBC test gen works is there's not…
+
+128
+00:14:37.370 --> 00:14:47.329
+Zane Starr: Really a clean way to… Currently do the test for, like, throwing in malformed parameters, because,
+
+129
+00:14:47.660 --> 00:14:52.030
+Zane Starr: The schema validation will just throw back Error.
+
+130
+00:14:52.350 --> 00:15:02.480
+Zane Starr: So they got rid of the negative tests and then reformatted from the object to an array, which I think was supposed to be the original spec anyways.
+
+131
+00:15:02.600 --> 00:15:07.330
+Zane Starr: And maybe the rest of the clients just haven't caught up to those changes.
+
+132
+00:15:07.450 --> 00:15:12.730
+Zane Starr: But it's been about… maybe a month and a half since that?
+
+133
+00:15:13.250 --> 00:15:14.070
+Mercy Boma Naps-Nkari: Yeah.
+
+134
+00:15:15.940 --> 00:15:22.259
+Zane Starr: And it seems like a lot of the problems are just, like, eSimulate V1 is not available.
+
+135
+00:15:23.100 --> 00:15:30.680
+Zane Starr: And then, it wasn't exactly clear, just me taking a cursory look at the code, Like…
+
+136
+00:15:32.000 --> 00:15:40.429
+Zane Starr: why the method wouldn't exist unless it doesn't exist on the clients that are running the test. And maybe that's the case.
+
+137
+00:15:40.430 --> 00:15:59.970
+Mercy Boma Naps-Nkari: Yeah, that could actually be the point, because I don't think… then it was only best to, rather, Nethermind and Get that was working on it, and GET did not finish their implementation, that I'm sure, but I think the best thing is to, like, get back to the implementers, and then maybe get a proper feedback from them, because
+
+138
+00:16:00.140 --> 00:16:04.739
+Mercy Boma Naps-Nkari: They have an intrinsic idea of what they are building and what they're expecting.
+
+139
+00:16:04.870 --> 00:16:08.800
+Mercy Boma Naps-Nkari: So… I don't know what you guys think.
+
+140
+00:16:15.860 --> 00:16:25.969
+keri: Yeah, so my priority for the next, little bit for this repo, and I also, you know, I don't work on this full-time either, but,
+
+141
+00:16:26.300 --> 00:16:35.280
+keri: is to figure out, like, what… what do we need to change for these RPC compat tests? Like, is it that, you know, Erica needs to support,
+
+142
+00:16:35.610 --> 00:16:40.409
+keri: each simulate V1, do we turn those off for Aragon?
+
+143
+00:16:40.770 --> 00:16:44.550
+keri: And trying to figure out what to do on that front.
+
+144
+00:16:46.970 --> 00:16:53.310
+Mercy Boma Naps-Nkari: Okay, just to be clear, on that front, do we need to contact the client devs involved?
+
+145
+00:16:53.910 --> 00:16:57.140
+keri: Eventually, but I don't think we're ready to do that right now.
+
+146
+00:16:58.640 --> 00:17:04.319
+keri: I don't know which failures are ours on the execution API side, or which failures are, like, theirs.
+
+147
+00:17:04.950 --> 00:17:06.259
+keri: If that makes sense.
+
+148
+00:17:06.920 --> 00:17:09.810
+Zane Starr: That makes… that makes a lot of sense. The…
+
+149
+00:17:10.079 --> 00:17:12.119
+Zane Starr: One of your sort of question.
+
+150
+00:17:12.329 --> 00:17:21.390
+Zane Starr: That I know on OpenRPC side that we've been thinking about, that may also just, like, help in these kind of scenarios.
+
+151
+00:17:21.599 --> 00:17:30.510
+Zane Starr: As… Adding a marker for, like, what methods belong in, like, what… Fork?
+
+152
+00:17:31.710 --> 00:17:34.500
+keri: Yeah, yeah, that would be super helpful, too.
+
+153
+00:17:34.590 --> 00:17:37.910
+Zane Starr: I do think, oh, yeah, go ahead, Carrie.
+
+154
+00:17:38.250 --> 00:17:42.460
+keri: Well, I was just gonna say, I do think they probably run…
+
+155
+00:17:42.640 --> 00:17:46.190
+keri: on a certain park, but I'm not sure about that.
+
+156
+00:17:47.080 --> 00:17:48.939
+keri: But yeah, it would be nice to have a marker.
+
+157
+00:17:49.180 --> 00:17:57.230
+Zane Starr: Yeah, because, that's one of the things that we want to add to, execution APIs, which is, like, proper versioning.
+
+158
+00:17:57.630 --> 00:17:58.610
+Zane Starr: So…
+
+159
+00:17:58.920 --> 00:18:10.589
+Zane Starr: Execution APIs, and the… the whole spec could have a version of major and minor, and then, we've been floating around, across two different possibilities.
+
+160
+00:18:10.760 --> 00:18:19.340
+Zane Starr: So one is that the OpenRPC document, itself is versioned by a fork, or it's individual methods.
+
+161
+00:18:19.590 --> 00:18:26.090
+Zane Starr: So, the individual method approach means that You'll be able to,
+
+162
+00:18:26.220 --> 00:18:33.910
+Zane Starr: potentially tag methods for future forks, so you'd know that this method came from Fusaka, this one comes from Glamsterdam.
+
+163
+00:18:34.170 --> 00:18:44.189
+Zane Starr: And then you could potentially, roll through the document and pull back all the Fusaka methods, and then you would be like, okay, this is what we're gonna run.
+
+164
+00:18:44.600 --> 00:18:55.629
+Zane Starr: One part that makes this a little bit funny is, thinking about all the methods before Fusaka, or all the methods before,
+
+165
+00:18:56.640 --> 00:18:59.869
+Zane Starr: All the different sort of forks themselves, so…
+
+166
+00:19:00.500 --> 00:19:05.889
+Zane Starr: like, how do you pull that back? And so maybe that's a combination of…
+
+167
+00:19:06.290 --> 00:19:12.940
+Zane Starr: having a semantic versioning for the OpenRPCs, so that would be, like, major, minor, patch.
+
+168
+00:19:13.150 --> 00:19:17.540
+Zane Starr: And then, on that, you would put in
+
+169
+00:19:18.230 --> 00:19:25.530
+Zane Starr: like, oh, okay, anything with 1.2 and Fusaka, and that would just pull in everything.
+
+170
+00:19:25.890 --> 00:19:31.670
+Zane Starr: pass a particular date. So, the major-minor, hatch.
+
+171
+00:19:31.850 --> 00:19:40.070
+Zane Starr: Would just kind of be, like, that mile marker to grab everything… Pass that, and so maybe…
+
+172
+00:19:40.520 --> 00:19:45.990
+Zane Starr: The major or minor versions are just gonna be the forks.
+
+173
+00:19:47.040 --> 00:19:54.220
+Zane Starr: And then, that allows you to pull all those methods, or to specifically grab things from a fork.
+
+174
+00:19:54.930 --> 00:20:01.629
+Zane Starr: Just throwing that out there. That's some of the things that, like, we're thinking about, as, like, an upcoming
+
+175
+00:20:01.820 --> 00:20:09.349
+Zane Starr: like, useful thing? Question mark? For those that are spec maintainers and spec knowers?
+
+176
+00:20:10.940 --> 00:20:13.879
+keri: Yeah, I think that makes sense. I think,
+
+177
+00:20:14.330 --> 00:20:25.869
+keri: I think the forks… forks being majors versions, I think, makes a lot of sense, and I think that's how, you know, that's how testing versions as well,
+
+178
+00:20:26.300 --> 00:20:33.620
+keri: I think it becomes a little less flexible if you're trying to be, like, extensible to other ecosystems.
+
+179
+00:20:34.900 --> 00:20:37.850
+keri: But, yeah, it would be super helpful for us.
+
+180
+00:20:39.560 --> 00:20:42.910
+Zane Starr: And then, my question would be,
+
+181
+00:20:43.300 --> 00:20:47.850
+Zane Starr: Yeah, I guess there hasn't been, like, a major breaking change.
+
+182
+00:20:48.030 --> 00:20:52.270
+Zane Starr: For a long time, since… Proof of stake.
+
+183
+00:20:52.420 --> 00:20:53.460
+Zane Starr: So…
+
+184
+00:20:53.800 --> 00:21:01.110
+Zane Starr: That would be my only sort of pushback, would be whether or not it would land that Forzer Minor version updates.
+
+185
+00:21:02.970 --> 00:21:04.869
+Zane Starr: In general? Yeah.
+
+186
+00:21:04.870 --> 00:21:09.260
+keri: Yeah, that makes sense, too. Yeah, I think it…
+
+187
+00:21:10.370 --> 00:21:17.720
+keri: I think it just depends on… on, like, you… you guys. Like, if you wanted to use semantic versioning.
+
+188
+00:21:18.240 --> 00:21:25.970
+keri: As, like, true, you know, like, a meter is a braking change, versus just, like, the feature changes that come with each fork.
+
+189
+00:21:26.080 --> 00:21:33.679
+keri: Because I don't… I don't think they're getting rid of… RPC methods, usually.
+
+190
+00:21:34.690 --> 00:21:36.929
+keri: Except for the merge.
+
+191
+00:21:36.930 --> 00:21:41.340
+Zane Starr: Yeah, or occasionally there's a deprecation, like,
+
+192
+00:21:41.640 --> 00:21:44.620
+Zane Starr: I don't know, ETH account, but it still exists on Gap.
+
+193
+00:21:45.620 --> 00:21:47.450
+keri: Yeah, right. Right.
+
+194
+00:21:47.450 --> 00:21:55.700
+Zane Starr: Okay, yeah, so I think that makes sense. That makes sense to me. I just, like, noted it for, like, sort of my personal notes for going forward.
+
+195
+00:22:01.980 --> 00:22:08.340
+Mercy Boma Naps-Nkari: Okay, so is there any other thing we would love to discuss? Zane, I thought you had something on the agenda, so…
+
+196
+00:22:18.310 --> 00:22:19.299
+Mercy Boma Naps-Nkari: How you dear?
+
+197
+00:22:20.920 --> 00:22:25.610
+Simsonraj Easvarasakthi: Sorry, sorry, Mr. LePoint. Can you repeat that again, Marci?
+
+198
+00:22:26.720 --> 00:22:33.960
+Mercy Boma Naps-Nkari: Okay, I was asking… If there's another thing we would love to discuss…
+
+199
+00:22:34.980 --> 00:22:46.869
+Simsonraj Easvarasakthi: Oh, yeah, yeah, yeah. Yeah, I can provide an update. Yeah, I've been talking to Zane. If you remember from our last conversation, I was able to add a bit more…
+
+200
+00:22:47.150 --> 00:22:53.290
+Simsonraj Easvarasakthi: Cohesive range Reservation for each error category.
+
+201
+00:22:53.690 --> 00:23:03.340
+Simsonraj Easvarasakthi: discussed with Zane, Zane also discussed with Shane. I think we have a good solution, even though there may not be final.
+
+202
+00:23:03.400 --> 00:23:14.249
+Simsonraj Easvarasakthi: But we've decided to move forward with this for now, and I'll be writing a README file for you guys to take a look at it, so it's easy for you to review the whole PR.
+
+203
+00:23:14.420 --> 00:23:17.650
+Simsonraj Easvarasakthi: This week, and once I get a…
+
+204
+00:23:17.810 --> 00:23:25.940
+Simsonraj Easvarasakthi: you know, thumbs up from you guys, I can start implementing the other part of the solution, which is RPC Testion.
+
+205
+00:23:26.130 --> 00:23:38.130
+Simsonraj Easvarasakthi: For validation and extra verification of these ranges, on top of what I already have. It's, it's looking really close to be getting done, so that's, that's the update for me.
+
+206
+00:23:38.390 --> 00:23:43.609
+Simsonraj Easvarasakthi: And, I'll be pushing the README file once I have it in the channel.
+
+207
+00:23:45.740 --> 00:23:48.349
+keri: This is for the error codes.
+
+208
+00:23:49.100 --> 00:23:54.149
+Simsonraj Easvarasakthi: standardization. Is that right? Yeah, yeah. Yeah, correct. What sort of buy-in do we have from clients?
+
+209
+00:23:54.160 --> 00:23:54.930
+keri: on this.
+
+210
+00:23:56.040 --> 00:24:05.949
+Simsonraj Easvarasakthi: So this, we tried to present this in the Ethereum, developer meeting, and, they nudged us to this meeting.
+
+211
+00:24:06.520 --> 00:24:11.539
+Simsonraj Easvarasakthi: We have Baesu working with us, that's the first one.
+
+212
+00:24:11.900 --> 00:24:21.109
+Simsonraj Easvarasakthi: But other than that, no other clients seem to be interested, but I heard a lot of positive reviews on the first meeting where we tried to present.
+
+213
+00:24:21.960 --> 00:24:24.639
+Simsonraj Easvarasakthi: But no client has reached out yet.
+
+214
+00:24:25.360 --> 00:24:35.789
+Simsonraj Easvarasakthi: And this is not gonna be restrictive implementation initially, it's gonna be just a kind of a warning, saying, hey, stick to this, error code range or error message.
+
+215
+00:24:35.980 --> 00:24:45.800
+Simsonraj Easvarasakthi: And then slowly start pushing it as a strict measure later on, depending on how flexible we need to be. But this is sort of like a guidance?
+
+216
+00:24:45.980 --> 00:24:52.840
+Simsonraj Easvarasakthi: For protocol implementation, to stick to certain ranges or stick to a standard
+
+217
+00:24:53.530 --> 00:24:55.450
+Simsonraj Easvarasakthi: That's… that's the goal, at least for now.
+
+218
+00:24:55.860 --> 00:24:57.070
+Simsonraj Easvarasakthi: Because we…
+
+219
+00:24:57.240 --> 00:25:07.019
+Simsonraj Easvarasakthi: We acknowledge that it'll be really restricting if we push every client out there immediately to adopt this, and it would require a lot of changes on their end as well.
+
+220
+00:25:07.390 --> 00:25:14.709
+keri: Yeah, yeah, that makes sense. Do we know what sort of, like, breaking, like, downstream effects It would have.
+
+221
+00:25:15.200 --> 00:25:25.929
+Simsonraj Easvarasakthi: literally changing the error code to the right one, or should not be any breaking changes at all, because we made sure that the proposal is backwards compatible and same structure.
+
+222
+00:25:26.250 --> 00:25:37.390
+Simsonraj Easvarasakthi: what Ethereum currently does, and, just formalizing the existing implementation that we have. And maybe even providing a little bit more. I haven't written…
+
+223
+00:25:37.470 --> 00:25:49.250
+Simsonraj Easvarasakthi: The spec for that, but we have it in our original proposal where you can actually change or interchange the messages for an object, so you can provide more stack
+
+224
+00:25:49.850 --> 00:26:02.930
+Simsonraj Easvarasakthi: For further users to refer. But right now, we haven't implemented anything, just slowly rolling it out. At least get the error codes out, so anyone who wants to use these sort of standards can use it. That's the goal for now.
+
+225
+00:26:07.130 --> 00:26:08.439
+Simsonraj Easvarasakthi: Anything you want to add, Zane?
+
+226
+00:26:08.460 --> 00:26:14.230
+Zane Starr: Yeah, so I'll add just a little bit to that, so…
+
+227
+00:26:14.380 --> 00:26:18.269
+Zane Starr: A lot of the sort of thinking is, is like, okay.
+
+228
+00:26:18.920 --> 00:26:20.700
+Zane Starr: We have all of these error codes.
+
+229
+00:26:20.930 --> 00:26:22.470
+Zane Starr: Link.
+
+230
+00:26:23.460 --> 00:26:37.109
+Zane Starr: you can actually return back anything! But it would be great if the spec actually, like, covered what you should return, and then there's, like,
+
+231
+00:26:37.470 --> 00:26:39.989
+Zane Starr: It would be also nice if, like.
+
+232
+00:26:40.240 --> 00:26:53.549
+Zane Starr: The spec itself had a reserve set of ranges that could grow with the spec, that then we could allocate towards certain sort of categories of errors, whether those be, like, execution errors, like you see with, like, EF Simulate.
+
+233
+00:26:53.650 --> 00:27:13.129
+Zane Starr: Or gas-related errors, and we can say, like, hey, look, oh, we don't have these methods that use this, and we don't have this specific error, but it's a large enough range to where we feel like, oh, if we add, like, 500 different spaces for the code, we can eventually formalize on, like, oh, let's assign
+
+234
+00:27:13.790 --> 00:27:16.650
+Zane Starr: 32503, none.
+
+235
+00:27:17.100 --> 00:27:19.240
+Zane Starr: And that prevents…
+
+236
+00:27:19.580 --> 00:27:26.750
+Zane Starr: Downstream consumers from just, like, grabbing at error codes to do certain sorts of, like, functionality.
+
+237
+00:27:27.760 --> 00:27:34.419
+Zane Starr: So, here's a kind of weird, complicated thing that, like, we'll eventually need to sort of sort out.
+
+238
+00:27:35.320 --> 00:27:46.129
+Zane Starr: So, on the consuming side of clients, there's, like, clients like MetaMask and, like, say, Flashbots, for instance, just because this is one that has come to my awareness recently.
+
+239
+00:27:46.510 --> 00:27:53.459
+Zane Starr: they… like, MetaMask has some codes around canceling transactions.
+
+240
+00:27:53.640 --> 00:28:02.659
+Zane Starr: And then, MetaMask will do some things like call getTransactionReceipt, And get transaction receipt, returns back…
+
+241
+00:28:03.070 --> 00:28:18.450
+Zane Starr: a code, but the way MetaMask is structured, it is not gonna cancel a transaction to a certain sort of, like, point, which has some ramifications for, like, the min pool.
+
+242
+00:28:19.000 --> 00:28:30.769
+Zane Starr: for transactions on, like, sort of Flashbot's side. So, what FlashBots is proposing to MetaMask is that they return back a very specific Flashbots, like, error code.
+
+243
+00:28:31.280 --> 00:28:42.840
+Zane Starr: And then MetaMask, on the consuming side, can then say, oh, I got this weird client error, and then I can respond to it, and I can just cancel this transaction, because, like, flashbots
+
+244
+00:28:43.080 --> 00:28:46.199
+Zane Starr: Has it in their private memory pool, and it's all good.
+
+245
+00:28:46.840 --> 00:28:53.919
+Zane Starr: And so, like… There is a potential that there are lots of these kind of, like.
+
+246
+00:28:54.350 --> 00:28:58.399
+Zane Starr: Almost side deals that are going with the error codes.
+
+247
+00:28:58.610 --> 00:29:01.740
+Zane Starr: And because we don't have a formal range right now.
+
+248
+00:29:02.500 --> 00:29:14.500
+Zane Starr: Anyone can just, like, start throwing back anything, and then that could then come into conflict with the things that we're already trying to do, with error codes.
+
+249
+00:29:14.620 --> 00:29:21.110
+Zane Starr: So, the sooner that we're able to define a range for returning, or,
+
+250
+00:29:21.360 --> 00:29:26.759
+Zane Starr: What is acceptable, then, like, the better it works.
+
+251
+00:29:30.000 --> 00:29:31.390
+Simsonraj Easvarasakthi: Completely agree with you.
+
+252
+00:29:31.520 --> 00:29:43.729
+Zane Starr: The more truthy it is, and then the more we can actually test against it, for, like, hey, is the client returning the proper error code for this? And the more developers can rely on it.
+
+253
+00:29:45.440 --> 00:29:47.120
+Zane Starr: And that kind of thing.
+
+254
+00:29:47.530 --> 00:29:50.669
+Zane Starr: So, so that's kind of the motivation,
+
+255
+00:29:50.920 --> 00:29:53.589
+Zane Starr: Behind it, and the thought is…
+
+256
+00:29:53.810 --> 00:30:10.250
+Zane Starr: start with all the stuff that we already know, define it, put it in the spec, make it really nice to actually use. So error groups kind of do that, in a way, so it's like, oh, you can reference to a whole group of errors versus needing to individually
+
+257
+00:30:10.400 --> 00:30:14.580
+Zane Starr: list out every error on every method. You can just say, oh.
+
+258
+00:30:14.810 --> 00:30:22.819
+Zane Starr: This, like, ETH.getGas or ETHC call can return back execution errors or gas errors, and you're just kind of done.
+
+259
+00:30:23.670 --> 00:30:24.360
+Zane Starr: Boom.
+
+260
+00:30:24.860 --> 00:30:28.229
+Zane Starr: Alright, so that's… that's that rant.
+
+261
+00:30:28.820 --> 00:30:32.829
+keri: Cool, yeah, I think that makes a lot of sense. As long as it's not too, like, constrictive.
+
+262
+00:30:32.970 --> 00:30:34.839
+keri: To, you know, it won't, like, break.
+
+263
+00:30:35.290 --> 00:30:38.800
+keri: clients, I think that's a good… good approach, sounds like.
+
+264
+00:30:41.260 --> 00:30:41.620
+Simsonraj Easvarasakthi: Yeah.
+
+265
+00:30:41.620 --> 00:30:44.940
+Mercy Boma Naps-Nkari: So, I also like to… okay, sorry.
+
+266
+00:30:45.290 --> 00:30:46.920
+Simsonraj Easvarasakthi: Oh, go ahead, Mercy.
+
+267
+00:30:47.950 --> 00:30:54.340
+Mercy Boma Naps-Nkari: Yeah, I wanted to say, it would be nice if we get, like, a doc… proper documentation so that,
+
+268
+00:30:54.510 --> 00:31:06.279
+Mercy Boma Naps-Nkari: I'll kind of, like, send it to the various clients, because the earlier they give us a feedback, if that is any, the better. If not, we keep running around in circles and keep spending more unnecessary times on it.
+
+269
+00:31:06.400 --> 00:31:07.910
+Mercy Boma Naps-Nkari: I don't know if that makes sense.
+
+270
+00:31:08.140 --> 00:31:19.440
+Simsonraj Easvarasakthi: No, definitely agree. The last week I was able to do the error ranges, that's where we struggled a bit, because conceptually it made sense, but technically it was a bit harder to implement.
+
+271
+00:31:19.680 --> 00:31:25.810
+Simsonraj Easvarasakthi: But last week, with Zane's feedback, I was able to get that done. Now I can actually write a…
+
+272
+00:31:26.160 --> 00:31:41.559
+Simsonraj Easvarasakthi: You know, a spec or a document for sharing it with other clients, it would make a lot of sense now, because before, there was no way to restrict anyone, or not restrict, like, guide them to say, this is the range we've reserved for
+
+273
+00:31:41.680 --> 00:31:46.790
+Simsonraj Easvarasakthi: for another group. Now that we have a codified solution.
+
+274
+00:31:46.960 --> 00:31:56.040
+Simsonraj Easvarasakthi: It would make a lot of sense to associate with the code now. Yeah, I'll get started on it really quickly, and we want to actually get this out.
+
+275
+00:31:56.360 --> 00:31:58.290
+Simsonraj Easvarasakthi: Sooner than later.
+
+276
+00:31:58.690 --> 00:32:01.969
+Simsonraj Easvarasakthi: We'll keep you guys posted on the channel.
+
+277
+00:32:02.860 --> 00:32:08.610
+Simsonraj Easvarasakthi: And again, thanks to Zane and everyone for… Bearing with us so far.
+
+278
+00:32:10.670 --> 00:32:13.219
+Zane Starr: Thanks to you.
+
+279
+00:32:13.560 --> 00:32:19.910
+Zane Starr: Good idea, I'm just here to help make these things, like, happen.
+
+280
+00:32:19.910 --> 00:32:23.450
+Simsonraj Easvarasakthi: Definitely. You know, you've been massively helpful, Zane.
+
+281
+00:32:25.560 --> 00:32:27.059
+Simsonraj Easvarasakthi: Cool, that's it for me.
+
+282
+00:32:27.960 --> 00:32:31.490
+Mercy Boma Naps-Nkari: Okay, thank you very much. Is there another thing?
+
+283
+00:32:31.800 --> 00:32:38.670
+Mercy Boma Naps-Nkari: Sorry about that. Is there any other thing we want to discuss, zane…
+
+284
+00:32:39.250 --> 00:32:40.900
+Zane Starr: Yeah, sure.
+
+285
+00:32:41.030 --> 00:32:50.630
+Zane Starr: I will just give a brief update on some of the thinking that we're having around, like, the docs, like, sort of rework, rethink.
+
+286
+00:32:51.060 --> 00:32:57.220
+Zane Starr: And part of that is, is that we're leaning towards, trying to do something that's, like.
+
+287
+00:32:58.020 --> 00:33:03.719
+Zane Starr: a little bit… More generic and maybe easier to work with from…
+
+288
+00:33:03.890 --> 00:33:07.610
+Zane Starr: Many different documentation, like, sort of framework aspects.
+
+289
+00:33:07.940 --> 00:33:10.059
+Zane Starr: And by that, I mean…
+
+290
+00:33:11.970 --> 00:33:18.740
+Zane Starr: We're thinking about, like, sort of generating the markdown into the repo itself.
+
+291
+00:33:19.070 --> 00:33:26.940
+Zane Starr: And then doing things like, say, generating do not edit, like, tags for the markdown.
+
+292
+00:33:27.200 --> 00:33:35.919
+Zane Starr: And so this kind of has the effect of making it easier to work within various frameworks that anyone may have.
+
+293
+00:33:36.150 --> 00:33:43.689
+Zane Starr: So, if you had, like, the Docuosaurus, or, like, even if we were to say, oh, we're gonna keep this Gatsby, which we're not.
+
+294
+00:33:43.770 --> 00:33:57.229
+Zane Starr: But it would make things much easier. If you wanted to do README docs, you could do that. If you wanted Pandoc, you could do that. You could do PDF, if that's where you wanted to go.
+
+295
+00:33:57.370 --> 00:34:01.319
+Zane Starr: And then to just kind of make that really easy.
+
+296
+00:34:02.180 --> 00:34:14.020
+Zane Starr: And so that's kind of where we're thinking, like, infrastructurally we'll go. And then we have a bunch of, like, sort of features around that to generate MTX for the more specific things, like…
+
+297
+00:34:14.300 --> 00:34:19.939
+Zane Starr: Being able to run curl… On things, or to…
+
+298
+00:34:20.159 --> 00:34:25.449
+Zane Starr: Do a lot of the nice… modern API, like, specie things.
+
+299
+00:34:25.860 --> 00:34:31.150
+Zane Starr: The other thing I would say about that…
+
+300
+00:34:33.150 --> 00:34:40.319
+Zane Starr: Oh, I had something else. Yes. So, in the revamp, what will probably happen is…
+
+301
+00:34:40.909 --> 00:34:44.879
+Zane Starr: The markdown that would be generated would be for individual methods.
+
+302
+00:34:45.440 --> 00:34:52.480
+Zane Starr: And so that talks about, like, doing individual method pages, kind of like…
+
+303
+00:34:52.730 --> 00:34:59.410
+Zane Starr: the route that things were headed, before we had to kind of revert to go forward again. Yeah.
+
+304
+00:35:02.120 --> 00:35:05.269
+Zane Starr: that's, that's pretty much so the update.
+
+305
+00:35:06.750 --> 00:35:13.980
+Zane Starr: I guess while I'm in there, I'm also kind of curious to hear, from the users of Docs…
+
+306
+00:35:15.730 --> 00:35:18.539
+Zane Starr: And just general docs in general.
+
+307
+00:35:18.850 --> 00:35:23.079
+Zane Starr: General docs in general. Just docs in general.
+
+308
+00:35:24.380 --> 00:35:30.589
+Zane Starr: what… Do you find yourself doing a lot of that is somewhat frustrating?
+
+309
+00:35:32.160 --> 00:35:44.279
+Zane Starr: If you have any of those things, feel free to let me know. You don't have to say it, like, live right now on the call. Just, like, drop me a thing in the Discord, a message, and I'm happy to, like.
+
+310
+00:35:44.530 --> 00:35:48.950
+Zane Starr: hear about it. Because now is a good time to let me know.
+
+311
+00:35:55.050 --> 00:35:57.440
+Mercy Boma Naps-Nkari: Okay, thank you, Zane.
+
+312
+00:35:57.640 --> 00:36:04.509
+Mercy Boma Naps-Nkari: Oh, definitely. So, is… do we have anything to say in respect to this, or who took us in?
+
+313
+00:36:14.210 --> 00:36:16.570
+Mercy Boma Naps-Nkari: Okay, I guess not. So…
+
+314
+00:36:17.230 --> 00:36:22.950
+Mercy Boma Naps-Nkari: Any other thing we need to discuss before we end the call? I think that's…
+
+315
+00:36:25.080 --> 00:36:27.119
+Mercy Boma Naps-Nkari: We've covered most… almost everything.
+
+316
+00:36:41.420 --> 00:36:45.040
+Mercy Boma Naps-Nkari: Alright, then. So, okay.
+
+317
+00:36:45.750 --> 00:36:51.649
+Mercy Boma Naps-Nkari: a thing… That will be all for today, and then see you guys sometime.
+
+318
+00:36:52.390 --> 00:36:54.380
+Mercy Boma Naps-Nkari: In two weeks' time, probably.
+
+319
+00:36:59.830 --> 00:37:00.899
+keri: Thanks, bye.
+
+320
+00:37:03.440 --> 00:37:04.300
+Simsonraj Easvarasakthi: Inko.
+
+321
+00:37:04.640 --> 00:37:05.900
+Zane Starr: Liz, right.
+
+322
+00:37:07.280 --> 00:37:08.040
+Mercy Boma Naps-Nkari: Thank you.
+
