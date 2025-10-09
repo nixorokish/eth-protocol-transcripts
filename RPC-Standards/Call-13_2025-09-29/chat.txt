@@ -1,3 +1,0 @@
-00:10:29	Mercy Boma Naps-Nkari:	https://github.com/simsonraj/execution-apis/blob/527bb9af49ba12bbed37cc36d4cfe42048cd114e/src/extensions/README.md
-00:21:41	Łukasz Rozmej:	https://github.com/NethermindEth/nethermind/pull/8951
-00:26:38	Simsonraj Easvarasakthi:	https://docs.google.com/spreadsheets/d/1WHPbxRgO3fOFJ_CzrsYvBvi5jap2iWgk/edit?gid=2002125293#gid=2002125293
