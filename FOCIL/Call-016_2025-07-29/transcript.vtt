@@ -1,0 +1,282 @@
+WEBVTT
+
+1
+00:01:22.520 --> 00:01:23.310
+soispoke: Hello!
+
+2
+00:01:25.450 --> 00:01:26.760
+Pooja Ranjan: Good morning!
+
+3
+00:01:29.500 --> 00:01:30.380
+soispoke: How are you?
+
+4
+00:01:33.180 --> 00:01:37.209
+Pooja Ranjan: I'm doing very good. How about you? I noticed you are going to have a presentation today.
+
+5
+00:01:37.500 --> 00:01:43.640
+soispoke: Yes, I wanted to also sort of like test. If the sharing thing works
+
+6
+00:01:46.340 --> 00:01:50.519
+Pooja Ranjan: Yeah, I I can see your screen. You can just go to slideshow mode, and it would work out.
+
+7
+00:01:51.335 --> 00:01:52.794
+soispoke: Let me try again.
+
+8
+00:01:56.130 --> 00:01:57.840
+soispoke: Okay? And then.
+
+9
+00:01:57.990 --> 00:02:00.089
+Pooja Ranjan: Slideshow on the right top. Yes.
+
+10
+00:02:00.440 --> 00:02:04.539
+soispoke: Yeah. But just tell me if what you see now.
+
+11
+00:02:04.540 --> 00:02:05.740
+Pooja Ranjan: Presenter view.
+
+12
+00:02:06.920 --> 00:02:10.029
+Pooja Ranjan: Oh, I assume a presenter view will have
+
+13
+00:02:10.669 --> 00:02:14.829
+Pooja Ranjan: notes if there are any. No, I can't see any notes, so just the slides.
+
+14
+00:02:15.320 --> 00:02:16.689
+soispoke: And can you see notes now.
+
+15
+00:02:16.690 --> 00:02:17.480
+Pooja Ranjan: No.
+
+16
+00:02:17.720 --> 00:02:20.814
+soispoke: Okay, nice. It works. Then.
+
+17
+00:02:21.210 --> 00:02:21.770
+Pooja Ranjan: Yep.
+
+18
+00:02:21.920 --> 00:02:22.750
+soispoke: Thanks.
+
+19
+00:02:23.580 --> 00:02:24.510
+Pooja Ranjan: No worries.
+
+20
+00:02:25.710 --> 00:02:33.949
+Pooja Ranjan: Just let me know to transition, and we would start, or even if you can just pause for 2, 3 seconds, I can move over the transition whenever you're ready.
+
+21
+00:02:33.950 --> 00:02:35.749
+soispoke: Yeah. Sounds good. Thanks.
+
+22
+00:07:06.810 --> 00:07:07.850
+soispoke: Alright.
+
+23
+00:07:07.960 --> 00:07:11.530
+soispoke: GM, everyone. Thanks for joining
+
+24
+00:07:12.000 --> 00:07:20.190
+soispoke: fossil breakout session number 16. Yeah. I think we can start the recording when you're ready.
+
+25
+00:07:20.710 --> 00:07:21.870
+soispoke: Pooja.
+
+26
+00:07:22.770 --> 00:07:23.660
+Pooja Ranjan: Real life.
+
+27
+00:07:24.220 --> 00:07:28.699
+soispoke: Okay? Great. Yeah. Thanks for joining again. I think
+
+28
+00:07:29.290 --> 00:07:35.870
+soispoke: agenda for today is going to be. So I'm gonna do a small presentation.
+
+29
+00:07:35.980 --> 00:07:44.360
+soispoke: just like about the post. I had let me share the link actually on epbs and fossil compatibility.
+
+30
+00:07:44.640 --> 00:07:46.740
+soispoke: So we will start with this.
+
+31
+00:07:47.504 --> 00:08:05.569
+soispoke: And then, maybe, like your Glamsterdam temperature check would be nice. I I do have some questions, I guess, but like we, I don't know if we're gonna spend like much time on it to be honest. And then any sort of like additional things you guys want to talk about, of course.
+
+32
+00:08:06.272 --> 00:08:10.700
+soispoke: Okay, let me go ahead and share my screen.
+
+33
+00:08:20.470 --> 00:08:23.220
+soispoke: Okay, can you guys see the full slide?
+
+34
+00:08:25.350 --> 00:08:27.100
+soispoke: Nice? Okay.
+
+35
+00:08:27.870 --> 00:08:52.649
+soispoke: okay? So yeah, it's supposed to be very interactive. It's literally like going through a post. So and we are gonna get a bit in the weeds like not too crazy, but like still a bit into like the slot structure and everything. So if anything is unclear or you have questions like, do interrupt me like, don't wait until the end of the presentation or anything.
+
+36
+00:08:52.920 --> 00:08:56.090
+soispoke: Okay? So fossil and epbs.
+
+37
+00:08:57.790 --> 00:09:03.790
+soispoke: It's just like, yeah. There were like, quite a lot of questions about, like, how all the different
+
+38
+00:09:03.960 --> 00:09:08.120
+soispoke: vip is compatible. What is.
+
+39
+00:09:08.380 --> 00:09:15.670
+soispoke: Yeah, what does fossil look like with epbs? What it? What does it look like with like delayed execution or shorter slot times
+
+40
+00:09:15.900 --> 00:09:20.370
+soispoke: turns out now we have 3 like candidate
+
+41
+00:09:20.520 --> 00:09:25.819
+soispoke: candidates remaining, I think, for for headliners for Glamsterdam.
+
+42
+00:09:26.030 --> 00:09:32.829
+soispoke: and turns out epbs and fossil are are 2 of them. So maybe it's important to like, go
+
+43
+00:09:32.940 --> 00:09:42.370
+soispoke: do it again. And like, yeah, look at the slotted anatomy, and how how it might look like in in practice. And you'll see like it turns out like.
+
+44
+00:09:42.710 --> 00:09:48.809
+soispoke: it's quite nice, like they actually go quite well together because the Tldr is like the
+
+45
+00:09:48.910 --> 00:10:01.640
+soispoke: beacon block execution payload separation is quite useful for fossil when you have added sort of like constraints on the payload itself that
+
+46
+00:10:01.820 --> 00:10:06.680
+soispoke: shouldn't necessarily like touch anything on the beacon chain side.
+
+47
+00:10:07.450 --> 00:10:14.289
+soispoke: Yeah, so reminder. But I mean, this is like for
+
+48
+00:10:14.360 --> 00:10:37.350
+soispoke: a very educated audience already, I think what I want to emphasize still is like we are going to talk about the slot pipelining part of epbs like we are not going to get into, like the, you know, unconditional payment part or like stake builders like it's really going to be about understanding the slot structure. So we are not really going to get into these.
+
+49
+00:10:37.350 --> 00:10:48.830
+soispoke: And then, 1st of all, I mean, I don't need to to explain this. So yeah, the question was, how does the slot anatomy or structure, or, yeah, pipelining, or whatever? Look? Oh.
+
+50
+00:10:49.340 --> 00:10:52.039
+soispoke: that's weird. Can you say, guys see anything?
+
+51
+00:10:52.850 --> 00:10:54.779
+soispoke: What? The fuck? Okay?
+
+52
+00:10:58.340 --> 00:11:00.079
+Pooja Ranjan: Do we have any?
+
+53
+00:11:03.590 --> 00:11:04.640
+Jessica: Do you have any more?
+
+54
+00:11:07.840 --> 00:11:14.620
+Jessica: You might want to cancel the zoom. Call right now, and I will give you another zoom link real soon. Everybody. Please leave out the rooms.
+
+55
+00:11:20.915 --> 00:11:34.440
+Jessica: niggers, niggers, niggers finish.
+
+56
+00:11:40.920 --> 00:11:42.140
+Jessica: Thank you.
+
+57
+00:11:55.920 --> 00:11:56.400
+Kurt C.: Whoa!
+
+58
+00:12:06.240 --> 00:12:07.230
+Jacob Harley: Moving away.
+
+59
+00:12:08.220 --> 00:12:11.460
+Jacob Harley: Make it there, you.
+
+60
+00:12:21.290 --> 00:12:23.260
+Jessica: Oof.
+
+61
+00:12:26.680 --> 00:12:27.910
+Jacob Harley: Hey!
+
+62
+00:12:32.550 --> 00:12:33.710
+Jessica: Hate me.
+
+63
+00:12:34.480 --> 00:13:36.129
+Jacob Harley: Niggers, niggers, niggers, niggers, nigger, nigger. I'm a freestyle gangster, nigger fuck niggers, niggas, nigga nigga nigga
+
+64
+00:13:36.260 --> 00:13:39.969
+Jacob Harley: that makes you a man.
+
+65
+00:13:39.970 --> 00:13:41.710
+Jessica: Woo woo fucking me
+
+66
+00:14:06.150 --> 00:14:22.460
+Jessica: nigger nigger.
+
+67
+00:14:54.110 --> 00:15:00.600
+Jessica: Yeah. Yeah.
+
+68
+00:16:38.000 --> 00:16:42.590
+Jessica: I want to start by saying to the Ccp.
+
+69
+00:16:42.730 --> 00:16:50.029
+Jessica: Ccp. Will always be the best community.
+
+70
+00:16:50.140 --> 00:16:56.820
+Jessica: We will never stop our thugging activity. Fuck, niggas, fuck, niggas, fuck, niggas, fuck, niggers.
+

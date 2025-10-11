@@ -1,0 +1,111 @@
+00:06:59	stokes:	gm
+00:07:03	Mario Vega:	gm
+00:07:07	felix (eest):	gm
+00:07:20	Louis:	gn
+00:07:28	Justin Florentine (Besu):	g’eth
+00:08:47	Gabriel Trintinalia | Besu:	gn gn
+00:09:33	Mario Vega:	https://hive.ethpandaops.io/#/?group=fusaka-devnet-0
+00:12:29	Marius:	Is anyone speaking already?
+00:12:35	Mario Vega:	Reacted to "Is anyone speaking a..." with 👍🏼
+00:12:42	Parithosh Jayanthi:	Reacted to "Is anyone speaking a..." with 👍🏼
+00:12:48	Parithosh Jayanthi:	Replying to "Is anyone speaking a..."
+
+Yes we are
+00:12:53	Barnabas:	Replying to "Is anyone speaking a..."
+
+he’s been sitting in quiet for 7 mins 😂
+00:13:06	felix (eest):	Reacted to "he’s been sitting..." with 😭
+00:13:34	Mikel Cortes:	Reacted to "he’s been sitting in..." with 😭
+00:14:04	chanderprakash sharma:	Hi @ everyone I first join the meet any protocols I have to follow for call could please anyone help me
+00:14:22	Raúl Kripalani:	👍
+00:15:10	Parithosh Jayanthi:	https://notes.ethereum.org/@ethpandaops/fusaka-devnet-1
+00:16:13	chanderprakash sharma:	Replying to "Hi @ everyone I fi..."
+
+could any please connect with me
+00:16:18	Barnabas:	https://github.com/ethpandaops/fusaka-devnets/blob/master/network-configs/devnet-0/metadata/config.yaml#L194
+00:17:02	Gabriel Trintinalia | Besu:	Isn’t https://eips.ethereum.org/EIPS/eip-7918  SFI’d for fevnet-1?
+00:17:22	Mario Vega:	Replying to "Isn’t https://eips.e..."
+
+afaik yes
+00:17:26	Dmitrii Shmatko:	Replying to "https://notes.ethere..."
+
+https://github.com/ethereum/consensus-specs/pull/4323  included? I’d clarify
+00:18:18	Gabriel Trintinalia | Besu:	Replying to "https://notes.ethere..."
+
+The list is missing eip-7918
+00:18:27	Anders Elowsson:	Reacted to "Isn’t https://eips.e..." with 👍
+00:18:28	Gabriel Trintinalia | Besu:	Reacted to "afaik yes" with 👍
+00:19:28	FLCL:	final option can be destructive like 50 blobs
+00:19:50	Dmitrii Shmatko:	Reacted to "final option can be ..." with 🔥
+00:21:48	Ansgar Dietrichs:	it would be fine for the EIP to be included as-is into any devnet now
+00:22:02	Gabriel Trintinalia | Besu:	Reacted to "it would be fine for..." with 👍
+00:22:03	Mario Vega:	Reacted to "it would be fine for..." with 👍🏼
+00:22:31	Parithosh Jayanthi:	https://github.com/ethereum/consensus-specs/pull/4323
+00:22:39	Anders Elowsson:	Reacted to "it would be fine for..." with 👍
+00:24:54	chanderprakash sharma:	@Tim Beiko I am new to this meet first time I already email to join the meetings could please reply to me what is procedure to join the call
+00:26:17	Louis:	Replying to "@Tim Beiko I am new ..."
+
+I think you could start by reviewing some EIPs included in upcoming devnet
+00:26:22	Gajinder:	I am fine closing the PR given future usage plans
+00:26:33	pawan:	Reacted to "I am fine closing th..." with 👍
+00:26:52	Parithosh Jayanthi:	Reacted to "I am fine closing th..." with 👍
+00:26:54	Gajinder:	Sounds good
+00:27:49	J Sunnyside Labs:	Can Sunnyside Labs talk briefly about our testnet results?
+00:27:56	Mario Vega:	Reacted to "Can Sunnyside Labs t..." with 👍🏼
+00:28:07	Parithosh Jayanthi:	Reacted to "Can Sunnyside Labs t..." with 👍🏼
+00:28:37	Dmitrii Shmatko:	Reacted to "Can Sunnyside Labs t..." with 👍🏼
+00:29:02	J Sunnyside Labs:	https://testinprod.notion.site/Sunnyside-Devnet-Updates-05-20-1f88fc57f5468034a397d29017942763
+00:29:02	chanderprakash sharma:	Replying to "@Tim Beiko I am ne..."
+
+could please share them
+00:30:12	Louis:	Replying to "@Tim Beiko I am new ..."
+
+https://eips.ethereum.org/EIPS/eip-7607
+00:30:52	chanderprakash sharma:	Reacted to "https://eips.ether..." with 👍
+00:32:35	Csaba Kiraly:	You don’t really need getBlobs if all the block producers are powerful enough
+00:32:56	Dmitrii Shmatko:	Reacted to "You don’t really nee..." with 😃
+00:33:03	Parithosh Jayanthi:	Reacted to "You don’t really nee..." with 😃
+00:33:12	Francesco:	Replying to "You don’t really nee..."
+
+Also with small network + very high bandwidth
+00:33:23	Csaba Kiraly:	If uplink BW is not constrained, getBlobs is not adding too much, just a small potential delay advantage by adding more sources at the CL
+00:33:32	Minhyuk Kim:	I think our further tests will include nodes with degraded bandwidth / performance and see how getBlobs affects in those cases
+00:33:39	Parithosh Jayanthi:	Reacted to "I think our further ..." with 👍🏽
+00:33:57	Mario Vega:	Reacted to "I think our further ..." with 👍🏽
+00:34:00	Marius:	Replying to "You don’t really nee..." 
+
+ Also you can't rely on getBlobs, the network needs to work flawlessly without it
+00:34:07	Csaba Kiraly:	Replying to "I think our further ..."
+
+That’s what you need, otherwise you just test code efficiency and bugs.
+00:34:22	Francesco:	Did you get a sense of what the problem was with supernodes? Specifically, is their really high resource consumption mostly due to column verification?
+00:34:34	Marius:	Replying to "You don’t really nee..." 
+
+ Its a great improvement for the happy case
+00:34:37	Csaba Kiraly:	Replying to "I think our further ..."
+
+Which is also very important :-)
+00:34:43	Francesco:	Reacted to "Which is also very i..." with 👍
+00:35:42	pawan:	Reacted to "Which is also very i..." with 👍
+00:36:12	Francesco:	No my bad
+00:37:22	pawan:	Yeah sync testing would be super helpful! 🙏
+00:37:24	Marius:	Can we try to create an el block with cell block txs
+00:37:35	Minhyuk Kim:	Replying to "Did you get a sense ..."
+
+In the past devnets (like a month ago), there were high consumption & time spent on those verifications which were due to bugs in certain clients; but those specific issues seem to be resolved now
+00:37:35	Marius:	Make sure its rejected by the cls
+00:38:22	Francesco:	Reacted to "In the past devnets ..." with 👍
+00:38:23	Francesco:	Replying to "Did you get a sense ..."
+
+great
+00:38:40	Minhyuk Kim:	Reacted to "great" with 😃
+00:39:14	Barnabas:	Replying to "Can we try to create..."
+
+sounds like you volunteered
+00:43:44	chanderprakash sharma:	could any one tell what is agenda current meeting ? and before discussion I what things I have to see ?
+00:43:59	Mario Vega:	https://github.com/ethereum/pm/issues/1554
+00:44:36	chanderprakash sharma:	Replying to "https://github.com..."
+
+Thankyou
+00:44:37	Gabriel Trintinalia | Besu:	Thanks all!
+00:44:47	chanderprakash sharma:	Bye bYe

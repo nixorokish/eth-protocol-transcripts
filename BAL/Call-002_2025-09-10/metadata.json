@@ -1,0 +1,14 @@
+{
+  "meeting_id": "889 0262 7473",
+  "topic": "EIP-7928 Breakout Room",
+  "meeting_type": "BAL",
+  "meeting_number": "2",
+  "start_time": "2025-09-10T13:59:16Z",
+  "duration_minutes": 53,
+  "recording_count": 6,
+  "downloaded_at": "2025-10-10T21:28:20.057535",
+  "files": [
+    "transcript.vtt",
+    "chat.txt"
+  ]
+}

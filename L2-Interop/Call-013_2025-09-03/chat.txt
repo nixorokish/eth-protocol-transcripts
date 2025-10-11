@@ -1,0 +1,169 @@
+00:12:18	read.ai meeting notes:	Lisandro added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:12:29	Supernormal AI Notetaker:	Hi there 👋 I was invited by 𝗝𝘂𝗱𝗲 to transcribe and take notes for this meeting. Learn more: https://supernorm.al/zoom
+
+Type /𝗵𝗲𝗹𝗽 at any time to see what else I can do.
+00:12:44	Blockscout assistant:	To start the notetaking and recording, the meeting host needs to be present and approve the recording pop-up message.
+00:12:48	Blockscout assistant:	Recording permission was denied, leaving the meeting.
+00:12:51	Rostislav's Fellow Note Taker:	Waiting for the Zoom host’s permission to begin taking notes and recording.
+00:13:01	Rostislav's Fellow Note Taker:	This meeting cannot be recorded because the host has denied permission.
+00:14:35	Fireflies.ai Notetaker Sergey:	Talk to Fireflies: (Web-search enabled) • Say: Hey Fireflies how can you help? • Type: /ff help to get started.  View Realtime notes here: https://app.fireflies.ai/live/01K3PXR9PBRS11KGPGZCAYFTNE?ref=live_chat
+00:15:22	Joshua Rudolf:	https://github.com/ethereum/pm/issues/1713
+00:15:28	Joshua Rudolf:	https://blog.ethereum.org/2025/08/29/protocol-update-003
+00:20:35	Allan | Offchain Labs:	Can you share anything more about the Ethereum Interoperability Layer (EIL)?
+00:21:44	qedk:	Bit of a divergent topic, but have we thought about extending FillInstruction to be non-EVM specific, specifically something like uint64 chainId -> string domain (CAIP2 identifier), happy to bring this up somewhere else if someone can point me (the TG group?)
+00:22:38	frangio:	any rollups already stated they'll reduce settlement times?
+00:23:14	Allan | Offchain Labs:	Replying to "any rollups already ..."
+
+Arbitrum 🙂
+00:23:21	Ellie Davidson:	Reacted to "Arbitrum 🙂" with ❤️
+00:23:29	frangio:	Reacted to "Arbitrum 🙂" with 🔥
+00:23:31	Joshua Rudolf:	Reacted to "Arbitrum 🙂" with ❤️
+00:23:31	Joshua Rudolf:	Reacted to "Arbitrum 🙂" with 🔥
+00:23:33	Barnabé Monnot:	Reacted to "Arbitrum 🙂" with 🔥
+00:23:38	Ellie Davidson:	Replying to "any rollups already ..."
+
+Tell us more? 🙂 By using the 2/3 proof system?
+00:23:56	Ian Norden:	Reacted to "Arbitrum 🙂" with ❤️
+00:23:58	Joshua Rudolf:	https://x.com/ThewizardofPOS/status/1963230271953588376
+00:24:02	Hudson Jameson:	Replying to "any rollups already ..." 
+
+ AggLayer by Polygon as well :)
+00:24:08	Ellie Davidson:	Reacted to "AggLayer by Polygon ..." with ❤️
+00:24:12	Joshua Rudolf:	Reacted to "AggLayer by Polygon ..." with ❤️
+00:24:16	Kanishk | Across:	Reacted to "Arbitrum 🙂" with ❤️
+00:25:00	Sam:	Is this tweet all that is public about?
+00:26:11	Sam:	Reacted to "AggLayer by Polygon ..." with ❤️
+00:26:16	Barnabé Monnot:	Reacted to "AggLayer by Polygon ..." with ❤️
+00:26:54	Pepe Blasco:	How does this compare to existing proposals/solutions like cross chain broadcaster ?
+00:27:19	Allan | Offchain Labs:	Reacted to "How does this compar..." with 👍
+00:28:02	Orest Tarasiuk (t1):	So secretive
+00:28:11	Sam:	Replying to "So secretive"
+
+lol
+00:29:07	qedk:	I think some cross-VM support in the implementation would be interesting.
+00:29:25	frangio:	Reacted to "How does this compar..." with 👍
+00:29:31	Georgios:	Is this related to the OIF initiative in any way?
+00:29:31	Joshua Rudolf:	Reacted to "How does this compar..." with ❤️
+00:30:32	Allan | Offchain Labs:	Replying to "any rollups already ..."
+
+For Arbitrum One, a hybrid proof system is the next step (subject to DAO governance), but net new Arbitrum chains could zk prove by default
+00:30:55	qedk:	I assume EIL will support OIF? Otherwise, it’s additional friction
+00:30:56	Ellie Davidson:	Reacted to "For Arbitrum One, a ..." with ❤️
+00:31:02	Joshua Rudolf:	Reacted to "I assume EIL will su..." with 👍
+00:31:14	Hudson Jameson:	Replying to "any rollups already ..." 
+
+ Excited to see what Succinct and Offchain cook up for Arbitrum
+00:32:40	qedk:	Replying to "any rollups already ..."
+
+Zk fraud proofs + INT fraud proofs?
+00:32:41	Allan | Offchain Labs:	Reacted to "Excited to see what ..." with 🧑‍🍳
+00:32:55	Kanishk | Across:	Reacted to "I assume EIL will ..." with 👍
+00:33:20	Orest Tarasiuk (t1):	Replying to "any rollups already …"
+Hybrid as in zk for faster bisection? Or validity mode?
+00:33:37	Orest Tarasiuk (t1):	Reacted to "I assume EIL will su…" with 👀
+00:34:27	Mislav | Biconomy:	I feel from the convo this is not a messaging layer
+00:34:48	Jim | LI.FI:	Reacted to "I assume EIL will ..." with 👍
+00:35:56	Hudson Jameson:	weeks not months
+-Classic Lubin quote
+00:36:13	Barnabé Monnot:	Reacted to "  weeks not months
+-..." with 😁
+00:36:18	Joshua Rudolf:	Replying to "  weeks not months
+-..."
+
+Dang, great minds
+00:37:56	Joshua Rudolf:	Reacted to "  weeks not months
+-..." with 😁
+00:38:41	Nam:	This is a great example where guidance of how something like 3643 should think about Ethereum interop
+00:38:48	Joshua Rudolf:	@Dennis O'Connell where’s the best place to see projects using 3643
+00:38:55	Joshua Rudolf:	Reacted to "This is a great exam..." with 💯
+00:39:15	Nam:	I can't tell if it should be via OIF, via 7786 to do cross-chain mint-burn or EIL
+00:40:03	Allan | Offchain Labs:	Replying to "any rollups already ..."
+
+don’t mean to tease, but more details coming very soon 😉
+00:42:10	qedk:	Sad to say I am too dumb to understand RWAs
+00:42:25	Han Chen:	Reacted to "Sad to say I am too ..." with 💵
+00:42:31	Thanh Nguyen:	Reacted to "Sad to say I am to..." with 😂
+00:42:48	Jaack:	Reacted to "Sad to say I am too ..." with 😂
+00:43:10	Allan | Offchain Labs:	Reacted to "Sad to say I am too ..." with 😂
+00:43:56	Hudson Jameson:	Reacted to Sad to say I am too ... with "😂"
+00:44:39	Kanishk | Across:	Reacted to "Sad to say I am to..." with 😂
+00:46:29	Vaelyn | ECH:	Reacted to "Sad to say I am to..." with 😂
+00:46:45	Han Chen:	Still thinking about how the compliance part works connecting on-chain/off-chain info, will look more and contact through TG
+00:47:07	Barnabé Monnot:	Replying to "I can't tell if it s..."
+
+that’s a good use case. I would guess 7786 for mint-burn/bridging primitives. would think of OIF for intent layer operations/apps building “on” the mint-burn asset
+00:47:07	rithythul:	thank you
+00:48:33	Joshua Rudolf:	https://github.com/ethereum/L2-interop/tree/main/specs
+00:49:02	Joshua Rudolf:	https://github.com/ethereum/L2-interop/pull/44/files?short_path=789da9b#diff-789da9b59dc505393d1c9c35fdea55268535dba9d8b8be6f672a57be1d843126
+00:50:56	Skele | Wonderland:	internet crashed?
+00:50:59	Joshua Rudolf:	Yep
+00:51:26	qedk:	Good point of bringing up 7786 because EIL should… support it?
+00:53:11	Ndeto | Unruggable:	https://docs.ens.domains/ensip/10/
+00:53:19	Ndeto | Unruggable:	https://docs.ens.domains/ensip/5/#global-keys
+00:54:40	Ndeto | Unruggable:	https://github.com/unruggable-labs/ERCs/pull/1/files
+00:54:52	Ndeto | Unruggable:	https://github.com/unruggable-labs/ERCs/blob/61e0dac92e644b4be246b81b3097565a1ba3bc6c/ERCS/erc-7785.md
+00:56:47	Joshua Rudolf:	I think we may want to do a separate call on this topic soon, wdyt @Ndeto | Unruggable
+00:56:58	Ndeto | Unruggable:	Reacted to "I think we may want ..." with 💯
+00:57:09	Ndeto | Unruggable:	Yes. Def
+00:57:49	Skele | Wonderland:	<3
+00:58:43	Ndeto | Unruggable:	Deeper insights on our 7785 thoughts
+
+https://ethereum-magicians.org/t/erc-7785-onchain-registration-of-chain-identifiers/21299/10?u=ndeto
+00:59:00	Joshua Rudolf:	Reacted to "Deeper insights on o..." with ❤️
+01:00:03	Barnabé Monnot:	Reacted to "Deeper insights on o..." with 👀
+01:01:27	Ash Ahmed:	https://docs.axal.com/
+01:01:40	Skele | Wonderland:	Reacted to "https://docs.axal...." with ❤️
+01:01:44	qedk:	4337 wallets as 7702 delegations or separately?
+01:04:17	Han Chen:	What's the gas unit usage for the deposit?
+01:07:06	Joshua Rudolf:	Will have last 5 mins for 7806 @Han Chen (apologies for small window)
+01:07:19	Han Chen:	Reacted to "Will have last 5 min..." with ❤️
+01:08:02	qedk:	Isn’t it easier to use Turnkey/Privy for wallet management? Too expensive or something else?
+01:08:58	Ash Ahmed:	We’re building on top of privy at the moment, but the base privy wallet alone doesn’t do enough for user key guarantees - they have a global backend signer that we put stronger guardrails around in our own TEE so users know for sure what we’re allowed to do/can't
+01:09:10	qedk:	Reacted to "We’re building on to..." with 👍
+01:09:32	Allan | Offchain Labs:	Replying to "We’re building on to..."
+
+considered ZeroDev?
+01:10:09	Kanishk | Across:	nice presentation axal team!
+01:10:14	Ash Ahmed:	@Ash3156 on telegram if anyone’s further interested!
+01:10:16	qedk:	Replying to "We’re building on to..."
+
+Turnkey allows you to verify TEE attestations, does Privy have that too? What guarantees are missing?
+01:10:17	Ash Ahmed:	Reacted to "nice presentation ax..." with ❤️
+01:10:32	Fabrice Cheng:	Replying to "We’re building on to..."
+
+Happy to put you in touch with Coinbase Embedded Wallet if you’re interested. I believe they solved for it.
+01:10:38	Joshua Rudolf:	Reacted to "nice presentation ax..." with ❤️
+01:11:24	Ash Ahmed:	Replying to "We’re building on to..."
+
+Happy to chat on any of these fronts! @Ash3156 on telegram
+01:11:38	Dev:	Reacted to "nice presentation ..." with ❤️
+01:11:45	Allan | Offchain Labs:	Reacted to "nice presentation ax..." with ❤️
+01:11:45	Dev:	Reacted to "Isn’t it easier t..." with 👍
+01:13:10	Dev:	Replying to "Isn’t it easier t..."
+
+We use Privy, the TEE gives us additional security guarantees, and is also a great way to switch wallet providers in the future
+01:13:17	Dev:	Reacted to "Will have last 5 m..." with ❤️
+01:13:20	qedk:	Reacted to "We use Privy, the TE..." with 👍
+01:15:32	Joshua Rudolf:	erc7806.io
+01:15:33	qedk:	This is a great idea, happy to dogfood this with Nexus, is there anyone else using this in prod already?
+01:15:41	Dev:	Replying to "We’re building on..."
+
+Hey @qedk allows us to have custom permissions for rebalancing user wallets in the future, that enables us to take actions on user wallets verifiably
+01:15:54	Ash Ahmed:	Really sick would love to explore using this - out of curiosity is there a USDC-specific use case you all are excited about for this
+01:15:58	Jim | LI.FI:	could we get that excalidraw link? want to dive more. or if the repo is easier
+01:16:22	Dev:	Reacted to "could we get that ..." with 👏
+01:16:31	Han Chen:	https://excalidraw.com/#json=3YXxviqEC7Xd1qrHPW4ob,_raUiDJmxxq8MOfwPG8HAA
+01:16:33	Dev:	Replying to "Will have last 5 m..."
+
+apologies @Han Chen
+01:16:35	Jim | LI.FI:	Reacted to "https://excalidraw..." with ❤️
+01:16:37	Dev:	Reacted to "https://excalidraw..." with ❤️
+01:18:30	qedk:	Reacted to "Hey @qedk allows us ..." with 👍
+01:18:35	qedk:	Reacted to "https://excalidraw.c..." with ❤️
+01:18:37	Joshua Rudolf:	@MingDynastyVase TG
+01:18:42	Ash Ahmed:	Reacted to "@MingDynastyVase TG" with 👍
+01:18:47	Dev:	Thanks Joshua!

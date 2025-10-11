@@ -1,0 +1,108 @@
+00:03:05	read.ai meeting notes:	Kai added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:03:22	Jun:	gm
+00:04:33	Bubbles Notetaker:	Hi, I'm taking notes and action items for Tamaghna Choudhuri.
+
+Get Bubbles' AI meeting notetaker: https://bubbl.es/notetaker
+
+Remove me: https://bubbl.es/remove-notetaker?t=4gETkwNjvkMnyqqVpnTHZvJ9yYuuWiPgB
+00:05:22	Fireflies.ai Notetaker Fu Chua:	Talk to Fireflies: (Web-search enabled) • Say: Hey Fireflies how can you help? • Type: /ff help to get started.  View Realtime notes here: https://app.fireflies.ai/live/01K42TGF0CX73DZTGSWC267X2Z?ref=live_chat
+00:06:05	Jun:	https://github.com/ethereum/pm/issues/1712
+00:10:13	unnawut:	Ah we also have to agree on the metrics. But since both ream and zeam have implemented metrics emitter already it’s just a matter of agreeing what to measure.
+00:10:35	unnawut:	Replying to "Ah we also have to a..."
+
+We can/should do this after the fork choice specs is merged
+00:14:33	Katya Riazantseva:	you will love it 😄 It’s a great tool
+00:15:27	unnawut:	If we can’t run on kurtosis then we need an alternative solution which I think could be concerning?
+00:15:47	Katya Riazantseva:	Reacted to "If we can’t run on k..." with 👍
+00:16:41	Saulius Grigaitis | Grandine:	Could you drop links of devnet branches of ream, zeam?
+00:16:49	Will Corcoran:	https://github.com/b-wagn/hash-sig/pull/79
+00:17:30	gajinder:	Replying to "Could you drop links..." 
+
+ We zeam are just working and merging in main
+00:17:31	Jun:	Replying to "Could you drop links..."
+
+Ream is using  master  branch
+00:18:06	Saulius Grigaitis | Grandine:	Replying to "Could you drop links…"
+Thanks!
+00:20:14	Kamil Salakhiev:	Replying to "If we can’t run on k..."
+
+In theory, we may put our clients into the Shadow framework: specify clients execution commands in shadow configuration, provide genesis config and run. There will be no metrics, or block explorer, but if we just want to conveniently spin up a network it could be a way
+00:22:43	Jun:	python spec code looks super clear and cool!
+00:27:25	unnawut:	Replying to "If we can’t run on k..."
+
+I’ve never used shadow before. But say if the client instance is exposing metrics on a port, can an external service e.g. prometheus access that port?
+00:31:09	Giacomo Fenzi:	Q: do we perform domain separation in the XMSS signatures? Is this part of the spec?
+00:36:27	Will Corcoran:	FYI: Thomas is going to be one of the primary presenters - along with @Justin Drake @felipe and Emile on Friday during lean consensus call #7 - encore performance + deep dive :)
+00:36:37	Ladislaus:	Reacted to "FYI: Thomas is going..." with 👍
+00:36:51	Kamil Salakhiev:	What is going to be signature size with such configuration?
+00:38:25	unnawut:	Replying to "What is going to be ..."
+
+I got 3100 bytes for the prod config: https://github.com/leanEthereum/leanSpec/issues/14
+00:38:33	Jun:	Reacted to "I got 3100 bytes for..." with 👍
+00:38:35	Kamil Salakhiev:	Reacted to "I got 3100 bytes for..." with 👍
+00:39:40	gajinder:	Reacted to I got 3100 bytes for... with "👍"
+00:40:39	Giacomo Fenzi:	Replying to "Q: do we perform dom..."
+
+Thank you!
+00:44:17	Will Corcoran:	Project board: https://github.com/orgs/leanEthereum/projects/1/views/2?sliceBy%5Bvalue%5D=leanEthereum%2Fpm
+00:44:46	Katya Riazantseva:	Reacted to "Project board: https..." with 🔥
+00:46:39	Will Corcoran:	@Kamil Salakhiev did you want to share any updates with your PQ aggregation simulation work?
+00:47:07	Kamil Salakhiev:	Replying to "@Kamil Salakhiev did..."
+
+I can do it really quick
+00:47:12	Will Corcoran:	Reacted to "I can do it really q..." with ❤️
+00:47:54	Gajinder Singh:	+1
+00:53:46	Gajinder Singh:	thats a good simplification
+00:53:57	unnawut:	Reacted to "thats a good simplif..." with 👍
+00:54:01	Ladislaus:	Reacted to "thats a good simplif..." with 👍
+00:55:33	felipe:	Reacted to "python spec code l..." with 💯
+00:56:47	Jun:	I can provide a quick update on pq devnet visualization app:
+
+Kicked off with  leanView  naming 😂
+Hope I can demo it next week.
+While building this app, I’ve been adding new endpoints for fetching block header, block, etc. It will be great if there’s any common API interface with teams. But it’ll be fine for just switching between client type in PQ Devnet 0.
+00:57:12	Will Corcoran:	Reacted to "I can provide a quic..." with 🔥
+00:57:20	Will Corcoran:	Replying to "I can provide a quic..."
+
+noted
+00:57:35	Jun:	Replying to "I can provide a quic..."
+
+Also changed status in the project board
+00:57:41	Will Corcoran:	Reacted to "Also changed status ..." with ❤️
+00:58:22	Bubbles Notetaker:	🔔 Meeting scheduled to end in 5 mins. I'll stay until you're finished, and share a recording with notes for follow-ups.
+00:58:30	Gajinder Singh:	Replying to "I can provide a quic..."
+
+can we just say that these are the beacon apis client need to implement in the devnet0
+00:58:39	Will Corcoran:	Replying to "🔔 Meeting scheduled..."
+
+Thanks, bubbles
+00:58:56	unnawut:	Reacted to "Thanks, bubbles" with 😀
+00:59:01	Gajinder Singh:	Replying to "I can provide a quic..."
+
+and similarly the events
+00:59:03	Mercy Boma Naps-Nkari:	Reacted to "Thanks, bubbles" with 😀
+00:59:43	Gajinder Singh:	Replying to "I can provide a quic..."
+
+(and all ssz only)
+01:00:07	Jun:	partially yes. I added two endpoints so far:
+
+ /lean/v0/headers/{block_id} 
+ /lean/v0/blocks/{block_id} 
+
+I guess events are not necessary in this phase.
+01:00:21	Gajinder Singh:	Reacted to "Thanks, bubbles" with 😀
+01:00:34	felipe:	Reacted to "Thanks, bubbles" with 😀
+01:00:41	Gajinder Singh:	Replying to "🔔 Meeting scheduled..."
+
+i hope it doesn't auto end the meeting
+01:00:54	Jun:	Replying to "I can provide a quic..."
+
+I might raise this issue on Zeam TG
+01:01:03	Jun:	Reacted to "Thanks, bubbles" with 😀
+01:01:31	felipe:	Reacted to "🔔 Meeting sched..." with 🧼
+01:03:46	Kamil Salakhiev:	Link to the report: https://hackmd.io/@kamilsa/ry3sOVBLex
+01:03:57	Justin Drake:	Reacted to "Link to the report: …" with ❤️

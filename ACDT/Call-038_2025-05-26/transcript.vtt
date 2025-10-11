@@ -1,0 +1,1322 @@
+WEBVTT
+
+1
+00:01:02.450 --> 00:01:03.440
+Mario Vega: Oh!
+
+2
+00:01:04.620 --> 00:01:06.410
+Pooja Ranjan: Hey, Mario! How are you?
+
+3
+00:01:07.170 --> 00:01:10.120
+Mario Vega: I'm doing fine, thanks, all good, and you.
+
+4
+00:01:10.750 --> 00:01:19.313
+Pooja Ranjan: Doing well, I wasn't sure that we are. Gonna have the meeting today given. Monday is like holiday for most of the Us. People. But when I noticed agenda and everything.
+
+5
+00:01:20.030 --> 00:01:20.609
+Pooja Ranjan: I don't.
+
+6
+00:01:20.610 --> 00:01:21.260
+Mario Vega: Oh, really.
+
+7
+00:01:21.420 --> 00:01:22.550
+Pooja Ranjan: Yeah.
+
+8
+00:01:22.550 --> 00:01:24.327
+Mario Vega: What's the holiday.
+
+9
+00:01:24.920 --> 00:01:26.429
+Pooja Ranjan: Called Memorial Day.
+
+10
+00:01:28.670 --> 00:01:38.243
+Mario Vega: I thought of that already had happened earlier this year. I'm I'm i i don't follow us holidays that that closely.
+
+11
+00:01:38.963 --> 00:01:52.939
+Pooja Ranjan: No, that's all right. Yeah. I wasn't sure. But when I noticed it then I started working on creating stream, because it seems like Bot failed, so we will again have to figure out why it failed. But at least we have the stream link ready.
+
+12
+00:01:54.020 --> 00:01:54.590
+Mario Vega: Boom.
+
+13
+00:02:37.350 --> 00:02:38.390
+Mario Vega: hey! Louise!
+
+14
+00:02:42.070 --> 00:02:42.960
+Louis: Hello.
+
+15
+00:02:51.210 --> 00:02:52.920
+Louis: I can run a test now.
+
+16
+00:02:53.180 --> 00:03:02.510
+Louis: But but the test fail or bugging, yeah, for yeah, for Rip.
+
+17
+00:03:02.860 --> 00:03:03.600
+Mario Vega: Cool.
+
+18
+00:03:04.240 --> 00:03:05.200
+Mario Vega: That's very cool.
+
+19
+00:03:07.820 --> 00:03:14.999
+Louis: I'm checking. How could I check the console so I could trickle, arrow and debug.
+
+20
+00:03:16.990 --> 00:03:20.510
+Mario Vega: Nice. I'll get back to your message later.
+
+21
+00:03:20.810 --> 00:03:21.859
+Mario Vega: After the meeting.
+
+22
+00:03:22.220 --> 00:03:22.920
+Mario Vega: Probably.
+
+23
+00:03:22.920 --> 00:03:24.140
+Louis: Yes, that's fine.
+
+24
+00:05:00.010 --> 00:05:05.639
+Mario Vega: Hi! Everyone who's joining we're gonna give a couple of more minutes before we start the stream, and then we can
+
+25
+00:05:05.980 --> 00:05:07.160
+Mario Vega: begin.
+
+26
+00:07:32.200 --> 00:07:36.070
+Mario Vega: Think we should be good to go. Should we start the stream now.
+
+27
+00:07:39.180 --> 00:07:40.240
+Pooja Ranjan: We are, live.
+
+28
+00:07:41.210 --> 00:07:42.000
+Mario Vega: Perfect.
+
+29
+00:07:43.258 --> 00:07:50.799
+Mario Vega: Hello, everyone. Welcome to Acd number 38. Today's May 26, th
+
+30
+00:07:51.010 --> 00:08:00.300
+Mario Vega: and we have just 3 items in the agenda, and the main one is regarding the Fussaka Devnet.
+
+31
+00:08:00.790 --> 00:08:02.560
+Mario Vega: Basically.
+
+32
+00:08:04.140 --> 00:08:07.810
+Mario Vega: I think we should start with that one just to see how clients are
+
+33
+00:08:08.030 --> 00:08:11.809
+Mario Vega: looking up to join the Devnet.
+
+34
+00:08:12.020 --> 00:08:30.039
+Mario Vega: and we can continue with Peer Das. And then history expiry if there's anything to talk about. Also, there's another topic by that was raised by Anders. I think this was left incomplete on Acde, and we can just
+
+35
+00:08:30.390 --> 00:08:33.349
+Mario Vega: finish it here if if he joins the call
+
+36
+00:08:34.280 --> 00:08:39.490
+Mario Vega: alright. So yeah. Starting with the Poseca devnet 0.
+
+37
+00:08:39.590 --> 00:08:57.049
+Mario Vega: I think we can. Start with testnets, test status, and then we can follow up with them status, and so on and so forth. Pari, do you mind going first, st or should I? I just have a a quick basically update about the tests. But do you want to.
+
+38
+00:08:57.240 --> 00:09:04.120
+Mario Vega: Alright, yeah. Basically, the 1st update is that we have a release from East Side.
+
+39
+00:09:04.250 --> 00:09:10.539
+Mario Vega: about the second 0. It it contains the sfide
+
+40
+00:09:11.566 --> 00:09:35.219
+Mario Vega: eips, basically is MoD. X, only the the 2 mode xp related eips they are inside in the release, and it's ready for for everyone to just run it. And we can. We also have a hive hive instance already running at the current moment. We only have go ethereum
+
+41
+00:09:35.320 --> 00:09:51.600
+Mario Vega: live in here, so please check it, and if you want, and you have a release, or you have a branch that you want to use to run your client in this. Please reach out to Baritosh and and they they can, or or someone. In the event Ops team. And they can. They can add you to this.
+
+42
+00:09:51.710 --> 00:09:54.000
+Mario Vega: To this hive. Instance.
+
+43
+00:09:55.840 --> 00:10:24.269
+Mario Vega: we have another another simulator for hive that is getting ready. It's not quite ready yet, is regarding the blob transactions and the engine Api endpoints that we want to test inside of East. The reason it's not ready yet is because we have to make a lot of modifications to East for it to be be able to send the transaction through clients and also
+
+44
+00:10:24.460 --> 00:10:35.950
+Mario Vega: request engine Api requests that the gap blobs. Basically. So that's the reason why it's not ready, but we're working on it, and we should be ready in the following days.
+
+45
+00:10:36.200 --> 00:10:41.280
+Mario Vega: That's that's it from my side. Paritosh! Do you have any anything else.
+
+46
+00:10:41.788 --> 00:10:59.110
+Parithosh Jayanthi: Yeah. So we still have to update the hive instance with the client images that we're using in Fussaka devnet 0. I can do that after the call is done. But yeah, Barnabas is already on the call, and I think he has updates on Fusaka Devnet 0, so I'd let him go first.st
+
+47
+00:10:59.820 --> 00:11:17.480
+Barnabas: Yes, we just had. About an hour ago. We decided to schedule a day from now, and the 1st a day after that we are gonna have enough time for every client team to take a closer look if everything's working, it also allows the
+
+48
+00:11:17.830 --> 00:11:31.590
+Barnabas: new client seems to still produce a full already image before we head tomorrow. Currently, we still waiting for nimbus and lighthouse on the sales side and Icon on the air side to have a
+
+49
+00:11:32.430 --> 00:11:35.070
+Barnabas: a new image that should be fun already.
+
+50
+00:11:38.390 --> 00:11:44.010
+Barnabas: and I think regarding Peter's under 7. We plan to shut it off tomorrow.
+
+51
+00:11:44.770 --> 00:11:47.640
+Barnabas: after the Flow fork is done.
+
+52
+00:11:56.770 --> 00:11:57.880
+Mario Vega: Okay, thank you.
+
+53
+00:11:58.905 --> 00:12:00.194
+Mario Vega: I think.
+
+54
+00:12:00.960 --> 00:12:09.230
+Mario Vega: we can switch it up now to hear from clients if there's any concerns about joining the Devnets. How's everyone looking?
+
+55
+00:12:11.720 --> 00:12:16.189
+Mario Vega: Particularly Aragon? I think it's the one that you mentioned that is missing.
+
+56
+00:12:16.480 --> 00:12:19.510
+Mario Vega: Is there? Is there any updates in from their side.
+
+57
+00:12:22.530 --> 00:12:25.520
+Barnabas: They have a working branch or
+
+58
+00:12:25.660 --> 00:12:29.390
+Barnabas: a work in Progress branch. I haven't had a chance to test it yet.
+
+59
+00:12:37.580 --> 00:12:38.970
+Mario Vega: Marius, can you hear us?
+
+60
+00:12:46.160 --> 00:12:49.570
+Mario Vega: I think the issues on his side? Yeah.
+
+61
+00:12:50.630 --> 00:12:54.549
+Mario Vega: alright so. And from Nimbus on the Cl side.
+
+62
+00:12:56.433 --> 00:12:58.300
+Mario Vega: do you have any updates?
+
+63
+00:13:03.730 --> 00:13:09.500
+Barnabas: I'm not sure if you're asking me or someone from the numbers team. But basically, they also have a
+
+64
+00:13:09.940 --> 00:13:16.749
+Barnabas: an image that is currently under testing and from lighthouse I haven't heard anything yet.
+
+65
+00:13:17.730 --> 00:13:21.350
+Parithosh Jayanthi: Yeah, I think the last estimate was lighthouse will give us an image tomorrow.
+
+66
+00:13:28.080 --> 00:13:29.610
+Mario Vega: Okay, sounds good.
+
+67
+00:13:35.460 --> 00:13:49.099
+Mario Vega: Alright. Is there anything else that we have to discuss regarding definite 0? Is everyone aware of the changes that should go in or have any questions or discussions to be made about definite 0.
+
+68
+00:13:54.573 --> 00:14:08.740
+pawan: Just to be clear about the Bpo the Bpo changes. It's just the eip as is without any of the changes that have been proposed with respect to the 4 version changes right.
+
+69
+00:14:10.650 --> 00:14:19.059
+Parithosh Jayanthi: Yeah, exactly. So. The focal version changes, and any anything else is still in flux. And we would do that for devnet one or potentially devnet 2.
+
+70
+00:14:33.610 --> 00:14:34.550
+Mario Vega: Sounds good.
+
+71
+00:14:35.382 --> 00:14:40.869
+Mario Vega: Alright, if there's nothing else for definite 0, should we discuss definite one?
+
+72
+00:14:42.630 --> 00:14:49.310
+Mario Vega: I think there! There were 2 sfi sfi eips in the last acde
+
+73
+00:14:51.420 --> 00:14:57.713
+Mario Vega: Is there anything that we want to discuss that that now? Or should we defer to to next week when we have
+
+74
+00:14:59.060 --> 00:15:00.780
+Mario Vega: deployed 11 0.
+
+75
+00:15:05.710 --> 00:15:11.390
+ethDreamer (Mark): There was one other thing related to the last question on the Devnet 0 Fork, but.
+
+76
+00:15:11.760 --> 00:15:12.520
+Mario Vega: Yes.
+
+77
+00:15:12.870 --> 00:15:15.269
+ethDreamer (Mark): Or have been discussing, is a config change
+
+78
+00:15:15.450 --> 00:15:27.189
+ethDreamer (Mark): where we don't necessarily include the like Electra and Fuloo epochs in the blob schedule
+
+79
+00:15:30.080 --> 00:15:37.069
+ethDreamer (Mark): like we had initially decided to do that. But we've had discussions that maybe that's not a good idea, just because it could lead to
+
+80
+00:15:37.370 --> 00:15:38.500
+ethDreamer (Mark): changes.
+
+81
+00:15:40.110 --> 00:15:47.570
+ethDreamer (Mark): so, or it could lead to like inconsistencies in the config. But is the devnet 0 version expected to have those in the config.
+
+82
+00:15:50.250 --> 00:15:52.500
+Barnabas: I'm sorry. Could you repeat that.
+
+83
+00:15:54.168 --> 00:15:57.599
+ethDreamer (Mark): So the config may or may not have
+
+84
+00:15:58.260 --> 00:16:08.529
+ethDreamer (Mark): the in in the blob schedule. It may or may not have the Electra and foulu blob parameters. That's 1 1 of the things we've been discussing. So
+
+85
+00:16:08.840 --> 00:16:10.720
+ethDreamer (Mark): not only do we need to know
+
+86
+00:16:11.000 --> 00:16:13.060
+ethDreamer (Mark): what the spec is for, Blob.
+
+87
+00:16:13.350 --> 00:16:20.489
+ethDreamer (Mark): for Bpo forks on Devnet 0. But we need to know what the config is going to look like for Devnet 0, because that may change in future forks.
+
+88
+00:16:21.430 --> 00:16:28.269
+Barnabas: Yeah, I mean, here's I just posted the current version for W. 0. We already had Genesis. So
+
+89
+00:16:28.400 --> 00:16:30.820
+Barnabas: this is what we have in the Prof. Schedule.
+
+90
+00:16:34.730 --> 00:16:38.020
+Barnabas: and we still we we do not have.
+
+91
+00:16:40.520 --> 00:16:45.430
+Barnabas: Who knew next props, but we still have an extra.
+
+92
+00:16:45.540 --> 00:16:53.349
+Barnabas: because we haven't merged that prn yet we're discussing about having the extra look schedule
+
+93
+00:16:54.150 --> 00:16:56.126
+Barnabas: in the next potential
+
+94
+00:16:57.145 --> 00:17:01.869
+ethDreamer (Mark): Yeah, it actually looks like the Electra and Deneb
+
+95
+00:17:02.380 --> 00:17:08.640
+ethDreamer (Mark): parameters are not there in this, which I think is what we're planning to do in the future. Anyway.
+
+96
+00:17:10.369 --> 00:17:15.099
+Barnabas: Yeah. Yeah, it's still under discussion. That's why we didn't bother to
+
+97
+00:17:15.719 --> 00:17:17.809
+Barnabas: do add them here for now.
+
+98
+00:17:19.190 --> 00:17:20.349
+ethDreamer (Mark): Okay, that's fine.
+
+99
+00:17:23.060 --> 00:17:33.640
+Barnabas: Also, if we ever gonna include those officially, then it's gonna be really painful to test anything, because then we would need to
+
+100
+00:17:33.770 --> 00:17:36.449
+Barnabas: always go through those in a way.
+
+101
+00:17:36.950 --> 00:17:37.350
+ethDreamer (Mark): Yeah.
+
+102
+00:17:37.350 --> 00:17:38.859
+Barnabas: Couldn't just start from Genesis.
+
+103
+00:17:38.860 --> 00:17:42.199
+ethDreamer (Mark): Right. That was one of the concerns was that
+
+104
+00:17:42.500 --> 00:17:46.340
+ethDreamer (Mark): we'd really have to make sure that especially across different test nets and stuff
+
+105
+00:17:46.500 --> 00:17:49.700
+ethDreamer (Mark): like it's a it's a duplication of the existing
+
+106
+00:17:50.610 --> 00:17:58.299
+ethDreamer (Mark): of of it's putting the same thing in the config twice and have to really make sure those match. And it's not probably a lot cleaner not to do that.
+
+107
+00:18:00.170 --> 00:18:14.029
+Barnabas: Yeah. So in future future they're not. I would assume that we just gonna agree on okay, which Bpo, we start the genesis rate, we're gonna have 0 set to whatever 18 and then go from there.
+
+108
+00:18:36.640 --> 00:18:38.890
+Mario Vega: Any other comments regarding the config.
+
+109
+00:18:39.240 --> 00:18:48.639
+Mario Vega: The Bpo config. Sorry the rest of the of the teams clear on how to how to proceed
+
+110
+00:18:58.930 --> 00:19:04.690
+Mario Vega: alright. And yeah. Pari shared the link to the second one.
+
+111
+00:19:05.580 --> 00:19:17.249
+Mario Vega: aspects. I think I think someone mentioned in the chat that 79, 18 is also included, and, as as far as I know, I think we we specify that
+
+112
+00:19:17.790 --> 00:19:20.150
+Mario Vega: last week, and then there was only a couple of
+
+113
+00:19:20.820 --> 00:19:24.690
+Mario Vega: changes to be to be made to the eap.
+
+114
+00:19:25.220 --> 00:19:27.940
+Mario Vega: But yeah, I think I think it is sufficed.
+
+115
+00:19:33.590 --> 00:19:41.359
+Parithosh Jayanthi: Is. Does that mean we want to definitely have this in Fusaka Devnet one? Or do we want to delay that for Fusaka Devnet 2,
+
+116
+00:19:44.840 --> 00:19:49.079
+Parithosh Jayanthi: and the main reason for delaying would be in case we want to
+
+117
+00:19:49.520 --> 00:19:57.769
+Parithosh Jayanthi: have the devnet up as soon as possible, because we would like to have a devnet one ready by the interrupt event in Berlin.
+
+118
+00:20:01.960 --> 00:20:02.630
+Ansgar Dietrichs: As good. Yeah.
+
+119
+00:20:02.630 --> 00:20:23.980
+Ansgar Dietrichs: I think the main reason to select it for Devnet. One was just that it looked like there was only, I think, a single new addition to Devnet, one on the dev call, and we had a few ones already pending for the addition to Devnet 2. So it was really just a pragmatic choice, nothing principled behind it. So if it actually makes more sense to push it to Devnet 2, I don't think that would be an issue.
+
+120
+00:20:29.400 --> 00:20:38.709
+Mario Vega: And I think the other argument was that there was a constant that was missing. I mean it was the only thing that was left to define.
+
+121
+00:20:39.060 --> 00:20:42.908
+Mario Vega: and since the consulting is not made mostly
+
+122
+00:20:43.560 --> 00:20:50.679
+Mario Vega: risky part of the eip, I think we could include the definite one, and if the constant changes. We can change the constant in
+
+123
+00:20:50.980 --> 00:20:53.079
+Mario Vega: the minute you. I think that was
+
+124
+00:20:53.500 --> 00:20:56.850
+Mario Vega: the decision. If I remember correctly.
+
+125
+00:20:57.830 --> 00:21:00.229
+Ansgar Dietrichs: Yeah, that's my understanding as well. There was
+
+126
+00:21:00.480 --> 00:21:07.740
+Ansgar Dietrichs: one last change that needed to be done to the Ap. Anders is on the call, maybe, Andas, you could briefly summarize whether you made that change already, or whether that's still pending.
+
+127
+00:21:08.190 --> 00:21:24.101
+Anders Elowsson: Yeah. So I updated the IP yesterday. So now there is a constant we we are still going to probably discuss the exact setting for this constant, but we have a a specification now, and I posted it in the
+
+128
+00:21:25.108 --> 00:21:32.010
+Anders Elowsson: Pm. For the for this call also, and you can just see the aip. There's a specification. Now we can use.
+
+129
+00:21:34.430 --> 00:21:37.590
+Mario Vega: Thanks, Anders, is the eap already updated?
+
+130
+00:21:37.700 --> 00:21:39.870
+Mario Vega: Or does it need an update.
+
+131
+00:21:43.360 --> 00:21:44.580
+Anders Elowsson: It's already updated.
+
+132
+00:21:48.380 --> 00:21:54.249
+Mario Vega: Sounds good. I I think we have everything to proceed with. Tsd, also testing for Tcip.
+
+133
+00:21:55.590 --> 00:21:59.240
+Parithosh Jayanthi: Okay, I've added it to the eip list for definite one.
+
+134
+00:22:01.420 --> 00:22:02.140
+Mario Vega: Excellent.
+
+135
+00:22:02.510 --> 00:22:03.560
+Mario Vega: Yeah, thanks.
+
+136
+00:22:07.610 --> 00:22:13.410
+Mario Vega: All right. Anything left to discuss comments or status from
+
+137
+00:22:13.680 --> 00:22:16.989
+Mario Vega: any clients for demo 0 or demo. One.
+
+138
+00:22:24.140 --> 00:22:32.450
+Parithosh Jayanthi: I think Dimitri asked about a consensus back. Pr, that is still open, just linking it in.
+
+139
+00:22:33.310 --> 00:22:38.370
+Parithosh Jayanthi: I don't have the current status. Do we have someone looking at this.
+
+140
+00:22:41.200 --> 00:22:43.929
+Mario Vega: Yeah. Do you mean? 43, 23.
+
+141
+00:22:44.200 --> 00:22:44.600
+Parithosh Jayanthi: Yeah.
+
+142
+00:22:44.986 --> 00:22:45.760
+Mario Vega: Yes, okay.
+
+143
+00:22:46.583 --> 00:22:49.940
+Mario Vega: Is anybody aware of the status of this? Pr.
+
+144
+00:22:53.800 --> 00:23:03.109
+Parithosh Jayanthi: I'm not sure if G. 11 tech is on this call, but maybe if Justin or I see Pawan's posted about it.
+
+145
+00:23:07.050 --> 00:23:18.259
+pawan: Yeah post on the Pr, like, at least for lighthouse. I don't think it. That would be useful in any way, because we do not request multiple roads in a single
+
+146
+00:23:18.946 --> 00:23:21.679
+pawan: like columns by route request.
+
+147
+00:23:21.880 --> 00:23:26.079
+pawan: So yeah, that's what I posted on the pr.
+
+148
+00:23:26.460 --> 00:23:37.210
+pawan: but yeah, I'm not. I'm not also sure like how exactly it will give us any benefits in terms of like better bandwidth, consumption, or anything like that.
+
+149
+00:23:37.510 --> 00:23:40.280
+pawan: Not convinced that it's helpful.
+
+150
+00:23:42.180 --> 00:23:43.270
+Mario Vega: Yes, gajinder.
+
+151
+00:23:46.370 --> 00:23:48.280
+Gajinder: Yep, thanks.
+
+152
+00:23:48.955 --> 00:23:58.210
+Gajinder: So basically, the aim of the Pr was to make the request size smaller. And it would benefit definitely in the sense that. Okay.
+
+153
+00:23:58.780 --> 00:24:09.960
+Gajinder: if you have a list of block twos, basically you know it. I don't think that would save time in the amount of creating the request. But definitely, if you have, you're requesting a lot of peers.
+
+154
+00:24:10.160 --> 00:24:15.660
+Gajinder: then you can send the request faster and they can inspect it earlier and say that okay, these are the
+
+155
+00:24:16.181 --> 00:24:31.438
+Gajinder: columns that they might not have, and they might also reject the request earlier. So in that sense, the latency of such request would come down. But given the discussion that has happened, many clients sort of pool
+
+156
+00:24:31.910 --> 00:24:46.009
+Gajinder: different blocks that they get the blocks that they get from gossip, and definitely, their columns might be different. So in that sense, I don't think that this format is going to serve that mechanism where
+
+157
+00:24:46.674 --> 00:24:54.550
+Gajinder: you request the where you are basically requesting the columns for those that you have not received in gossip.
+
+158
+00:24:54.660 --> 00:25:01.430
+Gajinder: although in Lorsa we had a different mechanism going on where? For the
+
+159
+00:25:01.570 --> 00:25:06.090
+Gajinder: blocks for which D is not complete, we basically request them one by one. So
+
+160
+00:25:06.674 --> 00:25:15.115
+Gajinder: so that was my context for making this particular Pr. But if other client, other clients are basically requesting
+
+161
+00:25:16.163 --> 00:25:23.370
+Gajinder: the the known da blocks altogether which they were, which were to be da'd in gossip.
+
+162
+00:25:24.162 --> 00:25:29.699
+Gajinder: Then basically, this request doesn't serve that purpose. So in that sense, I guess we can leave this Pr.
+
+163
+00:25:34.860 --> 00:25:38.809
+Mario Vega: Any comments from other teams. About this pr.
+
+164
+00:25:43.900 --> 00:25:49.890
+Manu: Yeah for prism. We, we do not yet request multiple
+
+165
+00:25:51.700 --> 00:25:58.779
+Manu: data columns by roots for different data column indices. But we plan to do it.
+
+166
+00:25:59.430 --> 00:26:10.009
+Manu: And so yes, in this sense this pull request won't help us, and we should. We would like not to see this pull request merged.
+
+167
+00:26:12.950 --> 00:26:16.769
+Manu: So the current status is is okay for us, for prism.
+
+168
+00:26:23.150 --> 00:26:23.929
+Mario Vega: Thank you.
+
+169
+00:26:27.510 --> 00:26:33.850
+Mario Vega: And Gagina mentions that he's fine closing the pr given the future usage plans.
+
+170
+00:26:38.820 --> 00:26:45.116
+Mario Vega: Do you want to wait for other client teams. We? I think we have. We have comments for only 2. Do you want to wait for,
+
+171
+00:26:45.580 --> 00:26:48.729
+Mario Vega: Maybe other clients to chime in before closing.
+
+172
+00:26:49.140 --> 00:26:51.080
+Mario Vega: Okay, cool.
+
+173
+00:26:54.050 --> 00:26:54.905
+Mario Vega: Great.
+
+174
+00:26:57.550 --> 00:27:07.799
+Mario Vega: alright. Yeah. If there are no more comments regarding Devon. 0. We can jump into peer desk. Right. Now
+
+175
+00:27:08.250 --> 00:27:12.829
+Mario Vega: let me see who is in the call.
+
+176
+00:27:21.670 --> 00:27:28.240
+Mario Vega: Does anybody have any of these prepared us in this call?
+
+177
+00:27:33.403 --> 00:27:37.270
+Manu: I can talk about prism. So right now.
+
+178
+00:27:37.680 --> 00:27:47.170
+Manu: Still, a lot of code in prism for pure desk, or is, is in our dedicated Peerdas Branch.
+
+179
+00:27:47.981 --> 00:27:54.240
+Manu: and we are slowly merging it into our unstable branch, namely, develop.
+
+180
+00:27:54.960 --> 00:27:59.839
+Manu: There is still a lot of work to do, but it's progressing quite well.
+
+181
+00:28:05.180 --> 00:28:10.180
+Mario Vega: Yes, pawan, and then Sunnyside labs they want to share doesn't results.
+
+182
+00:28:11.810 --> 00:28:18.352
+pawan: Yeah, for lighthouse we've been, I think, other than like, we haven't completed
+
+183
+00:28:19.890 --> 00:28:33.480
+pawan: adding Bpo to our definitely branch. And we are still working on validator custody but that shouldn't be required as such for definite for net, for the definite 0
+
+184
+00:28:34.213 --> 00:28:53.669
+pawan: other than that, we have merged a few sync fixes, and we have also we had a bug with get blobs v. 2, which we have fixed and merged into unstable so hopefully we will have a branch ready to go by the time like the fully fork happens on net 0.
+
+185
+00:28:54.670 --> 00:28:56.010
+pawan: And that's it for us.
+
+186
+00:28:58.930 --> 00:28:59.930
+Mario Vega: Thank you.
+
+187
+00:29:00.860 --> 00:29:05.120
+Mario Vega: Sunnyside labs. Do you want to talk about the the results.
+
+188
+00:29:06.510 --> 00:29:14.067
+J Sunnyside Labs: Yeah. Hi, so I'm Jay from Sunnyside Labs, and we've done some testings
+
+189
+00:29:15.211 --> 00:29:22.719
+J Sunnyside Labs: as shared last week. And also there are some additional tests that we'd like to discuss. So
+
+190
+00:29:24.111 --> 00:29:38.060
+J Sunnyside Labs: last week, we were investigating like where we are on pos in terms of like, how many number of blobs can we reach as a whole? So
+
+191
+00:29:38.832 --> 00:30:00.390
+J Sunnyside Labs: we ran bit more nodes than the regional devnet, 7 back by. If so, we ran 60 nodes with 6 different cls and 3 different els, and we were able to reach up to nearly 50 blocks per block.
+
+192
+00:30:01.550 --> 00:30:02.389
+J Sunnyside Labs: They
+
+193
+00:30:03.580 --> 00:30:18.470
+J Sunnyside Labs: compared to the previous it's an achievement, we think, because, like previously, we couldn't even mix this many Ceos and Els together at all.
+
+194
+00:30:18.880 --> 00:30:21.769
+J Sunnyside Labs: and we were able to reach like
+
+195
+00:30:22.090 --> 00:30:24.659
+J Sunnyside Labs: the best results out of. Like
+
+196
+00:30:24.930 --> 00:30:26.860
+J Sunnyside Labs: all the dot nets we ran.
+
+197
+00:30:27.450 --> 00:30:38.060
+J Sunnyside Labs: And we've after this update, we continued, looking into what can be
+
+198
+00:30:38.680 --> 00:30:44.059
+J Sunnyside Labs: improved so that we can reach 70 72 blobs per block.
+
+199
+00:30:44.870 --> 00:30:46.263
+J Sunnyside Labs: And then
+
+200
+00:30:47.230 --> 00:30:57.090
+J Sunnyside Labs: we were looking at some bottlenecks and comparing like whether there's an impact on different stereo strategies on
+
+201
+00:30:58.354 --> 00:31:02.950
+J Sunnyside Labs: get blobs v. 2 and like
+
+202
+00:31:03.610 --> 00:31:13.017
+J Sunnyside Labs: the consequences of having gap blobs or not having gap blobs so far.
+
+203
+00:31:14.350 --> 00:31:20.589
+J Sunnyside Labs: There hasn't been much difference enabling or disabling. Get blobs
+
+204
+00:31:21.366 --> 00:31:24.099
+J Sunnyside Labs: and we also found that
+
+205
+00:31:24.975 --> 00:31:30.240
+J Sunnyside Labs: most of the Cls just request once per block
+
+206
+00:31:30.964 --> 00:31:34.409
+J Sunnyside Labs: if they can't get it from p. 2 p. Network.
+
+207
+00:31:35.708 --> 00:31:38.920
+J Sunnyside Labs: Only Granddyne was requesting more than once.
+
+208
+00:31:39.250 --> 00:31:43.303
+J Sunnyside Labs: but we were not able to run
+
+209
+00:31:43.910 --> 00:31:47.539
+J Sunnyside Labs: grander, grander and standalone to compare the resorts
+
+210
+00:31:47.970 --> 00:31:51.934
+J Sunnyside Labs: because of, because it was a bit unstable.
+
+211
+00:31:52.550 --> 00:32:00.890
+J Sunnyside Labs: But anyway, for lighthouse and prism, even with and without gaps they were
+
+212
+00:32:03.070 --> 00:32:07.049
+J Sunnyside Labs: achieving much higher than before, so which which were like
+
+213
+00:32:07.170 --> 00:32:18.049
+J Sunnyside Labs: 53 blobs per block for lighthouse, which previously was 43, and 44 prison which previously was 25.
+
+214
+00:32:18.450 --> 00:32:19.130
+J Sunnyside Labs: Yes.
+
+215
+00:32:21.750 --> 00:32:30.309
+J Sunnyside Labs: So yeah, we will keep post like any updates and any findings we have from on the discord channel.
+
+216
+00:32:31.970 --> 00:32:37.350
+Parithosh Jayanthi: Did you guys happen to look into? Why get blobs? Wasn't making a big difference or
+
+217
+00:32:38.092 --> 00:32:43.580
+Parithosh Jayanthi: yeah? Because that does. That seems a bit counterintuitive for a small network.
+
+218
+00:32:44.430 --> 00:32:56.229
+J Sunnyside Labs: And I think, we. I really wanted to test Granddyne because they were requesting more than once.
+
+219
+00:32:56.810 --> 00:33:04.090
+J Sunnyside Labs: but I guess because it's a small network they were able to get it on via p. 2, p.
+
+220
+00:33:05.149 --> 00:33:07.389
+J Sunnyside Labs: We still have to look into it.
+
+221
+00:33:09.420 --> 00:33:10.780
+Parithosh Jayanthi: Okay, cool. Yeah.
+
+222
+00:33:16.820 --> 00:33:17.420
+Mario Vega: Thank you.
+
+223
+00:33:18.220 --> 00:33:30.149
+pawan: I also had another question like, Did you also happen to test any syncing like any node in the network, like with a fresh sync, and if it caught up to head
+
+224
+00:33:30.780 --> 00:33:32.320
+pawan: with these parameters.
+
+225
+00:33:36.640 --> 00:33:41.280
+J Sunnyside Labs: Yeah, syncing was a challenge, because
+
+226
+00:33:42.076 --> 00:33:49.860
+J Sunnyside Labs: sometimes we have to restart the entire network, because many of the nodes fail to re-sync,
+
+227
+00:33:54.690 --> 00:33:59.239
+J Sunnyside Labs: yeah. Is there a way that we can manually forward? Sync
+
+228
+00:34:03.260 --> 00:34:09.360
+pawan: Yeah, you can do that on lighthouse, like you mean, try to sync without checkpoint sync, or
+
+229
+00:34:09.969 --> 00:34:11.550
+pawan: didn't understand what you mean.
+
+230
+00:34:14.420 --> 00:34:17.010
+J Sunnyside Labs: Yeah, at any point like, when
+
+231
+00:34:17.290 --> 00:34:21.269
+J Sunnyside Labs: a node fails to catch up the chain.
+
+232
+00:34:25.170 --> 00:34:32.459
+J Sunnyside Labs: Yeah, I I guess we can chat. Talk offline regarding like those kind of things.
+
+233
+00:34:36.380 --> 00:34:38.921
+Mario Vega: And there's a question about
+
+234
+00:34:39.540 --> 00:34:51.639
+Mario Vega: the resource utilization for super nodes. Whether you know what's the reason? Behind the high resource utilization in those super nodes.
+
+235
+00:34:54.060 --> 00:35:03.310
+J Sunnyside Labs: High resource, utilization, and sorry one second.
+
+236
+00:35:03.720 --> 00:35:21.020
+Francesco: Yeah, like in the report. It says the super nodes were often running with like extremely high, like the CPU, being like very much utilized like utilizing like a ton of RAM. And like these kind of things, I was wondering if you maybe knew if it was like mostly due to column verification, or
+
+237
+00:35:21.170 --> 00:35:26.640
+Francesco: or what? Exactly just because there had been already in the past this issue that it
+
+238
+00:35:26.750 --> 00:35:44.870
+Francesco: seem like column verification was much more expensive than it's supposed to be like, just by looking at what what the library should like. What are the verification times for the library? And so it's kind of. Yeah, I'm just wondering if that's still the problem, or if it's something else.
+
+239
+00:35:47.491 --> 00:35:54.069
+J Sunnyside Labs: The resource utilization problem was particularly on lodestar supernodes.
+
+240
+00:35:54.915 --> 00:35:59.909
+J Sunnyside Labs: It hasn't been an issue with other clients tested.
+
+241
+00:36:00.110 --> 00:36:05.420
+Francesco: Oh, I see. Okay, yeah, I misread. I thought you just said I didn't realize it, said Lodestar.
+
+242
+00:36:06.790 --> 00:36:08.410
+J Sunnyside Labs: Right right sorry about that.
+
+243
+00:36:08.590 --> 00:36:09.330
+J Sunnyside Labs: Don't know.
+
+244
+00:36:15.130 --> 00:36:20.188
+Mario Vega: Thank you. And thanks for sharing the link. If anyone has further questions, I think we can.
+
+245
+00:36:21.880 --> 00:36:29.140
+Mario Vega: I'll take a look in into the report. And yeah, just reach out to sunset for questions.
+
+246
+00:36:29.530 --> 00:36:31.277
+Mario Vega: Yeah, thank you.
+
+247
+00:36:33.080 --> 00:36:36.179
+Mario Vega: Is there anything else that we want to discuss regarding peer desk?
+
+248
+00:36:38.337 --> 00:36:53.169
+Parithosh Jayanthi: Yeah, I wanted to ask if there's some specific things client teams want us to be testing on 7 before we get rid of it. I think a natural test would be just making sure we can sync to head with all Cls
+
+249
+00:36:53.859 --> 00:36:56.979
+Parithosh Jayanthi: besides that there anything else we should check.
+
+250
+00:37:00.460 --> 00:37:04.180
+Manu: Yeah, I would say, thinking in boss.
+
+251
+00:37:05.000 --> 00:37:09.670
+Manu: So in a network which is finalizing and not finalizing.
+
+252
+00:37:10.315 --> 00:37:14.240
+Manu: I think it's important to test both, because sometimes.
+
+253
+00:37:14.680 --> 00:37:17.649
+Manu: at least, it is the case in prism. The code pass.
+
+254
+00:37:17.790 --> 00:37:22.579
+Manu: He's not exactly the same when you want to sync in
+
+255
+00:37:23.010 --> 00:37:26.789
+Manu: the finalizing plant compared to a non-finalizing plant.
+
+256
+00:37:27.610 --> 00:37:30.709
+Manu: So, yes, would be useful to test this.
+
+257
+00:37:32.570 --> 00:37:43.259
+Parithosh Jayanthi: Yeah, sounds good. We can make it non finalized. We can do a basic sync test when it's finalizing, make it non finalizing and do another round of sync tests. I think that should be straightforward.
+
+258
+00:37:43.540 --> 00:37:48.320
+Manu: And yeah, and especially also I, I said this for the previous devnet.
+
+259
+00:37:48.925 --> 00:37:53.194
+Manu: I think it's important to run at least a few hours of
+
+260
+00:37:53.940 --> 00:38:00.919
+Manu: blobs transaction before going to full, because there is a Electra
+
+261
+00:38:01.090 --> 00:38:08.950
+Manu: to furloo transition which can cause some bugs as well, because Electra has blobs and Furloo has data columns.
+
+262
+00:38:10.884 --> 00:38:18.030
+Parithosh Jayanthi: I was talking about Pierdas Devnet 7 up until now, so that one is the one we would be deprecating this week.
+
+263
+00:38:21.120 --> 00:38:27.750
+Manu: Yeah, yeah. But it's still a case. I mean, we, we can run Electra
+
+264
+00:38:28.630 --> 00:38:34.810
+Manu: for a few hours in periods. Devnet 7, before activating, put up.
+
+265
+00:38:36.010 --> 00:38:37.889
+Manu: Or maybe I'm missing something.
+
+266
+00:38:39.080 --> 00:38:42.190
+Parithosh Jayanthi: I mean Pietas 10 already. Has Hulu right.
+
+267
+00:38:42.838 --> 00:38:44.110
+Manu: Sorry. Sorry. Sorry. Okay.
+
+268
+00:38:46.282 --> 00:38:51.050
+Parithosh Jayanthi: But I agree what what you're saying is, can we can apply the full second.
+
+269
+00:38:51.390 --> 00:38:52.177
+Manu: So it's okay.
+
+270
+00:38:52.440 --> 00:38:53.539
+Parithosh Jayanthi: You can do that. Yeah.
+
+271
+00:38:56.780 --> 00:38:58.890
+Mario Vega: There's a oh, yeah, sorry.
+
+272
+00:38:59.100 --> 00:38:59.946
+Parithosh Jayanthi: One thing.
+
+273
+00:39:02.210 --> 00:39:10.429
+Parithosh Jayanthi: Marius, I think we might need a malicious gets to to that right to create a block with cell block transactions.
+
+274
+00:39:10.650 --> 00:39:12.200
+Marius: I can. I can build you one.
+
+275
+00:39:12.970 --> 00:39:15.119
+Parithosh Jayanthi: Awesome. Yeah, that's good.
+
+276
+00:39:15.820 --> 00:39:19.940
+Mario Vega: But could you? Could you expand a little bit more on what you mean? I didn't quite get it.
+
+277
+00:39:21.391 --> 00:39:23.678
+Marius: So my idea is to send
+
+278
+00:39:24.260 --> 00:39:32.890
+Marius: like as I, as I said in the interrupt chat, already we should try to make sure that all of the transaction pools are rejecting the
+
+279
+00:39:33.360 --> 00:39:38.969
+Marius: the self-proof transactions before Furloo, and we made sure. But
+
+280
+00:39:39.540 --> 00:39:44.720
+Marius: now we should create a block that has a transaction in that
+
+281
+00:39:45.356 --> 00:39:48.209
+Marius: that has the set of rules. So if
+
+282
+00:39:48.450 --> 00:39:51.850
+Marius: someone mines a faulty block with the with the El
+
+283
+00:39:52.340 --> 00:39:55.229
+Marius: that those blocks get rejected by the CEO.
+
+284
+00:39:58.860 --> 00:39:59.560
+Mario Vega: Yes, Francisco.
+
+285
+00:39:59.560 --> 00:40:00.310
+Marius: Because.
+
+286
+00:40:00.310 --> 00:40:08.499
+Francesco: But what does that mean with like, the the cell perfs would be in the network wrapper. So how could you even put them in the block.
+
+287
+00:40:10.290 --> 00:40:16.610
+Marius: Well, I I mean with a with a transaction. Where this, where the network rapper is, is the
+
+288
+00:40:20.310 --> 00:40:22.720
+Marius: the, the the new sub group.
+
+289
+00:40:25.150 --> 00:40:33.250
+Francesco: What I mean is like the like today. The current proof type doesn't go in the block anyway. So it would. It would be like.
+
+290
+00:40:33.780 --> 00:40:39.030
+Francesco: I mean, you could somehow do it. But it would be like more than yeah.
+
+291
+00:40:39.030 --> 00:40:40.687
+Marius: It does go.
+
+292
+00:40:41.600 --> 00:40:47.930
+Marius: and we don't really have a name for the for the object that we pass through the engine Api to the consensus layer.
+
+293
+00:40:48.150 --> 00:40:48.810
+Marius: It's.
+
+294
+00:40:48.810 --> 00:40:51.760
+Francesco: Oh, in that sense. Okay, I see. Yeah, okay, I see what you mean. Yeah.
+
+295
+00:40:51.760 --> 00:40:52.930
+Marius: Everyone. Yeah.
+
+296
+00:40:53.270 --> 00:40:56.289
+Francesco: Yeah, okay, I didn't understand. You meant through the engine. Api, okay, yeah.
+
+297
+00:40:56.880 --> 00:40:57.235
+Marius: Yeah.
+
+298
+00:40:59.800 --> 00:41:02.399
+Mario Vega: But how? How the rest of the clients will detect this.
+
+299
+00:41:06.256 --> 00:41:14.220
+Marius: The cl should reject the, doesn't it? This the proof.
+
+300
+00:41:14.820 --> 00:41:22.209
+pawan: I think it would be like a deserialization failure when you get it over the engine. Api.
+
+301
+00:41:22.770 --> 00:41:23.779
+pawan: I did it.
+
+302
+00:41:30.060 --> 00:41:47.030
+Mario Vega: I think we can explore also doing it in hive. We have a new type of testing in East that we basically use get blobs, but I think maybe we can tweak it a little bit to see if we can do this test case. I'm not sure, though I'm gonna I'm gonna check it in in East.
+
+303
+00:41:47.880 --> 00:41:53.859
+Marius: Well, yeah. But get blobs. That's different. Right? Like this is not the consensus path.
+
+304
+00:41:54.575 --> 00:42:04.040
+Marius: Like, we should definitely make sure that if we return, share proofs on. Get blob v. 1 or or blob proofs on. Get blob. V. 2. Get blobs. V. 2.
+
+305
+00:42:04.631 --> 00:42:08.320
+Marius: Then the the cl clients should reject them.
+
+306
+00:42:09.190 --> 00:42:13.309
+Marius: But this is more about like the consensus per.
+
+307
+00:42:20.960 --> 00:42:22.150
+Mario Vega: Got it. Thank you.
+
+308
+00:42:26.770 --> 00:42:35.040
+Mario Vega: Alright. Yeah, thank you. Thank you for that. Do we have anything else from peer for peer desk that we want to discuss.
+
+309
+00:42:49.350 --> 00:43:02.421
+Mario Vega: if not the last topic that I have in the agenda is history expiry? I left this because we talked about it in the in the previous meeting. So maybe there was something left that we have to discuss.
+
+310
+00:43:02.980 --> 00:43:10.109
+Mario Vega: But if not that, that's okay. Do we have anything that someone wants to share about the update in history. Expiry.
+
+311
+00:43:25.850 --> 00:43:27.729
+Mario Vega: Okay? If if not,
+
+312
+00:43:30.690 --> 00:43:35.930
+Mario Vega: is there anything else? Any other topics that we're missing from the agenda that anyone wants to bring up.
+
+313
+00:43:44.430 --> 00:43:46.533
+Mario Vega: Okay? Otherwise we can.
+
+314
+00:43:51.670 --> 00:43:56.349
+Mario Vega: yeah. The agenda is normally shared in the Pm repo
+
+315
+00:43:56.740 --> 00:44:02.299
+Mario Vega: as an issue. So you can just look at their acdt. This is the current agenda.
+
+316
+00:44:03.062 --> 00:44:14.010
+Mario Vega: Just go into the Pm. Repo, go to issues and just look up acdt, which is this meeting? And then you can either comment if you want to discuss something during the meeting
+
+317
+00:44:14.230 --> 00:44:21.154
+Mario Vega: or yeah, you can revisit the topics afterwards. And there should be a and
+
+318
+00:44:22.070 --> 00:44:26.580
+Mario Vega: basically meeting notes in here after the meeting also.
+
+319
+00:44:26.830 --> 00:44:27.610
+Mario Vega: But yeah.
+
+320
+00:44:28.820 --> 00:44:40.169
+Mario Vega: alright, yeah, if there's nothing else, I think we can wrap it up now, and just wait next couple of days that that net 0 is launched, and we can pick it up from there.
+
+321
+00:44:40.550 --> 00:44:45.899
+Mario Vega: See if there is any issues. Thank you. Thank you. Everyone have a nice day. Bye.
+
+322
+00:44:45.900 --> 00:44:47.010
+Parithosh Jayanthi: 18.
+
+323
+00:44:47.010 --> 00:44:47.569
+Manu: Thank you. Bye.
+
+324
+00:44:47.570 --> 00:44:48.680
+Dmitrii Shmatko: Take care bye.
+
+325
+00:44:48.680 --> 00:44:49.270
+ethDreamer (Mark): This guy is.
+
+326
+00:44:49.270 --> 00:44:49.930
+Marius: That's right.
+
+327
+00:44:50.730 --> 00:44:51.580
+Ansgar Dietrichs: I have one.
+
+328
+00:44:52.130 --> 00:44:54.189
+chanderprakash sharma: Bye, thank you, everyone. Bye-bye.
+
+329
+00:45:14.330 --> 00:45:16.770
+chanderprakash sharma: Hi, Tim, are you still available?
+
+330
+00:45:19.360 --> 00:45:20.670
+chanderprakash sharma: Hi, Tim.
+

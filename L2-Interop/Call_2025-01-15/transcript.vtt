@@ -1,0 +1,1510 @@
+WEBVTT
+
+1
+00:00:07.310 --> 00:00:24.240
+Joshua Rudolf: Great. Hello, everybody again. Thank you very much for joining before we jump into the agenda. Just wanted to say that I'm super excited and very much appreciative of everyone coming together here with the shared goal to accelerate, interrupt.
+
+2
+00:00:24.706 --> 00:00:34.430
+Joshua Rudolf: I think it sends a really strong signal that we are all here coming to the table to solve one of the most valuable things we can for users within the entire ecosystem.
+
+3
+00:00:35.398 --> 00:00:51.340
+Joshua Rudolf: Yeah, I I think we probably all agree that there is urgency here. Some of the primary things that we should probably not lose track of in my mind. I just wanted to to start with here. Which number one to me is, what problem are we solving?
+
+4
+00:00:51.410 --> 00:01:09.170
+Joshua Rudolf: And yeah, nod to to mark from optimism. For you know, really drilling this and and many others for making sure that that we stay focused on this. And I would really ask for the whole group here to, you know, as we go forward, this call and future calls to make sure we don't lose track of that. And then number 2, I think just as important in my mind is.
+
+5
+00:01:09.634 --> 00:01:21.980
+Joshua Rudolf: maintaining momentum and forward progress towards the solution we need. We need like need to make sure that we land at the right solution here. But also think there is a potential
+
+6
+00:01:22.030 --> 00:01:40.860
+Joshua Rudolf: failure case, I guess, where where we get bogged down in technical debate. And and so this, to me, is sort of one of the trickier aspects of this whole endeavor to balance. And again, yeah, just would ask that we try not to lose track of of the urgency here, as we evaluate. What are the things that we
+
+7
+00:01:41.140 --> 00:01:49.879
+Joshua Rudolf: that we really need to have? Where should we invest more time. And when what things are, you know, potentially okay. To to come back to later.
+
+8
+00:01:50.020 --> 00:01:53.409
+Joshua Rudolf: I definitely don't have all the answers, but I think we can all
+
+9
+00:01:53.750 --> 00:01:58.549
+Joshua Rudolf: try to keep the group on track to our goals as we get into these discussions.
+
+10
+00:02:01.310 --> 00:02:13.225
+Joshua Rudolf: If anyone else has anything to add there, yeah, feel free to jump in now. Or one other thing I was gonna say, just in terms of yeah sort of housekeeping, let's try to do. We do have a pretty good number of people here. So let's try to do the old
+
+11
+00:02:13.650 --> 00:02:15.070
+Joshua Rudolf: raised hand thing.
+
+12
+00:02:15.880 --> 00:02:17.869
+Joshua Rudolf: Anyone else have anything that they want to add.
+
+13
+00:02:23.970 --> 00:02:44.259
+Joshua Rudolf: All right. So yeah, we can jump into 1st part of the agenda, which is change specific addresses. I was going to start with just a very quick 2 min refresher and overview for anyone who may have forgotten or just isn't fully up to speed with things. So let me share my screen. I'll keep this short and sweet?
+
+14
+00:02:54.910 --> 00:02:59.480
+Joshua Rudolf: If this works okay, can you all see my screen here?
+
+15
+00:03:00.840 --> 00:03:01.180
+frangio: Yep.
+
+16
+00:03:01.180 --> 00:03:01.940
+donnoh | L2BEAT: Yes.
+
+17
+00:03:06.710 --> 00:03:23.710
+Joshua Rudolf: So, yeah, just again, this is a really quick overview, original. Erc is 3, 7, 7, 0 back in 2021 drawing inspiration from that for 7, 8, 2, 8, which is the ens based version, summarizing it here below. This is a unified address format
+
+18
+00:03:24.000 --> 00:03:30.049
+Joshua Rudolf: that allows specifying the account as well as the chain on which that account tends to transact
+
+19
+00:03:34.070 --> 00:03:42.319
+Joshua Rudolf: the goals again. Let's not lose track of that automatic handling of of Cross L 2 sends just by putting the correct address into the send field.
+
+20
+00:03:42.860 --> 00:03:56.719
+Joshua Rudolf: What are other? Must haves of this design supporting all chains in the theorem ecosystem? This includes non evm, it does not include alt, l. 1 s. It does not include things that are
+
+21
+00:03:59.400 --> 00:03:59.700
+Joshua Rudolf: oh.
+
+22
+00:04:00.540 --> 00:04:06.329
+Joshua Rudolf: and it does not. It does not include things that are that are, yes, are just clearly outside of the ethereum ecosystem.
+
+23
+00:04:06.770 --> 00:04:10.519
+Joshua Rudolf: What are we optimizing for human readability and intuitiveness
+
+24
+00:04:10.960 --> 00:04:17.230
+Joshua Rudolf: and a scalable solution that supports the continued rapid growth of the L. 2 l. 3. Ecosystem
+
+25
+00:04:17.399 --> 00:04:20.210
+Joshua Rudolf: by moving chain registration to ens
+
+26
+00:04:22.140 --> 00:04:25.490
+Joshua Rudolf: any questions or anything at any point, feel free just to to raise your hand.
+
+27
+00:04:26.513 --> 00:04:29.020
+Joshua Rudolf: Okay. But what exactly will this look like?
+
+28
+00:04:29.470 --> 00:04:37.000
+Joshua Rudolf: Short answer is, Tbd, we have some candidates, as you can see here on the screen.
+
+29
+00:04:37.190 --> 00:04:42.370
+Joshua Rudolf: This can be something like Alice eth@rollup.eve.
+
+30
+00:04:42.470 --> 00:04:49.309
+Joshua Rudolf: There's alternatives, I think, from discussions that we've had leading up to this point. Many, you know, there's sort of
+
+31
+00:04:49.740 --> 00:04:53.020
+Joshua Rudolf: yeah varying degrees of
+
+32
+00:04:53.510 --> 00:05:04.780
+Joshua Rudolf: passion or preference for each of these. I think, perhaps more and more more of us are sort of coming to the conclusion that that any of these would would solve
+
+33
+00:05:05.420 --> 00:05:23.739
+Joshua Rudolf: the problem that we're looking to solve, and that I think we could. We could probably get comfortable moving forward with with either of these. In my mind, I do have a preference for something that again, I think, is a bit more human, readable and intuitive, which is the which is the top solution here with the app sign. But
+
+34
+00:05:23.990 --> 00:05:28.459
+Joshua Rudolf: hopefully, we don't get too bogged down on on this on this question, either.
+
+35
+00:05:30.510 --> 00:05:33.899
+Joshua Rudolf: Okay? Last thing, open questions here.
+
+36
+00:05:34.240 --> 00:05:45.030
+Joshua Rudolf: finalizing the format. There's a sort of a bucket of questions around the rollout of on-chain configs, which is 7, 7, 8, 5. We haven't really touched on that
+
+37
+00:05:46.240 --> 00:05:49.600
+Joshua Rudolf: and then compatibility with kite.
+
+38
+00:05:49.920 --> 00:06:10.299
+Joshua Rudolf: and this may be one of the sort of more tricky things for us to to answer, at least on this call. But we've had some initial discussions around that. And I wanted to actually yeah, hand it off here to to some other folks who have been thinking about this. Maybe maybe march in if you're available.
+
+39
+00:06:13.410 --> 00:06:26.969
+Marcin: Yeah, sure things. So yeah, we had a bunch of discussion about how this could be Comp if and how this could be compatible with Skype. This, of course, still being analyzed, discussed, but the early idea is to have one cape
+
+40
+00:06:27.280 --> 00:06:55.549
+Marcin: like prefix ecosystem, and then everything under underneath being compatible with the Erc that Josh was just that Joshua was just showing right? So currently, for those who don't know kite is the chain agnostic protocol. Today, you can reach ethereum chains by doing a very human, unfriendly eip. 155 colon chain Id. Colon. Address. So this probably will keep working, and the discussion is to potentially
+
+41
+00:06:56.060 --> 00:07:02.570
+Marcin: add a new, add a new type entry somewhere in there that will have, for example, this Erc that was just shown.
+
+42
+00:07:05.580 --> 00:07:16.519
+Marcin: But 1 1 thing I would add to the group is, I very much support the urgency that Joshua was talking about, and I would love for us to even agree on the small steps. Right?
+
+43
+00:07:16.780 --> 00:07:30.279
+Marcin: If we, as a community, can come and like at least agree that. Okay, this will be the the chain format. This will, I hope, mentally unblock people to be like, okay, now that we have the chain addressing solved, we can talk more about interrupt and messaging, and like next layers.
+
+44
+00:07:42.390 --> 00:07:45.770
+Joshua Rudolf: Any other thoughts on this question of compatibility with kite.
+
+45
+00:07:46.400 --> 00:07:50.120
+frangio: What is the benefit of using kite?
+
+46
+00:07:52.310 --> 00:07:53.440
+frangio: For this format?
+
+47
+00:07:57.480 --> 00:07:59.409
+Marcin: So in this case we would. I mean
+
+48
+00:08:00.570 --> 00:08:06.559
+Marcin: what will be shown in the. In the later things there are a bunch of wallets, whatnot that are already using Kype.
+
+49
+00:08:07.950 --> 00:08:17.930
+Marcin: The way to think about it is it's Skype here will be mo almost like a fixed prefix, and then everything underneath will be, for example, this Erc that Josh was showing right.
+
+50
+00:08:20.970 --> 00:08:25.009
+Marcin: But this means that you'll still be able to like distinguish it from I don't. Solan addresses globally.
+
+51
+00:08:27.750 --> 00:08:40.039
+Arik Galansky: Yeah, I'll I just wanna add, like without going to the details of like this proposition of how to integrate with Skype. I think it's a good idea to be kite compatible, because eventually
+
+52
+00:08:40.500 --> 00:08:54.800
+Arik Galansky: other blockchains also have addresses and things like that. So other ones and other ecosystems. So something that is open for one implementation by wallets just has a larger chance of being more easily adopted in wallets. So
+
+53
+00:08:54.910 --> 00:08:56.540
+Arik Galansky: I see the value there.
+
+54
+00:08:59.770 --> 00:09:00.460
+Joshua Rudolf: London.
+
+55
+00:09:01.520 --> 00:09:04.449
+Vandan Parikh | MetaMask: Yeah. And coming from the wallet perspective, I think.
+
+56
+00:09:04.972 --> 00:09:14.787
+Vandan Parikh | MetaMask: Yeah, I think when you have a sort of multi chain wallet with different ecosystems, you know you it's helpful to have some kind of
+
+57
+00:09:15.320 --> 00:09:24.609
+Vandan Parikh | MetaMask: addressing there across those, but I just want to clarify that, you know, from the wallet side if we were to. Basically the the use of the Cape
+
+58
+00:09:24.710 --> 00:09:28.511
+Vandan Parikh | MetaMask: standards are mostly for, like low level
+
+59
+00:09:30.530 --> 00:09:44.120
+Vandan Parikh | MetaMask: routing and all that. But in the interface, you know we would. We would definitely be able to translate that to another format and present that differently to users, so that it's in an optimal
+
+60
+00:09:44.240 --> 00:09:47.590
+Vandan Parikh | MetaMask: kind of human, human, friendly format.
+
+61
+00:10:01.310 --> 00:10:08.999
+Joshua Rudolf: Any other questions around this question of compatibility, or, more broadly, on chain specific addresses.
+
+62
+00:10:14.890 --> 00:10:17.870
+Joshua Rudolf: There's a few questions in the chat, let's see.
+
+63
+00:10:26.960 --> 00:10:29.290
+Joshua Rudolf: So. Yes, this is depending on Ens.
+
+64
+00:10:30.800 --> 00:10:36.610
+Joshua Rudolf: But I think there is a solution here where we can support non, evm. L. 2 s.
+
+65
+00:10:37.681 --> 00:10:42.539
+Joshua Rudolf: Maybe someone who has been thinking more deeply about this, can?
+
+66
+00:10:43.460 --> 00:10:47.099
+Joshua Rudolf: Oh, actually, we have Raul Raul! Did you want to jump in.
+
+67
+00:10:48.274 --> 00:10:54.499
+Rahul Kothari: Yeah, I was. I'm I'm representing Aztec, which is not an Evml 2.
+
+68
+00:10:56.420 --> 00:11:01.600
+Rahul Kothari: Yeah. My, just my question was like, it's unclear. How exactly I could even
+
+69
+00:11:01.740 --> 00:11:04.400
+Rahul Kothari: help with pipe or disintegration.
+
+70
+00:11:10.170 --> 00:11:10.980
+Joshua Rudolf: Andreas.
+
+71
+00:11:13.670 --> 00:11:14.656
+Andreas Freund (He/Him): Thank you.
+
+72
+00:11:16.045 --> 00:11:25.724
+Andreas Freund (He/Him): if you if you want to talk about interoperability, that's chain agnostic, and that is based where that allows you to use any type of keys and and
+
+73
+00:11:26.660 --> 00:11:34.069
+Andreas Freund (He/Him): refer and and refer to, you know, different types of origins, you know, like chains. Why not use dids.
+
+74
+00:11:35.540 --> 00:11:48.207
+Andreas Freund (He/Him): It's a it's a it's a ready made standard. It's already adopted. That's what's gonna be used in in we'll make it going to be used in in
+
+75
+00:11:49.524 --> 00:11:59.899
+Andreas Freund (He/Him): in regulatory context, especially in the EU, integrates with with with authentication. Frameworks
+
+76
+00:12:00.210 --> 00:12:04.689
+Andreas Freund (He/Him): like that, enterprises are using all 2 openid connect
+
+77
+00:12:05.260 --> 00:12:10.549
+Andreas Freund (He/Him): so, and it's easily extensible for for what we're trying to achieve here.
+
+78
+00:12:15.150 --> 00:12:17.240
+Andreas Freund (He/Him): You don't have to reinvent the wheel.
+
+79
+00:12:18.950 --> 00:12:20.780
+Joshua Rudolf: Yeah, sorry. Maybe I missed the 1st part. What
+
+80
+00:12:20.990 --> 00:12:23.660
+Joshua Rudolf: you're proposing that that we use, which instead.
+
+81
+00:12:24.030 --> 00:12:24.650
+Andreas Freund (He/Him): It.
+
+82
+00:12:24.890 --> 00:12:25.870
+Andreas Freund (He/Him): The ids.
+
+83
+00:12:27.760 --> 00:12:28.490
+Joshua Rudolf: Got it.
+
+84
+00:12:30.310 --> 00:12:33.040
+Joshua Rudolf: Yeah, let's come back to that.
+
+85
+00:12:36.680 --> 00:12:38.410
+Joshua Rudolf: So there's another raised hand.
+
+86
+00:12:40.530 --> 00:12:46.170
+Joshua Rudolf: I guess, maybe circling back to this question around ens and non evm. L. 2 s.
+
+87
+00:12:46.570 --> 00:12:50.570
+Joshua Rudolf: I would like someone from actually ens to to chime in. So I think there's a
+
+88
+00:12:50.720 --> 00:12:54.279
+Joshua Rudolf: a more comprehensive explanation sort of vision. Here
+
+89
+00:12:54.690 --> 00:12:58.899
+Joshua Rudolf: I see Eskender is here. Are you available to to jump in.
+
+90
+00:12:59.990 --> 00:13:08.499
+esk3nder.eth: Yeah, I didn't get to work directly on this, so I don't think I could speak to it to the same degree as Jeff, who worked directly on the standard.
+
+91
+00:13:08.903 --> 00:13:21.799
+esk3nder.eth: But I would say, is like, non evm chains, broadly speaking, like Ens, is building towards that support, and one of the goals, you know, for us, broadly with name chain is is to be able to, you know, handle for non evm. So
+
+92
+00:13:21.910 --> 00:13:23.410
+esk3nder.eth: I don't see this as a
+
+93
+00:13:23.560 --> 00:13:31.489
+esk3nder.eth: permanent kind of like blocker but something to build towards. And having this interface today, I think, will make it easier down the line.
+
+94
+00:13:37.500 --> 00:13:38.090
+Joshua Rudolf: Thanks.
+
+95
+00:13:45.190 --> 00:13:46.849
+Joshua Rudolf: Yes, common.
+
+96
+00:13:48.290 --> 00:13:58.440
+kalmanlajko | matterlabs zksync: So there's 7, 7 or 7, 8, 2, 8. But there's also 7, 7, 8, 5 for the chain Id
+
+97
+00:13:59.500 --> 00:14:10.200
+kalmanlajko | matterlabs zksync: ercs. And this also proposes making the hashes 256 bit long in the long term, and making the chain Ids hashes. And this would
+
+98
+00:14:10.710 --> 00:14:15.679
+kalmanlajko | matterlabs zksync: allow multiple ens. So that a single ens contract is not fully enshrined.
+
+99
+00:14:16.900 --> 00:14:20.009
+kalmanlajko | matterlabs zksync: and it has similar with properties.
+
+100
+00:14:24.660 --> 00:14:28.369
+Joshua Rudolf: Yep, exactly and this would rely on that first.st
+
+101
+00:14:38.110 --> 00:14:43.390
+frangio: Have any wallets chimed in here, because it seems like this is about
+
+102
+00:14:45.050 --> 00:14:54.199
+frangio: how accounts and addresses are expressed in wallets and shown to the user. So I'm curious if any have already expressed support or any kind of concern.
+
+103
+00:15:02.290 --> 00:15:04.169
+Joshua Rudolf: Any of the wallet teams want to jump in here.
+
+104
+00:15:07.880 --> 00:15:16.240
+Arik Galansky: Yeah. So so I'm representing fire blocks. Institutional wallet side. I don't have like I mentioned earlier, the the
+
+105
+00:15:16.510 --> 00:15:22.999
+Arik Galansky: type orientation is interesting. Like, again, I don't have a specific opinion on the
+
+106
+00:15:23.393 --> 00:15:47.099
+Arik Galansky: suggestion, because it's the 1st time I've seen it. But that's just something that I mentioned using dids is definitely like a different direction. I'm not sure if it's something that is like, I'm not sure what is the practical suggestion for dids. But dids are very interesting from like the wallet standard space, I'll have to say. But again, like, I don't want to derail that conversation, if like, it's not a clear direction.
+
+107
+00:15:56.350 --> 00:16:02.509
+Jorge Valdeiglesias: I can chime in from phantom. We use Vip internally.
+
+108
+00:16:02.997 --> 00:16:10.350
+Jorge Valdeiglesias: It's very useful, not just for addresses, but to express to identify different resources, so that probably won't change.
+
+109
+00:16:10.570 --> 00:16:17.020
+Jorge Valdeiglesias: But, as has been stated here and in the chat, it's not human readable. So we don't show that to users at all.
+
+110
+00:16:17.681 --> 00:16:22.380
+Jorge Valdeiglesias: Adopting some other standard port addresses would be, would be great, and
+
+111
+00:16:22.720 --> 00:16:26.350
+Jorge Valdeiglesias: we are open to the idea of adopting some other standard.
+
+112
+00:16:30.540 --> 00:16:34.900
+Vandan Parikh | MetaMask: Yeah from the Metamask side. Yeah, we're planning to
+
+113
+00:16:35.516 --> 00:16:47.109
+Vandan Parikh | MetaMask: or we're already using some cape standards in in our wallet and have kind of weighed in on that a bit to see if we can
+
+114
+00:16:47.590 --> 00:16:59.590
+Vandan Parikh | MetaMask: make that easier on the ethereum side. And again, I think, when it comes to displaying to the user, I think there's a lot more flexibility to translate anything that's kind of at the
+
+115
+00:16:59.830 --> 00:17:07.750
+Vandan Parikh | MetaMask: protocol level to be displayed differently. And and that's where we're looking for, you know. Also some standards in the industry.
+
+116
+00:17:08.359 --> 00:17:32.929
+Arik Galansky: And maybe it's worth adding that a lot of the conversation between wallets actually happens on the kites level, right? Because so like a lot of the times us and Madam ask would meet is in the kite wallet connect setup. So I think that's like a important aspect to to mention that our conversation is a lot of times happening on that level of how do we support something that is across all chains to improve user experience?
+
+117
+00:17:50.270 --> 00:17:55.940
+Joshua Rudolf: Cool anything else on this chain, specific address, question and dids.
+
+118
+00:17:56.150 --> 00:18:00.370
+Joshua Rudolf: which is something that's actually yeah. I'm I'm not super familiar with Hudson.
+
+119
+00:18:00.740 --> 00:18:17.980
+Hudson Jameson: Yeah. I just had a question. If anyone from Ens was here, someone in the chat, I think? Mohammed asked. Like is the ens governance process. Would that theoretically be involved if this Erc goes through? Or if there's anyone who just might know in general.
+
+120
+00:18:20.650 --> 00:18:39.440
+esk3nder.eth: Yeah, the ens governance should have no impact on this. The name can't be like revoked from ownership. So I think it comes down to like, what is the ownership structure? And how is that secured versus like the dow being able to like kind of snatch back a name that's not something that's possible today.
+
+121
+00:18:39.947 --> 00:18:53.529
+esk3nder.eth: Additional context on this is, we're actually rebuilding the Ens like core protocol from scratch for the name chain rollout. So we're gonna be going through kind of like a migration. So there will be
+
+122
+00:18:53.920 --> 00:18:54.820
+esk3nder.eth: like
+
+123
+00:18:55.290 --> 00:19:06.060
+esk3nder.eth: a whole new suite of audits and everything. So everybody should be able to see kind of like the result of those audits, and get additional confirmation on, like the security of name ownership.
+
+124
+00:19:07.620 --> 00:19:11.109
+Hudson Jameson: Got it. Okay? So this is more, the standard will be
+
+125
+00:19:11.210 --> 00:19:22.650
+Hudson Jameson: like, very well integrated into the like name chain that's being built from scratch. So that so that's actually like, we're not giving fees to Ens as we're doing these names and stuff like that, it's a standard being applied.
+
+126
+00:19:23.200 --> 00:19:28.950
+esk3nder.eth: Yeah, yeah, exactly. And like the one of the things that's really nice about this for Ens is.
+
+127
+00:19:29.390 --> 00:19:42.899
+esk3nder.eth: we have to serve all of the L twos. And right now the lack of standardization around this is obviously like a barrier for us to be able to do that. So I think this would help from that point as well.
+
+128
+00:19:43.770 --> 00:19:44.640
+Hudson Jameson: Thanks.
+
+129
+00:19:49.420 --> 00:19:50.270
+Joshua Rudolf: Yep, Mark.
+
+130
+00:19:56.170 --> 00:19:58.570
+Joshua Rudolf: whoop to freeze, mark.
+
+131
+00:19:59.050 --> 00:20:02.069
+Mark | OP Labs: Just wondering if anyone has started prototyping this at all.
+
+132
+00:20:06.600 --> 00:20:07.390
+Joshua Rudolf: Not that I'm aware of.
+
+133
+00:20:07.390 --> 00:20:13.050
+Mark | OP Labs: Hey? Sorry. Just wondering if anybody has started prototyping this at all.
+
+134
+00:20:16.050 --> 00:20:20.599
+Joshua Rudolf: Yeah, not that I'm aware of. Is Mark logging for anyone else? Or is that just on my side?
+
+135
+00:20:20.950 --> 00:20:21.820
+Joshua Rudolf: Okay, cool.
+
+136
+00:20:21.820 --> 00:20:23.030
+Christian Montoya: I heard it twice.
+
+137
+00:20:23.370 --> 00:20:29.879
+Joshua Rudolf: Yeah, sorry, Mark, you're you're like a little bit. But we heard your question. Yeah, I don't think anyone has gotten to the implementation.
+
+138
+00:20:32.620 --> 00:20:41.080
+Mark | OP Labs: Cool, I think you know, is anybody here interested in trying to prototype this because I think that we'd learn a lot from that.
+
+139
+00:20:41.460 --> 00:20:47.499
+Mark | OP Labs: And you know, it's like in the in the bottleneck for for getting this into production.
+
+140
+00:20:52.860 --> 00:21:00.130
+esk3nder.eth: Yeah. The Ens team, obviously down to help prototype this. I think what's more
+
+141
+00:21:00.360 --> 00:21:12.199
+esk3nder.eth: impactful would be like getting some commitments from the L twos to try and help get their feedback, and like actually put something together to see how see how it looks. But we're definitely down
+
+142
+00:21:12.730 --> 00:21:13.629
+esk3nder.eth: tell with that.
+
+143
+00:21:17.480 --> 00:21:29.040
+Marcin: You should clarify a little bit more. What do you want to prototype? Because on one side, what we're trying to agree is how we're gonna name things, and then the best application would be, I guess, some somewhere in wallets, probably
+
+144
+00:21:29.580 --> 00:21:37.350
+Marcin: where, you know, you could actually use a wallet, and it will resolve it, and based on this, will go to one l. 2 or the other.
+
+145
+00:21:44.250 --> 00:21:49.430
+Mark | OP Labs: I would imagine a library that can just take a name and then resolve it correctly.
+
+146
+00:21:53.350 --> 00:21:54.094
+cyp | status.network: So
+
+147
+00:21:54.990 --> 00:22:07.180
+cyp | status.network: just to to get on that I think it's both a question at the L 2 level for the support, but also at the wallet level. Because imagine, if you enter that into the like, send field
+
+148
+00:22:07.746 --> 00:22:11.139
+cyp | status.network: and the wallet itself doesn't support the L 2
+
+149
+00:22:11.850 --> 00:22:14.699
+cyp | status.network: will your tokens just disappear
+
+150
+00:22:15.224 --> 00:22:18.869
+cyp | status.network: for users that can be like very tricky to understand.
+
+151
+00:22:26.890 --> 00:22:43.829
+Mohammad Jahanara: I think one important question is, if you want the address resolution to be on chain, verifiable or not, because, like, if it might be easy to make that service that Mark mentioned as the off chain service, but to make it on chain verifiable on every l. 2 is a different story.
+
+152
+00:22:55.060 --> 00:23:02.190
+Joshua Rudolf: Yeah, Vitalik replied in the chat, that this should be a requirement. I think that was sort of what we've been operating under. But.
+
+153
+00:23:03.080 --> 00:23:24.119
+Vitalik Buterin: Right like I think one of the longer term goals here should be to move toward a world where it's possible to have a universal. L. 2 clients, where, like as a wallet, you can write, or you one piece of code once, and then every compliant l. 2 should be able to just like
+
+154
+00:23:24.240 --> 00:23:33.199
+Vitalik Buterin: like it should be able to interpret every compliance. L, 2. Automatically using like config contracts and whatever other machinery we can't figure out over time.
+
+155
+00:23:41.250 --> 00:23:44.589
+esk3nder.eth: So he's I'm just go ahead. Sorry.
+
+156
+00:23:51.230 --> 00:23:52.959
+Joshua Rudolf: I think you go for it, Eskandra.
+
+157
+00:23:54.830 --> 00:24:06.999
+esk3nder.eth: Yeah, I was just gonna see if there was more consensus around people making a commitment to try to prototype something. Sounds like Metamask would be interested Ens interested.
+
+158
+00:24:07.140 --> 00:24:15.979
+esk3nder.eth: Maybe if we had 2 or 3 l. Twos who wanted to maybe have, like a smaller working group that could be a really useful way for us to
+
+159
+00:24:16.770 --> 00:24:18.120
+esk3nder.eth: kind of continue this.
+
+160
+00:24:19.030 --> 00:24:24.499
+cyp | status.network: I can talk for this network, I think, would be interested in collaborating on that
+
+161
+00:24:24.610 --> 00:24:40.839
+cyp | status.network: or status wallets. I need to check up with the guys to see if this is something that they can integrate in their pipeline. But I know that they have been working on that for a while. So I think if we come up with an actual good way to do it, they will be more than happy to
+
+162
+00:24:41.395 --> 00:24:44.749
+cyp | status.network: prioritize that versus whatever effort they're doing at the moment.
+
+163
+00:24:49.150 --> 00:24:50.259
+esk3nder.eth: Alright. Awesome.
+
+164
+00:24:50.560 --> 00:24:52.400
+esk3nder.eth: Anyone else interested.
+
+165
+00:24:54.010 --> 00:24:58.239
+Marcin: Sure happy to help from Zk Sync. Hopefully, you'll not need too much from us. But.
+
+166
+00:24:58.740 --> 00:25:05.019
+esk3nder.eth: Yeah, I don't think it will be heavy. I think it's more just proving it out right.
+
+167
+00:25:08.560 --> 00:25:11.590
+Mark | OP Labs: And also down from OP. Labs.
+
+168
+00:25:13.890 --> 00:25:14.530
+esk3nder.eth: Amazing.
+
+169
+00:25:15.170 --> 00:25:27.240
+Joshua Rudolf: Yeah, this is great. Thanks, Eskandar, for pushing on this. Yeah. So maybe what we can do after the call. Or if anyone wants to spin up a group. I can spin one up, have a chain address implementers group and yeah, get going on that for anyone who wants to jump in.
+
+170
+00:25:28.620 --> 00:25:29.580
+Joshua Rudolf: Andreas.
+
+171
+00:25:31.080 --> 00:25:39.080
+Andreas Freund (He/Him): Yeah. So what do you do with when you have like with the with the with the r 1 curve? So how do you support, then multiple different
+
+172
+00:25:39.886 --> 00:25:41.019
+Andreas Freund (He/Him): different curves.
+
+173
+00:25:45.590 --> 00:25:55.219
+Andreas Freund (He/Him): I mean, if you if you have that already IM implemented at the L, 2 level and people are using it. Then you're you're you're locking them out of the
+
+174
+00:25:56.080 --> 00:26:02.780
+Andreas Freund (He/Him): of that of that of that interrupt. So I think one of the key characteristics is must be key agnostic.
+
+175
+00:26:04.020 --> 00:26:10.339
+Vitalik Buterin: Yeah, I mean, I think, like long term, this stuff should be designed around account abstraction.
+
+176
+00:26:10.630 --> 00:26:11.615
+Vitalik Buterin: Anyway.
+
+177
+00:26:17.670 --> 00:26:27.490
+Joshua Rudolf: Well, we have a few people with hands up, just trying to be mindful of time. We do want to get to the second agenda item. So maybe let's try to. We'll try to get through the hands that are up and then move over to the second topic. Mohammed.
+
+178
+00:26:28.860 --> 00:26:46.605
+Mohammad Jahanara: Yeah, I'm just trying to understand from a roll up perspective, or like the a chain who wants to support this standard? Do we have any idea, or like rough proposal, how that should be like the on chain verification like, are we expecting to deploy system, smart contract, or precompied, that gets
+
+179
+00:26:47.080 --> 00:26:53.809
+Mohammad Jahanara: gets the like address and return the result of the resolution, or verify something with that, or
+
+180
+00:26:55.140 --> 00:26:58.469
+Mohammad Jahanara: are, are, do we still have to figure that out together?
+
+181
+00:27:08.090 --> 00:27:16.440
+Joshua Rudolf: It's a good question. Vitalik, or anyone else have thoughts here. We can also, maybe this is something that we need to iterate on in the Implementers Group Prototypers group.
+
+182
+00:27:17.870 --> 00:27:18.989
+Joshua Rudolf: So maybe we come.
+
+183
+00:27:18.990 --> 00:27:20.150
+Marcin: Yeah, give, us.
+
+184
+00:27:20.150 --> 00:27:20.610
+Joshua Rudolf: Yeah.
+
+185
+00:27:20.610 --> 00:27:24.790
+Marcin: Give. Give us a while to figure it out. There are a bunch of technical details in there, so.
+
+186
+00:27:25.440 --> 00:27:25.990
+Joshua Rudolf: Okay.
+
+187
+00:27:27.405 --> 00:27:28.310
+Joshua Rudolf: Frangio.
+
+188
+00:27:30.320 --> 00:27:31.610
+frangio: Yeah, the the
+
+189
+00:27:32.160 --> 00:27:53.060
+frangio: This might be a technical, a technical detail to figure out later. But I get the feeling that there isn't a consensus on the way that on chain config is going to happen. The Ercs are are using ens records. But then Vitalik, in the chat also talked about config contracts.
+
+190
+00:27:53.340 --> 00:28:03.630
+frangio: and they seem to be mutually exclusive. So is any one of these the like, the true way that there is consensus? Or is this still something we're figuring out.
+
+191
+00:28:21.830 --> 00:28:32.449
+Joshua Rudolf: Yeah. My understanding, at least, is that we are moving forward with the on chain config Erc. Have the number in front of me right now. But but that's that's how we're moving forward.
+
+192
+00:28:33.900 --> 00:28:39.920
+Joshua Rudolf: Some things can still be in flux. But yes, 7, 7, 8, 5. That's my understanding.
+
+193
+00:28:42.900 --> 00:28:44.789
+frangio: Okay, so ens records.
+
+194
+00:28:45.730 --> 00:28:46.440
+Joshua Rudolf: Correct.
+
+195
+00:28:52.410 --> 00:28:57.556
+Florian Huc: Yeah, I I have one question on. This is how we ensure that the
+
+196
+00:28:58.120 --> 00:29:08.559
+Florian Huc: Ens report are evaluated the same way. It's a different chain. We ensure that there is some consistency across chain.
+
+197
+00:29:21.710 --> 00:29:26.849
+Joshua Rudolf: I think it's another good question if anyone else has anything to chime in. But maybe this is something else that we can, that we can come back to.
+
+198
+00:29:27.480 --> 00:29:31.389
+Joshua Rudolf: I am. I am collecting these questions and promise, we will get back to these.
+
+199
+00:29:34.060 --> 00:29:40.379
+Joshua Rudolf: If it's okay with the group, maybe we can. Yeah, move forward to the second topic, which is
+
+200
+00:29:40.900 --> 00:29:45.140
+Joshua Rudolf: the collection of cross chain messaging Ercs. We have
+
+201
+00:29:45.637 --> 00:29:50.989
+Joshua Rudolf: and we have a few groups here today that are going to share thoughts and perspectives on that.
+
+202
+00:29:51.170 --> 00:29:56.019
+Joshua Rudolf: Would any of those groups like to anyone want to go first.st
+
+203
+00:29:56.980 --> 00:29:58.379
+Ellie Davidson: Yeah, I can go first.st
+
+204
+00:29:58.600 --> 00:29:59.219
+Joshua Rudolf: Thanks, Ellie.
+
+205
+00:30:01.993 --> 00:30:04.530
+Ellie Davidson: Could I share my screen? It's okay. If not, but
+
+206
+00:30:05.410 --> 00:30:07.509
+Ellie Davidson: looks like sharing is not turned on.
+
+207
+00:30:07.510 --> 00:30:09.120
+Joshua Rudolf: Yeah. Sorry. Should be fixed. Now.
+
+208
+00:30:14.270 --> 00:30:15.590
+Ellie Davidson: Okay? One second.
+
+209
+00:30:36.417 --> 00:30:39.060
+Ellie Davidson: Alright. Can you see my screen?
+
+210
+00:30:39.730 --> 00:30:40.260
+Joshua Rudolf: Yep.
+
+211
+00:30:40.260 --> 00:30:42.000
+Ellie Davidson: If okay, perfect.
+
+212
+00:30:46.720 --> 00:30:49.700
+Ellie Davidson: Oh, okay, sorry. And now it's like.
+
+213
+00:30:49.860 --> 00:30:51.699
+Ellie Davidson: I can't see my own screen.
+
+214
+00:30:55.680 --> 00:30:56.759
+Ellie Davidson: All right. There we go.
+
+215
+00:30:57.969 --> 00:31:05.780
+Ellie Davidson: Okay, yeah. So I'm gonna run through. What I think is best for us to do
+
+216
+00:31:08.060 --> 00:31:18.159
+Ellie Davidson: is so I think that we should have general message passing. So we're talking about cross-chain interoperability, and we should have a general message passing interface. And this is what we should work to standardize in this group.
+
+217
+00:31:19.690 --> 00:31:37.780
+Ellie Davidson: So the reason I think this is that message. Passing is the core primitive for all of our interop things that we want to do so like if we want to do cross chain function calls at its core, that involves passing a message from one chain to another. Same thing with intense or bridges. They all at their core require message passing.
+
+218
+00:31:38.530 --> 00:32:00.760
+Ellie Davidson: and I would like to say that the message passing interface is different from the protocol. There probably will be a lot of message passing protocols out there that chains use, but they should all form to the same interface, so that Devs can move across chains and deploy apps across chains without needing to change their code or understand the underlying message passing protocol.
+
+219
+00:32:02.983 --> 00:32:20.259
+Ellie Davidson: So yes, I think that we should focus like very, very general and low level at first, st on just the message passing before we kind of get into more specific things, I think we can build all of the more specific things on top, as like sub protocols or sub interfaces of a general message passing interface.
+
+220
+00:32:21.150 --> 00:32:26.159
+Ellie Davidson: And so these are the requirements that I feel strongly that such a standard should have
+
+221
+00:32:26.660 --> 00:32:29.700
+Ellie Davidson: is, it shouldn't require any Vm changes.
+
+222
+00:32:30.150 --> 00:32:33.850
+Ellie Davidson: It should be Vm. Agnostic and proof agnostic.
+
+223
+00:32:34.110 --> 00:32:54.900
+Ellie Davidson: Specifically the proof. Agnosticism also helps with synchronous composability, but it should support all kinds of interop, like synchronous and asynchronous, you know, like native interop. That's like integrated with the chains. State transition function itself versus, you know outside interop. It should be
+
+224
+00:32:55.250 --> 00:33:01.300
+Ellie Davidson: unopinionated about apps built on top of it, and also about protocols deployed below it.
+
+225
+00:33:01.620 --> 00:33:11.469
+Ellie Davidson: and it should be have an easy Api to use for devs, because that's kind of the whole point of this interface is to like, make the life easier for application developers to send messages.
+
+226
+00:33:13.300 --> 00:33:22.179
+Ellie Davidson: And luckily this is what most of us are building anyway, like. This is pretty much what a lot of the Ercs that are listed out there. This is exactly what they're building in some form or another.
+
+227
+00:33:22.810 --> 00:33:44.580
+Ellie Davidson: and from my standpoint. So I worked on an Erc 7,841. But from my standpoint I really don't care like which one we adopt so long as it meets those requirements, and can be a general protocol that any chain can use, and any application can use for what it needs. Like, totally, I really really don't care if it's the one I work at all.
+
+228
+00:33:44.960 --> 00:33:48.719
+Ellie Davidson: So. But here's what I think that we should do
+
+229
+00:33:49.390 --> 00:34:12.940
+Ellie Davidson: one. We should agree on these requirements. And I think that's like the 1st place to start. Do we all agree on this. Are there any other requirements? We think that we should add with the context that we should keep it very low, level in general and not application specific, then I think, 2, we should agree on a message format. This is like the common foundation that almost all of the Ercs have is they have some sort of a message format.
+
+230
+00:34:13.080 --> 00:34:21.618
+Ellie Davidson: and then we can agree on the Apis. So I think the Apis to send and receive messages are where the Ercs differ the most.
+
+231
+00:34:22.179 --> 00:34:25.239
+Ellie Davidson: And so I think that maybe that can be like the last thing that we tackle
+
+232
+00:34:26.239 --> 00:34:45.229
+Ellie Davidson: and so brief overview like. So I worked on this Erc. 7,841. The status of it now is that we are planning to kind of add a chunk to 7, 7, 8, 6 from Axelar and open Zeppelin, and basically add a chunk in their Erc, that kind of covers the use cases that this erc does.
+
+233
+00:34:46.270 --> 00:35:11.449
+Ellie Davidson: And but the reason I just wanted to bring this up is that this message type. So this message type is very similar across. Like all of these Ercs. It has some sort of a sender key, sender chain, id receiver, key destination chain id payload. And then maybe some extra metadata. So like in this Erc, we have a nonsense session. Id, for example, in 7,786, you could use attributes to put that information in. But
+
+234
+00:35:11.450 --> 00:35:17.829
+Ellie Davidson: like this is fundamentally like what all of these message standards need. So if we can agree on this, this is like a really really good 1st step.
+
+235
+00:35:19.340 --> 00:35:32.220
+Ellie Davidson: And so I think the one thing that maybe slightly differs from the other Ercs in my perspective. But it's just my opinion I view cross chain function calls as something you build on top of message passing. So
+
+236
+00:35:33.370 --> 00:35:36.649
+Ellie Davidson: I don't think the interface necessarily has to
+
+237
+00:35:37.770 --> 00:35:58.029
+Ellie Davidson: tell chains how they need to do cross-chain function calls, but I'm open to discussion about that, because I think all of the other Ercs are specific around, like actually executing a function across chain. But anyway, yeah, that's it. So going back to these requirements, these are the requirements I think, that we need for such an interface.
+
+238
+00:36:01.190 --> 00:36:02.629
+Ellie Davidson: and I'll stop sharing my screen.
+
+239
+00:36:07.250 --> 00:36:07.685
+Joshua Rudolf: Marcia.
+
+240
+00:36:09.090 --> 00:36:21.410
+Marcin: Yeah, I agree. And the lower level interface, the simpler interface, the higher odds. We could actually agree. And then we can have another round of discussions of building on top of that, right up to the level where, as you were.
+
+241
+00:36:21.540 --> 00:36:41.249
+Marcin: you were showing your Ellie the level where, like, Hey, maybe we can even trim some of these down. There are the questions like, Hey, you should even have a destination chain, or should be more like a broadcast style thing, etc, etc. So like the simpler it is, the higher the odds of agreeing, so that then we can show our Ercs kind of on top of something rather than on top of of.
+
+242
+00:36:42.360 --> 00:36:43.060
+Ellie Davidson: Yeah.
+
+243
+00:36:45.800 --> 00:36:51.899
+Jack Chuma: What are the chunks you're planning on adding to 7,786 that are not already covered out of curiosity.
+
+244
+00:36:52.130 --> 00:36:53.316
+Ellie Davidson: Yeah, so
+
+245
+00:36:54.720 --> 00:37:22.779
+Ellie Davidson: it is a way I don't know if you're familiar with 7,786. Also, I know open. Zeppelin is also on that call. They have attributes to, you know, specify metadata that you need. And so one of the the use cases that we wanted to make sure was supported. Was these more complex use cases where you might actually want to send multiple messages back and forth between chains and use cases where maybe you have like a message that you want to broadcast, and you want to allow multiple applications to be able to read it.
+
+246
+00:37:22.860 --> 00:37:25.266
+Ellie Davidson: So we're going to add a chunk
+
+247
+00:37:26.340 --> 00:37:34.059
+Ellie Davidson: where that kind of specifies like how you could use these attributes to do that within the 7, 7, 8, 6,
+
+248
+00:37:34.390 --> 00:37:38.399
+Ellie Davidson: which previously it would have been very difficult to do those use cases.
+
+249
+00:37:41.400 --> 00:37:42.210
+Joshua Rudolf: Rancho.
+
+250
+00:37:43.450 --> 00:37:46.350
+frangio: Yeah. So maybe I can now
+
+251
+00:37:47.170 --> 00:37:50.480
+frangio: talk about 7, 7, 8, 6,
+
+252
+00:37:50.860 --> 00:37:54.520
+frangio: and where that comes from, and some of the
+
+253
+00:37:54.710 --> 00:37:58.000
+frangio: the problems that we see, and that we have tried to to address.
+
+254
+00:37:58.850 --> 00:37:59.920
+frangio: So
+
+255
+00:38:00.400 --> 00:38:11.920
+frangio: we have been. Some of us have been working on on the Crc. Initially open. Zeppelin and axler have been collaborating on it and and co-designing it.
+
+256
+00:38:12.450 --> 00:38:33.439
+frangio: we at open Zeppelin. We had looked into the cross chain problem space like 3 years ago, and found it to be very fragmented, like we had really simple things we wanted to do back then, like, say, Write Erc, 20 source code that a project would be able to deploy on multiple chains. Let's say arbitrum and optimism.
+
+257
+00:38:33.690 --> 00:38:48.239
+frangio: and make it bridgeable from the l. 1. And in order to do that, you need to write different code, and that just increases the level of effort that you need to make the level of the number like the lines of code that you need to audit, and so on.
+
+258
+00:38:48.380 --> 00:39:02.460
+frangio: So that really slowed down the thing and and eventually actually even put the brakes on on what we were doing because we we had to implement different logic for each of those chains and choose which chains to support, and so on.
+
+259
+00:39:02.980 --> 00:39:09.860
+frangio: So that particular problem with tokens. Now I'm happy to see that it's it's being addressed with 7,802
+
+260
+00:39:09.970 --> 00:39:13.590
+frangio: which is this standard for bridgeable tokens.
+
+261
+00:39:13.970 --> 00:39:22.730
+frangio: But I totally agree with Ellie that we need to go below that and standardize as well the the low, level primitive of cross-chain message passing.
+
+262
+00:39:22.870 --> 00:39:35.699
+frangio: And so this is the scope of 7, 7, 8, 6. It's just a very simple interface for sending messages from one chain and receiving them on on the other chain.
+
+263
+00:39:35.910 --> 00:39:43.029
+frangio: So this allows teams like open Zeppelin, or anyone building libraries, tools, or or infrastructure
+
+264
+00:39:43.190 --> 00:40:05.580
+frangio: to build on that, instead of having to individually integrate each chain or each provider that there is, and on the side of the users there can also end up being sort of a vendor lock-in situation if they decide to use a particular protocol as an abstraction layer, and we think the best outcome for users is to have these vendor agnostic solutions that they can use.
+
+265
+00:40:05.780 --> 00:40:33.819
+frangio: So that's where 7,786 comes in and some of the motivations. And so the problems that we are solving for are we want this Erc to be able to cover every chain and protocol that has cross-chain messaging, general message passing as a feature. And so for that we have tried to make it a very minimal spec like Martin just said to make it very easy to adopt, to reduce the effort required to implement it.
+
+266
+00:40:33.850 --> 00:40:37.479
+frangio: We've also tried to make it. We've actually made it extensible
+
+267
+00:40:37.570 --> 00:40:43.200
+frangio: so that any any feature that falls out of this minimal core
+
+268
+00:40:43.838 --> 00:41:03.250
+frangio: that is in the standard can be implemented on top of it in a way that you know it's sort of forward compatible for it, and this can be used by protocols that have very specific features they want to expose, but it can also be used over time to evolve it, as we find new things that we want to standardize across the space.
+
+269
+00:41:03.530 --> 00:41:11.959
+frangio: but always aiming to have a core of shared functionality that will work everywhere where 7, 7, 8, 6 is
+
+270
+00:41:12.250 --> 00:41:13.450
+frangio: implemented.
+
+271
+00:41:14.089 --> 00:41:30.340
+frangio: Another thing that we thought of and and tried to do is to make it fully compatible with non-evm chains. This is a particular place where previous efforts fell short. And so for that. We've chosen Kype
+
+272
+00:41:30.490 --> 00:41:34.950
+frangio: 10 account ids which came before on this call came up before on this call.
+
+273
+00:41:35.446 --> 00:41:45.059
+frangio: and yeah. So we've also been reaching out and working out with many of you here in this call to check that the interface that we have
+
+274
+00:41:45.440 --> 00:42:12.148
+frangio: does cover all of the scenarios and use cases that we're. You know, each of us is interested in and iterating on things that we find need to be improved. So we're still in this process. Like, Ellie said before, we are we've been collaborating on that and and have some changes in the pipeline to improve support for synchronous composability. We've also been thinking about bundles, together with a base team.
+
+275
+00:42:13.130 --> 00:42:20.090
+frangio: and those are 2 things that are happening. And and we've also talked with Zk sync about supporting
+
+276
+00:42:20.210 --> 00:42:32.910
+frangio: native authentication. We can go into that detail later, but it's something that I think the roll-ups in particular that are in this call would be interested in. And lastly, let me say one thing that we left out of scope initially
+
+277
+00:42:33.340 --> 00:42:37.209
+frangio: is the issue of gas and fee payment.
+
+278
+00:42:37.320 --> 00:42:57.659
+frangio: which and and by extension. That sort of implies relaying. And it's not because this isn't important, but it is a place where there's a lot more diversity across protocols, and it requires more work to come to some universal solution. But it looks like something we may want to focus on next. So this is the the brain dump.
+
+279
+00:43:01.490 --> 00:43:03.159
+Joshua Rudolf: Thanks, Francio. This is great
+
+280
+00:43:05.350 --> 00:43:11.880
+Joshua Rudolf: cool. We do have 2 more groups that still want to get to. Maybe we can start with non hyperlane or.
+
+281
+00:43:12.300 --> 00:43:12.930
+Nam | Hyperlane: Yeah, jump in.
+
+282
+00:43:12.930 --> 00:43:20.359
+Nam | Hyperlane: happy to let me just quickly figure out how to share my screen. It's been a while. So I've used zoom
+
+283
+00:43:21.306 --> 00:43:23.450
+Nam | Hyperlane: share. There you go.
+
+284
+00:43:27.060 --> 00:43:28.240
+Nam | Hyperlane: Oh, no.
+
+285
+00:43:28.440 --> 00:43:35.474
+Nam | Hyperlane: I didn't approve the update for zoom. So I have to restart. Actually, maybe somebody else can go 1st and then I will.
+
+286
+00:43:35.780 --> 00:43:39.339
+Orest Tarasiuk (t1): If it's Mac OS, you don't really need to restart. I think
+
+287
+00:43:40.420 --> 00:43:43.080
+Orest Tarasiuk (t1): it just shows you the the error.
+
+288
+00:43:44.750 --> 00:43:49.070
+Joshua Rudolf: Troubleshoot. If anyone from Wonderland wants to jump in here.
+
+289
+00:43:49.730 --> 00:44:06.403
+Skele | Wonderland: Yeah, absolutely. Hey guys, so we have a few proposals that we sent. I guess the 1st one and the one that you probably know about is the say, the cross chain meet and burn standard. So this is just
+
+290
+00:44:06.970 --> 00:44:14.210
+Skele | Wonderland: Let's say, a simple clarification on the say function signatures that bridges should be calling
+
+291
+00:44:14.210 --> 00:44:38.619
+Skele | Wonderland: just for it to make it simpler for developers to not have to overload the already used mint and burn functions with extra logic that handles, let's say, the specificity of cross-chain minting. So that's just that Erc, it's very, very simple. And the way basically, it's let's say, backwards compatible. You can use
+
+292
+00:44:38.620 --> 00:44:40.350
+Skele | Wonderland: wrappers, you can have bridges
+
+293
+00:44:40.350 --> 00:45:01.869
+Skele | Wonderland: basically translate from the cross-chain meant to the actual internal mint in the case for xcrc. 20 or other tokens. And that's it. Then we're proposing 2 different primitives. One is the separation between validation of messages and execution of messages
+
+294
+00:45:01.870 --> 00:45:15.430
+Skele | Wonderland: which we think is very, very important. This is something that I've seen people talk about on the chat as well and as Ellie as well mentioned, and I think Marcin as well, is, there is a kind of
+
+295
+00:45:16.120 --> 00:45:40.159
+Skele | Wonderland: now a very important thing that we need to 1st define, which is okay. How do we validate messages? And what information do we need for that, both from the sending side and from the receiving side. I think Marcine also said like, Hey, a message is just something that you broadcast right, then, on the other end, on the receiving end, you're choosing to prove that a specific message is valid, and you, and with that
+
+296
+00:45:40.160 --> 00:46:03.799
+Skele | Wonderland: validation then you can either execute on, or you can use that message, as whatever correct doesn't necessarily need to be tied or have an execution engine enshrined into the messaging layer. And then the other thing that we are proposing is the kind of an entry point primitive, which is essentially a wrapper contract on top of the messaging execution
+
+297
+00:46:03.800 --> 00:46:28.560
+Skele | Wonderland: that allows developers to enforce specific logic for those messages to be triggered. This is very important for 2 reasons. So you can say, Hey, why don't you? Literally just, instead of pointing to your final recipient point, to an intermediate recipient that does this extra logic that would work but for some more complex cases, you actually need the execution
+
+298
+00:46:28.560 --> 00:46:54.700
+Skele | Wonderland: messaging contract to be the one doing the actual calls in the case. For example, for say, cross-chain erc, 20 s. You actually need the messaging protocol to be calling the cross-chain mint or the cross-chain burn, because that's the agent that is allowed to call those specific functions. And if you want to add any, let's say logic on top. For example, do a multi send, then, most of the protocols that we have right now don't really have
+
+299
+00:46:54.700 --> 00:47:18.220
+Skele | Wonderland: logic to handle this, and they shouldn't, which is fine. Some of them have some sort of logic to handle, like very, very specific cases, but we should enable developers and users to use kind of disrupt versions of specific enshrined logic outside of the messaging protocol layer. The good thing about this is that these contracts should be agnostic because they just
+
+300
+00:47:18.300 --> 00:47:38.009
+Skele | Wonderland: basically use the same Apis that we are trying to agree on. And they should also be. They should live on multiple chains as well, since they're just vanilla contracts. So it should be very easy to use those say across chain without needing to kind of re-implement them and redeploy them for every specific chain.
+
+301
+00:47:47.060 --> 00:47:48.129
+Nam | Hyperlane: Should I go?
+
+302
+00:47:49.620 --> 00:47:53.220
+Joshua Rudolf: Yep, any questions for scally, otherwise. Yeah, we can
+
+303
+00:47:53.500 --> 00:47:55.099
+Joshua Rudolf: nom. You're you're good to go.
+
+304
+00:47:56.510 --> 00:47:59.750
+Nam | Hyperlane: Any questions. I didn't mean to jump the questions.
+
+305
+00:48:03.400 --> 00:48:04.290
+Joshua Rudolf: Think all good.
+
+306
+00:48:04.500 --> 00:48:26.087
+Nam | Hyperlane: Alright. So I hope everybody can see my screen I just quickly copied Ellie's slides because I thought they were pretty nice. And yes, I think I I personally. So now I personally agree, like these are like very important requirements, I think, for any message passing interface that this group standardizes
+
+307
+00:48:26.600 --> 00:48:34.580
+Nam | Hyperlane: to kind of have at the base. But I think one thing that I would like to kind of put, I guess the focus on is specifically these 2 points.
+
+308
+00:48:34.610 --> 00:48:57.179
+Nam | Hyperlane: So I guess one way that like, I think, Erc, that we've been here writing at Hyperlane 7, 8, 5, 4 is maybe very different. Right is that it's an interface that already exists and has already been running in production for the last couple of years. And one of the reasons why I think that is something to consider is because developers who have built of these message passing interface.
+
+309
+00:48:57.180 --> 00:49:16.979
+Nam | Hyperlane: we'll always consider the like alternative right, which is basically like using a specific protocol that has presumably, like either, some advantages in terms of like time to market, of tooling, and of just like general kind of awareness, or like tool stacks built on top, like, I think, all the things that we said intents liquidity tokens
+
+310
+00:49:17.482 --> 00:49:37.929
+Nam | Hyperlane: and in that regard the Erc that we've proposed is, I think, very different. But I think it's like a very key. I guess consideration, I think, for this group. Like. Sometimes I feel a similar way, but like roll up bridges right where, like developers could have been using. Roll up bridges to send messages between l. 1 l. 2, and vice versa. But because the developer experience has been pretty rough.
+
+311
+00:49:38.286 --> 00:50:01.679
+Nam | Hyperlane: That is kind of like part of the reason why people even use, like other specifically, in our protocols that have very different like trust assumptions. And so one thing that I wanted to kind of like, yeah. Put, I guess, as context is that like with hyperlinks, have always believed that, like the message passing interface has to be like, yeah, standardized and fully open. And that's been true for hyperlink.
+
+312
+00:50:01.730 --> 00:50:22.629
+Nam | Hyperlane: basically, since the beginning of when we started right. And so the interface that we specified in 7 8 4 is fully open source, but I think comes with the benefit of being basically tested in production, but also having, I think, a set of tooling when it comes to like explorers when it comes to like token standards when it comes to like testing frameworks
+
+313
+00:50:22.630 --> 00:50:36.020
+Nam | Hyperlane: that developers will be able to use. And so I think part of our consideration when choosing a standard, very much has to be like, yeah, like, what are the alternatives for developers to pick? Because I think it's good. Obviously, if we agree in a standard, obviously the less
+
+314
+00:50:36.150 --> 00:50:52.419
+Nam | Hyperlane: kind of like like complexity, it has, the more likely we are all to agree upon. But I don't want us to kind of like, forget that like, we're not doing this in isolation. We're doing this with respect to kind of like alternatives that developers might choose that are not maybe not meeting the these requirements.
+
+315
+00:50:53.255 --> 00:51:18.979
+Nam | Hyperlane: And so I think to kind of like aid on that, like the interface, as specified in the C already has a lot of implementations. And so it's already Vm agnostic, right? So like we as highplane, we 1st implemented the like evm implementation. But there's already production implementations of like cosmosm of of the Svm, which is Solana and other Svm based rollups. There are current implementations, for, like the chiro vm. For the fuel, Vm
+
+316
+00:51:18.980 --> 00:51:47.949
+Nam | Hyperlane: for Kadena, and many others kind of like in progress, and because everything has been open source like that's been like, I would argue after like Ibc. And after, I think, like Chainsafe has had a prior implementation, that out of it people have been able to reuse as well. It is actually currently the like most like open and usable standard. If, like a new rollout wanted to use interoperability, but not pick a vendor. And I think that's really like, I think, the like the key part that again I want us to.
+
+317
+00:51:47.950 --> 00:51:52.359
+Nam | Hyperlane: That recognizes that like right now, we're pitting people against, like.
+
+318
+00:51:52.390 --> 00:52:03.999
+Nam | Hyperlane: Hey, use the standard and like, build a lot of the tooling yourself, or like, basically choose a vendor right? And I think we obviously have seen that, like a lot of an interrupt today, is very like vendor based.
+
+319
+00:52:04.356 --> 00:52:12.330
+Nam | Hyperlane: I also want to reiterate, I think the point about the like verification mechanism. Agnosticism like, I think that's very important. Right? Like a lot of
+
+320
+00:52:12.330 --> 00:52:37.230
+Nam | Hyperlane: folks here on the call are working on better trust assumptions like, I think superchain is probably the most prominent example of that. And any message passing interface that I think we should standardize should be able to basically encompass and allow developers to use these different verification mechanisms. And on there, I just want to emphasize that the message interface that our research specifies already has basically role leverage
+
+321
+00:52:37.230 --> 00:52:55.076
+Nam | Hyperlane: support. It already has, like super chain support. And it's easily can support others. It has like 6 things, Helios, Helios, like client, and so those are all things that are basically like ready to be used already. And like, yeah, hopefully, part of the consideration for this group. As to
+
+322
+00:52:55.808 --> 00:53:11.909
+Nam | Hyperlane: yeah, what to kind of standardize on and then the last part that I want to mention is relay, I think, is much more important than maybe we recognize. I think I had like a call earlier today with Francisco from open Zeppelin. And I think it was a great question about like right? Like, there's some Ercs
+
+323
+00:53:11.910 --> 00:53:26.389
+Nam | Hyperlane: like 4, 6, 2, 6, which actually can basically kind of gain its full value because we just standardize the messaging interface. And there's not that much tooling around it that is necessary, but at least from my personal perspective. Relaying actually is a very key
+
+324
+00:53:26.540 --> 00:53:33.779
+Nam | Hyperlane: developer and user experience for anything that's built on top of the messaging experience, right? Like, no user ever wants to like submit
+
+325
+00:53:34.180 --> 00:53:52.460
+Nam | Hyperlane: transactions on the destination chain. And like, if we don't standardize relaying behavior at all. It ends up. We're pushing that complexity over to developers or users who would like in turn, then make this a calculus between like, oh, do I go with this kind of like more vendor interoperability protocol? Or do I choose the standard?
+
+326
+00:53:53.850 --> 00:54:12.529
+Nam | Hyperlane: so yeah, those are the kind of the like things I want to mention again emphasizing that like, yeah, I think the Erc probably looks a bit weirder, because right? Like it is based on the interface that Hyperlane has. But because hyperlink is fully open source and people have been operating right like this interface without our core team at all being involved.
+
+327
+00:54:12.530 --> 00:54:25.280
+Nam | Hyperlane: I figured it's like worth kind of like, at least like having people be aware that this is an option. I recognize that it's a little different from all the other standards. I think it's a good thing, but I can. I can see why people might have some reservations as well.
+
+328
+00:54:40.530 --> 00:54:44.600
+Joshua Rudolf: Thanks man. Any questions, feedback.
+
+329
+00:54:46.060 --> 00:54:48.710
+Ellie Davidson: This is more of a general question, but I think a big
+
+330
+00:54:49.170 --> 00:54:56.450
+Ellie Davidson: difference in the designs of the Ercs is whether they are a poll based Erc or a push-based Erc, and I think that
+
+331
+00:54:56.680 --> 00:55:05.890
+Ellie Davidson: we will. We either have to support both kinds, or we'll have to decide, you know, which one we think is worth supporting. I guess I just want to point that out.
+
+332
+00:55:11.180 --> 00:55:11.930
+Joshua Rudolf: Urgent.
+
+333
+00:55:14.280 --> 00:55:17.329
+Arjun: So we started to have some of this discussion in the chat.
+
+334
+00:55:17.720 --> 00:55:20.830
+Arjun: Ultimately, like both pull and push push based
+
+335
+00:55:21.160 --> 00:55:24.319
+Arjun: formats are going to need some standardized messaging interface.
+
+336
+00:55:25.490 --> 00:55:30.750
+Arjun: That is consumed by providers. The question, and then this is maybe a good question for
+
+337
+00:55:31.190 --> 00:55:36.590
+Arjun: for Beau Mark and Ellie, since you have more familiarity with the poll based interfaces, the question is.
+
+338
+00:55:37.040 --> 00:55:40.599
+Arjun: can those be the same interface, or do they have different requirements.
+
+339
+00:55:45.188 --> 00:55:48.759
+Ellie Davidson: So can the poll based and the push based be the same interface. I think
+
+340
+00:55:49.150 --> 00:55:58.319
+Ellie Davidson: this is basically exactly what we were kind of trying to discuss with open. Zeppelin and Axel are because theirs is a push-based, and ours is a pull-based Erc.
+
+341
+00:55:58.780 --> 00:56:02.540
+Ellie Davidson: I think it. I think it is difficult to do.
+
+342
+00:56:05.850 --> 00:56:13.360
+Ellie Davidson: I think that there are ways you can do it, but they're based. They're kind of really hacky like. If you have a push-based interface. You could
+
+343
+00:56:13.640 --> 00:56:26.440
+Ellie Davidson: imagine a pull based protocol by like saying that the push is a No. OP. And doesn't do anything, and instead, you let people pull from it, so I don't know. It's possible it's possible, but it's not a clean. I don't think there's a very clean way to do it.
+
+344
+00:56:27.500 --> 00:56:33.929
+Bo Du | Polymer: I mean, I I think technically, you could have a pool based system where the proof request
+
+345
+00:56:34.200 --> 00:56:44.770
+Bo Du | Polymer: is for a particular message format that's also used in a push based system, although I'm not sure if there will be alignment between
+
+346
+00:56:45.980 --> 00:56:59.129
+Bo Du | Polymer: roll up ecosystems that use just like any event as like a originating message when they submit this proof request. Or if there's going to be alignment around, perhaps using like an explicit
+
+347
+00:56:59.280 --> 00:57:06.719
+Bo Du | Polymer: messaging format that's different or unique. From a, I guess just a regular or any log kind of thing.
+
+348
+00:57:08.620 --> 00:57:10.169
+Ellie Davidson: Yeah, that's a good point, I think.
+
+349
+00:57:10.290 --> 00:57:18.380
+Ellie Davidson: Okay. So one, I do think that the message format can be the same between pull and push based. It's just like the interface and how the Apis work have to be different.
+
+350
+00:57:18.550 --> 00:57:31.569
+Ellie Davidson: And I really like the the point that Beau brought up. Brought up. Personally, I'm kind of opinionated that, like even the event, style, interoperability, protocols should like still form to a general message format.
+
+351
+00:57:33.530 --> 00:57:35.180
+Ellie Davidson: That is my opinion.
+
+352
+00:57:36.300 --> 00:57:57.960
+CJ Cobb: It is possible to design one interface that just supports both. It's just a question of whether that complexity is worth it right, because then, like every protocol, every gateway needs to support both. I think there's technical. You know, costs associated with that. So yeah, it's just if we think it's worth it. It's it's doable, you know, or we think it's not worth it.
+
+353
+00:58:01.380 --> 00:58:06.429
+Arjun: So just gonna jump in. I think the the benefit here is like
+
+354
+00:58:07.190 --> 00:58:11.135
+Arjun: from the perspective of whoever is building l 1 blocks
+
+355
+00:58:11.760 --> 00:58:20.020
+Arjun: or whoever is like sequencing these transactions ideally. If you're like, like, if you're dealing with a pull based message packet
+
+356
+00:58:20.130 --> 00:58:41.560
+Arjun: relaying a poll based message package or a push based message. Package shouldn't really make a difference, and all of that should be abstracted away to the interface. And so like, if there is space for, like a hierarchical set of standards, such that there is an underlying message format that is shared between both of these. And then it's the interface level that's different. That would, I think, simplify things quite a bit.
+
+357
+00:58:43.090 --> 00:58:44.330
+Ellie Davidson: I really like that? Yeah.
+
+358
+00:58:46.650 --> 00:58:55.690
+Skele | Wonderland: Yeah, definitely, plus one to what Origin said. And I guess it's still again, it goes back to the differentiation between validation and execution for push.
+
+359
+00:58:55.830 --> 00:59:03.829
+Skele | Wonderland: say, style, messaging protocols. What you actually have is both the validation and execution
+
+360
+00:59:04.280 --> 00:59:26.549
+Skele | Wonderland: happens at the same time, and most of the times. You don't necessarily have a way to revalidate the same message that just got executed. So if other applications or protocols want to also, let's say, jump jump on the same train and use the same, let's say, messaging protocol to revalidate a message for other purposes. That's not usually possible.
+
+361
+00:59:27.016 --> 00:59:37.750
+Skele | Wonderland: So kind of decoupling that from the design perspective on how like messaging protocols work. It's, I think, a very good 1st step.
+
+362
+00:59:41.300 --> 00:59:46.849
+Joshua Rudolf: So we are at time. I see there's a hand. Maybe we can get to this quickly and then wrap Cj.
+
+363
+00:59:46.850 --> 01:00:12.749
+CJ Cobb: Yeah, I just wanted to say something really quick. So push based protocols don't necessarily have to have verification and execution occur at the same time right, like the verification, can arrive. And then, sometime later, the message can be executed. It, like, you know, 7, 7, 8, 6, which is push base now does not take a stance on that right, and that is why it's possible to actually have a standard that is, supports, push and pull at the same time, so.
+
+364
+01:00:15.160 --> 01:00:35.220
+Ellie Davidson: Yeah. And then my point is that in my opinion, a poll based approach covers like 100% of the use cases because you can build a push based on top of it. But if we're talking about an Api for Devs, most devs, they're going to want to do a cross chain function call. That's the use case that they're going to want to call use, which is like very suitable to a push-based model.
+
+365
+01:00:38.730 --> 01:00:40.050
+Joshua Rudolf: Skelly, did you have something.
+
+366
+01:00:42.220 --> 01:01:06.920
+Skele | Wonderland: Oh, yeah, basically, I guess I agree that the what Frank Frank you were saying, which is the push pull is kind of a loaded term. We either, I mean, from how we've been thinking about things, it's more around validation execution. If you guys want to use another terms, and we can agree on other terms to kind of make conversation happen easier. I'm all up for it.
+
+367
+01:01:07.000 --> 01:01:12.600
+Skele | Wonderland: But yeah, but but I guess we're we are pretty aligned, and I agree with what Cj. Was saying, as well.
+
+368
+01:01:14.860 --> 01:01:19.020
+Joshua Rudolf: Cool, alright. Well, yeah, it does seem like there is some some alignment here.
+
+369
+01:01:19.419 --> 01:01:27.680
+Joshua Rudolf: We should probably wrap. I hope everyone found this 1st call helpful like I mentioned at the start. I want to be mindful of everyone's time. I really appreciate how everyone's coming to the table here.
+
+370
+01:01:28.174 --> 01:01:50.749
+Joshua Rudolf: I guess one last thing. Maybe it's worth having another breakout group, even just an Async telegram group for continued discussion around consolidating this message, passing interface work. It sounds like some consolidation is already happening. With espresso wonderland. Basically, everyone that's that's talking here today. So maybe we can keep that up. Yeah, we can keep chatting about that.
+
+371
+01:01:50.900 --> 01:01:59.330
+Joshua Rudolf: And yeah, and if there's appetite, I would love to have another schedule, another follow up call soon. So let's yeah. Let's continue the conversation and chat and
+
+372
+01:01:59.800 --> 01:02:00.940
+Joshua Rudolf: thanks so much.
+
+373
+01:02:04.570 --> 01:02:05.280
+iannorden: Thanks, all.
+
+374
+01:02:07.040 --> 01:02:07.679
+frangio: Thank you.
+
+375
+01:02:08.440 --> 01:02:08.920
+Orest Tarasiuk (t1): Thank you.
+
+376
+01:02:08.920 --> 01:02:09.250
+Ahmad Bitar: Thank you.
+
+377
+01:02:11.010 --> 01:02:12.139
+Arjun: Thanks, everybody.
+

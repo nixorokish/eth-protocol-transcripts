@@ -1,0 +1,198 @@
+00:06:10	read.ai meeting notes:	Jason, Jill, Lisandro, and Teck Yuan added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:06:16	Supernormal AI Notetaker:	Hi there 👋 I was invited by 𝗝𝘂𝗱𝗲 to transcribe and take notes for this meeting. Learn more: https://supernorm.al/zoom
+
+Type /𝗵𝗲𝗹𝗽 at any time to see what else I can do.
+00:06:44	Blockscout assistant:	To start the notetaking and recording, the meeting host needs to be present and approve the recording pop-up message.
+00:06:52	Blockscout assistant:	Recording permission was denied, leaving the meeting.
+00:07:16	Rostislav's Fellow Note Taker:	Waiting for the Zoom host’s permission to begin taking notes and recording.
+00:07:18	Rostislav's Fellow Note Taker:	This meeting cannot be recorded because of the Zoom hosts’s settings.
+If you are the host, please enable the “Record to computer files” in your Zoom recording settings.
+00:08:41	Joshua Rudolf:	https://github.com/ethereum/pm/issues/1626
+00:09:45	qedk:	Gm Jacob been a while
+00:16:39	Orest Tarasiuk (t1):	At what latency?
+00:19:46	qedk:	What’s the proving time for a 30M gas Ethereum block on an H100 or similar? I assume this is a replacement for an Ethereum Altair LC (like Helios)
+00:20:03	Hart Lambur:	Incredibly clear and bullish presentation.
+00:21:06	Hart Lambur:	What would the latency be for the L2 proofs? It’s bounded by L1 finalization, yes?
+00:21:17	Joxes | Wonderland:	Reacted to "What would the laten..." with ☝️
+00:21:19	Ellie Davidson:	Reacted to "What would the lat..." with ☝️
+00:21:31	Jim | LI.FI:	What's the best way to contact you/your team for access again?
+00:21:44	Arik Galansky:	Do you match old light client API, basically json-rpc supported?
+00:21:48	Ellie Davidson:	What's the latency for just the EVM proof generator?
+00:21:57	Joshua Rudolf:	Replying to "What's the best way ..."
+
+@JacobEverly on TG
+00:22:05	Jim | LI.FI:	Reacted to "@JacobEverly on TG" with 👍
+00:22:25	Arik Galansky:	Replying to "Do you match old lig..."
+
+Like how easy it is to migrate from helios/chainsafe light client?
+00:23:40	Ellie Davidson:	^ You asnwered this question already, thanks :)
+00:24:26	Joxes | Wonderland:	dreams: shorten batch submissions, shorten L1 finality, cheap L1 costs to post&verify
+00:25:03	Sam:	Reacted to "dreams: shorten batc..." with 💯
+00:25:05	Ellie Davidson:	Reacted to "dreams: shorten ba..." with 💯
+00:25:05	Barnabé Monnot:	Reacted to "dreams: shorten batc..." with 💯
+00:25:41	Christian Montoya:	Reacted to "Incredibly clear and…" with ➕
+00:25:53	Jim | LI.FI:	What is the gas cost for the proofs? May have missed it
+00:25:57	qedk:	Same q
+00:26:10	Jacob l Boundless:	270k to verify but you can aggregate with other proofs
+00:26:49	Jacob l Boundless:	Need to go, thanks for having me :)
+00:26:59	Jim | LI.FI:	Reacted to "270k to verify but..." with 👍
+00:27:03	Joxes | Wonderland:	Reacted to "Need to go, thanks f..." with ❤️
+00:27:05	Manu @ BootNode:	Reacted to "Need to go, thanks f..." with 👏
+00:27:06	Jaack:	Reacted to "Need to go, thanks f..." with ❤️
+00:27:08	Jaack:	Reacted to "Need to go, thanks f..." with 👏
+00:27:18	Jim | LI.FI:	Reacted to "Need to go, thanks..." with ❤️
+00:28:08	Orest Tarasiuk (t1):	Reacted to "Need to go, thanks f..." with ❤️
+00:30:02	Ellie Davidson:	How can devs that need help building on OIF get in touch?
+00:31:25	Hart Lambur:	FYI for call: Across also has a reference open source solver implementation that we will update to support the finalized 7683 spec. I personally think solver diversity is bullish for intents, so super excited about the OZ/OIF effort here.
+00:31:40	Fabrice Cheng (Coinbase):	Reacted to "FYI for call: Acro..." with ❤️
+00:31:43	Jim | LI.FI:	Reacted to "FYI for call: Acro..." with 👍
+00:31:46	Sam:	Reacted to "FYI for call: Across..." with ❤️
+00:31:47	Joxes | Wonderland:	Reacted to "FYI for call: Across..." with ❤️
+00:31:56	Joshua Rudolf:	Replying to "How can devs that ne..."
+
+Good q, for now they can drop a message in the intents TG group
+
+https://t.me/+hdgXZ88BuME0ZjBh 
+
+But we need a better system soon
+00:32:16	Joshua Rudolf:	Replying to "How can devs that ne..."
+
+Or can ping me too
+00:32:22	Ellie Davidson:	Reacted to "Good q, for now th..." with 🙌
+00:32:33	Joshua Rudolf:	Reacted to "FYI for call: Across..." with ❤️
+00:34:18	Fabrice Cheng (Coinbase):	Q: Is the plan for OIF to support non-EVM chains from the get-go? (non-EVM -> EVM)
+00:35:40	Sam:	CAIPs
+00:36:21	Joshua Rudolf:	Replying to "CAIPs"
+
+https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md
+00:36:59	Pepe Blasco:	erc-7930 is the proposed current standard
+00:37:20	Joshua Rudolf:	Reacted to "erc-7930 is the prop..." with 🙏
+00:37:52	Manu @ BootNode:	Reacted to "erc-7930 is the prop..." with 👍
+00:43:20	Sam:	+100 -> Also is a TEE only as secure as tamperproof the input is
+00:43:29	Ellie Davidson:	Reacted to "+100 -> Also is a ..." with 💯
+00:46:21	Ellie Davidson:	Do chains have to integrate with t1?  E.g. they need to add t1 into their settlement logic to ensure safety?
+00:47:32	Sam:	T1 is basically shadowing/watching the chains as I understood it @Ellie Davidson
+00:47:35	Evan Chipman:	Replying to "Do chains have to in..."
+
+No, it’s permission less. 𝚝𝟷 just has to run a full node of the chain to support it
+00:48:02	Ellie Davidson:	Then it doesn't prevent against sequencer reorgs?  Which could break the safety of this interop.
+00:48:14	Sam:	Reacted to "Then it doesn't prev..." with 💯
+00:49:50	Ellie Davidson:	Even if the L2 reorgs with the L1, that doesn't prevent the sequencer equivocating.   So I'm confused :)
+00:49:51	Evan Chipman:	Replying to "Then it doesn't prev..."
+
+yes but once rollup posts blob + state root to L1 we can consider final bc we have self validated STF
+00:49:56	TY:	Reacted to "Then it doesn't prev..." with 🤔
+00:50:19	Ellie Davidson:	Replying to "Then it doesn't pr..."
+
+But that means the interop cannot safely occur until the rollup posts its data, which is several minutes or more.
+00:51:02	Orest Tarasiuk (t1):	https://t.me/OrestTa
+00:51:07	Orest Tarasiuk (t1):	https://x.com/OrestTa
+00:51:11	Victor | RISC Zero and Boundless:	Thank you!
+00:51:31	Orest Tarasiuk (t1):	Reacted to "+100 -> Also is a TE..." with 💯
+00:51:39	Sam:	mentioning it again as always.. it is pretty similar to aggLayer with the diff that aggLayer has more power and can prevent sequencer equivocation 😄
+00:52:00	Ellie Davidson:	Or Espresso....... (I have to say it)
+00:52:05	Sam:	lol 😄
+00:52:06	Orest Tarasiuk (t1):	Replying to "+100 -> Also is a TE..."
+
+Yap - whereas it’d be the STF input = tx DA from e.g. Base here
+00:52:42	Orest Tarasiuk (t1):	Reacted to "No, it’s permission ..." with 💯
+00:53:36	Orest Tarasiuk (t1):	Replying to "T1 is basically shad..."
+
+Precisely—and letting devs request t1 to bring in some data about such ‘shadow-watched’ chains into their chain
+00:56:04	Orest Tarasiuk (t1):	Replying to "Then it doesn't prev..."
+
+Spot-on! Whilst, in practice, big rollups don’t reorg today, the DA finality-status/delay is totally something that could be parametrised to be required later on should the sequencer confirmation become less valuable—or maybe Espresso  could help here? 🙂
+00:56:25	Sam:	will this use the CAIP-19?
+00:57:04	Sam:	Replying to "will this use the CA..."
+
++ CAIP-10
+00:57:19	Orest Tarasiuk (t1):	Replying to "Even if the L2 reorg..."
+
+Sequencer equivocation could happen for a ‘watched’ rollup - then see above. t1 sequencer equivocation could happen, thus the TEE-RTP of t1’s state towards the L1 (up to every 12 seconds)
+00:58:36	Orest Tarasiuk (t1):	Replying to "Even if the L2 reorg..."
+
+So a security-focussed L2 could then elect to only treat t1’s such state as final that has been posted to L1; t1’s state  happens to contain that desired fact about another L2 that our L2 wants to learn
+00:58:44	TiTi (Wonderland):	Replying to "will this use the ..."
+
+Yes! You can check here CAIP-10 compatibility https://defi-wonderland.notion.site/erc-7930-erc-7828-caip-10-and-did-compatibility
+00:59:00	Kirill | Blockscout:	+1 from Blockscout for putting block explorer links & rpc urls into the ENS metadata on-chain
+00:59:01	Sam:	couldnt this registry simply be done with an ENS sub-domain?
+00:59:19	Simon | ses.eth | ENS Labs:	Reacted to "+1 from Blockscout f..." with ❤️
+00:59:23	Ulyana @ Blockscout:	Reacted to "+1 from Blockscout f..." with 👍
+00:59:45	TiTi (Wonderland):	Replying to "will this use the ..."
+
+as per CAIP-19 token can be supported as well, mapping tokenId to and address same way happens with chainId <-> chainName mapping
+00:59:49	Joshua Rudolf:	Reacted to "couldnt this registr..." with 👍
+01:00:11	Orest Tarasiuk (t1):	Replying to "mentioning it again ..."
+
+And requires buy-in into a shared bridge—this is the tradeoff
+01:00:11	Ellie Davidson:	Replying to "Even if the L2 reo..."
+
+But that also relies on that other L2's state having been posted to the L1 too, which may not be the case.  (Anyway, this is kind of rabbit hole, we can chat async)
+01:00:35	TiTi (Wonderland):	Replying to "couldnt this regis..."
+
+100% Check this out as for the onchain chain data migration with ENS L2 Resolver https://github.com/ethereum/L2-interop/blob/main/specs/addresses/L2Resolver.md
+01:00:41	Mojmir Racak:	Reacted to "+1 from Blockscout f..." with ❤️
+01:00:48	Sam:	Replying to "couldnt this registr..."
+
+noice
+01:00:57	Orest Tarasiuk (t1):	Replying to "mentioning it again ..."
+
+https://t1protocol.substack.com/i/162419819/polygon-agglayer
+01:01:24	Orest Tarasiuk (t1):	Replying to "Or Espresso....... (..."
+
+These might in fact be synergistic
+01:01:37	TiTi (Wonderland):	Reacted to "noice" with ❤️
+01:02:12	Jaack:	Replying to "couldnt this registr..."
+
+Yes, but this only accounts for a subset of the current GitHub repo ethereum-lists. As far as I see here, it’s specified for L2s only and I don’t know how that could work with L1s in general, and non-EVMs as well
+01:02:45	Thomas Clowes | Unruggable - ENS:	https://docs.ens.domains/ensip/11
+01:02:52	Ellie Davidson:	Replying to "Or Espresso.........."
+
+I think they are!  They actually fit perfectly together.
+01:03:04	Sam:	Reacted to "https://docs.ens.dom..." with 👍
+01:03:10	Jaack:	Replying to "couldnt this registr..."
+
+Also, it doesn’t account for the actual process of adding new chains. We need an onchain version of the ethereum-lists repo and process
+01:03:50	Orest Tarasiuk (t1):	Replying to "Even if the L2 reorg..."
+
+Yeah Ideally, all L2s and the L1 give a hard confirmation to one entity - only possible with full on shared sequencing and thus impractical as we know https://t1protocol.substack.com/i/162419819/shared-sequencing 
+
+However, interim points on the tradeoff spectrum are possible - new espresso is one way
+01:03:58	TiTi (Wonderland):	We don't have much time today, but as we are discussing Interoperable Addresses wanted to share some resources we have built. Mainly a parsing toolkit for interop addresses (methods like parsing, checksum validation and chainId fetching are included)
+
+https://interop-sdk.vercel.app/
+
+https://www.npmjs.com/package/@defi-wonderland/interop-addresses
+
+https://github.com/defi-wonderland/interop-sdk
+
+Soon the idea is to migrate chain data onchain, resolving ENS names to their corresponding EIP-7930 formatted chain identifiers (as bytes) and resolving these EIP-7930 chain identifiers back to their primary ENS names
+01:04:37	TiTi (Wonderland):	Replying to "couldnt this regis..."
+
+for sure, that process for the onchain registry needs to be contemplated
+01:05:08	Jaack:	Replying to "We don't have much t..."
+
+Would love to brainstorm on this, because the process is I believe more important than the parsing / resolution itself
+01:06:18	Jaack:	Replying to "couldnt this registr..."
+
+We found a couple of issues when chains claimed the same chainID (!!), or chains use the same chainID over and over for different testnet phases (entirely different chains). This is a chance to give some rules about chain creation and allocation of name, id, etc.
+01:06:22	TiTi (Wonderland):	Replying to "We don't have much..."
+
+You can reach out to me or Josh through tg. titi0x
+01:07:31	Simon | ses.eth | ENS Labs:	Replying to "couldnt this registr..."
+
+There is the possibility to configure ENS subnames emission
+01:07:37	TiTi (Wonderland):	Replying to "couldnt this regis..."
+
+The 7930 chainId type contemplates this having CAIP-2 chain type
+01:07:39	Simon | ses.eth | ENS Labs:	Replying to "couldnt this registr..."
+
+Put some governance on it
+01:07:46	Hart Lambur:	Very cool demo guys
+01:07:52	Ash Ahmed:	getaxal.com
+01:07:54	Ash Ahmed:	x.com/getaxal
