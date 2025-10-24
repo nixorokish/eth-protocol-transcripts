@@ -1,0 +1,385 @@
+00:01:39	Fireflies.ai Notetaker Michael:	Michael invited Fireflies.ai here to record & take notes. View Security & Privacy info: https://fireflies.ai/policy
+
+Type:
+'/ff leave' - Remove Fireflies
+
+View Realtime notes here: https://app.fireflies.ai/live/01K866S6RCCWD2K2Q15WN28D86?ref=live_chat
+00:04:15	Russell Dempsey:	Whatsup Matt!
+00:04:30	Jessy:	Gm gm
+00:04:34	Sebastian Varela:	gm
+00:04:35	Shai Perednik:	hay everyone!
+00:04:40	Pilar Rodríguez:	Hi everyone!
+00:04:40	Andrei Sambra:	👋
+00:04:43	Kevin Jones:	Gm!
+00:04:44	James Young | Collab.Land:	gm
+00:04:49	mattober:	Hey hey Russell
+00:04:51	Leonard Tan:	gm!
+00:04:52	Med Amine ID:	gm gm
+00:04:52	VIRAJ PATVA:	Gm
+00:04:54	Botao Amber Hu:	gm
+00:04:55	Severiano - Semiotic Labs:	gm
+00:05:07	Brendan Joyce:	Hello! Time to fully launch the era of blockchAIn
+00:05:09	Amin Iman:	gm
+00:05:09	xueli chen:	gm
+00:05:19	Alessandro Voto:	Heyo!
+00:05:19	Hanks:	gm
+00:05:19	Shashank Motepalli:	Reacted to "Hello! Time to fully..." with 😂
+00:05:22	Pablo Carranza Vélez:	gm
+00:05:26	FrozenArcher:	gmgm
+00:05:31	Malcolm Ong | Terminal 3:	gm
+00:05:33	Severiano - Semiotic Labs:	Reacted to "Gm!" with 👋
+00:05:35	Albena:	Heey
+00:05:39	41:	gm
+00:06:39	bond.credit:	gm
+00:06:50	JRP:	gm gm
+00:06:52	subash:	gm
+00:06:54	Robert Brighton:	gm
+00:06:56	Marko | Oasis:	gm
+00:06:56	G - Eigen Labs:	gm
+00:07:02	Zoom user:	Gm
+00:07:05	Sandeep Junaghare:	gm
+00:07:06	Fireflies.ai Notetaker Blockze:	Blockzealous invited Fireflies.ai here to record & take notes. View Security & Privacy info: https://fireflies.ai/policy
+
+Type:
+'/ff leave' - Remove Fireflies
+
+View Realtime notes here: https://app.fireflies.ai/live/01K86733R582P86WQDSVDN41DJ?ref=live_chat
+00:07:42	JRP:	x402 everthing
+00:08:06	VIRAJ PATVA:	Reacted to Hello! Time to fully... with "😂"
+00:08:37	Jessy:	I think we are all good
+00:09:08	Ken Fromm:	Agenda from the event page
+00:09:21	Pilar Rodríguez:	Reacted to "Screenshot2025_10_22_080508.jpg" with ❤️
+00:09:24	JRP:	Reacted to "Screenshot2025_10_..." with ❤️
+00:09:27	Zhengfa@Sparsity:	Reacted to "Screenshot2025_10_22_080508.jpg" with ❤️
+00:09:45	Jessy:	Reacted to "Screenshot2025_10_22_080508.jpg" with ❤️
+00:09:45	Shigaba Victor Shigaba:	GM
+00:09:49	Marko | Oasis:	Yes but different Marko 🙂
+00:09:55	JRP:	Reacted to "Yes but different ..." with 😂
+00:10:01	Leonard Tan:	Reacted to "Yes but different Ma..." with 😂
+00:10:02	Pilar Rodríguez:	Is that Marko in the room with us?
+00:10:06	Eugenia Tellechea:	Reacted to "Yes but different Ma..." with 😂
+00:10:10	Marco De Rossi:	Let’s start
+00:10:10	Eugenia Tellechea:	Reacted to "Screenshot2025_10_22_080508.jpg" with ❤️
+00:10:20	Christopher Kocurek:	Steady lads, deploying more Marco
+00:10:26	isha:	Reacted to "Screenshot2025_10_22_080508.jpg" with ❤️
+00:10:26	Pilar Rodríguez:	Reacted to "Steady lads, deployi..." with 😂
+00:10:29	Alessandro Voto:	Reacted to "Steady lads, deployi..." with 😂
+00:10:29	Marko | Oasis:	Reacted to "Steady lads, deployi..." with 😂
+00:10:31	Eugenia Tellechea:	Reacted to "Steady lads, deployi..." with 😂
+00:10:33	Marco De Rossi:	Yes I was trying to save the people in the wrong call lol
+00:10:41	Jessy:	Reacted to "Steady lads, deployi..." with 😂
+00:10:46	Ken Fromm:	Sending x8004 request to find Marco
+00:10:53	Sarah:	Reacted to "Screenshot2025_10_..." with ❤️
+00:10:56	VIRAJ PATVA:	Yes but different Marko 🙂
+That's the reason why we need a unique identity 🙂
+00:11:00	Christopher Kocurek:	SDK?
+00:11:07	Leonard Tan:	Reacted to "Yes but different Ma..." with 😂
+00:11:07	Shai Perednik:	Reacted to "SDK?" with ❤️
+00:11:16	Zhengfa@Sparsity:	On all chains
+00:11:19	Christopher Kocurek:	Reacted to "SDK?" with ❤️
+00:20:51	Russell Dempsey:	permanent storage agents are coming
+00:22:52	Carol Dias:	nice
+00:22:59	Ken Fromm:	https://github.com/erc-8004/erc-8004-contracts
+00:24:11	Marco De Rossi:	For who missed the final spec released on Oct 9, this is the walk-through: https://x.com/marco_derossi/status/1976257886390002116
+00:25:11	Marco De Rossi:	We will continue to release registries’ addresses in the ERC-8004 Github repo: https://github.com/erc-8004/erc-8004-contracts
+00:27:19	Pilar Rodríguez:	Do you have the link of the form?
+00:27:19	Marco De Rossi:	https://form.fillout.com/t/e8VGKbnf7Wus
+00:27:21	Pilar Rodríguez:	Ty!
+00:27:34	Russell Dempsey:	Replying to "We will continue to ..."
+
+FYI there is a conflicting Ref impl at https://github.com/ChaosChain/trustless-agents-erc-ri , you should probably contact them to use yours if you want to get folks consolidating
+00:28:48	Brendan Joyce:	Can you please drop the link in the chat?
+00:28:59	Sydney Lai [Gaia]:	https://form.fillout.com/t/e8VGKbnf7Wus
+00:28:59	Kevin:	Can you post this link to the chat?
+00:29:12	Jessy:	Register for our Trustless Agents Day via https://devconnect.org/calendar?event=trustlessagentsday
+00:29:20	Jessy:	Fill out the ecosystem map here: https://form.fillout.com/t/e8VGKbnf7Wus
+00:29:21	Pilar Rodríguez:	Reacted to "Fill out the ecosyst..." with ❤️
+00:29:23	Pilar Rodríguez:	Reacted to "Register for our Tru..." with ❤️
+00:29:26	Batman:	Reacted to "Register for our Tru..." with ❤️
+00:29:29	Batman:	Reacted to "Fill out the ecosyst..." with ❤️
+00:29:30	Wayne:	Reacted to "Register for our Tru…" with ❤️
+00:30:00	Leonard Tan:	https://airtable.com/app1VXoPRyVjgK4d5/shrDb6c0ql0YifNE2/
+00:30:07	Amin Iman:	Reacted to "Fill out the ecosyst…" with ❤️
+00:30:12	Amin Iman:	Reacted to "Register for our Tru…" with ❤️
+00:30:17	Ken Fromm:	Reacted to "https://form.fillout..." with ❤️
+00:30:39	Sebastian Varela:	How can we edit our entries?
+00:31:15	Marco De Rossi:	Replying to "How can we edit our ..."
+
+Resubmit with the same email. Correct @Leonard Tan ?
+00:31:19	Sydney Lai [Gaia]:	Jessy!
+00:31:31	Leonard Tan:	Replying to "How can we edit our ..."
+
+yes! just resubmit with your email to update
+00:31:34	Jessy:	Reacted to "Jessy!" with 😎
+00:32:05	Amin Iman:	Reacted to "SDK?" with ❤️
+00:32:08	Amin Iman:	Reacted to "Yes but different Ma…" with 😂
+00:32:11	Amin Iman:	Reacted to "Steady lads, deployi…" with 😂
+00:32:14	Amin Iman:	Reacted to "Yes but different Ma…" with 😂
+00:32:17	Amin Iman:	Reacted to "Screenshot2025_10_22_080508.jpg" with ❤️
+00:32:51	Jessy:	LXDAO: Two-week Intensive CoLearning (Virtual) https://intensivecolearn.ing/en/programs/trustless-agents
+00:33:46	Pilar Rodríguez:	Reacted to "LXDAO: Two-week Inte..." with ❤️
+00:34:00	Sarah:	Reacted to "LXDAO: Two-week In..." with ❤️
+00:34:55	Carol Dias:	Reacted to "LXDAO: Two-week Inte..." with ❤️
+00:35:12	Kevin Jones:	BuidlGuidl! 🙂
+00:35:16	Carol Dias:	Amazing!
+00:35:21	Amin Iman:	Reacted to "LXDAO: Two-week Inte…" with ❤️
+00:35:24	Pilar Rodríguez:	Reacted to "BuidlGuidl! 🙂" with ❤️
+00:35:26	Amin Iman:	Reacted to "BuidlGuidl! 🙂" with ❤️
+00:35:30	isha:	Reacted to "LXDAO: Two-week Inte..." with ❤️
+00:35:35	Marco De Rossi:	Thanks ETHPanda and LXDAO!
+00:35:43	Eugenia Tellechea:	Reacted to "LXDAO: Two-week Inte..." with ❤️
+00:35:45	isha:	Reacted to "BuidlGuidl! 🙂" with ❤️
+00:36:03	lynn:	LXDAO Casual Hackathon Grop: https://t.me/Trustless_Agents_ERC_8004_CH
+00:36:27	Pablo Carranza Vélez:	hi Pili!
+00:36:33	Kevin Jones:	Piiiii 👋🏻
+00:36:42	Kevin Jones:	Reacted to "hi Pili!" with 😎
+00:37:03	WT:	Will it be broadcasted?
+00:37:28	Eugenia Tellechea:	Link to register here for Agentic Zero: https://devconnect.org/calendar?event=agenticzero
+00:37:57	Pilar Rodríguez:	Reacted to "Piiiii 👋🏻" with ❤️
+00:37:58	Pilar Rodríguez:	Reacted to "hi Pili!" with ❤️
+00:38:13	Pilar Rodríguez:	Replying to "Will it be broadcast..."
+
+Yes! On X https://x.com/AgenticZero
+00:38:16	Pilar Rodríguez:	Reacted to "Link to register her..." with ❤️
+00:38:21	WT:	Reacted to "Link to register her..." with ❤️
+00:39:30	Batman:	Reacted to "Link to register her..." with ❤️
+00:39:45	Mercy Boma Naps-Nkari:	Reacted to "Link to register her..." with ❤️
+00:40:46	Marco De Rossi:	👏
+00:40:57	Shigaba Victor Shigaba:	Reacted to "👏" with 👏
+00:41:05	Marco De Rossi:	@All, please share links after the demo, if you have any!
+00:41:19	Niels | bond.credit:	Reacted to "@All, please share..." with ❤️
+00:41:38	Jessy:	Reacted to "@All, please share l..." with ❤️
+00:41:42	Jessy:	Reacted to "Link to register her..." with ❤️
+00:41:46	Mercy Boma Naps-Nkari:	By any chance are you guys using py-libp2p stack?
+00:42:04	Moshi Wei:	Thanks everyone for listening, here are links:
+Discord:   discord.gg/bZNgVQRm5S       
+Github: https://github.com/isekOS/ISEK  
+YouTube: https://youtu.be/3uE341Daj2A?si=Dz4Ka2F33i2mC2E0
+ X: https://x.com/ISEK_Official
+00:43:25	Mercy Boma Naps-Nkari:	Replying to "Thanks everyone for ..."
+
+By any chance are you guys using py-libp2p stack?
+00:44:07	Alessandro Voto:	Loving the code integrity checks and TEE execution/attestations. Good peace of mind!
+00:44:17	Zhengfa@Sparsity:	2x sounds great!
+00:44:21	Sydney Lai [Gaia]:	Reacted to "Loving the code inte..." with ❤️
+00:44:22	yoongbok:	😇
+00:44:22	Marko | Oasis:	Reacted to "2x sounds great!" with 😂
+00:44:30	isha:	Reacted to "Loving the code inte..." with ❤️
+00:44:37	Jessy:	Reacted to "2x sounds great!" with 😃
+00:45:11	Jessy:	Reacted to "Loving the code inte..." with ❤️
+00:45:25	Jessy:	Replying to "Thanks everyone for ..."
+
+Can you also send the link to your registry/chat interface?
+00:45:53	Eugenia Tellechea:	Reacted to "Loving the code inte..." with ❤️
+00:46:06	Simon Schmid:	Replying to "2x sounds great!"
+
+Please post the link to the Github and/or video. I'd like to dive deeper into this after the call.
+00:46:14	Jessy:	Reacted to "Please post the link..." with 👍
+00:46:22	Russell Dempsey:	Replying to "2x sounds great!"
+
+https://github.com/sparsity-xyz/8004-ri-tutorial 
+?
+00:46:50	Zhengfa@Sparsity:	Replying to "2x sounds great!"
+
+@Russell Dempsey yes, thanks!
+00:46:52	Sparks:	Replying to "Thanks everyone for ..."
+
+we are using js version，tried the Python libp2p a few weeks ago, using its relay feature, it’s still not production-ready yet.
+00:46:54	Zhengfa@Sparsity:	Replying to "2x sounds great!"
+
+https://github.com/sparsity-xyz/8004-ri-tutorial
+00:47:04	Sean | regent.cx:	Replying to "Link to register her..."
+
+What is the voucher code?
+00:47:06	Russell Dempsey:	Reacted to "@Russell Dempsey yes..." with 👍
+00:47:22	Mercy Boma Naps-Nkari:	Reacted to "we are using js vers..." with ❤️
+00:47:58	Zhengfa@Sparsity:	for Sparsity demo, contact us:
+
+Discord: https://discord.gg/6vrFdpnFvm
+X:@sparsity_xyz
+Email: support@sparsity.xyz
+Github: https://github.com/sparsity-xyz
+00:48:30	Sumeet Chougule:	https://x.com/_sumeetc/status/1980624196582637986
+00:48:40	Zhengfa@Sparsity:	Reacted to "https://x.com/_sumee..." with ❤️
+00:48:58	Sydney Lai [Gaia]:	Reacted to "https://x.com/_sumee..." with ❤️
+00:49:44	Eugenia Tellechea:	Replying to "Link to register her..."
+
+You’ll need a devconnect ticket first since its in the main venue, then click connect zupass to confirm your devconnect ticket, and then click get ticket for your Agentic Zero Ticket
+00:50:17	Moshi Wei:	Replying to "Thanks everyone for ..."
+
+@Jessy https://isek-explorer.vercel.app/
+00:50:20	James Young | Collab.Land:	Is there a GitHub link to Pakt?
+00:50:25	Marko | Oasis:	Replying to "Link to register her..."
+
+Zupass back in action 🎉
+00:50:29	Eugenia Tellechea:	Replying to "Link to register her..."
+
+You can also dm me here if you need help https://x.com/eugenia_0x
+00:50:43	Eugenia Tellechea:	Reacted to "Zupass back in actio..." with 🙌
+00:50:58	Sydney Lai [Gaia]:	Reacted to "Is there a GitHub li..." with ❤️
+00:51:04	Brendan Joyce:	@azzabazazz - pakt.build and pakt.world
+00:51:10	Sparks:	Replying to "Thanks everyone for ..."
+
+Try our chatbot at chatbot.isek.xyz, you’ll need to join our Discord first to get an invite code.
+00:51:23	Sean | regent.cx:	Replying to "Link to register her..."
+
+I did that, says maximum tickets used for that voucher. Will DM on x
+00:52:05	奀 疒:	https://www.youtube.com/watch?v=Tu4lKAfvjU8
+00:52:05	Amin Iman:	Reacted to "https://x.com/_sumee…" with ❤️
+00:52:25	Eugenia Tellechea:	Reacted to "I did that, says max..." with 👍
+00:52:29	Amin Iman:	Reacted to "Loving the code inte…" with ❤️
+00:53:22	Zhengfa@Sparsity:	How to pronounce this 奀 疒? 😇
+00:53:29	Niels | bond.credit:	Reacted to "How to pronounce t..." with 😂
+00:53:32	奀 疒:	that's just a pen name "ne en" lol
+00:53:38	奀 疒:	but my name's yang
+00:54:14	Zhengfa@Sparsity:	Reacted to "but my name's yang" with 👍
+00:55:53	Jessy:	Reacted to "but my name's yang" with 👍
+00:55:54	Russell Dempsey:	i need to practice youtube playback speed increases more.
+00:55:55	Davide Crapis:	Thanks Levi and team!
+00:55:57	奀 疒:	github: https://github.com/principia-systems/alkahest/tree/erc-8004
+00:56:37	WT:	Reacted to "https://x.com/_sumee..." with ❤️
+00:57:37	Niels | bond.credit:	bond.credit is the credit layer for the incoming trillion-dollar Agentic Economy.
+
+x https://x.com/bondoncredit
+waitlist https://forms.gle/84AmeyhbsEhvfx7N6
+website https://bond.credit/
+tg me https://t.me/blockzealous
+
+See you at DevConnect.
+00:59:32	Marco Antonio’s iPhone:	Next time … less demos , and longer. 😂 but super exciting to see so many teams building !
+00:59:41	Ojas Arora:	Reacted to "Next time … less dem..." with 👏
+00:59:44	Sarah:	Reacted to "Next time … less ..." with 👏
+00:59:44	Ojas Arora:	Reacted to "bond.credit is the c..." with ❤️
+00:59:50	Jessy:	Reacted to "Next time … less dem..." with 👏
+00:59:52	Zhengfa@Sparsity:	Reacted to "Next time … less dem..." with ❤️
+00:59:52	Carol Dias:	Reacted to "bond.credit is the c..." with 👏
+00:59:57	Niels | bond.credit:	Reacted to "Next time … less ..." with 👏
+01:00:03	Kevin Jones:	Reacted to "Next time … less dem..." with ❤️
+01:00:04	Kevin Jones:	Reacted to "Next time … less dem..." with 👏
+01:00:06	David Mihal:	Reacted to "Next time … less dem..." with ➕
+01:00:07	Russell Dempsey:	Reacted to "Next time … less dem..." with 👏
+01:00:08	Niels | bond.credit:	Reacted to "Next time … less ..." with ➕
+01:00:11	Jessy:	Reacted to "Next time … less dem..." with ❤️
+01:00:12	Aster:	Reacted to "Next time … less dem..." with 👏
+01:00:15	Robert Brighton:	Reacted to "Next time … less dem..." with 👏
+01:00:15	Robert Brighton:	Reacted to "Next time … less dem..." with ❤️
+01:00:16	Davide Crapis:	Reacted to "Next time … less dem..." with 👏
+01:00:18	Davide Crapis:	Reacted to "Next time … less dem..." with ❤️
+01:00:38	Davide Crapis:	Yes!
+01:01:17	Levi Rybalov | CoopHive:	Replying to "Thanks Levi and team..."
+
+Thanks for having us and creating the community!
+01:01:25	Eugenia Tellechea:	Replying to "Next time … less dem..."
+
+Lovely problem to have though 😂
+01:01:29	Joshua | bonfires.ai:	thanks for hosting Davide, Marco & Jessy! g2g
+01:01:43	Jessy:	Replying to "Thanks Levi and team..."
+
+Thank you Levi!
+01:01:46	Jessy:	Reacted to "thanks for hosting D..." with ❤️
+01:01:47	Levi Rybalov | CoopHive:	Reacted to "Thanks Levi and team..." with 😁
+01:01:49	Eugenia Tellechea:	Reacted to "Next time … less dem..." with 👏
+01:01:56	isha:	Reacted to "Next time … less dem..." with 👏
+01:01:59	Marco De Rossi:	FYI in the q&a section @mattober wanted to share a super short update from Pinata
+01:02:04	Niels | bond.credit:	Agree - great demos all round deserve more time :) GG all & thanks for hosting
+01:02:08	Levi Rybalov | CoopHive:	Reacted to "Thank you Levi!" with 😁
+01:02:19	WT:	Replying to "Next time … less dem..."
+
+Next time, please more demos and more time! I have time, I need demos! 😏
+01:02:24	奀 疒:	Reacted to "Thanks Levi and team..." with 😁
+01:02:25	Marco De Rossi:	Reacted to "Agree - great demos …" with ❤️
+01:02:34	Kevin Jones:	🔥
+01:02:38	Russell Dempsey:	everyone keeps talking about AI agents and stuff.. but 8004 makes it possible to meld existing web2 services.. (for users or agents…) pretty darn cool
+01:02:41	Jessy:	Replying to "Next time … less dem..."
+
+Haha sg
+01:02:43	Levi Rybalov | CoopHive:	Replying to "Thanks Levi and team..."
+
+Thank you Jessy!
+01:02:45	David Mihal:	Replying to "FYI in the q&a secti..."
+
+Where’s this?
+01:02:46	Sebastian Varela:	Is this deployed anywhere @Richard Pedersen ?
+01:03:08	James Young | Collab.Land:	@Richard Pedersen can you post the GitHub link?
+01:03:14	Niels | bond.credit:	Go Gators
+01:03:20	Marco De Rossi:	Thanks Rich !
+01:03:24	Amin Iman:	Reacted to "Thanks Levi and team…" with 😁
+01:03:25	Amin Iman:	Reacted to "Next time … less dem…" with 👏
+01:03:30	Amin Iman:	Reacted to "Agree - great demos …" with ❤️
+01:03:31	Amin Iman:	Reacted to "thanks for hosting D…" with ❤️
+01:03:35	Amin Iman:	Reacted to "How to pronounce thi…" with 😂
+01:03:37	Amin Iman:	Reacted to "Link to register her…" with ❤️
+01:03:47	Russell Dempsey:	thanks!
+01:03:51	Beary:	https://github.com/Agentic-Trust-Layer/agent-explorer
+01:04:00	Sean | regent.cx:	Did Leonard share a typescript SDK or the registration card generator?
+01:04:04	WT:	Reacted to "https://github.com/A..." with 👍
+01:04:11	Zhengfa@Sparsity:	Thanks, Jessy! You’re a perfect timekeeper!
+01:04:19	OMA3: Alfred Tom:	Thanks everyone!
+01:04:28	Ken Fromm:	Is there any crossover between intents and 8004 agents? (Seems to me that intents are actually agents but just named differently).
+01:04:30	Jessy:	Reacted to "Thanks, Jessy! You’r..." with 😆
+01:04:33	Kevin:	Where is free IPFS?
+01:04:33	David Mihal:	🪅🪅🪅
+01:04:33	G - Eigen Labs:	Thanks all. Exciting.
+01:04:45	@0xnandagopan:	Reacted to "🪅🪅🪅" with 🎉
+01:04:48	David Mihal:	Replying to "Where is free IPFS?"
+
+https://pinata.cloud/
+01:04:54	Kevin:	Replying to "Where is free IPFS?"
+
+thx
+01:04:57	Carol Dias:	Thank you for hosting Jessy and Davide! 
+
+I have to go but see ya at Devconnect! Let’s connect 
+
+X:https://x.com/CryptoCarolD 
+Telegram: @cryptocarold
+01:04:58	Marco De Rossi:	Thanks Pinata! In the next community call we will dedicate a full section to partnerships like this one
+01:05:06	mattober:	Replying to "Where is free IPFS?"
+
+Reach out to team@pinata.cloud
+01:05:27	Leonard Tan:	Replying to "Did Leonard share a ..."
+
+Hey Sean, https://npmjs.com/package/erc-8004-js is a typescript SDK!
+01:05:29	mattober:	Replying to "Thanks Pinata! In th..."
+
+I should have been more prepared and asked ahead of time 😅
+01:05:37	Leonard Tan:	Replying to "Did Leonard share a ..."
+
+there isn't a registration card generator yet but it should be something an coding agent generate for you easily
+01:06:06	mattober:	For the free IPFS:
+
+To get you signed up for the program, all we ask is you send us an email to team@pinata.cloud with:
+* Your pinata account email
+* the name of your project
+* a link to that project if relevant
+* a brief 1 paragraph description of what you're building
+
+And we'll get you up and running!
+01:06:06	Kevin:	How to get web2 AI normies to use 8004?
+01:06:08	Beary:	thats the explorer with the sdk bundled in. there is also a repo for a sample agent and the 8004 indexer (subgraph) - https://github.com/Agentic-Trust-Layer
+01:06:18	Simon Schmid:	Reacted to "thats the explorer w..." with 🔥
+01:06:46	Sean | regent.cx:	Reacted to "Hey Sean, https://np..." with ❤️
+01:06:52	shawn cheng:	Quick question, any this call will be at dAGI Summit on Friday? I’m flying in and would love to meet other builders face to face
+01:07:11	Richard Pedersen:	Yes,  this is exactly what we at Agentic Trust Layer wants to contribute toward.
+01:07:25	Kevin:	Replying to "Quick question, any ..."
+
+Will be there let's catch up
+01:07:25	Niels | bond.credit:	please our future ai overlords by ...
+joining our waitlist https://forms.gle/84AmeyhbsEhvfx7N6
+01:07:53	mattober:	Need to hop to a new call. Message async for anything pinata / IPFS related 🙂
+01:07:59	Niels | bond.credit:	Reacted to "Need to hop to a n..." with ❤️
+01:08:07	shawn cheng:	Reacted to "Will be there let's ..." with 👍🏽
+01:08:14	shawn cheng:	Replying to "Quick question, any ..."
+
+Great my tg is shacheng
+01:08:16	Niels | bond.credit:	Chaoschain r gud
+01:08:22	Zhengfa@Sparsity:	@Ojas Arora | bond.credit Here is the link to Sparsity solution: https://github.com/sparsity-xyz/8004-ri-tutorial
+01:08:23	Ojas Arora | bond.credit:	Reacted to "Chaoschain r gud" with ❤️
+01:08:27	Niels | bond.credit:	Reacted to "@Ojas Arora | bond..." with 👏
+01:08:30	Niels | bond.credit:	Reacted to "@Ojas Arora | bond..." with ❤️
+01:08:31	Ojas Arora | bond.credit:	Ill have a look, thanks!!
+01:08:51	Zhengfa@Sparsity:	Reacted to "Ill have a look, tha..." with 🤝
+01:09:12	Ojas Arora | bond.credit:	Thanks all
+01:09:19	Marco De Rossi:	Thanks you all !
+01:09:23	Sydney Lai [Gaia]:	thanks!
+01:09:32	Amin Iman:	Thank you all!

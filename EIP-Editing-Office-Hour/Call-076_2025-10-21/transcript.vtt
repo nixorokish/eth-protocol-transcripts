@@ -1,0 +1,1066 @@
+WEBVTT
+
+1
+00:01:18.900 --> 00:01:20.880
+Pooja Ranjan: Hello, good end there.
+
+2
+00:01:21.260 --> 00:01:22.519
+Gajinder Singh: Hi, Pooja, how are you?
+
+3
+00:01:22.990 --> 00:01:25.150
+Pooja Ranjan: Doing very well, thank you.
+
+4
+00:01:25.450 --> 00:01:33.390
+Pooja Ranjan: Vachendra, we won't be able to stream this meeting, but it will be recorded and uploaded right after the meeting.
+
+5
+00:01:34.840 --> 00:01:36.039
+Pooja Ranjan: And, I think…
+
+6
+00:01:36.080 --> 00:01:36.670
+Gajinder Singh: Some good.
+
+7
+00:01:36.670 --> 00:01:42.700
+Pooja Ranjan: Yeah, it will also be having summaries all by bot and things like that. We are working on automation of
+
+8
+00:01:42.820 --> 00:01:46.959
+Pooja Ranjan: You know, all protocol calls, so this is just an effort in that direction.
+
+9
+00:01:49.740 --> 00:01:51.640
+Pooja Ranjan: Would you want to quickly check this?
+
+10
+00:01:51.860 --> 00:01:55.880
+Pooja Ranjan: Sharing permission, if it is working well for you.
+
+11
+00:01:58.610 --> 00:02:00.520
+Gajinder Singh: Yeah, that's what I'm checking.
+
+12
+00:02:01.270 --> 00:02:04.039
+Pooja Ranjan: Okay, I've shared the agenda in chat here.
+
+13
+00:03:14.010 --> 00:03:25.230
+Pooja Ranjan: Looks like it's working well, and I also see one of the first PRs merged. Anyway, so, Gajandra, I know we have a lot of open PRs.
+
+14
+00:03:25.510 --> 00:03:45.120
+Pooja Ranjan: But it wasn't very clear to me, like, how do we engage other PRs? Mostly, in draft category, they are there, so they are new. But because this is for core EIPs, I just have tried to put together a small list here, which is miscellaneous and some draft.
+
+15
+00:03:45.280 --> 00:03:52.200
+Pooja Ranjan: So, if we are done with this, we can perhaps take a look into the review from EIP board to address some of the issues.
+
+16
+00:03:52.370 --> 00:03:56.640
+Pooja Ranjan: If you're good, maybe we can go ahead and get started with the meeting.
+
+17
+00:03:59.200 --> 00:04:00.570
+Gajinder Singh: Yep, let's.
+
+18
+00:04:02.480 --> 00:04:03.650
+Pooja Ranjan: Alright.
+
+19
+00:04:04.370 --> 00:04:09.130
+Pooja Ranjan: Welcome to EIP Editing Office Hour. This is meeting number 76.
+
+20
+00:04:09.240 --> 00:04:20.720
+Pooja Ranjan: and is added on Ethereum PM repo with issue number 1775. On agenda, we have added only PRs which are related to EIPs.
+
+21
+00:04:20.880 --> 00:04:35.350
+Pooja Ranjan: Like, from the EIP GitHub repository. We do have some proposals to review under Miscellaneous and a draft category, and once we are done with that, we can go ahead and take a look at the EIP board, if time permits.
+
+22
+00:04:35.860 --> 00:04:46.300
+Pooja Ranjan: People who have joined here on the call, if you are here for any particular EIP-related PR, please drop the link in the chat, and we can perhaps take a look.
+
+23
+00:04:46.420 --> 00:04:59.900
+Pooja Ranjan: Please be mindful in this meeting, we are only going to cover, EIP-related PRs. We won't be able to review ERCs, unfortunately. However, you can drop your PRs related to,
+
+24
+00:04:59.900 --> 00:05:08.479
+Pooja Ranjan: ERC for the next meeting, which is on next Tuesday, and the issue number is 1776.
+
+25
+00:05:08.720 --> 00:05:18.359
+Pooja Ranjan: So yeah, thank you for joining. And Gajendra, thank you for joining us here. We can perhaps go ahead and get started with the first PR, which is in the miscellaneous status.
+
+26
+00:05:18.610 --> 00:05:22.230
+Pooja Ranjan: Not status, but under category of miscellaneous here for review.
+
+27
+00:05:23.750 --> 00:05:30.949
+Gajinder Singh: Yeah, thanks, Wooja. Yeah, let's get started. So, I looked into both of these PRs, and
+
+28
+00:05:31.320 --> 00:05:34.949
+Gajinder Singh: So these PRs are regarding, some technical changes.
+
+29
+00:05:35.170 --> 00:05:39.270
+Gajinder Singh: And, over here, Itan has already…
+
+30
+00:05:39.590 --> 00:05:47.760
+Gajinder Singh: responded, so… and I also added my comment, because this is my EIP as well, so I'm co-authoring it.
+
+31
+00:05:48.000 --> 00:05:58.080
+Gajinder Singh: So basically, this is technical stuff, and not under the purview of the IP editing. Similarly, this other AIP…
+
+32
+00:05:58.990 --> 00:06:04.220
+Gajinder Singh: whose author I am. Again, it talks about some technical changes.
+
+33
+00:06:04.800 --> 00:06:11.430
+Gajinder Singh: And I have basically responded, that sort of… this sort of is not Correct.
+
+34
+00:06:12.170 --> 00:06:15.100
+Gajinder Singh: So we'll wait for author…
+
+35
+00:06:15.330 --> 00:06:19.409
+Gajinder Singh: We wait for the PR author to respond.
+
+36
+00:06:19.600 --> 00:06:24.160
+Gajinder Singh: But as such, again, this is not under the purview of AIP editing.
+
+37
+00:06:24.810 --> 00:06:30.009
+Gajinder Singh: The CIP, which was… this PR, which was sort of blocked.
+
+38
+00:06:30.630 --> 00:06:34.200
+Gajinder Singh: getting blocked from merging it, I basically…
+
+39
+00:06:34.440 --> 00:06:39.670
+Gajinder Singh: Restarted, all the CI actions, and it sort of merged.
+
+40
+00:06:40.270 --> 00:06:42.730
+Gajinder Singh: On the draft
+
+41
+00:06:44.180 --> 00:06:53.859
+Gajinder Singh: We're coming to the draft, the new EIPs. This EIP, I was able to approve.
+
+42
+00:06:54.060 --> 00:06:57.809
+Gajinder Singh: So it is now merged and is a draft EIP.
+
+43
+00:06:57.980 --> 00:07:02.890
+Gajinder Singh: Let's look into the PR10554.
+
+44
+00:07:03.430 --> 00:07:06.989
+Gajinder Singh: I also looked into this, and
+
+45
+00:07:08.360 --> 00:07:12.020
+Gajinder Singh: Basically, have raised some pointers, which…
+
+46
+00:07:12.460 --> 00:07:16.519
+Gajinder Singh: Author can review and sort of address them, and when they do.
+
+47
+00:07:16.950 --> 00:07:21.289
+Gajinder Singh: We'll again come back and, review this.
+
+48
+00:07:23.680 --> 00:07:28.080
+Gajinder Singh: Going to the next… PR for a new EIP.
+
+49
+00:07:36.660 --> 00:07:40.310
+Gajinder Singh: So, I think, oh.
+
+50
+00:07:41.630 --> 00:07:47.039
+Gajinder Singh: Andrew already provided an EIP number, which author has not yet updated.
+
+51
+00:07:47.160 --> 00:07:50.610
+Gajinder Singh: So we'll wait for author to do the updates, and…
+
+52
+00:07:50.800 --> 00:07:53.970
+Gajinder Singh: get the CI passing, and then we can basically…
+
+53
+00:07:54.390 --> 00:07:58.239
+Gajinder Singh: do some review, although I did some review, and again.
+
+54
+00:07:58.500 --> 00:08:05.360
+Gajinder Singh: There is, there is quite a lot, of code that has been bundled. It's a Python code.
+
+55
+00:08:05.630 --> 00:08:10.320
+Gajinder Singh: And, so, Pujab, maybe we should again…
+
+56
+00:08:10.630 --> 00:08:19.720
+Gajinder Singh: put this issue into EIP IP meeting, that, what is the best way to handle reference implementations, because obviously we don't want them
+
+57
+00:08:20.130 --> 00:08:29.189
+Gajinder Singh: to, we don't want them in our EIP repo, because it will make it unnecessarily bulky, and obviously we don't…
+
+58
+00:08:29.800 --> 00:08:38.199
+Gajinder Singh: want any active code… I mean, we don't want… we want pseudocode as code reference, but we don't want any,
+
+59
+00:08:38.309 --> 00:08:40.219
+Gajinder Singh: Active reference code.
+
+60
+00:08:40.610 --> 00:08:43.719
+Gajinder Singh: That, that is in our…
+
+61
+00:08:44.280 --> 00:08:50.310
+Gajinder Singh: EIP repo, because we don't want to sort of distribute it, we don't want to become an agent.
+
+62
+00:08:50.570 --> 00:08:55.629
+Gajinder Singh: to distribute this code, with our, through our EIP repo.
+
+63
+00:08:55.810 --> 00:09:01.560
+Gajinder Singh: So, this is something, we should basically discussing EIP IP.
+
+64
+00:09:02.010 --> 00:09:16.590
+Gajinder Singh: Yeah. And I have also referred to the author that maybe if they can refer to the code in a very high-level pseudocode, that is actually better when you are trying to explain concepts, which is what EIP process is all about.
+
+65
+00:09:17.670 --> 00:09:34.329
+Pooja Ranjan: That's right, that's nice. Actually, we kind of briefly discussed this in the last EIP EIP meeting. I believe, you had pointed out another similar PR where the author was trying to make Fellowship of Ethereum Magician as a placeholder for reference implementation.
+
+66
+00:09:34.500 --> 00:09:41.230
+Pooja Ranjan: It seems Sam disagrees to the idea, because again, Fellowship of Ethereum Magician is,
+
+67
+00:09:41.360 --> 00:09:48.959
+Pooja Ranjan: It's something that can be open for forever, and it will keep on changing. So, he disagrees to have that.
+
+68
+00:09:49.420 --> 00:10:02.409
+Pooja Ranjan: link being added as reference implementation, but I'm happy to put, PR number 10557, as you mentioned, again, in the next EIPIP meeting. Maybe we can come up with some different solution to have reference implementation added.
+
+69
+00:10:03.520 --> 00:10:13.880
+Gajinder Singh: Yeah, and I think there is one particular ERC that… I'm not sure whether it got merged or not, but again, it was sort of raised by Josh Rudolph.
+
+70
+00:10:14.010 --> 00:10:18.499
+Gajinder Singh: Where they wanted to link a reference implementation again,
+
+71
+00:10:18.860 --> 00:10:29.330
+Gajinder Singh: which is how I was suggesting them that, okay, you know, refer them in your Ethereum Magician's link, but that Magician's link also doesn't work, because the bot sort of flags it.
+
+72
+00:10:29.570 --> 00:10:32.600
+Gajinder Singh: anywhere except discussions too, so…
+
+73
+00:10:32.870 --> 00:10:37.429
+Gajinder Singh: In that sense, yes, we need to sort of find a proper solution for it.
+
+74
+00:10:37.570 --> 00:10:41.790
+Gajinder Singh: How to best add… the code reference.
+
+75
+00:10:41.890 --> 00:10:50.050
+Gajinder Singh: if we can, for this particular… I think we can discuss this further in EIP IP, but if we can, for example, just allow
+
+76
+00:10:50.380 --> 00:11:02.720
+Gajinder Singh: GitHub code references with a fixed commit number, any GitHub code reference with a fixed commit number. In the reference implementation section, I think that would
+
+77
+00:11:03.180 --> 00:11:07.110
+Gajinder Singh: be the best way to deal with it, but I guess we can talk about in…
+
+78
+00:11:07.330 --> 00:11:09.490
+Gajinder Singh: about it in EIPI permitting.
+
+79
+00:11:09.700 --> 00:11:20.369
+Pooja Ranjan: Yeah, that sounds good. Yes, the idea of not adding a Fellowship of Ethereum Magician in the body of the EIB, we do have it in the preamble, but that's fine, but not in the part of body.
+
+80
+00:11:26.140 --> 00:11:31.879
+Gajinder Singh: Right. Moving to the… Okay, this was covered.
+
+81
+00:11:33.330 --> 00:11:36.880
+Gajinder Singh: Moving to the next, new EIP proposal.
+
+82
+00:11:40.840 --> 00:11:47.640
+Gajinder Singh: So, I have… I assigned the IP number, and it seems like author has… Were they sort of fixing?
+
+83
+00:11:48.100 --> 00:11:55.370
+Gajinder Singh: the PR, and when the author will be done, and it will be all green, then I will give it a review.
+
+84
+00:11:57.320 --> 00:11:58.310
+Pooja Ranjan: Sounds good.
+
+85
+00:12:01.440 --> 00:12:05.580
+Gajinder Singh: Alright, so, what do we want to do now with a review from the AIP board?
+
+86
+00:12:05.860 --> 00:12:24.999
+Pooja Ranjan: Yes, perhaps we can take a look at the EIP board. I understand that we have a lot of open PRs, but most of the PRs there are in either typo-fixing category. I understand where, until we get response from the author, it doesn't make sense to be added in editor's review list, so I left it as is.
+
+87
+00:12:25.210 --> 00:12:31.189
+Pooja Ranjan: We can perhaps look into, yeah, some of the old PRs from here.
+
+88
+00:12:34.430 --> 00:12:42.069
+Gajinder Singh: Now, would you like to, sort of, take on the control and for the viewing section? Because I don't understand where to go.
+
+89
+00:12:43.070 --> 00:12:45.590
+Gajinder Singh: Should I filter something over here?
+
+90
+00:12:45.740 --> 00:12:58.799
+Pooja Ranjan: So, there is, this… if you scroll up a little bit, there would be, download report, so you can just perhaps download report, and that will give us a complete list of all proposals which are added there.
+
+91
+00:13:07.180 --> 00:13:09.460
+Gajinder Singh: So, is the report visible as well?
+
+92
+00:13:10.620 --> 00:13:17.459
+Pooja Ranjan: It is not, but it is in the same sequence as you can see it here in the serial number mentioned.
+
+93
+00:13:19.870 --> 00:13:23.500
+Pooja Ranjan: So you can click the view PR from here with the same serial number.
+
+94
+00:13:24.980 --> 00:13:25.880
+Gajinder Singh: Oh, okay.
+
+95
+00:13:31.040 --> 00:13:36.600
+Gajinder Singh: So, the 9354, this was a new PR, I think.
+
+96
+00:13:36.600 --> 00:13:38.870
+Pooja Ranjan: Yeah, it's the first one, yes.
+
+97
+00:13:50.670 --> 00:13:59.270
+Pooja Ranjan: I believe this is long pending. BOMA added something, but we never heard back from the… Otter?
+
+98
+00:13:59.440 --> 00:14:00.889
+Pooja Ranjan: the proposer…
+
+99
+00:14:03.720 --> 00:14:08.679
+Gajinder Singh: Right, but if this isn't passing and author is not addressing it, I mean…
+
+100
+00:14:08.820 --> 00:14:11.480
+Gajinder Singh: Yep. It is sort of not on…
+
+101
+00:14:12.130 --> 00:14:15.660
+Gajinder Singh: It is not on our onus to sort of push it forward.
+
+102
+00:14:17.900 --> 00:14:28.509
+Pooja Ranjan: Right, yeah, so that is… that is the reason why I was, like, mentioning this before. Like, there are so many PRs, but those PRs are not pending on editors.
+
+103
+00:14:28.670 --> 00:14:44.219
+Pooja Ranjan: They are pending on authors or the proposals. So, a lot of proposals are just there for review. For example, the next one, 9395, I believe it is waiting on some conflict resolution that can only be done by the EIP author.
+
+104
+00:14:46.880 --> 00:14:49.180
+Gajinder Singh: Oh, this is Tim, I think.
+
+105
+00:14:50.560 --> 00:14:52.419
+Gajinder Singh: He's sort of one of our…
+
+106
+00:14:52.420 --> 00:14:56.530
+Pooja Ranjan: Now we can even add, I guess,
+
+107
+00:15:01.210 --> 00:15:05.970
+Pooja Ranjan: 7569 new… I think Alex is also co-author now, right?
+
+108
+00:15:07.980 --> 00:15:08.910
+Gajinder Singh: Yes.
+
+109
+00:15:13.470 --> 00:15:16.689
+Gajinder Singh: I mean, if he proposes a PR, we'll basically
+
+110
+00:15:17.330 --> 00:15:20.179
+Gajinder Singh: sort of add him a co-author and accept him as well, yeah.
+
+111
+00:15:21.380 --> 00:15:26.360
+Pooja Ranjan: But… But I see him as a co-author right now, so…
+
+112
+00:15:26.990 --> 00:15:28.670
+Gajinder Singh: Note on all the PRs.
+
+113
+00:15:28.670 --> 00:15:29.390
+Pooja Ranjan: Okay.
+
+114
+00:15:30.250 --> 00:15:34.929
+Gajinder Singh: So, for example, this particular…
+
+115
+00:15:38.480 --> 00:15:40.070
+Pooja Ranjan: Yep.
+
+116
+00:15:42.410 --> 00:15:45.110
+Pooja Ranjan: So now, what is the idea? How do we move forward?
+
+117
+00:15:45.110 --> 00:15:45.640
+Gajinder Singh: So…
+
+118
+00:15:48.570 --> 00:15:51.590
+Pooja Ranjan: Because we know students are not going to be available for some time.
+
+119
+00:15:53.680 --> 00:16:00.119
+Gajinder Singh: Yeah, I think we… should just bring it to the attention of Alex, I guess.
+
+120
+00:16:00.500 --> 00:16:03.940
+Gajinder Singh: Okay. At least where we know that, you know.
+
+121
+00:16:04.510 --> 00:16:06.870
+Gajinder Singh: Who's the person in charge for these.
+
+122
+00:16:06.870 --> 00:16:07.220
+Pooja Ranjan: be honest.
+
+123
+00:16:07.680 --> 00:16:09.759
+Pooja Ranjan: Yeah, right, right, that is a good idea.
+
+124
+00:16:12.520 --> 00:16:17.110
+Pooja Ranjan: I believe Rohan has a question, comment. Rohan, you want to add something?
+
+125
+00:16:17.320 --> 00:16:26.300
+Rohan iPhone: Yeah, this is just a general comment on the EIPERC process, like, submitting one.
+
+126
+00:16:26.940 --> 00:16:31.819
+Rohan iPhone: I think, like, I just heard you mention, like, you know, how the onus isn't on…
+
+127
+00:16:31.840 --> 00:16:48.510
+Rohan iPhone: you guys, as the reviewers, like, if, like, you know, there's certain format issues and things like that, which I totally agree on, right, because you're not the ones writing the ERC, I think that totally makes sense, but there is no documentation, on, like, the process or even, like, the format or anything, like.
+
+128
+00:16:48.510 --> 00:17:02.579
+Rohan iPhone: we had… we struggled, and, like, you know, we worked with David, who's, like, you know, like, heading all the AI stuff at Ethereum, and we worked with him. He said, like, you know, this is great, like, you know, you should submit it, and then it took us, like, over a week
+
+129
+00:17:02.580 --> 00:17:20.410
+Rohan iPhone: just to get information on, you know, like, what the correct, like, formatting was, you know, how, like, the different tests were structured. There's, like, a bunch of other, like, small issues that weren't really described anywhere, and I guess I'm just wondering, like, is there a reason there's no documentation that exists on how to create these proposals, or…
+
+130
+00:17:20.420 --> 00:17:22.419
+Rohan iPhone: Is it just that, you know.
+
+131
+00:17:22.710 --> 00:17:34.330
+Rohan iPhone: like, everyone's just expected to figure it out on their own, because I think… I think it would just be much more efficient, you know, if there's, like, some place on the magician's side that said, like, you know, this is how you should be,
+
+132
+00:17:34.330 --> 00:17:46.830
+Rohan iPhone: submitting your PRs, because ERC1 describes how the proposals, like, should be made, and, like, what kinds of things should be in it, but the PR is, like, where most people get stuck, and there isn't really documentation there.
+
+133
+00:17:50.420 --> 00:17:56.179
+Gajinder Singh: Yeah, I mean, the reason for that would be, I mean, there is no hard and fast,
+
+134
+00:17:56.390 --> 00:18:00.679
+Gajinder Singh: Format, in the sense that, basically, you have to describe your idea and
+
+135
+00:18:00.990 --> 00:18:05.480
+Gajinder Singh: It should fit into the very high-level format that we enforce.
+
+136
+00:18:05.610 --> 00:18:06.870
+Gajinder Singh: by…
+
+137
+00:18:06.970 --> 00:18:16.080
+Gajinder Singh: you know, providing the headers, right? So this is why we provide the headers, this is why we have the bots, so that at least, you know, that is the basic thing.
+
+138
+00:18:16.650 --> 00:18:23.229
+Gajinder Singh: that we can enforce, and apart from that, I think it's more about… whether your PR…
+
+139
+00:18:23.580 --> 00:18:29.320
+Gajinder Singh: Is sort of, you know, expressing it, expressing your idea properly or not.
+
+140
+00:18:29.840 --> 00:18:38.470
+Gajinder Singh: Right. Is there something that you think can be structured? I mean, that would be sort of helpful. If you have some points, then…
+
+141
+00:18:38.470 --> 00:18:38.970
+Rohan iPhone: Sure.
+
+142
+00:18:38.970 --> 00:18:55.340
+Gajinder Singh: We can discuss it in EIP IP meeting, and so our way of doing things would be, can we sort of, you know, add these, tests, add these checks in the bot itself, because bot is like a…
+
+143
+00:18:55.430 --> 00:19:10.590
+Gajinder Singh: very, you know, iterative way of giving feedback, right? So you do something and board doesn't pass, so it will tell you why it didn't pass as well. So, in that sense, I think, that is the best way to deal about it, but apart from that.
+
+144
+00:19:11.110 --> 00:19:21.180
+Gajinder Singh: if you think that there are some examples that can be created, but, I mean, all the ERCs that are out there are sort of examples only, or EIPs that are out there are sort of examples.
+
+145
+00:19:21.780 --> 00:19:28.539
+Gajinder Singh: But what is exactly that, you know, for example, so what are your exact suggestions, like.
+
+146
+00:19:29.530 --> 00:19:44.469
+Rohan iPhone: Yeah, I mean, I can definitely, like, write something and maybe, like, you know, said that, or however that works, but I think it's actually to do with the test cases themselves. Like, this was something I heard from a few other people as well, and we encountered during, like, while we were submitting.
+
+147
+00:19:44.520 --> 00:19:56.170
+Rohan iPhone: the… the test, right? Like, there's a lot of times where certain ones fail, and, like, specifically that one with the… where it, like, you know, generates the HTML that is gonna actually publish on…
+
+148
+00:19:56.170 --> 00:20:13.830
+Rohan iPhone: the main ERC site, right? And that has, like, a bunch of different checks for, you know, like, are all… anytime there's, like, an ERC mentioned, is it, like, hyperlinked correctly to the, like, the ERC within the repo? There are, like, a few other, like, formatting things, like, there's, like, very specific items that…
+
+149
+00:20:13.850 --> 00:20:20.920
+Rohan iPhone: aren't documented anywhere, but they're in the tests. So I think, like, if there's something clear saying, like, okay, you know, these…
+
+150
+00:20:20.920 --> 00:20:35.700
+Rohan iPhone: these are all the tests, and this is exactly, like, what they're looking for, and that's just, like, you know, like, posted as, like, documentation somewhere, even on the GitHub, whether it's the README or somewhere else. That would be really helpful, because that test takes almost 20 minutes to run.
+
+151
+00:20:35.700 --> 00:20:54.280
+Rohan iPhone: And, like, every time there's, like, one or two, like, small things, right? You wait 20 minutes, and then you see, like, oh, there's, like, some error, but there's no docs on it, right? So you didn't even know that that was, like, a formatting thing that you had to do. And then you have to, like, rerun and make a new commit, and, like, wait another 20 minutes. So I think that's, like, the main issue, probably.
+
+152
+00:20:55.430 --> 00:21:00.810
+Gajinder Singh: I think… I believe you can run that test locally as well, so…
+
+153
+00:21:01.140 --> 00:21:07.060
+Gajinder Singh: There must be some command, I'm sure there is a command that you can run locally, and…
+
+154
+00:21:07.290 --> 00:21:11.960
+Gajinder Singh: verify that, you know, your PR passes those tests.
+
+155
+00:21:12.160 --> 00:21:14.410
+Gajinder Singh: So you don't have to wait on the CI for that.
+
+156
+00:21:14.660 --> 00:21:28.520
+Gajinder Singh: But as such, the general rules are already there, because we don't add anything into CI test unless, you know, we have documented it on EIP1 or ERC1, right? So…
+
+157
+00:21:28.520 --> 00:21:28.970
+Rohan iPhone: Hmm.
+
+158
+00:21:28.970 --> 00:21:36.190
+Gajinder Singh: Are… are those things not present in EIP1 and ERC1? Is my question, then.
+
+159
+00:21:36.920 --> 00:21:41.689
+Rohan iPhone: I think one or two of them, it's just not… it's not very clear, but…
+
+160
+00:21:41.730 --> 00:22:01.189
+Rohan iPhone: I mean, I can, you know, I can make a PR for this, where I just, like, update the README, right? And make a PR saying, like, okay, here's, like, these extra docs, just so, like… there's, like, one spot where someone can see all them, right? Rather than, like, having to dig through the… like, the full, like, the entire full documentation. Since, like, you know, at least, like, the CI, whether you're running locally or…
+
+161
+00:22:01.290 --> 00:22:13.640
+Rohan iPhone: like, you know, directly on the actual repo, you know, it would all just be in, like, one place. So, I mean, I could do that, but I don't know how long that will take to approve either, right? So, it's not… it's not that…
+
+162
+00:22:14.430 --> 00:22:22.399
+Rohan iPhone: See, I don't actually know, right? Because there's so much on, like, the ERC1 that certain, like, small things, maybe they got missed, but…
+
+163
+00:22:22.560 --> 00:22:33.410
+Rohan iPhone: it's… I guess it's just, like, not clear document. Anyways, I don't want to waste your time, but, yeah, I think maybe, like, if it was all condensed and, like, at least for the tests in one spot in the repo, that would help a lot of people, that's all.
+
+164
+00:22:35.010 --> 00:22:42.280
+Gajinder Singh: So, I guess what you are trying to say is that maybe we have one example which has all the features
+
+165
+00:22:42.380 --> 00:22:43.609
+Gajinder Singh: that we support.
+
+166
+00:22:44.130 --> 00:22:48.529
+Gajinder Singh: And the CI passes, so that, you know, people can look at it and see.
+
+167
+00:22:49.030 --> 00:22:53.829
+Gajinder Singh: Whether they are consistent with it or not. I think that that could probably work, and
+
+168
+00:22:53.990 --> 00:23:01.700
+Gajinder Singh: Maybe, Pooja, yes, we can add this in our EIP IP agenda, that if we can… generate, art…
+
+169
+00:23:01.910 --> 00:23:05.240
+Gajinder Singh: a sample, EIP or DRC.
+
+170
+00:23:05.710 --> 00:23:09.579
+Gajinder Singh: Where all the features are present, and
+
+171
+00:23:09.780 --> 00:23:13.219
+Gajinder Singh: people can sort of use to replicate, I guess that would be helpful.
+
+172
+00:23:13.560 --> 00:23:15.470
+Rohan iPhone: Yeah, that would be awesome, yeah.
+
+173
+00:23:15.650 --> 00:23:29.399
+Pooja Ranjan: Yeah, sure, we can definitely add it, but Rohan, as you suggested, it would be a good idea to have a PR with respect to whatever changes you are talking about. And one more thing, like, I would like to add, you mentioned ERC1 multiple times.
+
+174
+00:23:29.550 --> 00:23:40.050
+Pooja Ranjan: I'm not very confident that ERC1 is being actively maintained. When the repo split happened, ERC1 was made as a copy of EIP1.
+
+175
+00:23:40.120 --> 00:23:59.799
+Pooja Ranjan: Generally speaking, we do not have a duplicate number for any of the EIP, ERC, and even for RIP, so my recommendation would be to please follow EIP1 instead of ERC1. You would find everything related to ERC's documentation and available in EIP1 as well.
+
+176
+00:23:59.800 --> 00:24:10.930
+Pooja Ranjan: So even in future, if we want to add some recommendations that could be helpful for many other authors to document their proposal, perhaps we should make it in the EIP1, rather than going to ERC1.
+
+177
+00:24:11.430 --> 00:24:31.330
+Rohan iPhone: Yeah, that makes sense. I know you guys changed it too, so I think that also might be part of the confusion. Like, all, you know, like, all these, like, small things, like, notes like these, like, that we should use the EIP one for both ERC and EIP, if that's, like, all in that Git repo somewhere, like, with the sample and, like, some notes or something, I think… yeah, like you said, like, that would probably…
+
+178
+00:24:31.330 --> 00:24:34.180
+Rohan iPhone: be really helpful. So, yeah, that makes sense.
+
+179
+00:24:34.590 --> 00:24:36.540
+Rohan iPhone: Thank you, yeah.
+
+180
+00:24:40.990 --> 00:24:41.660
+Gajinder Singh: Cool.
+
+181
+00:24:41.810 --> 00:24:44.629
+Gajinder Singh: Yep, hi, Ben.
+
+182
+00:24:44.750 --> 00:24:49.680
+Gajinder Singh: Do you want to bring something up, or you just wanted us to bring your EIP in focus?
+
+183
+00:24:50.540 --> 00:24:55.620
+Ben Adams: Just to bring the EIP in focus, really, because,
+
+184
+00:24:56.010 --> 00:24:58.939
+Ben Adams: Ideally, I'd like to add it to…
+
+185
+00:24:59.710 --> 00:25:03.529
+Ben Adams: The Meta EIP, which is the…
+
+186
+00:25:04.010 --> 00:25:08.740
+Ben Adams: 8007, which is the Glamsterdam Glamster Dam.
+
+187
+00:25:08.850 --> 00:25:10.250
+Ben Adams: Gas repricing.
+
+188
+00:25:15.430 --> 00:25:21.580
+Ben Adams: No, I'd like to get it on the… Agenda with other photos.
+
+189
+00:25:23.920 --> 00:25:25.430
+Gajinder Singh: So, I think.
+
+190
+00:25:26.720 --> 00:25:28.910
+Pooja Ranjan: 10579.
+
+191
+00:25:29.230 --> 00:25:30.499
+Ben Adams: Yeah, it's the last one.
+
+192
+00:25:39.250 --> 00:25:41.190
+Gajinder Singh: No, there is some CIs still failing.
+
+193
+00:25:41.880 --> 00:25:42.890
+Ben Adams: Let me look it up.
+
+194
+00:25:50.280 --> 00:25:54.110
+Ben Adams: Yeah, it's just the external image link.
+
+195
+00:25:55.080 --> 00:25:57.589
+Ben Adams: I didn't update the APN.
+
+196
+00:25:58.130 --> 00:25:58.910
+Ben Adams: For some reason.
+
+197
+00:26:09.490 --> 00:26:11.830
+Ben Adams: So, right.
+
+198
+00:26:15.200 --> 00:26:16.030
+Ben Adams: Push that.
+
+199
+00:26:23.730 --> 00:26:25.630
+Ben Adams: Okay, that should be fixed.
+
+200
+00:26:49.730 --> 00:26:56.010
+Gajinder Singh: When is it possible that we don't do our own indentation over here in terms of new lines? Because…
+
+201
+00:26:56.410 --> 00:27:02.389
+Gajinder Singh: You know, then… the HTML renderer would basically be able to render it
+
+202
+00:27:03.550 --> 00:27:07.160
+Gajinder Singh: I guess it would still be able to render it properly, but
+
+203
+00:27:09.660 --> 00:27:14.399
+Gajinder Singh: I mean, I prefer that you don't add any new lines yourself, so that.
+
+204
+00:27:15.130 --> 00:27:16.250
+Ben Adams: So solo one…
+
+205
+00:27:16.250 --> 00:27:17.859
+Gajinder Singh: You are covered, yeah.
+
+206
+00:27:18.980 --> 00:27:19.640
+Ben Adams: Yep.
+
+207
+00:27:19.640 --> 00:27:24.919
+Gajinder Singh: Unless it's… unless you are sort of doing a new line and sort of separating out the paragraph.
+
+208
+00:27:26.590 --> 00:27:27.160
+Ben Adams: Yeah.
+
+209
+00:27:27.280 --> 00:27:28.280
+Ben Adams: Understood.
+
+210
+00:27:28.440 --> 00:27:30.490
+Ben Adams: That's easy enough to change.
+
+211
+00:28:13.640 --> 00:28:19.820
+Ben Adams: One… one thing I wasn't… Entirely sure, but… That, I think, is correct.
+
+212
+00:28:19.920 --> 00:28:22.230
+Ben Adams: I suppose I could just look at other VIPs.
+
+213
+00:28:22.390 --> 00:28:32.410
+Ben Adams: So we're focused on… The idea of providing test cases.
+
+214
+00:28:32.630 --> 00:28:39.290
+Ben Adams: But that… It doesn't really…
+
+215
+00:28:39.670 --> 00:28:45.789
+Ben Adams: seem to fit into a specific… I don't know if it's security considerations that goes in.
+
+216
+00:29:45.610 --> 00:29:50.300
+Gajinder Singh: Can you sort of also add with language? This is, like, how we do…
+
+217
+00:29:50.760 --> 00:29:53.320
+Gajinder Singh: triple dash Python or something like that, I guess.
+
+218
+00:29:54.220 --> 00:29:56.970
+Gajinder Singh: No, this is just… Totally pseudocode.
+
+219
+00:29:57.560 --> 00:30:01.299
+Ben Adams: Yeah, that's just sort of pseudocode math, so…
+
+220
+00:30:02.050 --> 00:30:06.179
+Ben Adams: I've got two… two sections. The first one is…
+
+221
+00:30:06.320 --> 00:30:13.000
+Ben Adams: Like, the maths that deals with it in, Floating point numbers.
+
+222
+00:30:13.110 --> 00:30:19.970
+Ben Adams: And then a second section, which is… Interest, because we don't… Like, flights in place.
+
+223
+00:30:50.640 --> 00:30:56.199
+Ben Adams: That's fair. And also, yeah, power of 3, and…
+
+224
+00:32:30.000 --> 00:32:32.750
+Gajinder Singh: Yeah, what exactly were you saying for the test cases, Ben?
+
+225
+00:32:33.360 --> 00:32:41.009
+Ben Adams: I wasn't sure where it lived. I have it under security considerations, but I don't know if there's an…
+
+226
+00:32:46.190 --> 00:32:46.890
+Ben Adams: Yeah.
+
+227
+00:32:47.200 --> 00:32:51.169
+Ben Adams: Because, the… you'll get a linting error if you add your own section.
+
+228
+00:33:03.290 --> 00:33:05.450
+Ben Adams: I suppose there's specification, maybe.
+
+229
+00:33:12.530 --> 00:33:13.380
+Ben Adams: Bear.
+
+230
+00:33:14.870 --> 00:33:16.359
+Ben Adams: I think I've answered my own question.
+
+231
+00:33:19.840 --> 00:33:24.370
+Gajinder Singh: Yep, so what exactly do you want to do over here?
+
+232
+00:33:26.750 --> 00:33:40.010
+Ben Adams: Oh, I moved test cases into… and… Reference implementation… Up into specification, rather than… Rather than in spirit.
+
+233
+00:33:44.200 --> 00:33:50.580
+Gajinder Singh: I think we don't have any specific format to provide for test cases,
+
+234
+00:33:51.180 --> 00:33:55.780
+Gajinder Singh: And yes, reference implementation, I think this is fine on a very high level.
+
+235
+00:34:00.210 --> 00:34:05.210
+Gajinder Singh: Do you want to provide a very deep ref… Deep reference implementation?
+
+236
+00:34:05.870 --> 00:34:07.060
+Gajinder Singh: Well, this is fine.
+
+237
+00:34:07.430 --> 00:34:13.120
+Ben Adams: This is fine. I'm only providing it because,
+
+238
+00:34:13.909 --> 00:34:19.970
+Ben Adams: There are potential rounding issues, and that would cause, consensus problems.
+
+239
+00:34:21.030 --> 00:34:27.049
+Ben Adams: Just to… The exact on how to… how to round.
+
+240
+00:34:28.330 --> 00:34:29.130
+Ben Adams: I think…
+
+241
+00:34:29.130 --> 00:34:37.469
+Gajinder Singh: You can… you can just even move this to the spec… you know, You can move this,
+
+242
+00:34:37.610 --> 00:34:41.620
+Gajinder Singh: To the spec itself, so you don't need them in the reference implementation, because
+
+243
+00:34:41.760 --> 00:34:44.330
+Gajinder Singh: Reference implementation is, like, you know, quite a…
+
+244
+00:34:45.480 --> 00:34:49.510
+Gajinder Singh: Complete kind of implementation, where everything else is present.
+
+245
+00:34:49.889 --> 00:34:56.260
+Gajinder Singh: So I guess you can also move it to the spec, because… That would sort of,
+
+246
+00:34:56.610 --> 00:35:00.359
+Gajinder Singh: Properly define the functions and the rounding things, right?
+
+247
+00:35:00.900 --> 00:35:01.850
+Ben Adams: Yes, yup.
+
+248
+00:35:03.420 --> 00:35:06.079
+Gajinder Singh: Cool, so once you have…
+
+249
+00:35:06.390 --> 00:35:12.229
+Gajinder Singh: done some of the changes, that I asked for. Let me just leave a comment.
+
+250
+00:35:17.920 --> 00:35:18.670
+Ben Adams: Okay.
+
+251
+00:35:19.180 --> 00:35:20.190
+Ben Adams: Thank you very much.
+
+252
+00:35:45.870 --> 00:35:52.939
+Gajinder Singh: Once you have done this, I'll just go through it again, and then… I can just approve it.
+
+253
+00:35:53.690 --> 00:35:55.500
+Gajinder Singh: Everything else looks fine to me.
+
+254
+00:35:56.210 --> 00:35:57.239
+Ben Adams: Thank you very much.
+
+255
+00:36:00.890 --> 00:36:01.560
+Pooja Ranjan: Variable.
+
+256
+00:36:01.560 --> 00:36:02.340
+Gajinder Singh: Thank you, Ben.
+
+257
+00:36:04.440 --> 00:36:06.000
+Pooja Ranjan: Very well,
+
+258
+00:36:06.000 --> 00:36:27.659
+Pooja Ranjan: In the meantime, I took liberty to take a look at the EIP board, and there are 36 PRs which are listed, and most of them are on consensus side, like an editor's consensus, which I don't think we will be in a position to review it here today, and some of them are typo, which, again, are waiting on author's response in order to move forward.
+
+259
+00:36:27.660 --> 00:36:41.629
+Pooja Ranjan: The proposals which were added as draft has already been reviewed by you, Gajendar. I think in less than an hour, I saw comments on each one of them, so I believe we are good for today. Today's agenda, like, the PRs which are there for review is all.
+
+260
+00:36:41.960 --> 00:36:43.630
+Pooja Ranjan: Taken care of.
+
+261
+00:36:44.660 --> 00:36:46.940
+Gajinder Singh: Yep, I guess we can.
+
+262
+00:36:47.370 --> 00:36:48.170
+Pooja Ranjan: Yeah.
+
+263
+00:36:48.300 --> 00:36:49.900
+Gajinder Singh: Finish up this session.
+
+264
+00:36:50.890 --> 00:37:08.830
+Pooja Ranjan: Yeah, a little early today. Thank you, everyone, for joining in here. Next week, on Tuesday, at 1600 UTC, we will have another editing office hour, so please feel free to add your PRs. We already have an issue open on Ethereum slash PM repo for that, meeting. Thank you, everyone, for joining us here today.
+
+265
+00:37:11.070 --> 00:37:12.390
+Gajinder Singh: Goodbye, everyone.
+
+266
+00:37:12.740 --> 00:37:13.470
+Ben Adams: Nope.
+
