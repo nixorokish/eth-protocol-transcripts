@@ -1,0 +1,36 @@
+00:12:15	ariutokintumi.eth:	https://github.com/ethereum/ERCs/pull/1158#discussion_r2272065863
+00:12:21	ariutokintumi.eth:	4
+00:14:03	Jon - 8033:	https://github.com/ethereum/ERCs/pull/1226
+00:14:15	Pooja Ranjan:	Reacted to "https://github.com/e..." with 👍
+00:14:40	ariutokintumi.eth - ERC-8003:	https://ethereum-magicians.org/t/erc-8003-erc-20-pre-initialization-extension-sentinel-storage/24993
+00:15:36	Pooja Ranjan:	https://github.com/ethereum/pm/issues/1776
+00:15:46	Pooja Ranjan:	Reacted to "https://ethereum-mag..." with 👍
+00:42:58	Pooja Ranjan:	@Leny IHIRWE 
+If you have any specific PR for review or questions for the editor, please share the link here.
+00:45:49	Pooja Ranjan:	@Rajat K Wasan 
+Do you have any questions about the comment Victor added two weeks ago? If so, we can discuss it next.
+If not, I’m happy to include the PR in the next meeting, hoping the suggested changes have been implemented.
+00:55:09	Pooja Ranjan:	@Anders Elowsson 
+If you have any specific PR for review (already added to the agenda) or questions for the editor, please share the link here.
+00:55:28	Anders Elowsson:	Not sure what the agenda is but here is a new PR: https://github.com/ethereum/EIPs/pull/10639
+00:56:07	Anders Elowsson:	There is also this older PR: https://github.com/ethereum/EIPs/pull/10554
+00:56:40	Anders Elowsson:	Just thought I’d drop them in the chat and see if there are any questions
+00:59:14	Rajat K Wasan:	Replying to "@Rajat K Wasan 
+Do y..."
+
+We can include in the next meeting.
+01:00:58	Pooja Ranjan:	I see you’ve already responded to G’s comment. We may not have enough time today to get to it. 
+
+So, I’ll share it in the editor’s Discord so someone can review it async and merge. 
+
+If it’s not merged by then, I’ll add it to the Nov 4 meeting, if that works for you.
+01:01:37	Pooja Ranjan:	Replying to "Just thought I’d dro..."
+
+Thank you for bringing it to our attention.
+01:01:42	Anders Elowsson:	Replying to "Just thought I’d dro..."
+
+Alright that works for me. Thanks and see you
+01:01:48	Pooja Ranjan:	Reacted to "Alright that works f..." with 👍
+01:07:14	Pooja Ranjan:	@ariutokintumi.eth - ERC-8003 Do you have any updates for the editor before we wrap up today’s call? We can pass the mic to you next.
+01:10:32	Jon - 8033:	Thank you for your time!
+01:11:21	Pooja Ranjan:	https://ethereum-magicians.org/t/erc-8003-erc-20-pre-initialization-extension-sentinel-storage/24993
