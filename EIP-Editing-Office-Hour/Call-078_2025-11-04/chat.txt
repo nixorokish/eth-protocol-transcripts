@@ -1,0 +1,13 @@
+00:01:43	Pooja Ranjan:	https://github.com/ethereum/pm/issues/1791
+00:02:29	read.ai meeting notes:	Rajat added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:04:30	Pooja Ranjan:	@david 
+Please drop the PR link in the chat
+00:05:09	david:	Sure, it’s available here: https://github.com/ethereum/ERCs/pull/1212 
+Thanks
+00:05:14	Pooja Ranjan:	Reacted to "Sure, it’s available..." with 👍
+00:06:55	Pooja Ranjan:	brb
+00:07:25	Pooja Ranjan:	back
