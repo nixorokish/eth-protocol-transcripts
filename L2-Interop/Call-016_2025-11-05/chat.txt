@@ -1,0 +1,430 @@
+00:12:57	terence:	gm
+00:12:58	Wei's MeetGeek Notetaker:	I’m recording this meeting with MeetGeek.ai for note taking purposes.
+00:13:04	Supernormal AI Notetaker:	Hi there 👋 I was invited by 𝗝𝘂𝗱𝗲 to transcribe and take notes for this meeting. Learn more: https://supernorm.al/zoom
+
+Type /𝗵𝗲𝗹𝗽 at any time to see what else I can do.
+00:13:15	Joshua Rudolf:	gmgm
+00:13:38	terence:	how many note takers do we have here
+00:13:46	Joshua Rudolf:	Ha man I need to figure out a solution to this
+00:14:44	Potuz:	Reacted to "how many note takers..." with 🤣
+00:14:54	Joxes | Wonderland:	gmgm
+00:15:09	Lumi | Offchain Labs:	Reacted to "gmgm" with 💙
+00:15:19	Jacob l Boundless:	Howdy friends
+00:15:19	Fireflies.ai Notetaker Mike:	Mike invited Fireflies.ai here to record & take notes. View Security & Privacy info: https://fireflies.ai/policy
+
+Type:
+'/ff leave' - Remove Fireflies
+
+View Realtime notes here: https://app.fireflies.ai/live/01K97YBBKCJXQM026JPZ9NTQ1E?ref=live_chat
+00:16:04	Jim's Circleback:	Jim is using Circleback (https://circleback.ai) to record and generate AI meeting notes for this meeting.
+00:16:18	Arik Galansky:	Is anyone counting the people vs transcription bot numbers?
+00:16:29	frangio:	Reacted to "Is anyone counting t…" with 😂
+00:16:34	Joshua Rudolf:	Thread to read: 
+https://ethereum-magicians.org/t/i-think-its-ok-to-allow-stage-1-rollups-shorter-withdrawal-windows-1-2-days-but-we-should-be-more-conservative-on-stage-2/26392
+00:16:43	Ian Norden:	Reacted to "Thread to read: 
+htt..." with ❤️
+00:20:08	Lumi | Offchain Labs:	Reacted to "Is anyone counting t..." with 😂
+00:20:39	Joshua Rudolf:	From Ed (Offchain)
+I think it’s most useful to structure a property like this as a security requirement like “the protocol must not lose safety if L1 experiences censorship or finalization delays of up to one [or 7] day” as opposed to making it about the challenge time parameter.
+00:20:50	Potuz:	7 days doesn't even include the time to sync a node: it assumes you have a synced node already.
+00:21:00	Kanishk | Across:	Reacted to "7 days doesn't eve..." with 👍
+00:22:27	Lumi | Offchain Labs:	Reacted to "7 days doesn't even ..." with 👍
+00:23:00	Greg Markou:	It personally seems a bit reckless as is, if we don’t have people ready with nodes to be performing fraud proofs.. no?
+00:23:18	Greg Markou:	Or constantly checking validity of blocks?
+00:23:39	terence:	more ppl use min-bid now days.. than using the boost
+00:23:49	Orest Tarasiuk (t1):	Reacted to "most ppl use min-bid..." with 👀
+00:23:56	Greg Markou:	Replying to "more ppl use min-bid…"
+Hahahah yep
+00:24:06	Lumi | Offchain Labs:	Also if nothing changes other than the challenge period being shorter, then failures could happen due to client bugs, not only due to attacks.
+00:24:08	Orest Tarasiuk (t1):	Replying to "more ppl use min-bid..."
+
+What’s the diff.?
+00:24:27	Potuz:	Replying to "more ppl use min-bid..."
+
+both cases are probably 0.1%? :P
+00:24:45	terence:	Replying to "more ppl use min-bid..."
+
+min bid = the builder bid has to be above this amount otherwise use local block 
+boost is releative to each value
+00:24:57	Greg Markou:	Replying to "more ppl use min-bid…"
+0.9 iirc
+00:25:14	Greg Markou:	Replying to "more ppl use min-bid…"
+I’m trying to remember what lodestar had set
+00:30:24	Orest Tarasiuk (t1):	Reacted to "min bid = the builde..." with 👍
+00:30:50	Joshua Rudolf:	Curious for thoughts on V’s idea + conclusion here
+To solve both of these problems, I would highly recommend a mechanism where any security council member can flip a switch to extend the delay to 7 days or even longer. This ensures 1-2 day withdrawals in the normal case, but gives enough time to resolve issues when they do arise. For the same reasons as above, 1-2 days is enough time for the fastest member of a security council to be able to flip that switch, even if an exceptional situation happens.
+Because of the above, I would argue 1-2 days is enough to deal with any problem other than a 51% censorship attack on Ethereum.
+00:30:57	Orest Tarasiuk (t1):	Replying to "Also if nothing chan..."
+
+Isn’t that orthogonal?
+00:31:03	Potuz:	How does this change the analysis? the set of attackers can be considered as one with a sum as the budget
+00:31:14	Orest Tarasiuk (t1):	Reacted to "How does this change..." with 👀
+00:33:08	Nam (Hyperlane):	Replying to "Curious for though..."
+
+Big fan
+00:33:30	Potuz:	Replying to "Curious for thoughts..."
+
+this is subject to censorship just like the challenge itself
+00:33:43	Lumi | Offchain Labs:	Reacted to "this is subject to c..." with ➕
+00:33:49	Kanishk | Across:	Reacted to "How does this chan..." with 👀
+00:33:50	Kanishk | Across:	Reacted to "this is subject to..." with ➕
+00:34:02	Allan | Offchain Labs:	Reacted to "this is subject to c..." with ➕
+00:34:02	Ellie Davidson:	Replying to "Curious for thoughts..."
+
+But you only need 1 tx to flip the switch instead of many for an interactive proof (and you don’t need to be staked like you do in the fraud games).
+00:34:06	Ellie Davidson:	We know that a 1-day challenge period is less secure than a 7-day challenge period.  The question is whether we are willing to accept that risk for stage 1s in particular in return for some benefit.  If we take the extreme, and we had proof that making this change would lead all users to use canonical bridges instead of trusted third party bridges, then it would be very worthwhile.  So the question we should be asking is how confident are we that this change results in a meaningful outcome?
+00:34:09	Joshua Rudolf:	Anyone want to represent the perspective of solvers/intents/lps/bridges? Feel free to jump in I see we have folks here from Across, Hyperlane, others
+00:34:27	Yorke | Hyperlane:	Reacted to "But you only need 1 ..." with ➕
+00:34:30	Potuz:	Replying to "Curious for thoughts..."
+
+yes, in the challenge case you also need just 1 tx: as soon as 1 tx comes in, you can increase the window automatically to 7days
+00:35:17	Potuz:	Replying to "Curious for thoughts..."
+
+So the initial window size only cares about 1 tx in any case, the total size of the challenge protocol cares about depth etc... but the withdrawal window is only about 1tx censorship
+00:36:00	Nam (Hyperlane):	Reacted to "But you only need ..." with ➕
+00:36:06	Orca 0x:	Replying to "Anyone want to repre..."
+
+I think this group can help answer @Ellie Davidson’s good question posed above (i.e. how big is the benefit)
+00:36:15	Potuz:	I think it's less about outcome but rather about what are the security assumptions that rollups give their users. This is not about UX but rather about what we guarantee and not guarantee to Ethereum users
+00:36:18	Ellie Davidson:	Reacted to "I think this group c..." with 😃
+00:36:24	Lumi | Offchain Labs:	Reacted to "I think it's less ab..." with ➕
+00:36:31	Greg Markou:	Replying to "Anyone want to repre…"
+I’m here
+00:36:37	Orca 0x:	Reacted to "I’m here" with ❤️
+00:36:39	Noah’s iPhone:	Replying to "We know that a 1-day…"
+Even with this people will still use solvers to get to 1s bridging until we get single slot finality and ZK rollups can be verified in 1 block
+00:36:39	Joshua Rudolf:	Reacted to "I’m here" with ❤️
+00:36:42	frangio:	Reacted to "I think it's less ..." with 👍
+00:36:53	karl:	>So the question we should be asking is how confident are we that this change results in a meaningful outcome?
+
+From conversations with MMs and CEXs this would be very meaningful, especially for small chains. If it costs ~ $30mm of capital reserves to subsidize fast withdrawals for chains with 7 day withdrawal times, that # goes down to ~$4mm. That's huge for smaller chains and would absolutely encourage usage of canonical bridges
+00:37:08	Ellie Davidson:	Replying to "We know that a 1-day..."
+
+Solvers are okay, though, because they use native assets.  It’s trusted multis bridges with synthetics that are the problem.
+00:37:09	Orca 0x:	Reacted to "Even with this peopl..." with 👆
+00:37:12	Joshua Rudolf:	Replying to "Anyone want to repre..."
+
+Also have folks here from Uniswap @Christos Gkolias | Unichain
+00:37:20	karl:	Hart can talk about this in great detail as well. He's long said that Across can support far more chains if withdrawal times were even reduced to a day
+00:37:24	Ellie Davidson:	Replying to "We know that a 1-day..."
+
+Solvers do not expose users to risk.
+00:37:52	Lumi | Offchain Labs:	Reacted to "We know that a 1-day..." with ➕
+00:37:55	frangio:	Replying to ">So the question w..."
+
+what are these estimates based on?
+00:38:14	Noah’s iPhone:	If we believe Ethereum’s economy is going to be 10x bigger in the next 5-10 years with all the enterprises moving onchain then compromising on security for optimistic rollups UX when ZK proofs offer a more secure solution seems like an odd move to me.
+00:38:17	Lumi | Offchain Labs:	Replying to ">So the question we ..."
+
++1 to Ellies point, Is the capital efficiency studied well enough? What is the empirical evidence that justifies a risk to L2s other than a hunch that this would be good?
+00:38:24	Orca 0x:	Replying to "We know that a 1-day..."
+
+they do add cost for users
+00:38:51	Joshua Rudolf:	Replying to "If we believe Ethere..."
+
+Next 5-10 years should for sure be moving over to zk though in any case?
+00:38:54	Lumi | Offchain Labs:	Replying to ">So the question we ..."
+
+Also this has an outsized benefit for small chains with low liquidity and centralized chains. This is indeed good, but arguably any chain with real traction would have enough capital incentives for MMs to add liquidity. For larger chains (where most TVS is), this is not that big of a benefit as sophisticated solvers don’t need to rebalance frequently. E.g. If 1 ETH sent from Chain A → B && 1 ETH sent from Chain B → A, nothing needs to be rebalanced.
+00:38:55	Ellie Davidson:	Replying to ">So the question we ..."
+
+I’m not sure that is enough data, at least from my perspective.  By how much does that reduce fees?  Are those fees necessarily cheaper than multisig bridges?  Do users even know about these lower fees?  Or will they just keep using their usual bridge?  I don’t think more capital efficiency necessarily leads to more canonical bridge use.
+00:39:03	Ellie Davidson:	Replying to ">So the question we ..."
+
+It might, but we need more data to confirm that.
+00:39:03	karl:	To be clear, at least in OP's case lowering the withdrawal times for fault proofs is a near term improvement as ZK tech improves
+00:39:08	Lumi | Offchain Labs:	Reacted to "It might, but we nee..." with ➕
+00:39:12	Joshua Rudolf:	Reacted to "To be clear, at leas..." with 👍
+00:39:15	Greg Markou:	1 day brings down the cost of subsidizing intent bridge systems
+00:39:20	Christos Gkolias | Unichain:	Reacted to "To be clear, at leas..." with 👍
+00:39:23	Noah’s iPhone:	Replying to "We know that a 1-day…"
+People will continue using wrapped assets for crosschain flows from alt L1s though
+00:39:28	Ellie Davidson:	Reacted to "Also this has an out..." with 💯
+00:39:29	Tomoki Adachi | Futaba:	Reacted to "1 day brings down th..." with 👍
+00:39:31	karl:	Reacted to "1 day brings down ..." with 👍
+00:39:31	Paul Dowman:	Replying to "If we believe Ethere..."
+
+This assumes that the 7 day L1 hard fork is a realistic assumption to begin with.
+00:39:36	Orca 0x:	Reacted to "1 day brings down th..." with 👍
+00:39:44	Tadeo:	Reacted to "1 day brings down th…" with 💯
+00:39:45	Potuz:	Reacted to "Solvers are okay, th..." with 👍🏼
+00:39:55	Greg Markou:	I can also speak to this more directly ^^
+00:39:59	Paul Dowman:	Reacted to "1 day brings down th..." with 👍
+00:40:09	Joshua Rudolf:	If anyone wants to jump in after donnoh, can go ahead and raise your hand :)
+00:40:11	Kanishk | Across:	Reacted to "1 day brings down ..." with 👍
+00:40:13	Kanishk | Across:	Reacted to "1 day brings down ..." with 💯
+00:40:16	Anthony:	Reacted to "Solvers are okay, th..." with ⬆️
+00:40:20	Orest Tarasiuk (t1):	So why isn’t the capital efficiency linear in the delay here?
+00:40:32	Noah’s iPhone:	Replying to "If we believe Ethere…"
+Yeah @Joshua Rudolf honestly I think most of these chains should move to ZK proofs so making this small risky change seems like a half step that puts dependencies on people in councils rather than decentralized systems
+00:40:39	Jaack | Routescan:	Reacted to "7 days doesn't even ..." with 👍
+00:40:59	Anthony:	Reacted to "So why isn’t the cap..." with ⬆️
+00:41:03	Kanishk | Across:	really helpful @donnoh | L2BEAT ! thank you !
+00:41:18	Orca 0x:	Reacted to "really helpful @donn..." with 👆
+00:41:21	brendanfarmer:	Does it matter if end users change behavior to use the canonical bridge? Isn’t the advantage for solvers sufficient?
+00:41:27	Ahmad Bitar | Nethermind:	FOCIL fixes this :p
+00:41:35	Orest Tarasiuk (t1):	Reacted to "Does it matter if en..." with 💯
+00:41:54	donnoh | L2BEAT:	Reacted to "this is subject to c..." with ➕
+00:42:00	Rami | Boundless:	Thanks Donnoh, would love to elaborate on a few things you mentioned
+00:42:01	Ellie Davidson:	Reacted to "Next 5-10 years shou..." with 💯
+00:43:12	Joshua Rudolf:	Reacted to "really helpful @donn..." with 💯
+00:43:15	donnoh | L2BEAT:	Reacted to "Does it matter if en..." with 👍
+00:43:21	Joshua Rudolf:	Reacted to "Does it matter if en..." with 👍
+00:43:25	Joshua Rudolf:	Reacted to "FOCIL fixes this :p" with 😅
+00:43:34	donnoh | L2BEAT:	Reacted to "FOCIL fixes this :p" with 😁
+00:44:00	Ellie Davidson:	Replying to "Does it matter if en..."
+
+The goal is to get more users to not use trusted bridges.  If solvers can now serve more users because of this, that is great, because solvers are not trusted.  But if it doesn’t change the number of users using trusted bridges, then what are we gaining?
+00:44:12	Tomoki Adachi | Futaba:	Reacted to "Does it matter if en..." with 💯
+00:44:17	Noah’s iPhone:	If you want to drop it to an hour you can use ZK proofs though. We have already seen some optimistic rollups switch and that lowers the cost of capital rather than these small rollups needing another council so would the cost of paying that additional council be greater than the cost to just switch to ZK proofs?
+00:44:18	Ellie Davidson:	Replying to "Does it matter if en..."
+
+Yes capital efficiency is good, but I don’t think that is the goal we have here.
+00:44:32	krlosmata:	Reacted to "Yeah @Joshua Rudolf ..." with 🎯
+00:44:35	Greg Markou:	HIII MAATTTT
+00:44:44	Kanishk | Across:	Reacted to "HIII MAATTTT" with ❤️
+00:45:07	Christos Gkolias | Unichain:	Reacted to "Does it matter if en..." with 💯
+00:45:10	Christos Gkolias | Unichain:	Reacted to "Does it matter if en..." with 👍
+00:45:33	Orest Tarasiuk (t1):	Unless there’s a coincidence of wants for rebalancing - if you’re binance? :)
+00:45:49	Potuz:	Replying to "FOCIL fixes this :p"
+
+not the underlying problem: what this group is proposing is to add a new trust assumption to rollups: "51% of validators are honest". Which rollups currently do not have. FOCIL would not change this, FOCIL anyway relies on 51% honest validators. The difference that FOCIL makes is in the economic attack assumption
+00:46:11	Greg Markou:	Theoretically but - this race to the bottom on intents will probably not change much
+00:46:15	Greg Markou:	But that might just be me
+00:46:17	Ellie Davidson:	Reacted to "Theoretically but - ..." with 💯
+00:46:57	karl:	😭 My zoom crashed and I had to rejoin and lost my chat. If someone replied to a message I sent pls let me know
+00:47:09	Greg Markou:	Re LP: sure, but you’ll probably lose like 7x of your LP volume assuming rational rates. Iirc you use a modified aave curve
+00:47:16	Kanishk | Across:	Replying to "😭 My zoom crash..."
+
+yes haha let me dm again
+00:49:42	Lumi | Offchain Labs:	Reacted to "FOCIL fixes this :p" with 😅
+00:50:24	Noah’s iPhone:	It’s also only a few builders rn
+00:50:30	matt:	Reacted to "HIII MAATTTT" with ❤️
+00:50:46	donnoh | L2BEAT:	Reacted to "not the underlying p..." with 💯
+00:50:49	Joshua Rudolf:	Replying to "Does it matter if en..."
+
+Cheaper and more accessible intents based bridging still a meaningful gain for users, no?
+00:50:51	Noah’s iPhone:	And hacks in the past have seen centralized entities accept the bribes via MEV
+00:51:23	Joshua Rudolf:	Replying to "If we believe Ethere..."
+
+Hmm right but half step with big positive impact for user, and unclear if adds meaningful risk
+00:51:33	Tadeo:	Replying to "Re LP: sure, but you…"
+MM don't want to provide liquidity because of the 7 day period. Currently asset issuers are paying MM to provide it, with a 1 day period it might be possible for non subsidised MM in L2s
+00:51:55	Nam (Hyperlane):	I'm curious how much emphasis folks put on non-intent bridging in this discussion?
+00:51:58	Ellie Davidson:	Reacted to "Cheaper and more acc..." with 🤔
+00:52:03	Kanishk | Across:	Reacted to "I'm curious how mu..." with 👀
+00:52:09	Nam (Hyperlane):	7 => 1 days would be huge for them, no?
+00:52:17	Greg Markou:	Replying to "Re LP: sure, but you…"
+Rates will always go back to the same equilibrium
+00:52:18	Kanishk | Across:	Replying to "7 => 1 days would ..."
+
+i think yes
+00:52:19	Orest Tarasiuk (t1):	Reacted to "7 => 1 days would be..." with 👀
+00:52:19	Lumi | Offchain Labs:	Replying to "Does it matter if en..."
+
+Again the question here is how meaningful is it? 
++1 to Ellies point, Is the capital efficiency studied well enough? What is the empirical evidence that justifies a risk to L2s other than a hunch that this would be good?
+
+Also this has an outsized benefit for small chains with low liquidity and centralized chains. This is indeed good, but arguably any chain with real traction would have enough capital incentives for MMs to add liquidity. For larger chains (where most TVS is), this is not that big of a benefit as sophisticated solvers don’t need to rebalance frequently. E.g. If 1 ETH sent from Chain A → B && 1 ETH sent from Chain B → A, nothing needs to be rebalanced.
+00:52:22	karl:	Certainly anyone using a non-intent bridge would love this
+00:52:26	Greg Markou:	Replying to "Re LP: sure, but you…"
+Of what we see today
+00:52:28	matt:	Replying to "Unless there’s a coi..."
+
+Yes, exactly. You can basically think of the canonical bridge being forced to handle the net transfer of funds, not each transfer. The more directional flows are, the more your costs converge to the cost of the canonical bridge.
+00:52:46	Ellie Davidson:	Reacted to "Again the question h..." with 💯
+00:53:01	Noah’s iPhone:	Replying to "If we believe Ethere…"
+Yeah my main concern is around the smaller chains and this basically makes them PoA. Also why now if it was possible in the past?
+00:53:41	Tadeo:	Replying to "Re LP: sure, but you…"
+Right now they are subsidised because without intervention liq would be near zero. So I'd say we should see more if incentives/payments are maintained, or less but still demand driven liquidity (right now it's based on how much the issuer is able to rent)
+00:53:55	donnoh | L2BEAT:	interactive makes a difference for the economic attack because the defender needs to split its budget across many tips
+00:53:57	matt:	Replying to "Theoretically but - ..."
+
+Not sure I agree. I think these 7 day wait times impose a hard limit on how efficient directional flow can get (once subsidies are gone).
+00:54:42	Orest Tarasiuk (t1):	Replying to "Unless there’s a coi..."
+
+Yeah - so if you’re big (binance) then you stand a higher chance of NOT having to rebalance—and would thus benefit from a delay reduction less than smaller players
+00:54:51	matt:	Replying to "Theoretically but - ..."
+
+Fundamentally, if there are net outflows from a chain, somebody must have funds locked in the canonical bridge and that capital costs something.
+00:54:51	Paul Dowman:	If it is a 51% attack that we want to protect against then it probably should be a lot more than 7 days.
+00:55:30	Gabriel Coutinho de Paula:	Important observation: the resource exhaustion attacks possible on BoLD and OPFP are not a property of all interactive fraud proof algorithms.
+
+That is, there are interactive fraud proof algorithms that don’t have resource exhaution attacks (but have other tradeoffs).
+00:55:31	Joshua Rudolf:	Reacted to "Yeah my main concern..." with 👍
+00:55:39	Ellie Davidson:	But it’s about the effect of the 7 days.  The argument is not about what security properties L2s should ideally have—it is about that the current security properties are actually decreasing the security for users because they use trusted bridges instead.
+00:57:05	Potuz:	That's about the total challenge not the withdrawal window
+00:57:07	Lumi | Offchain Labs:	@Ellie Davidson lowering settlement for stage 1, may dissuade stage 2 because the regression on the product side
+00:57:32	Ellie Davidson:	Replying to "@Ellie Davidson lowe..."
+
+Yes, I agree!
+00:57:44	matt:	Replying to "Unless there’s a coi..."
+
+It’s an interesting question. It might be the opposite. Smaller players offload their net flows to larger players (i.e. solvers offload their net flows to binance or Across LPs).
+
+So it may end up being Binance that gets hurt the most, since they are left holding the bag with large net directional flow to rebalance.
+
+Now Binance may have a large enough balance sheet on each chain s.t. they don’t care, but in theory their capital also costs something.
+00:57:48	Lumi | Offchain Labs:	Reacted to "Yes, I agree!" with 💙
+00:57:58	Wei's MeetGeek Notetaker:	You have a few minutes left for this meeting, as per your calendar. Learn more about what I can do at https://go.meetgeek.ai/learn
+00:58:13	donnoh | L2BEAT:	Replying to "But it’s about the e..."
+
+the convo should not just take into account the avg user but also the most risk adverse user
+00:58:23	Ellie Davidson:	Replying to "@Ellie Davidson lowe..."
+
+This was mentioned in the OG post, but the idea is that optimistic rollups should move towards 2/3 or ZK rollups to move to stage 2.  But I worry that that is a bigger burden than we are giving it credit for.  ZK proving is expensive.
+00:58:51	Arthur | Linea:	Reacted to "@Ellie Davidson lowe..." with ➕
+00:58:59	Potuz:	Is there even data about users moving to the canonical bridge if it was 1 day vs 7 days?
+00:59:08	Potuz:	or is it out of a hat like the 7 day figure?
+00:59:08	Ellie Davidson:	I actually don’t have a strong opinion either way on this, I just want us to be clear about what we’re getting.  :)
+00:59:13	karl:	OMG HARRY YES
+00:59:13	Nam (Hyperlane):	Reacted to "But it’s about th..." with ➕
+00:59:21	Kanishk | Across:	Reacted to "OMG HARRY YES" with 😂
+00:59:25	karl:	also remember you and i were talking about a mechanism like 2 years ago??
+00:59:26	karl:	yes
+00:59:28	karl:	exactly
+00:59:47	Ellie Davidson:	Replying to "Is there even data a..."
+
+Yes, that point was made in the OG post.  We don’t have that data, and we should get that data before making a decision.
+01:00:02	Orca 0x:	reading between the lines - the cost in this case (incurred by the rebalancer and passed on to the user) is quite context dependent, you can just say that 7->1 would be 7x cheaper?
+01:00:08	Lumi | Offchain Labs:	Reacted to "OMG HARRY YES" with 😂
+01:00:11	frangio:	🐈‍⬛
+01:00:17	brendanfarmer:	Replying to "Does it matter if en..."
+
+Hmm, I had understood that the claim was that reducing the withdrawal delay was primarily for capital efficiency / reducing inventory risk.
+
+I think that there is an appreciable improvement for liquidity providers in moving from 7 days to 1 day - I think it’s easy to model this.
+
+But for the end user, I think the calculation is different - there’s a max delay that a user will accept, otherwise skipping the delay justifies increased bridge risk, so 7d -> 1d doesn’t matter as much as it does for LPs.
+01:00:20	Kanishk | Across:	Reacted to "🐈‍⬛" with 🐈⬛
+01:00:22	Tristan Wilson:	Reacted to "🐈‍⬛" with 😂
+01:00:22	jesus:	Reacted to "🐈‍⬛" with 🐈⬛
+01:01:24	Orest Tarasiuk (t1):	Replying to "Unless there’s a coi..."
+
+I’d expect Binance to have priced this in long ago in the quote they’re offering to the small guy, plus fee ofc
+01:01:38	Ellie Davidson:	Replying to "Does it matter if en..."
+
+The idea is that if it is better for LPs, then they will lower fees, which will make more users use them, which is great because liquidity bridges are not trusted for end users.  So capital efficiency plays a role, but only if we are confident it will change user behaviors.  🙂
+01:01:42	Lumi | Offchain Labs:	Reacted to "Hmm, I had understoo..." with ➕
+01:01:43	Orest Tarasiuk (t1):	Reacted to "reading between the ..." with ➕
+01:01:46	Kalman Lajko:	Reacted to "🐈‍⬛" with 🐈‍⬛
+01:02:01	Jacob l Boundless:	Replying to "@Ellie Davidson lo..."
+
+Today it is already the case, maybe it is more beneficial to make Stage 1 better while the tech for Stage 2 becomes more accessible to all
+01:02:04	Potuz:	Yeah I didn't get that point from Luca at all
+01:02:40	Alysia:	Reacted to "But it’s about th..." with ➕
+01:02:46	donnoh | L2BEAT:	Reacted to "🐈‍⬛" with 🐈‍⬛
+01:02:53	Orest Tarasiuk (t1):	Reacted to "Yeah I didn't get th..." with 👀
+01:03:03	Ellie Davidson:	My personal view is that we should go all in on 2/3 proving.  That is the best end goal.  If some stage 0 L2s want to trial this, I’d be open to that, but we shouldn’t lose focus on 2/3 proving.  And I think we’re close to that from a technical standpoint!
+01:03:03	donnoh | L2BEAT:	Replying to "Yeah I didn't get th..."
+
+which one?
+01:03:19	Kanishk | Across:	Reacted to "Yeah I didn't get ..." with 👀
+01:03:19	matt:	Replying to "Unless there’s a coi..."
+
+Agree, I don’t think you can say it’s 7x cheaper to the user. I think it mostly depends on what percentage of the flow is netted vs directional.
+
+100% netted, this makes no difference. 0% netted, it’s 7x cheaper.
+
+Binance only supports very large chains. This is a much larger problem on chains where there isn’t an entity like Binance that has a balance sheet so large that capital costs don’t matter to them.
+01:03:32	Ellie Davidson:	There are economic incentives to work out for rollups upgrading to 2/3 from optimistic proofs, but I still think that is the best outcome.
+01:03:35	brendanfarmer:	Replying to "Does it matter if en..."
+
+Oh sorry I misread, that makes sense; I thought the claim was that we want users to use the canonical brigde.
+01:03:42	Kalman Lajko:	Reacted to "My personal view is ..." with ➕
+01:03:45	Jacob l Boundless:	Reacted to "My personal view i..." with ➕
+01:03:55	Orest Tarasiuk (t1):	Reacted to "Agree, I don’t think..." with 👍
+01:03:58	Potuz:	Replying to "Yeah I didn't get th..."
+
+The budget being split among different attackers. If it's just about the griefing ratio I kinda understand but this is modelled equally with one or a million, the budget is what matters
+01:03:58	Orca 0x:	Reacted to "Agree, I don’t think..." with 👍
+01:04:04	Mark:	Runbooks are good
+01:04:05	Potuz:	Have an EIP comming for that
+01:04:09	Kanishk | Across:	Reacted to "Have an EIP commin..." with 👀
+01:04:11	Jacob l Boundless:	Reacted to "Have an EIP commin..." with 👀
+01:04:11	Kanishk | Across:	Reacted to "Have an EIP commin..." with ❤️
+01:04:13	Jacob l Boundless:	Reacted to "Have an EIP commin..." with ❤️
+01:04:17	Joxes | Wonderland:	Reacted to "Have an EIP comming ..." with ❤️
+01:04:23	Ellie Davidson:	Reacted to "Oh sorry I misread, ..." with ❤️
+01:04:46	Orest Tarasiuk (t1):	What’s the poll result? 😄
+01:04:51	Kanishk | Across:	Reacted to "What’s the poll r..." with 👀
+01:04:52	Kanishk | Across:	Reacted to "What’s the poll r..." with 😂
+01:05:05	Ellie Davidson:	Reacted to "Screenshot2025_11_05_095132.jpg" with 😅
+01:05:08	Orest Tarasiuk (t1):	Oh no…
+01:05:08	Kanishk | Across:	Replying to "Screenshot2025_11_..."
+
+BULLISH haha
+01:05:13	Kalman Lajko:	Reacted to "Screenshot2025_11_05_095132.jpg" with 😅
+01:05:16	Ellie Davidson:	Very good point
+01:05:20	Allan | Offchain Labs:	Need a high burden of proof, agreed
+01:05:20	Orest Tarasiuk (t1):	Replying to "Screenshot2025_11_05_095132.jpg"
+
+The new ACD
+01:05:24	Ellie Davidson:	Reacted to "Need a high burden o..." with 💯
+01:05:24	donnoh | L2BEAT:	Replying to "Yeah I didn't get th..."
+
+no i consider the attacker being a single aggregated attacker, by sybil attacks i meant posting multiple invalid state roots. i couldn’t elaborate much but both my presentation and article explain it
+01:05:39	donnoh | L2BEAT:	Replying to "Yeah I didn't get th..."
+
+the “sybil attack” terminology comes from the cartesi paper
+01:05:48	donnoh | L2BEAT:	Reacted to "Screenshot2025_11_05_095132.jpg" with 😅
+01:06:00	donnoh | L2BEAT:	Reacted to "Need a high burden o..." with 💯
+01:06:06	Ellie Davidson:	L2s on the call, what are your concerns about accelerating 2/3 proving?  If the tech was ready, what are the concerns that still exist?  Cost of proofs?
+01:06:23	Kanishk | Across:	Reacted to "L2s on the call, w..." with 👀
+01:07:00	Ellie Davidson:	Is this Noah from ZKSYnc?
+01:07:07	Kalman Lajko:	Reacted to "Is this Noah from ZK..." with 👍
+01:07:08	Noah’s iPhone:	Replying to "Is this Noah from ZK…"
+Yes
+01:07:09	Lumi | Offchain Labs:	Tbf most small chains are centralized in the first place
+01:07:12	Ellie Davidson:	Reacted to "Yes" with ❤️
+01:07:39	Orest Tarasiuk (t1):	Replying to "Tbf most small chain..."
+
+Good to support them still
+01:07:44	Ellie Davidson:	Reacted to "Good to support them..." with 💯
+01:07:44	Nam (Hyperlane):	it's clear that it doesn't make sense to have the same standard apply to big vs. small chains
+01:07:50	Ellie Davidson:	Reacted to "it's clear that it d..." with 💯
+01:08:04	Greg Markou:	Hahahaha honestly this is true 🤝
+01:08:09	Nam (Hyperlane):	What is not clear is whether we/Ethereum, care about
+01:08:27	Noah’s iPhone:	Replying to "Tbf most small chain…"
+That’s why I think it’s riskier to allow them to do stuff like this
+01:08:34	karl:	Btw I say "small chains" but this would have a major impact even for OP Mainnet
+01:08:35	donnoh | L2BEAT:	Replying to "Tbf most small chain..."
+
+fwiw bold is not even recommended for small chains and are forced to have a whitelist
+01:09:10	Potuz:	Reacted to "the “sybil attack” t..." with 👍🏼
+01:09:20	Joshua Rudolf:	Next steps 😅 who wants to help contribute to a summary showing bull/bear case (1) why this would / wouldn’t have real benefits, and (2) does not add meaningful risk to end users
+01:09:21	Kalman Lajko:	Replying to "it's clear that it d..."
+
+Shouldn’t the difference be in the validator stake, proportional to the value locked in the chain, and not in the withdraw delay?
+01:09:27	Ellie Davidson:	Yes, very good point, Tsahi!
+01:09:33	Arthur | Linea:	Reacted to "Yes, very good point..." with ➕
+01:09:41	Orest Tarasiuk (t1):	Reacted to "Yes, very good point..." with ➕
+01:09:46	Tsahi | Offchain Labs:	Replying to "Yes, very good point..."
+
+Thank you
+01:09:51	Jacob l Boundless:	Reacted to "Yes, very good poi..." with ➕
+01:09:53	Anika:	@Ellie Davidson  on the Base side, we'd like to get to a 2/3 asap, just need to gain enough confidence on the technology and migration path
+01:09:59	Ellie Davidson:	Reacted to "@Ellie Davidson  on ..." with ❤️
+01:10:11	Ellie Davidson:	Replying to "@Ellie Davidson  on ..."
+
+I love to hear this! Cc @Joshua Rudolf
+01:10:46	Potuz:	the security council also needs the budget for the attacks you're describing
+01:10:49	Noah’s iPhone:	Reacted to "it's clear that it d…" with 💯
+01:10:50	Potuz:	they also need to be included
+01:11:13	Greg Markou:	Reacted to "@Ellie Davidson  on …" with ❤️
+01:11:16	Joshua Rudolf:	Reacted to "@Ellie Davidson  on ..." with 😍
+01:11:18	Joshua Rudolf:	Reacted to "@Ellie Davidson  on ..." with ❤️
+01:11:24	donnoh | L2BEAT:	#focil4glamsterdam
+01:11:28	Ellie Davidson:	Reacted to "#focil4glamsterdam" with 💯
+01:11:30	Potuz:	we're already discussing this, it depends on what happens with FOCIL
+01:11:36	Matt B:	Reacted to "@Ellie Davidson  o..." with ❤️
+01:11:56	Potuz:	if FOCIL doesn't get in we have some mitigations, not as good as FOCIL but still allow us to make the assumption on minority vanilla
+01:12:05	donnoh | L2BEAT:	Reacted to "if FOCIL doesn't get..." with 👍
+01:12:17	Orest Tarasiuk (t1):	Not mutually exclusive AT ALL
+01:12:29	Paul Dowman:	Reacted to "#focil4glamsterdam" with 💯
+01:12:34	Greg Markou:	We need a new Karl rap: “lowering the exit window, yo”
+01:12:42	donnoh | L2BEAT:	Reacted to "We need a new Karl r..." with 😂
+01:12:45	Orca 0x:	this was a great discussion, shout out @Joshua Rudolf for pulling this together at short notice
+01:12:51	Jacob l Boundless:	Thanks everyone
+01:12:52	karl:	Reacted to "We need a new Karl..." with 😂
+01:12:56	Kanishk | Across:	thank you everyone!
