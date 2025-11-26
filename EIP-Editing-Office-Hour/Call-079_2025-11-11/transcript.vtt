@@ -1,0 +1,926 @@
+WEBVTT
+
+1
+00:00:08.840 --> 00:00:10.110
+Pooja Ranjan: Thank you, Josh.
+
+2
+00:00:12.310 --> 00:00:13.660
+Josh Davis: No problem.
+
+3
+00:00:14.440 --> 00:00:19.390
+Pooja Ranjan: If you would like, you can perhaps assign us, one of us, as host, and we can…
+
+4
+00:00:19.600 --> 00:00:21.339
+Pooja Ranjan: I'll get the meeting running.
+
+5
+00:00:21.340 --> 00:00:22.560
+Josh Davis: Yep, sounds good.
+
+6
+00:00:38.490 --> 00:00:40.490
+Pooja Ranjan: Hey, Gojendra, thank you for joining.
+
+7
+00:00:42.340 --> 00:00:46.660
+Josh Davis: Alright, Booja, you're the host, I'm gonna duck out of here, let me know if you need anything else.
+
+8
+00:00:47.470 --> 00:00:51.250
+Pooja Ranjan: Sounds perfect. Thank you so much for jumping in. No problem.
+
+9
+00:00:51.490 --> 00:00:52.420
+Pooja Ranjan: Take care, bye.
+
+10
+00:00:54.250 --> 00:00:55.170
+Gajinder Singh: Right, Booja.
+
+11
+00:00:56.040 --> 00:00:57.560
+Pooja Ranjan: Hi, Gudgender.
+
+12
+00:00:57.970 --> 00:01:01.549
+Gajinder Singh: Let me stop the sharing and see what happens.
+
+13
+00:01:02.420 --> 00:01:03.489
+Pooja Ranjan: Yes, please.
+
+14
+00:01:12.090 --> 00:01:15.140
+Pooja Ranjan: I've shared the… Agenda link in chat.
+
+15
+00:02:17.410 --> 00:02:20.830
+Pooja Ranjan: Alright, so we can see your screen now.
+
+16
+00:02:21.690 --> 00:02:25.080
+Pooja Ranjan: If you're ready, we can go live.
+
+17
+00:02:27.230 --> 00:02:28.080
+Akash | ECH: VLN.
+
+18
+00:02:29.230 --> 00:02:38.110
+Pooja Ranjan: Welcome to EIP Editing Office Hour, meeting number 79. This is issue number 1809 on
+
+19
+00:02:38.660 --> 00:02:52.160
+Pooja Ranjan: Ethereum slash PM GitHub repository. Thank you, Gajendar Singh. Gajendar is an EIP editor who is going to take this office hour and review proposals which are added on EIP GitHub repositories.
+
+20
+00:02:52.390 --> 00:02:56.689
+Pooja Ranjan: So Gajendra, it's all yours. Maybe we can start with a review proposal.
+
+21
+00:02:58.900 --> 00:03:02.120
+Gajinder Singh: Yeah, thank you, Pooja. Let's get started.
+
+22
+00:04:21.760 --> 00:04:23.040
+Gajinder Singh: Looks all good.
+
+23
+00:04:24.670 --> 00:04:28.840
+Pooja Ranjan: Cool. Yeah, I noticed that this proposal is not for Fusaka.
+
+24
+00:04:29.130 --> 00:04:30.250
+Gajinder Singh: Welcome.
+
+25
+00:04:30.250 --> 00:04:32.460
+Pooja Ranjan: Maybe it is for Glamsterdam.
+
+26
+00:04:32.460 --> 00:04:33.770
+Gajinder Singh: Amsterdam, and…
+
+27
+00:04:34.530 --> 00:04:36.039
+Pooja Ranjan: I'm sorry, I'm hearing an echo.
+
+28
+00:04:43.260 --> 00:04:49.510
+Pooja Ranjan: Yeah. Nevertheless, the proposal can be moved in the review status, even if it is not slated for
+
+29
+00:04:50.620 --> 00:04:56.650
+Pooja Ranjan: Like, further ahead in the network upgrade, schedule.
+
+30
+00:05:00.310 --> 00:05:01.200
+Pooja Ranjan: The next one.
+
+31
+00:05:01.200 --> 00:05:03.319
+Gajinder Singh: Yeah, we can move to the next one.
+
+32
+00:05:03.760 --> 00:05:09.630
+Pooja Ranjan: Yeah, the next one we have here is your draft. I think there are a bunch of open proposals for draft.
+
+33
+00:05:29.540 --> 00:05:36.050
+Gajinder Singh: So I did review this, and I did a few more comments, and come back to it when the author will get all done.
+
+34
+00:05:37.150 --> 00:05:43.009
+Pooja Ranjan: Awesome The next PR is 10768.
+
+35
+00:06:00.810 --> 00:06:05.799
+Gajinder Singh: From the type… from the description of this pair, it seems like it's an ERC.
+
+36
+00:06:08.080 --> 00:06:09.960
+Pooja Ranjan: Hmm, that's interesting.
+
+37
+00:06:10.210 --> 00:06:17.279
+Pooja Ranjan: Maybe, yeah, metadata interface, yes, sounds definitely like that. Maybe we want to let the author know about it.
+
+38
+00:06:21.730 --> 00:06:23.410
+Gajinder Singh: Yeah, it seems like yesterday.
+
+39
+00:06:23.410 --> 00:06:25.860
+Pooja Ranjan: Oh yeah, they have mentioned it in as well, yes.
+
+40
+00:06:26.070 --> 00:06:28.490
+Pooja Ranjan: So we can just left a comment here.
+
+41
+00:06:28.890 --> 00:06:32.379
+Pooja Ranjan: for the author to move this proposal to ERC Depot.
+
+42
+00:07:13.480 --> 00:07:16.970
+Pooja Ranjan: Next PR is 9374.
+
+43
+00:07:21.840 --> 00:07:23.579
+Pooja Ranjan: Entity operations, yes.
+
+44
+00:07:27.210 --> 00:07:34.140
+Pooja Ranjan: It seems like you have already reviewed it once, but the author seems to have responded to your comments.
+
+45
+00:07:49.570 --> 00:07:53.370
+Gajinder Singh: But a lot of the comments don't seem addressed, it seems.
+
+46
+00:12:01.470 --> 00:12:02.800
+Pooja Ranjan: Alright.
+
+47
+00:12:20.000 --> 00:12:26.840
+Pooja Ranjan: We can perhaps, get to next PR, which is… 10311.
+
+48
+00:12:28.700 --> 00:12:32.870
+Pooja Ranjan: It seems that you have already addressed Rest of the drafts.
+
+49
+00:12:34.870 --> 00:12:36.709
+Pooja Ranjan: Yeah, all of them have been addressed.
+
+50
+00:12:36.710 --> 00:12:38.470
+Gajinder Singh: All of them have been addressed, so yeah.
+
+51
+00:12:38.610 --> 00:12:39.470
+Gajinder Singh: Yep.
+
+52
+00:13:16.910 --> 00:13:25.509
+Pooja Ranjan: I mean, it is definitely unclear to me, like, what we are trying to fix here. Oh, it's ELO in optional value, sorry. No, I was referring to the other one.
+
+53
+00:13:27.890 --> 00:13:34.729
+Gajinder Singh: I think this is best addressed by the author, but why is the author not tagged over here?
+
+54
+00:13:34.730 --> 00:13:40.750
+Pooja Ranjan: Yeah, and I have noticed the issue that author is not being tagged in multiple other PRs.
+
+55
+00:13:44.280 --> 00:13:47.009
+Gajinder Singh: So, I think I commented this,
+
+56
+00:13:47.310 --> 00:13:51.849
+Gajinder Singh: There's somewhere in all the PRs where only assets are modified.
+
+57
+00:13:52.140 --> 00:13:53.889
+Gajinder Singh: The authority is not being tagged.
+
+58
+00:13:55.650 --> 00:14:02.240
+Gajinder Singh: So… This is success… 475…
+
+59
+00:14:33.250 --> 00:14:34.040
+Csaba: Hey!
+
+60
+00:14:36.000 --> 00:14:36.980
+Pooja Ranjan: Yeshamba?
+
+61
+00:14:37.590 --> 00:14:38.380
+Csaba: Hi.
+
+62
+00:14:38.830 --> 00:14:39.530
+Gajinder Singh: Hi.
+
+63
+00:14:40.360 --> 00:14:41.830
+Csaba: I don't know how the email.
+
+64
+00:14:42.010 --> 00:14:43.179
+Gajinder Singh: I don't know how to eat.
+
+65
+00:14:43.180 --> 00:14:44.910
+Csaba: jumping in, so…
+
+66
+00:14:45.540 --> 00:14:46.330
+Gajinder Singh: So…
+
+67
+00:14:48.530 --> 00:14:50.209
+Pooja Ranjan: No worries. I believe Gajan.
+
+68
+00:14:50.210 --> 00:14:50.670
+Gajinder Singh: place.
+
+69
+00:14:50.670 --> 00:14:57.230
+Pooja Ranjan: On your end, if it would be… Muting, that might help, yeah.
+
+70
+00:15:00.870 --> 00:15:02.000
+Csaba: Packaging the…
+
+71
+00:15:06.090 --> 00:15:07.160
+Gajinder Singh: Yep, hello.
+
+72
+00:15:10.790 --> 00:15:16.799
+Pooja Ranjan: Shabba, do you have any particular PR that you would like to get it reviewed? If so, please drop the link in the chat.
+
+73
+00:15:17.540 --> 00:15:21.690
+Csaba: Yeah, so I was jumping in for that to ask how it works, actually.
+
+74
+00:15:21.930 --> 00:15:27.209
+Csaba: I'm just stopping the link soon, and then… Or you can see.
+
+75
+00:15:33.310 --> 00:15:41.950
+Pooja Ranjan: I mean, generally, we create an issue for that, so you can also drop the link in the issue, and we can add it here, but while we have you on the call, you can just…
+
+76
+00:15:42.280 --> 00:15:45.239
+Pooja Ranjan: Drop the link in the chat, and we can pick it up from there.
+
+77
+00:15:46.160 --> 00:15:46.840
+Csaba: Okay.
+
+78
+00:15:58.110 --> 00:15:59.640
+Csaba: Just have to find a link.
+
+79
+00:16:01.100 --> 00:16:02.100
+Csaba: the window.
+
+80
+00:16:14.630 --> 00:16:19.540
+Gajinder Singh: I think this seems to be adding a bunch of… God…
+
+81
+00:16:21.360 --> 00:16:29.790
+Pooja Ranjan: Yeah, and here also, if you notice, that every time editors are only tagged, the author of the proposal is
+
+82
+00:16:30.750 --> 00:16:33.170
+Pooja Ranjan: No, it is for website type effects, right?
+
+83
+00:16:34.660 --> 00:16:37.240
+Gajinder Singh: Yeah, yeah, it… correct…
+
+84
+00:16:37.240 --> 00:16:39.710
+Pooja Ranjan: Yeah, so definitely author is not required, so yeah.
+
+85
+00:16:39.710 --> 00:16:41.359
+Gajinder Singh: The author is not triple, actually, yeah.
+
+86
+00:16:43.690 --> 00:16:51.510
+Gajinder Singh: And, wales, or whatever is the other names he has.
+
+87
+00:16:51.980 --> 00:16:57.530
+Gajinder Singh: made a good bunch of PR for improving the documentation and adding some tools.
+
+88
+00:16:58.250 --> 00:17:02.949
+Gajinder Singh: But, all of them needs to be addressed by Sam.
+
+89
+00:17:04.369 --> 00:17:06.699
+Pooja Ranjan: Would you want me to move it to EIPIP meeting?
+
+90
+00:17:08.750 --> 00:17:15.750
+Gajinder Singh: Yeah, I am asked… I have asked this particular PR author to create an issue.
+
+91
+00:17:16.310 --> 00:17:20.850
+Gajinder Singh: For… and list all his PRs for improving the documentation and all that.
+
+92
+00:17:23.630 --> 00:17:27.220
+Pooja Ranjan: Yeah, that would make sense, then I will pick it up from the issue section.
+
+93
+00:18:35.840 --> 00:18:45.860
+Gajinder Singh: I think, I have… this is another PR where… A person is… So, just trying to add…
+
+94
+00:18:46.180 --> 00:18:47.280
+Gajinder Singh: a section.
+
+95
+00:18:55.010 --> 00:19:01.760
+Gajinder Singh: I somehow remembering… reviewing such a PR, and I see it again. I don't know.
+
+96
+00:19:04.390 --> 00:19:05.900
+Gajinder Singh: Just comment.
+
+97
+00:21:21.290 --> 00:21:23.870
+Pooja Ranjan: So there is a question in the chat.
+
+98
+00:21:24.290 --> 00:21:39.320
+Pooja Ranjan: So, it seems that there is a proposal which is already merged, and the EIP number is 8077, and we are joined by Shabba. He has some questions with respect to motivation and rationale. Yeah, please, Shabba.
+
+99
+00:21:41.230 --> 00:21:48.080
+Csaba: Yeah, so… I can… when I was writing it, I realized that…
+
+100
+00:21:49.380 --> 00:21:56.950
+Csaba: Between motivation and rational, it was not real to me what's kind of the… The, the light, light differentiation.
+
+101
+00:21:57.310 --> 00:22:00.160
+Csaba: So I was… I was using…
+
+102
+00:22:00.520 --> 00:22:01.719
+Gajinder Singh: I'm refusing…
+
+103
+00:22:02.180 --> 00:22:04.230
+Csaba: Well, first I had mostly motivation.
+
+104
+00:22:05.000 --> 00:22:13.280
+Csaba: And then I… I've seen that, so, all the taxing motivation, and then I've seen that rationale is… is proposed to be, kind of, to…
+
+105
+00:22:13.560 --> 00:22:20.180
+Csaba: discuss design with Ryan, so I tried to do that. But I wanted to check if I understood.
+
+106
+00:22:20.710 --> 00:22:22.760
+Csaba: Well, if that's how it's used.
+
+107
+00:22:22.760 --> 00:22:28.549
+Gajinder Singh: Yeah, motivation is, why… why are you proposing this? What is the pain point that you are trying to solve, right?
+
+108
+00:22:28.830 --> 00:22:33.870
+Gajinder Singh: So, it's basically why, and again, as you mentioned, rational is what…
+
+109
+00:22:34.060 --> 00:22:36.910
+Gajinder Singh: What are… what is the reasoning behind making…
+
+110
+00:22:37.290 --> 00:22:44.499
+Gajinder Singh: some design changes that you have done, or why this particular EIP compared to some other
+
+111
+00:22:44.760 --> 00:22:46.960
+Gajinder Singh: alternative EIPs that are out there.
+
+112
+00:22:47.600 --> 00:22:49.210
+Csaba: Okay, I see. Yeah, yeah.
+
+113
+00:22:51.550 --> 00:22:55.840
+Csaba: Yeah, and the other… another dubbed I had is…
+
+114
+00:22:56.700 --> 00:23:03.930
+Csaba: I see most EIP… so this is networking specific, specific on DevP2P, which has its version numbers.
+
+115
+00:23:04.180 --> 00:23:08.860
+Csaba: And most proposers are already putting version number ahead.
+
+116
+00:23:09.350 --> 00:23:13.270
+Csaba: Hoping that it will be that one. I was not putting it,
+
+117
+00:23:13.570 --> 00:23:15.639
+Csaba: This is just more of a question, like.
+
+118
+00:23:15.910 --> 00:23:21.030
+Csaba: That's something which can be updated last minute to the right version number.
+
+119
+00:23:21.240 --> 00:23:32.139
+Csaba: Right, so it's typically E slash 69, or 70, or 71. But because I don't know when… what will be the time ordering, obviously version number is not clear at this point.
+
+120
+00:23:34.120 --> 00:23:48.029
+Gajinder Singh: Yeah, that is fine, we understand that, and before you move to review, basically, you should update the version number, because you will move to review when there is a high chance of including it in some particular
+
+121
+00:23:48.200 --> 00:23:48.900
+Gajinder Singh: art folk.
+
+122
+00:23:51.020 --> 00:23:59.180
+Csaba: Yeah, the other thing with these AIPs, that they are not bound to have folks, so… So…
+
+123
+00:24:00.690 --> 00:24:04.739
+Gajinder Singh: So if you're not bound to heart folks, then still, basically, you know.
+
+124
+00:24:05.130 --> 00:24:09.309
+Gajinder Singh: Whenever you have consensus among clients, right? So…
+
+125
+00:24:09.310 --> 00:24:09.889
+Csaba: Yeah.
+
+126
+00:24:09.890 --> 00:24:11.870
+Gajinder Singh: Because clients need to implement.
+
+127
+00:24:12.460 --> 00:24:14.699
+Gajinder Singh: And, these net interfaces, and,
+
+128
+00:24:15.340 --> 00:24:19.589
+Gajinder Singh: so when you have consensus in ACD, then basically…
+
+129
+00:24:19.850 --> 00:24:24.660
+Gajinder Singh: they will also allocate a particular version for it, right? So, that's how it goes.
+
+130
+00:24:25.270 --> 00:24:29.129
+Csaba: Okay. Yeah, thank you. I know it's basic questions.
+
+131
+00:24:29.880 --> 00:24:32.019
+Csaba: But I wasn't sure about the places.
+
+132
+00:24:33.080 --> 00:24:33.739
+Pooja Ranjan: No worries.
+
+133
+00:24:33.740 --> 00:24:34.970
+Gajinder Singh: Very nauseous.
+
+134
+00:24:35.200 --> 00:24:45.659
+Pooja Ranjan: One last piece of information, Shabba, I don't know if you are aware of it, or if it applies to all networking proposals. These days, even Networking proposals are also included in MetaEAP.
+
+135
+00:24:45.750 --> 00:25:00.009
+Pooja Ranjan: So, if you go ahead with the normal review status, when you are ready and comfortable and you have some temperature check, you can add it to review. Otherwise, it can be used when it is considered to be a part of, like, future upgrade.
+
+136
+00:25:00.110 --> 00:25:09.750
+Pooja Ranjan: Yeah, not necessarily that it will be included in Meta EAP if it is not being implemented by all the clients at the same time, but generally this is now going to be a run.
+
+137
+00:25:10.930 --> 00:25:16.689
+Csaba: With Metaape, you mean, you mean the ones related to house folks, or… or something else?
+
+138
+00:25:16.690 --> 00:25:31.110
+Pooja Ranjan: Yeah, so for example, if you take a look at 7607, which is Hard Fork Meta for Fusaka, you would find, other proposals there, 869, 7642, which is a networking proposal, and that is also included in here.
+
+139
+00:25:31.900 --> 00:25:40.620
+Csaba: Yeah, I know, I know, but it's something we actually discussed in ACD, and what was explicitly said is that we are not including order networking proposals in the meta.
+
+140
+00:25:40.960 --> 00:25:46.240
+Csaba: Also, not to… to overload the… the pluses of the…
+
+141
+00:25:46.660 --> 00:25:50.029
+Csaba: Of the… of the FOLIC decision and ordering.
+
+142
+00:25:50.410 --> 00:26:05.620
+Pooja Ranjan: Yeah, no worries there. I just mentioned it in case it does not go through, like, normal course, then that is also an alternative, so when it is, can be used this path. Yeah, thank you so much for joining, and feel free to join in future calls if you have any further questions.
+
+143
+00:26:06.090 --> 00:26:15.380
+Csaba: Thank you, and, yeah, the… for joining. Now I was just jumping on the call, because I've seen it in the calendar, but it was kind of the preferred way, so, like.
+
+144
+00:26:15.380 --> 00:26:21.690
+Pooja Ranjan: Exactly the preferred way. You can just drop a link to your PR or question on the agenda and join the call.
+
+145
+00:26:22.200 --> 00:26:23.960
+Csaba: Perfect. Thank you very much.
+
+146
+00:26:24.600 --> 00:26:25.240
+Pooja Ranjan: Okay.
+
+147
+00:26:25.750 --> 00:26:26.890
+Csaba: Thank you, to you.
+
+148
+00:26:27.780 --> 00:26:28.600
+Csaba: Bye-bye.
+
+149
+00:26:29.120 --> 00:26:29.730
+Pooja Ranjan: My hair.
+
+150
+00:26:39.800 --> 00:26:44.830
+Gajinder Singh: And this seems correct, but it's better that author reviews this.
+
+151
+00:26:45.540 --> 00:26:49.780
+Gajinder Singh: So I'll just drop in the comment and see whether author has been tagged or not.
+
+152
+00:26:50.890 --> 00:26:51.720
+Pooja Ranjan: No.
+
+153
+00:26:51.720 --> 00:26:54.269
+Gajinder Singh: I'm not sure. No one asked me that.
+
+154
+00:26:55.020 --> 00:27:00.819
+Gajinder Singh: These, statuses are still running, so maybe I'll just close and open the pull request.
+
+155
+00:27:04.310 --> 00:27:13.019
+Pooja Ranjan: Yeah, I noticed, like, there are a few proposals in which authors are not being tagged. I don't know why something might have broken, we need to take a look into that.
+
+156
+00:27:45.320 --> 00:27:48.409
+Gajinder Singh: Alright, so now the review board is running, and probably…
+
+157
+00:27:48.860 --> 00:27:50.989
+Gajinder Singh: Authors will be there… will be tagged.
+
+158
+00:27:54.390 --> 00:27:55.870
+Pooja Ranjan: Okay, that's cool.
+
+159
+00:28:03.690 --> 00:28:09.739
+Pooja Ranjan: So I see, and next week, I see a bunch of… related to deposit snapshot. I don't know if…
+
+160
+00:28:10.120 --> 00:28:17.340
+Pooja Ranjan: They all are interrelated, or by the same proposer. Could we just… Kind of make them batch.
+
+161
+00:28:17.340 --> 00:28:24.129
+Gajinder Singh: Yeah, so I… did… Commented on some of the max deposit removal thing.
+
+162
+00:28:35.240 --> 00:28:41.299
+Gajinder Singh: I mean, this… Technically, the previous one is also fine, and this is also fine.
+
+163
+00:28:42.550 --> 00:28:44.930
+Pooja Ranjan: There are a bunch of them with the same…
+
+164
+00:28:44.930 --> 00:28:46.090
+Gajinder Singh: Family, like, the same.
+
+165
+00:28:46.590 --> 00:28:49.259
+Pooja Ranjan: Kind of similar requests, yeah. Edit.
+
+166
+00:28:52.610 --> 00:28:57.309
+Gajinder Singh: But again, authors are not tagged, because I think the changes in assets
+
+167
+00:28:57.730 --> 00:29:02.050
+Gajinder Singh: And our boat is not, sort of, Plugging anything that is…
+
+168
+00:29:03.170 --> 00:29:05.980
+Gajinder Singh: Like, in the authors, wherever assets are getting changed.
+
+169
+00:29:08.990 --> 00:29:11.080
+Pooja Ranjan: Okay, in that case, maybe we can…
+
+170
+00:29:11.730 --> 00:29:14.659
+Pooja Ranjan: We can tag the authors, yeah.
+
+171
+00:29:34.030 --> 00:29:38.669
+Pooja Ranjan: Or would you want to, like, close and open all of them? There are 3, 4.
+
+172
+00:29:42.020 --> 00:29:45.779
+Gajinder Singh: No, this is not because of closing or opening. This is…
+
+173
+00:29:46.210 --> 00:29:49.010
+Gajinder Singh: Because we have a faulty bot.
+
+174
+00:29:49.610 --> 00:29:53.890
+Gajinder Singh: That is not tagging authors when anything is changing in assets.
+
+175
+00:29:55.160 --> 00:30:10.409
+Pooja Ranjan: Oh, now I get it. Okay, okay. We need to even check that. If any changes to assets… I don't think that we have this thing in the past, that if there is any change in assets report, then…
+
+176
+00:30:10.470 --> 00:30:15.949
+Pooja Ranjan: authors are tagged. It was only for the body and the, header of,
+
+177
+00:30:16.200 --> 00:30:20.109
+Pooja Ranjan: a proposal, so we might have to revisit it. Good point.
+
+178
+00:30:24.270 --> 00:30:29.689
+Gajinder Singh: So, there have been a bunch of such peers, and I have sort of tagged Sam in each of them.
+
+179
+00:30:29.990 --> 00:30:32.350
+Gajinder Singh: With the same text, or similar text.
+
+180
+00:30:33.190 --> 00:30:35.900
+Pooja Ranjan: Yeah, yeah. Yeah, that's a good cut.
+
+181
+00:30:45.420 --> 00:30:47.310
+Gajinder Singh: I think I commented over this…
+
+182
+00:30:54.040 --> 00:30:55.750
+Gajinder Singh: Yeah, I did comment, I don't…
+
+183
+00:30:55.910 --> 00:31:00.069
+Gajinder Singh: So some of… some of… I feel that I have reviewed similar PRs.
+
+184
+00:31:00.520 --> 00:31:05.399
+Gajinder Singh: And, commented over them, but…
+
+185
+00:31:05.730 --> 00:31:07.170
+Gajinder Singh: They seem to be showing up.
+
+186
+00:31:08.340 --> 00:31:10.249
+Gajinder Singh: Without my comments, so…
+
+187
+00:31:10.990 --> 00:31:14.260
+Pooja Ranjan: There are approximately 300 PRs now.
+
+188
+00:31:15.630 --> 00:31:20.340
+Pooja Ranjan: So, I don't know if people are just trying to repeat their peers…
+
+189
+00:31:20.440 --> 00:31:24.279
+Pooja Ranjan: Or they are, like, coming up with a lot of suggestions.
+
+190
+00:31:26.800 --> 00:31:28.590
+Pooja Ranjan: Your reputation is not the case.
+
+191
+00:31:36.560 --> 00:31:42.420
+Gajinder Singh: I think I approved another such PR, but what some of these people are trying to do is basically is
+
+192
+00:31:42.820 --> 00:31:45.040
+Gajinder Singh: Partially, you know, they are trying to
+
+193
+00:31:45.760 --> 00:31:49.550
+Gajinder Singh: spread the same change across many PRs. So, for example, you have many
+
+194
+00:31:49.910 --> 00:31:53.809
+Gajinder Singh: Asset files over here, and if the same…
+
+195
+00:31:54.180 --> 00:31:58.839
+Gajinder Singh: changes over… over all the assets file, they are not trying to make a one PR for it.
+
+196
+00:31:59.640 --> 00:32:03.140
+Gajinder Singh: they're just trying to create separate wheels. I don't know, maybe it's…
+
+197
+00:32:03.340 --> 00:32:09.259
+Gajinder Singh: Because they are trying to farm something, not sure about it, but I'll just add in the comment anyway.
+
+198
+00:32:09.780 --> 00:32:29.759
+Pooja Ranjan: Yeah, I think making a different PR is good here, because we would like to tag the author of individual EIPs, so it makes sense to have different PR for different EIP, but it would be a good idea to have them listed in one issue, so people know that, okay, fine, this is the set of changes you are proposing for different EIPs.
+
+199
+00:32:29.870 --> 00:32:31.620
+Pooja Ranjan: It will be easier for editors.
+
+200
+00:32:31.620 --> 00:32:36.349
+Gajinder Singh: No, even for the same EIP, but you have many asset files, right? So…
+
+201
+00:32:36.960 --> 00:32:42.109
+Gajinder Singh: across the same as a file for the same EIP, they are doing multiple PRs for the same thing.
+
+202
+00:32:42.260 --> 00:32:44.300
+Gajinder Singh: for example, this ABC…
+
+203
+00:32:44.550 --> 00:32:51.770
+Gajinder Singh: where unused import, it is, it might be across, maybe, you know, whatever files are there in this particular EIP asset.
+
+204
+00:32:52.240 --> 00:32:59.380
+Pooja Ranjan: Yeah, yeah, then definitely making it look like Most number of PRs merged.
+
+205
+00:33:33.970 --> 00:33:40.200
+Gajinder Singh: And again, I mean, author should have been tagged, but this is something that I can just verify and approve.
+
+206
+00:35:07.220 --> 00:35:11.980
+Pooja Ranjan: One last PR in this series is PR10577.
+
+207
+00:37:12.110 --> 00:37:14.450
+Gajinder Singh: Oh, seems like my browser is stuck.
+
+208
+00:37:17.530 --> 00:37:20.339
+Pooja Ranjan: Do you want to rejoin or something?
+
+209
+00:37:23.700 --> 00:37:25.220
+Gajinder Singh: Okay, it responded.
+
+210
+00:38:09.450 --> 00:38:17.859
+Pooja Ranjan: So next, I have added a few PRs which seems to be either spam or no longer needed, perhaps could be closed.
+
+211
+00:38:18.540 --> 00:38:23.190
+Pooja Ranjan: Yeah, if you could review and confirm that, then we can get them closed.
+
+212
+00:38:26.220 --> 00:38:31.740
+Gajinder Singh: I think, Sam would be able to more definitely say whether these are needed or not.
+
+213
+00:38:32.540 --> 00:38:38.429
+Gajinder Singh: I can check for the… 10567…
+
+214
+00:38:39.190 --> 00:38:56.390
+Pooja Ranjan: Yeah, so generally speaking, a stagnant… I mean, I have added it here for a reason. Generally, stagnant is a bot action. Bot makes a proposal to go to stagnant, and it was by a user, so that's why I flagged it here.
+
+215
+00:39:04.020 --> 00:39:08.960
+Gajinder Singh: So this is a withdrawn EIP user is trying to move to Stagnant and.
+
+216
+00:39:08.960 --> 00:39:11.030
+Pooja Ranjan: That's not allowed, yeah, so anyway…
+
+217
+00:39:11.030 --> 00:39:13.030
+Gajinder Singh: allowed there, so anyway…
+
+218
+00:39:23.320 --> 00:39:25.260
+Pooja Ranjan: Definitely a spam action.
+
+219
+00:39:30.530 --> 00:39:35.410
+Gajinder Singh: I mean, I don't know, but maybe user wants to champion it?
+
+220
+00:39:35.540 --> 00:39:37.889
+Gajinder Singh: Let's ask this question, because…
+
+221
+00:39:38.190 --> 00:39:40.269
+Pooja Ranjan: But it's not allowed for any proposal.
+
+222
+00:39:40.270 --> 00:39:41.659
+Gajinder Singh: It does not allow for any.
+
+223
+00:39:41.660 --> 00:39:51.919
+Pooja Ranjan: withdrawn or final status cannot be resurrected. If he would want to do that, then he has to come up with a new proposal, even if you want to keep the entire content same.
+
+224
+00:40:00.820 --> 00:40:08.770
+Pooja Ranjan: And if he wants to resurrect, why would he recommend going to stagnant status? Bring it to withdrawn, review, or some other status, right?
+
+225
+00:40:09.960 --> 00:40:12.910
+Pooja Ranjan: Sorry, bring it to draft or review status.
+
+226
+00:41:10.890 --> 00:41:14.799
+Pooja Ranjan: Alright, this seems to be it for today.
+
+227
+00:41:18.050 --> 00:41:27.609
+Pooja Ranjan: And, thank you, Gajinder. Super. Yeah. Thank you for, like, looking at the PRs before the call. That was helpful, we could run fast.
+
+228
+00:41:27.620 --> 00:41:46.429
+Pooja Ranjan: With the peers which were added. Thank you so much for your time, and people watching this recording later on, or listening us on YouTube or Twitter, we do have a few announcements. We are going to have EIP Summit at Argentina, so if you're around, please join us on November 21st, you can find that.
+
+229
+00:41:46.810 --> 00:41:57.570
+Pooja Ranjan: information on, DevConnect calendar, and the next office hour is canceled for next Tuesday. We will see you on November 25th at 1600 UTC.
+
+230
+00:41:58.670 --> 00:42:00.500
+Pooja Ranjan: Thank you, everyone, for joining us here today.
+
+231
+00:42:00.500 --> 00:42:04.389
+Gajinder Singh: Thank you, everyone, for joining us here today. Thank you, Guido. Thank you, everyone.
+
