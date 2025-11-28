@@ -1,0 +1,34 @@
+2025-11-27T10:00:05.282613 - === Processing meetings from last 1 days ===
+2025-11-27T10:00:05.672588 - Step 1: Fetching closed GitHub issues...
+2025-11-27T10:00:28.930316 -   ✓ Found 2 matched meetings
+2025-11-27T10:00:28.930966 -   ⚠ Found 0 potential meetings that didn't match
+2025-11-27T10:00:28.931118 - 
+============================================================
+2025-11-27T10:00:28.931223 - [1/2] Processing: EIP-7928 Breakout #7, Nov 19, 2025
+2025-11-27T10:00:28.931313 -   Meeting IDs: 889 0262 7473
+2025-11-27T10:00:28.931394 -   Date: Nov 19, 2025
+2025-11-27T10:00:31.653573 -   Recording found: 259 minutes
+2025-11-27T10:00:34.319028 - 
+============================================================
+2025-11-27T10:00:34.319149 - [2/2] Processing: AllWalletDevs, call #36, November 26, 2025
+2025-11-27T10:00:34.319226 -   ⏭ Already processed (cached)
+2025-11-27T10:00:34.319296 - 
+============================================================
+2025-11-27T10:00:34.319361 - Uploading 1 meeting folders to GitHub in single commit...
+2025-11-27T10:00:35.520300 -     Last commit SHA: 8674e7c0deab0cb89c9aad7fec2100cfa864a18f
+2025-11-27T10:00:36.010901 -     Base tree SHA: fc8f446ad1a4485b9ccb786caede0ca853954356
+2025-11-27T10:00:36.013048 -     Creating tree with 3 files...
+2025-11-27T10:00:36.972910 -     New tree SHA: 56ad42bfbd07233afd4f1696d586975ac3d37c27
+2025-11-27T10:00:37.609028 -     New commit SHA: 54a8cc88c0d30bf3ed3f74129f99be81f0e6b59e
+2025-11-27T10:00:38.449835 -     ✓ Successfully uploaded 3 files in single commit
+2025-11-27T10:00:38.450199 -       Commit message: Add 3 transcript files from 2025-11-27 10:00
+2025-11-27T10:00:38.461549 - ✓ Successfully uploaded 3 files in single commit
+2025-11-27T10:00:38.484143 - 
+============================================================
+2025-11-27T10:00:38.485046 - === SUMMARY ===
+2025-11-27T10:00:38.485207 - ✓ Successfully processed: 1
+2025-11-27T10:00:38.485348 - ⏭ Skipped (cached/exists): 1
+2025-11-27T10:00:38.485484 - ⚠ No recording found: 0
+2025-11-27T10:00:38.485618 - ⚠ Skipped short recordings: 0
+2025-11-27T10:00:38.485750 - 
+Log saved to: logs/process_log_20251127_100005.txt

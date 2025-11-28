@@ -1,0 +1,1354 @@
+WEBVTT
+
+1
+00:06:54.710 --> 00:06:55.729
+William Mendoza Gopar: What are you selling?
+
+2
+00:06:56.890 --> 00:06:58.030
+William Mendoza Gopar: You speak English?
+
+3
+00:06:58.940 --> 00:07:01.280
+William Mendoza Gopar: Little bit .
+
+4
+00:10:53.020 --> 00:10:58.709
+Marco De Rossi: Okay, hi everybody, the music is getting a bit mystic, I think we can start.
+
+5
+00:10:59.410 --> 00:11:11.949
+Marco De Rossi: Welcome to the third community call of 2004. Well, it is, like, 3 weeks since the last one, but every community call, it feels like the ages have passed in terms of,
+
+6
+00:11:12.080 --> 00:11:13.290
+Marco De Rossi: Progress.
+
+7
+00:11:13.290 --> 00:11:32.380
+Marco De Rossi: That's the plan for today. So, we will, discuss updates in general on the implementation and on 8004 from a specs perspective, and we will talk a lot about agent registration. Second, in the last call, we promised that the focus of the community would have been dev tooling.
+
+8
+00:11:32.380 --> 00:11:46.690
+Marco De Rossi: And we will discuss progress here. We will share the first version of Ecosystem Map, that is populated thanks to your contribution. We will have, as usual, the community time with,
+
+9
+00:11:46.800 --> 00:11:56.359
+Marco De Rossi: a few demos, not too many, because as you've seen, the agenda is pretty packed, and today we have, like, a specific running list already defined. And then…
+
+10
+00:11:56.600 --> 00:11:59.519
+Marco De Rossi: We will finally present the agenda.
+
+11
+00:11:59.700 --> 00:12:06.400
+Marco De Rossi: of an in-person event that will happen next week on Friday at DevConnect, David Wilpitwith.
+
+12
+00:12:06.400 --> 00:12:23.760
+Marco De Rossi: It's a very exciting agenda, and if we will have time, we will do some Q&A. Let's get into it. So, I would say that the takeaway is that we're really learning by testing together, which is exactly the plan. That's why we are on TestNet.
+
+13
+00:12:23.840 --> 00:12:38.070
+Marco De Rossi: And as we anticipated, the specs are almost consolidated, so there are a few things that are changing, but they are very, very small, so that's a bit for 8,004 nerds.
+
+14
+00:12:38.070 --> 00:12:50.289
+Marco De Rossi: So, we… the only, maybe slightly relevant is that we are removing feedback auth, because based on your request and suggestion, it was creating, like, too much friction for reputation.
+
+15
+00:12:50.330 --> 00:13:06.650
+Marco De Rossi: And, it was, like, a bit complicated to implement it, and so we'll just remove it, and in order to defend from civil attacks, people will probably just filter reputation by the different client addresses, watchtowers, reputation system aggregators.
+
+16
+00:13:06.840 --> 00:13:21.750
+Marco De Rossi: All the others are, very small things, so, like, changing name of variables to avoid the collision with Viper, setAgent Huri was already implemented, actually, just wasn't in the spec.
+
+17
+00:13:21.880 --> 00:13:31.850
+Marco De Rossi: And then, really, DevX improvement, like, moving from, bytes to string, to enable, like, easier, readability from dev tooling.
+
+18
+00:13:31.850 --> 00:13:46.870
+Marco De Rossi: The PR hasn't been submitted yet for these small improvements, but it's ready. We are sharing this now in the chat, if you're, like, very technical with 8004. While these small changes in testnet that could still require
+
+19
+00:13:46.870 --> 00:14:02.960
+Marco De Rossi: updates to the SDKs will be released, like, super soon. We wanted to make it for this call, we didn't manage to do that, but I suspect it can be, like, maybe tomorrow, and for sure this week. So, all very small changes.
+
+20
+00:14:03.010 --> 00:14:18.570
+Marco De Rossi: Mainnet has been postponed for this reason. We want to make sure that we are future-proof. We want to continue to listen to your feedback, also at the event at DevConnect. We want to work with registration, so we prefer to take more time
+
+21
+00:14:18.570 --> 00:14:28.909
+Marco De Rossi: To also work on audits. NetherMind and other organizations are helping, with that, so we, we, we postpone to, to, to, December.
+
+22
+00:14:28.910 --> 00:14:40.570
+Marco De Rossi: Where we are right now? So, during the last community call, if you remember, we were between implementation and dev tooling. So, what happened is that now we have, free SDKs working.
+
+23
+00:14:40.570 --> 00:15:03.749
+Marco De Rossi: And we have… actually, it's 4 or 5, probably more. It's just impossible to count the number of explorers that are popping up every week in the builders program. But we're really going into the right direction. DevTooling, I mean, it's not done. We will, I think, continue to have strong improvements over the next months.
+
+24
+00:15:03.810 --> 00:15:23.089
+Marco De Rossi: But it's… I would say that the urgency that was there in the last community call has been, like, partially sold, and so now we can move to the next step, which is, I think, probably the first one, which is very exciting, which is, like, registering agents.
+
+25
+00:15:23.300 --> 00:15:39.140
+Marco De Rossi: And I think this will, like, be the focus of the community for some time, for the next few weeks, also after DevConnect. And then, of course, we will move to reputation, but before thinking about reputation, we need to make sure that agents are there, right, and registered.
+
+26
+00:15:39.140 --> 00:15:59.180
+Marco De Rossi: And, so, a couple of words on this. So, discovery, as a cold start problem, but that's fine, I think, because, I mean, everybody in the Web3 and AI space at the intersection is talking about in 2004, so we are a strong community, so I'm not concerned about that. Second, discovery, it's two-sided.
+
+27
+00:15:59.180 --> 00:16:11.059
+Marco De Rossi: You need both Explorers and agents to create value, because agents want to pop up in Explorers, and Explorers, of course, want to… need agents to make Explorers meaningful.
+
+28
+00:16:11.060 --> 00:16:21.510
+Marco De Rossi: And of course, both sides need to speak the same language. What does that mean? Well, 2004 does the job, of course, but it's also important to use it in the best way.
+
+29
+00:16:21.780 --> 00:16:34.680
+Marco De Rossi: And, and also use taxonomies. So, we have worked in the last few weeks, and if you also talk to the, for example, to an A2A ecosystem, there is, like, a strong skill taxonomy that
+
+30
+00:16:34.890 --> 00:16:36.930
+Marco De Rossi: Projects are, using.
+
+31
+00:16:37.030 --> 00:16:52.039
+Marco De Rossi: And, what we, again, it's not mandated from the, from the spec, it's just, like, an improvement, it's just a dev tooling thing, which is what we are working on right now. But instead of reinventing the wheel, we,
+
+32
+00:16:52.040 --> 00:17:02.930
+Marco De Rossi: We think that what Linux Foundation now, but it's originally coming from Cisco, it's called OWASP, is a good place to start.
+
+33
+00:17:02.950 --> 00:17:04.640
+Marco De Rossi: You have, skills?
+
+34
+00:17:04.780 --> 00:17:21.279
+Marco De Rossi: It's two dimensions, skills and domains. All this is open source, but it can really, like, help you explaining with clear, unique keys if you're doing an agent which is doing education, or if it's doing training. And so, what we,
+
+35
+00:17:21.339 --> 00:17:30.200
+Marco De Rossi: We suggest is just to leverage this, and, and just tag your agents to make sure that, that they're,
+
+36
+00:17:30.350 --> 00:17:45.170
+Marco De Rossi: well described in Explorers. We actually are launching today a nice guide. It's 8004 compatible, it's just a way to make things very easy to understand. So, how to make sure that your agent looks great, of course.
+
+37
+00:17:45.180 --> 00:17:59.440
+Marco De Rossi: Don't forget name, image, and description, and these are how you introduce yourself to the world, how you describe what you do, what problems you solve. Second, don't forget about endpoints, at least one.
+
+38
+00:17:59.680 --> 00:18:18.890
+Marco De Rossi: And if you use MCP, you can put your tools names. If you use A2A, you can put skills. Here, we are using OS Skills. You can use ENS. It's just a recap, it's stuff that probably you know, but that's… in just one page, you can really, like, pick what you want. Don't remember to put at least
+
+39
+00:18:18.890 --> 00:18:29.619
+Marco De Rossi: one wallet can also be on another chain compared to when you're registering. It's where you want to receive money, basically. And third, that's where taxonomies could be useful.
+
+40
+00:18:29.620 --> 00:18:38.749
+Marco De Rossi: tell us what you can do. So, we need to really want to know what your agents can do, and you can pick domains and skills,
+
+41
+00:18:38.750 --> 00:18:53.219
+Marco De Rossi: there is a… in this repo, you find that we prepared a nice JSON with the skills and domains already packed that you can import and pick your own. The public website, this one that I was showing, is linked here, and
+
+42
+00:18:53.420 --> 00:19:01.709
+Marco De Rossi: And by the way, in one of SDKs that we will pitch later, this is already supported, so it should be, like, actionable immediately.
+
+43
+00:19:01.710 --> 00:19:14.310
+Marco De Rossi: And finally, don't forget about putting it for registration to link back to the chain, that's for security reasons, to make sure that the owner of the server and the person that will register the agent is the same person.
+
+44
+00:19:14.470 --> 00:19:19.519
+Marco De Rossi: It's not… and, maybe a couple of more things, you can also advertise if,
+
+45
+00:19:19.780 --> 00:19:34.460
+Marco De Rossi: you are using X4 to receive money, and if your agent is active or not, so by default, SDKs will consider it false, and it's active… if it's active, it means that you're ready to receive requests.
+
+46
+00:19:34.470 --> 00:19:48.670
+Marco De Rossi: So this is how the file looks like. Again, it's nothing different from the past version, it's the same. OS was already, by the way, is already online since beginning of October in our specs.
+
+47
+00:19:48.670 --> 00:19:56.330
+Marco De Rossi: Maybe, one thing, guys, please don't put… there are many teams that have inserted the entire JSON,
+
+48
+00:19:56.750 --> 00:20:01.540
+Marco De Rossi: in the agent URI field. So instead of a URI URL,
+
+49
+00:20:01.730 --> 00:20:05.840
+Marco De Rossi: some projects are directly inserted JSON on-chain.
+
+50
+00:20:05.950 --> 00:20:14.509
+Marco De Rossi: And, for example, the builder of the 2004 Scan, that we'll meet, we will meet him later today in this call, got crazy because of that.
+
+51
+00:20:14.720 --> 00:20:25.530
+Marco De Rossi: So the message is really, the moment is here, we are now ready. In the next few weeks from now to Christmas, let's make sure that we all register the best agents, that we have.
+
+52
+00:20:26.480 --> 00:20:28.299
+Marco De Rossi: Okay,
+
+53
+00:20:30.680 --> 00:20:41.160
+Marco De Rossi: And, somebody… David, is probably sharing the links that I'm sharing now in the chat. Share all the links afterwards in our Telegram channel.
+
+54
+00:20:41.190 --> 00:20:52.550
+Marco De Rossi: Now, let's move to dev tooling. We have many talks, so please make sure you stay, under a few minutes, 3-4 minutes, depending on
+
+55
+00:20:52.550 --> 00:21:07.580
+Marco De Rossi: your presentation, and I'll leave the floor to Matt from Pinata, that will tell us more about how Pinata can help us with, of course, the IPFS resources that we need to register agents and to share feedback.
+
+56
+00:21:08.240 --> 00:21:10.599
+Marco De Rossi: The floor is yours.
+
+57
+00:21:12.830 --> 00:21:14.740
+Matt | Pinata: Awesome. Give me a second.
+
+58
+00:21:15.290 --> 00:21:19.139
+Matt | Pinata: Oh, turn my camera off, not to share. Alright.
+
+59
+00:21:20.260 --> 00:21:22.849
+Marco De Rossi: Can you share the information? Okay, great.
+
+60
+00:21:22.850 --> 00:21:39.989
+Matt | Pinata: Yes, I sure can. Yeah, actually, I turned my camera off when I was trying to share. That's, never gets old. Cool. Alright, so, my name is Matt, I'm from Pinata, and last week I gave a little bit of a sneak peek. In about 15 seconds, Marco so graciously, let me speak again this week.
+
+61
+00:21:40.260 --> 00:21:43.719
+Matt | Pinata: So Pinata's running an AI builder program.
+
+62
+00:21:44.030 --> 00:21:45.370
+Matt | Pinata: And…
+
+63
+00:21:45.670 --> 00:21:56.889
+Matt | Pinata: What is Pinata? Pinata is Crypto's file storage solution. We run on top of IPFS, which is kind of like the gold standard for how you work with metadata and off-chain files.
+
+64
+00:21:57.140 --> 00:22:11.120
+Matt | Pinata: In the blockchain space and ecosystem, this is being utilized more and more heavily by Agentic Systems. A lot of people building 8004 are using this for a variety of reasons.
+
+65
+00:22:11.270 --> 00:22:21.159
+Matt | Pinata: And, yeah, our whole sales pitch is we are very easy, few lines of code, sometimes with even out code, we have a UI. You can get fast, secure, and scalable.
+
+66
+00:22:21.480 --> 00:22:24.949
+Matt | Pinata: Agentic file management, without complex setup.
+
+67
+00:22:26.170 --> 00:22:29.349
+Matt | Pinata: So, again, like, how is pinata being used?
+
+68
+00:22:29.610 --> 00:22:34.199
+Matt | Pinata: For specifically in the 8004 community and agents,
+
+69
+00:22:34.480 --> 00:22:42.769
+Matt | Pinata: If you look at the initial proposal for 8004, you're going to see identity validation and feedback registries. IPFS plays a part in those.
+
+70
+00:22:42.850 --> 00:22:56.780
+Matt | Pinata: This basically allows for a tamper-proof, file layer for storing that type of information, and it's cross-chain, no cryptocurrency needed, kind of works everywhere in a very agnostic way, so…
+
+71
+00:22:57.080 --> 00:23:03.609
+Matt | Pinata: We're also seeing agents utilizing IPFS to transmit data amongst themselves.
+
+72
+00:23:03.640 --> 00:23:14.000
+Matt | Pinata: Even outside of registries, agents are using IPFS as a way to save state, to transfer files in a way that is tamper-proof and distributed and decentralized.
+
+73
+00:23:14.000 --> 00:23:23.930
+Matt | Pinata: And then this is a little bit more of a pinata-specific plug. We do have a X402 plugin for private IPFS, which is allowing agents to buy and sell
+
+74
+00:23:23.930 --> 00:23:40.919
+Matt | Pinata: data using X402 in an IPFS-compatible way. So, still get those same CIDs, you're just able to monetize them now, which we think is pretty cool. So, what we're offering for everybody, this is our AI Builder plan. All you need to do is email team at pinata.cloud.
+
+75
+00:23:41.060 --> 00:23:43.949
+Matt | Pinata: Just give us your account email and your project name.
+
+76
+00:23:44.150 --> 00:23:56.280
+Matt | Pinata: And then tell us what you're building, and we're gonna give you a free year of our Fiesta plan, which is $100 a month. So, yeah, full year of free IPFS, free pinata,
+
+77
+00:23:56.510 --> 00:24:01.579
+Matt | Pinata: just let us know what you're doing, and we kind of want to, see what people are building. We're really curious, so…
+
+78
+00:24:01.740 --> 00:24:05.009
+Matt | Pinata: Looking forward to it, and that's what we got.
+
+79
+00:24:05.130 --> 00:24:15.889
+Matt | Pinata: If you're asking yourself, do I care? And we ask, are you building with agents? Then I think the answer is yes. So, pretty simple question and answer, and I will leave it at that.
+
+80
+00:24:16.380 --> 00:24:19.260
+Matt | Pinata: Thank you for your interest.
+
+81
+00:24:19.840 --> 00:24:32.939
+Marco De Rossi: Thank you, Matt, and thank you for, like, supporting this very early phase of genetic economies. And we will continue to talk about IPFS, and the floor goes to another Matt, actually.
+
+82
+00:24:33.350 --> 00:24:35.240
+Marco De Rossi: Matt Hamilton, nice to meet you.
+
+83
+00:24:35.460 --> 00:24:37.410
+Marco De Rossi: from Protocol Labs and Filecoin.
+
+84
+00:24:40.560 --> 00:24:43.810
+Matt Hamilton: Right, hello. Hopefully you can see my screen and hear me okay.
+
+85
+00:24:44.100 --> 00:24:44.910
+Marco De Rossi: Yes, perfect.
+
+86
+00:24:44.910 --> 00:25:03.920
+Matt Hamilton: Yep, okay, brilliant. Right, so yes, you have the benefit of a doubleheader of Matt's, here, both talking about IPFS and storage. So my name's Matt, I'm… work within the, Filecoin and Protocol Labs ecosystem, and what I'm going to talk about is a tool we have here called Filecoin Pin that allows you to
+
+87
+00:25:03.920 --> 00:25:09.919
+Matt Hamilton: pin your… agent cards to IPFS, and also backed up
+
+88
+00:25:09.920 --> 00:25:26.699
+Matt Hamilton: On, you know, durable storage, archival storage on Filecoin. So, we've got a… in the docs here, we've got a tutorial on Filecoin PIN, using it specifically for 8,004 agents. So I'm going to give you a very quick snippet of that.
+
+89
+00:25:26.700 --> 00:25:31.239
+Matt Hamilton: So the first thing you need to do, you need to install the Filecoin PIN,
+
+90
+00:25:31.260 --> 00:25:55.600
+Matt Hamilton: command. It's an NPM command, so npmg, install Filecoin pin. That's all detailed in the tutorial. And, then we set up payments, so Filecoin PIN payments set up auto. This takes a couple of minutes to run, so I've run it ahead of time here, and it connects the network. You need some, test fill, and some USDFC, which is a USD stablecoin used for payments.
+
+91
+00:25:55.970 --> 00:26:09.979
+Matt Hamilton: Both of those are described in the instructions, and there are faucets that you can get those for. So, I've done that. So, the next thing I want to do is I'm just going to pin a, card to…
+
+92
+00:26:10.290 --> 00:26:25.569
+Matt Hamilton: Here, so I've got a agent card in JSON for GitHub, for an MCP agent, and so that's just gonna go ahead and do that. So as that's doing it, it takes a couple of minutes, you see it packs it, we get a root CID here.
+
+93
+00:26:25.570 --> 00:26:40.910
+Matt Hamilton: and it's going to store it with a storage provider on Filecoin, and handle all of the payment for that for you. So we have the CID, which means I can take that CID, N7DI, and I have it here.
+
+94
+00:26:40.910 --> 00:26:46.349
+Matt Hamilton: 7DI, and we can see it loaded here. So here is our,
+
+95
+00:26:46.580 --> 00:26:50.769
+Matt Hamilton: card here. But as you can see, it's actually…
+
+96
+00:26:51.190 --> 00:27:00.150
+Matt Hamilton: Storing this on-chain here, and you can actually look that back up and get confirmation of that.
+
+97
+00:27:00.150 --> 00:27:18.639
+Matt Hamilton: There's a command, again, this is all detailed in the instructions here, Filecoin pin CLI. There is a command there that you can run that will get this back. So, IPFS, Filecoin pin dataset, and it will show you, what datasets there are and what is available.
+
+98
+00:27:19.070 --> 00:27:24.220
+Matt Hamilton: So, that's still running there in the background, but,
+
+99
+00:27:24.700 --> 00:27:29.780
+Matt Hamilton: Yeah, so we'll just… just wait for that a second, see if that should finish.
+
+100
+00:27:30.230 --> 00:27:44.009
+Matt Hamilton: in a minute. And then the next thing I'm gonna do is just call the… once we've got that, I'll just call the cast command to actually cast that, just to show this, using base and the registry, the,
+
+101
+00:27:44.170 --> 00:27:49.790
+Matt Hamilton: kind of implementation of the 8004 registry that is on base.
+
+102
+00:27:49.940 --> 00:27:53.860
+Matt Hamilton: Just to show that. I think this is just taking a little while to confirm here.
+
+103
+00:27:54.410 --> 00:27:55.630
+Matt Hamilton: We…
+
+104
+00:27:59.020 --> 00:28:06.789
+Matt Hamilton: Yeah, okay. Well, live demos. So yeah, this is just, like I said, this is just…
+
+105
+00:28:07.380 --> 00:28:22.340
+Matt Hamilton: confirming it with a storage provider. There we go, it's… it's finished there. So that's now stored and confirmed on the network. We've got a dataset ID, so I can actually, put that in there to dataset 30,
+
+106
+00:28:23.070 --> 00:28:37.420
+Matt Hamilton: I can actually call Filecoin Pin Dataset, and it will actually confirm that we actually have that information stored on Filecoin, so that you know cryptographically that information is all stored.
+
+107
+00:28:37.630 --> 00:28:48.419
+Matt Hamilton: So there we go. That was a quick whistle-stop tour of Filecoin Pin. Like I said, if you go to docs.filecoin.io, we've got here in the Builder's Cookbook
+
+108
+00:28:48.420 --> 00:29:03.040
+Matt Hamilton: the, Falcon Pin CLI, and also the specific agents demo there as well. And that also looks through, walks through to a GitHub repo that has a few scripts in there to help you
+
+109
+00:29:03.050 --> 00:29:11.749
+Matt Hamilton: just check you've got things like prerequisites set up, and just go through the steps that I just did there about uploading, registering, verifying, there's some scripts there to automate that.
+
+110
+00:29:12.350 --> 00:29:23.299
+Matt Hamilton: So, there we go, and I believe I'm handing over to my colleague Jenny, who's going to talk about some offers that we've got on at the moment with, Filecoin.
+
+111
+00:29:23.410 --> 00:29:24.610
+Matt Hamilton: So I guess over to Jenny.
+
+112
+00:29:24.610 --> 00:29:28.129
+Molly Mackinlay: I'm… I'm your local Jenny, or standing in for Jenny, she just got.
+
+113
+00:29:28.130 --> 00:29:28.919
+Matt Hamilton: Oh, we got in Bali.
+
+114
+00:29:28.920 --> 00:29:29.450
+Molly Mackinlay: Yeah.
+
+115
+00:29:30.710 --> 00:29:39.580
+Molly Mackinlay: But yeah, hi friends, here to give you a tiny bit of background about how Matt's awesome demo storing all of this
+
+116
+00:29:39.580 --> 00:29:53.680
+Molly Mackinlay: on-chain agent data in on-chain decentralized storage, is… is working, and so this is all building on the new Filecoin on-chain cloud that is running entirely in smart contracts in Filecoin land.
+
+117
+00:29:53.940 --> 00:30:17.540
+Molly Mackinlay: It, layers a number of services and smart contracts on top of your friendly Filecoin storage providers. We have on-chain payments using stablecoin or ERC20-based payments, and we have a warm storage service contract that is, doing all of the managing of storage contracts. And then Filecoin Pin is a, an application built on top of
+
+118
+00:30:17.540 --> 00:30:27.339
+Molly Mackinlay: this whole on-chain set of contracts that is enabling the IPFS storage. And so this is now live. You can go to pin.filecoin.cloud.
+
+119
+00:30:27.340 --> 00:30:47.900
+Molly Mackinlay: still… we're still in our production testing, this is still all operating on the Filecoin calibration testnet, but this has a free set of wallets for early builders to start uploading their assets. You can use this as a web app, you can clone this, but there's also a GitHub action and the CLI that Matt was demoing, so…
+
+120
+00:30:47.900 --> 00:31:09.590
+Molly Mackinlay: as builders, you're probably going to be using the CLI anyway, but just if you want to get started and give it a try, you can do that today. And I mentioned that this is all running on the calibration testnet right now. This is what's happening under the hood. There is a funded wallet. We funded a wallet on your behalf to make life easy. You can upload files, you can verify them in real time, as Matt was showing.
+
+121
+00:31:09.760 --> 00:31:24.509
+Molly Mackinlay: And these are getting published to the Interplanetary Network Indexer, and then can be retrieved through any IPFS gateway, Kubo, whatever route you please, and you can also, directly fetch from the Falcoin storage provider, and it's all being served
+
+122
+00:31:24.510 --> 00:31:49.440
+Molly Mackinlay: fully on-chain by a network of decentralized nodes. And coming next week, we are going to be also bringing this to the Filecoin mainnet. We'll have a sponsored, contract for 8004 builders, just in case you don't want to go and start purchasing your fill and USDFC, stablecoins, just to get started. You can start using the
+
+123
+00:31:49.440 --> 00:32:13.759
+Molly Mackinlay: calibration endpoints today, but if you want to stay aware and be an early part of this as we go to mainnet, if you're in Buenos Aires, we'd love to host you at our launch party at Deepin Day. Here's the QR code. Otherwise, you can subscribe to the Filecoin Cloud or follow the livestream on the Filecoin Twitter account on November 18th.
+
+124
+00:32:13.760 --> 00:32:23.369
+Molly Mackinlay: be part of, bringing this to, mainnet and having fully end-to-end decentralized storage for decentralized, trustless on-chain agents.
+
+125
+00:32:23.370 --> 00:32:34.049
+Molly Mackinlay: And we're… we're excited to be on this journey with all of you, going… going to GA in, real time alongside all the work you guys are doing. So, check it out.
+
+126
+00:32:37.930 --> 00:32:40.260
+Marco De Rossi: Thank you, Molly, and good luck with GA.
+
+127
+00:32:42.650 --> 00:32:43.699
+Molly Mackinlay: Very exciting days.
+
+128
+00:32:44.190 --> 00:33:03.570
+Marco De Rossi: Okay, so the next speaker is, YQ from Outlayer, then Nader will go next. And, to make sure we stay within around, like, the 3-minute-ish, Jesse will, like, show a countdown, a countdown after, like, 2 minutes and a half, let's try.
+
+129
+00:33:04.000 --> 00:33:09.039
+Marco De Rossi: so YQ has actually… is a…
+
+130
+00:33:09.400 --> 00:33:16.209
+Marco De Rossi: improving dramatically the DevEx experience, not just for 8004, but also for X402.
+
+131
+00:33:16.350 --> 00:33:21.399
+Marco De Rossi: And we'll present today, I think, at Fazer and Forscon. The floor is yours. Thank you.
+
+132
+00:33:23.630 --> 00:33:26.809
+YQ: Yeah, thanks, Michael. Can you see my screen?
+
+133
+00:33:27.920 --> 00:33:30.989
+Marco De Rossi: Not yet, we can hear you and see you well, but…
+
+134
+00:33:32.100 --> 00:33:35.559
+YQ: I just assured this one…
+
+135
+00:33:38.580 --> 00:33:41.589
+YQ: Let me do it now. Can you see it right now?
+
+136
+00:33:41.590 --> 00:33:42.250
+Marco De Rossi: Yes.
+
+137
+00:33:43.230 --> 00:33:48.919
+YQ: Okay, great. Yeah, thanks for Marco and Davi and the EF people.
+
+138
+00:33:48.950 --> 00:33:52.909
+YQ: For the invite. Yeah, so what you hear, I…
+
+139
+00:33:52.910 --> 00:34:17.639
+YQ: creating this, AO4 scan, just, because, like, previously, I spent a lot of time, digging into all the details about this video for design implementations, like, really to help out my, understanding, like, sort of how it works and, how we can really, like, explain the details of a lot of agents. Right now, it's, pretty straightforward, like, for all the developers.
+
+140
+00:34:17.639 --> 00:34:42.270
+YQ: A lot of, like, sort of project developers asked me, like, how they can sort of register for this gun. I told them, like, if you register directly, like, sort of this AO4 contracts, either on the, Ethereum, Sepolia, or BASE, we will also, index these agents. You can directly see, like, sort of, right now, all the information for each agent.
+
+141
+00:34:42.429 --> 00:35:00.549
+YQ: And also the, like, sort of this, contract, registration, information. Meanwhile, as, Michael mentioned, like, sort of, I try the best to show the metadata, like, because a lot of developers, users, they directly invite all their data, everything into the token URI.
+
+142
+00:35:00.550 --> 00:35:17.649
+YQ: So in all different formats, HTTP and, IPFS, and sometimes also this Base64 and all different formats, we are trying the best to sort of, elaborate the details. Just yesterday, we sort of enhanced this,
+
+143
+00:35:17.790 --> 00:35:41.409
+YQ: information, like, sort of, showing a little bit better. Right now, if you really want to see the details, we also further load the metadata for a lot of these agents. You can… even for some images, like all the MPC, MCP and A2A, if they already have some content, we, you can also go to this identity.
+
+144
+00:35:41.410 --> 00:35:55.750
+YQ: section, to check out this, detailed information. Beyond that, we also started to index these, feedback and also validation, information. Of course, like, a lot of the things are still on testnet.
+
+145
+00:35:55.750 --> 00:36:11.279
+YQ: We just try our best to index as much information we can get from this, from the contracts and also the registration information from the agents as possible. And later on, like, once this, AO4,
+
+146
+00:36:11.280 --> 00:36:26.980
+YQ: that sort of contract on the midnight, and once we have more agents, right, we will… later, we will probably have more of this kind of interactions with some of the agents. Especially later, we may have a lot of the export to payment agents, right? We will… we already start
+
+147
+00:36:26.980 --> 00:36:39.770
+YQ: started to index the data for it. And beyond that, we also have something a little bit interesting, but it's still in this kind of offer mode. It's basically.
+
+148
+00:36:39.770 --> 00:36:50.579
+YQ: This sort of what we call builder, as, it's just, like, quickly helps you to build this, like, AO for, like, agent to regi- for the registration.
+
+149
+00:36:50.770 --> 00:36:55.260
+YQ: It's not for the agent itself, it's, like, help you to,
+
+150
+00:36:55.260 --> 00:37:11.179
+YQ: to quickly, fill in a bunch of information, and then you can register based on some of the best practices. Of course, we will further improve this kind of informational description based on the best practices provided by Marco and the team.
+
+151
+00:37:11.180 --> 00:37:26.099
+YQ: And after that, we try to make it as straightforward as possible, so once users fill in all the different information, they can just register. Yeah, it is very simple, we can call wizard or builder,
+
+152
+00:37:26.110 --> 00:37:31.490
+YQ: Like, sort of, is, yeah.
+
+153
+00:37:31.620 --> 00:37:34.789
+YQ: This kind of platforms, so…
+
+154
+00:37:34.790 --> 00:37:57.820
+YQ: Right now it's on Sepolia, so it's pretty, straightforward and fast, and, just after a few seconds or minutes, you will see, like, sort of the agents will be, indexed into the scan. Of course, if you have, further, like, sort of, requests, like, what kind of things we should show on this 04 scan, just feel free to, DM me.
+
+155
+00:37:57.820 --> 00:38:21.689
+YQ: In these, TG groups, or just, we, on our side, or on my side, we, we really want to build this, like, AO4 scan as a public good tool, and to help, like, sort of the developers to quickly register their agents, on, like, sort of AO4. So in the future, we can quickly, like, bring a lot of agents to interact with each other.
+
+156
+00:38:21.700 --> 00:38:24.340
+YQ: for a better Argentic economy.
+
+157
+00:38:24.600 --> 00:38:25.330
+YQ: Yeah.
+
+158
+00:38:26.250 --> 00:38:29.760
+YQ: Yeah, that's all on my part. Thank you.
+
+159
+00:38:31.350 --> 00:38:32.330
+Marco De Rossi: Thank you.
+
+160
+00:38:32.780 --> 00:38:38.000
+Marco De Rossi: No, so it's cool to see, like, the product that changes every two days, the velocities,
+
+161
+00:38:38.230 --> 00:38:40.750
+Marco De Rossi: It's astonishing.
+
+162
+00:38:41.200 --> 00:38:50.150
+Marco De Rossi: Next in the agenda is Nadal from AGAN Labs, talking about how Egan Cloud can be of support in building trustless agents.
+
+163
+00:38:58.920 --> 00:39:00.909
+Marco De Rossi: I'm not sure now that it's Bill Bus.
+
+164
+00:39:04.600 --> 00:39:07.490
+Jessy Huang: I can ping him, but we can just go on.
+
+165
+00:39:07.490 --> 00:39:09.389
+Marco De Rossi: Yes. And the participant.
+
+166
+00:39:09.910 --> 00:39:11.030
+Marco De Rossi: Please do, bud.
+
+167
+00:39:11.930 --> 00:39:20.070
+Marco De Rossi: And the next one in the agenda is me again, I'm sorry, and with a different hat, so,
+
+168
+00:39:22.030 --> 00:39:25.890
+Marco De Rossi: I want to speak about Agent Zero. The general idea of Agent Zero is that
+
+169
+00:39:26.980 --> 00:39:36.520
+Marco De Rossi: In terms of dev tooling, I mean, as a developer, I don't care about an ERC or another ERC, who cares about ERC? I'm just a dev, and I want my agent to…
+
+170
+00:39:36.580 --> 00:39:51.510
+Marco De Rossi: take part of agent economies. So we have a lot of SDKs focused on how to build agents, but how about how to make agents connected to other agents, to find other agents, to coordinate with other agents?
+
+171
+00:39:51.510 --> 00:40:02.150
+Marco De Rossi: And so, yes, of course, 2004 is important on that, but this SDK could also potentially, cover, other features and, and other…
+
+172
+00:40:02.150 --> 00:40:19.799
+Marco De Rossi: part… we want to cover the whole flow of agentic coordination. We launched this 12 days ago, and we have received, since then almost 2 community PR per day, and that's why, actually, we just released new docs, because the product has changed a lot compared to
+
+173
+00:40:19.800 --> 00:40:33.240
+Marco De Rossi: Two weeks ago. Let's get into it, I will try to go super fast because we only have two minutes, but the docs are very structured, and with this SDK, you can abstract 2004 and do stuff with just one line of code.
+
+174
+00:40:33.330 --> 00:40:40.500
+Marco De Rossi: The SDK is available as a Python SDK or as a TypeScript SDK, it's called Agent 0.
+
+175
+00:40:40.560 --> 00:40:55.980
+Marco De Rossi: And let's start with a quick start. You select a default chain, but now we support multi-chain, so you have a default chain that you use to register your agent, but then, as you will see, you can use multiple chains to
+
+176
+00:40:55.980 --> 00:41:14.420
+Marco De Rossi: to query agents another chain. You have an RPC, you can put a private key or directly with a signer. It's compatible with the Filecoin CLI that we have seen today with Pinata, and directly with an IPFS client. You can register your agent with name, description, image with one line.
+
+177
+00:41:14.480 --> 00:41:38.250
+Marco De Rossi: and this is… sorry, this creates the agent, doesn't register it yet. You can add MCPs and A2A endpoint, DNS, you can add the wallet, you can add the trust models, you can add custom metadata, you can add the skill and domain, as we were discussing earlier. Somebody in the chat wasn't able to find the finance skill, just because finance is a domain. So if you look at the domains.
+
+178
+00:41:38.380 --> 00:41:39.790
+Marco De Rossi: You will see many.
+
+179
+00:41:40.160 --> 00:41:41.680
+Marco De Rossi: domains correlated.
+
+180
+00:41:41.680 --> 00:41:43.080
+Yusuf Berkan Altun: podcast on Aging.
+
+181
+00:41:43.770 --> 00:41:45.350
+Marco De Rossi: And, and,
+
+182
+00:41:45.350 --> 00:41:46.010
+Yusuf Berkan Altun: Boom.
+
+183
+00:41:46.470 --> 00:41:51.929
+Marco De Rossi: you can… If you can mute Yusuf, please, you can, active or deactiv.
+
+184
+00:41:51.930 --> 00:41:52.790
+Yusuf Berkan Altun: Yeah, many of the customers.
+
+185
+00:41:52.790 --> 00:41:55.289
+Marco De Rossi: wage and directly from,
+
+186
+00:41:55.790 --> 00:42:12.850
+Marco De Rossi: From… with one line of code, and finally, you can register the agent. As you can see, it's just one line. So after that, you are fine with all the parameters, you can just register the agent, and you can update it later after having loaded the agent, so you can load the agent
+
+187
+00:42:12.850 --> 00:42:18.140
+Marco De Rossi: or also get agents built by other. You can use feedback, so you can,
+
+188
+00:42:25.020 --> 00:42:32.580
+Marco De Rossi: Sign the feedback code, this will be removed to make stuff simpler. You can define the feedback with one line, you can submit the feedback.
+
+189
+00:42:32.580 --> 00:42:52.490
+Marco De Rossi: And let's move to my favorite part, which is search. This is a multi-chain global search. We leverage subgraphs, so we are also giving, like, free subgraphs with infinite query for everybody. We now support Polygon testnet-based testnet and, and Sepolia testnet. We are going to support network soon.
+
+190
+00:42:52.490 --> 00:42:57.939
+Marco De Rossi: So here you can find all agents that know how to code Python, you can…
+
+191
+00:42:58.260 --> 00:43:02.170
+Marco De Rossi: Query agent by, reputation,
+
+192
+00:43:02.760 --> 00:43:14.460
+Marco De Rossi: with a mean average score. You can have multi-criteria search. I want the… who wants to… agents that are good with JavaScript and can generate code. You have pagination, and
+
+193
+00:43:15.130 --> 00:43:34.279
+Marco De Rossi: This is… it was just, like, a very fast go-through, but… walk-through, but you have, like, almost 50 methods, it's very complete. We just went through the example section, I suggest to go to the usage section if you have time, or we should have a link now, because it's, it's more complete, and you will see, like, all the endpoints.
+
+194
+00:43:34.420 --> 00:43:44.389
+Marco De Rossi: And this is, growing and changing very fast, and I will share in a second the link to the Agent Zero Kitchen, which is,
+
+195
+00:43:44.600 --> 00:44:00.179
+Marco De Rossi: a Telegram group, pretty boring, where we just discuss PRs, and who wants to do that, who wants to add this, but it's to see the product evolving live. The product has been already downloaded by more than 1,000 builders that are using it.
+
+196
+00:44:01.260 --> 00:44:05.130
+Marco De Rossi: Okay, let's give the floor to…
+
+197
+00:44:07.220 --> 00:44:11.980
+Marco De Rossi: And we are looking for contributors, so if you want to help, that would be great.
+
+198
+00:44:12.140 --> 00:44:14.619
+Marco De Rossi: Jesse, do you know if Nader is with us?
+
+199
+00:44:14.620 --> 00:44:18.180
+Jessy Huang: I don't think so, I paint him, but not yet.
+
+200
+00:44:19.980 --> 00:44:23.960
+Jessy Huang: Cool. I think I just go next with the ecosystem.
+
+201
+00:44:24.100 --> 00:44:25.469
+Jessy Huang: Let me get it started.
+
+202
+00:44:28.460 --> 00:44:29.540
+Jessy Huang: Awesome.
+
+203
+00:44:30.960 --> 00:44:33.319
+Jessy Huang: So, would you be able to share the slide?
+
+204
+00:44:34.790 --> 00:44:36.040
+Marco De Rossi: You can share it.
+
+205
+00:44:36.780 --> 00:44:40.779
+Jessy Huang: Okay, let me just try to see how to do this for my screen.
+
+206
+00:44:52.020 --> 00:44:53.820
+Jessy Huang: Can you guys see the screen?
+
+207
+00:44:55.410 --> 00:44:56.270
+Marco De Rossi: Perfectly.
+
+208
+00:44:56.390 --> 00:44:57.920
+Jessy Huang: Okay, perfect, awesome.
+
+209
+00:44:58.120 --> 00:45:04.160
+Jessy Huang: So… lots of movement happening for the ecosystem side of things.
+
+210
+00:45:04.160 --> 00:45:29.000
+Jessy Huang: There is… we have about 1,100 builders in the 8004 builder group already, and I think we try to push a lot of people to go to the right link to submit for the ecosystem map, and currently 67 projects have submitted, mostly ranging from development, testing, and production at these stages. There's a lot of different categories, everything from AI infra, like data, hosting, memory, context, eval, wallet, privacy.
+
+211
+00:45:29.080 --> 00:45:34.750
+Jessy Huang: To reputation scores. Different people are playing with different metrics, on-chain, off-chain, to…
+
+212
+00:45:34.910 --> 00:45:44.030
+Jessy Huang: Sort of have a more, comprehensive overview of the reputation, having a lot of different types of discovery layers, explorers, different…
+
+213
+00:45:44.030 --> 00:45:58.850
+Jessy Huang: format and methods of doing validation, doing agent orchestration, there's obviously a lot of DeFi agents, there's some, you know, decentralized robotics projects are also emerging, and then definitely a big category is
+
+214
+00:45:58.850 --> 00:46:12.090
+Jessy Huang: payments, commerce, even, like, agent stablecoins and credit cards for agents that we've seen, which is very interesting. Some community media projects as well, and last but not least, many agent frameworks and marketplaces.
+
+215
+00:46:12.090 --> 00:46:28.420
+Jessy Huang: So, we did a preliminary, ecosystem map. This is nowhere near being comprehensive. This is just mostly taking ones that are, testing and in production, and the logos that our designers are able to find.
+
+216
+00:46:28.420 --> 00:46:32.140
+Jessy Huang: So if you want to, like, be a part of the map.
+
+217
+00:46:32.250 --> 00:46:48.080
+Jessy Huang: please, this is, like, an actual, like, permissionless, open, version of the ecosystem map. If you want to scan the QR code, you can find it here in the first QR code, and… and then if you want to be part of it, feel free to fill in the second QR code.
+
+218
+00:46:48.080 --> 00:46:57.750
+Jessy Huang: But yeah, we have many cool projects, happening. And then we'll be inviting some of these projects to speak at the Trustless Agent Day, which we'll cover, in…
+
+219
+00:46:57.750 --> 00:47:01.440
+Jessy Huang: at the end of this presentation. That's it from me.
+
+220
+00:47:06.360 --> 00:47:07.780
+Marco De Rossi: Thank you, Jesse.
+
+221
+00:47:08.570 --> 00:47:11.090
+Marco De Rossi: I think we're moving to demo time.
+
+222
+00:47:12.660 --> 00:47:13.990
+Marco De Rossi: And,
+
+223
+00:47:14.220 --> 00:47:32.100
+Marco De Rossi: We have, 3 minutes each demo, and then… so we will have then time to discuss the Devconnect event happening next week. The first person is, Robert, Robert Brighton from Proxies, that will present Making 8004 Feedback Frictionless in One Click.
+
+224
+00:47:34.040 --> 00:47:35.099
+Robert Brighton: Hey guys.
+
+225
+00:47:35.100 --> 00:47:57.749
+Robert Brighton: I've, pre-recorded just to make sure that I'm going to stay within the time, given that everything ran over, but we've, cooked up a demo to showcase the Praxis Explorer, which is integrated with the ERC8004 on-chain reputation standard. So what you will see is new agents being registered, their identities being viewed, metadata and capabilities.
+
+226
+00:47:59.250 --> 00:48:06.179
+Robert Brighton: And then feedback is left after each interaction, which then updates the agent's on-chain reputation score in real time.
+
+227
+00:48:06.290 --> 00:48:14.240
+Robert Brighton: So let me cook that up for you guys, so that we stay on time here. Bear with me.
+
+228
+00:48:20.080 --> 00:48:22.640
+Robert Brighton: Okay, can you see my screen?
+
+229
+00:48:26.070 --> 00:48:26.940
+Jessy Huang: Yes, perfect.
+
+230
+00:48:26.940 --> 00:48:29.659
+Robert Brighton: Yeah, let me mute myself, and then I'll play it.
+
+231
+00:48:35.230 --> 00:48:37.279
+Marko Stokić: I think you have to unmute for sound.
+
+232
+00:48:49.310 --> 00:48:55.379
+Marco De Rossi: We can't hear anything, Robert, I don't know if you want to speak on it, or you can just look at the subtitles.
+
+233
+00:48:55.890 --> 00:48:58.029
+Robert Brighton: Sorry, is the audio not working?
+
+234
+00:48:58.360 --> 00:48:59.410
+Marco De Rossi: No, it's not.
+
+235
+00:48:59.670 --> 00:49:08.830
+Robert Brighton: Given the time constraint, it is subtitled, so if you're okay, I'll just continue there to make sure that we stay on time before I try and figure it out, if that's okay.
+
+236
+00:49:08.830 --> 00:49:10.119
+Marco De Rossi: Yes, please, would be great.
+
+237
+00:49:10.120 --> 00:49:10.810
+Robert Brighton: Alright.
+
+238
+00:50:19.440 --> 00:50:35.929
+Marco De Rossi: And I think that this demo is a good reminder that 2004 is the infra, but in terms of reputation, how this is really valuable for users, how experience can be frictionless, that's up to apps, that can make it, like, one-click easy with, like, stars and ratings, as we have just seen.
+
+239
+00:50:38.000 --> 00:50:40.319
+Davide Crapis: Yeah, and the other plug is that,
+
+240
+00:50:40.320 --> 00:50:58.830
+Davide Crapis: Actually, the way you leave ratings, in 8004 is, like, very generic, right? It's, like, a very simple, structure, and you can be creative on, like, what type of rating, like, you can slice, like, the 0 to 100 into stars, like, yeah.
+
+241
+00:50:59.670 --> 00:51:13.800
+Robert Brighton: Yeah, just to add on to that, the goal here is to make it programmatic so that the agents can give each other the scores. It is possible to add in user ratings as well, but of course, that's more subjective to, you know.
+
+242
+00:51:13.800 --> 00:51:20.570
+Robert Brighton: gamification there, so we're going to keep it programmatic as much as possible. Appreciate the opportunity, guys, thank you. On to the next one.
+
+243
+00:51:23.650 --> 00:51:27.839
+Marco De Rossi: Denver will speak about simulation environments for 8004 reputation.
+
+244
+00:51:28.390 --> 00:51:30.389
+Denver Baumgartner: Sweet. Thanks, Marco.
+
+245
+00:51:30.740 --> 00:51:54.599
+Denver Baumgartner: Alright. So, we've been doing research into how to do, ratings and rankings of agents based upon reputation. We found that it was then in turn, useful to have a simulation environment. We'll be open sourcing this under the Apache 2 license, so hopefully it's helpful to you as well. To walk you through what's going on, we have a local PyEVM backend.
+
+246
+00:51:54.750 --> 00:52:19.440
+Denver Baumgartner: Where we then spin up fully, like, ADA compliant agents, they register, and then they interact with one another. Within our simulation loop, we will then get all of this spit back out to us. And we found that this is useful for a couple of reasons. One, you know, just having this locally let us spin up our own contracts, deploy them, etc, fund accounts, do all of that stuff without having to worry about testnet connections.
+
+247
+00:52:19.440 --> 00:52:37.550
+Denver Baumgartner: You can also point this, if you so choose, to add, any, you know, EVM-compatible chain, so if you're familiar with something like Anvil from Paradigm, that's also another backend that you can use. We then have our agents themselves, which have a couple things going on, you know.
+
+248
+00:52:37.580 --> 00:52:43.010
+Denver Baumgartner: They're 8A compliant, they have wallets, and then they also have a full set of
+
+249
+00:52:43.010 --> 00:53:01.309
+Denver Baumgartner: tools that they can interact and use. Those are just, you know, a variety of functions, and then the peers being other agents registered within the simulation that they can actually interact with. An important thing to note is you can really bias your simulation output, mainly just through
+
+250
+00:53:01.310 --> 00:53:08.759
+Denver Baumgartner: a prompt. Our goal is to, you know, be able to simulate what does a malicious,
+
+251
+00:53:09.090 --> 00:53:23.019
+Denver Baumgartner: reputation provider look like? So if I'm trying to artificially inflate a certain agent, are we able to pick that up and determine that based upon the activity that they show there in? At the end of the simulation, like I said, you get the full
+
+252
+00:53:23.300 --> 00:53:27.739
+Denver Baumgartner: output of everything that happened, just as you would within an EVM system.
+
+253
+00:53:28.180 --> 00:53:46.759
+Denver Baumgartner: So, yeah, we found that's useful in our research, in being able to simulate, you know, certain desired outcomes. This really can, like, scale up pretty much as much as you want, and you can just kind of have these guys run in the background and continue to communicate with one another.
+
+254
+00:53:47.010 --> 00:53:48.990
+Denver Baumgartner: Hopefully this is useful to you.
+
+255
+00:53:49.120 --> 00:54:06.250
+Denver Baumgartner: if you want to get in contact, like I said, we will be open sourcing this, so anyone that wants to can use it in turn, and then you can also just follow us on Twitter, Simiac Labs, or reach out to me on Telegram or on GitHub. I'll share this in the chat.
+
+256
+00:54:06.650 --> 00:54:27.559
+Denver Baumgartner: Should be fun. I think this is a big problem, broadly, when it comes to just how do you actually make meaningful insights out of reputation, so that you can effectively rank agents. We see manipulation in things such as El Marina, in a Web2 context, and I think we have an interesting opportunity to actually make something that's,
+
+257
+00:54:27.560 --> 00:54:29.699
+Denver Baumgartner: I don't know, let's call it less scammable.
+
+258
+00:54:29.830 --> 00:54:30.850
+Denver Baumgartner: Thanks, everyone.
+
+259
+00:54:32.370 --> 00:54:33.529
+Marco De Rossi: Thank you!
+
+260
+00:54:36.050 --> 00:54:44.959
+Marco De Rossi: So, next one is Marco from Oasis, but we'll talk about trusted execution Environment Validation for agent keys.
+
+261
+00:54:46.200 --> 00:54:53.380
+Marko Stokić: Exactly, thank you. It's a pleasure to present. So, we've been building, actually, trustless agents with quite a few projects,
+
+262
+00:54:53.470 --> 00:55:16.950
+Marko Stokić: Oh, someone is already sharing. What we generally advise projects, and actually users too, is to think about three questions, and anyone that has talked to me knows I keep on shilling this. Everyone should be able to answer who's running the agent, who's controlling the agent keys, and who can upgrade the agent. And I assume everyone here has now built some agents, and you will realize it's really not that trivial to answer these questions properly.
+
+263
+00:55:16.960 --> 00:55:22.560
+Marko Stokić: So, for this demo, we have actually built a validator agent that…
+
+264
+00:55:22.880 --> 00:55:35.260
+Marko Stokić: takes not only TEE deployments, checking at the stations, but also checks if the agent is utilizing keys that were derived in a decentralized key management system, meaning the private key has never left a secure enclave.
+
+265
+00:55:37.670 --> 00:55:39.930
+Marko Stokić: So, I don't actually know who's sharing the screen now.
+
+266
+00:55:39.930 --> 00:55:42.510
+Matevž Jekovec (Oasis): Yeah, I think I can take over it now, yeah, sorry.
+
+267
+00:55:42.850 --> 00:55:43.899
+Marko Stokić: Yeah, you're over there.
+
+268
+00:55:44.360 --> 00:55:52.559
+Matevž Jekovec (Oasis): basically, for those of you who don't know, Oasis is running this privacy-focused blockchain, and here is an example from our explorer of an application.
+
+269
+00:55:52.640 --> 00:56:10.369
+Matevž Jekovec (Oasis): And the one thing I'd like to expose today is basically every, TE replica has this, access to this metadata key-value store, so only within TE you can store stuff into this data structure, and it's public, like, anyone can read it, right?
+
+270
+00:56:10.800 --> 00:56:16.279
+Matevž Jekovec (Oasis): So now, every Oasis app can also register on your C8004 agent, of course.
+
+271
+00:56:16.460 --> 00:56:27.660
+Matevž Jekovec (Oasis): But how do we prove, you know, that some agent you got from the RCA 1004 is now really running inside TE, and that the keys that it derived, that really derived from the TE,
+
+272
+00:56:27.800 --> 00:56:34.589
+Matevž Jekovec (Oasis): And, yeah, that's where we use this metadata data structure. So you store the public versions of the keys inside.
+
+273
+00:56:34.760 --> 00:56:40.000
+Matevž Jekovec (Oasis): And then we need to prove, you know, that, that keys never really left the TE.
+
+274
+00:56:40.290 --> 00:56:52.630
+Matevž Jekovec (Oasis): And, first you need to audit your application, of course, but this is outside of the scope. You need to audit all previous versions of your applications as well, so blockchain is really useful here, because all application upgrades are stored on-chain.
+
+275
+00:56:53.520 --> 00:57:09.199
+Matevž Jekovec (Oasis): And the second step, is that we need to prove that the current instance that's live, that it's really, running, from the source code we audited, right? So how we do it is, we, when the replica spins up.
+
+276
+00:57:09.350 --> 00:57:22.890
+Matevž Jekovec (Oasis): it stores this public key to the metadata, and when you register an agent, to the ERC8004 on Ethereum, you store this Oasis app ID inside the metadata as well.
+
+277
+00:57:23.480 --> 00:57:33.290
+Matevž Jekovec (Oasis): So when the app is started, it stores the public key and then triggers this validation request, okay? This is the validation registry part.
+
+278
+00:57:33.330 --> 00:57:48.559
+Matevž Jekovec (Oasis): And our validator agent then basically fetches the wrongful metadata, it checks whether the app really exists on-chain, if it's alive, and also compiles the whole image and checks whether the hash matches the one that's stored on-chain.
+
+279
+00:57:48.770 --> 00:57:56.860
+Matevž Jekovec (Oasis): And then this results in the validation score, so if everything is fine, the score is 100, and you also get this nice validation response.
+
+280
+00:57:57.000 --> 00:58:12.740
+Matevž Jekovec (Oasis): So this is the example, live on the Explorer. And yeah, I admit I'm also one of the sinners who stored the Base64 encoded JSON. So, in our case, we stored this Rawful metadata copy.
+
+281
+00:58:12.790 --> 00:58:28.679
+Matevž Jekovec (Oasis): Inside the transaction, so yeah, you can see that this ERC8004 signing key, for example, here is now really, that matches, the one that's stored on-chain, yeah. So, the goal of what we've been doing, actually, is,
+
+282
+00:58:28.970 --> 00:58:41.840
+Matevž Jekovec (Oasis): The user needs to check the validation response score and the desired public key is now present there, so then they can trust the agent, so this simplifies the whole, you know, technicalities around the TE.
+
+283
+00:58:41.840 --> 00:58:58.179
+Matevž Jekovec (Oasis): But of course, one still needs to audit the actual source code, so if the key, you know, if the app is broken, then, yeah, the key left the TE, and maybe the developer posted it somewhere and leaked it, but yeah, this is outside of the scope.
+
+284
+00:58:58.900 --> 00:59:00.100
+Marco De Rossi: Thank you very much.
+
+285
+00:59:02.870 --> 00:59:09.439
+Marco De Rossi: Thank you to you and to the whole OASIS team. So, Nader is with us now, this is a preview,
+
+286
+00:59:09.480 --> 00:59:26.509
+Marco De Rossi: just 2-3 minutes of what Nader will do in the Trustless Agency Day. We will have an entire product talk dedicated specifically about what Agent Cloud is doing for Trustless Agents, and then David will close presenting the agenda of event.
+
+287
+00:59:29.140 --> 00:59:35.350
+Nader Dabit: Alright, thank you. Let's see here… I will share my screen…
+
+288
+00:59:45.640 --> 00:59:47.389
+Nader Dabit: Actually, can I go next?
+
+289
+00:59:49.440 --> 00:59:50.790
+Nader Dabit: Or less.
+
+290
+00:59:51.000 --> 00:59:58.490
+Marco De Rossi: Yes, yes, and Luis, if you can… Unshare, I still see your… Okay.
+
+291
+01:00:00.500 --> 01:00:01.800
+Marco De Rossi: David.
+
+292
+01:00:02.090 --> 01:00:03.070
+Marco De Rossi: Up to you.
+
+293
+01:00:03.900 --> 01:00:04.770
+Davide Crapis: Hey guys!
+
+294
+01:00:04.900 --> 01:00:06.659
+Davide Crapis: This has been great so far.
+
+295
+01:00:07.080 --> 01:00:14.870
+Davide Crapis: Let me share the agenda for the Trustless Agent Day event.
+
+296
+01:00:15.890 --> 01:00:38.849
+Davide Crapis: Yeah, we've been hard at work, organizing this in parallel of all the updates, on the dev tooling side. So the event is gonna be on Friday, November 21st. It's a whole-day event, so we start in the morning, it's at La Rural, which is kind of the main venue, of DevConnect.
+
+297
+01:00:38.850 --> 01:00:50.670
+Davide Crapis: And, as you see here, we put, like, 8004 and X402 in the new logo, so what happened is that the X402 community wanted to do, like,
+
+298
+01:00:50.720 --> 01:01:15.659
+Davide Crapis: an event at DevConnect around the same time. We kind of invited them, so we are kind of hosting also, like, people from the Explore 2 community. I think these two communities are very aligned. When Marco and I started talking about what then became a 2004, a few months ago, in the early summer, actually, we were thinking about payments, and then
+
+299
+01:01:15.660 --> 01:01:33.470
+Davide Crapis: we looked into Expert, and we're like, okay, maybe we can use this protocol for payments, let's solve kind of the hard problem of, like, discovery and trust. And so, since the beginning, these two were complementary, and we want to continue, like, essentially building this together.
+
+300
+01:01:35.340 --> 01:01:46.190
+Davide Crapis: We are just sharing the agenda for the first time, so we'll publish it after the call, but just, like, a quick,
+
+301
+01:01:46.490 --> 01:01:47.540
+Davide Crapis: View.
+
+302
+01:01:47.540 --> 01:02:10.639
+Davide Crapis: We start at 9.30am with registration. At the beginning, we have a series of, talks, which are kind of, more, tech talks. So, there will be, like, from DeepMind talking about, like, MassGen, which is this framework that they're building. A couple of talks, like, focused on, like.
+
+303
+01:02:10.640 --> 01:02:28.150
+Davide Crapis: cryptography and security, for authentic AI, and then we continue with, a few, product-related talks. There is gonna be, like, some X402 in there, some crossover between, like, 2004, X402,
+
+304
+01:02:29.050 --> 01:02:36.520
+Davide Crapis: Yeah, so then, lunch break in the afternoon,
+
+305
+01:02:37.340 --> 01:02:51.000
+Davide Crapis: we are going to have, like, again, like, some X402 talk, like, as we start in the afternoon, and then, like, a lot of, like, product talks from, like, Ecosystem Builder in the 2004 ecosystem.
+
+306
+01:02:51.000 --> 01:02:59.459
+Davide Crapis: That we showcased, like, what they've been building. Some of them joined, like, the, builder program that we ran.
+
+307
+01:02:59.820 --> 01:03:23.829
+Davide Crapis: And then, towards the end, there will be, like, a couple of panels, and then we have a closing panel with a surprise guest that, we'll announce, later. And, yeah, so this is, the agenda. We'll publish it, like, if you are there, please make sure you register.
+
+308
+01:03:23.830 --> 01:03:31.540
+Davide Crapis: It's gonna be a great day, kind of a celebration of, like, this beginning of 2004, like, it's just the beginning.
+
+309
+01:03:37.470 --> 01:03:45.600
+Nader Dabit: Yeah, maybe I can pass it on to another… Yes. Sorry, sorry about that. I was actually making some changes to my presentation, and…
+
+310
+01:03:45.760 --> 01:03:48.179
+Nader Dabit: I was not finished yet, so now I'm finished.
+
+311
+01:03:48.280 --> 01:03:52.150
+Nader Dabit: Okay, cool. So, let me go ahead and share my screen.
+
+312
+01:04:00.790 --> 01:04:02.679
+Nader Dabit: Okay, portion of screen.
+
+313
+01:04:05.040 --> 01:04:22.750
+Nader Dabit: All right, cool. So, the talk that I'm gonna be, or what I'm gonna be kind of really diving into is essentially the, like, trustless agent stack, and it's… it's kind of like with, AI in general, like, where we currently are today in terms of, being able to build and develop
+
+314
+01:04:23.170 --> 01:04:34.339
+Nader Dabit: products and agents, we're starting to kind of see a lot of standards and, you know, I would say agreed-upon protocols that developers can follow. Now, if you look at kind of, like, traditional
+
+315
+01:04:34.690 --> 01:04:40.259
+Nader Dabit: the traditional AI space, you see that we have, like, MCP,
+
+316
+01:04:40.290 --> 01:05:00.020
+Nader Dabit: And you see that we have now, with Google, they have A2A and now AP2. And in the crypto world, we have, like, X402, and we have ERC, 8004. So what I'm trying to do is kind of explore the entire trustless stack. Like, what does the actual stack look like for building trustless agents? At the core, it's definitely going to be 8004.
+
+317
+01:05:00.020 --> 01:05:11.840
+Nader Dabit: Obviously X402 fits in there really, really well. And then a couple of things that we're building at Eigen, we think also fit into the stack, but we want to expand beyond just the stuff that we're building, and kind of look at what's being built.
+
+318
+01:05:11.840 --> 01:05:21.769
+Nader Dabit: not only at the protocol and standard level, but also at the product level outside of our company as well. But the original, kind of, like, tweet that kind of got me thinking about this
+
+319
+01:05:21.770 --> 01:05:40.640
+Nader Dabit: was this post here, where I'm kind of, like, breaking down a very, maybe, basic look at what the trustless agent stack might look like. You have ERC8004 for identity and reputation, you have X42 for payments, and then you have two products that we're working on, EigenAI for verifiable inference and Eigen Compute for verifiable execution.
+
+320
+01:05:40.640 --> 01:05:56.759
+Nader Dabit: And when you start looking at the properties of a blockchain, and why you can't traditionally bring regular inference on-chain, you have properties that a blockchain has that obviously aren't available in traditional LLMs, LLM inference.
+
+321
+01:05:56.760 --> 01:06:15.980
+Nader Dabit: You have, deterministic execution, you have the ability to re-execute and verify the state of the chain. You have, I would say, like, pure functionality, in the sense that you have identical outputs, return identical outputs, identical inputs return identical outputs. You have transparency, and you have immutability.
+
+322
+01:06:16.180 --> 01:06:32.880
+Nader Dabit: But with inference today, none of these things exist, so you can't really just say, I'm gonna make an inference call and bring that result on-chain. What you need are two things. You need deterministic execution, you need verifiability. So that's kind of what we've tried to build with EigenAI, which is essentially verifiable AI.
+
+323
+01:06:32.950 --> 01:06:48.110
+Nader Dabit: And you can kind of play around with what this looks like in practice at this new website that I put together last week called DeterministicInference.com, and you can go in and you can, like, compare traditional AI models with,
+
+324
+01:06:48.250 --> 01:07:04.690
+Nader Dabit: what we offer with verifiable and deterministic inference. So you can kind of run any inference with a seed, and you're guaranteed to get the same output, and anyone in the world can also re-execute this and get the same exact output, very similar to kind of how a blockchain works.
+
+325
+01:07:04.750 --> 01:07:09.889
+Nader Dabit: And then the other thing that I wanted to dive into is…
+
+326
+01:07:09.920 --> 01:07:28.590
+Nader Dabit: the compute version, the compute part of this. It's essentially being able to kind of, like, run agents verifiably in a trusted execution environment, with the ability to verify the code that's being run, and the ability to kind of verify that the…
+
+327
+01:07:28.680 --> 01:07:47.510
+Nader Dabit: agent that you're saying is being run is actually, like, being run, as opposed to, you know, it being run on kind of, like, some centralized server. So this is kind of some of the stuff that I'm putting together for the talk, and I'll probably share this in a Twitter post kind of all together at some point, but I'm still kind of finalizing all of it, so that's kind of it for me.
+
+328
+01:07:49.730 --> 01:08:02.539
+Marco De Rossi: Thank you very much. Also, looking forward to your tweet, and to listening you on stage on Friday. And, is a matter called, we're perfectly on time. We have such a dense agenda, it's exactly 60 minutes now.
+
+329
+01:08:04.740 --> 01:08:10.180
+Marco De Rossi: Well, oh, yes, we had the Q&A, but… .
+
+330
+01:08:11.120 --> 01:08:12.869
+Davide Crapis: We can do it offline, maybe.
+
+331
+01:08:12.870 --> 01:08:20.800
+Marco De Rossi: Yes, we can do that in the group, unless there are burning questions, or we can also do that in person for who is around, in Argentina next week.
+
+332
+01:08:24.390 --> 01:08:25.310
+Davide Crapis: Awesome.
+
+333
+01:08:26.410 --> 01:08:27.830
+Marco De Rossi: Have a good one. Thank you.
+
+334
+01:08:28.149 --> 01:08:28.749
+Marco De Rossi: I'm not using.
+
+335
+01:08:29.220 --> 01:08:29.720
+Nader Dabit: Thank you for having me.
+
+336
+01:08:29.729 --> 01:08:30.679
+Ben Carvill: That's me.
+
+337
+01:08:30.680 --> 01:08:33.130
+Nathan Vandy | bond.credit: you guys, see you guys in Argentina.
+
+338
+01:08:33.310 --> 01:08:34.749
+Ayush Gupta: See you, buh-bye.
+

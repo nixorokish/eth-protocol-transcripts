@@ -1,0 +1,1730 @@
+WEBVTT
+
+1
+00:02:35.960 --> 00:02:36.570
+Marcin Sobczak: Hi.
+
+2
+00:02:36.570 --> 00:02:37.490
+Maria Silva: Hello?
+
+3
+00:02:37.840 --> 00:02:38.560
+Maria Silva: Bye.
+
+4
+00:02:41.770 --> 00:02:46.920
+Maria Silva: So, maybe we can wait a few minutes, see if more people join.
+
+5
+00:02:47.070 --> 00:02:48.599
+Maria Silva: Then we can start.
+
+6
+00:02:51.110 --> 00:02:53.920
+Caspar Schwarz-Schilling: I would assume a couple more would.
+
+7
+00:02:55.960 --> 00:02:57.200
+Maria Silva: Fingers crossed.
+
+8
+00:03:00.180 --> 00:03:05.779
+Pooja Ranjan: Quick question, Maria. Do we want this meeting to be recorded and uploaded later, or streamed?
+
+9
+00:03:06.760 --> 00:03:13.829
+Maria Silva: Yeah, if it could be recorded and uploaded later, that would be great, so people can watch it.
+
+10
+00:03:14.730 --> 00:03:20.720
+Pooja Ranjan: That sounds perfect. So, the meeting is being recorded, and I'll make sure it is uploaded later.
+
+11
+00:03:21.540 --> 00:03:22.699
+Maria Silva: Thank you, thank you.
+
+12
+00:03:25.830 --> 00:03:27.119
+Ameziane Hamlat: Good morning, good afternoon.
+
+13
+00:03:28.220 --> 00:03:33.859
+Maria Silva: Hello, hello. Yeah, we are just waiting a few seconds to see if more people join.
+
+14
+00:03:34.140 --> 00:03:38.880
+Maria Silva: And maybe… Yeah, I'll give it one more minute, then we can start.
+
+15
+00:03:49.720 --> 00:03:58.030
+Maria Silva: Hello, hello, welcome. We are just waiting to see if more people join, and then we will start.
+
+16
+00:04:02.390 --> 00:04:08.440
+Maria Silva: Seems like we are getting a few more people. Hello, everyone.
+
+17
+00:04:08.710 --> 00:04:14.950
+Maria Silva: Again, just saying that we are waiting to see if more people join, and then we'll… Start.
+
+18
+00:04:19.079 --> 00:04:25.859
+Maria Silva: Maybe I can add already, so… Or the agenda,
+
+19
+00:04:26.080 --> 00:04:33.099
+Maria Silva: The idea is we'll start with a quick intro on the whole repricing effort.
+
+20
+00:04:33.290 --> 00:04:43.160
+Maria Silva: I will show some slides, and then we'll start doing the deep dives for EIP, so I have,
+
+21
+00:04:43.270 --> 00:04:59.260
+Maria Silva: being the champions of the EIPs, and I will ask for them to present. In order to make sure that we keep on time, and we have time for all the EIPs, I'm giving 5 minutes for each EIP.
+
+22
+00:04:59.370 --> 00:05:01.439
+Maria Silva: And I will be…
+
+23
+00:05:01.590 --> 00:05:13.269
+Maria Silva: Sorry, but I will try to be very strict with time. So if your 5 minutes are… are up, I will, warn you, and I will have to move to the other EIP.
+
+24
+00:05:13.830 --> 00:05:17.989
+Maria Silva: So on that note, I think I'll start by
+
+25
+00:05:18.690 --> 00:05:22.800
+Maria Silva: Sharing my screen so we can do the quick… Intro.
+
+26
+00:05:23.750 --> 00:05:31.950
+Maria Silva: Okay, so… Let's talk about repricings in, Amsterdam.
+
+27
+00:05:32.060 --> 00:05:34.630
+Maria Silva: So first, I wanted to…
+
+28
+00:05:34.830 --> 00:05:41.899
+Maria Silva: have a common view on why it is important to do this, now in Glamsterdam.
+
+29
+00:05:42.320 --> 00:05:45.579
+Maria Silva: And I think there are two main reasons, so…
+
+30
+00:05:45.700 --> 00:05:52.559
+Maria Silva: The first one is that Amsterdam is all about, scaling the L1, and so this is
+
+31
+00:05:52.890 --> 00:05:59.019
+Maria Silva: Let's say the focus of the fork, And, I think that
+
+32
+00:05:59.180 --> 00:06:02.699
+Maria Silva: Pricing has a direct impact on scaling.
+
+33
+00:06:03.030 --> 00:06:03.760
+Maria Silva: And…
+
+34
+00:06:04.010 --> 00:06:22.330
+Maria Silva: This is achieved by harmonizing operations that currently are not harmonized. So, for instance, the compute operations, they don't have the same performance in terms of million gas per second. Stake creation also doesn't have the same cost, depending on, the operations.
+
+35
+00:06:22.480 --> 00:06:33.230
+Maria Silva: And also, for instance, data from access lists are free, while from call data, you have to pay for the data. So there's tons of,
+
+36
+00:06:33.440 --> 00:06:50.959
+Maria Silva: these harmonized, operations across different resources, and this leads to single bottlenecks. So by doing this, harmonization, we are removing these single bottlenecks and, allowing for
+
+37
+00:06:51.020 --> 00:07:04.030
+Maria Silva: the EVM to perform in a more harmonized manner. So we are removing this single bottleneck. So this is a diagram that Ansgard did in a talk a few months ago.
+
+38
+00:07:04.030 --> 00:07:16.869
+Maria Silva: And it's essentially showing that you have, like, all these resources, or for a single resource, you have all these operations, and they each have different performances, and,
+
+39
+00:07:17.160 --> 00:07:35.539
+Maria Silva: like, the single worst operation is sort of limiting the level of throughput we can have. With harmonization, so making all the opcodes closer together, we are removing these single points of, of, of, bottlenecks, let's say.
+
+40
+00:07:35.810 --> 00:07:39.789
+Maria Silva: So this is reason number one. The reason number two is that
+
+41
+00:07:39.900 --> 00:07:59.509
+Maria Silva: actually, repricing will unlock some scaling from both headliners. So both EPBS and Balls can have a meaningful impact on throughput. So with EPBS, we are giving more time for execution and also for data propagation.
+
+42
+00:08:01.290 --> 00:08:14.890
+Maria Silva: But there's also a caveat here, which is we are giving more time for execution than data, so we are increasing the time on both resources, but we are increasing more on execution.
+
+43
+00:08:15.430 --> 00:08:33.660
+Maria Silva: And for balls, we are introducing parallel execution and also state root calculation in parallel. But this is actually adding a cost, a data component cost to state operations, because now state operations, will use,
+
+44
+00:08:34.320 --> 00:08:39.860
+Maria Silva: We'll use block space, which is the block-level access list itself.
+
+45
+00:08:40.350 --> 00:08:42.979
+Maria Silva: So, what this means is that
+
+46
+00:08:43.390 --> 00:09:01.169
+Maria Silva: actually, the relative costs of different, resources will change. And if we don't adapt the pricing to meet those changes, then we are introducing bottlenecks, not at
+
+47
+00:09:01.350 --> 00:09:09.000
+Maria Silva: The resource level, but… on the whole resources. So, for instance, if… we…
+
+48
+00:09:09.250 --> 00:09:15.070
+Maria Silva: Don't reprice state growth as a, as a, as an example.
+
+49
+00:09:15.200 --> 00:09:29.749
+Maria Silva: We cannot really increase throughput, because if we were to increase throughput by… which would be allowed by both the PBS and block-level access lists, then we would increase state growth.
+
+50
+00:09:29.930 --> 00:09:39.050
+Maria Silva: And, even though we have more time in the block for execution and for block… For…
+
+51
+00:09:39.280 --> 00:09:42.750
+Maria Silva: propagating the block, we don't really have more…
+
+52
+00:09:43.010 --> 00:09:55.039
+Maria Silva: room for state road. So the available budget for state road we have is not changing, and so we really need to change the relative cost of this component for the other.
+
+53
+00:09:55.250 --> 00:10:02.900
+Maria Silva: And this is the same between the relative cost of data and compute and state access. So, because now…
+
+54
+00:10:03.200 --> 00:10:12.029
+Maria Silva: data will have… so data will have to become more expensive in relation to both compute and state.
+
+55
+00:10:12.170 --> 00:10:21.139
+Maria Silva: And so… without repricings, really, the level of scaling we can get from the ball's headliners is limited.
+
+56
+00:10:23.990 --> 00:10:40.839
+Maria Silva: And on this note, then, how do we think about repricing in Glamsterdam? So, at the moment, the Meta EIP, so the final version of the repricing MetaEIP is not yet merged, because there are a few EIPs that are also not merged.
+
+57
+00:10:40.960 --> 00:10:52.339
+Maria Silva: But at the moment, we have 16 EIPs that are in some way related to repricing, which is a lot, so this can be a bit hard to navigate.
+
+58
+00:10:52.580 --> 00:10:57.459
+Maria Silva: But I… I think I've… I'm starting to think of them as… in this…
+
+59
+00:10:57.550 --> 00:11:04.910
+Maria Silva: three categories, which I think helps, to… to… to kind of put them in… in buckets and think about them.
+
+60
+00:11:04.920 --> 00:11:23.690
+Maria Silva: So, on… first, we have broad harmonization. So, this is essentially EIPs that are changing a broad set of operations that all touch a specific resource. So, for instance, we have one for compute, state taxes, state growth, and also for intrinsic costs of transactions.
+
+61
+00:11:23.930 --> 00:11:38.739
+Maria Silva: Then we have, pricing extensions, so this is more a targeted change in the pricing model. It could be just repricing a single opcode, it could be changing some component of the gas model.
+
+62
+00:11:38.750 --> 00:11:48.109
+Maria Silva: And usually this will either unlock some scalability or fix some specific misprice, so it's not a broth.
+
+63
+00:11:48.230 --> 00:11:57.679
+Maria Silva: reprice, but it's more a targeted thing. And so we have this, for instance, for data, for state access, transient storage, memory, and also gas refunds.
+
+64
+00:11:57.990 --> 00:12:06.069
+Maria Silva: And the third one is supporting, so this is not actually repricing EIPs, but are EIPs that are somehow
+
+65
+00:12:06.380 --> 00:12:13.520
+Maria Silva: supporting the other EIPs. And for these, we have two for fixing grounding errors, and also the multidimensional metering.
+
+66
+00:12:15.630 --> 00:12:20.949
+Maria Silva: And so, now… In terms of, prioritization.
+
+67
+00:12:21.190 --> 00:12:39.169
+Maria Silva: the way I'm thinking of it is, first, we need to, do the broad harmonization. So this is where we will harmonize compute, state taxes, state growth, and data. So these are the four components that are really, really important for us to
+
+68
+00:12:39.240 --> 00:12:49.460
+Maria Silva: reprice, and we have to do them together, so we make sure that we are not introducing a single resource as a bottleneck. So we are harmonizing within the resources.
+
+69
+00:12:49.640 --> 00:13:03.390
+Maria Silva: Or in another way, we are harmonizing each resource, so the operations in each resource, but also we are harmonizing across the different resources. So, we are not…
+
+70
+00:13:03.760 --> 00:13:08.510
+Maria Silva: leaving any bottlenecks on the table. And then, once this is done.
+
+71
+00:13:08.830 --> 00:13:27.160
+Maria Silva: We can think of adding some pricing extensions that either address specific gaps or enhance scaling, and we can think of it like the removal of refunds from the block limit, which solves some worst-case blocks.
+
+72
+00:13:27.160 --> 00:13:32.910
+Maria Silva: the size base S-store, transient storage, rounding errors, etc. But I'd say, like.
+
+73
+00:13:33.130 --> 00:13:36.990
+Maria Silva: First, broad harmonization is really important to
+
+74
+00:13:37.130 --> 00:13:44.640
+Maria Silva: Do it together, so that we don't create new… new bottlenecks. We don't leave these bottlenecks on the table.
+
+75
+00:13:46.490 --> 00:13:57.409
+Maria Silva: And so, on the docket today, we have all these EIPs. So, again, I will give 5 minutes each.
+
+76
+00:13:57.710 --> 00:14:05.700
+Maria Silva: And we will start with Ben, talking about reducing intrinsic transaction costs.
+
+77
+00:14:05.980 --> 00:14:10.540
+Maria Silva: Benj, I will stop sharing, and I will give the floor to you.
+
+78
+00:14:13.130 --> 00:14:14.750
+Ben Adams: Okay.
+
+79
+00:14:16.120 --> 00:14:18.360
+Ben Adams: I've sent a request to you, Chef.
+
+80
+00:14:20.080 --> 00:14:20.990
+Ben Adams: Okay.
+
+81
+00:14:22.480 --> 00:14:23.360
+Ben Adams: Let me bring up.
+
+82
+00:14:26.020 --> 00:14:27.130
+Ben Adams: Picking the things open.
+
+83
+00:14:29.300 --> 00:14:29.980
+Ben Adams: No.
+
+84
+00:14:34.270 --> 00:14:45.490
+Ben Adams: Okay, so the… Intrinsic gas of a transaction is… essentially defines the, the lowest,
+
+85
+00:14:45.680 --> 00:14:47.459
+Ben Adams: Mount that we can do.
+
+86
+00:14:48.360 --> 00:14:55.770
+Ben Adams: The lowest amount of gas we can use in a transaction, and therefore it directly determines…
+
+87
+00:14:56.460 --> 00:15:01.560
+Ben Adams: Transactions… max transactions per block, and also,
+
+88
+00:15:02.750 --> 00:15:05.999
+Ben Adams: transactions per second, so it's…
+
+89
+00:15:06.750 --> 00:15:15.030
+Ben Adams: And it's quite high at 21,000 gas. So this… this looks to decompose it into, parts.
+
+90
+00:15:15.280 --> 00:15:23.349
+Ben Adams: And then, and also reduce it as that. Also, there's a weird gap in,
+
+91
+00:15:23.490 --> 00:15:30.050
+Ben Adams: Which might be factored into the 21,000 gas at the moment, where you can create an account,
+
+92
+00:15:31.020 --> 00:15:36.480
+Ben Adams: As part of that initial transaction, and it's no different… you aren't charged any extra.
+
+93
+00:15:36.820 --> 00:15:39.919
+Ben Adams: Than if you don't create an account in that transaction.
+
+94
+00:15:40.080 --> 00:15:43.920
+Ben Adams: So this harmonizes that with core, so the…
+
+95
+00:15:44.620 --> 00:15:49.370
+Ben Adams: The transaction base cost drops to, $4,500.
+
+96
+00:15:49.620 --> 00:15:57.690
+Ben Adams: Although… That's very decomposed, so if you do an ETH transfer, since you do an update on
+
+97
+00:15:58.290 --> 00:16:00.570
+Ben Adams: The 2 account and a warm.
+
+98
+00:16:00.890 --> 00:16:07.619
+Ben Adams: That's actually, $6,000. But if you were doing, like, a contract call with no value transfer.
+
+99
+00:16:08.000 --> 00:16:11.270
+Ben Adams: Then that would be your base cost, and you'd add the executioner.
+
+100
+00:16:11.570 --> 00:16:18.220
+Ben Adams: And then it adds, the gas for a new account, if you're creating an account as part of that.
+
+101
+00:16:18.760 --> 00:16:26.129
+Ben Adams: And it introduces, A cold cost.
+
+102
+00:16:26.270 --> 00:16:28.989
+Ben Adams: For no codes. So if you… if you…
+
+103
+00:16:29.340 --> 00:16:33.270
+Ben Adams: If you warm an account, and it doesn't have code attached.
+
+104
+00:16:33.440 --> 00:16:39.800
+Ben Adams: Then when you're calling it, you're not having to load that code, start up the VM,
+
+105
+00:16:40.230 --> 00:16:45.929
+Ben Adams: the EVM, and then start processing opcodes, so that's… that's cheaper.
+
+106
+00:16:46.330 --> 00:16:49.069
+Ben Adams: And then also…
+
+107
+00:16:49.850 --> 00:17:07.049
+Ben Adams: to bring the call value cost. So, at the moment, if you transfer value in a call, that's 9,000 GAS, and instead it brings it down to match, this, which would be 2,000… two state updates, one for transferring from the
+
+108
+00:17:08.349 --> 00:17:14.699
+Ben Adams: the sender and, one for receiving it. So it introduces a state update.
+
+109
+00:17:15.579 --> 00:17:16.279
+Ben Adams: Good luck.
+
+110
+00:17:16.640 --> 00:17:20.529
+Ben Adams: At 2,000 gas. Sorry, 1,000 gas.
+
+111
+00:17:21.660 --> 00:17:28.030
+Ben Adams: and so, on… This is sort of a 300…
+
+112
+00:17:28.810 --> 00:17:34.740
+Ben Adams: And 67% uplift in the amount of transactions you can do at minimum size.
+
+113
+00:17:35.450 --> 00:17:46.829
+Ben Adams: Although, it only… The equivalent gas based on all transactions, is only 20%, because,
+
+114
+00:17:47.360 --> 00:17:51.239
+Ben Adams: there's less of that that's used for, EF…
+
+115
+00:17:51.980 --> 00:17:57.680
+Ben Adams: transfers specifically. If I can show you… I'm seeing graphs in here.
+
+116
+00:17:59.300 --> 00:18:03.110
+Ben Adams: So, like, a USDT transfer.
+
+117
+00:18:03.390 --> 00:18:10.430
+Ben Adams: That changes from the dotted line to this red line here, so it's not… it's not a huge…
+
+118
+00:18:10.630 --> 00:18:15.409
+Ben Adams: Increasing the amount of those you could do for, like, a celebrity.
+
+119
+00:18:15.740 --> 00:18:20.869
+Ben Adams: Transfer, which is much more gas efficient, then there's a much bigger uplift.
+
+120
+00:18:21.190 --> 00:18:24.690
+Ben Adams: And for ETH transfers, it's like a huge uplift.
+
+121
+00:18:25.090 --> 00:18:26.940
+Ben Adams: In the amount you can do.
+
+122
+00:18:28.510 --> 00:18:37.090
+Ben Adams: Yeah, that's… that's essentially it. There's a lot in… in the proposal, sort of explaining it,
+
+123
+00:18:38.590 --> 00:18:49.969
+Ben Adams: motivations that's, like, you know, encourages ETH as money, it lowers the friction in transferring ETH and using ETH as part of transactions, so there's lots of good stuff.
+
+124
+00:18:50.970 --> 00:18:54.500
+Ben Adams: You don't charge it as poll data.
+
+125
+00:18:55.230 --> 00:18:59.920
+Ben Adams: The transaction envelope, and you count the…
+
+126
+00:19:00.070 --> 00:19:05.899
+Ben Adams: To and from addresses is warm, because they're, like, In the transaction header.
+
+127
+00:19:06.040 --> 00:19:10.689
+Ben Adams: So there's no additional… additional data.
+
+128
+00:19:12.130 --> 00:19:14.540
+Ben Adams: If I do the breakdown…
+
+129
+00:19:20.900 --> 00:19:26.319
+Ben Adams: Yeah. So, breakdown is essentially EC recover, 3,000 gas.
+
+130
+00:19:26.860 --> 00:19:30.610
+Ben Adams: State update, which is…
+
+131
+00:19:31.660 --> 00:19:38.169
+Ben Adams: Updating the balance, charging the gas, so it's like a single leaf update counted.
+
+132
+00:19:38.670 --> 00:19:40.270
+Ben Adams: And then no code.
+
+133
+00:19:42.700 --> 00:19:52.649
+Ben Adams: Oh, sorry, it does… it does a charge for warming. And then no code warm, which is, if you're an EOA initiating the transaction, then you don't have code.
+
+134
+00:19:52.770 --> 00:19:57.119
+Ben Adams: That you're loading. That's where the 450 comes from.
+
+135
+00:19:58.230 --> 00:20:06.210
+Ben Adams: And then if you're… if you trans… if you're… yeah, there we go.
+
+136
+00:20:10.360 --> 00:20:11.110
+Ben Adams: Yeah.
+
+137
+00:20:14.780 --> 00:20:31.319
+Maria Silva: Okay, Ben, I think your 5 minutes are up, but maybe I can give one more minute for comments. I don't know if there are any, comments. Also, be free to use the chat, Nsgar.
+
+138
+00:20:32.180 --> 00:20:40.920
+Ansgar Dietrichs: Yeah, and then just to very briefly say it, because I think it's important enough, I've also put it in chat, I think I really like the EIP in… for the general, hey, we should
+
+139
+00:20:41.100 --> 00:20:58.000
+Ansgar Dietrichs: consider also adjusting the base cost, if we are repricing everything, to be in sync. Just, again, pointing out for people for whom that's not fully top of mind yet with repricing in general, there's always this question, what do we anchor to, right? Because, in principle, you could reharmonize everything, and then
+
+140
+00:20:58.130 --> 00:21:09.569
+Ansgar Dietrichs: everything costs one gas, or you could harmonize everything, and then, like, all the… like, all the operations cost a million gas each, or something? Basically, like, it… like, harmonizing just means relative to each other, so you still have to have, like, some sort of, like.
+
+141
+00:21:09.950 --> 00:21:28.159
+Ansgar Dietrichs: absolute level at which all the prices are, basically, and so we could also just choose that we rescale everything so that, say, at least the base transaction… I think we also now want to separate out transactions that do create new state at the recipient, or that don't, but that the base transaction that does not create new state
+
+142
+00:21:28.190 --> 00:21:43.220
+Ansgar Dietrichs: comes out at $21,000 again. That could be a reasonable choice. But basically, I think if we're not choosing to rescale everything to exactly that level, then I agree with the intention of the EIP that we should then also adjust the transaction base price.
+
+143
+00:21:43.920 --> 00:21:52.889
+Ben Adams: Yeah, it's sort of, the current prices in it are scaled to… Easy recover, using the…
+
+144
+00:21:59.370 --> 00:22:05.199
+Maria Silva: Great. So, I think if you have any more comments, please just, put them in the
+
+145
+00:22:05.340 --> 00:22:10.930
+Maria Silva: the chat, we'll now move to the next one, which, I'm presenting.
+
+146
+00:22:11.160 --> 00:22:14.309
+Maria Silva: So I will just share again my screen.
+
+147
+00:22:15.180 --> 00:22:17.680
+Maria Silva: So this is a…
+
+148
+00:22:17.970 --> 00:22:23.980
+Maria Silva: I think it's one of the most recent EIPs. It was done together with Charles.
+
+149
+00:22:24.110 --> 00:22:29.179
+Maria Silva: And is about introducing, warm account rights.
+
+150
+00:22:29.980 --> 00:22:33.760
+Maria Silva: So… Probation is, essentially.
+
+151
+00:22:33.780 --> 00:22:51.970
+Maria Silva: when an account is updated multiple times in the same transaction, the state root calculation can be batched, and all updates can be done in a single calculation. And my understanding is that this is the standard operation of all clients.
+
+152
+00:22:52.030 --> 00:23:01.830
+Maria Silva: However, users are paying the full costs of the gas call value or gas storage update if we are updating a slot.
+
+153
+00:23:04.140 --> 00:23:16.899
+Maria Silva: And so, this doesn't match the actual resource utilization, because the first account update should be more expensive than the later ones.
+
+154
+00:23:17.210 --> 00:23:25.290
+Maria Silva: And if we can make this, adjustments, making warm account writes cheaper would increase throughput on these
+
+155
+00:23:25.390 --> 00:23:30.560
+Maria Silva: Specific transactions, so the transactions that would update the account multiple times.
+
+156
+00:23:31.990 --> 00:23:50.649
+Maria Silva: And the proposal is, is simple, so we will, replace these, this, gas call value and this gas storage update with two new parameters, so we have the gas cold account right and a gas warm account right.
+
+157
+00:23:50.790 --> 00:24:01.070
+Maria Silva: And the first, account update essentially pays the cold cost, while any following account updates pay the warm costs.
+
+158
+00:24:01.310 --> 00:24:15.840
+Maria Silva: And then we need to check whether the account is warm or cold, and by that, we need to track the… whether any of the account fields were changed since the transaction started.
+
+159
+00:24:16.100 --> 00:24:24.630
+Maria Silva: And, these, pricing will impact the create, create 2, the call op codes, and S-Store.
+
+160
+00:24:25.430 --> 00:24:28.020
+Maria Silva: So this is really…
+
+161
+00:24:28.660 --> 00:24:35.600
+Maria Silva: short, so I'm giving some time for… for comments, and I, yes, if you have any comments, just…
+
+162
+00:24:35.780 --> 00:24:39.140
+Maria Silva: Let me know, and we can discuss.
+
+163
+00:24:39.380 --> 00:24:40.270
+Maria Silva: Ben?
+
+164
+00:24:41.270 --> 00:24:54.120
+Ben Adams: For the… call account, account right. I do have that adjusted in the EIP I previously presented.
+
+165
+00:24:54.480 --> 00:24:59.420
+Ben Adams: That sort of factors in that, in terms of there is a…
+
+166
+00:24:59.930 --> 00:25:05.189
+Ben Adams: There is a warming cost, which would go away, but the,
+
+167
+00:25:05.520 --> 00:25:08.369
+Ben Adams: In it, I do have the…
+
+168
+00:25:09.740 --> 00:25:15.229
+Ben Adams: The two storage rights charge the same regardless. There's no, like.
+
+169
+00:25:15.610 --> 00:25:19.509
+Ben Adams: So there's an extra surcharge if you warm an account,
+
+170
+00:25:19.730 --> 00:25:24.690
+Ben Adams: But if it's warm, it doesn't become dramatically cheaper.
+
+171
+00:25:24.890 --> 00:25:27.980
+Ben Adams: Other than the fact it starts dramatically cheaper.
+
+172
+00:25:28.280 --> 00:25:34.440
+Ben Adams: But, and that's so that… There's that stipend.
+
+173
+00:25:34.990 --> 00:25:38.659
+Ben Adams: Protection that exists in some contracts for repairsion.
+
+174
+00:25:38.990 --> 00:25:42.400
+Ben Adams: So, it's still… it still comes in about 2,000…
+
+175
+00:25:42.910 --> 00:25:49.480
+Ben Adams: Gas, which means you can't do recursive pulls if people are are having.
+
+176
+00:25:49.800 --> 00:25:51.779
+Ben Adams: It's like a DDoS protection.
+
+177
+00:25:52.550 --> 00:26:05.180
+Maria Silva: Right, right. So I think that's… that's a relevant point. So, we still need to do some… so we… we still want to benchmark these and… and… and make sure that these costs make sense.
+
+178
+00:26:05.180 --> 00:26:14.020
+Maria Silva: But that's, like, a vector that we need to take into consideration, depending on the final numbers. Anskar?
+
+179
+00:26:15.260 --> 00:26:25.219
+Ansgar Dietrichs: Yeah, just on this point, I personally think that if we are serious, at least, about making pricing changes to the EVM, and maybe also continue to doing them beyond Gomsadam.
+
+180
+00:26:25.630 --> 00:26:28.929
+Ansgar Dietrichs: I personally think we just have to be okay with
+
+181
+00:26:29.140 --> 00:26:43.050
+Ansgar Dietrichs: Breaking all the implicit assumptions that contract developers have made about specifics of gas pricing, and so it was never a correct behavior to use gas price assumptions, for example, for
+
+182
+00:26:43.150 --> 00:27:05.909
+Ansgar Dietrichs: re-entrancy protection, right? Like, you have to have an explicit guard, and just making some assumptions that certain operations are so inefficient. I'm not sure, not 100% sure that I understood Ben correctly, but basically, these types of patterns, I know they exist sometimes in the EVM, but again, this is just improper behavior anyway, it's just based on assuming the EVM would always be inefficient enough that
+
+183
+00:27:05.980 --> 00:27:09.030
+Ansgar Dietrichs: These things would be expensive enough that that would hold.
+
+184
+00:27:09.200 --> 00:27:12.479
+Ansgar Dietrichs: I personally think we should bite the bullet of…
+
+185
+00:27:12.480 --> 00:27:18.780
+Ben Adams: I think it… I think it was, suggested As, like, a thing.
+
+186
+00:27:19.250 --> 00:27:21.940
+Ben Adams: So, like, the solidity at one point was…
+
+187
+00:27:23.110 --> 00:27:26.549
+Ben Adams: You could call transfer, and it had to put a gas cap on.
+
+188
+00:27:26.660 --> 00:27:28.530
+Ben Adams: You couldn't do the recursion.
+
+189
+00:27:28.790 --> 00:27:31.350
+Ben Adams: So I think we've breaked a lot of…
+
+190
+00:27:31.610 --> 00:27:40.760
+Ben Adams: potentially large value holding contracts, and they've got hacked. However, I was just saying that I take that into account in the other one, and it's not…
+
+191
+00:27:42.030 --> 00:27:46.639
+Ben Adams: The price is dropped very significantly, and it shouldn't.
+
+192
+00:27:47.100 --> 00:27:49.319
+Ben Adams: It should also maintain that.
+
+193
+00:27:49.530 --> 00:27:52.010
+Ben Adams: Assumed invariant.
+
+194
+00:27:52.690 --> 00:27:59.449
+Ben Adams: But, I mean, that's also where the payoff code, people want to bring that in, is so that
+
+195
+00:28:00.590 --> 00:28:01.320
+Ben Adams: Yeah.
+
+196
+00:28:02.190 --> 00:28:04.150
+Ben Adams: To… to also do that.
+
+197
+00:28:05.300 --> 00:28:16.720
+Maria Silva: Right, so I think, conscious of time, I think we'll need to move to the other presentation. I know, Carl, you have your hand up, so I will ask, can you maybe add your comment in the chat?
+
+198
+00:28:18.270 --> 00:28:18.880
+Carl Beekhuizen: Yep, okay.
+
+199
+00:28:18.880 --> 00:28:29.140
+Maria Silva: I'm sorry about that. And I think now we have Guillaume talking about size-based storage, gas pricing, so…
+
+200
+00:28:29.910 --> 00:28:31.340
+Maria Silva: Give you the formula.
+
+201
+00:28:31.340 --> 00:28:39.579
+Guillaume: Thank you. Wait, same thing happens every time I look from my window, here we go.
+
+202
+00:28:40.280 --> 00:28:43.449
+Guillaume: Okay, kid.
+
+203
+00:28:43.720 --> 00:28:45.050
+Guillaume: Can you see it?
+
+204
+00:28:48.740 --> 00:28:50.090
+Maria Silva: Yes, we can see it.
+
+205
+00:28:50.340 --> 00:28:51.740
+Guillaume: Okay, cool.
+
+206
+00:28:51.950 --> 00:28:57.689
+Guillaume: Yeah, so that's, that's an EIP that is quite simple.
+
+207
+00:28:57.950 --> 00:29:07.090
+Guillaume: If you omit the fact that there's a transition involved, but the transition itself is, is quite simple. It's,
+
+208
+00:29:07.230 --> 00:29:23.190
+Guillaume: It's just trying to target those contracts… I don't know why… okay. It's trying to target those contracts that are effectively spammy, meaning they take a lot of space, but they don't really provide much value.
+
+209
+00:29:23.450 --> 00:29:36.879
+Guillaume: And, we have noted that some contracts were, so large that updating them was causing measurable performance issues.
+
+210
+00:29:36.880 --> 00:29:47.600
+Guillaume: So that goes against scalability, and, you know, if it's a very useful contract, it makes sense to keep it running, but when it's just spam, it's,
+
+211
+00:29:47.760 --> 00:30:12.730
+Guillaume: it's counterproductive. And everything, everything relies, around, like, goes around the fact that it doesn't matter how much, data you write to a given contract, the price is exactly the same, and the result is that the state bloat, will be, will increase, not only
+
+212
+00:30:12.730 --> 00:30:22.859
+Guillaume: with valuable contracts, but also contracts that provide no value. And this is a scalability impediment, so we want to stop that.
+
+213
+00:30:23.930 --> 00:30:42.959
+Guillaume: So the solution that has been proposed, is, about counting the… consisting in counting every storage slot inside, inside a contract, and past the threshold, we start charging, more…
+
+214
+00:30:42.960 --> 00:30:46.230
+Guillaume: gas per S store to disincentivize
+
+215
+00:30:46.230 --> 00:30:52.930
+Guillaume: the filling of some very large contract. So the threshold could be moved over time.
+
+216
+00:30:53.220 --> 00:31:11.010
+Guillaume: So currently, we'd be only targeting a single contract on mainnet, but yes, if more spammy contracts come, we could change this threshold, or if useful contracts grow larger, we could also move this threshold up.
+
+217
+00:31:12.280 --> 00:31:36.400
+Guillaume: Yeah, so the biggest takeaway point here is that for most contracts, in fact, virtually every contract on mainnet except one, the gas cost would remain exactly the same, but yeah, one of those contracts would pay, it says incrementally more, but it's actually exponentially more per slot than we…
+
+218
+00:31:36.400 --> 00:31:44.920
+Guillaume: Would, yeah, like, the goal is to keep them from the… from doing… sorry, to make sure they stop doing this.
+
+219
+00:31:46.450 --> 00:32:02.260
+Guillaume: So, yeah, like, the reason for this, and especially doing it now, it's simply because we do notice an impact of this specific contract on scalability, and we want to make sure it doesn't impede
+
+220
+00:32:02.290 --> 00:32:12.270
+Guillaume: to progress to, in terms of scalability. But, yeah, we also, there are also other reasons that are more…
+
+221
+00:32:12.570 --> 00:32:35.790
+Guillaume: about the feasibility of it. It's, it's, quite easy to do. It's, also, having a desired effect, like, good, good, effects, like forcing people to, or contract designers to, to break their contracts into smaller pieces, which are easier to recompute, easier to, expire.
+
+222
+00:32:35.790 --> 00:32:40.159
+Guillaume: And, and ultimately, easier to, to manage.
+
+223
+00:32:40.740 --> 00:32:42.520
+Guillaume: So…
+
+224
+00:32:42.830 --> 00:33:07.030
+Guillaume: like I said, there's a transition aspect to it, and we just have to add a slot counter per account. There's no other choice than going over every single contract in the state and updating them. But for that, unlike the vertical transition.
+
+225
+00:33:07.030 --> 00:33:25.739
+Guillaume: We would be using a smart contract, so it offers a lot of features, namely the reorg awareness that you could be using inside, sorry, to handle reorg. So we, in that contract, we would store the pointers.
+
+226
+00:33:26.120 --> 00:33:40.790
+Guillaume: the pointers of the iterator. And, just one last thing, it's compatible with the same sweep that has to happen in 29.26, so we could do both in one go.
+
+227
+00:33:40.790 --> 00:33:47.949
+Guillaume: Yeah, just to recap, but I'm also at time, so maybe if there's time for a question, or, yeah.
+
+228
+00:33:48.110 --> 00:33:49.130
+Guillaume: Just call it.
+
+229
+00:33:49.840 --> 00:33:52.060
+Maria Silva: Yes, I… I… I think we are…
+
+230
+00:33:52.190 --> 00:33:57.889
+Maria Silva: right on time, but I will give one more minute for comments or questions, if there are any.
+
+231
+00:34:04.880 --> 00:34:09.340
+Ben Adams: So would this not be on the account, but be in a smart contract?
+
+232
+00:34:10.590 --> 00:34:11.399
+Guillaume: Coming in?
+
+233
+00:34:11.719 --> 00:34:12.879
+Ben Adams: The count.
+
+234
+00:34:13.079 --> 00:34:16.439
+Ben Adams: Would… originally it was, value on the account?
+
+235
+00:34:17.469 --> 00:34:20.089
+Guillaume: So it's a value that's added to the account, yes.
+
+236
+00:34:20.550 --> 00:34:21.170
+Ben Adams: Okay.
+
+237
+00:34:26.290 --> 00:34:27.260
+Guillaume: Yeah, let's it going?
+
+238
+00:34:27.260 --> 00:34:27.730
+Maria Silva: The guard?
+
+239
+00:34:27.730 --> 00:34:37.619
+Ansgar Dietrichs: Yeah, and just to say, right, like, the attractive part of this, of course, would be that if we don't do this, then every contract, even one that has only, like, very simple storage, would basically have to pay for…
+
+240
+00:34:37.940 --> 00:34:49.829
+Ansgar Dietrichs: the worst case, basically have to pay for kind of a Zen-style storage layout, which is very unfortunate, and would be extra cost. So this is, like, a very attractive efficiency improvement.
+
+241
+00:34:50.400 --> 00:35:02.050
+Ansgar Dietrichs: I personally still have some headache, or, like, some worries about basically just the complexity. As I said, you introduce it with simple complexity, but, like, I still have some headache about, like, the complexity of the mechanism, how easy it would be to, like.
+
+242
+00:35:02.360 --> 00:35:05.470
+Ansgar Dietrichs: To establish… to really be certain that…
+
+243
+00:35:05.580 --> 00:35:10.080
+Ansgar Dietrichs: A, the transition itself, and then B, also, like, once it's life, that there's no kind of…
+
+244
+00:35:10.390 --> 00:35:19.919
+Ansgar Dietrichs: ways to exploit it too much, or no edge cases that we didn't cover, but basically, if we can get to a level of being certain about this, then in principle, I think it's a very attractive EIP.
+
+245
+00:35:20.090 --> 00:35:26.779
+Guillaume: So, regarding the transition, it's a simpler version of the vertical one, which has already been tested, extensively, so…
+
+246
+00:35:26.800 --> 00:35:40.260
+Guillaume: Yeah, I don't think… I mean, okay, I know there's a lot of people who haven't looked into the… into the vertical transition that, that, are scared about this, but honestly, given how simpler it is, I'm not,
+
+247
+00:35:40.390 --> 00:35:41.709
+Guillaume: I'm not too worried.
+
+248
+00:35:45.650 --> 00:35:47.090
+Maria Silva: Okay, Ben?
+
+249
+00:35:48.470 --> 00:35:54.230
+Ben Adams: Yeah, on the… on transition, it would need to be coordinated in order to…
+
+250
+00:35:54.530 --> 00:36:01.029
+Ben Adams: all the clients change prices at the same time. But I'd just like to say the original one was based on depth.
+
+251
+00:36:01.590 --> 00:36:06.500
+Ben Adams: And I much prefer this one based on count, because… the depth.
+
+252
+00:36:06.690 --> 00:36:09.629
+Ben Adams: It ties it to a certain structure.
+
+253
+00:36:09.760 --> 00:36:14.210
+Ben Adams: And assumptions with that structure, whereas the count doesn't…
+
+254
+00:36:15.120 --> 00:36:18.569
+Ben Adams: Doesn't assume an implementation detail.
+
+255
+00:36:19.070 --> 00:36:20.020
+Ben Adams: If you're gonna be.
+
+256
+00:36:24.020 --> 00:36:25.679
+Maria Silva: You can go next, honey.
+
+257
+00:36:27.530 --> 00:36:33.039
+Toni Wahrstätter: Yeah, my question, I think Carlos already answered my question. I was asking what the threshold was.
+
+258
+00:36:33.360 --> 00:36:38.920
+Toni Wahrstätter: that you had in mind there, where only one contract was affected, is that…
+
+259
+00:36:39.030 --> 00:36:42.629
+Toni Wahrstätter: the XAN contract, basically, putting the threshold there.
+
+260
+00:36:43.350 --> 00:36:46.159
+Guillaume: Yeah, I'm trying to not name it, but yes.
+
+261
+00:36:46.860 --> 00:36:47.620
+Toni Wahrstätter: Okay.
+
+262
+00:36:47.900 --> 00:36:54.489
+Toni Wahrstätter: Okay, and I was… I was interested… yeah, this… this fee is a bit arbitrary.
+
+263
+00:36:54.920 --> 00:37:04.370
+Toni Wahrstätter: It would be interesting to see how the distribution looks like, because I imagine it's, like, very,
+
+264
+00:37:04.530 --> 00:37:13.929
+Toni Wahrstätter: Right skewed and has, like, a long tail, and then at some point you stumble across those very big contracts, so maybe we could even be more aggressive, right?
+
+265
+00:37:14.860 --> 00:37:21.400
+Toni Wahrstätter: But yeah, or have it, like, dynamically growing somehow, but this is… Not just speaking out loud.
+
+266
+00:37:21.780 --> 00:37:39.079
+Guillaume: I mean, it will be dynamically up to a threshold, but if you want to lower the threshold, yeah, I mean, Maria will have something to say, but this doesn't make any difference to me. Will make a difference to the user, of course, but yes, that can be calculated if you want.
+
+267
+00:37:39.750 --> 00:37:46.359
+Ben Adams: Yeah, the next one after Zen, I think, is USDT, so we'd need to be careful around there.
+
+268
+00:37:46.360 --> 00:37:47.410
+Guillaume: Exactly.
+
+269
+00:37:50.050 --> 00:38:00.429
+Maria Silva: Yeah, I think once we have the benchmark data, we can start, like, putting numbers on the parameters, and then we can discuss more deeply what
+
+270
+00:38:01.020 --> 00:38:03.540
+Maria Silva: What is the ideal thresholds there?
+
+271
+00:38:03.870 --> 00:38:16.279
+Maria Silva: Okay, conscious of time, we'll move to the next one. So, now it's me again, I'll be presenting two EIPs, so I'll just share my screen again.
+
+272
+00:38:18.110 --> 00:38:19.050
+Maria Silva: Yay.
+
+273
+00:38:20.040 --> 00:38:28.099
+Maria Silva: So, this one is the state creation, harmonization.
+
+274
+00:38:28.350 --> 00:38:39.570
+Maria Silva: So essentially, the motivation is, I think I explained this a little bit before, but if we don't change anything, higher throughputs
+
+275
+00:38:40.100 --> 00:38:47.970
+Maria Silva: Yeah, will essentially lead to more state growth, because more transactions come in, and more transactions that
+
+276
+00:38:48.120 --> 00:39:07.980
+Maria Silva: growth state will come, and so the… we'll have an acceleration in state growth. And, looking at, the, more recent, data, we can see that state growth has a median of, 74 gigabytes per year.
+
+277
+00:39:08.110 --> 00:39:15.150
+Maria Silva: So we are adding a median of 74 gigabytes of new state per year.
+
+278
+00:39:15.380 --> 00:39:22.700
+Maria Silva: If we were to proportionally, based on the… on the current block limit, if we were to proportionally
+
+279
+00:39:22.800 --> 00:39:42.429
+Maria Silva: project that to the 100 million block limit, this would be 197 gigabytes per year. So this will actually give us less than 2.5 years to reach the 650 gigabytes threshold, which is worrisome.
+
+280
+00:39:42.670 --> 00:39:52.829
+Maria Silva: And so this is the key motivation for why state creation should become more expensive now. But also, we recognize that state creation is
+
+281
+00:39:53.240 --> 00:40:02.719
+Maria Silva: itself, not harmonized. So, for instance, creating new slots is more expensive than, deploying new codes, and so we need to harmonize this better.
+
+282
+00:40:03.510 --> 00:40:15.609
+Maria Silva: So, the proposal is, fairly, straightforward. So, essentially, we are setting a unit cost per new state bytes, and these, costs
+
+283
+00:40:16.230 --> 00:40:19.230
+Maria Silva: Targets an average state growth of 6.
+
+284
+00:40:19.930 --> 00:40:28.129
+Maria Silva: gigabytes per year at the block gas limit of 300 million gas units. So, these values can be discussed, and
+
+285
+00:40:28.680 --> 00:40:36.800
+Maria Silva: The way… the point where you put them will have a big impact on the level of repricing, but these essentially
+
+286
+00:40:36.940 --> 00:40:52.009
+Maria Silva: Trying to future-proof, the, scale… the scale we will expect to have in the next year, so we have enough time to, have a more longer-term, solution for state growth.
+
+287
+00:40:52.180 --> 00:40:58.819
+Maria Silva: And with these new costs, essentially, contract deployments will become 10 times more expensive.
+
+288
+00:40:59.070 --> 00:41:05.699
+Maria Silva: Slots are… will be around 3 times more expensive, and new accounts get an increase of 8.5.
+
+289
+00:41:06.080 --> 00:41:12.959
+Maria Silva: And there's a caveat here, which is, because now contract deployments are so
+
+290
+00:41:13.080 --> 00:41:18.570
+Maria Silva: so much more expensive. We are actually hitting the limits.
+
+291
+00:41:18.650 --> 00:41:38.510
+Maria Silva: on a limit on the size of the contract you can deploy from the transaction limit. So, Fusaka has these 60 million units for a transaction. You cannot… a single transaction cannot use more than that. And that limit… and this
+
+292
+00:41:38.630 --> 00:41:41.719
+Maria Silva: Pricing, we would be only able to
+
+293
+00:41:41.780 --> 00:42:00.339
+Maria Silva: deploy a six, KP contract, so very small, contract. And so for that, we are also… this proposal is also introducing an independent metering for the co-deposit cost, so it's a simple version of multidimensional metering, essentially.
+
+294
+00:42:02.100 --> 00:42:07.969
+Maria Silva: And, yeah, we still have 2 minutes, so if you have any questions, comments, I'm happy to take them.
+
+295
+00:42:14.170 --> 00:42:19.089
+Ben Adams: Yeah, I'm just… I'm not sure how I feel about this.
+
+296
+00:42:19.560 --> 00:42:24.700
+Ben Adams: Mostly from the increase seems, very… Large.
+
+297
+00:42:26.360 --> 00:42:29.530
+Ben Adams: I don't know.
+
+298
+00:42:30.260 --> 00:42:32.139
+Maria Silva: Right. So I think…
+
+299
+00:42:32.340 --> 00:42:40.980
+Maria Silva: the point where we can argue is this one, right? Like, where do… where are you setting your… your target?
+
+300
+00:42:41.210 --> 00:42:43.090
+Maria Silva: Maybe we can discuss that.
+
+301
+00:42:43.280 --> 00:43:02.389
+Maria Silva: we can have more than 60 gigabytes per year, or maybe you can argue that 300… the 300 million gas units is too aggressive, and then that would have a direct impact on the cost. But I think this is the point we should be discussing and not the level of increase, because the level of increase is
+
+302
+00:43:02.540 --> 00:43:06.369
+Maria Silva: in isolation, yeah, I don't think it's as meaningful, like.
+
+303
+00:43:06.920 --> 00:43:09.130
+Maria Silva: We should be discussing the first point.
+
+304
+00:43:10.960 --> 00:43:17.269
+Ben Adams: Yeah, I mean, we could also factor in, like, you know, what's the improvements in hardware?
+
+305
+00:43:17.410 --> 00:43:19.540
+Ben Adams: Over that… over that time as well.
+
+306
+00:43:20.660 --> 00:43:21.620
+Maria Silva: Right.
+
+307
+00:43:21.620 --> 00:43:31.490
+Ben Adams: It's just the user impact, you know, would it… would it make the… would… Trying to limit state growth.
+
+308
+00:43:32.670 --> 00:43:36.169
+Ben Adams: that much with the prices? Will it cause the chain?
+
+309
+00:43:36.630 --> 00:43:43.800
+Ben Adams: the user experience of the chain to become. Like, if somebody wants to get a new token, that'll create a new storage.
+
+310
+00:43:44.030 --> 00:43:47.579
+Ben Adams: Yeah. I don't know, I don't know how I feel on that.
+
+311
+00:43:47.580 --> 00:43:53.840
+Maria Silva: storage slot is only 3 times, right? Like, the worst is actually contract deployments, which I think
+
+312
+00:43:54.040 --> 00:43:56.939
+Maria Silva: It's sort of more manageable.
+
+313
+00:43:57.110 --> 00:44:05.029
+Maria Silva: Because it's something that is not done as much. For the new accounts, you could also argue that 8 times is too much.
+
+314
+00:44:05.980 --> 00:44:07.480
+Ben Adams: I mean, I'm less…
+
+315
+00:44:07.710 --> 00:44:16.019
+Ben Adams: Probably less worried about new accounts, and contract deployments than… well, obviously, 6 kilobytes for a contract.
+
+316
+00:44:16.690 --> 00:44:26.740
+Ben Adams: yeah, then the new storage slots. Is there… A more common thing that… Regular users would experience.
+
+317
+00:44:27.910 --> 00:44:31.989
+Ben Adams: But yeah, I… I don't know if it's…
+
+318
+00:44:33.100 --> 00:44:36.720
+Ben Adams: I'm not saying it's bad, I'm just saying, health concerns.
+
+319
+00:44:37.280 --> 00:44:47.289
+Maria Silva: Yeah, it's… yeah, it's something we need to… to think about. Okay, so conscious of time, we'll move to the next one. If you have any comments, please use the chat.
+
+320
+00:44:47.480 --> 00:44:55.260
+Maria Silva: And the next one is the state access, harmonization. So…
+
+321
+00:44:56.150 --> 00:45:12.549
+Maria Silva: Here, the motivation is essentially, we know that the state access operations, so reads and writes, have been deteriorating due to the increase in the state size. And we know that state access is a known bottleneck for higher throughputs.
+
+322
+00:45:12.670 --> 00:45:15.900
+Maria Silva: In addition to these things, and…
+
+323
+00:45:16.720 --> 00:45:26.100
+Maria Silva: We know that block-level access lists and EPVS will impact the relative costs that state access has to data and compute.
+
+324
+00:45:26.260 --> 00:45:38.580
+Maria Silva: And so, we need to reprise things to be first in line with the current performance of these operations, and second, in line with these two new changes that are,
+
+325
+00:45:38.740 --> 00:45:42.379
+Maria Silva: Changing the relative costs of these operations.
+
+326
+00:45:43.450 --> 00:45:54.439
+Maria Silva: And so, the proposal is fairly simple, it's just we are doing a broad repricing on all state gas parameters, or state access gas,
+
+327
+00:45:54.670 --> 00:46:10.599
+Maria Silva: parameters, and, we'll use state benchmarks to, the final numbers. And this has an impact on S-store, S-load, the call opcodes, balance, self-destruct, and the X, opcodes.
+
+328
+00:46:10.850 --> 00:46:30.200
+Maria Silva: And when compared with AT32, which was the proposal that Guillaume talked about, earlier, this essentially would assume a worst-case contract size. So, we are not fully unlocking state access scaling, so if we were to implement AT32,
+
+329
+00:46:30.330 --> 00:46:32.149
+Maria Silva: We would be able to make
+
+330
+00:46:32.260 --> 00:46:47.960
+Maria Silva: some operation, or some state access, or in this case, state access to smaller contracts, cheaper than just implementing this proposal. But I would say this proposal is the base, so we are doing a full,
+
+331
+00:46:48.590 --> 00:47:03.510
+Maria Silva: a full harmonization, and then, AT32 kind of unlocks this, additional scaling by, allowing us not to price on the worst case, but, have that, differentiation.
+
+332
+00:47:05.600 --> 00:47:13.120
+Maria Silva: And yeah, this is the proposal, so I'm happy to take any comments. I think we still have some time.
+
+333
+00:47:28.340 --> 00:47:32.590
+Maria Silva: Okay, if there are no comments…
+
+334
+00:47:33.120 --> 00:47:39.540
+Maria Silva: then I can stop share, and we can move to the next presentation.
+
+335
+00:47:39.800 --> 00:47:49.619
+Maria Silva: She's from Carlos, about contract bytecode, By duplication these counts.
+
+336
+00:47:50.520 --> 00:47:51.319
+CPerezz: Oh.
+
+337
+00:47:52.300 --> 00:48:06.130
+CPerezz: I made the same presentation, like, on Thursday. I can… I'm happy to do it again, but if people was there, and we prefer to discuss directly or something like that, I'm also happy to do that.
+
+338
+00:48:06.280 --> 00:48:11.050
+CPerezz: Anyways, if you want me to do it, I can definitely do it.
+
+339
+00:48:13.690 --> 00:48:23.829
+Maria Silva: Maybe what we can do is, like, is anyone on the call that really wants to see the presentation? Please raise your hand, and if not, we can just discuss it.
+
+340
+00:48:34.040 --> 00:48:36.429
+Maria Silva: Okay, so Ansgar is asking for a recap.
+
+341
+00:48:36.430 --> 00:48:45.389
+CPerezz: Yeah, so the recap, or the TLDR, is basically, if we do all of the state,
+
+342
+00:48:45.390 --> 00:49:01.590
+CPerezz: gas price increases. What… what will essentially happen is that in things like deploying a contract, we are charging an outrageously unfair amount of gas to the user when the bytecode is duplicated.
+
+343
+00:49:01.590 --> 00:49:08.179
+CPerezz: So, nowadays, every single client, when they have to deploy bycode that already exists.
+
+344
+00:49:08.180 --> 00:49:33.009
+CPerezz: they charge the user the same price, whether the bytecode is duplicated or not, but they actually perform the duplication, so they don't store the bytecode twice, which of course makes sense. Thus, it doesn't make sense for the user to actually pay for that, especially when a 25, 24 kilobyte contract, potentially will be, like, around 100 bucks, with the if price at $400.
+
+345
+00:49:33.010 --> 00:49:46.420
+CPerezz: Which is a considerable amount of money. This also, paired with the fact that, account creation costs will go up, and that we should indeed,
+
+346
+00:49:47.630 --> 00:49:50.529
+CPerezz: Try to encourage,
+
+347
+00:49:50.530 --> 00:50:09.409
+CPerezz: let's say, reuse templates and this kind of stuff, and also paired together with the fact that with hands analysis, we clearly saw that the 97% of the bytecode that is deployed in Ethereum, it's basically, like, duplicated, so the contracts are just
+
+348
+00:50:09.410 --> 00:50:16.079
+CPerezz: complete copies, bytecode-wise. I don't think it makes any sense to charge, users,
+
+349
+00:50:17.140 --> 00:50:20.369
+CPerezz: that amount. But yeah, that's the TLDR, basically.
+
+350
+00:50:23.310 --> 00:50:30.050
+Ansgar Dietrichs: And maybe a question, then, from my side on this. Again, one of those optimizations that I think makes a lot of sense.
+
+351
+00:50:30.190 --> 00:50:38.130
+Ansgar Dietrichs: one unfortunate aspect here is that, right, with EOF, what we were thinking about doing was having, like, a nice separate code section within contract code.
+
+352
+00:50:38.240 --> 00:50:43.240
+Ansgar Dietrichs: And then the code section really could be identical anytime you have the same contract deployed.
+
+353
+00:50:43.370 --> 00:50:54.339
+Ansgar Dietrichs: Without this, obviously the problem is that, like, Solidity usually, like, basically puts constants that are defined… that are defined at deploy time.
+
+354
+00:50:54.340 --> 00:51:10.000
+Ansgar Dietrichs: into the bytecode itself. Not every contract uses that, but many, many do. So, I don't know, tokens or something have the token name and the number of digits in the code, and so they are all slightly different from each other.
+
+355
+00:51:10.000 --> 00:51:12.290
+Ansgar Dietrichs: These kind of things.
+
+356
+00:51:13.020 --> 00:51:23.470
+Ansgar Dietrichs: So basically, I'm wondering right now, do we have a good feeling of, like, what classes of contracts this is basically usable for because of this limitation, versus…
+
+357
+00:51:23.490 --> 00:51:41.889
+Ansgar Dietrichs: kind of what classes of contracts cannot make use of that? Have we, like, does the Solidity team have a take on this? Would they, for example, then at least stop using constants in the code to more make use of this? Like, do we, yeah, do we basically have a feeling for the, kind of, the practicalities around this limitation?
+
+358
+00:51:43.530 --> 00:51:54.240
+Ben Adams: It would certainly, like, all Uniswap V2 and V3, liquidity pools. For instance, they're all…
+
+359
+00:51:54.490 --> 00:51:59.549
+Ben Adams: duplicated contracts, and they use the INET code to That'll allow you.
+
+360
+00:51:59.700 --> 00:52:05.100
+Ben Adams: It would encourage people, maybe, to use more standard contracts, also.
+
+361
+00:52:05.780 --> 00:52:12.710
+Ben Adams: And then pass, because you could initialize, like, token name and…
+
+362
+00:52:13.040 --> 00:52:17.240
+Ben Adams: echo and so forth in the… in ECOD, rather than in the contract itself.
+
+363
+00:52:21.550 --> 00:52:24.520
+CPerezz: I completely agree with what Beth said.
+
+364
+00:52:24.780 --> 00:52:28.610
+CPerezz: I… I don't think there's really any, heavy…
+
+365
+00:52:28.630 --> 00:52:36.120
+CPerezz: pushback or any, like, issues. I think the only issue or discussion is more, like, the UX problem, but…
+
+366
+00:52:36.120 --> 00:52:50.429
+CPerezz: Besides that, most of the contracts, or contract accounts, share the same exact bytecode. Anyways, if Han was looking at that, if I remember correctly, the number was 97%, so…
+
+367
+00:52:50.430 --> 00:53:11.469
+CPerezz: I think most of the people that deployed these contracts will definitely benefit from that. And if we can move towards safer and more common standards, I also think it's a… it's a victory. Anyone is free to, of course, keep deploying whatever they want, but if we can coerce to having more standardized things, it makes analysis of the state and a lot of stuff significantly easier to do.
+
+368
+00:53:15.020 --> 00:53:34.049
+Ansgar Dietrichs: Do we have any client-side feedback on any of the… are there any complexities around this? Because obviously, as you said, right, like, in practice, everyone already deduplicates locally anyway. Is there any complexity around, basically, like, making this now enshrined in consensus about, like, what is and is not duplicated? Or is this kind of straightforward?
+
+369
+00:53:34.050 --> 00:53:41.129
+CPerezz: Well, the exact point of this EIP is to make it such that the implementation for clients is trivial, meaning…
+
+370
+00:53:41.710 --> 00:53:52.119
+CPerezz: it's the user who has the, let's say, UX burden, to put it in some way, to actually figure out which account holds the same bytecode or code hash.
+
+371
+00:53:52.120 --> 00:54:05.660
+CPerezz: as the bytecode that the user wants to deploy in this transaction, right? So, this was chosen and done via access lists, purely because in that way, we don't actually need to make any crazy changes on clients.
+
+372
+00:54:05.700 --> 00:54:20.020
+CPerezz: Of course, clients, in my opinion at least, could optionally provide this reverse, map that goes from bytecode to addresses. This is something that a lot of third-party
+
+373
+00:54:20.160 --> 00:54:33.949
+CPerezz: providers, actually give you, to name one, Etherscan, basically. But basically, that's the smoothest thing for clients, at least in my perspective, like, they need to do very few stuff.
+
+374
+00:54:35.960 --> 00:54:40.759
+Ben Adams: Oh, are you saying… You'd additionally like to provide an option where
+
+375
+00:54:41.540 --> 00:54:43.810
+Ben Adams: You could just say, copy this contract.
+
+376
+00:54:43.950 --> 00:54:46.900
+Ben Adams: Rather than having to put it all in cold it.
+
+377
+00:54:48.390 --> 00:54:56.139
+CPerezz: I mean, I wasn't going that far, we can certainly explore that. I mean, you, you need to…
+
+378
+00:54:56.260 --> 00:55:19.810
+CPerezz: I think you need to run the init code anyways, so I'm not sure to which extent it will matter, because after running the init code, you already have the bytecode, so I don't think it's an optimization to load it from somewhere, although you can, of course, do it if you want. What I'm trying to say is, I had to choose between forcing clients to implement a reverse mapping, no matter what, to actually make them check
+
+379
+00:55:19.810 --> 00:55:25.740
+CPerezz: If every single deployment is deploying bytecone that already exists,
+
+380
+00:55:25.740 --> 00:55:39.420
+CPerezz: Or, instead, we have the access list approach, which moves the burden to the user and makes things significantly easier for clients. So I chose this route, of course, debatable, but, yeah, this…
+
+381
+00:55:39.850 --> 00:55:41.209
+CPerezz: To go forward with it.
+
+382
+00:55:42.560 --> 00:55:54.529
+Maria Silva: Okay, so conscious of time, I'll have to wrap this discussion, and we'll move to the last presentation. So, Guillaume is talking about chunk-based code, localization.
+
+383
+00:55:55.250 --> 00:55:56.479
+Maria Silva: Yomi can go.
+
+384
+00:55:56.720 --> 00:56:03.849
+Guillaume: Oh, yeah, sorry, I was just trying to answer, Carl about the transaction type as well.
+
+385
+00:56:04.180 --> 00:56:18.529
+Guillaume: So while I load my, my presentation, I will just say that, we… yeah, the, the converse, sorry, the transaction type means if you enhance, further transaction types.
+
+386
+00:56:18.530 --> 00:56:25.199
+Guillaume: You will not be able to inherit all of that with the new transaction types, so I think it's better to do it this way.
+
+387
+00:56:25.380 --> 00:56:32.839
+Guillaume: Okay, so… As I said that it's just done loading, I hope you can see it.
+
+388
+00:56:34.150 --> 00:56:53.920
+Guillaume: Yeah, so there's this old EIP, 2926, that was revived. It's about, chunk-based code miracleization, and the idea is that the vertical tree EIP had many advantages, but one of them was that it wouldn't, introduce code, code chunking.
+
+389
+00:56:54.190 --> 00:56:55.890
+Guillaume: And,
+
+390
+00:56:56.050 --> 00:57:08.140
+Guillaume: it came to… like, we realized in Berlin that we could actually do that in the MPT and already address some of the problems. Okay.
+
+391
+00:57:08.760 --> 00:57:21.109
+Guillaume: Yep. And the problem is being that, first, there's currently a limit on the code size, you can only load, you can only write code that is up to 24 kilobytes.
+
+392
+00:57:21.400 --> 00:57:40.170
+Guillaume: And removing this limit is a bit of a problem, because it takes more space in the database that you don't necessarily pay for. I mean, you pay at deployment, but you still need to pay for the loading. If you only need one byte out of that bytecode, you need to download… sorry, you need to load everything into memory.
+
+393
+00:57:40.170 --> 00:57:51.599
+Guillaume: There's the… there's a mismatch between what it costs to execute code and the size of the code, which could be 24 kilobytes, or hopefully more.
+
+394
+00:57:51.930 --> 00:58:08.350
+Guillaume: So the CIP and the code chunking, in general, is trying to address this issue, that you, only read one chunk at a time. There are other problems, including provers. It has been demonstrated that,
+
+395
+00:58:08.350 --> 00:58:14.639
+Guillaume: just doing Xcode size, just getting the size of the code means you need to load the entire code, and
+
+396
+00:58:14.640 --> 00:58:22.739
+Guillaume: And get the size of that bytecode, so that's a good way to kill every prover, and in fact, it has been done.
+
+397
+00:58:23.580 --> 00:58:36.960
+Guillaume: And, yeah, in general, we want, I mean, we, in several ACDs, people have come in favor of removing the code size, so doing chunking can, can offer this,
+
+398
+00:58:36.960 --> 00:58:49.830
+Guillaume: like, offers a solution to this. Oh, I forgot, of course, the code has to be attached in the witness, so if there's no limit in the code, your witness will also explode inside.
+
+399
+00:58:50.770 --> 00:59:12.020
+Guillaume: So yeah, I already more or less explained what it does. It breaks the code into chunks, and you only load one chunk at a time, so if you don't need to execute everything, you only load what you need to execute. You can do preloading and things like this, of course, but yeah, ultimately, you can better manage resources, especially if you remove the code size.
+
+400
+00:59:12.020 --> 00:59:18.749
+Guillaume: So what it does, it adds two new fields, the code size itself, so that you can,
+
+401
+00:59:18.940 --> 00:59:30.289
+Guillaume: perform the Xcode size operation without loading the code, and it adds a code root that contains every chunk inside the miracle tree, so that you can commit to this.
+
+402
+00:59:30.370 --> 00:59:44.479
+Guillaume: And then, like I said, you only load codes that you… sorry, code chunks that you need, and you pay for only the accesses you make, so it's more granular, it's better in terms of resource usage.
+
+403
+00:59:44.480 --> 00:59:53.470
+Guillaume: In terms of, of witness size, and, and also in terms of price, because once again, you only pay for what you use.
+
+404
+00:59:54.480 --> 01:00:12.739
+Guillaume: Yeah, so, already covered most of that. Better developer experience, better scalability, you don't have to load a lot more code, inside memory. It's got, potential smaller bandwidth because of witness,
+
+405
+01:00:12.740 --> 01:00:31.679
+Guillaume: Witnesses being smaller as well, and it removes the need for… okay, it removes an attack vector. There's still the concept of transition. In fact, it's exactly the same as the one in 1832. They can be both done at the same time, with exactly the same complexity.
+
+406
+01:00:32.440 --> 01:00:49.419
+Guillaume: And, yeah, it's just about calculating the code size and the code root. And then, of course, in every new contract, we'll already, upon creation, activate this and lift the max code size.
+
+407
+01:00:49.500 --> 01:00:53.329
+Guillaume: That's also pretty much it. Ben, you have a question?
+
+408
+01:00:55.400 --> 01:00:57.160
+Ben Adams: Yeah, if… if…
+
+409
+01:00:57.400 --> 01:01:05.869
+Ben Adams: This is used as the actual internal representation for the clients. Would it be significantly slower to load contract paid?
+
+410
+01:01:06.040 --> 01:01:14.840
+Ben Adams: Because, like, 20… if it was in 31 bike chunks… Then for… a 24,000…
+
+411
+01:01:15.140 --> 01:01:20.910
+Ben Adams: So, like, contract, if you used it all, would be, like, 800,000 reads.
+
+412
+01:01:21.590 --> 01:01:22.180
+Ben Adams: Is that correct?
+
+413
+01:01:22.180 --> 01:01:29.530
+Guillaume: Yeah, I mean, that's an internal implementation detail. Clearly, it would make sense to
+
+414
+01:01:29.530 --> 01:01:45.219
+Guillaume: organize them by pages, so you could, you could pull several, several, code chunks together, inside a single database key. So, there's a, there's a sweet spot that will depend on the database system and the database model.
+
+415
+01:01:45.220 --> 01:01:49.569
+Guillaume: Where you can, you can have several chunks
+
+416
+01:01:49.570 --> 01:01:54.449
+Guillaume: pulled together and try to not load everything at the same time.
+
+417
+01:01:54.930 --> 01:02:06.820
+Guillaume: Yeah, sorry, I kind of forgot the initial question, but overall, the idea is that it's an implementation detail, and the goal is precisely to reduce the…
+
+418
+01:02:07.030 --> 01:02:10.560
+Guillaume: The performance impact of loading big code.
+
+419
+01:02:14.670 --> 01:02:18.620
+Maria Silva: Okay, thank you, Guillaume, and we are on time.
+
+420
+01:02:18.670 --> 01:02:40.839
+Maria Silva: So, I will just, remind everyone that next week we have another, call where we go through the remaining EIPs. If there are any more discussions or questions or comments, there's a Discord channel called EVM Pricing. I will,
+
+421
+01:02:40.840 --> 01:02:43.870
+Maria Silva: Ask you to go there and discuss.
+
+422
+01:02:43.990 --> 01:02:48.880
+Maria Silva: And are there any last comments or thoughts before we wrap up?
+
+423
+01:02:57.320 --> 01:02:59.400
+Maria Silva: Okay, so if… oh, Anskar?
+
+424
+01:02:59.470 --> 01:03:05.269
+Ansgar Dietrichs: Yeah, just one thing with it that confused… confused me. The 8058 that Carlos
+
+425
+01:03:05.460 --> 01:03:14.509
+Ansgar Dietrichs: presented, I don't see it on the PFI list. Is that still going to be on there? Because as of now, it looks like, to me at least, that it's not proposed for Amsterdam.
+
+426
+01:03:15.980 --> 01:03:21.680
+CPerezz: The PR was approved by Stocks, but I… maybe it's not merged yet?
+
+427
+01:03:24.170 --> 01:03:31.089
+Ansgar Dietrichs: Okay, yeah, so I just wanted to check, if it's in progress of being proposed, then that's fine. I just… I just was confused that I couldn't find it. Awesome, thanks.
+
+428
+01:03:34.630 --> 01:03:39.239
+Maria Silva: Thank you so much for joining, and yeah, we'll see you next week.
+
+429
+01:03:42.750 --> 01:03:44.080
+Guillaume: Thanks, Mario, I'll see you next week.
+
+430
+01:03:44.080 --> 01:03:45.000
+Ansgar Dietrichs: everyone.
+
+431
+01:03:45.400 --> 01:03:45.980
+Maria Silva: Right.
+
+432
+01:03:46.320 --> 01:03:46.840
+jochem-brouwer: Thank you.
+

@@ -1,0 +1,882 @@
+WEBVTT
+
+1
+00:05:14.370 --> 00:05:15.600
+Joshua Rudolf: Hello!
+
+2
+00:05:16.570 --> 00:05:17.830
+Joshua Rudolf: Welcome, everybody.
+
+3
+00:05:18.180 --> 00:05:19.880
+Joshua Rudolf: Thank you for joining.
+
+4
+00:05:20.000 --> 00:05:22.729
+Joshua Rudolf: We will get started in a minute.
+
+5
+00:06:05.910 --> 00:06:08.520
+Joshua Rudolf: Cool, I think. Let's get started.
+
+6
+00:06:09.018 --> 00:06:36.919
+Joshua Rudolf: Yeah, thanks. Everybody for joining. This is the L 2 interrupt working group. We have a really solid agenda today, I believe. And excited to, yeah, just jump into things. I, yeah, I guess there, I can just hand it off. Actually. So let's jump into agenda. Item number one, which is a few quick updates on Erc. 7,786 cross chain messaging.
+
+7
+00:06:39.320 --> 00:06:54.820
+frangio: Yep, thanks, Josh, so just a few updates. Here in the last over the last few weeks, we have had a series of technical calls involving people from defi wonderland, espresso glacius.
+
+8
+00:06:54.990 --> 00:06:57.640
+frangio: And the purpose was to agree on.
+
+9
+00:06:57.920 --> 00:07:03.989
+frangio: you know, any potential changes to this Erc, and on the exact messaging interface to propose.
+
+10
+00:07:05.490 --> 00:07:12.380
+frangio: You can find some notes from this call in this link.
+
+11
+00:07:13.837 --> 00:07:28.199
+frangio: We had quite a bit of back and forth about the exact extensibility mechanism to include but as of last week we've settled on a design for the core of the Crc that we've agreed to freeze.
+
+12
+00:07:28.730 --> 00:07:31.862
+frangio: It is now in an open Pr.
+
+13
+00:07:32.800 --> 00:07:50.139
+frangio: one of the the changes that's included in this Pr is now the adoption of interoperable binary addresses. This new standard that is also coming out of this interrupt working group. And
+
+14
+00:07:50.280 --> 00:07:55.360
+frangio: that is the only thing that's that's blocking this this this for me, Burge, since that's also a
+
+15
+00:07:55.900 --> 00:08:00.010
+frangio: for now an open Pr, and on the Erc's repo
+
+16
+00:08:01.820 --> 00:08:08.410
+frangio: a couple of things that we will be working on in the future are the an interface for
+
+17
+00:08:08.680 --> 00:08:17.369
+frangio: paying for gas, for messages that are sent cross chain and potentially some other
+
+18
+00:08:17.690 --> 00:08:20.839
+frangio: things built on on the extensibility mechanism.
+
+19
+00:08:21.664 --> 00:08:24.350
+frangio: But the gas payments is is one of the main ones.
+
+20
+00:08:25.430 --> 00:08:27.919
+frangio: And yep, that's all that I had, sir.
+
+21
+00:08:33.510 --> 00:08:34.580
+Joshua Rudolf: Thank you, Francio.
+
+22
+00:08:35.450 --> 00:08:48.239
+Joshua Rudolf: Cool up. Next, we have some updates from a recent interop event in Athens, interopolis, and I think a few other notes as well on an upcoming interop event, maybe starting off with.
+
+23
+00:08:52.270 --> 00:09:09.729
+Ellie Davidson: yeah, I can start off. So last week was interopolis. It was a very good event. I'll share some of my takeaways. And then Jim also will share some of his as well. So we chatted about 7, 7, 8, 6, quite a bit, and just like the incentives around that I think that we kind of
+
+24
+00:09:09.920 --> 00:09:32.230
+Ellie Davidson: all recognize that 7, 7, 8, 6 is going to be difficult to make successful. But we think it's important to still work towards it, anyway. We also discussed about what apps actually want out of their interop infra. And so the things that the core components we came down to were that apps and their users want speed.
+
+25
+00:09:32.320 --> 00:09:54.930
+Ellie Davidson: they need execution guarantees, so no failed transactions. And then the apps need access to users from other chains and liquidity from other chains, and these are the 4 most important things for cross chain apps. And so any sort of interop infra needs to provide that. Yeah. Unfortunately, security was not on. That was not on that list.
+
+26
+00:09:55.000 --> 00:10:14.879
+Ellie Davidson: The other big takeaway, I think, was that a lot of interop and chain abstraction stuff really should be happening in the wallets, because the wallets is where the user is 1st interacting with a chain. And really, the wallets are the ones that have the power to create a very seamless cross chain experience.
+
+27
+00:10:15.020 --> 00:10:18.040
+Ellie Davidson: So I think that was the other takeaway
+
+28
+00:10:18.696 --> 00:10:30.473
+Ellie Davidson: and then I think my final takeaway also was that we had a really good ama with the Ef. And I can post the picture of the whiteboard we have. But
+
+29
+00:10:31.320 --> 00:10:42.010
+Ellie Davidson: yeah, I think a lot of the you know, ef goals were very aligned with a lot of the goals that the rest of us there wanted to see, for example, signaling about which
+
+30
+00:10:42.450 --> 00:11:01.319
+Ellie Davidson: ercs your eips, you know. Maybe certain people in ef support, not like a formal support, but just kind of signaling that they like read it, and they think it's a good idea. We also talked about ef doing more wallet research as well as faster finality and shorter slot times. So
+
+31
+00:11:02.364 --> 00:11:31.109
+Ellie Davidson: yeah, that was that. And then also, before I stop, I will plug that we have in about 2 weeks, 2 and a half weeks. We're having interop days at Zoo, Berlin. So this is the kind of the same week, or the same chunk of time as Protocol Berg and all of those other ones. So we'll have 2 days of interop right now. The plan is that the 1st day is going to be focused on kind of short term practical, interrupt, like, what are the problems we have at this very moment? And what do we need to
+
+32
+00:11:31.110 --> 00:11:48.839
+Ellie Davidson: solve? And then I'll be leading that day, and then the second day will be kind of more long term focused on like the vision of l, 1 interop, native roll up interop, etc, and Luca from L. 2 B. Will kind of be in charge of that. So if anybody's interested in coming to that, we would absolutely love to have you.
+
+33
+00:11:51.570 --> 00:11:53.339
+Jim Chang: Cool and I can add.
+
+34
+00:11:53.340 --> 00:11:54.020
+Ellie Davidson: I know what.
+
+35
+00:11:54.320 --> 00:12:13.659
+Jim Chang: First, st just want to say, I also be at Zuberlin so excited to see Ellie and and crew there, too. Secondly, yeah. Interopolis was great, thanks to Helena and Dylan from the sprinter team, from for planning that that was like a really really cool event. Just 48 h of just straight.
+
+36
+00:12:13.660 --> 00:12:30.099
+Jim Chang: you know, nerding out over interrupt stuff. And and that was like a really special experience that I, personally haven't been to a conference like that ever really in my crypto career. So it's cool in terms of takeaways. I also want to echo that there was just like a lot of
+
+37
+00:12:30.160 --> 00:12:33.319
+Jim Chang: interest for the the Ef. To
+
+38
+00:12:33.390 --> 00:12:52.719
+Jim Chang: have kind of more dialogue around with builders around what standards they want to coalesce around in order to improve the crossing experience between roll ups, and also with roll up to to Mainnet. So that was like definitely so such a big takeaway for me that I want to just repeat what Ellie just said
+
+39
+00:12:53.155 --> 00:13:04.490
+Jim Chang: and then new stuff. So we also ran a few sessions on 2 topics. One was on solver economics. So around. How do you
+
+40
+00:13:04.988 --> 00:13:16.149
+Jim Chang: you know, incentivize more solvers to participate in the system? What can you build in order to do so if it's, you know, public goods or or open standards, in order to involve more
+
+41
+00:13:16.400 --> 00:13:31.879
+Jim Chang: participation on the solver side. It also kind of got philosophical in terms of, you know, do we want to have more solvers? Do we want to build incentives to have more solvers? Or is it okay to have solver centralization and have winter mute, basically facilitate all this flow. So
+
+42
+00:13:32.195 --> 00:13:54.309
+Jim Chang: yeah, solver stuff always gets philosophical really quickly. And then, lastly, we kind of coalesce around auction mechanism, design as one lever that we can pull in order to incentivize more participation, more than just like a vanilla. 1st come first, st serve, or even like a Dutch auction. You can have scoring, you can have, you know, exclusivity windows. And so it gets pretty interesting of a design space
+
+43
+00:13:54.690 --> 00:14:19.570
+Jim Chang: and then the second thing we talked about was resource locks. And just, you know, talking about various implementations of it. You know, with the compact and in some other implementations. And it was basically just kind of like a 1 on one or a 2 0, 2 session, so to speak. Just, you know, showing people what resource locks were, how they're different from the standard flow that intent protocols have right now, and what the benefits were.
+
+44
+00:14:19.570 --> 00:14:38.319
+Jim Chang: and the different types where we have on chain versions like the compact, and we have off chain versions that you know. Maybe rely on some sort of Mpc. Scheme and would need maybe some additional reassurances on top of 7, 7 0. 2, in order to enable that. So that was a pretty cool discussion.
+
+45
+00:14:49.950 --> 00:14:51.599
+Joshua Rudolf: Awesome. Thanks, Jim.
+
+46
+00:14:51.750 --> 00:15:05.639
+Joshua Rudolf: And Deli, yeah, just plus one. That was a yeah, really, really, great event. Really appreciate the Interopolis team solver team for sorry sprinter team for putting that together. It was great and yeah excited to to see more people hopefully in Berlin.
+
+47
+00:15:07.980 --> 00:15:22.110
+Joshua Rudolf: Cool. If there's nothing else on that on Interopolis we can move on to the next agenda item, which is a few quick updates on the open, intense framework.
+
+48
+00:15:22.870 --> 00:15:30.200
+Joshua Rudolf: One second, while I actually have a few slides I will share here quickly. Just give me one second
+
+49
+00:15:36.910 --> 00:15:42.290
+Joshua Rudolf: oops. Sorry. I just need 1 min having some technical difficulties. Apologies.
+
+50
+00:15:45.300 --> 00:15:46.670
+Joshua Rudolf: secretary.
+
+51
+00:15:53.330 --> 00:15:56.070
+Joshua Rudolf: cool, all set. So this should work.
+
+52
+00:16:02.320 --> 00:16:08.940
+Joshua Rudolf: Okay? Hopefully, you can see my screen just yell if you cannot. Yeah.
+
+53
+00:16:09.250 --> 00:16:13.689
+Joshua Rudolf: Okay, cool. So yeah. Starting off with this quick update on
+
+54
+00:16:13.910 --> 00:16:37.449
+Joshua Rudolf: the open, intense framework. As many people here, I think, already know. This is an effort that was initially seeded by hyperlane Ef. And a few others. Late last year, early this year the goal from the start was to have a maximally open and neutral framework to accelerate getting intense based systems on all chains.
+
+55
+00:16:37.780 --> 00:16:42.609
+Joshua Rudolf: both existing chains, of course, and new long tail chains.
+
+56
+00:16:42.670 --> 00:17:10.119
+Joshua Rudolf: open and neutral, are key characteristics here, but I think just as important, or in some ways even more important here is that this needs to be a solution that delivers a high quality experience to users, both developers, and I guess, end users, of course. So as we started iterating on this and discussing what's the best possible version of this open, intense framework, I think it quickly became obvious to many of us that the best path forward here was to
+
+57
+00:17:10.300 --> 00:17:13.989
+Joshua Rudolf: expand the group of core contributors to help drive this forward
+
+58
+00:17:14.050 --> 00:17:39.929
+Joshua Rudolf: again, both to deliver a neutral product, but also to deliver a high quality product that we can actually get into the hands of as many users as possible as quickly as possible. So with this again, some of this is sort of already been shared on previous calls. But just as a quick recap this, we are calling the open, intense framework 2.0, not to, you know, overdo it on the marketing, but just to sort of
+
+59
+00:17:39.990 --> 00:17:50.909
+Joshua Rudolf: to to separate out what this new initiative is super happy that we now have Lefi across open Zeppelin and Hyperlane all coming together to to drive this forward with folks from the Ef.
+
+60
+00:17:51.240 --> 00:17:53.260
+Joshua Rudolf: And yeah.
+
+61
+00:17:53.420 --> 00:18:15.340
+Joshua Rudolf: so just quickly recapping the goals of the oif 2.0 as a bit of a refresher again. So this remains unchanged from the 1.0 needs to be dead simple to get intense base bridging to all chains. Intents aren't a silver bullet. Of course they don't magically get us to this
+
+62
+00:18:15.360 --> 00:18:28.540
+Joshua Rudolf: fully chain, abstracted future. But they do help to solve real user pain points today in a really meaningful way, which is why myself and many others are excited for them. So who are the customers of this.
+
+63
+00:18:28.620 --> 00:18:35.260
+Joshua Rudolf: both existing chains and new chains? A bit of a second secondary customer. Here are the solvers.
+
+64
+00:18:35.850 --> 00:18:58.239
+Joshua Rudolf: There are, of course, different classes of solvers in terms of more institutional, highly sophisticated solvers, and those on the other side of the spectrum. So Tbd, if we can solve problems for the more institutional solvers, or sort of like what we are best positioned to solve
+
+65
+00:18:58.240 --> 00:19:08.699
+Joshua Rudolf: for these players. But I do think there is a path where we can develop some components and tools that provide value to a large number of solvers in a real way.
+
+66
+00:19:08.700 --> 00:19:36.519
+Joshua Rudolf: And yeah, again, this is something that many folks who are part of the Oif 2.0 have been thinking about for a long time. Open Zeppelin Lefi across Hyperlane, really everyone, and just as a quick note again. Like for anyone who wants to provide feedback. Input get more involved. Please. Message me. Message any of us involved. Again, this is still somewhat early days, though we hope to move quickly here.
+
+67
+00:19:37.445 --> 00:19:40.190
+Joshua Rudolf: So yeah, let me go to the next slide.
+
+68
+00:19:43.820 --> 00:20:05.079
+Joshua Rudolf: so yeah, how are we actually doing work with this big collection of diverse teams joining together on the Oif. The default for these kinds of of group projects probably is that it moves slowly, eventually grinds to a halt, delivers a lower quality product than than a single team would deliver.
+
+69
+00:20:05.080 --> 00:20:19.150
+Joshua Rudolf: But I wanted to share just a few thoughts. Why, I'm bullish that I believe this won't be the case here for us with the oif. And then, hopefully, I'm not eating these words in a few months, but something that we'll have to continue to be mindful of
+
+70
+00:20:19.310 --> 00:20:28.829
+Joshua Rudolf: the the way that we're splitting up the work. It just makes a lot of sense to me, which is basically dividing it up into the work streams that that you see here.
+
+71
+00:20:28.950 --> 00:20:45.069
+Joshua Rudolf: Anyone that's on the call and is leading any of these work streams feel free to jump in here in a second, but if you have anything to add, so all of these work streams will be worked on in parallel, of course, won't all be delivered in the same time. And
+
+72
+00:20:45.430 --> 00:21:04.820
+Joshua Rudolf: yeah, I I don't want to, you know. Have any of us commit to timelines? At this point, since it it may be a little difficult or just too early to say but just maybe spending the I can just maybe share a bit here for this work. Stream one. The smart contracts work stream.
+
+73
+00:21:04.820 --> 00:21:18.249
+Joshua Rudolf: This is likely to be delivered first, st partially because we are very fortunate and grateful that this is something that the Lefi team has been working on for quite a while, that they're not starting from scratch here.
+
+74
+00:21:18.250 --> 00:21:23.690
+Joshua Rudolf: All of ethereum will fortunately get to leverage and benefit from this.
+
+75
+00:21:23.690 --> 00:21:51.559
+Joshua Rudolf: and just really quickly some of the milestones here in this work stream one includes integrating with compact, which is something that the uniswap team has been working on for a while here, shipping, intent expression, smart contracts, shipping on chain, auction, smart contracts and shipping cross-chain verification module. So just to give sort of a brief taste for what is in this work stream here?
+
+76
+00:21:53.800 --> 00:22:02.540
+Joshua Rudolf: yeah, that is most of what I had here for just wanted to to share those sort of updates and and refresh
+
+77
+00:22:02.830 --> 00:22:04.509
+Joshua Rudolf: on the oif
+
+78
+00:22:04.750 --> 00:22:11.740
+Joshua Rudolf: anyone who's been involved in oif if you have anything you want to add feel free to jump in right now. Otherwise I can keep going.
+
+79
+00:22:14.740 --> 00:22:15.280
+Jim Chang: Oh, go for it!
+
+80
+00:22:15.280 --> 00:22:19.470
+Hart Lambur: No, Jim, I was just gonna give Josh a shout out for pushing this forward. That's all.
+
+81
+00:22:23.020 --> 00:22:29.430
+Jim Chang: Yeah, I agree, Josh, you didn't add your own name into the the work streams. So.
+
+82
+00:22:29.430 --> 00:22:29.960
+Joshua Rudolf: Yeah.
+
+83
+00:22:29.960 --> 00:22:31.948
+Jim Chang: Colin, you're on on that one.
+
+84
+00:22:32.600 --> 00:22:39.059
+Jim Chang: so yeah, just just maybe like the super brief update on on the oif. So
+
+85
+00:22:39.960 --> 00:22:53.609
+Jim Chang: I think Alexander shared the link for the repo for the oaf. So we had our initial few commits there for the smart contracts. Work stream. It's like what Josh said. It's basically just like
+
+86
+00:22:53.840 --> 00:22:59.429
+Jim Chang: a bunch of interfaces that can you know, connect to a few modules that have different
+
+87
+00:22:59.470 --> 00:23:26.509
+Jim Chang: ways in which you can express an intent, whether it's through you know, resource lock, or a non resource lock, whether you can configure different oracles, whether you have different auction mechanisms. So please do take a look at that and any comments, or you can reach out to us. And we can talk about it. Because, yeah, I mean, we. We hope it's, you know, the foundation of intents for the ethereum ecosystem. So want to make sure everyone feels bought into looking at it. And
+
+88
+00:23:27.034 --> 00:23:36.150
+Jim Chang: you know, adding comments into how it can be more modular, or could be even more extensible or even more permissionless. And so.
+
+89
+00:23:36.270 --> 00:23:38.334
+Jim Chang: yeah, that's that's it.
+
+90
+00:23:41.650 --> 00:23:59.220
+Joshua Rudolf: Thanks, Jim. And yeah, it was a good point. I did leave out the coordinator workstream which myself and the Ef. Is leading less in some ways less critical, but also important role here. So yeah, excited to be serving in this coordinator work stream as part of the oaf
+
+91
+00:24:02.060 --> 00:24:30.929
+Joshua Rudolf: cool. Well, yeah, thanks all for listening to that update. And then next up, we have some updates on this interrupt wallet work that has previously that we've previously touched on on prior calls. But maybe didn't dive much into still a bit early in in this work. But I just wanted to make sure that we're keeping this group updated, sharing a bit more like what? What this thing actually is. Where did this come from? What is our goals?
+
+92
+00:24:30.940 --> 00:24:42.099
+Joshua Rudolf: Is this the Ef making a wallet? No, it's not. But but what is this? And and why is this something that yeah, that I'm excited for? And I think will help to
+
+93
+00:24:42.600 --> 00:24:49.020
+Joshua Rudolf: to drive ux cross-chain. Ux forward in some hopefully very meaningful ways.
+
+94
+00:24:50.560 --> 00:24:58.549
+Joshua Rudolf: yeah. And so, for now we're calling it interop, while we do need to find a better name for this soon. If anyone has suggestions, maybe we can do some crowdsourcing at some point.
+
+95
+00:24:59.160 --> 00:25:21.149
+Joshua Rudolf: But yeah, anyways, at a very high level. The idea with this project is to create a testnet only proof of concept wallet to help accelerate ux improvements specifically in the realm of cross-chain ux, but also eventually touching on other things, such as privacy again, like to be clear, just to emphasize this. This is not the shipping a wallet.
+
+96
+00:25:21.150 --> 00:25:45.659
+Joshua Rudolf: but I wanted to just spend a bit more time on on. Why, this test net proof of concept can still be a very high value initiative. So, yeah, so so what is this interop proof of concept wallet? Well, we have all of these emerging standards around cross chain. Ux. We also have a bunch of other low hanging fruit that's been out there. And so
+
+97
+00:25:46.240 --> 00:26:09.380
+Joshua Rudolf: how can we, as an ecosystem, we as the Ef and we as other teams involved in this, and I should I neglected to mention this at the beginning of this slide. But Wonderland is really the key contributor here, helping to drive this forward. Not just the Ef. Not just myself, but just quick! Shout out to the Wonderland team, who has been helping to do all the heavy lifting behind the scenes to
+
+98
+00:26:09.380 --> 00:26:21.779
+Joshua Rudolf: to help get this off the ground, and also as a note, we hope to expand the group of contributors here beyond the Ef in the Wonderland, in the very near ef in Wonderland in the very near future.
+
+99
+00:26:22.220 --> 00:26:48.779
+Joshua Rudolf: So yeah, so. And also, I should also say here that I wanted to give a shout out to the Ambuyer team. So what's the fastest path? Well, we want to take a very pragmatic approach here on this wallet the fastest path is start with an existing high quality wallet. In this case we landed on. Ambuyer can share more around. Why, we really fell in love with Ambuyer as a great solution in this case.
+
+100
+00:26:48.780 --> 00:26:55.710
+Joshua Rudolf: But just as a quick note there, that's what we're doing. We're starting with Ambuyer. We've started with Ambuyer as the base
+
+101
+00:26:57.000 --> 00:27:17.090
+Joshua Rudolf: And and the idea is, let's let's pave the path. Let's let's demonstrate, in sort of a more practical, real world scenario like what what these cross chain standards can look like in getting into people's hands, even if it is just as a proof of concept.
+
+102
+00:27:20.380 --> 00:27:45.479
+Joshua Rudolf: So the quick summary, let's validate standards in a real world context. Let's provide a blueprint, and perhaps even sort of a reference implementation that other wallets can adopt. We do hope and strongly desire to work with wallet teams as we are iterating on this many teams. Metamask Phantom.
+
+103
+00:27:45.990 --> 00:28:15.719
+Joshua Rudolf: Zerion, I'm creating some of the others that we've already been in contact with. But there's been many wallet teams that I've already reached out and had conversations with. It's been great, really appreciate all of the wallet teams who have their own existing roadmaps and priorities, of course, but they've been really great in terms of working with us on this, helping us learn helping us better understand how we can collaborate on these kinds of things, and I want to acknowledge, of course, that we are.
+
+104
+00:28:15.720 --> 00:28:20.509
+Joshua Rudolf: This is something where we have a lot to to learn ourselves.
+
+105
+00:28:20.510 --> 00:28:47.599
+Joshua Rudolf: There's been a lot of great work that's especially in the past few months, with 7,702 and other things in terms of wallet starting to innovate more and more on Ux. So how can we just act as an accelerant to that? We're not going to, of course, replace that work. But just how can the Ef. And others with this wallet initiative? How can we accelerate this? And then 10 x the cross chain experience in the next few months hopefully
+
+106
+00:28:48.380 --> 00:29:04.719
+Joshua Rudolf: and point 3 here, I guess just to maybe hit on that really quickly is this will create hopefully a nice feedback loop where it informs we were able to take lessons from this, as we're as we're iterating on it, and and help to inform and improve the standardization work as well.
+
+107
+00:29:06.490 --> 00:29:11.240
+Joshua Rudolf: So really, quickly. Just one or 2 more minutes on, on this interrupt while at work
+
+108
+00:29:11.370 --> 00:29:33.560
+Joshua Rudolf: sharing a bit of a roadmap. Here, phase one which is underway focused on accelerating, seamless cross-chain transactions. What does this mean? It means leveraging standards, such as 7,828 chain specific addresses, which, again, the Wonderland team has and others from Ens team from Zk Sync team. Many others have been have been helping to
+
+109
+00:29:33.740 --> 00:29:51.840
+Joshua Rudolf: push forward since really, since late last year it's been a bit of a slog, but really excited to sort of be approaching the finish line here with 7, 8, 2, 8, and yeah, the next agenda item, actually, Wonderland team will share some updates there. This will be using the adapter layer so we can easily switch out what's
+
+110
+00:29:51.950 --> 00:30:14.810
+Joshua Rudolf: powering the cross chain transfers under the hood, starting with intense but later exploring other solutions. Sort of just a guiding principle here is as much as possible like maximizing pragmatism and not reinventing the wheel. If there are existing ux patterns, if there are existing trust, minimize building blocks that we can leverage, we will.
+
+111
+00:30:15.030 --> 00:30:33.270
+Joshua Rudolf: And then, yeah, part of this sort of like the main focus of this phase, one is creating these not just sort of the back end and plugging into intents. And but how do we create these ui components in a seamless way for displaying and validating these
+
+112
+00:30:33.270 --> 00:30:45.149
+Joshua Rudolf: chain specific Aka interoperable addresses so that you can enter something like aliceth at base, aliceth at arbitrum, aliceth at. Pick your favorite chain
+
+113
+00:30:45.260 --> 00:30:59.680
+Joshua Rudolf: and have the wallet handle, the rest. You simply select the asset hit, send, and everything else is handled for you automatically under the hood. So this is leveraging both the interop wallet and chain specific address work.
+
+114
+00:30:59.990 --> 00:31:03.199
+Joshua Rudolf: That's the yeah. That's the that's the gist of phase, one
+
+115
+00:31:03.580 --> 00:31:30.050
+Joshua Rudolf: phase 2. The goal right now is to shift the focus a bit more into privacy. Realm, make privacy native to the wallet, experience meaning one click. Frictionless don't need to jump through a bunch of hoops having something that is a protocol. Agnostic implementation. Starting with oxbow and privacy pools mean, and many others have been pushing this forward
+
+116
+00:31:30.050 --> 00:31:46.670
+Joshua Rudolf: really excited to leverage this work that has been years in the making. And we'll also design this to support other privacy systems in the future. So what would this look like? Shielded balances, private transfers, and also cross-chain private sends?
+
+117
+00:31:46.760 --> 00:32:07.790
+Joshua Rudolf: And I have just an example of what this flow could look like here. This may be obvious to folks that are somewhat familiar with how privacy pools work. There are some limitations, but I'm optimistic that we can get this to still deliver a really high quality user experience. As we continue to extend and improve the privacy pool work as well.
+
+118
+00:32:07.860 --> 00:32:28.990
+Joshua Rudolf: Yeah, I won't read, I guess all of this, but you can kind of get a sense for needing to deposit into the privacy pool before you can then withdraw from the pool to whoever you want to send to, and hopefully routing, using something like a 4, 3, 7 mempool rather than a relayer, which might not be as privacy preserving.
+
+119
+00:32:31.860 --> 00:32:54.849
+Joshua Rudolf: and then just wrapping up sort of the phase 3. This hopefully won't be the end of the wallet work. Hopefully, this is something that we continue for months to go extending into into 2026. We'll see. Just sort of taking this these 3 phases for now. But what is the next phase of this additional interop work continuing to iterate work towards
+
+120
+00:32:54.970 --> 00:33:20.010
+Joshua Rudolf: endgame interop, making cross chain swaps even more seamless, and handling even more complex transactions, exploring. What does it mean to really enter this fully chain? Abstracted future things that actually the uniswap team? I want to give a quick shout out as well, that have really shown some really amazing demonstrations recently around, like
+
+121
+00:33:20.010 --> 00:33:27.359
+Joshua Rudolf: what does like a unified balance look like, what does Batch spending look like? I think these are things that we also want to play around with.
+
+122
+00:33:27.530 --> 00:33:41.479
+Joshua Rudolf: Yeah, not just uniswap rion Metamask. Many others have been working on this for a while. So we get to stand on those shoulders. And and hopefully, yeah, continue to iterate, also leveraging standards like 5, 7, 9, 2 and 7, 8, 1 1.
+
+123
+00:33:42.470 --> 00:34:11.939
+Joshua Rudolf: So yeah, that was it. Hopefully, that sheds a bit more light on what this interop wallet name. Tbd, project is, if anyone has questions, yeah. Happy to talk through things. And yeah, feel free to reach out to me if you want to get more involved still somewhat early days. But yeah, really excited to to see what we can do here with this interop wallet project. And yeah, if anyone from the Wonderland team who's here wants to add anything, feel free to jump in. Now.
+
+124
+00:34:15.159 --> 00:34:18.119
+TiTi (Wonderland): I think it's a very good overview. Thank you, Josh.
+
+125
+00:34:18.550 --> 00:34:19.110
+Joshua Rudolf: Cool.
+
+126
+00:34:19.469 --> 00:34:36.099
+Joshua Rudolf: Thanks. Tt, and yeah, excited to have Tt. Who actually is just recently joined the Wonderland team and and has been doing an amazing job to to drive, to jump in and to drive this wallet project forward. So yeah, thank you to. Tt, here.
+
+127
+00:34:36.400 --> 00:34:43.400
+Joshua Rudolf: cool. Okay. Well, I guess that's a nice segue. Then I will stop sharing, and I can hand it off to you. Tt. For the
+
+128
+00:34:43.570 --> 00:34:55.139
+Joshua Rudolf: next agenda item, and make sure I do this correctly. No more technical difficulties. Cool. So yeah, next up, we have an update on chain specific addresses. Aka interoperable addresses.
+
+129
+00:34:56.600 --> 00:35:05.849
+TiTi (Wonderland): Perfect. I do not have access to share, but to share screen. But I just shared the link of the presentation. If you want to follow me so I'm going to go.
+
+130
+00:35:05.850 --> 00:35:08.120
+Joshua Rudolf: Where you can. You can share now, if you want. But yeah, either way.
+
+131
+00:35:08.120 --> 00:35:11.639
+TiTi (Wonderland): Okay, perfect email soon.
+
+132
+00:35:12.470 --> 00:35:14.230
+TiTi (Wonderland): There, hope you can see my screen.
+
+133
+00:35:15.480 --> 00:35:16.140
+Joshua Rudolf: Perfect.
+
+134
+00:35:16.790 --> 00:35:35.639
+TiTi (Wonderland): Okay, amazing. So I'm going to do a quick overview about the interpreter addresses standards that we are working on. It's the 7, 8, 28 on the 930. The format is this syntax you can see over here of the address at Chain hashtag, the checksum.
+
+135
+00:35:36.000 --> 00:35:55.639
+TiTi (Wonderland): and we have splitted the efforts into 2 standards because they're aimed for a different target. Audience. The 7, 9 30 defines the binary format of this interpretable address, and it's almost ready to be merged to draft. We have addresses.
+
+136
+00:35:55.820 --> 00:36:24.369
+TiTi (Wonderland): The the comment that the editor left us was regarding like a link reference. So now it should be ready to be approved this week, and I know that 7 x 6 is referencing this one. So it's important for that as standard as well. So just Fyi. By this week you should have this ready, and then 7, 8, 28 represents the human readable names of these interval addresses, and we are using
+
+137
+00:36:24.430 --> 00:36:26.229
+TiTi (Wonderland): and regarding that.
+
+138
+00:36:27.380 --> 00:36:47.959
+TiTi (Wonderland): Teddy, already, like in other working group, calls share more details about this, and you can go to the standards if needed for more specification. I would just go on a high level overview right now, because there is a change that I want to to present is is regarding the Chinese migration.
+
+139
+00:36:48.080 --> 00:37:06.559
+TiTi (Wonderland): and I will go over that in a few minutes. This will be quick. So one small thing I want to mention about the interrupt addresses is to for us to be on the same page on how this helps improve the ux, and mainly provides this unambiguous way to refer to an address
+
+140
+00:37:06.890 --> 00:37:28.849
+TiTi (Wonderland): on any specific chain, of course. But this helps to mitigate the errors when interacting cross chain and also to specify the the target address, both for like user addresses, but also for for assets. So it's really improving the ux and mitigating errors which is really important and also
+
+141
+00:37:29.670 --> 00:37:41.760
+TiTi (Wonderland): allows to create more smart flows and automations where the wallet can know where the payment is expected to be received. Based on the information the address is providing.
+
+142
+00:37:41.970 --> 00:37:56.415
+TiTi (Wonderland): So some of the addresses would look something like that the one we expect to be mostly seen is this one where you are using Ens, and for the for the chain portion.
+
+143
+00:37:57.240 --> 00:38:20.279
+TiTi (Wonderland): what we are suggesting, and we are expecting to have fully defined in the next 2 weeks. So regarding the standard the the timeline we are defining is 2 weeks regarding the implementation might take a little longer, but I will go over that in a second. So what are the next steps of 7, 8, 28 to get it finalized.
+
+144
+00:38:20.470 --> 00:38:38.579
+TiTi (Wonderland): The 1st thing that we are doing is that we need to fork the ethereum chain list. This is because we're going to polish some short names to be more user, friendly. And then this needs to go through consensus with all the roll-ups for it to be registered on chain.
+
+145
+00:38:38.890 --> 00:38:42.110
+TiTi (Wonderland): because the end goal is instead of
+
+146
+00:38:42.750 --> 00:38:49.020
+TiTi (Wonderland): fetching the information from the Github list. We're going to get this information on chain
+
+147
+00:38:49.190 --> 00:38:58.370
+TiTi (Wonderland): and to do so. The 1st step is that we are already working on it, and we're going to do a proposal to the Nsl. To get L. 2 dot E.
+
+148
+00:38:58.540 --> 00:39:12.220
+TiTi (Wonderland): So with that we are going to create a custom resolver for the short name of the chain and the chain id, and this will be resolved on the human readable name of the interoperable addresses.
+
+149
+00:39:12.750 --> 00:39:18.799
+TiTi (Wonderland): And what we are aiming for is so if you take this one, there is no top level domain
+
+150
+00:39:19.312 --> 00:39:36.599
+TiTi (Wonderland): under the hood. What's going to be is I reach them dot l 2 dot 8 so that, mainly like the specification of this custom resolver is what's being worked on and will be all specified on 7, 8, 28.
+
+151
+00:39:36.670 --> 00:39:49.240
+TiTi (Wonderland): After that. We will move forward into the development of this custom resolver to be deployed and then use. But in the meantime, what we're doing aside from the from the wallet development, that is,
+
+152
+00:39:50.060 --> 00:40:18.190
+TiTi (Wonderland): yeah, it's getting paralyzed. Isn't an SDK development for all wallets to consume these methods for a better ux in interpretable as whole. So what we are doing now is this, SDK method will consume the information from the centralized list and Github, but for wallets to consume. So I expect 2 weeks from now for wallets to be able to consume this and to be fully specified as I mentioned.
+
+153
+00:40:18.673 --> 00:40:23.880
+TiTi (Wonderland): Right now it's going to be get consumed through the Github list.
+
+154
+00:40:23.910 --> 00:40:49.890
+TiTi (Wonderland): but then it will be migrated to the on-chain list, and for the wallets they will just need to upgrade the the version of the SDK. Everything else will be handled under the hood, so shouldn't be like shouldn't generate much friction. But that's the plan for so many trade. I would love to hear like your thoughts on it. And of course we can continue this discussion on each of them
+
+155
+00:40:50.090 --> 00:41:00.570
+TiTi (Wonderland): of the standards. And you have. And one more thing. This, like we are thinking of as a long term solution for the decentralization of the chain list involves 7, 7, 8, 5.
+
+156
+00:41:00.700 --> 00:41:17.690
+TiTi (Wonderland): But we are still like looking into it, and we expect to get more involved after this 2 weeks and finishing 7, 8, 28, because 7, 75 sort of breaks a little bit with the with the format of the 1080 type.
+
+157
+00:41:17.840 --> 00:41:28.329
+TiTi (Wonderland): So we're thinking this is a long term solution for later. And proposing this as the midterm solution, and improving the interoperable experience.
+
+158
+00:41:28.920 --> 00:41:30.180
+TiTi (Wonderland): And that's all I have.
+
+159
+00:41:34.910 --> 00:41:37.979
+Joshua Rudolf: We have one question from, yeah, comment.
+
+160
+00:41:38.680 --> 00:41:41.979
+kalmanlajko: Hey, will this short term solution?
+
+161
+00:41:42.320 --> 00:41:46.690
+kalmanlajko: Will it not become permanent? They have a tendency of becoming permanent? Unfortunately.
+
+162
+00:41:53.000 --> 00:41:58.209
+TiTi (Wonderland): Sorry you mean, like you think this will become the permanent solution instead of the.
+
+163
+00:41:59.000 --> 00:42:07.570
+kalmanlajko: Yes. So these short term tendencies. Sometimes they become long term, right? So are we sure that it's just a short term solution, and it will not be
+
+164
+00:42:08.240 --> 00:42:09.690
+kalmanlajko: forever, basically.
+
+165
+00:42:11.480 --> 00:42:12.130
+Skele | Wonderland: Yeah, I can.
+
+166
+00:42:12.587 --> 00:42:13.960
+TiTi (Wonderland): Would be, yeah.
+
+167
+00:42:14.150 --> 00:42:32.149
+Skele | Wonderland: I can jump in real quick. The main purpose of, as I said, on the chat. But the main purpose of the new list, like right now we do have a list, but the names are kind of ugly to showcase, for users, like some chains, have very, very weird names that are really confusing sometimes.
+
+168
+00:42:32.230 --> 00:42:55.069
+Skele | Wonderland: So the list is mainly to be used as the 1st iteration for the seeded values. When we migrate to the L 2 eth resolver. So we definitely need a list or some consensus on chain names, etc, to basically Bootstrap, the on-chain resolver, which will have a governance
+
+169
+00:42:55.150 --> 00:43:13.759
+Skele | Wonderland: after that's done, it would just a matter of changing the sdks to point to the resolver rather than pointing to the list, and we can deprecate the list and any new chains that want to register will be pointed to register through the appropriate process on chain.
+
+170
+00:43:24.380 --> 00:43:24.800
+Joshua Rudolf: Christian!
+
+171
+00:43:25.760 --> 00:43:42.670
+Christian Montoya: Yeah, I have one concern about, you know I know one of the goals here is to make the naming, you know, prettier and human readable. But what will happen if a name of a roll up changes right like. At 1 point OP. Mainnet was called optimism. I think.
+
+172
+00:43:43.139 --> 00:44:00.700
+Christian Montoya: Some roll ups could get renamed over time. Or you know, the yeah, the official name changes so like, obviously in the, you know, traditional like tld space, I mean, people do redirects. Right? At 1 point G. Gmail had to be renamed Google Mail in in the Uk. And it was like, Well.
+
+173
+00:44:00.700 --> 00:44:22.060
+Christian Montoya: you know, if you have a Gmail address they'll they'll just redirect it for you. But your your email address going forward became at Google Mail, right? So in this new model with like an on chain registry. I mean what happens in the future. If one of these roll ups wants to change their name and wants to change the sort of like address that everybody uses to to represent themselves.
+
+174
+00:44:22.990 --> 00:44:30.730
+Skele | Wonderland: That's a great question. I mean, as long as they don't collide with each other they can create a new entry
+
+175
+00:44:30.910 --> 00:44:39.130
+Skele | Wonderland: on both options should live on chain. We we definitely don't want to support.
+
+176
+00:44:39.240 --> 00:45:07.999
+Skele | Wonderland: say, changing the name forcefully, for example, as you said, like replacing optimism with opainnet or the other way around, because that would break a shit ton of things so ideally. As long as they don't step on each other's toes they can register additional names. We don't really see this happening a lot. But in those edge cases that might happen there is nothing blocking them to just register a new entry.
+
+177
+00:45:09.230 --> 00:45:11.430
+Christian Montoya: Okay, I think that makes sense.
+
+178
+00:45:12.380 --> 00:45:13.509
+Christian Montoya: Yeah, thank you.
+
+179
+00:45:14.150 --> 00:45:15.530
+Skele | Wonderland: Amazing yeah, no. Problem.
+
+180
+00:45:20.600 --> 00:45:23.489
+Joshua Rudolf: Cool. Thank you for the questions. Any other questions.
+
+181
+00:45:30.890 --> 00:45:37.040
+Joshua Rudolf: Awesome. Well, thank you. Tt, and Skelly. And this is great. Update on 7, 8, 2, 8.
+
+182
+00:45:37.720 --> 00:45:52.889
+Joshua Rudolf: So then I think we can move on to the yeah to the final agenda item, which is, we have Vc. From soccer team sharing a bit on their recent work on filler Vaults and liquidity for intent markets.
+
+183
+00:45:53.050 --> 00:45:55.660
+Joshua Rudolf: Is BC. Here? Yes, awesome.
+
+184
+00:45:56.690 --> 00:45:57.400
+Joshua Rudolf: Hello.
+
+185
+00:45:58.140 --> 00:46:01.400
+Vaibhav Chellani: Hey, folks, hope you can hear me. Well.
+
+186
+00:46:02.913 --> 00:46:06.579
+Vaibhav Chellani: let me try and share my screen.
+
+187
+00:46:07.030 --> 00:46:12.190
+Vaibhav Chellani: I don't use zoom often, so let me know if this is right.
+
+188
+00:46:13.170 --> 00:46:15.570
+Joshua Rudolf: Hope you can see my screen. Yeah, perfect.
+
+189
+00:46:17.020 --> 00:46:34.079
+Vaibhav Chellani: Okay, guys, yeah, this last week, or maybe this week, I don't seem to remember we posted something about filler walls. And the idea is to sort of like deepen the liquidity available in intent markets by using like hyper liquid like ward systems.
+
+190
+00:46:34.230 --> 00:46:37.632
+Vaibhav Chellani: And I'll just like walk you guys through it.
+
+191
+00:46:38.250 --> 00:47:04.041
+Vaibhav Chellani: these are like 2 high level screenshots. So this is the one where you know you. You try and send 500, or like 600 k. Of a blue chip asset like die between 2 blue chip chains like arbitrum and optimism, and because, like intent markets aren't able to do it. Unfortunately, today. This is another screenshot of how concentrated these markets are right? So really,
+
+192
+00:47:05.140 --> 00:47:18.660
+Vaibhav Chellani: these intent markets today are used for like really small size, transactions. And as things scale as these markets scale the liquidity. Dynamics sort of even get like more fragmented.
+
+193
+00:47:19.198 --> 00:47:24.251
+Vaibhav Chellani: So for us, we are like, how do we make this situation better?
+
+194
+00:47:24.780 --> 00:47:32.419
+Vaibhav Chellani: but before we do that, I think the core insight here is today becoming a filler requires you to have skill and capital.
+
+195
+00:47:32.700 --> 00:47:55.790
+Vaibhav Chellani: and the number of people that lie in this intersection are very small. People that have capital don't necessarily have the technical sophistication to run a filler on any of these intent protocols. And people that have the skills don't necessarily have the largest, like, you know, access to capital for them to be productive on these markets. So ideally, we want to be in a world where we can decouple this
+
+196
+00:47:55.790 --> 00:48:17.790
+Vaibhav Chellani: where anyone should be able to come up with skills sort of like searchers where you can be like, really smart at indexing the chain reading what's happening on chain and come up with like this technical sophistication, these skills and anyone else should be able to fund this like fund capital to the strategy. So we can use those skills and capital together and solve for these like internal markets.
+
+197
+00:48:22.170 --> 00:48:44.390
+Vaibhav Chellani: and this is not something completely new, like demand for this somewhat already exists. So Hlp. Walls that I mentioned before on Hyperliquid, were used as a mechanism to Bootstrap the Perpetual, the Perp order book right, and at some point by the screenshot, 50 to 75% of the open open interest in the platform was via these walls.
+
+198
+00:48:44.390 --> 00:48:57.586
+Vaibhav Chellani: And what what happened was the order book is like Bootstrap this way. And then the sophisticated parties like enter and sort of like, you know, really make this market more competitive and liquid. But you need these sort of like systems to sort of
+
+199
+00:48:57.880 --> 00:49:18.019
+Vaibhav Chellani: initialize this market and sort of like. Add that initial sort of like threshold. Otherwise these intent protocols are stuck in this like chicken and egg problem where users don't come because there's no liquidity. Market makers or fillers don't come because there are no users. We also have a screenshot on the right. Talking about how arbitrum foundation is willing to sort of like loan
+
+200
+00:49:18.375 --> 00:49:30.830
+Vaibhav Chellani: funds to solve ours right. There is no mechanism via they can do this today. It's very manual, but it is a clear insight that chains and foundations will want to help with the capital.
+
+201
+00:49:30.940 --> 00:49:40.920
+Vaibhav Chellani: and users would likely want to access the filler yield as well which is likely very high at least for the smaller amounts. Again, there are no like
+
+202
+00:49:41.170 --> 00:49:48.109
+Vaibhav Chellani: numbers on this so very hard to say how much that is, but it is a source of yield that users can participate in.
+
+203
+00:49:49.809 --> 00:49:56.800
+Vaibhav Chellani: How this is built. So socket sort of enables. And anyone to build these like verifiable strategies off chain.
+
+204
+00:49:57.220 --> 00:50:19.110
+Vaibhav Chellani: These strategies have on chain walls attached to them across different networks. So as a user. You can just like put up funds on these voids. These strategies would include like logic like, Hey, when should I fulfill an intent? Should I wait for one block? Should I wait for 10 blocks? What sort of settlement oracle should I use? Should I use the Uma optimistic oracle? Should I use chain link, or something else. What sort of rebalancing logic should I run?
+
+205
+00:50:19.110 --> 00:50:30.350
+Vaibhav Chellani: Anyone can sort of like, look at these strategies and then sort of like deploy capital to these strategies. These strategies can then go and prove to the vault that, hey? I ran the strategy
+
+206
+00:50:30.350 --> 00:50:45.440
+Vaibhav Chellani: as intended, and I can withdraw capital from the world. I can also quickly walk. You guys, through this example of like, how this filler strategy works on across. So this is like an across book pool on the source network, which is arbitr
+
+207
+00:50:45.560 --> 00:51:01.949
+Vaibhav Chellani: as as a user. You sort of like deposit. Your intent to this contract the filler strategy gets sort of like triggered. As soon as this happens it waits for, let's say, one block, and then it sort of relays the proof along with the Zkp
+
+208
+00:51:02.050 --> 00:51:17.520
+Vaibhav Chellani: to sockets switchboard contract, which sort of validates that the strategy ran as intended, and post that we can sort of send an instruction to the world that, hey? Let's use the fund in the world to fulfill the Internet.
+
+209
+00:51:18.111 --> 00:51:45.589
+Vaibhav Chellani: The interesting part is and this, this comes with the socket like stack. Is that these the the verification could mean anything. It could mean a Zkp. It could mean a quorum based attestation. It could even be run by some like single party, that we all trust that just like signs off on it, it could be running a te, and users would be able to like. Put a funds knowing the trust assumptions that come with it.
+
+210
+00:51:46.778 --> 00:51:57.600
+Vaibhav Chellani: So filler walls overall help with bootstrapping for new intent protocols, it helps these intent protocols expand across different networks because, you know, teams and foundations can just deploy capital easily. Now.
+
+211
+00:51:58.345 --> 00:52:04.930
+Vaibhav Chellani: it helps intent protocols get deeper liquidity in their markets, and it helps users tap into filler yield.
+
+212
+00:52:06.503 --> 00:52:25.630
+Vaibhav Chellani: This is not all theory there is. So there are like 2 QR codes here. One is a QR code for the full proposal. And there's a demo video on Youtube where you will see there are 2 sort of like filler walls with differently configured strategy. One waits for, say, one block, one waits for, let's say, 6 blocks.
+
+213
+00:52:25.690 --> 00:52:49.570
+Vaibhav Chellani: and both of these sort of like compete on chain to fulfill a user order. Right? So yeah, check it out. And this open call. So if you want to come and build this socket can provide the infrastructure for you to build this. And once you've like built out this sort of system, Bungie can provide your World order flow so you can on, yield on the intents you fulfill.
+
+214
+00:52:50.102 --> 00:52:54.030
+Vaibhav Chellani: That's pretty much it. Happy to take any questions.
+
+215
+00:53:03.610 --> 00:53:06.539
+Joshua Rudolf: Thanks. Vc, any questions for Vc.
+
+216
+00:53:11.530 --> 00:53:17.929
+Joshua Rudolf: cool? I guess not, it was explained perfectly. But yeah, I think maybe people can reach out to you on telegram. If they have.
+
+217
+00:53:18.220 --> 00:53:23.090
+Joshua Rudolf: if you want to follow up, or yeah, maybe drop a message in the chat wherever you prefer. Perfect
+
+218
+00:53:23.620 --> 00:53:28.119
+Joshua Rudolf: cool. Alright. Well, I think that's all we have for this week's call.
+
+219
+00:53:28.380 --> 00:53:32.599
+Joshua Rudolf: If nothing else. We'll see you all back here in 2 weeks.
+
+220
+00:53:33.500 --> 00:53:34.680
+Joshua Rudolf: Thanks for joining.
+

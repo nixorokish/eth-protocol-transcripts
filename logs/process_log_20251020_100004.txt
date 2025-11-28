@@ -1,0 +1,23 @@
+2025-10-20T10:00:04.012913 - === Processing meetings from last 1 days ===
+2025-10-20T10:00:04.589103 - Step 1: Fetching closed GitHub issues...
+2025-10-20T10:00:27.922023 -   ✓ Found 1 matched meetings
+2025-10-20T10:00:27.922570 -   ⚠ Found 0 potential meetings that didn't match
+2025-10-20T10:00:27.922687 - 
+============================================================
+2025-10-20T10:00:27.922757 - [1/1] Processing: All Core Devs - Consensus (ACDC) #167, October 16, 2025
+2025-10-20T10:00:27.922822 -   Meeting IDs: 859 6920 2880, 837 0323 9965, 819 7347 6602
+2025-10-20T10:00:27.922879 -   Date: October 16, 2025
+2025-10-20T10:00:31.399082 -   Recording found: 58 minutes
+2025-10-20T10:00:36.909582 - 
+============================================================
+2025-10-20T10:00:36.910011 - Uploading 1 meeting folders to GitHub in single commit...
+2025-10-20T10:00:43.793311 - ✓ Successfully uploaded 3 files in single commit
+2025-10-20T10:00:43.796460 - 
+============================================================
+2025-10-20T10:00:43.796565 - === SUMMARY ===
+2025-10-20T10:00:43.796637 - ✓ Successfully processed: 1
+2025-10-20T10:00:43.796704 - ⏭ Skipped (cached/exists): 0
+2025-10-20T10:00:43.796760 - ⚠ No recording found: 0
+2025-10-20T10:00:43.796851 - ⚠ Skipped short recordings: 0
+2025-10-20T10:00:43.796943 - 
+Log saved to: logs/process_log_20251020_100004.txt

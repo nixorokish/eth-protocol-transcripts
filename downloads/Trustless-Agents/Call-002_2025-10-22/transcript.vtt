@@ -1,0 +1,1574 @@
+WEBVTT
+
+1
+00:03:59.940 --> 00:04:00.920
+Andrei Sambra: Nope, nope.
+
+2
+00:06:24.170 --> 00:06:25.130
+Davide Crapis: Hey, everyone.
+
+3
+00:06:30.540 --> 00:06:31.670
+Moshi Wei: Hello, Davi.
+
+4
+00:06:33.210 --> 00:06:33.770
+Davide Crapis: Hi.
+
+5
+00:06:33.770 --> 00:06:35.259
+Brendan Joyce: Thank you for having us here today.
+
+6
+00:06:37.620 --> 00:06:38.270
+Moshi Wei: Whoa.
+
+7
+00:06:38.810 --> 00:06:43.959
+Davide Crapis: First, let me get started in one minute. Great to see everyone, so many familiar faces.
+
+8
+00:07:28.410 --> 00:07:32.139
+Marco De Rossi: Sorry, guys, we're just checking if we have technical issues.
+
+9
+00:07:34.480 --> 00:07:35.889
+Davide Crapis: No, I think we're good.
+
+10
+00:07:36.440 --> 00:07:39.629
+Marco De Rossi: So, okay, so we just have one call, David. We are good.
+
+11
+00:07:48.960 --> 00:07:52.699
+Marco De Rossi: Just to double-check that we don't have true Zoom links used by people.
+
+12
+00:08:57.980 --> 00:08:59.740
+Davide Crapis: Cool, yep, I think we can start.
+
+13
+00:08:59.820 --> 00:09:03.350
+Davide Crapis: Welcome, everyone. This is the…
+
+14
+00:09:03.410 --> 00:09:17.189
+Davide Crapis: ERC8000F4, community call number 2, so we have, quite a bit of updates, today. I think, maybe I'll ask, Marco to, like, start presenting.
+
+15
+00:09:17.190 --> 00:09:25.969
+Davide Crapis: I want to, like, briefly, like, introduce the outline, for today, and then, also give a quick plug to the team.
+
+16
+00:09:35.130 --> 00:09:36.659
+Davide Crapis: Are you around, Mako?
+
+17
+00:09:45.730 --> 00:09:47.489
+Pilar Rodríguez: I don't see Marco here.
+
+18
+00:09:49.140 --> 00:09:51.880
+Davide Crapis: Okay, let me present then.
+
+19
+00:10:10.820 --> 00:10:12.210
+Leonard Tan: Oh, Mako.
+
+20
+00:10:12.520 --> 00:10:13.520
+Leonard Tan: Rejoined.
+
+21
+00:10:21.340 --> 00:10:33.849
+Davide Crapis: Yeah, so we'll start, marco will actually give an overview of, like, where we are, and kind of the timeline, like, all the things that are happening around, ERCA 2004.
+
+22
+00:10:33.870 --> 00:10:47.559
+Davide Crapis: Then we'll walk through the reference implementation, like, briefly, like, point to it. Many of you have seen that we actually deployed on testnet, like, last week.
+
+23
+00:10:47.660 --> 00:11:00.949
+Davide Crapis: And then, Leonard will also dive into, like, the SDK. It's pretty exciting, like, now that the spec is kind of, like, in the state towards being finalized.
+
+24
+00:11:00.950 --> 00:11:11.709
+Davide Crapis: I think it's pretty cool that, we kind of need to take it to the next level and make it easier for people to, like, use, connect to, 2004.
+
+25
+00:11:13.480 --> 00:11:36.460
+Davide Crapis: Then, we'll talk about, like, the Trustless Agents Day, like, what it means for projects, especially for the ones that will be there. Then we'll talk about a few other events that are happening around DevConnect. And then finally, we have 8 demos already scheduled from, like, some pretty cool projects that I'm very excited about.
+
+26
+00:11:38.490 --> 00:11:43.969
+Davide Crapis: Yeah. So… Maybe I'll pass it on to Marco.
+
+27
+00:11:46.700 --> 00:11:50.370
+Marco De Rossi: Yes, okay, you can keep the slide going.
+
+28
+00:11:51.090 --> 00:12:10.369
+Marco De Rossi: First of all, guys, I really wanted to, like, acknowledge how much we have done as a community in TrueMs. So, TrueMs always wasn't existing, and so I think that this is a good opportunity to zoom out and see where we are at a higher level, and see what will happen in the next few months. Because a lot has happened, but a lot still have to…
+
+29
+00:12:10.410 --> 00:12:12.049
+Marco De Rossi: Still has to happen.
+
+30
+00:12:12.070 --> 00:12:26.430
+Marco De Rossi: And in terms of infra, we spent September listening to your feedback to the spec. We released the spec just a couple of weeks ago. We didn't… we will not go through the new spec here today, because we have a very packed agenda.
+
+31
+00:12:26.430 --> 00:12:37.909
+Marco De Rossi: But, we will share now in the slide, in the chat, the tweet thread that goes through the new spec, if you want. We just released the smart contracts on testnet 6 days ago.
+
+32
+00:12:38.160 --> 00:12:52.360
+Marco De Rossi: And teams are just starting to test them. It's very important to test the contracts, because we will soon start deploying them on mainnet with a distributed governance of a contract, so 8004 team will not control the mainnet contracts.
+
+33
+00:12:52.370 --> 00:13:11.649
+Marco De Rossi: And after that, we will focus on, of course, expanding to more chains. There are more chains, many chains that are reaching out to us to have the contacts deployed on their chain as well. We don't expect any relevant changes to the spec, just small stuff, and it's totally fine to realize these small changes
+
+34
+00:13:11.650 --> 00:13:15.679
+Marco De Rossi: building on the spec. So this is a feature, it's not a bug.
+
+35
+00:13:15.680 --> 00:13:21.929
+Marco De Rossi: So in the next, like, month or so, based on your feedback, on what we realized using the smart contracts.
+
+36
+00:13:21.930 --> 00:13:38.999
+Marco De Rossi: we could decide to do some very small change, and then we will do what's called the Invitarium Community Spec last call in December, which means that there are, I think, a couple of weeks to just really formalize the spec, and then froze them.
+
+37
+00:13:39.000 --> 00:13:47.870
+Marco De Rossi: So this was what we have worked up to now, and now we are entering a new phase for 8004, which is all around tooling and make
+
+38
+00:13:47.900 --> 00:14:01.290
+Marco De Rossi: the developer experience easy. Developers shouldn't read ERCs. ERCs should, like, disappear. If an ERC is successful, nobody remembers about the technical name. We should just switch to
+
+39
+00:14:01.290 --> 00:14:08.960
+Marco De Rossi: to easy SDK that will directly obstruct the ERC and make it usable.
+
+40
+00:14:08.960 --> 00:14:25.030
+Marco De Rossi: We already, have seen a few wrappers. Today, Leonard will show a few, but I suspect that the work on SDKs is just about to start, and together with SDKs, we need to create guides and docs related to, usually to SDKs.
+
+41
+00:14:25.030 --> 00:14:33.180
+Marco De Rossi: to enable developers to build on this. This is not here yet, again, it's just 6 days. Many of you are already working on this.
+
+42
+00:14:33.300 --> 00:14:48.490
+Marco De Rossi: And this is just to set the stage, so in the next few weeks, you will see more and more very easy-to-use SDK popping up, and guides, and this will be, I think, the great trigger to make sure that what we're building here is not just something of, well.
+
+43
+00:14:48.490 --> 00:14:54.580
+Marco De Rossi: Hundreds of people, but shifting to maybe thousands, because we're building on that would become easier.
+
+44
+00:14:54.730 --> 00:14:56.600
+Marco De Rossi: And after that.
+
+45
+00:14:56.840 --> 00:15:12.339
+Marco De Rossi: we will also start building the infra that we need as an ecosystem to work. Even just basic stuff, like, where are the agents? Which are the explorers, how can I index them, how can I aggregate the reputation? Now that we have the contracts, we can start building on that.
+
+46
+00:15:12.340 --> 00:15:26.360
+Marco De Rossi: I think we'll have, like, production-grade stuff for this slightly later, so it will maybe take 3 to 4 weeks, not less. While for the SDKs, I think we'll have good stuff in 1-2 weeks. Again, we're all building this together, so it's really up to you, not just up to us or me.
+
+47
+00:15:26.380 --> 00:15:49.839
+Marco De Rossi: And then, maybe in December, we will start seeing fully-fledged SaaS dev tooling, which also operates in this space. Not just 8004, 8004 is super close to X402, to many, to MCP, to A2A, so the more we go into the developer tooling space, the more it will not just be about just 8004, but everything around the genetic economies.
+
+48
+00:15:50.130 --> 00:16:04.840
+Marco De Rossi: Now, let's talk about product. So, up to now, also in the last call, we have seen many POC, I would call them, mock-ups, brainstorming, thinking what we could build. And now that we have the software in Tesnet, we can start thinking about prototypes.
+
+49
+00:16:04.840 --> 00:16:10.450
+Marco De Rossi: And I know that many teams are starting to think about actual products, and are building on that.
+
+50
+00:16:10.450 --> 00:16:20.929
+Marco De Rossi: I think we will need a few more weeks to see the first fully-fledged product. I think in a couple of weeks, we will see the first one. Many of you are reaching out, and I know that many of you are working on that.
+
+51
+00:16:21.000 --> 00:16:39.190
+Marco De Rossi: And after that, we will enter a new phase, but will last, well, forever, which is iterating around product market fit, which is the only thing that matters. And so we'll stop talking just about prototypes and learn from our experiences and learning from shipping actual products.
+
+52
+00:16:39.190 --> 00:16:55.560
+Marco De Rossi: This wasn't possible 6 weeks, days ago, sorry, now it's possible. How about ecosystem? So, we spent September in building the community, you are in the community, you've seen what happened, you see how many people are, like, posting, almost every day prototypes, opinions.
+
+53
+00:16:55.620 --> 00:16:59.320
+Marco De Rossi: And, and suggestion and initiatives autonomally organized.
+
+54
+00:16:59.430 --> 00:17:11.139
+Marco De Rossi: In the last few weeks, we started, and thanks to the Fazum team for that, to engage with other ecosystems, which means different chains, different tooling, different tech, many things.
+
+55
+00:17:11.170 --> 00:17:30.120
+Marco De Rossi: And this is actually a strength, because we will grow if we manage to, like, localize and collaborate on different tooling with different ecosystems. And so I expect that this new developer tooling phase where we are in now, that just started, like, 6 days ago, will be around that a lot. So, for example, okay.
+
+56
+00:17:30.120 --> 00:17:35.239
+Marco De Rossi: Take security inference, egg layer, but how do I do this in practice? What is the guide? Where is the docs?
+
+57
+00:17:35.240 --> 00:17:57.399
+Marco De Rossi: What should I follow? What's the EVS that should I use? Fala, what's the template that should I use? And so on. The list is very long, right? So, it's up to you. We need to build together the guides that contextualize 8004 into the specific infra that you've done to make the experience very easy for developers. And this is what you see for the next month.
+
+58
+00:17:57.400 --> 00:18:08.349
+Marco De Rossi: at the… in the ecosystem line. And then for the long term, we can't share a lot now, but we are thinking about also more structured initiatives in collaboration with ecosystem.
+
+59
+00:18:08.350 --> 00:18:21.460
+Marco De Rossi: to incentivize the healthy product fit loop that we will go through all the next year. And we are thinking, also involving EF, of course, to have, like, structured programs to support the ecosystem.
+
+60
+00:18:21.580 --> 00:18:28.710
+Marco De Rossi: Finally, the more we will start shipping products, the more it will become the relevant and also the right moment
+
+61
+00:18:28.710 --> 00:18:37.589
+Marco De Rossi: To start talking outside our ecosystem to other kind of stakeholders, like the general public and institutions and regulators that are, of course.
+
+62
+00:18:37.590 --> 00:18:58.880
+Marco De Rossi: key stakeholders when it comes to open agent economies. So, this will start, I think, I suspect, after DevConnect, but this will accompany us in December and next year. So, in order not to seem crazy, we need to learn, I think, to show how the products that you can build in open-ended agent economies can
+
+63
+00:18:58.920 --> 00:19:15.570
+Marco De Rossi: can offer something that wouldn't be possible otherwise, explain this to, like, non-technical folks, and show the bigger picture, which is not a technical picture. So this is, this is what I think will happen in the next few months.
+
+64
+00:19:15.570 --> 00:19:25.440
+Marco De Rossi: in switching to the next slide, so my takeaway, if I had, like, to pick a few, and my hope for this community, if we can switch to the next slide, please.
+
+65
+00:19:28.020 --> 00:19:32.500
+Marco De Rossi: is… this list of four things. So, the first,
+
+66
+00:19:32.660 --> 00:19:47.449
+Marco De Rossi: we are moving very fast, nothing was here two months ago, but at the same time, we're still at the start of a journey. And the fact that we still need to improve SDK, that we still need to build stuff, and everything that you've just seen is the proof of that. So it's still day one.
+
+67
+00:19:47.530 --> 00:20:03.399
+Marco De Rossi: And there is a lot to do, and we will see in time which use cases will prove to be best. I suspect that Explorers and agent portability will be the big thing for the next, like, 2 months, and then later we'll also see expansion in other spaces.
+
+68
+00:20:03.400 --> 00:20:11.909
+Marco De Rossi: And the second point is focus on users, so be creative, ship what people touch, so at the end of the day, especially next year, what we
+
+69
+00:20:11.910 --> 00:20:17.240
+Marco De Rossi: What will show the effectiveness of what we're doing as a community is real use cases.
+
+70
+00:20:17.240 --> 00:20:41.090
+Marco De Rossi: And we discussed this a lot also in the last community call. On Telegram, there are many spaces where we could build. Probably gaming and trading is what many of you are concentrating more, together with infra, but the point is, let's not just build explorers. We're not here to just build Explorers. We need just a couple, very good, but then we need to create stuff that is useful for users, and so let's please be obsessed with that.
+
+71
+00:20:41.180 --> 00:20:45.360
+Marco De Rossi: Third, what I personally liked most of what happened in the last few weeks.
+
+72
+00:20:45.360 --> 00:21:08.390
+Marco De Rossi: is that many of you were just building stuff autonomously. We have, like, learning programs across the globe, we have events, we have, of course, guides, prototypes, and that's fine, that's our strength, so 8004 is yours. Please, just don't ask for permission. The only thing that, please, I would ask you not to do is to redeploy
+
+73
+00:21:08.390 --> 00:21:14.019
+Marco De Rossi: the registered contracts on the same chase. That's not a good thing, but…
+
+74
+00:21:14.020 --> 00:21:22.850
+Marco De Rossi: said that, let's continue to do this. This was one of the things that worked best in the last month, so let's continue to create your own initiatives.
+
+75
+00:21:22.850 --> 00:21:38.479
+Marco De Rossi: it's not a company, it's a community, so let's not forget this. And last, let's always remember the why. This is connected to what I was saying on involving, like, the people around us. So it's not about the tech, it's about, like, putting the foundation of
+
+76
+00:21:38.620 --> 00:21:52.219
+Marco De Rossi: open AI economies and use cases that wouldn't be possible. And also, sometimes, remembering the states if we don't succeed is helpful to remember why we're doing this.
+
+77
+00:21:52.250 --> 00:22:10.100
+Marco De Rossi: And this will really help us to create use cases that are understandable for users, which is the most important thing, and to scale from a group of, like, hundreds of companies to thousands, which is the next step. So these are, like, my desires, hopes, and
+
+78
+00:22:10.150 --> 00:22:16.869
+Marco De Rossi: and, opinions for what will happen next. I'm super excited about this call, and I will,
+
+79
+00:22:17.560 --> 00:22:19.249
+Marco De Rossi: Give a floor to Leonardo.
+
+80
+00:22:20.330 --> 00:22:33.170
+Leonard Tan: Thanks, Marco. Yes, so, as everyone has probably seen, the reference implementation, has been deployed, that was last week, and quite a few teams have already started building on it.
+
+81
+00:22:33.260 --> 00:22:41.639
+Leonard Tan: the testnet implementations have been deployed on eSoPolia, base Sopolia, Linear Sopolia, and…
+
+82
+00:22:41.640 --> 00:22:53.649
+Leonard Tan: Also, the contract addresses are prefixed with 8004, so you know you're referring to the right thing. And, also, the contracts are on GitHub, so if you're a team looking to deploy it on your own chain.
+
+83
+00:22:53.650 --> 00:22:56.559
+Leonard Tan: For example, some teams that reached out to Hedera.
+
+84
+00:22:56.560 --> 00:23:17.440
+Leonard Tan: and a couple of other ones, you can either reach out to me, or you can self-deploy via the GitHub repo. But definitely let me know, so we can collate, you know, the canonical, deployments for Testnet, so that people can refer to it. Another thing that also is relatively important is all of these contracts support ERC1271 signing.
+
+85
+00:23:17.440 --> 00:23:26.649
+Leonard Tan: Which means, if you want to build, like, your own gasless flow, or your own smart contract account flow, which will really help with DevEx, you can do that with these contracts.
+
+86
+00:23:27.010 --> 00:23:29.250
+Leonard Tan: Go to the next slide.
+
+87
+00:23:33.730 --> 00:23:37.879
+Leonard Tan: Yes, you can check out the, the repo, yes.
+
+88
+00:23:39.020 --> 00:23:47.489
+Leonard Tan: There are already several community-built packages that are leveraging these existing testnet contracts, so a couple of them are here, Agentic Trust Layer.
+
+89
+00:23:47.490 --> 00:23:59.140
+Leonard Tan: Erc Azos.js, that's a JavaScript package that wraps, the existing testnet contracts. There's also a Python version. Chaos Chain Team has also built a full-fledged SDK.
+
+90
+00:23:59.140 --> 00:24:01.810
+Leonard Tan: That interacts with the Tesla contracts.
+
+91
+00:24:01.810 --> 00:24:20.509
+Leonard Tan: Pala Network has one for a TE agent. So, all of these packages are using the testnet contracts, and I expect that the community will probably do a lot more to come. So, if you are building anything, right, definitely feel free to, you know, leverage these existing things, or post what you've built in the community chat.
+
+92
+00:24:23.390 --> 00:24:25.800
+Leonard Tan: Cool, and I'll hand the time back to…
+
+93
+00:24:26.780 --> 00:24:48.839
+Davide Crapis: Yep, I can take over and talk a little bit about DevConnect. So, yeah, I want to, like, also acknowledge, like, the great progress so far, the great momentum, and I feel that, just, like, resonating, with, the broader motivation here is, like, we are a small group so far, I think we are doing something incredible, and, like.
+
+94
+00:24:48.840 --> 00:24:57.489
+Davide Crapis: Essentially, we need to help each other, and then kind of grow this, like, beyond this initial, like, group of funding teams.
+
+95
+00:24:57.560 --> 00:25:11.520
+Davide Crapis: Yeah, so in order to actually, like, help with this, we are organizing, like, this, Trustless Agents Day at DevConnect, which is in Buenos Aires, Argentina, in one month.
+
+96
+00:25:11.790 --> 00:25:15.520
+Davide Crapis: So the event will be on Friday, November 21st.
+
+97
+00:25:16.000 --> 00:25:18.100
+Davide Crapis: It's a one-day event.
+
+98
+00:25:18.160 --> 00:25:28.099
+Davide Crapis: We'll have, like, teams presenting product, many, from this group.
+
+99
+00:25:28.100 --> 00:25:44.190
+Davide Crapis: In fact, like, we want to invite people to, like, submit, like, for sure, register for the DevConnect, but then also, like, submit product ideas.
+
+100
+00:25:44.190 --> 00:26:01.960
+Davide Crapis: We'll also invite some researchers, some of them, like, working in AI with an interest in what we are doing. So we've been talking to a few of them over the past few weeks, and there is definitely interest, because this is something that, like.
+
+101
+00:26:01.960 --> 00:26:10.150
+Davide Crapis: traditionally in AI cannot happen. Like, many teams coming together and, like, shipping agents on, like, a neutral platform.
+
+102
+00:26:10.150 --> 00:26:13.180
+Davide Crapis: So there is a few, like,
+
+103
+00:26:13.270 --> 00:26:33.709
+Davide Crapis: very interested, people that we can influence, outside of our, immediate circle. And yeah, so we are co-hosting with, essentially, like, the co-author of, the ERC, which is, MetaMask, Marco, and then, Google, Jordan, and then, Eric.
+
+104
+00:26:33.710 --> 00:26:34.530
+Davide Crapis: Points.
+
+105
+00:26:34.540 --> 00:26:39.379
+Davide Crapis: Yeah, you can register here, we'll share the slides, after, this.
+
+106
+00:26:45.760 --> 00:26:49.849
+Marco De Rossi: Okay, and before jumping to the community time.
+
+107
+00:26:49.850 --> 00:27:10.730
+Marco De Rossi: As you've seen in the group multiple times in the last few weeks, people asked about where is the list of people building, or also journalists that want to know more, or people that want to collaborate with other team members and want to know how to reach out. So, we decided to, like, launch now, and we were, like, fill in the… well, fill in now for who is here, of course.
+
+108
+00:27:10.730 --> 00:27:18.890
+Marco De Rossi: but also, like, push it in the next few days in the community. An ecosystem map, which is, I'm posting the link, on,
+
+109
+00:27:19.250 --> 00:27:20.960
+Marco De Rossi: In the chat right now.
+
+110
+00:27:20.960 --> 00:27:45.720
+Marco De Rossi: It's incredibly lightweight, it just asks you, like, the name of a project, what you do, explain, like, I was 5, and then just when you plan to ship, if it's just an idea or it's building, and your contacts, that's it. And the goal is to create a map that you can update autonomously. So basically, you will receive an email just to confirm your email address and
+
+111
+00:27:45.720 --> 00:27:59.000
+Marco De Rossi: avoid, like, impersonification and spam attacks. And then, when you, like, change the delivery date, your contacts, the description, you can autonomously update the map, so it's not moderated or curated in any way by us.
+
+112
+00:27:59.070 --> 00:28:17.360
+Marco De Rossi: And this will, like, really act as an address book, I would say, of this community in the next few weeks. So it will also be important to see at a glance what people are building, what kind of product, which are the categories that are more popular.
+
+113
+00:28:17.430 --> 00:28:20.729
+Marco De Rossi: And so, we can also, like.
+
+114
+00:28:21.600 --> 00:28:26.739
+Marco De Rossi: Debbie, what do you think? Pause 30 seconds to give you the time to fill this in.
+
+115
+00:28:26.850 --> 00:28:27.560
+Marco De Rossi: So.
+
+116
+00:28:27.560 --> 00:28:31.940
+Davide Crapis: I think that would be great, actually, yeah, we can even give.
+
+117
+00:28:31.940 --> 00:28:38.280
+Marco De Rossi: So do, like, a short post before jumping to demos. So please open the link,
+
+118
+00:28:40.620 --> 00:28:43.670
+Marco De Rossi: It will ask you your email address, and then
+
+119
+00:28:45.230 --> 00:28:50.060
+Marco De Rossi: The contacts are optional, so what's mandatory is just the email.
+
+120
+00:28:51.900 --> 00:28:53.170
+Marco De Rossi: a link?
+
+121
+00:28:54.430 --> 00:29:07.089
+Marco De Rossi: The link can be to your organization if, of course, the product is not live, any kind of link that you want. The use case and the state. If it's just an idea, feel free to put idea and leave the go-live date empty, it's not a problem.
+
+122
+00:29:41.360 --> 00:29:43.559
+Marco De Rossi: I see the first products popping up.
+
+123
+00:30:03.530 --> 00:30:12.869
+Marco De Rossi: Yeah, so you can find each other. Because on Telegram, there are, like, more than 800 people, and it's tough to, like, understand exactly who is doing what just from the Telegram handles.
+
+124
+00:30:15.670 --> 00:30:19.390
+Marco De Rossi: 20 seconds more… When we will go on.
+
+125
+00:30:42.910 --> 00:30:51.689
+Marco De Rossi: Let's go on! So, now we'll switch to the community time, which is about initiatives that you're working on, and also, of course, demos.
+
+126
+00:30:51.820 --> 00:30:54.510
+Marco De Rossi: Jesse, the floor is yours.
+
+127
+00:30:54.990 --> 00:31:14.450
+Jessy: Awesome, so we invited a few, community members who are building, events and DevRel hackathons initiatives that's related to A004. I think, yeah, feel free to go on the next slide. Alex Stowe and ETH Panda is hosting.
+
+128
+00:31:14.450 --> 00:31:24.070
+Jessy: this program, feel free to talk about it. And also please keep all discussion per slide under 2 minutes, because we're… we've got a lot to cover. Yeah.
+
+129
+00:31:24.640 --> 00:31:26.280
+lynn: Okay, okay.
+
+130
+00:31:27.000 --> 00:31:45.220
+lynn: Hello, everyone. Good to see you all here today. I'm Lynn from LXDAO. We work together with Espanda on this program called Let's Build Trustless Agent ERCA004, and with support from the Ethereum Foundation, the AI team.
+
+131
+00:31:45.220 --> 00:31:56.150
+lynn: So, this program is about building the trust layer for AI agents on Ethereum. So, we want to make ERC something real and practical,
+
+132
+00:31:56.250 --> 00:32:14.490
+lynn: And not just an idea on the paper, so we are doing this in three phrase… three phrases. So, the first phrase, you can see on the, PowerPoint here, called intensive corollary, running from the October 5th, 15 to 28th.
+
+133
+00:32:14.490 --> 00:32:20.480
+lynn: builders study ERC and build some demos step by step, so we have
+
+134
+00:32:21.130 --> 00:32:42.789
+lynn: 208 people applied to join. This is very amazing, actually. So, our core learning is a little intensive and cruel. If someone doesn't check in for two days, they are out. So, those who are still alive are doing very, very good job here. And,
+
+135
+00:32:42.830 --> 00:33:01.700
+lynn: We are now in VIC2, so people share good notes and updates on their GitHub and also on our Telegram group every day, even if you didn't join from the start. It's okay, because all the materials are open on the GitHub, so you can learn anytime.
+
+136
+00:33:02.570 --> 00:33:19.879
+lynn: As for the second phrase, it's our, Kesha Hexan, from October 27 to November 9th. So, it's a two-week online haxon, so we want to solve real ERC problems, things like agent identity.
+
+137
+00:33:19.930 --> 00:33:22.959
+lynn: reputation, SDKS, and…
+
+138
+00:33:23.240 --> 00:33:34.440
+lynn: better. Our goal is to… our goal is to, create real demos and a simple product, then comes to, for 3 mini-grants.
+
+139
+00:33:34.440 --> 00:33:51.119
+lynn: This, this, developed, at, LX-style platform, so, which continues after the hacksaw is ongoing to help the teams, turn their ideas into MVPS and ecosystem tools.
+
+140
+00:33:51.120 --> 00:34:03.660
+lynn: So, the best teams will receive, receive the many grants, like the, 500, US dollars from the Happy Pods grant pool. After…
+
+141
+00:34:03.780 --> 00:34:07.949
+lynn: And from November 9th, 2021st, some…
+
+142
+00:34:07.950 --> 00:34:26.689
+lynn: some good builders will have the chance to demo on the stage at the DevConnect Translate Agent Day, so this is a very good opportunity for, for everyone. And after November 9th, excellent projects can keep getting ongoing mini-grants to support their growth.
+
+143
+00:34:26.719 --> 00:34:28.630
+lynn: And our hexam…
+
+144
+00:34:28.719 --> 00:34:39.120
+lynn: And our Hexan Telegram is already open, so you can join early, like, meet other builders, developers from the teams, form the teams.
+
+145
+00:34:39.120 --> 00:34:50.529
+lynn: And, brainstorming ideas together. So, we welcome everyone curious about the AI and ECRM to come and build with us, so…
+
+146
+00:34:50.530 --> 00:35:07.430
+lynn: And, this program is organized by LXDA and XPanda, supported by the Ethereum Foundation, DAI team, and, sponsored by the Slow Mist and the Unibase, with, Builder Guild, Guild, and,
+
+147
+00:35:07.460 --> 00:35:10.770
+lynn: Cause lie, across chain. Cause chain.
+
+148
+00:35:11.060 --> 00:35:22.870
+lynn: as the community partners, so we also welcome more partners to join us, and of course, more builders and developers like to take part in the upcoming Hexen.
+
+149
+00:35:22.970 --> 00:35:31.060
+lynn: Come join the group, so make more new friends, form teams, brainstorming, co-create.
+
+150
+00:35:31.060 --> 00:35:43.180
+lynn: and explore the front, frontier of AI together. So, thank you for, listening. So, let's keep building trusted agents together. Thank you.
+
+151
+00:35:43.180 --> 00:35:58.020
+Jessy: Thank you, Lynn. Also, yeah, thanks for LXDAO and Eve Penel for this, putting together this community initiative. I think due to the interest of time, I'm just gonna start putting, like, reactions on the screen, like…
+
+152
+00:35:58.020 --> 00:36:05.310
+Jessy: Thumbs up, thumbs up for, like, please, speed up for your presentation. But yeah, next slide, please.
+
+153
+00:36:05.610 --> 00:36:07.010
+lynn: Thank you. Okay.
+
+154
+00:36:07.010 --> 00:36:30.889
+Pilar Rodríguez: Okay, okay, I can speed up. Thank you, Jess. I am Philly from Camera Network, and with a team of long-term Ethereum contributors from different projects. We are organizing Agentic Zero. Agent Tech Zero will be a one-day AI and crypto summit on November 20. It focuses on open and permission entrance for autonomous agents, and it will happen in the same venue than DevConnect, that is Darunel.
+
+155
+00:36:30.890 --> 00:36:37.860
+Pilar Rodríguez: We have some amazing sponsors that are helping us to make it happen, and we also will have incredible speakers
+
+156
+00:36:37.880 --> 00:36:53.429
+Pilar Rodríguez: that we talk about standards, like the ERC 8004, agents and privacy, DeFi as an agent playground, what are the frameworks, security for an agent, and yeah, all the things that this industry needs to continue.
+
+157
+00:36:53.430 --> 00:37:14.970
+Pilar Rodríguez: evolving, you can, claim your ticket by scanning the QR code at the screen, and if you have any questions or comments, you can find us as Agentic0 on Twitter, and our website is also Agentix0.xo.c. So, yeah, that's, yeah, the event will be… will be streamed on Twitter.
+
+158
+00:37:16.390 --> 00:37:35.140
+Jessy: Cool. Awesome. Thank you, Pili, and… next slide. I… so, Mia, I think, may not be on the meeting right now, but essentially, Mia is the floor co-host for the 12th floor on… in the Frontier Tower in San Francisco, where some of our team members is currently working out of.
+
+159
+00:37:35.230 --> 00:37:54.760
+Jessy: But she is planning on a Trustless Agent's happy hour, during the, the day of Trustless Agent Day at DevConnect, so stay tuned for this. Feel free to go on the next slide. Perfect, demo time. We'll be doing a mixture of live and, recorded demos. Next slide.
+
+160
+00:37:56.360 --> 00:37:57.550
+Jessy: Isaac.
+
+161
+00:37:57.760 --> 00:38:08.649
+Jessy: feel free to, like, share your screen and demo it live, and please keep it under 2 minutes, and I'll start to have to, like, cut people off if, you're over, but yeah.
+
+162
+00:38:08.650 --> 00:38:09.620
+Moshi Wei: That's fascinating here.
+
+163
+00:38:09.770 --> 00:38:14.230
+Moshi Wei: Cool. I need, I need, permission to share my screen.
+
+164
+00:38:15.490 --> 00:38:16.600
+Jessy: Interesting, okay.
+
+165
+00:38:16.600 --> 00:38:18.859
+Davide Crapis: Can you ask again, motion?
+
+166
+00:38:19.430 --> 00:38:22.310
+Davide Crapis: Yes, I think I have it right now. Got it.
+
+167
+00:38:23.570 --> 00:38:34.360
+Moshi Wei: Okay, awesome. So, we are Isaac, I'm the, co-founder of ISEC, listen carefully, because I'm gonna, talk a lot of stuff in 2 minutes.
+
+168
+00:38:34.360 --> 00:38:52.200
+Moshi Wei: So, what is ISEC? It is the Internet of Agents. It builds based on A2A and ERC004, for the time, 8004. And the vision is to connect all the agents, no matter what network setup. We have P2P, for,
+
+169
+00:38:52.210 --> 00:39:12.789
+Moshi Wei: hole punching, so, like, local agent, no problem, you can totally execute in your local environment. And we're gonna make agent as capital, and we're gonna have a coordination layer, like a manager or orchestrator, that connects all these agents together, like an industry service, index service, or directory service.
+
+170
+00:39:12.790 --> 00:39:17.729
+Moshi Wei: And, now I'm going to show you how it works in 2 minutes.
+
+171
+00:39:17.730 --> 00:39:28.700
+Moshi Wei: So, first you have a remote agent running, then you register it in the 804 registry, then we have Agent Explorer that discovers it, and,
+
+172
+00:39:28.900 --> 00:39:31.199
+Moshi Wei: Pipeline it to our chat app.
+
+173
+00:39:31.350 --> 00:39:36.889
+Moshi Wei: Now this is the demo, I can run it again.
+
+174
+00:39:37.340 --> 00:39:38.760
+Moshi Wei: You'll see it's running.
+
+175
+00:39:39.040 --> 00:39:52.250
+Moshi Wei: And, you can see it's already registered, and there are a lot of transactions. Now, this is the Agent Explorer. If you refresh, there are two types.
+
+176
+00:39:52.830 --> 00:40:09.810
+Moshi Wei: There are a lot of agents, but most of them are on GitHub, and they are open-sourced. We tried to bring some of them on-chain, only a few on-chain right now. We need a community to bring lots of agents on-chain, so we can scale and make this network more interesting.
+
+177
+00:40:09.860 --> 00:40:22.090
+Moshi Wei: So you can see for now, there are 3 agents, and since we are using P2P, so the connection is relatively, slow, but this can be improved. So let me demo…
+
+178
+00:40:22.190 --> 00:40:34.790
+Moshi Wei: Now, it will connect to ASEC Network, so this is a preview template for the crypto news agent, and it talks to the registry and connect to the agents. Then it will return you the latest news.
+
+179
+00:40:35.230 --> 00:40:35.989
+Moshi Wei: Just give it…
+
+180
+00:40:35.990 --> 00:40:37.430
+Jessy: Also, that's time.
+
+181
+00:40:37.700 --> 00:40:39.279
+Moshi Wei: Okay. Yeah, that's pretty much it.
+
+182
+00:40:39.280 --> 00:40:41.889
+Jessy: Cool. Feel free to send the link, and the group people can.
+
+183
+00:40:41.890 --> 00:40:46.239
+Moshi Wei: Yeah, it's all in the… it's all on the slides. You can check it out, yeah.
+
+184
+00:40:46.720 --> 00:40:48.660
+Jessy: Awesome. Next one.
+
+185
+00:40:48.660 --> 00:40:49.760
+Davide Crapis: Okay, we'll see.
+
+186
+00:40:50.410 --> 00:40:50.809
+Moshi Wei: Thank you.
+
+187
+00:40:50.810 --> 00:40:53.559
+Jessy: of… Sparsity, if you wanna…
+
+188
+00:40:54.970 --> 00:40:56.919
+Zhengfa@Sparsity: Oh, great, it's our turn, right?
+
+189
+00:40:56.950 --> 00:40:58.290
+Jessy: Yep. Can you hear me?
+
+190
+00:41:00.100 --> 00:41:06.800
+Zhengfa@Sparsity: Yeah, I'm Zheng Fan from Sparsity. Our demo is entirely based on AWS.
+
+191
+00:41:06.970 --> 00:41:10.779
+Zhengfa@Sparsity: In case of another outrage, right?
+
+192
+00:41:11.000 --> 00:41:15.500
+Zhengfa@Sparsity: We have recorded the demo video in advance, so this time.
+
+193
+00:41:15.500 --> 00:41:19.040
+Davide Crapis: Nothing can stop our demo, right? Not even advanced.
+
+194
+00:41:19.040 --> 00:41:23.309
+Zhengfa@Sparsity: Now, David, will you please click the play button?
+
+195
+00:41:23.480 --> 00:41:27.079
+Davide Crapis: Oh, okay, yeah, let me actually present this.
+
+196
+00:41:48.980 --> 00:41:51.699
+Jessy: And then, could you put it on 2x speed, so it's…
+
+197
+00:41:54.240 --> 00:41:54.870
+Zhengfa@Sparsity: Thank you.
+
+198
+00:41:55.110 --> 00:42:00.540
+Davide Crapis: Today, I'm going to give a quick demo of the sparsity Trustless Agent Framework.
+
+199
+00:42:01.300 --> 00:42:08.630
+Davide Crapis: In short, This framework enables developers to easily build and deploy TE agents.
+
+200
+00:42:08.900 --> 00:42:11.480
+Davide Crapis: That can be validated and released on-chain.
+
+201
+00:42:11.890 --> 00:42:17.039
+Davide Crapis: Before we dive into how to use the framework, let's first take a look at our Agent Explorer.
+
+202
+00:42:17.250 --> 00:42:18.620
+Davide Crapis: You can check it out here.
+
+203
+00:42:19.780 --> 00:42:26.109
+Davide Crapis: This explorer automatically pulls all the agents from the on-chain registry and lists them right here on the left.
+
+204
+00:42:26.570 --> 00:42:29.740
+Davide Crapis: When you click on an agent, you can see all its details.
+
+205
+00:42:30.340 --> 00:42:35.669
+Davide Crapis: For example, this agent's TE type is natural, which means it's running on Elverse Nitro in plate.
+
+206
+00:42:36.060 --> 00:42:42.630
+Davide Crapis: You will also see the code measurement. That's the hash value of the agent, which uniquely identifies the code running inside the employee.
+
+207
+00:42:43.010 --> 00:42:45.330
+Davide Crapis: It's like the agent's digital fingerprint.
+
+208
+00:42:45.800 --> 00:42:58.930
+Davide Crapis: There's also the Ethereum wallet address, so the agent can interact with smart contracts directly, and the TE public key, which is used to encrypt and decrypt messages between the enclave and the outside world. And right here, we have the agent card, which is fetched directly from the agent itself.
+
+209
+00:42:59.680 --> 00:43:03.390
+Davide Crapis: Now, let's jump over to the agent console. This is where you can actually play with agents.
+
+210
+00:43:03.520 --> 00:43:12.069
+Davide Crapis: On the left, you've got all the available endpoints automatically detected by the console. On the right, you can send requests, test out methods, and see how the agent responds.
+
+211
+00:43:12.400 --> 00:43:18.019
+Davide Crapis: Since these agents are running in a trusted execution environment, it's really important that their response cannot be tempered away.
+
+212
+00:43:18.360 --> 00:43:22.889
+Davide Crapis: This is why every response includes a speech. For example, let's look at this F2 method.
+
+213
+00:43:23.400 --> 00:43:25.639
+Davide Crapis: You will see a signature field right next to the data.
+
+214
+00:43:26.190 --> 00:43:41.770
+Davide Crapis: If you select verify signage and call the API pin, you can actually watch the verification process. The verifier fetches the agent's information from the on-chain registry, calls the input, and confirms the signage, so you can be confident the result really came from the trusted employee, and nowhere else. Pretty cool, right?
+
+215
+00:43:42.130 --> 00:43:46.300
+Davide Crapis: So that's the Agent Explorer and Agent Console. Two tools that make it easy to explore and play with agents.
+
+216
+00:43:46.780 --> 00:43:52.639
+Davide Crapis: Now you might be wondering, how can I build and deploy my own agent? The good news is, we've got a full step-by-step tutorial on GitHub.
+
+217
+00:43:53.420 --> 00:43:57.430
+Davide Crapis: Just follow the guide, and in about 5 minutes, you will have your own agents deployed.
+
+218
+00:43:57.920 --> 00:44:03.090
+Davide Crapis: Then if you refresh Explorer, you will see your agent show up right alongside the others. And that's it for today's demo.
+
+219
+00:44:03.250 --> 00:44:09.189
+Davide Crapis: If you are curious about the framework, or want to try it out, feel free to reach out. We'd love to hear from you. And thanks so much for watching.
+
+220
+00:44:10.760 --> 00:44:15.680
+Jessy: Awesome! Thank you, Sparsity. And, next up is Chaos Chain.
+
+221
+00:44:16.200 --> 00:44:19.499
+Jessy: XiginCloud. Here for the demo.
+
+222
+00:44:19.500 --> 00:44:21.130
+Sumeet Chougule: Yeah, hi everyone.
+
+223
+00:44:22.190 --> 00:44:23.970
+Sumeet Chougule: Let me just share my screen now.
+
+224
+00:44:38.150 --> 00:44:46.460
+Sumeet Chougule: Yeah, so I'm not going to, like, run this live, because it's going to QA, like, the registry and all that on-chain.
+
+225
+00:44:46.460 --> 00:44:58.289
+Sumeet Chougule: And… which is really slow, and we have, like, strict deadline of 3 minutes. So, I've already run this, so, like, I'm going to show triple verified stack of Chaoschin. Like, Chaoschin is building the accountability protocol.
+
+226
+00:44:58.290 --> 00:45:12.419
+Sumeet Chougule: And the first layer is where we use AP2. This is, like, assets are the user interface, so Google introduced AP2, we do our own custom implementation of that, which lets us create, basically, proof of authorization.
+
+227
+00:45:12.730 --> 00:45:21.059
+Sumeet Chougule: from the user to an agent. And then second layer is process integrity. So this is where, you know, like, we look into the internal mechanics of an agent.
+
+228
+00:45:21.170 --> 00:45:33.159
+Sumeet Chougule: Now we have integrated eigen Compute and also zero-G Compute here. Today I'm going to show you how we are using eigen Compute and also EigenAI for deterministic, inference.
+
+229
+00:45:33.350 --> 00:45:39.290
+Sumeet Chougule: And then the third layer is accountability. So those are a different set of smart contracts, it's not yet deployed.
+
+230
+00:45:39.460 --> 00:45:42.239
+Sumeet Chougule: Which will be deployed next, next week.
+
+231
+00:45:42.600 --> 00:45:46.350
+Sumeet Chougule: So, one more thing about process integrity is that,
+
+232
+00:45:46.780 --> 00:46:07.140
+Sumeet Chougule: it's kind of an open marketplace, so we don't want to, like, have any vendor lock-in, let's say, with Eigen Compute or zero-G Compute, like, we are quite open, and we want to provide an option to our developers and users to choose whichever compute provider they want to have, and let the kind of the reputation decide which solution is going to be best fit, because we are going to tie this in
+
+233
+00:46:07.140 --> 00:46:12.780
+Sumeet Chougule: Like, which, compute provider, is providing the best proofs and reliable proofs?
+
+234
+00:46:12.780 --> 00:46:15.290
+Sumeet Chougule: Okay, so quickly…
+
+235
+00:46:15.810 --> 00:46:32.769
+Sumeet Chougule: We also have an SDK, Kaoshin SDK, so the base SDK basically allows you to interact with N04 out of the box, along with X402, and also it uses Coinbase Agent Kit to give you smart wallets, to give your agent smart wallets. Now, we have,
+
+236
+00:46:33.190 --> 00:46:39.539
+Sumeet Chougule: activated the eigen compute, for our three agents, Alice, Bob, and, Charlie.
+
+237
+00:46:40.730 --> 00:46:43.080
+Sumeet Chougule: And we are using Suruji for storage.
+
+238
+00:46:44.410 --> 00:46:52.910
+Sumeet Chougule: So, using SDK, like, our agents are being registered, on, on 8004, and then the agent IDs are 8, 9, and 10.
+
+239
+00:46:53.750 --> 00:47:03.510
+Sumeet Chougule: And then next phase is, like, starting the triple verified stack, and this is the user intent. In this case, agent is the user, and then it creates intent mandate and cart mandate.
+
+240
+00:47:03.620 --> 00:47:23.269
+Sumeet Chougule: Then Alice is, like, working on loan requests, so this, intent here is to have a microloan approval for Charlie, and Alice is working on verifying Charlie's reputation. So this is now, Alice is running inside Eigen ComputesDE, so we have this app ID from them, and then…
+
+241
+00:47:23.430 --> 00:47:42.230
+Sumeet Chougule: that it seems to reject this execution hash. So this is… this execution hash is created by us for determine… to figuring out if AI's output is really deterministic or not. So, digest, Enclave wallet, job ID of EigenAI. So the storage… the proof is being stored on… on Zeroji's storage.
+
+242
+00:47:42.630 --> 00:47:47.790
+Sumeet Chougule: These are the transaction hash, and now Bob is doing the validation of this thing.
+
+243
+00:47:48.240 --> 00:47:48.730
+Jessy: So…
+
+244
+00:47:48.730 --> 00:47:49.570
+Sumeet Chougule: Also, like, matching.
+
+245
+00:47:49.570 --> 00:47:50.500
+Jessy: time.
+
+246
+00:47:50.700 --> 00:47:53.959
+Sumeet Chougule: Okay, yeah, yeah, so this was it. Thank you very much.
+
+247
+00:47:53.960 --> 00:47:58.740
+Jessy: So, feel free to send over the link in the chat. And then next up, we have PACT.
+
+248
+00:47:58.740 --> 00:48:00.539
+Davide Crapis: Thanks, sweet, too.
+
+249
+00:48:01.200 --> 00:48:02.149
+Jessy: Thank you, Samit.
+
+250
+00:48:03.570 --> 00:48:09.910
+Brendan Joyce: Alright, hello everybody, let me get to here. Thank you for having us here today. And Marco, to your point.
+
+251
+00:48:09.940 --> 00:48:29.000
+Brendan Joyce: It's very critical, I think, to give a sort of a shiny sizzle package to go with the very significant stake that everyone here is building on a very technical end. So what is PACT? PACT is a couple things, but right now, what I'm going to show you is the work template that we've created, the work marketplace.
+
+252
+00:48:29.000 --> 00:48:33.540
+Brendan Joyce: And the way that we envision this working for the 8004 community is…
+
+253
+00:48:33.540 --> 00:48:47.200
+Brendan Joyce: You can hire AI agents, or AI agents can hire AI agents, or, potentially, in the near future, if so, if the AI agents so choose, they could hire human beings. So if they need some RLHF, they could simply do this.
+
+254
+00:48:47.300 --> 00:48:59.169
+Brendan Joyce: They create a job, enter job title, enter amount, due date, all of that information, and then when a job is posted, it actually appears on this timeline, so I will show you from the other side what it looks like.
+
+255
+00:48:59.170 --> 00:49:09.030
+Brendan Joyce: So, previous jobs have been, created, so you create a job, you would go to the details, you invite a job, and I'm obviously doing a very quick job of this, because I've got only 2 minutes.
+
+256
+00:49:09.100 --> 00:49:19.749
+Brendan Joyce: But then, once you have applied for a job, what's critically important is money has to be deposited in a single-use, non-custodial escrow wallet.
+
+257
+00:49:19.750 --> 00:49:34.630
+Brendan Joyce: So that both counterparties understand that there's actual skin in the game. And this is going to essentially be the handshake between humans and AI, because we think that without sort of a blockchain-based layer for trust.
+
+258
+00:49:34.630 --> 00:49:49.090
+Brendan Joyce: between super intelligences and, you know, me with my moderate intelligence, certainly compared to all of you, we're not going to stand a chance. So what we would like to do on behalf of this community is give you the opportunity to basically take this as an open source UI.
+
+259
+00:49:49.090 --> 00:50:02.390
+Brendan Joyce: and start applying all the various components, all the experiments you want to have. I'll put my name in the chat, but this is desktop and mobile. You also have reputation scores.
+
+260
+00:50:02.390 --> 00:50:21.000
+Brendan Joyce: profiles, so when I was noticing the reputation score component of the 8004, it's very exciting to me to see that in the future, that 80 or 95, or whatever it happens to be, could be a reputation score for AI agents working with each other and human beings with the reviews permanently logged on the chain.
+
+261
+00:50:21.000 --> 00:50:43.260
+Brendan Joyce: So much to talk about, look forward to sharing more with you guys in the future. You know, 8004 will work as the technological side, but so much of what we've done in blockchain and crypto for the 10 years that I've been in it is work with each other. I think 8004 is one of the very first projects I can see taking blockchain to the masses in beautiful ways that feel seamless, natural, and magical.
+
+262
+00:50:43.260 --> 00:50:48.810
+Jessy: Awesome. Thank you, Brennan, and you're perfectly on time. And then next, we have Fala.
+
+263
+00:50:57.810 --> 00:51:02.290
+Jessy: Fala, are ye here? Feel free to share your screen.
+
+264
+00:51:10.330 --> 00:51:16.419
+Jessy: Okay, we could go on to another one. If Fala shows up, please ping me. Coophive.
+
+265
+00:51:17.900 --> 00:51:21.449
+Levi Rybalov | CoopHive: Hi, everyone! My name is Levi, I'm the founder of Co-opHive.
+
+266
+00:51:21.450 --> 00:51:44.120
+Levi Rybalov | CoopHive: So, just going to be doing a quick intro before I hand it off to my colleague. So, basically, we are building a highly sophisticated escrow system that's used for trustless agents. So basically, you can put money into escrow, and then have that escrow released based on the outcome of a Boolean algebraic formula, like if A and B, or not C and D.
+
+267
+00:51:44.120 --> 00:52:00.430
+Levi Rybalov | CoopHive: And then each one of those variables can be arbitrated, and in fact, can be recursively arbitrated with, any arbitrary off-chain logic. So you can create these, you know, really sophisticated kinds of deals that, in, you know, the completely trustless environments. So with that, I will hand it over to Young for a demo.
+
+268
+00:52:01.440 --> 00:52:06.930
+奀 疒: I already have a pre-recorded video, so I sent it in chat, like, somebody can play this, or I can play it myself.
+
+269
+00:52:07.190 --> 00:52:08.219
+奀 疒: Which would be better?
+
+270
+00:52:08.220 --> 00:52:12.230
+Jessy: Please play yourself, and if you could do it on QBax, that's good, yeah.
+
+271
+00:52:12.400 --> 00:52:13.250
+奀 疒: Yeah.
+
+272
+00:52:17.860 --> 00:52:22.979
+奀 疒: Oh, wait, actually, I don't, I don't think I have permission set up correctly. Can, like, can the host play it for me or something?
+
+273
+00:52:27.470 --> 00:52:30.980
+Jessy: Would you be able to… okay.
+
+274
+00:52:30.980 --> 00:52:34.319
+奀 疒: Because I don't think I have Zoom permissions that are… yeah, sorry.
+
+275
+00:52:36.160 --> 00:52:42.730
+Davide Crapis: So… Is the… is the video in the main…
+
+276
+00:52:42.730 --> 00:52:44.799
+奀 疒: Yeah, it's the link, it's the link I just shared.
+
+277
+00:52:44.800 --> 00:52:45.190
+Jessy: that.
+
+278
+00:52:45.190 --> 00:52:45.770
+奀 疒: Excellent.
+
+279
+00:52:45.770 --> 00:52:47.140
+Jessy: Yum. Yeah.
+
+280
+00:52:47.750 --> 00:52:52.870
+Jessy: No, no, no, he sent the link in the Zoom… Yes, I sent the link, and the…
+
+281
+00:52:53.250 --> 00:52:54.070
+Levi Rybalov | CoopHive: Let me check.
+
+282
+00:52:54.820 --> 00:52:55.200
+Jessy: Yeah.
+
+283
+00:52:55.340 --> 00:52:56.530
+Levi Rybalov | CoopHive: In the Zoom chat.
+
+284
+00:52:57.590 --> 00:53:00.770
+Davide Crapis: I shouldn't be able to present, but yeah, let me pull this up.
+
+285
+00:53:02.360 --> 00:53:05.469
+Davide Crapis: Is it, yeah, Gary.
+
+286
+00:53:12.100 --> 00:53:15.460
+Davide Crapis: So we have a system for using arbitrary escrows with
+
+287
+00:53:25.100 --> 00:53:26.710
+Davide Crapis: Okay, so…
+
+288
+00:53:32.180 --> 00:53:34.139
+Davide Crapis: Seems like,
+
+289
+00:53:37.210 --> 00:53:40.059
+Davide Crapis: Seems like the video is, 5 minutes.
+
+290
+00:53:40.060 --> 00:53:44.480
+Jessy: I think we can only play, like, a minute or two of it.
+
+291
+00:53:44.480 --> 00:53:47.610
+Levi Rybalov | CoopHive: Yeah, like, twice speed or something, yeah, that's fine.
+
+292
+00:53:47.880 --> 00:53:59.920
+Davide Crapis: Yeah, so start from the top, okay. So ERC 804 validation. And I'm just going to demonstrate a simple flow. Alice finds something from Bob, demanding a validation from Charles above sentence score.
+
+293
+00:54:00.180 --> 00:54:17.529
+Davide Crapis: So first, I was construct a command demanding the validator, validation history at the map score, and then feed deposits something at escrow. And in this case, we're using the ERC20 escrow application, but we support all the different common ERC tokens, like ERC721 and ERC75 levels of these. And if that tokens aren't dominated, you can escrow, you can escrow any on-chain action that you want us to do in the future. So you can escrow, for example, make an attestation, or you can escrow building a certain way.
+
+294
+00:54:17.880 --> 00:54:21.470
+Davide Crapis: But anyway, Alice deposits her escrow with her demand, and that transfers the tickets to the…
+
+295
+00:54:21.610 --> 00:54:41.080
+Davide Crapis: And then Bob creates a fulfillment obligation, and this obligation abstract is actually the thin wrap-around TAS. So we have, some obligations that are active, as in, you do something like transfer tokens to somebody, and then you get an attestation, that you did so. But in this case, this, string obligation contract is just for submitting data on-chain that's not necessarily going to be used by other contracts. So, for example, if you do a job and then just host it somewhere in a server or on a PSS and you just need to report where it is on-chain, then this is an easy way to just get an asset in that instituted.
+
+296
+00:54:41.080 --> 00:54:46.099
+Davide Crapis: And here we can see the deployment ID for that is just an ESS revenue ID, so you can just say that to deployment. We'll be…
+
+297
+00:54:46.100 --> 00:55:00.259
+Davide Crapis: recipient, and then we used a rescue ID here to prevent, double spending, and to prevent you using, one fulfillment to collect an escrow that it's not for, so for example, you could, try to fulfill an easier obligation, and get a high validation score for that, and then find a claim address where they make sure that this rescue ID has been sent.
+
+298
+00:55:00.460 --> 00:55:14.329
+Davide Crapis: So here Bob requests validation for his fulfillment. And in this case, we're just using the, AAS application UID directly as the request hash, because it works as an identifier for the fulfillment. And maybe this is misusing the request hash, then I would like to know if there's a better way to do it, but it works as…
+
+299
+00:55:15.200 --> 00:55:22.279
+Davide Crapis: And so it probably validates with a validation response here of 75 bits greater than the main 50, and so Bob is able to collect. And then we have a.
+
+300
+00:55:22.280 --> 00:55:23.330
+Jessy: Yeah, it's…
+
+301
+00:55:23.330 --> 00:55:26.700
+Davide Crapis: In this case, Charlie validates with only a score of 30, which is below typical threshold, and so…
+
+302
+00:55:26.700 --> 00:55:40.190
+Jessy: People interested in this could feel free to check it out on the YouTube link, and co-opHive, if you guys want to send more links on your project in the chat as well. Next up is Bond Credit, and I think.
+
+303
+00:55:40.190 --> 00:55:40.620
+Ojas Arora | bond.credit: the hazards.
+
+304
+00:55:40.620 --> 00:55:41.850
+Jessy: Leaving it live as well.
+
+305
+00:55:42.460 --> 00:55:44.790
+Ojas Arora | bond.credit: Yeah, I'm just gonna show my screen now, it's recorded.
+
+306
+00:55:44.790 --> 00:55:45.690
+Jessy: Perfect.
+
+307
+00:55:54.150 --> 00:55:55.530
+Ojas Arora | bond.credit: change my.
+
+308
+00:55:59.220 --> 00:55:59.560
+Niels | bond.credit: you know.
+
+309
+00:55:59.580 --> 00:56:06.330
+Audio shared by Ojas Arora | bond.credit: I'm Ojis from one.credit. We're making the credit layer for the agendic economy. I'm really happy to contribute to this.
+
+310
+00:56:06.400 --> 00:56:25.369
+Audio shared by Ojas Arora | bond.credit: So how… what we're doing is we're making the credit scoring infrastructure for AI agents. The question you'd ask now is, why do AI agents even need credit scores? So, if the AI agent was to be given access to lending protocols or credit facilities without being verifiable on-chain, that would essentially be an issue, because AI agents might expose sensitive operational data.
+
+311
+00:56:25.600 --> 00:56:39.219
+Audio shared by Ojas Arora | bond.credit: That would create many security risks, and as of now, there is no standard protocol which can standardize their reputation across ecosystems. So the solution we've proposed is we use ARC8004 standard to register an agent.
+
+312
+00:56:39.410 --> 00:56:41.880
+Audio shared by Ojas Arora | bond.credit: We mint an agent NFT on-chain.
+
+313
+00:56:42.050 --> 00:56:55.889
+Audio shared by Ojas Arora | bond.credit: After that, we use Isaac TE scoring. So, we make in-house algorithms using on-chain agent data, such as TVL, AUM, and other matrix to calculate a comprehensive score that we submit on-chain using give feedback method.
+
+314
+00:56:56.020 --> 00:56:56.710
+Audio shared by Ojas Arora | bond.credit: Right?
+
+315
+00:56:57.060 --> 00:57:02.350
+Audio shared by Ojas Arora | bond.credit: So, essentially, the workflow is pretty straightforward. Register the agent, run computation, and submit the score.
+
+316
+00:57:02.660 --> 00:57:05.280
+Audio shared by Ojas Arora | bond.credit: As you can see, we have registered the agent.
+
+317
+00:57:05.520 --> 00:57:21.380
+Audio shared by Ojas Arora | bond.credit: This says, we are registered Giza agent under our organization. After that, we use Isaac to calculate the score. So the score, we submit the score in the give feedback method. To make it simpler, this is the score. The score is essentially 72, which was given back by Isaac.
+
+318
+00:57:23.030 --> 00:57:27.730
+Audio shared by Ojas Arora | bond.credit: So, yes, we're leveraging ERC8004 to solve a very essential issue.
+
+319
+00:57:28.000 --> 00:57:34.160
+Audio shared by Ojas Arora | bond.credit: Because agents need to be held accountable and given credit scores in this agent economic era.
+
+320
+00:57:38.210 --> 00:57:45.480
+Niels | bond.credit: Thanks for that. Also, we definitely urge you to join us on our journey, so follow the X, and please join the waitlist as well.
+
+321
+00:57:45.610 --> 00:57:46.360
+Niels | bond.credit: Thanks.
+
+322
+00:57:46.360 --> 00:57:54.029
+Jessy: Thank you, Bond Credit. Awesome, this is great. And, Super Mission and Org Trust, two more demos.
+
+323
+00:57:54.700 --> 00:57:57.220
+0xdiv: So, can you hear me?
+
+324
+00:57:57.370 --> 00:57:57.810
+Jessy: Yes.
+
+325
+00:57:57.810 --> 00:58:02.120
+0xdiv: I'm just… Just…
+
+326
+00:58:10.580 --> 00:58:11.809
+Jessy: Oh, you're muted.
+
+327
+00:58:24.780 --> 00:58:25.530
+0xdiv: Okay, okay.
+
+328
+00:58:25.650 --> 00:58:27.420
+0xdiv: Am I audible?
+
+329
+00:58:28.740 --> 00:58:29.969
+Jessy: Yes, perfect.
+
+330
+00:58:29.970 --> 00:58:31.300
+0xdiv: Nope. Okay.
+
+331
+00:58:31.310 --> 00:58:40.149
+0xdiv: So, basically, I'm building a trustless marketplace for agents, via ERC8004 and X402 payment system.
+
+332
+00:58:40.150 --> 00:59:05.070
+0xdiv: So, basically, what it does, like, I have a simple chat interface, like, I will go, like, I need to create a design for my website and all, and I should be something like that. Then chat asks you, like, it's a, you want an AI agent hired to AI agent, or basically you open a bounty for agents, and as well as humans, where they can bid, and they have, like, all the escrow account on-chain. And then, another one is you can have to hire something like my, someone
+
+333
+00:59:05.070 --> 00:59:07.519
+0xdiv: As a worker for a milestone contract.
+
+334
+00:59:07.540 --> 00:59:32.080
+0xdiv: So, like, the recommendation agents, suggest you, like, on-chain 3-4 agents, which is registered via ERC8004. It has all the reviews, here. You can actually see here in the leaderboard, so these are the three, agents I have deployed in base Epolia ERC8004, contract. So, one is Logo Master AI. So basically, what it has, like, it has a
+
+335
+00:59:32.080 --> 00:59:39.190
+0xdiv: patient score, basically the feedback section. So, we can rate it, and it's all the on-chain ratings here.
+
+336
+00:59:39.190 --> 00:59:44.619
+0xdiv: And you can see, actually, the agent NFT ID and all the contract it has interacted with.
+
+337
+00:59:44.620 --> 01:00:08.300
+0xdiv: And then I, then I deploy the mission, on-chain. And then what it does, like, it has the orchestrator agent, which then communicates to, logo master agent for that, and, pays via X402, with the payment. And you can see, here is the orchestrator, you can see the logo master agent, which has been paid by orchestrator agent.
+
+338
+01:00:08.300 --> 01:00:29.500
+0xdiv: With H status completed, and you can actually see the Dell delivery work here with the IPFS link. So, it's still on a testing, and you can also rate the agent. For now, it has, like, multiple times you can rate it, but, we're gonna have some things around with all the demos that I've seen, so I'm gonna take help and all, and this is what I've made.
+
+339
+01:00:29.690 --> 01:00:31.420
+0xdiv: Thank you. Thank you.
+
+340
+01:00:32.290 --> 01:00:43.860
+Jessy: Awesome, this is great, and perfectly on time as well. Thank you, Super Mission. And then last but not least, Bridge Peterson from, OrTrust. I think we might need to play this video real quick.
+
+341
+01:00:44.740 --> 01:00:46.670
+Jessy: Hi there. Yeah.
+
+342
+01:00:46.670 --> 01:00:56.310
+Richard Pedersen: Yeah, this is Rich. I just gave a quick, overview of what we're doing. Yeah, we're at the Agentic Trust Layer is an open source project that we've got going.
+
+343
+01:00:56.420 --> 01:01:15.749
+Richard Pedersen: And it's really aimed at creating a very opinionated architecture that's layered on top of the ERC 8004. So, we're focused on unique on-chain addresses, so having specific account abstractions for every agent, and making that linkage to be able to support signing and verification.
+
+344
+01:01:15.750 --> 01:01:21.209
+Richard Pedersen: The other thing is unique naming. So, to be able to have a unique,
+
+345
+01:01:21.380 --> 01:01:31.779
+Richard Pedersen: and strong name for every agent, and making that verifiable. We want to have that… we're making this multi-chain, so you can have agents on all the different chains, but still have unique names.
+
+346
+01:01:32.040 --> 01:01:49.320
+Richard Pedersen: And the really unique thing is it's entirely gasless. So we want to attract Web2 developers onto this platform, and this whole W… the ERC8004. So what we've done is, been a tenant since the beginning, is to make it where a Web 2 person can come on, create agents.
+
+347
+01:01:49.370 --> 01:01:56.530
+Richard Pedersen: deploy the agents, and do everything they're doing without having to do anything on-chain. So,
+
+348
+01:01:56.530 --> 01:02:09.689
+Richard Pedersen: And so we've done all that, and we have some… in that… in the GitHub environment, we have some A-to-A examples where we're actually, have agents that are leveraging this opinionated architecture. So if you could play the video here real quick,
+
+349
+01:02:10.150 --> 01:02:11.269
+Richard Pedersen: Kind of gives you a quick overview.
+
+350
+01:02:11.270 --> 01:02:28.590
+Davide Crapis: Agent Explorer demo. This open-source project support ERC 8004 multi-chain agents that are strongly named and are uniquely addressable with on-chain verifiable signatures. Our Agent Indexer and Explorer draws on multi-chain data via subgraphs and naming services. All of this comes with no wallet required. All you need is a social login and you're ready to go.
+
+351
+01:02:29.120 --> 01:02:34.569
+Davide Crapis: The Explorer aggregates all agents from all chains in one display, along with your own agents. It allows you to discover agents just like a client agent would.
+
+352
+01:02:35.260 --> 01:02:42.840
+Davide Crapis: For my movie review agent, I can set the A2A and MCP protocol information that goes into the ERC8004 registration. I can also go and view the agent strong name and ENS naming service.
+
+353
+01:02:43.000 --> 01:02:46.730
+Davide Crapis: In creating a new agent identity, you can see how we construct them on other L2 networks, like base.
+
+354
+01:02:47.260 --> 01:02:53.009
+Davide Crapis: Please visit the Agentic Trust Layer GitHub site, and check out our ERC8004 extension SDKs that makes A2A and AP2 come alive.
+
+355
+01:02:54.770 --> 01:03:11.580
+Richard Pedersen: Great, thank you. I guess one of the big things is just to see the linkage between naming account abstractions, and this is all built on MetaMask Delegation Framework Toolkit, so, you know, I can't… I can't say enough about the… the… what MetaMask has done to make this all come about, so thank you.
+
+356
+01:03:11.890 --> 01:03:21.829
+Jessy: Wonderful. Thank you so much, Rich, for concluding the demo section. A lot of feedback in the chat, in the chat, feedback is taken.
+
+357
+01:03:21.830 --> 01:03:35.560
+Jessy: we'll try to optimize how we run the meeting next time, but I think last section, we have Q&A, so feel free to, you know, if you have any questions, feel free to throw it in the chat or ask us on the call, anything.
+
+358
+01:03:35.970 --> 01:03:38.320
+Jessy: Feel free to… yeah.
+
+359
+01:03:38.470 --> 01:03:39.700
+Jessy: Yes, however.
+
+360
+01:03:39.700 --> 01:03:46.660
+Davide Crapis: Maybe we can take two minutes since we started, like, a few minutes late, to answer maybe one or two questions.
+
+361
+01:03:55.060 --> 01:04:09.890
+mattober: Oh, thanks for calling me out, Marco. Yeah, quick, quick note here, I'll keep it 15 seconds. Some of you may have saw us posted in the actual Telegram group. Pinata's offering a free IPFS storage program for anybody that's using IPFS to build with agents.
+
+362
+01:04:10.690 --> 01:04:13.180
+mattober: If you like free storage, you don't want to pay for it.
+
+363
+01:04:13.390 --> 01:04:20.270
+mattober: We just want to see what you guys are up to, learn from y'all. Reach out to team at pinata.cloud, or message me on Telegram. Done. That's it.
+
+364
+01:04:20.700 --> 01:04:21.679
+mattober: Free stuff.
+
+365
+01:04:22.820 --> 01:04:25.119
+Davide Crapis: Thanks, amazing. Brandon.
+
+366
+01:04:29.050 --> 01:04:44.310
+Brendan Joyce: Sorry about that, I was muted. Thank you, everyone, for your being here today. My question would be, so, we see a lot of technical development on one side, and then we see a couple sort of go-to-market type platforms that can speed the plow, for gaining mass adoption.
+
+367
+01:04:44.310 --> 01:04:49.619
+Brendan Joyce: Do we think that there's sort of a middleware component that's missing? I oftentimes see barbell distribution.
+
+368
+01:04:49.620 --> 01:05:07.239
+Brendan Joyce: in early-stage projects, do we think that, and this is something for us to mull over in the days, weeks to come, what is the missing piece that would guarantee success? Because I definitely see the world is basically waiting for this technology. How do we red-team it to make sure that we don't miss something?
+
+369
+01:05:08.950 --> 01:05:14.920
+Davide Crapis: By middleware, do you mean, like, the SDKs to improve, like, DevAX, or, like, something different?
+
+370
+01:05:15.540 --> 01:05:23.030
+Brendan Joyce: I would say everything from SDKs, MCP, and then how do we make sure that the, sort of the connective tissue…
+
+371
+01:05:23.140 --> 01:05:38.769
+Brendan Joyce: between the, the sort of more difficult coding aspects that normies, so to speak, can't do, and then the platform aspects that… wow, I'm getting a lot of balloons here, that's wild, sorry. The platform aspects.
+
+372
+01:05:38.770 --> 01:05:53.540
+Brendan Joyce: that normies can use, how do we make sure that that baton pass is connected so the value flow, goes from real-world use cases into AI, you know, verified AI agent, output.
+
+373
+01:05:53.540 --> 01:06:06.710
+Brendan Joyce: And that cycle continues to be a flywheel, as opposed to a sort of a one-off proof of concept, which, you know, we do know happens in Ethereum a lot. I don't want to see this… this is my favorite project I've seen in a long, long time, and I can't wait to see how we can just make it work.
+
+374
+01:06:07.530 --> 01:06:19.620
+Davide Crapis: Thank you, Brandon. Yeah, we're very excited on this. I think, like, as Marco and Leonard said, like, in the introduction, this is kind of our main focus right now. So, like, I feel that
+
+375
+01:06:19.920 --> 01:06:24.200
+Davide Crapis: After, like, the initial spec and the reference implementation.
+
+376
+01:06:24.400 --> 01:06:36.360
+Davide Crapis: and the deployment, the middleware is what the core team of ERC8004 is focused on, and we're also working with, like, some infrastructure projects, on Ethereum that, like.
+
+377
+01:06:36.360 --> 01:07:00.819
+Davide Crapis: they didn't present, like, we want to give the floor to, like, the people, like, kind of building, like, products, on top of 8004, but that's, we feel, is, like, our main mission as a team right now, after, like, finalizing the spec. And, of course, we welcome, like, help from the community, like, Pinara that just, like, presented is a kind of, like, infrastructure, partner of 8004, and we
+
+378
+01:07:00.820 --> 01:07:11.669
+Davide Crapis: welcome more, but we also want to, as you said, like, to enable people to build product that can reach users. I think that will be the main focus over the next two months.
+
+379
+01:07:12.290 --> 01:07:13.529
+Brendan Joyce: Great. Here to help.
+
+380
+01:07:17.370 --> 01:07:21.200
+Davide Crapis: And, Pojas, and then I think this is the last question, yeah.
+
+381
+01:07:21.650 --> 01:07:33.429
+Ojas Arora | bond.credit: Yeah, so my question is how the third step of ER3004 is validation of the agent. So, how are off-chain parties supposed to validate the on-chain metadata of the agent?
+
+382
+01:07:34.800 --> 01:07:41.279
+Davide Crapis: Yeah, so, like, one example you've seen, in the sparsity demo.
+
+383
+01:07:41.340 --> 01:08:05.369
+Davide Crapis: Right? That they are running these agents in, like, TEs, and they were showing specifically in, like, nitro TEs. So that, would be, like, one example. The other mode is, like, doing crypto economic validation via some AVS on eigenLayer. I think CowsChain is doing some of that, if I'm not,
+
+384
+01:08:05.390 --> 01:08:08.880
+Davide Crapis: mistaken, so, like, Sumit, maybe,
+
+385
+01:08:08.910 --> 01:08:14.089
+Davide Crapis: you can connect to Sumit, and then he can tell you more about that mode.
+
+386
+01:08:15.230 --> 01:08:15.980
+Ojas Arora | bond.credit: Thank you.
+
+387
+01:08:18.370 --> 01:08:41.909
+Davide Crapis: Yeah, thanks everyone. Please, like, keep the questions coming. Just, closing, what I would suggest is, like, if you build demos, or, like, if you're posting, on social, like, you can tag myself, Marco, or Jesse. We would love to, like, amplify, like, what you put out there, like.
+
+388
+01:08:41.910 --> 01:08:59.820
+Davide Crapis: from here to the road to DevConnect. Any questions, and if you want to get connected to, like, infrastructure partners, etc, Isha, also you find her in the builder group, like, she's the person to go. And any technical question.
+
+389
+01:09:00.060 --> 01:09:07.699
+Davide Crapis: you can direct to Leonard. So, like, we are here to help you guys, and yeah, let's build together towards LeftConnect.
+
+390
+01:09:09.220 --> 01:09:13.730
+Jessy: Thank you, guys. Really appreciate joining. See you in a few weeks.
+
+391
+01:09:14.660 --> 01:09:15.210
+Davide Crapis: Bye.
+
+392
+01:09:15.210 --> 01:09:16.140
+Zhengfa@Sparsity: Thank you, bye.
+
+393
+01:09:16.149 --> 01:09:16.909
+Leonard Tan: Thank you.
+

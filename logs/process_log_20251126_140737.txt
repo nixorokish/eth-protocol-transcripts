@@ -1,0 +1,32 @@
+2025-11-26T14:07:37.142763 - === Processing meetings from last 7 days ===
+2025-11-26T14:07:37.289896 - Step 1: Fetching closed GitHub issues...
+2025-11-26T14:07:52.619288 -   ✓ Found 1 matched meetings
+2025-11-26T14:07:52.619385 -   ⚠ Found 1 potential meetings that didn't match
+2025-11-26T14:07:52.619608 -   Saved 1 unmatched issues to logs/failed_matches_20251126_140737.json
+2025-11-26T14:07:52.619644 - 
+============================================================
+2025-11-26T14:07:52.619733 - [1/1] Processing: AllWalletDevs, call #36, November 26, 2025
+2025-11-26T14:07:52.619773 -   Meeting IDs: 822 2793 8777
+2025-11-26T14:07:52.619855 -   Date: November 26, 2025
+2025-11-26T14:07:54.103248 -   Recording found: 20 minutes
+2025-11-26T14:07:55.786870 - 
+============================================================
+2025-11-26T14:07:55.786957 - Uploading 1 meeting folders to GitHub in single commit...
+2025-11-26T14:07:56.442931 -     Last commit SHA: 54ec752952f9a02a32668047d2685ff69a458e83
+2025-11-26T14:07:56.684171 -     Base tree SHA: f81c918eec902b52b9d2ecbe4db770c842eaed66
+2025-11-26T14:07:56.684664 -     Creating tree with 3 files...
+2025-11-26T14:07:57.218999 -     New tree SHA: e0711a641335fae7bc6f81a6feae02e153d9f36a
+2025-11-26T14:07:57.590372 -     New commit SHA: 499dbda9468ab4c6a51a1c65552a9f3a2b1ecba5
+2025-11-26T14:07:58.001144 -     ✓ Successfully uploaded 3 files in single commit
+2025-11-26T14:07:58.001387 -       Commit message: Add 3 transcript files from 2025-11-26 14:07
+2025-11-26T14:07:58.011065 - ✓ Successfully uploaded 3 files in single commit
+2025-11-26T14:07:58.013398 - 
+============================================================
+2025-11-26T14:07:58.013448 - === SUMMARY ===
+2025-11-26T14:07:58.013485 - ✓ Successfully processed: 1
+2025-11-26T14:07:58.013519 - ⏭ Skipped (cached/exists): 0
+2025-11-26T14:07:58.013548 - ⚠ No recording found: 0
+2025-11-26T14:07:58.013576 - ⚠ Skipped short recordings: 0
+2025-11-26T14:07:58.013618 - 
+Log saved to: logs/process_log_20251126_140737.txt
+2025-11-26T14:07:58.013644 - Unmatched issues saved to: logs/failed_matches_20251126_140737.json

@@ -1,15 +1,14 @@
 # main.py (updated with logging and caching)
 import os
 import json
+import requests
 from dotenv import load_dotenv
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
-import hashlib
 
 from pmissues_monitor import get_recently_closed_issues, parse_issue_for_meeting_info
 from zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
-from download_transcripts import download_meeting_artifacts
-from github_uploader import upload_to_github
+from download_transcripts import download_meeting_artifacts, extract_meeting_info
 
 load_dotenv()
 
@@ -33,23 +32,28 @@ def get_meeting_key(meeting_info):
 
 def check_if_exists_on_github(repo_owner, repo_name, meeting_type, meeting_num, date):
     """Check if meeting already exists in GitHub repo"""
-    token = os.getenv("GITHUB_TOKEN")
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    
-    # Build the expected path
-    if meeting_num:
-        folder_name = f"Call-{meeting_num}_{date}"
-    else:
-        folder_name = f"Call_{date}"
-    
-    path = f"{meeting_type}/{folder_name}/metadata.json"
-    url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{path}"
-    
-    response = requests.get(url, headers=headers)
-    return response.status_code == 200
+    try:
+        token = os.getenv("GITHUB_TOKEN")
+        headers = {
+            "Authorization": f"token {token}",
+            "Accept": "application/vnd.github.v3+json"
+        }
+        
+        # Build the expected path
+        if meeting_num:
+            folder_name = f"Call-{meeting_num}_{date}"
+        else:
+            folder_name = f"Call_{date}"
+        
+        path = f"{meeting_type}/{folder_name}/metadata.json"
+        url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{path}"
+        
+        response = requests.get(url, headers=headers, timeout=10)
+        return response.status_code == 200
+    except Exception as e:
+        # If check fails, assume it doesn't exist (safer to try uploading)
+        print(f"    ⚠ Warning: Could not check if exists on GitHub: {e}")
+        return False
 
 # main.py (complete updated function)
 def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
@@ -182,7 +186,6 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
             continue
         
         # Extract meeting info for GitHub check
-        from download_transcripts import extract_meeting_info
         meeting_type, meeting_num = extract_meeting_info(recording.get('topic', ''))
         meeting_date = recording.get('start_time', '').split('T')[0]
         
@@ -202,8 +205,13 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
         # Step 4: Download artifacts (but don't upload yet)
         log(f"  Recording found: {recording.get('duration')} minutes")
         try:
-            folder_path = download_meeting_artifacts(recording, zoom_token)
-            processed_folders.append(folder_path)  # Collect for batch upload
+            # Pass the meeting number from the GitHub issue if available
+            folder_path = download_meeting_artifacts(
+                recording, 
+                zoom_token,
+                override_meeting_num=meeting.get('meeting_number')  # Add this parameter
+            )
+            processed_folders.append(folder_path)
             processed_count += 1
             
             # Add to cache (mark as downloaded, not uploaded yet)
@@ -231,21 +239,44 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
         from github_uploader import batch_upload_to_github
         
         try:
-            uploaded = batch_upload_to_github(processed_folders, repo_owner, repo_name)
+            uploaded = batch_upload_to_github(processed_folders, repo_owner, repo_name, log_func=log)
             
             if uploaded:
                 log(f"✓ Successfully uploaded {len(uploaded)} files in single commit")
+                
+                # Check if any ACD calls were uploaded in this batch
+                uploaded_acd = False
+                for key, value in processed_cache.items():
+                    if value.get('status') == 'downloaded' and value.get('meeting_type') in ['ACDE', 'ACDT', 'ACDC']:
+                        uploaded_acd = True
+                        break
                 
                 # Update cache to mark as uploaded
                 for key, value in processed_cache.items():
                     if value.get('status') == 'downloaded':
                         value['status'] = 'uploaded'
                         value['uploaded_at'] = datetime.now().isoformat()
+                
+                # Update README table if any ACD calls were uploaded
+                if uploaded_acd:
+                    try:
+                        from generate_readme_table import update_readme_table
+                        if update_readme_table():
+                            log(f"✓ Updated README table with new ACD calls")
+                        else:
+                            log(f"⚠ Could not update README table (check manually)")
+                    except Exception as e:
+                        log(f"⚠ Failed to update README table: {e}")
             else:
-                log(f"✗ Failed to batch upload")
-                # Don't mark as uploaded in cache, so they'll be retried next time
+                log(f"✗ Failed to batch upload - batch_upload_to_github returned empty list")
+                log(f"  This could indicate an API error, authentication issue, or network problem")
+                log(f"  Check the console output above for detailed error messages")
         except Exception as e:
+            import traceback
+            error_details = traceback.format_exc()
             log(f"✗ Upload error: {e}")
+            log(f"  Full traceback:\n{error_details}")
+
     else:
         log("\nNo new meetings to upload")
     
@@ -271,9 +302,6 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
     if failed_matches:
         log(f"Failed processing saved to: {log_dir / f'failed_processing_{timestamp}.json'}")
 
-# Add the import for requests at the top of the file
-import requests
-
 if __name__ == "__main__":
     import sys
     
@@ -286,9 +314,27 @@ if __name__ == "__main__":
             days = int(sys.argv[2]) if len(sys.argv) > 2 else 7
             process_recent_meetings(days_back=days, force_reprocess=True)
         elif sys.argv[1] == "--test":
+            # Test mode: fetch and download a single meeting
             from zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
             from download_transcripts import download_meeting_artifacts
-            check_single_meeting(["884 7930 8162"], "Oct 6, 2025")
+            
+            token = get_zoom_access_token()
+            if not token:
+                print("✗ Failed to get Zoom access token")
+                sys.exit(1)
+            
+            test_meeting_ids = ["884 7930 8162"]
+            test_date = "Oct 6, 2025"
+            
+            print(f"Testing: Fetching recording for {test_meeting_ids} on {test_date}")
+            recording = get_recordings_for_meeting_ids(token, test_meeting_ids, test_date)
+            
+            if recording:
+                print(f"✓ Found recording: {recording.get('topic')}")
+                folder_path = download_meeting_artifacts(recording, token)
+                print(f"✓ Downloaded to: {folder_path}")
+            else:
+                print("✗ No recording found")
         else:
             days = int(sys.argv[1])
             process_recent_meetings(days_back=days)

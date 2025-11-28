@@ -1,0 +1,15 @@
+2025-10-30T10:00:03.075863 - === Processing meetings from last 1 days ===
+2025-10-30T10:00:03.317432 - Step 1: Fetching closed GitHub issues...
+2025-10-30T10:00:20.911679 -   ✓ Found 0 matched meetings
+2025-10-30T10:00:20.912547 -   ⚠ Found 0 potential meetings that didn't match
+2025-10-30T10:00:20.912822 - 
+No new meetings to upload
+2025-10-30T10:00:20.920996 - 
+============================================================
+2025-10-30T10:00:20.921181 - === SUMMARY ===
+2025-10-30T10:00:20.921274 - ✓ Successfully processed: 0
+2025-10-30T10:00:20.921360 - ⏭ Skipped (cached/exists): 0
+2025-10-30T10:00:20.921438 - ⚠ No recording found: 0
+2025-10-30T10:00:20.921518 - ⚠ Skipped short recordings: 0
+2025-10-30T10:00:20.921687 - 
+Log saved to: logs/process_log_20251030_100003.txt

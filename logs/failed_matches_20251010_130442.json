@@ -1,0 +1,1244 @@
+[
+  {
+    "issue_number": 1747,
+    "title": "Stateless Implementers Call #43 | October 6, 2025",
+    "body_preview": "### UTC Date & Time\n\n[Sep 22, 2025, 15:00 UTC](https://notime.zone/OZUJrDpRahuzn)\n\n### Agenda\n\n1. Team updates\n2. Updates on binary trie t8n self-fixtures consumption progress. (@CPerezz )\n3. Discussi",
+    "closed_at": "2025-10-08T04:14:07Z"
+  },
+  {
+    "issue_number": 1745,
+    "title": "Ethproofs call #5, Native Rollups | September 26th, 2025",
+    "body_preview": ">Duration in minutes : 120\n\n# Agenda \n| Agenda Item | Topic | Link |\n| --- | --- | --- |\n| 01 | Introduction (Justin) | link |\n| 02 | AntChain OpenLabs: New zkVM Announcement | [link](https://docs.goo",
+    "closed_at": "2025-09-26T18:49:22Z"
+  },
+  {
+    "issue_number": 1735,
+    "title": "EIP-7732 Breakout Room Call #24, September 26, 2025",
+    "body_preview": "### UTC Date & Time\n\n[September 26, 2025, 14:00 UTC](https://savvytime.com/converter/utc/sep-26-2025/2pm)\n\n### Agenda\n\n#### Specifications & testing\n\nNew spec release: [v1.6.0-beta.0](https://github.c",
+    "closed_at": "2025-09-26T18:40:28Z"
+  },
+  {
+    "issue_number": 1718,
+    "title": "Stateless Implementers Call #42 | September 22, 2025",
+    "body_preview": "### UTC Date & Time\n\n[Sep 22, 2025, 15:00 UTC](https://notime.zone/OZUJrDpRahuzn)\n\n### Agenda\n\n1. Team updates\n2. Han's presentation about the state https://ethereum-magicians.org/t/not-all-state-is-e",
+    "closed_at": "2025-09-23T15:46:43Z"
+  },
+  {
+    "issue_number": 1727,
+    "title": "EIPIP Meeting 120 | Sep 17, 2025",
+    "body_preview": "### UTC Date & Time\n\nSep 17, 2025, 16:00 UTC\n\n### Agenda\n\n# Call for Input\n- Discussion on new [EIP editor \u2013 Mercy](https://github.com/ethcatherders/EIPIP/issues/391)\n- [Allow links to Protocol Buffer",
+    "closed_at": "2025-09-23T03:16:39Z"
+  },
+  {
+    "issue_number": 1734,
+    "title": "<call name> <call #>, <call date>",
+    "body_preview": "### UTC Date & Time\n\n19/09/2025\n\n### Agenda\n\n_No response_\n\n### Call Series\n\nAll Core Devs - Consensus\n\n### Duration\n\n60 minutes\n\n### Occurrence Rate\n\nbi-weekly\n\n### Use Custom Meeting Link (Optional)",
+    "closed_at": "2025-09-19T19:14:26Z"
+  },
+  {
+    "issue_number": 1733,
+    "title": "<call name> <call #>, <call date>",
+    "body_preview": "### UTC Date & Time\n\n19/09/2025\n\n### Agenda\n\n_No response_\n\n### Call Series\n\nAll Core Devs - Consensus\n\n### Duration\n\n60 minutes\n\n### Occurrence Rate\n\nbi-weekly\n\n### Use Custom Meeting Link (Optional)",
+    "closed_at": "2025-09-19T19:14:04Z"
+  },
+  {
+    "issue_number": 1732,
+    "title": "<call name> <call #>, <call date>",
+    "body_preview": "### UTC Date & Time\n\n19/09/2025\n\n### Agenda\n\n_No response_\n\n### Call Series\n\nAll Core Devs - Consensus\n\n### Duration\n\n60 minutes\n\n### Occurrence Rate\n\nbi-weekly\n\n### Use Custom Meeting Link (Optional)",
+    "closed_at": "2025-09-19T19:13:39Z"
+  },
+  {
+    "issue_number": 1714,
+    "title": "EIP-7732 Breakout Room Call #23, September 12, 2025",
+    "body_preview": "### UTC Date & Time\n\n[September 12, 2025, 14:00 UTC](https://savvytime.com/converter/utc/sep-12-2025/2pm)\n\n### Agenda\n\n### Specifications & testing\n\n#### Open\n\n* [eip7732: add tests for process_withdr",
+    "closed_at": "2025-09-15T14:01:51Z"
+  },
+  {
+    "issue_number": 1711,
+    "title": "QMDB Breakout Call #1, September 8, 2025",
+    "body_preview": "### UTC Date & Time\n\n[September 8, 2025, 15:00 UTC](https://savvytime.com/converter/utc/sep-8-2025/3pm)\n\n### Agenda\n\n- Presentation about [QMDB](https://github.com/LayerZero-Labs/qmdb) (Quick Merkle D",
+    "closed_at": "2025-09-09T19:56:04Z"
+  },
+  {
+    "issue_number": 1717,
+    "title": "leanConsensus Call #7 (leanMultisig specs) | Sept 5th, 2025",
+    "body_preview": ">Duration in minutes : 120\n\n# Agenda \n| Agenda Item | Topic | Link |\n| --- | --- | --- |\n| 01 | Introduction (Justin) | [link](https://docs.google.com/presentation/d/1PpNcAOsoc7nXAeztavFXHMUCOFACy9pdr",
+    "closed_at": "2025-09-05T20:09:22Z"
+  },
+  {
+    "issue_number": 1696,
+    "title": "EIP-7732 Breakout Room Call #22, August 29, 2025",
+    "body_preview": "### UTC Date & Time\n\n[August 29, 2025, 14:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250829T140000&p1=tz_gmt&p2=1440)\n\n### Agenda\n \n1. **Payload Post-State Availability in the",
+    "closed_at": "2025-09-02T15:59:27Z"
+  },
+  {
+    "issue_number": 1636,
+    "title": "Ethproofs Community Call #4 (enshrine RISC-V?) | Aug 22, 2025",
+    "body_preview": "# Agenda\n\n| Section | Speaker | Topic | Slides |\n| -------- | -------- | ----- | ------ |\n| **Updates** | Justin | Ethproofs (10min + Q&A) | [link](https://docs.google.com/presentation/d/1bOCEXteInuoM",
+    "closed_at": "2025-08-24T19:06:28Z"
+  },
+  {
+    "issue_number": 1704,
+    "title": "<call name> <call #>, <call date>",
+    "body_preview": "### UTC Date & Time\n\nAug 29,2025 3:36am\n\n### Agenda\n\n_No response_\n\n### Call Series\n\nAll Core Devs - Consensus\n\n<details>\n<summary>\ud83d\udd27 Meeting Configuration</summary>\n\n### Duration\n\n60 minutes\n\n### Occu",
+    "closed_at": "2025-08-29T13:34:43Z"
+  },
+  {
+    "issue_number": 1684,
+    "title": "Stateless Implementers Call #41, August 25, 2025",
+    "body_preview": "### UTC Date & Time\n\n[August 25, 2025, 15:00 UTC](https://notime.zone/OX_yoRzVTXaNe)\n\n### Agenda\n\nMeet link: shared in [#state-tree-migration](https://discord.gg/6ty8Z6Ev) Eth R&D Discord right before",
+    "closed_at": "2025-08-29T13:35:37Z"
+  },
+  {
+    "issue_number": 1628,
+    "title": "EIPIP Meeting 119 | Aug 20, 2025",
+    "body_preview": "# EIPIP Meeting 119, Aug 20, 2025\n\n- Date and time in UTC in format  [Aug 20, 2025, 15:00 UTC](https://savvytime.com/converter/utc/aug-20-2025/3pm)\n\n# Agenda \n\n## 1. Discuss Open Issues/PRs, and other",
+    "closed_at": "2025-08-25T21:29:21Z"
+  },
+  {
+    "issue_number": 1699,
+    "title": "Stateless Implementers Call #41, August 25, 2025",
+    "body_preview": "### UTC Date & Time\n[August 25, 2025, 15:00 UTC](https://notime.zone/OYUe-657tvEvq)\n\n### Agenda\nMeeting Info\nAugust 25, 2025, 15:00 UTC\nDuration: 60 minutes\nMeet link: shared in [#state-tree-migration",
+    "closed_at": "2025-08-25T13:48:44Z"
+  },
+  {
+    "issue_number": 1659,
+    "title": "EIP-7732 Breakout Room  call #21,  August 15, 2025",
+    "body_preview": "### UTC Date & Time\n\n[August 15, 2025, 14:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250815T140000&p1=tz_gmt&p2=1440)\n\n### Agenda\n\n- PTC sample by stake but count votes indivi",
+    "closed_at": "2025-08-18T01:13:11Z"
+  },
+  {
+    "issue_number": 1656,
+    "title": "eth_simulate Implementers' | Meeting #58 | Aug 11, 2025",
+    "body_preview": "# eth_simulate Implementers' # 58, Aug 11, 2025\n\n- Date and time in UTC in format [Aug 11, 2025, 16:00 UTC](https://savvytime.com/converter/utc/aug-11-2025/12pm)\n\n# Agenda \n\n- [Notes from Meeting 57]\n",
+    "closed_at": "2025-08-14T20:07:03Z"
+  },
+  {
+    "issue_number": 1672,
+    "title": "Stateless Implementers Call #40, August 11, 2025",
+    "body_preview": "### UTC Date & Time\n\n[August 11, 2025, 15:00 UTC](https://notime.zone/OX9nh1oWlnobe)\n\n### Agenda\n\nMeeting Info\nAugust 11, 2025, 15:00 UTC\nDuration: 60 minutes\nMeet link: shared in [#state-tree-migrati",
+    "closed_at": "2025-08-14T18:01:57Z"
+  },
+  {
+    "issue_number": 1679,
+    "title": "acdbot: collapse issue meeting config after creation",
+    "body_preview": "- feature: after issue is created, hide the config settings",
+    "closed_at": "2025-08-11T21:25:16Z"
+  },
+  {
+    "issue_number": 1667,
+    "title": "acdbot: simplify one-off calls",
+    "body_preview": "refactor + couple bug fixes:\r\n- change the data structure of one-off calls to more closely resemble recurring calls, removing many logic forks throughout\r\n- restrict meeting_id's to the root level; no",
+    "closed_at": "2025-08-06T17:09:56Z"
+  },
+  {
+    "issue_number": 1645,
+    "title": "eth_simulate Implementers' | Meeting #57 | July 28, 2025",
+    "body_preview": "# eth_simulate Implementers' # 57, July 28, 2025\n\n- Date and time in UTC in format [Jul 28, 2025, 16:00 UTC](https://savvytime.com/converter/utc/jul-28-2025/12pm)\n\n# Agenda \n\n- [Notes from Meeting 56]",
+    "closed_at": "2025-07-30T19:15:35Z"
+  },
+  {
+    "issue_number": 1627,
+    "title": "Stateless Implementers Call #39 | July 28, 2025",
+    "body_preview": "Meeting Info\nJuly 28, 2025, 15:00 UTC\nDuration: 60 minutes\nMeet link: shared in [#state-tree-migration](https://discord.gg/6ty8Z6Ev) Eth R&D Discord right before the call\n[All previous recordings](htt",
+    "closed_at": "2025-07-30T19:15:14Z"
+  },
+  {
+    "issue_number": 1644,
+    "title": "call name | call # | call date",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-07-27T03:49:44Z"
+  },
+  {
+    "issue_number": 1643,
+    "title": "call name | call # | call date",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-07-27T03:49:36Z"
+  },
+  {
+    "issue_number": 1619,
+    "title": "eth_simulate Implementers' | Meeting # 56 | July 21, 2025",
+    "body_preview": "# eth_simulate Implementers' # 56, July 21, 2025\n\n- Date and time in UTC in format [Jul 21, 2025, 16:00 UTC](https://savvytime.com/converter/utc/jul-21-2025/12pm)\n\n# Agenda \n\n- [Notes from Meeting 55]",
+    "closed_at": "2025-07-22T20:08:55Z"
+  },
+  {
+    "issue_number": 1621,
+    "title": "EIPIP Meeting 118 | July 16, 2025",
+    "body_preview": "# EIPIP Meeting 118 | July 16, 2025\n\n- Date and time in UTC in format [Jul 16, 2025, 14:00 UTC](https://savvytime.com/converter/utc/jul-16-2025/2pm)\n\n# Agenda \n\n## 1. Discuss Open Issues/PRs, and othe",
+    "closed_at": "2025-07-18T12:28:38Z"
+  },
+  {
+    "issue_number": 1566,
+    "title": "Stateless Implementers Call #38 | July 14, 2025",
+    "body_preview": "### Meeting Info\n* [July 14, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-24",
+    "closed_at": "2025-07-16T04:54:43Z"
+  },
+  {
+    "issue_number": 1617,
+    "title": "add ai-info to berlinterop notes & update readme",
+    "body_preview": "",
+    "closed_at": "2025-07-12T22:54:54Z"
+  },
+  {
+    "issue_number": 1563,
+    "title": "eth_simulate Implementers' | Meeting # 51 | June 02, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting # 51, June 02, 2025\n\n- Date and time in UTC in format [June 02, 2025, 12:00 UTC](https://savvytime.com/converter/utc/jun-02-2025/12pm)\n\n# Agenda \n\n- [Notes from th",
+    "closed_at": "2025-06-03T18:23:36Z"
+  },
+  {
+    "issue_number": 1574,
+    "title": "eth_simulate Implementers' | Meeting # 53 | June 16, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting # 53, June 16, 2025\n\n- Date and time in UTC in format [June 16, 2025, 12:00 UTC](https://savvytime.com/converter/utc/jun-16-2025/12pm)\n\n# Agenda \n\n- [Notes from Me",
+    "closed_at": "2025-06-18T09:17:04Z"
+  },
+  {
+    "issue_number": 1587,
+    "title": "eth_simulate Implementers' | Meeting # 54 | June 23, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting # 54 |  June 23, 2025\n\n- Date and time in UTC in format [June 23, 2025, 12:00 UTC](https://savvytime.com/converter/utc/jun-23-2025/12pm)\n\n# Agenda \n\n- [Notes from ",
+    "closed_at": "2025-06-24T21:04:32Z"
+  },
+  {
+    "issue_number": 1595,
+    "title": "eth_simulate Implementers' | Meeting # 55 | June 30, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting # 55 |  June 30, 2025\n\n- Date and time in UTC in format [June 30, 2025, 12:00 UTC](https://savvytime.com/converter/utc/jun-30-2025/12pm)\n\n# Agenda \n\n- [Notes from ",
+    "closed_at": "2025-07-02T13:11:15Z"
+  },
+  {
+    "issue_number": 1568,
+    "title": "eth_simulate Implementers' | Meeting # 52 | June 09, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting # 52, June 09, 2025\n\n- Date and time in UTC in format [June 09, 2025, 12:00 UTC](https://savvytime.com/converter/utc/jun-09-2025/12pm)\n\n# Agenda \n\n- [Notes from Me",
+    "closed_at": "2025-06-14T03:45:26Z"
+  },
+  {
+    "issue_number": 1606,
+    "title": "call name | call # | call date",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-07-08T17:47:26Z"
+  },
+  {
+    "issue_number": 1559,
+    "title": "Protocol Research Call | #3 | July 9, 2025",
+    "body_preview": "# Protocol Research Call #3, July 9, 2025: zk and stateless\n\n- [Jul 9, 2025, 14:00 UTC](https://savvytime.com/converter/utc/jul-09-2025/2pm)\n\n# Agenda \n\nTBA\n\n<details> <summary>\ud83e\udd16 config</summary>\n\n- D",
+    "closed_at": "2025-07-07T08:37:31Z"
+  },
+  {
+    "issue_number": 1575,
+    "title": "EIP-7732 Breakout Room | call #20 |  June 20, 2025",
+    "body_preview": "# EIP-7732 Breakout Room #20,  June 20, 2025 \n\n* [June 20th (Fri), 2025 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20250620T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\n* Durat",
+    "closed_at": "2025-06-24T21:04:02Z"
+  },
+  {
+    "issue_number": 1235,
+    "title": "Create Meeting 200.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1190",
+    "closed_at": "2025-01-07T22:07:12Z"
+  },
+  {
+    "issue_number": 1580,
+    "title": "EIPIP Meeting 117 | June 18, 2025",
+    "body_preview": "# EIPIP Meeting #117, June 18, 2025\nDate and time in UTC in format [June 18, 2025, 14:00 UTC](https://savvytime.com/converter/utc/Jun-18-2025/2pm)\n\n# Agenda \n\n## 1. Discuss Open Issues/PRs, and other ",
+    "closed_at": "2025-06-19T09:54:37Z"
+  },
+  {
+    "issue_number": 1582,
+    "title": "Rename Interop-Notes/interop to Interop-Notes/eth2-interop",
+    "body_preview": "the first interop notes directory was simply named \"interop\", which causes some confusion and ambiguity with recurring interops",
+    "closed_at": "2025-06-19T09:54:21Z"
+  },
+  {
+    "issue_number": 1581,
+    "title": "Move interop-related folders to top-level directory",
+    "body_preview": "Now that interops are somewhat recurring, moving the notes to a directory outside the breakout rooms directory for better organization and visibility",
+    "closed_at": "2025-06-18T19:19:17Z"
+  },
+  {
+    "issue_number": 1572,
+    "title": "Fix Typos in Meeting Notes (call_060.md)",
+    "body_preview": "\r\n\r\n**Description:**  \r\nThis pull request corrects several typographical errors in the `call_060.md` meeting notes file. The following changes were made:\r\n- Fixed the spelling of \"number\", \"launched\",",
+    "closed_at": "2025-06-14T03:43:46Z"
+  },
+  {
+    "issue_number": 1555,
+    "title": "Stateless Implementers Call #37",
+    "body_preview": "### Meeting Info\n* [June 02, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-24",
+    "closed_at": "2025-06-03T18:23:53Z"
+  },
+  {
+    "issue_number": 1556,
+    "title": "eth_simulate Implementers' | Meeting # 50 | May 26, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting # 50, May 26, 2025\n\n- Date and time in UTC in format [May 26, 2025, 12:00 UTC](https://savvytime.com/converter/utc/may-12-2025/12pm)\n\n# Agenda \n\n- [Notes from the ",
+    "closed_at": "2025-05-28T20:38:03Z"
+  },
+  {
+    "issue_number": 1483,
+    "title": "EIPIP Meeting 116 | May 21, 2025",
+    "body_preview": "# EIPIP Meeting #116, May 21, 2025\nDate and time in UTC in format [May 21, 2025, 14:00 UTC](https://savvytime.com/converter/utc/May-21-2025/2pm)\n\n# Agenda \n\n## 1. Discuss Open Issues/PRs, and other to",
+    "closed_at": "2025-05-26T15:08:43Z"
+  },
+  {
+    "issue_number": 1537,
+    "title": "eth_simulate Implementers' | Meeting # 49 | May 19, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting # 49, May 19, 2025\n\n- Date and time in UTC in format [May 19, 2025, 12:00 UTC](https://savvytime.com/converter/utc/may-12-2025/12pm)\n\n# Agenda \n\n- [Notes from the ",
+    "closed_at": "2025-05-26T11:58:27Z"
+  },
+  {
+    "issue_number": 1549,
+    "title": "beam call #7 (rainbow staking) | May 30, 2025",
+    "body_preview": "# beam chain call 07, May 30, 2025\n\n- [May 30, 2025, 14:00-15:00 UTC](https://savvytime.com/converter/utc/may-30-2025/2pm)\n- Duration in minutes : 90\n\n>more information to follow\n\n# Agenda \n| Agenda I",
+    "closed_at": "2025-05-24T12:16:45Z"
+  },
+  {
+    "issue_number": 1550,
+    "title": "Ethproofs Community Call #2 (provers) | May 23, 2025",
+    "body_preview": "# Ethproofs Community Call 02, May 23, 2025\n\n- [May 23, 2025, 14:00-15:00 UTC](https://savvytime.com/converter/utc/may-23-2025/2pm)\n- Duration in minutes : 120\n\n# Agenda \n\n| **Agenda Section** | **Age",
+    "closed_at": "2025-05-24T12:16:32Z"
+  },
+  {
+    "issue_number": 1538,
+    "title": "Stateless Implementers Call #36",
+    "body_preview": "### Meeting Info\n* [May 19, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-24-",
+    "closed_at": "2025-05-22T17:22:26Z"
+  },
+  {
+    "issue_number": 1532,
+    "title": "Protocol Research Call #2, May 14 2025",
+    "body_preview": "# Protocol Research Call 2\n\n- [May 14, 2025, 14:00 UTC](https://savvytime.com/converter/utc/may-14-2025/2pm)\n- Zoom: https://ethereumfoundation.zoom.us/j/88466852259?pwd=UeBrdHQhlOXTIyVBbH1Ax25BDsJUTX",
+    "closed_at": "2025-05-19T17:24:38Z"
+  },
+  {
+    "issue_number": 1552,
+    "title": "docs: fix typos in Meeting 127.md",
+    "body_preview": "",
+    "closed_at": "2025-05-19T17:23:59Z"
+  },
+  {
+    "issue_number": 1545,
+    "title": "call name | call # | call date",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-05-16T15:10:22Z"
+  },
+  {
+    "issue_number": 1530,
+    "title": "Breakout Room Meetings",
+    "body_preview": "- ePBS meeting 15-18\r\n- FOCIL meeting 8",
+    "closed_at": "2025-05-08T21:40:10Z"
+  },
+  {
+    "issue_number": 1518,
+    "title": "eth_simulate Implementers' | Meeting # 48 | May 05, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting # 48,  May 05, 2025 \n\n- Date and time in UTC in format [May 05, 2025, 12:00 UTC](https://savvytime.com/converter/utc/may-05-2025/12pm)\n\n# Agenda \n\n- [Notes from th",
+    "closed_at": "2025-05-07T12:43:56Z"
+  },
+  {
+    "issue_number": 1520,
+    "title": "Interop Testing #35 | May 5 2025",
+    "body_preview": "# Interop Testing #35 | May 5 2025\n\n- [May 5, 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-28-2025/2pm)\n\n# Agenda \n- Updates on Pectra testing and last minute readiness check\n- Discussions",
+    "closed_at": "2025-05-07T12:41:01Z"
+  },
+  {
+    "issue_number": 1521,
+    "title": "Updated Breakout Room files for PeerDAS, beam chain and Ethproofs",
+    "body_preview": "### beam chain\r\nUpdated: beam-chain-pm.md\r\nAdded: Meeting 04 and 05\r\n\r\n### PeerDAS\r\nUpdated: peerdas-pm.md\r\nAdded: Meeting 25, 26, and 27\r\n\r\n### Ethproofs\r\nAdded folder, Ethproofs-pm and Meeting 01",
+    "closed_at": "2025-05-07T12:40:19Z"
+  },
+  {
+    "issue_number": 1497,
+    "title": "Stateless Implementers Call #35",
+    "body_preview": "### Meeting Info\n* [May 05, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-24-",
+    "closed_at": "2025-05-06T13:13:48Z"
+  },
+  {
+    "issue_number": 1499,
+    "title": "Interop Testing #34 | April 28 2025",
+    "body_preview": "# Interop Testing #34 | April 28 2025\n\n- [April 28, 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-28-2025/2pm)\n- 60 Minutes\n- Recurring meeting : true\n- Call series : Interop Testing\n- Occu",
+    "closed_at": "2025-05-06T20:56:04Z"
+  },
+  {
+    "issue_number": 1514,
+    "title": "PeerDAS Breakout Room - Call #28 | May 06, 2025",
+    "body_preview": "# PeerDAS Breakout Room - Call #28 | May 06, 2025\n\n- [May 06 (Tues), 2025, 14:00 UTC](https://savvytime.com/converter/utc/may-6-2025/2pm)\n- Zoom link: https://ethereumfoundation.zoom.us/j/82523885094?",
+    "closed_at": "2025-05-06T18:04:42Z"
+  },
+  {
+    "issue_number": 1407,
+    "title": "Add meeting_02 and update beam-chain-pm and meeting_01",
+    "body_preview": "Adding meeting_02.md and updating beam-chain-pm.md and meeting_01.md",
+    "closed_at": "2025-03-25T17:47:54Z"
+  },
+  {
+    "issue_number": 1465,
+    "title": "Update PeerDAS with 'Meeting 24.md' and 'PM.md'",
+    "body_preview": "Updated PeerDAS Breakout Room to add 'Meeting 24.md' and update 'PeerDAS-pm.md'.",
+    "closed_at": "2025-04-14T17:12:08Z"
+  },
+  {
+    "issue_number": 1432,
+    "title": "Added beam chain meeting notes, removed old file 'Meeting 01.md' and updated PM file",
+    "body_preview": "Added meeting notes, removed old file 'Meeting 01.md' and updated PM file",
+    "closed_at": "2025-04-07T02:55:59Z"
+  },
+  {
+    "issue_number": 1449,
+    "title": "Ethproofs Community Call #1 (team intros, new features, roadmap, Q&A) | April 25, 2025",
+    "body_preview": "# Ethproofs Community Call 01, April 25, 2025\n\n- [April 25, 2025, 14:00-15:00 UTC](https://savvytime.com/converter/utc/apr-25-2025/2pm)\n- Duration in minutes : 120\n\n# Agenda \n\n| **Agenda Section** | *",
+    "closed_at": "2025-04-25T17:33:30Z"
+  },
+  {
+    "issue_number": 1519,
+    "title": "Test call",
+    "body_preview": "# Test call feature\n\n- Date and time in UTC in format [May 19, 2025, 14:00 UTC](https://savvytime.com/converter/utc/jan-16-2025/2pm)\n\n# Agenda \n\n- Agenda point 1 \n- Agenda point n \n\nOther comments and",
+    "closed_at": "2025-05-04T02:08:10Z"
+  },
+  {
+    "issue_number": 1447,
+    "title": "beam call #5 (APS: attester-proposer separation) | May 2, 2025",
+    "body_preview": "# beam chain call 05, May 2, 2025\n\n- [May 2, 2025, 14:00-15:00 UTC](https://savvytime.com/converter/utc/may-2-2025/2pm)\n- Duration in minutes : 60\n\n\n# Agenda \n| Agenda Item | Topic | Link |\n| --- | --",
+    "closed_at": "2025-05-02T16:53:29Z"
+  },
+  {
+    "issue_number": 1512,
+    "title": "docs: update links to ACD meetings after changes in directories ",
+    "body_preview": "",
+    "closed_at": "2025-05-01T17:53:49Z"
+  },
+  {
+    "issue_number": 1505,
+    "title": "PeerDAS Breakout Room - Call #27 | April 29, 2025",
+    "body_preview": "# PeerDAS Breakout Room - Call #27 | April 29, 2025\n\n- [Apr 29 (Tues), 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-29-2025/2pm)\n- [Zoom link](https://ethereumfoundation.zoom.us/j/82343923",
+    "closed_at": "2025-04-29T19:55:29Z"
+  },
+  {
+    "issue_number": 1489,
+    "title": "EOF Implementors Call, # 72, April 30, 2025",
+    "body_preview": "# EOF Implementors Call, # 72, April 30, 2025\n\n- [Apr 30, 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-30-2025/2pm)\n\n# Agenda \n\n- Testing\n- Client Updates\n  - EELS\n  - Geth  \n  - Besu  \n  ",
+    "closed_at": "2025-04-28T15:51:43Z"
+  },
+  {
+    "issue_number": 1469,
+    "title": "EVMMAX Implementers Call 5 | April 24, 2025",
+    "body_preview": "# EVMMAX Implementers Call 5 | April 24, 2025\n\n- Date and time in UTC in format [April 24, 2025, 12:00 UTC](https://savvytime.com/converter/utc/apr-24-2025/12pm)\n- Duration in minutes : 90 mins\n- Occu",
+    "closed_at": "2025-04-27T05:07:28Z"
+  },
+  {
+    "issue_number": 1452,
+    "title": "Stateless Implementers Call #34",
+    "body_preview": "### Meeting Info\n* [April 21, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-2",
+    "closed_at": "2025-04-23T15:22:39Z"
+  },
+  {
+    "issue_number": 1491,
+    "title": "PeerDAS Breakout Room - Call #26 | April 22, 2025",
+    "body_preview": "# PeerDAS Breakout Room - Call #26 | April 22, 2025\n\n- [Apr 22, 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-22-2025/2pm)\n- Zoom link: https://ethereumfoundation.zoom.us/s/82523885094\n\n\n##",
+    "closed_at": "2025-04-22T16:13:05Z"
+  },
+  {
+    "issue_number": 1429,
+    "title": "EOF Implementors Call, #71, April 16, 2025",
+    "body_preview": "# EOF Implementors Call, #71, April 16, 2025\n\n- [Apr 16, 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-16-2025/2pm)\n- Duration in minutes : 60\n- Recurring meeting : true\n- Call series : EOF",
+    "closed_at": "2025-04-21T22:54:40Z"
+  },
+  {
+    "issue_number": 1446,
+    "title": "beam call #4 (exit queue) | April 18, 2025",
+    "body_preview": "# beam chain call 04, April 18, 2025\n\n- [April 18, 2025, 14:00-15:00 UTC](https://savvytime.com/converter/utc/apr-18-2025/2pm)\n- Duration in minutes : 60\n\n# Agenda \n| Agenda Item | Topic | Link |\n| --",
+    "closed_at": "2025-04-18T19:43:02Z"
+  },
+  {
+    "issue_number": 1441,
+    "title": "PeerDAS Breakout Room - Call #25 | April 15, 2025",
+    "body_preview": "# PeerDAS Breakout Room - Call 25 | April 15, 2025\n\n- [Apr 15, 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-15-2025/2pm)\n- Duration in minutes : 60\n\n\n### Resources\n- [Zoom Link](https://et",
+    "closed_at": "2025-04-17T21:50:30Z"
+  },
+  {
+    "issue_number": 1450,
+    "title": "Interop Testing #33 | April 14 2025",
+    "body_preview": "# Interop Testing #33 | April 14 2025\n\n- [April 14, 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-17-2025/2pm)\n- 60 Minutes\n- Recurring meeting : true\n- Call series : Interop Testing\n- Occu",
+    "closed_at": "2025-04-17T13:21:12Z"
+  },
+  {
+    "issue_number": 1402,
+    "title": "EIPIP Meeting 115 | April 16, 2025",
+    "body_preview": "# Meeting Info\n- Date and Time: [Apr 16, 2025, 14:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250319T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107",
+    "closed_at": "2025-04-17T01:34:57Z"
+  },
+  {
+    "issue_number": 1480,
+    "title": "call name | call # | call date ",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-04-16T17:57:44Z"
+  },
+  {
+    "issue_number": 1437,
+    "title": "eth_simulate Implementers' Meeting | April 14, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting\n\n- Date and time in UTC [April 14, 2025, 12:00 UTC](https://savvytime.com/converter/utc/Apr-14-2025/12pm)\n- Duration in minutes: 60 minutes\n- Recurring meeting : t",
+    "closed_at": "2025-04-15T19:44:36Z"
+  },
+  {
+    "issue_number": 1474,
+    "title": "Update PeerDAS call info on calendar",
+    "body_preview": "Hi!  It seems that there is a link discrepancy on the calendar.  Can we update that to match the one in the break-out room issue.\n\nhttps://github.com/ethereum/pm/issues/1441\n\nLink on calendar:\nhttps:/",
+    "closed_at": "2025-04-15T10:03:06Z"
+  },
+  {
+    "issue_number": 1473,
+    "title": "added new calls, standardized file naming, fixed broken link",
+    "body_preview": "- added new ACD calls\r\n- standardized CL file naming to lowercase in README\r\n- changed file names to match\r\n- fixed broken link",
+    "closed_at": "2025-04-15T00:37:31Z"
+  },
+  {
+    "issue_number": 1427,
+    "title": "History Expiry Breakout |  April 8th 2025",
+    "body_preview": "# History Expiry Breakout - April 8th 2025\n\n- [April 8, 2025, 14:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-ja",
+    "closed_at": "2025-04-14T21:49:28Z"
+  },
+  {
+    "issue_number": 1466,
+    "title": "Update Breakout Room Meetings",
+    "body_preview": "### FOCIL\r\n- [Meeting 07](https://github.com/ethereum/pm/issues/1408)\r\n- [Meeting 06](https://github.com/ethereum/pm/issues/1363)\r\n- README",
+    "closed_at": "2025-04-14T17:11:20Z"
+  },
+  {
+    "issue_number": 1463,
+    "title": "call name | call # | call date ",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-04-12T14:02:14Z"
+  },
+  {
+    "issue_number": 1457,
+    "title": "call name | call # | call date",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-04-11T20:28:47Z"
+  },
+  {
+    "issue_number": 1458,
+    "title": "call name | call # | call date",
+    "body_preview": "# RollCall #12 May 14, 2025\n\n- [May 14, 2025, 14:00 UTC](https://savvytime.com/converter/utc/may-14-2025/2pm)\n- Duration in minutes : 60\n- Recurring meeting : true\n- Call series : RollCall\n- Occurrenc",
+    "closed_at": "2025-04-11T20:42:38Z"
+  },
+  {
+    "issue_number": 1443,
+    "title": "call name | call # | call date ",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-04-09T11:48:31Z"
+  },
+  {
+    "issue_number": 1418,
+    "title": "Stateless Implementers Call #33",
+    "body_preview": "### Meeting Info\n* [April 7, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-24",
+    "closed_at": "2025-04-08T21:30:10Z"
+  },
+  {
+    "issue_number": 1425,
+    "title": "PeerDAS Breakout Call #24, Apr 8, 2025",
+    "body_preview": "[Apr 8 (Tues), 2025, 10:00 UTC](https://savvytime.com/converter/utc/apr-8-2025/10am)\nDuration: 60 minutes\n[Zoom link](https://ethereumfoundation.zoom.us/j/89262256299?pwd=hAYw0AjbgMYbqPUK1VPC6fqyWiS6j",
+    "closed_at": "2025-04-08T19:30:44Z"
+  },
+  {
+    "issue_number": 1436,
+    "title": "eth_simulate Implementers' Meeting | April 07, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting\n\n- Date and time in UTC [April 07, 2025, 12:00 UTC](https://savvytime.com/converter/utc/Apr-07-2025/12pm)\n- Duration in minutes: 60 minutes\n- Recurring meeting : t",
+    "closed_at": "2025-04-07T15:20:11Z"
+  },
+  {
+    "issue_number": 1405,
+    "title": "eth_simulate Implementers' Meeting | March 31, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting\n\n- Date and time in UTC [March 31, 2025, 12:00 UTC](https://savvytime.com/converter/utc/Mar-24-2025/12pm)\n- Duration in minutes: 60 minutes\n- Recurring meeting : t",
+    "closed_at": "2025-04-07T02:59:01Z"
+  },
+  {
+    "issue_number": 1351,
+    "title": "EVMMAX Implementers Call 4, March 27, 2025",
+    "body_preview": "# EVMMAX Implementers Call 4, March 27, 2025\n\n- Date and time in UTC in format [March 27, 2025, 12:00 UTC](https://savvytime.com/converter/utc/mar-20-2025/12pm)\n- Duration in minutes : 90 mins\n- Occur",
+    "closed_at": "2025-04-07T02:57:26Z"
+  },
+  {
+    "issue_number": 1433,
+    "title": "Updated several files and added several new files to PeerDAS for calls 15 thru 23",
+    "body_preview": "### Modified:\r\n\r\n- Meeting 02.md\r\n- Meeting 03.md\r\n- PeerDAS-pm.md\r\n\r\n### Added\r\n- Meeting 15.md\r\n- Meeting 16.md\r\n- Meeting 17.md\r\n- Meeting 18.md\r\n- Meeting 19.md\r\n- Meeting 20.md\r\n- Meeting 21.md\r\n",
+    "closed_at": "2025-04-07T02:52:29Z"
+  },
+  {
+    "issue_number": 1415,
+    "title": "PeerDAS Breakout Call #23 | Apr 1, 2025",
+    "body_preview": "[Apr 1 (Tues), 2025, 14:00 UTC](https://savvytime.com/converter/utc/apr-1-2025/2pm)\nDuration: 60 minutes\n[Zoom link](https://ethereumfoundation.zoom.us/j/89262256299?pwd=hAYw0AjbgMYbqPUK1VPC6fqyWiS6jx",
+    "closed_at": "2025-04-03T13:08:02Z"
+  },
+  {
+    "issue_number": 1401,
+    "title": "PeerDAS Breakout Room #22 | March 25, 2025",
+    "body_preview": "# PeerDAS Breakout Room | Call 22 | March 25, 2025\n\n**Date/Time:** [Mar 25 (Tues), 2025, 10:00 UTC](https://savvytime.com/converter/utc/mar-25-2025/10am)  \n**Duration:** 60 minutes  \n**[Zoom link](htt",
+    "closed_at": "2025-03-26T12:52:17Z"
+  },
+  {
+    "issue_number": 1389,
+    "title": "beam call #3 (p2p networking) | April 4, 2025",
+    "body_preview": "# beam chain call 03, April 4, 2025\n\n- [April 4, 2025, 14:00-15:00 UTC](https://savvytime.com/converter/utc/apr-4-2025/2pm)\n- Duration in minutes : 90\n\n# Agenda \n| Agenda Item | Topic | Link |\n| --- |",
+    "closed_at": "2025-04-04T20:04:31Z"
+  },
+  {
+    "issue_number": 1397,
+    "title": "EOF Implementors Call #70 | April 2, 2025",
+    "body_preview": "# EOF Implementors Call #70 | April 2, 2025\n\n- `April 3, 2025, 15:00 UTC`  -  [Apr 2, 2025, 14:00 UTC](https://savvytime.com/converter/utc/Apr-2-2025/2pm)\n- Duration in minutes : 60\n- Recurring meetin",
+    "closed_at": "2025-04-04T22:48:50Z"
+  },
+  {
+    "issue_number": 1327,
+    "title": "beam call #1 (beam teams) | Feb 14, 2025",
+    "body_preview": "**Prev:** Initial Call\n**Meeting Date/Time:** Friday 2025/2/14 at 15:00 UTC\n**Meeting Duration:** 1.5 hours\n\n1. Introduction & Updates\n    - New consensus layer teams progress overview\n    - Funding s",
+    "closed_at": "2025-03-13T13:45:58Z"
+  },
+  {
+    "issue_number": 1336,
+    "title": "beam call #2 (post-quantum cryptography) | Feb 28, 2025",
+    "body_preview": "**Prev:** [Call #1](https://github.com/ethereum/pm/issues/1327)\n**Meeting Date/Time:** Friday 2025/2/28 at 14:00 UTC\n**Meeting Duration:** 1 hour\n\n\n1. Poseidon Cryptanalysis Updates\n2. Winternitz-XMSS",
+    "closed_at": "2025-03-17T22:43:38Z"
+  },
+  {
+    "issue_number": 1390,
+    "title": "feat: introduce CHAMPIONING_AN_EIP.md v1",
+    "body_preview": "Here's a first pass at documenting the process of championing an EIP from idea to inclusion in a network upgrade. This is a distillation of sync and async interviews with EIP editors, coordinators, an",
+    "closed_at": "2025-03-31T16:03:23Z"
+  },
+  {
+    "issue_number": 1359,
+    "title": "EIP-7732 Breakout Room #18, March 14, 2025",
+    "body_preview": "# EIP-7732 Breakout Call \n\n* [March 14th (Fri), 2025 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20250314T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\n* Duration: 60 minutes\n* [",
+    "closed_at": "2025-03-27T17:06:09Z"
+  },
+  {
+    "issue_number": 1331,
+    "title": "EIPIP Meeting 114 | March 19, 2025",
+    "body_preview": "# Meeting Info\n- Date and Time: [Mar 19, 2025, 15:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250319T150000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107",
+    "closed_at": "2025-03-27T17:06:04Z"
+  },
+  {
+    "issue_number": 1412,
+    "title": "call name | call # | call date",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-03-26T22:43:44Z"
+  },
+  {
+    "issue_number": 1388,
+    "title": "eth_simulate Implementers' Meeting | March 24, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting\n\n- Date and time in UTC [March 24, 2025, 12:00 UTC](https://savvytime.com/converter/utc/Mar-24-2025/12pm)\n- Duration in minutes: 60 minutes\n- Join [Zoom Meeting](h",
+    "closed_at": "2025-03-26T16:32:31Z"
+  },
+  {
+    "issue_number": 1369,
+    "title": "Stateless Implementers Call #32",
+    "body_preview": "### Meeting Info\n* [March 24, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-2",
+    "closed_at": "2025-03-25T20:11:20Z"
+  },
+  {
+    "issue_number": 1368,
+    "title": "new-Update call_000.md",
+    "body_preview": "fix to a new one",
+    "closed_at": "2025-03-25T17:53:29Z"
+  },
+  {
+    "issue_number": 1364,
+    "title": "PeerDAS Breakout Room #21, March 18, 2025",
+    "body_preview": "# PeerDAS Breakout Room #21, March 18, 2025\n\n- [Mar 18 (Tue), 2025 , 14:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250318T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=6",
+    "closed_at": "2025-03-24T04:13:46Z"
+  },
+  {
+    "issue_number": 1361,
+    "title": "EOF Implementers Call #69 | March 19, 2025",
+    "body_preview": "# EOF Implementers Call #69\n\n- Date and time in UTC in the format `March 19, 2025, 15:00 UTC` with link to savvytime.com or timeanddate.com. E.g. [Mar 19, 2025, 15:00 UTC](https://savvytime.com/conver",
+    "closed_at": "2025-03-20T21:38:53Z"
+  },
+  {
+    "issue_number": 1356,
+    "title": "Consensus-layer Call 153",
+    "body_preview": "# Consensus-layer Call 153\n\n[prev: call 152](https://github.com/ethereum/pm/issues/1323)\n\nMeeting Date/Time: [Thursday 2025/3/20 at 14:00 UTC](https://savvytime.com/converter/utc/mar-20-2025/2pm)\nMeet",
+    "closed_at": "2025-03-20T20:22:13Z"
+  },
+  {
+    "issue_number": 1367,
+    "title": "Interop Working Group Call #5 - March 19, 2025",
+    "body_preview": "# Meeting Info\n- Time/Date: March 19 @ 4pm UTC\n- [sign up for calendar invite here](https://forms.gle/Rm4zF38Zs6BrVYRS7)\n- Zoom: shared in the \"L2 interop working group\" telegram prior to the call \n- ",
+    "closed_at": "2025-03-20T19:44:48Z"
+  },
+  {
+    "issue_number": 1387,
+    "title": "eth_simulate Implementers' Meeting | March 17, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting\n\n- Date and time in UTC [March 17, 2025, 12:00 UTC](https://savvytime.com/converter/utc/Mar-17-2025/12pm)\n- Duration in minutes: 60 minutes\n- Join [Zoom Meeting](h",
+    "closed_at": "2025-03-18T02:28:43Z"
+  },
+  {
+    "issue_number": 1352,
+    "title": "eth_simulate Implementers' Meeting | March 10, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting\n\n- Date and time in UTC [March 10, 2025, 12:00 UTC](https://savvytime.com/converter/utc/Mar-03-2025/12pm)\n- Duration in minutes: 60 minutes\n- Join [Zoom Meeting](h",
+    "closed_at": "2025-03-17T13:37:53Z"
+  },
+  {
+    "issue_number": 1385,
+    "title": "call name | call # | call date",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-03-15T19:11:17Z"
+  },
+  {
+    "issue_number": 1301,
+    "title": "Native Rollup Call #1",
+    "body_preview": "# Meeting Info\n- Zoom link: shared in the native rollup Telegram group\n- Recording: [to be uploaded]\n- Call notes: [to be added]\n- Presentation: https://docs.google.com/presentation/d/1cCPWOGXbnRv03Gu",
+    "closed_at": "2025-03-13T13:45:44Z"
+  },
+  {
+    "issue_number": 1322,
+    "title": "Stateless Implementers Call #31",
+    "body_preview": "### Meeting Info\n* [Feb 24, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-24-",
+    "closed_at": "2025-03-12T11:20:23Z"
+  },
+  {
+    "issue_number": 1252,
+    "title": "JSON-RPC Standardization Breakout",
+    "body_preview": "## Meeting Info\n\n* [Jan 20, 2025, 15:00-16:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250116T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28",
+    "closed_at": "2025-03-11T22:30:24Z"
+  },
+  {
+    "issue_number": 1326,
+    "title": "PeerDAS Breakout Room #20",
+    "body_preview": "\u2757 The breakout call scheduled at **Mar 4 (Tues) has been CANCELLED**, as client teams are either focused on Holesky recovery or unavailable. Next call will be on **Mar 11 10AM UTC**.\n\n- [Mar 11 (Tue),",
+    "closed_at": "2025-03-11T11:52:39Z"
+  },
+  {
+    "issue_number": 1321,
+    "title": "EIP-7732 Breakout Room  #17, February 28, 2025",
+    "body_preview": "# EIP-7732 Breakout Call \n\n* [February 28th (Fri), 2025 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20250228T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\n* Duration: 60 minutes\n",
+    "closed_at": "2025-03-10T12:04:37Z"
+  },
+  {
+    "issue_number": 1357,
+    "title": "call name | call # | call date crypto/crypto.go",
+    "body_preview": "# Meeting title eg. All Core Devs - Execution (ACDE) #206, February 27, 2025\n\n- Date and time in UTC in format `month, day, year, time` with link to savvytime.com or timeanddate.com. E.g. [Jan 16, 202",
+    "closed_at": "2025-03-09T10:30:06Z"
+  },
+  {
+    "issue_number": 1323,
+    "title": "Consensus-layer Call 152",
+    "body_preview": "# Consensus-layer Call 152\n\n[prev: call 151](https://github.com/ethereum/pm/issues/1280)\n\nMeeting Date/Time: [Thursday 2025/3/6 at 14:00 UTC](https://savvytime.com/converter/utc/mar-6-2025/2pm)\nMeetin",
+    "closed_at": "2025-03-08T16:14:54Z"
+  },
+  {
+    "issue_number": 1330,
+    "title": "eth_simulate Implementers' Meeting  | March 03, 2025",
+    "body_preview": "# eth_simulate Implementers' Meeting\n\n- Date and time in UTC [March 03, 2025, 12:00 UTC](https://savvytime.com/converter/utc/Mar-03-2025/12pm)\n- Duration in minutes: 60 minutes\n- Join [Zoom Meeting](h",
+    "closed_at": "2025-03-05T18:43:46Z"
+  },
+  {
+    "issue_number": 1270,
+    "title": "EVMMAX Implementers Call 3",
+    "body_preview": "## Meeting Info\n[Feb 27, 2025, 12:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20240403T120000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)\n\nDurati",
+    "closed_at": "2025-03-05T18:41:06Z"
+  },
+  {
+    "issue_number": 1312,
+    "title": "EOF Implementers Call #68",
+    "body_preview": "# EOF Implementers Call #68\n\n- Date and time in UTC in format `March 05, 2025, 15:00 UTC` with link to savvytime.com or timeanddate.com. E.g. [Mar 05, 2025, 15:00 UTC](https://savvytime.com/converter/",
+    "closed_at": "2025-03-05T18:32:36Z"
+  },
+  {
+    "issue_number": 1337,
+    "title": "Holesky Validator Incident Response Call | February 28, 2025",
+    "body_preview": "# Holesky Validator Incident Response Call\n\n- [Feb 28, 2025, 15:00 UTC](https://savvytime.com/converter/utc/feb-28-2025/3pm)\n- Duration in minutes : 60\n- Stream: https://www.youtube.com/live/ksr-6iuSv",
+    "closed_at": "2025-02-28T21:48:40Z"
+  },
+  {
+    "issue_number": 1302,
+    "title": "eth_simulate Implementers' Meeting [Feb 24, 2025]",
+    "body_preview": "# eth_simulate Implementers' Meeting\n\n- Date and time in UTC [Feb 24, 2025, 12:00 UTC](https://savvytime.com/converter/utc/feb-24-2025/12pm)\n- Duration in minutes: 60 minutes\n- Recording: [eth_multica",
+    "closed_at": "2025-02-26T21:48:47Z"
+  },
+  {
+    "issue_number": 1320,
+    "title": "Interop Working Group Call #4 - Feb 24, 2025",
+    "body_preview": "# Meeting Info\n- Time/Date: Feb 24th @ 4pm UTC\n- [sign up for calendar invite here](https://forms.gle/Rm4zF38Zs6BrVYRS7)\n- Zoom: shared in the \"L2 interop working group\" telegram prior to the call \n- ",
+    "closed_at": "2025-02-25T13:46:55Z"
+  },
+  {
+    "issue_number": 1303,
+    "title": "PeerDAS Breakout Room #19",
+    "body_preview": "- [Feb 25 (Tue), 2025 , 10:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250225T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757\n- Duration",
+    "closed_at": "2025-02-25T11:28:00Z"
+  },
+  {
+    "issue_number": 1280,
+    "title": "Consensus-layer Call 151",
+    "body_preview": "# Consensus-layer Call 151\n\n[prev: call 150](https://github.com/ethereum/pm/issues/1265)\n\nMeeting Date/Time: [Thursday 2025/2/20 at 14:00 UTC](https://savvytime.com/converter/utc/feb-20-2025/2pm)\nMeet",
+    "closed_at": "2025-02-22T18:25:34Z"
+  },
+  {
+    "issue_number": 1292,
+    "title": "EIP-7732 Breakout Room #16",
+    "body_preview": "* [February 14th (Fri), 2025 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20250214T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\n* Duration: 60 minutes\n* [Zoom link](https://ether",
+    "closed_at": "2025-02-21T12:27:48Z"
+  },
+  {
+    "issue_number": 1277,
+    "title": "EOF Implementers Call #67",
+    "body_preview": "## Meeting Info\n\n- Date & Time: February 19th, 2025, 15:00 UTC\n- Duration: 60 minutes\n- Zoom: [Link](https://ethereumfoundation.zoom.us/j/87569210985?pwd=3Cv1hDh7If4cq9IMXvNln1CtqQ72MR.1)\n\n\ud83d\udcc5 Subscribe",
+    "closed_at": "2025-02-19T22:44:01Z"
+  },
+  {
+    "issue_number": 1271,
+    "title": "Execution Layer Meeting 205",
+    "body_preview": "## Meeting Info  \n\n* [Feb 13, 2025, 14:00-15:30 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250213T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=",
+    "closed_at": "2025-02-19T22:22:13Z"
+  },
+  {
+    "issue_number": 1295,
+    "title": "PeerDAS Breakout Room #18",
+    "body_preview": "- [Feb 18 (Tue), 2025 , 10:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250218T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757\n- Duration",
+    "closed_at": "2025-02-18T11:22:03Z"
+  },
+  {
+    "issue_number": 1293,
+    "title": "eth_simulate Implementers' Meeting [Feb 17, 2025]",
+    "body_preview": "## Meeting Info\n\n- Date & Time: Feb 17 2025 , 12:00 UTC\n- Duration: 60 minutes\n- Recording: [eth_multicall Playlist](https://www.youtube.com/playlist?list=PLJqWcTqh_zKECphjT_m7LVH4tusTtvory)\n- [Zoom](",
+    "closed_at": "2025-02-18T03:25:33Z"
+  },
+  {
+    "issue_number": 1298,
+    "title": "Call",
+    "body_preview": "[Uploading api.github.com.json\u2026]()\r\n",
+    "closed_at": "2025-02-15T01:23:34Z"
+  },
+  {
+    "issue_number": 1297,
+    "title": "fix typos in EL-Meetings 183",
+    "body_preview": "",
+    "closed_at": "2025-02-14T20:54:22Z"
+  },
+  {
+    "issue_number": 1284,
+    "title": "PeerDAS Breakout Room #17",
+    "body_preview": "- [Feb 11 (Tue), 2025 , 14:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250211T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757\n- Duration",
+    "closed_at": "2025-02-13T04:55:59Z"
+  },
+  {
+    "issue_number": 1290,
+    "title": "Create Call_150.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1265",
+    "closed_at": "2025-02-12T18:00:27Z"
+  },
+  {
+    "issue_number": 1289,
+    "title": "Create Meeting 204.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1271",
+    "closed_at": "2025-02-12T17:56:36Z"
+  },
+  {
+    "issue_number": 1288,
+    "title": "Create call_149.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1258",
+    "closed_at": "2025-02-12T17:48:43Z"
+  },
+  {
+    "issue_number": 1254,
+    "title": "typo Update Call_058.md",
+    "body_preview": "\"Upgrate1\" \u2014 should be \"Upgrade1\"",
+    "closed_at": "2025-02-11T19:27:05Z"
+  },
+  {
+    "issue_number": 1251,
+    "title": "Ceate call issue template",
+    "body_preview": "Simple template for creating a call issue. All issues with protocol calls should the same format ton be easily parsed by bots. \r\n\r\nCall creators should use this template and follow it exactly. It's pr",
+    "closed_at": "2025-02-11T19:26:47Z"
+  },
+  {
+    "issue_number": 1245,
+    "title": "Breakout Room Meetings ",
+    "body_preview": "Files created & updated\r\n- EVMMAX Readme\r\n- [EOF #64](https://github.com/ethereum/pm/issues/1217) Notes & Readme\r\n- PeerDAS meeting [12](https://github.com/ethereum/pm/issues/1193), [13](https://githu",
+    "closed_at": "2025-02-11T19:26:19Z"
+  },
+  {
+    "issue_number": 1281,
+    "title": "edited README description & calls + changed file name",
+    "body_preview": "added a discussion column with ethmag links, formatted so the EL & CL tables match, put the tables in collapsible modules, added the newest calls, renamed a notes file",
+    "closed_at": "2025-02-11T19:25:46Z"
+  },
+  {
+    "issue_number": 1278,
+    "title": "eth_simulate Implementers' Meeting [Feb 10, 2025]",
+    "body_preview": "## Meeting Info\n\n- Date & Time: Feb 10 2025 , 12:00 UTC\n- Duration: 60 minutes\n- Recording: [eth_multicall Playlist](https://www.youtube.com/playlist?list=PLJqWcTqh_zKECphjT_m7LVH4tusTtvory)\n- [Zoom](",
+    "closed_at": "2025-02-11T13:50:41Z"
+  },
+  {
+    "issue_number": 1269,
+    "title": "EIP-7732 breakout room #15",
+    "body_preview": "* [January 31th (Fri), 2025 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20250131T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\n* Duration: 60 minutes\n* [Zoom link](https://ethere",
+    "closed_at": "2025-02-11T15:15:32Z"
+  },
+  {
+    "issue_number": 1263,
+    "title": "Stateless Implementers Call #30",
+    "body_preview": "### Meeting Info\n\n- [Feb 10, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/feb-10",
+    "closed_at": "2025-02-11T06:30:27Z"
+  },
+  {
+    "issue_number": 1247,
+    "title": "Stateless Implementers Call #29",
+    "body_preview": "### Meeting Info\n\n- [Jan 13, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/jan-13",
+    "closed_at": "2025-01-17T19:46:41Z"
+  },
+  {
+    "issue_number": 1285,
+    "title": "Create Meeting 203.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1227",
+    "closed_at": "2025-02-10T14:30:00Z"
+  },
+  {
+    "issue_number": 1283,
+    "title": "Create call_148.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1218",
+    "closed_at": "2025-02-10T14:27:06Z"
+  },
+  {
+    "issue_number": 1282,
+    "title": "Create Meeting 197.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1153",
+    "closed_at": "2025-02-10T14:23:42Z"
+  },
+  {
+    "issue_number": 1259,
+    "title": "PeerDAS Breakout Room #16",
+    "body_preview": "- [Feb 4 (Tue), 2025 , 10:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250204T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757\n- Duration:",
+    "closed_at": "2025-02-10T00:44:12Z"
+  },
+  {
+    "issue_number": 1265,
+    "title": "Consensus-layer Call 150",
+    "body_preview": "# Consensus-layer Call 150\n\n[prev: call 149](https://github.com/ethereum/pm/issues/1258)\n\nMeeting Date/Time: [Thursday 2025/2/6 at 14:00 UTC](https://savvytime.com/converter/utc/feb-6-2025/2pm)\nMeetin",
+    "closed_at": "2025-02-07T20:21:41Z"
+  },
+  {
+    "issue_number": 1273,
+    "title": "eth_simulate Implementers' Meeting [Feb 03, 2025]",
+    "body_preview": "## Meeting Info\n\n- Date & Time: Feb 3rd 2025 , 12:00 UTC\n- Duration: 60 minutes\n- Recording: [eth_multicall Playlist](https://www.youtube.com/playlist?list=PLJqWcTqh_zKECphjT_m7LVH4tusTtvory)\n- [Zoom]",
+    "closed_at": "2025-02-05T18:53:11Z"
+  },
+  {
+    "issue_number": 1260,
+    "title": "EOF Implementers Call #66",
+    "body_preview": "## Meeting Info\n\n- Date & Time: February 5th, 2025, 15:00 UTC\n- Duration: 60 minutes\n- Zoom: [Link](https://us02web.zoom.us/j/88940506383?pwd=aTdsbHVyMTNDSUFHYmhTWlI2ZEVldz09)\n\n\ud83d\udcc5 Subscribe to the [Eth",
+    "closed_at": "2025-02-05T18:47:32Z"
+  },
+  {
+    "issue_number": 1237,
+    "title": "Native Rollups Call #0",
+    "body_preview": "# Meeting Info\r\n- Zoom link: shared in the native rollup Telegram group\r\n- Recording: https://youtu.be/MNtzDe9Ck0c\r\n- Call notes: https://docs.google.com/document/d/1gF0_kurGgtP6uKvYMKbFsKGiSRzmSQ8t-E",
+    "closed_at": "2025-01-06T03:33:20Z"
+  },
+  {
+    "issue_number": 1243,
+    "title": "EOF Implementers Call #65",
+    "body_preview": "## Meeting Info\n\n- Date & Time: Jan 22nd, 2025 , 15:00 UTC\n- Duration: 60 minutes\n- Zoom: [Link](https://us02web.zoom.us/j/88940506383?pwd=aTdsbHVyMTNDSUFHYmhTWlI2ZEVldz09)\n\n\ud83d\udcc5 Subscribe to the [Ethere",
+    "closed_at": "2025-01-22T17:01:12Z"
+  },
+  {
+    "issue_number": 1217,
+    "title": "EOF Implementers Call #64",
+    "body_preview": "## Meeting Info\r\n[Jan 8th, 2025 , 15:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20240403T150000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)\r\n\r\nD",
+    "closed_at": "2025-01-08T20:51:44Z"
+  },
+  {
+    "issue_number": 1205,
+    "title": "EOF Implementers Call #63",
+    "body_preview": "## Meeting Info\r\n[Dec 11, 2024 , 15:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20240403T150000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)\r\n\r\nDu",
+    "closed_at": "2024-12-11T18:20:53Z"
+  },
+  {
+    "issue_number": 1192,
+    "title": "EOF Implementers Call #62",
+    "body_preview": "## Meeting Info\r\n[Nov 27, 2024 , 15:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20240403T150000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)\r\n\r\nDu",
+    "closed_at": "2024-11-26T23:10:34Z"
+  },
+  {
+    "issue_number": 1184,
+    "title": "EOF Implementers Call #61",
+    "body_preview": "## Meeting Info\r\n[Oct 30, 2024 , 15:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20240403T150000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)\r\n\r\nDu",
+    "closed_at": "2024-10-30T17:10:59Z"
+  },
+  {
+    "issue_number": 1167,
+    "title": "EOF Implementers Call #60",
+    "body_preview": "## Meeting Info\r\n[Oct 16, 2024 , 15:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20240403T150000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)\r\n\r\nDu",
+    "closed_at": "2024-10-16T19:00:07Z"
+  },
+  {
+    "issue_number": 1248,
+    "title": "eth_simulate Implementers' Meeting [Jan 27, 2025]",
+    "body_preview": "## Meeting Info\n\n- Date & Time: Jan ~~20th~~, 27th 2025 , 12:00 UTC\n- Duration: 60 minutes\n- Recording: [eth_multicall Playlist](https://www.youtube.com/playlist?list=PLJqWcTqh_zKECphjT_m7LVH4tusTtvor",
+    "closed_at": "2025-02-02T20:20:57Z"
+  },
+  {
+    "issue_number": 1241,
+    "title": "eth_multicall Implementers' Meeting ",
+    "body_preview": "## Meeting Info\r\n\r\n- Date & Time: Jan 13th, 2025 , 12:00 UTC\r\n- Duration: 60 minutes\r\n- Recording: [eth_multicall Playlist](https://www.youtube.com/playlist?list=PLJqWcTqh_zKECphjT_m7LVH4tusTtvory)\r\n-",
+    "closed_at": "2025-01-14T20:08:11Z"
+  },
+  {
+    "issue_number": 1240,
+    "title": "PeerDAS Breakout Room #15",
+    "body_preview": "* [Jan 21 (Tue), 2025 , **10:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20250121T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757 \r\n* Du",
+    "closed_at": "2025-02-04T07:37:21Z"
+  },
+  {
+    "issue_number": 1236,
+    "title": "PeerDAS Breakout Room #14",
+    "body_preview": "* [Jan 7 (Tue), 2025 , **10:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20250107T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757 \r\n* Dur",
+    "closed_at": "2025-01-07T13:13:42Z"
+  },
+  {
+    "issue_number": 1202,
+    "title": "PeerDAS Breakout Room #13",
+    "body_preview": "* [Dec 10 (Tue), 2024 , **10:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20241210T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757 \r\n* Du",
+    "closed_at": "2024-12-20T21:57:29Z"
+  },
+  {
+    "issue_number": 1193,
+    "title": "PeerDAS Breakout Room #12",
+    "body_preview": "* [Nov 26 (Tue), 2024 , **10:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20241126T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757 \r\n* Du",
+    "closed_at": "2024-11-26T14:18:08Z"
+  },
+  {
+    "issue_number": 1183,
+    "title": "PeerDAS Breakout Room #11",
+    "body_preview": "* [Oct 29 (Tue), 2024 , **10:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20241029T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757 \r\n* Du",
+    "closed_at": "2024-10-31T14:07:06Z"
+  },
+  {
+    "issue_number": 1179,
+    "title": "PeerDAS Breakout Room #10",
+    "body_preview": "* [Oct 15 (Tue), 2024 , **10:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20241015T100000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28) \ud83d\udd59 \u2757 \r\n* Du",
+    "closed_at": "2024-10-15T11:55:56Z"
+  },
+  {
+    "issue_number": 1203,
+    "title": "Stateless Implementers Call #28",
+    "body_preview": "### Meeting Info\r\n\r\n- [Dec 2nd, 15:00 UTC](https://savvytime.com/converter/utc-to-germany-berlin-united-kingdom-london-ny-new-york-city-ca-san-francisco-china-shanghai-japan-tokyo-australia-sydney/dec",
+    "closed_at": "2024-12-03T05:08:35Z"
+  },
+  {
+    "issue_number": 1196,
+    "title": "Stateless Implementers Call #27",
+    "body_preview": "[Get added to the calendar event here](https://docs.google.com/forms/d/1yTN_Gf4oPGg6z4xenaYK2QCSyP2keLrhfqyeZXs851k)\r\n\r\n### Meeting Info\r\n\r\n- [Nov 4, 15:00 UTC](https://savvytime.com/converter/utc-to-",
+    "closed_at": "2024-11-07T00:36:55Z"
+  },
+  {
+    "issue_number": 1186,
+    "title": "Stateless Implementers Call #26",
+    "body_preview": "[Get added to the calendar event here](https://docs.google.com/forms/d/1yTN_Gf4oPGg6z4xenaYK2QCSyP2keLrhfqyeZXs851k)\r\n\r\n### Meeting Info\r\n\r\n- [October 21, 15:00 UTC](https://savvytime.com/converter/ut",
+    "closed_at": "2024-10-23T23:44:24Z"
+  },
+  {
+    "issue_number": 1250,
+    "title": "EIP-7732 breakout room #14",
+    "body_preview": "* [January 17th (Fri), 2025 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20250117T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\n* Duration: 60 minutes\n* [Zoom link](https://ethere",
+    "closed_at": "2025-01-17T19:46:28Z"
+  },
+  {
+    "issue_number": 1198,
+    "title": "EIP-7732 breakout room #13",
+    "body_preview": "* [November 22th (Fri), 2024 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20241122T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\r\n* Duration: 60 minutes\r\n* [Zoom link](https://eth",
+    "closed_at": "2024-11-26T23:10:57Z"
+  },
+  {
+    "issue_number": 1188,
+    "title": "EIP-7732 breakout room #12",
+    "body_preview": "* [October 25th (Fri), 2024 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20241025T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\r\n* Duration: 60 minutes\r\n* [Zoom link](https://ethe",
+    "closed_at": "2024-11-15T15:36:23Z"
+  },
+  {
+    "issue_number": 1173,
+    "title": "EIP-7732 breakout room #11",
+    "body_preview": "* [October 11th (Fri), 2024 , **14:00 UTC**](https://www.timeanddate.com/worldclock/converter.html?iso=20241011T140000&p1=tz_gmt&p2=1440) :clock2: \u2757\r\n* Duration: 60 minutes\r\n* [Zoom link](https://ethe",
+    "closed_at": "2024-10-23T11:54:38Z"
+  },
+  {
+    "issue_number": 1208,
+    "title": "EVMMAX Implementers Call 2",
+    "body_preview": "## Meeting Info\r\n[Jan 30, 2025 ~~Jan 02, 2025~~, 12:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20240403T120000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=1",
+    "closed_at": "2025-02-02T20:38:38Z"
+  },
+  {
+    "issue_number": 1204,
+    "title": "EVMMAX Implementers Call 1",
+    "body_preview": "## Meeting Info\r\n[Dec 05 , 12:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20240403T120000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)\r\n\r\nDuration",
+    "closed_at": "2024-12-05T15:52:48Z"
+  },
+  {
+    "issue_number": 1258,
+    "title": "Consensus-layer Call 149",
+    "body_preview": "# Consensus-layer Call 149\n\n[prev: call 148](https://github.com/ethereum/pm/issues/1218)\n\nMeeting Date/Time: [Thursday 2025/1/23 at 14:00 UTC](https://savvytime.com/converter/utc/jan-23-2025/2pm)\nMeet",
+    "closed_at": "2025-01-27T01:35:14Z"
+  },
+  {
+    "issue_number": 1218,
+    "title": "Consensus-layer Call 148",
+    "body_preview": "# Consensus-layer Call 148\r\n\r\n[prev: call 147](https://github.com/ethereum/pm/issues/1211)\r\n\r\nMeeting Date/Time: [Thursday 2025/1/9 at 14:00 UTC](https://savvytime.com/converter/utc/jan-9-2025/2pm)\r\nM",
+    "closed_at": "2025-01-22T03:11:04Z"
+  },
+  {
+    "issue_number": 1211,
+    "title": "Consensus-layer Call 147",
+    "body_preview": "# Consensus-layer Call 147\r\n\r\n[prev: call 146](https://github.com/ethereum/pm/issues/1200)\r\n\r\nMeeting Date/Time: [Thursday 2024/12/12 at 14:00 UTC](https://savvytime.com/converter/utc/dec-12-2024/2pm)",
+    "closed_at": "2024-12-12T22:39:26Z"
+  },
+  {
+    "issue_number": 1200,
+    "title": "Consensus-layer Call 146",
+    "body_preview": "# Consensus-layer Call 146\r\n\r\n[prev: call 145](https://github.com/ethereum/pm/issues/1185)\r\n\r\nMeeting Date/Time: [Thursday 2024/11/28 at 14:00 UTC](https://savvytime.com/converter/utc/nov-28-2024/2pm)",
+    "closed_at": "2024-12-09T18:07:05Z"
+  },
+  {
+    "issue_number": 1185,
+    "title": "Consensus-layer Call 145",
+    "body_preview": "# Consensus-layer Call 145\r\n\r\n[prev: call 144](https://github.com/ethereum/pm/issues/1178)\r\n\r\nMeeting Date/Time: [Thursday 2024/10/31 at 14:00 UTC](https://savvytime.com/converter/utc/oct-31-2024/2pm)",
+    "closed_at": "2024-11-22T14:33:07Z"
+  },
+  {
+    "issue_number": 1178,
+    "title": "Consensus-layer Call 144",
+    "body_preview": "# Consensus-layer Call 144\r\n\r\n[prev: call 143](https://github.com/ethereum/pm/issues/1158)\r\n\r\nMeeting Date/Time: [Thursday 2024/10/17 at 14:00 UTC](https://savvytime.com/converter/utc/oct-17-2024/2pm)",
+    "closed_at": "2024-10-18T18:14:23Z"
+  },
+  {
+    "issue_number": 1158,
+    "title": "Consensus-layer Call 143",
+    "body_preview": "# Consensus-layer Call 143\r\n\r\n[prev: call 142](https://github.com/ethereum/pm/issues/1154)\r\n\r\nMeeting Date/Time: [Thursday 2024/10/3 at 14:00 UTC](https://savvytime.com/converter/utc/oct-3-2024/2pm)\r\n",
+    "closed_at": "2024-10-10T17:09:30Z"
+  },
+  {
+    "issue_number": 1253,
+    "title": "Execution Layer Meeting 204",
+    "body_preview": "## Meeting Info  \n\n* [Jan 30, 2025, 14:00-15:30 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250130T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=",
+    "closed_at": "2025-01-30T19:42:34Z"
+  },
+  {
+    "issue_number": 1227,
+    "title": "Execution Layer Meeting 203 ",
+    "body_preview": "## Meeting Info\n* [Jan 16, 2025, 14:00-15:30 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20250116T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)",
+    "closed_at": "2025-01-17T19:48:20Z"
+  },
+  {
+    "issue_number": 1209,
+    "title": "Execution Layer Meeting 202",
+    "body_preview": "## Meeting Info\r\n* [Dec 19, 2024, 14:00-15:30 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20241219T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28",
+    "closed_at": "2024-12-20T22:11:25Z"
+  },
+  {
+    "issue_number": 1197,
+    "title": "Execution Layer Meeting 201",
+    "body_preview": "## Meeting Info\r\n* [Dec 5, 2024, 14:00-15:30 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20241205T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)",
+    "closed_at": "2024-12-05T17:46:59Z"
+  },
+  {
+    "issue_number": 1190,
+    "title": "Execution Layer Meeting \"\ud83d\udcaf \ud83d\udcaf\" ",
+    "body_preview": "## Meeting Info\r\n* [Nov 7, 2024, 14:00-15:30 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20241107T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28)",
+    "closed_at": "2024-11-08T02:22:24Z"
+  },
+  {
+    "issue_number": 1177,
+    "title": "Execution Layer Meeting 199",
+    "body_preview": "## Meeting Info\r\n* [Oct 24, 2024, 14:00-15:30 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20241024T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28",
+    "closed_at": "2024-10-24T15:24:20Z"
+  },
+  {
+    "issue_number": 1163,
+    "title": "Execution Layer Meeting 198",
+    "body_preview": "## Meeting Info\r\n* [Oct 10, 2024, 14:00-15:30 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20241010T140000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28",
+    "closed_at": "2024-10-10T16:19:55Z"
+  },
+  {
+    "issue_number": 1234,
+    "title": "Create Meeting 202.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1209",
+    "closed_at": "2025-01-07T22:05:59Z"
+  },
+  {
+    "issue_number": 1233,
+    "title": "Create Call_147.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1211",
+    "closed_at": "2025-01-07T22:05:44Z"
+  },
+  {
+    "issue_number": 1232,
+    "title": "Create Call_146.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1200",
+    "closed_at": "2025-01-07T22:05:18Z"
+  },
+  {
+    "issue_number": 1231,
+    "title": "Create call_145.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1185",
+    "closed_at": "2025-01-07T22:04:42Z"
+  },
+  {
+    "issue_number": 1228,
+    "title": "Breakout room meetings",
+    "body_preview": "EOF\r\n[Notes](https://github.com/darkfire-rain/pm/tree/master/Breakout-Room-Meetings/EOF) - 55 to 63; Total notes = 9\r\nCreated & updated Readme - 1\r\nStateless\r\n[Notes](https://github.com/darkfire-rain/",
+    "closed_at": "2025-01-07T22:03:53Z"
+  },
+  {
+    "issue_number": 1226,
+    "title": "Add Meeting 201 Notes",
+    "body_preview": "This PR is to merge EL Meeting 201 notes.",
+    "closed_at": "2025-01-07T22:03:12Z"
+  },
+  {
+    "issue_number": 1219,
+    "title": "Update Breakout Room Meetings.md",
+    "body_preview": "- Create new Folder - FOCIL\r\n  - Add [Meeting 01](https://github.com/ethereum/pm/issues/1210) notes \r\n  - Update Readme\r\n- Add [ePBS Meeting 14](https://github.com/ethereum/pm/issues/1222)\r\n  - Notes\r",
+    "closed_at": "2025-01-07T22:02:33Z"
+  },
+  {
+    "issue_number": 1176,
+    "title": "EIP-2537 Breakout Call ",
+    "body_preview": "## Meeting Info\r\n* [Oct 14, 2024, 15:00-16:00 UTC](https://www.timeanddate.com/worldclock/converter.html?iso=20241014T150000&p1=1440&p2=37&p3=136&p4=237&p5=923&p6=204&p7=671&p8=16&p9=41&p10=107&p11=28",
+    "closed_at": "2024-11-26T23:10:24Z"
+  },
+  {
+    "issue_number": 1180,
+    "title": "Update Breakout Room Meetings",
+    "body_preview": "- Add notes to \r\n  - [EIP-7732 breakout room 11](https://github.com/ethereum/pm/issues/1173)\r\n  - [EIP-7732 breakout room 12](https://github.com/ethereum/pm/issues/1188)\r\n  - [EIP-7732 breakout room 1",
+    "closed_at": "2024-11-25T21:04:45Z"
+  },
+  {
+    "issue_number": 1195,
+    "title": "Create Meeting 199.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1177",
+    "closed_at": "2024-11-25T21:13:52Z"
+  },
+  {
+    "issue_number": 1191,
+    "title": "Create call_143.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1158",
+    "closed_at": "2024-11-25T21:13:40Z"
+  },
+  {
+    "issue_number": 1189,
+    "title": "Add Meeting 198 and fix Meeting 195",
+    "body_preview": "Thank you!",
+    "closed_at": "2024-11-25T21:12:56Z"
+  },
+  {
+    "issue_number": 1187,
+    "title": "Create Call_144.md",
+    "body_preview": "Agenda: https://github.com/ethereum/pm/issues/1178",
+    "closed_at": "2024-11-25T21:12:30Z"
+  },
+  {
+    "issue_number": 1174,
+    "title": "Create Call_142.md",
+    "body_preview": "Please review and Merge #1154",
+    "closed_at": "2024-11-25T21:02:42Z"
+  },
+  {
+    "issue_number": 1181,
+    "title": "Ethereum Sequencing and Preconfirmations Call #15",
+    "body_preview": "### Meeting Info\r\n- Zoom link: shared in the preconfirmations Telegram group\r\n- Recording: https://youtu.be/CJ1otXtBrqA\r\n- [Call Notes](https://docs.google.com/document/d/1FG3nKQdUNb_YHCp_IzSDkC_r7A6H",
+    "closed_at": "2024-10-13T04:48:00Z"
+  }
+]

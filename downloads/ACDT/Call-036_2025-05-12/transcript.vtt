@@ -1,0 +1,1138 @@
+WEBVTT
+
+1
+00:19:10.040 --> 00:19:11.220
+Mario Vega: Good morning!
+
+2
+00:19:14.070 --> 00:19:15.100
+Pooja Ranjan: Good morning!
+
+3
+00:19:40.760 --> 00:19:47.149
+Mario Vega: I was planning on recording this locally, but I think it's not necessary. Or what do you think, Pooja?
+
+4
+00:19:47.150 --> 00:19:49.330
+Pooja Ranjan: It is going in cloud right now. So it's all.
+
+5
+00:19:50.050 --> 00:19:51.000
+Mario Vega: Oh, cool.
+
+6
+00:19:51.130 --> 00:19:52.069
+Mario Vega: Thank you.
+
+7
+00:20:03.530 --> 00:20:09.999
+Pooja Ranjan: I'm just starting the pre-streaming video. Whenever you are ready, let us know, so we can move over the stream.
+
+8
+00:20:12.290 --> 00:20:15.850
+Mario Vega: Awesome. Thank you. I think a couple of minutes more and we can start.
+
+9
+00:20:16.800 --> 00:20:17.560
+Pooja Ranjan: Sounds good.
+
+10
+00:20:49.190 --> 00:20:51.380
+Justin Florentine (Besu): Good morning. Etherneauts.
+
+11
+00:20:54.500 --> 00:20:55.470
+Mario Vega: Good morning.
+
+12
+00:21:27.230 --> 00:21:33.610
+Mario Vega: Just a couple more minutes, and we can start. I think we can start by the 8 and 2 min. If that's okay.
+
+13
+00:21:37.885 --> 00:21:41.849
+Mario Vega: talking about my time, but 14 utc.
+
+14
+00:21:54.660 --> 00:21:57.620
+Mario Vega: And Justin. I got the list, and I added to the
+
+15
+00:21:58.430 --> 00:22:01.459
+Mario Vega: I have a tracker. I'll share it later in the meeting.
+
+16
+00:22:30.060 --> 00:22:33.419
+Mario Vega: Alright. I think I think we can start with you if that's okay.
+
+17
+00:22:34.390 --> 00:22:35.340
+Pooja Ranjan: Real life.
+
+18
+00:22:36.380 --> 00:22:37.160
+Mario Vega: Perfect.
+
+19
+00:22:38.480 --> 00:22:46.350
+Mario Vega: Hello, everyone. Welcome to acor depth testing number 36 today is May 12, th and we have
+
+20
+00:22:46.600 --> 00:22:49.419
+Mario Vega: 5 items in the agenda to discuss today.
+
+21
+00:22:50.019 --> 00:22:59.990
+Mario Vega: And I think the most packed one is going to be the discussion on which Cfi dips. Are we going to include in the Fussaka net 0,
+
+22
+00:23:00.240 --> 00:23:08.609
+Mario Vega: along with beerdas and a couple more of the topics to discuss is block scale incution in the Cl.
+
+23
+00:23:08.960 --> 00:23:12.799
+Mario Vega: And a discussion about history expiry.
+
+24
+00:23:13.260 --> 00:23:16.170
+Mario Vega: So I think
+
+25
+00:23:16.880 --> 00:23:35.700
+Mario Vega: we're ready to start. And yeah, the 1st item I wanted to bring up the discussion. But I think it's not going to be that much necessary. Is any Petra related discussions from last Wednesday that anybody wants to bring up today either findings or any relevant points or topics
+
+26
+00:23:36.010 --> 00:23:40.400
+Mario Vega: about the the fork that anyone has in mind and wants to share.
+
+27
+00:23:52.830 --> 00:24:01.369
+Mario Vega: and Miguel is raising a point in the chat. The deposit mechanism transition has been successfully finished 17 h after the fork.
+
+28
+00:24:01.510 --> 00:24:10.800
+Mario Vega: so it pull it on the it. One underscore data pool can be safely removed. And this might matter for the history expiry discussion. Thank you, Kyle.
+
+29
+00:24:12.080 --> 00:24:13.449
+Mario Vega: That's very good news.
+
+30
+00:24:15.700 --> 00:24:22.829
+Mario Vega: Anything else for Petra findings or anything worth sharing?
+
+31
+00:24:31.780 --> 00:24:32.760
+Mario Vega: All right.
+
+32
+00:24:36.830 --> 00:24:42.569
+Mario Vega: Yeah, it was very smooth upgrade. Yeah, it was. It was great, very uneventful.
+
+33
+00:24:43.340 --> 00:24:49.540
+Mario Vega: And James, from prism is highlighting that they are still looking into some performance. Things
+
+34
+00:24:49.880 --> 00:24:52.480
+Mario Vega: I think that's expected and yeah
+
+35
+00:24:56.930 --> 00:25:03.890
+Mario Vega: cool, if nothing else from Pector. I think we can just jump into the next topic. I have prepared a
+
+36
+00:25:04.060 --> 00:25:09.610
+Mario Vega: tracker where I just try to consolidate the feeling or sentiment
+
+37
+00:25:10.030 --> 00:25:17.300
+Mario Vega: regarding which Eaps should we introduce into the Fussaka Devnet 0.
+
+38
+00:25:17.560 --> 00:25:25.350
+Mario Vega: Basically, this list is all of the Cf 5 eips for Forsaka and
+
+39
+00:25:25.720 --> 00:25:33.630
+Mario Vega: I can start by summarizing the sentiment from steel, which is basically testing and specifications, eels and east.
+
+40
+00:25:33.750 --> 00:25:40.800
+Mario Vega: and generally the we are only opposing one of the Eaps, but not strongly so.
+
+41
+00:25:41.210 --> 00:25:45.689
+Mario Vega: and if it's decided in this meeting that it should be included, that's fine by us.
+
+42
+00:25:46.160 --> 00:25:57.200
+Mario Vega: and that is the rip. 72, 12. But other than that. Still, team thinks that it's okay that should we add basically every other eap? That's
+
+43
+00:25:57.500 --> 00:26:14.309
+Mario Vega: that the the rest of the teams consider important. So I think we can start just with the list and go each eip by eip, and then we can just hear opinions. If anyone's here in the meeting that wants to raise an opposing opinion, or or for opinion.
+
+44
+00:26:14.960 --> 00:26:16.370
+Mario Vega: Jaspernos.
+
+45
+00:26:16.840 --> 00:26:25.567
+Barnabas: Yeah, just I think it would be a bit quicker to go through the period of testing 1st before we dive into the what should be included in the next one.
+
+46
+00:26:26.325 --> 00:26:32.379
+Barnabas: Because I I'm worried, we're gonna be running out of time. And we're not gonna have time to give a previous update.
+
+47
+00:26:32.600 --> 00:26:35.980
+Mario Vega: Yeah, okay, that sounds fine, is Will.
+
+48
+00:26:36.340 --> 00:26:40.460
+Mario Vega: Here in the are you? Are you ready for? Give an update.
+
+49
+00:26:41.510 --> 00:27:10.450
+Barnabas: I can give an update on like the latest on 7 so we just launched on Friday, and we had flu for this morning we had our spammer break running full fork, but it's been fixed, and we've been spamming blobs. And we have a hundred percent participation for now we're still waiting for different El teams to get on boarded Bazoo, and still don't have any validators, and they don't seem to have a full branch right now.
+
+50
+00:27:10.520 --> 00:27:12.889
+Barnabas: but hopefully we can onboard them soon.
+
+51
+00:27:15.980 --> 00:27:17.589
+Barnabas: and that's about it.
+
+52
+00:27:23.540 --> 00:27:29.010
+Mario Vega: Alright, thanks. Will. Do. You want to go over the peer desks?
+
+53
+00:27:29.470 --> 00:27:30.920
+Mario Vega: Updates first.st
+
+54
+00:27:32.672 --> 00:27:44.227
+Will Corcoran: Sure. Yeah, thanks, Barnabas. I I think that's kind of the major update is shipping. Wnes 7, and activating the flu fork on that this morning.
+
+55
+00:27:44.890 --> 00:27:47.000
+Will Corcoran: There's still the
+
+56
+00:27:47.320 --> 00:28:06.360
+Will Corcoran: item. I don't know if Justin's on the call, but we were trying to urge people to make some decisions on the Bpo block. Blob schedule. So that could be merged last Friday. It looks like it has been merged. I don't know if there's still people that are in decision on that, or what we could do to advance that.
+
+57
+00:28:07.320 --> 00:28:14.080
+Justin Traglia: We were just waiting until after this call to merge it. So I'll merge it soon, and then I'll make an Apr. To back port it to Deneb.
+
+58
+00:28:14.350 --> 00:28:15.700
+Justin Traglia: So it's the plan.
+
+59
+00:28:16.700 --> 00:28:17.290
+Will Corcoran: Great.
+
+60
+00:28:19.600 --> 00:28:21.130
+Will Corcoran: Yeah, I think that
+
+61
+00:28:21.300 --> 00:28:30.879
+Will Corcoran: I don't know unless anyone feels otherwise. Those were the major things that I had kind of documented on the list. There's a handful of other
+
+62
+00:28:31.723 --> 00:28:39.260
+Will Corcoran: small open Apis around the Beacon Api, or sorry open Prs, but nothing, Major.
+
+63
+00:28:42.905 --> 00:28:47.530
+Justin Traglia: Terrence, was your question about that 0 spec about the blob schedule stuff.
+
+64
+00:28:47.870 --> 00:28:49.150
+terence: Yeah. The Bpo.
+
+65
+00:28:49.600 --> 00:28:53.170
+Justin Traglia: Yeah, I think it should be part of dead, not 0, in my opinion.
+
+66
+00:29:01.640 --> 00:29:05.790
+Barnabas: Also. What should be the timeline we are thinking about for Demo 0.
+
+67
+00:29:07.260 --> 00:29:10.530
+Barnabas: Maybe in 2 weeks time. Is that realistic for everyone.
+
+68
+00:29:13.290 --> 00:29:14.670
+terence: Our altar. Cleanse
+
+69
+00:29:14.840 --> 00:29:26.229
+terence: team here. Yeah, I I think 2 weeks is fine. Even one week should be fine. What depends on what we want. Right? I just say we're finalizing the eip scope here.
+
+70
+00:29:28.570 --> 00:29:41.980
+Barnabas: Yeah, I I'm not sure if you want to include any vips in the net 0 other than the Bpo. We can also have, like the net one with all the agreed upon vips that we agree on today.
+
+71
+00:29:42.630 --> 00:29:47.509
+terence: If it's just Bpo like, speak for prison team. Of course I think we can do this in one week.
+
+72
+00:30:07.656 --> 00:30:11.019
+Mario Vega: How is the rest of the team's feeling about this?
+
+73
+00:30:12.430 --> 00:30:13.910
+Mario Vega: Can the yields chime in.
+
+74
+00:30:23.000 --> 00:30:33.370
+Justin Florentine (Besu): A/C's cool with 2 weeks just to level set. That would be the get engine stuff, the cell transaction validation and Bpo hard forks.
+
+75
+00:30:39.570 --> 00:30:47.849
+Mario Vega: Just to clarify. This is talking about the Bpo only, and not none of the other Cfi eips. Is that is that correct?
+
+76
+00:30:49.160 --> 00:30:51.159
+Justin Florentine (Besu): So not the pure dos ones.
+
+77
+00:30:51.540 --> 00:30:54.250
+Justin Florentine (Besu): because there's there's pure dos work to be done on the El.
+
+78
+00:30:56.410 --> 00:31:00.019
+Mario Vega: I'm sorry I meant the rest of the Cfi. Yeah.
+
+79
+00:31:00.020 --> 00:31:00.350
+Justin Florentine (Besu): That's it.
+
+80
+00:31:00.910 --> 00:31:01.300
+Justin Florentine (Besu): Yeah.
+
+81
+00:31:09.760 --> 00:31:11.839
+Mario Vega: Any other comments from eels.
+
+82
+00:31:17.795 --> 00:31:39.560
+Marcin Sobczak: We will be ready. What? Whatever will be decided to be added? But it's a bit unclear for me, like what we need to to add on top of the net 7 like, what's the the features you're talking about to to add in this net 0 in 2 weeks.
+
+83
+00:31:41.390 --> 00:31:42.480
+Barnabas: The Bpo.
+
+84
+00:31:46.000 --> 00:31:48.350
+Marcin Sobczak: And only if that's true, so we cannot.
+
+85
+00:31:51.940 --> 00:32:09.760
+Mario Vega: So just to summarize, this would be the 1st devnet devnet 0 for fusica. It will contain pure Das and Bpo, only none of the other cf, 5 eips would be included. So basically, would this be the same as Devnet 7. Or
+
+86
+00:32:10.040 --> 00:32:12.259
+Mario Vega: is there anything else included? Wanos.
+
+87
+00:32:12.260 --> 00:32:22.850
+Barnabas: I think we can agree upon that today, especially if there's some very obvious and tiny vips that couldn't like delay launch in 2 weeks.
+
+88
+00:32:25.730 --> 00:32:48.580
+Parithosh Jayanthi: Yeah, I would just add that we definitely want to stick to that timeline. So let's only choose stuff that we think we can hit there, and the main reason for having a more rigid timeline is that we do have an in person meeting in June, and we would like to at least have one devnet through where we can find some issues rather than having everything in a devnet and not hitting the deadline.
+
+89
+00:33:03.550 --> 00:33:14.238
+Mario Vega: Okay, so does does it sound reasonable for us to include 2 of the Cf 5 eaps from what I can see right now in the list of
+
+90
+00:33:14.760 --> 00:33:22.169
+Mario Vega: of each client the most requested one, or the most important one for all teams seems to be the mothexp
+
+91
+00:33:22.480 --> 00:33:29.710
+Mario Vega: related per compiled. So that is 78, 23, and 78, 83.
+
+92
+00:33:29.930 --> 00:33:32.109
+Mario Vega: It adds on the top of the
+
+93
+00:33:32.260 --> 00:33:45.290
+Mario Vega: of the list of every single client, and I think those are. Those 2 are pretty straightforward and can even be tested like it's a very straightforward we can make a prep prepare a release of tests in the next couple of weeks.
+
+94
+00:33:45.760 --> 00:33:48.999
+Mario Vega: and should be included, that, in my opinion.
+
+95
+00:33:49.740 --> 00:33:52.010
+Mario Vega: does that sound reasonable for everyone.
+
+96
+00:33:55.640 --> 00:33:58.939
+Justin Florentine (Besu): When you say included, are you referring to Devnet 0 or Devnet one.
+
+97
+00:33:59.540 --> 00:34:02.819
+Mario Vega: That would be Devnet 0, that is, in 2 weeks.
+
+98
+00:34:02.820 --> 00:34:09.170
+Justin Florentine (Besu): We would prefer those to go into a devnet one. We would prefer to see the pure dos and Bpo stuff in isolation.
+
+99
+00:34:17.290 --> 00:34:27.299
+Roman: I mean from from the suggestion. This means the devnet 0 would be only testing the detail bit because Paradise is already being tested right now, now.
+
+100
+00:34:37.020 --> 00:34:42.070
+Ben Adams: What exactly is the would the Bpi be testing? Because
+
+101
+00:34:42.659 --> 00:34:46.089
+Ben Adams: unless you're having lots of Mini forks, is it really.
+
+102
+00:34:47.639 --> 00:34:48.289
+Roman: Yeah, true.
+
+103
+00:34:48.290 --> 00:34:49.820
+Barnabas: That's what we want to test.
+
+104
+00:34:50.100 --> 00:35:08.500
+Barnabas: We, we can have a bunch of Bpo tests on this. Basically, we're gonna be bumping up count the target and the Max. And we're gonna be dropping it back down. Then we gonna drop it or push it back up and drop it back down. So basically, we want to test all the functionality of the Bpo's.
+
+105
+00:35:23.380 --> 00:35:27.460
+Mario Vega: Anyone else has posing or comments
+
+106
+00:35:27.760 --> 00:35:30.800
+Mario Vega: on Bpo. Only fork for Devnet 0 in 2 weeks.
+
+107
+00:35:38.110 --> 00:35:44.529
+Marcin Sobczak: And never mind, he's fine with it. If we decide to add modex it's fine, too.
+
+108
+00:35:46.420 --> 00:35:52.939
+Roman: Yeah, ref's preference would be to include modex. But if we don't, that's fine.
+
+109
+00:35:57.880 --> 00:35:59.670
+Marius: It also doesn't count.
+
+110
+00:36:01.100 --> 00:36:04.499
+lightclient: Yeah, well, is there a reason to not include MoD. X. Right now?
+
+111
+00:36:09.870 --> 00:36:19.180
+Justin Florentine (Besu): For us. It's a timing issue and simply isolation of pure dos testing. So Baysu is not fully on the pure dos. Devnet.
+
+112
+00:36:27.940 --> 00:36:33.850
+Barnabas: We don't necessarily need to include bezel also in or in 0.
+
+113
+00:36:35.310 --> 00:36:37.770
+Justin Florentine (Besu): I missed that, Barnabas, you're super muffled.
+
+114
+00:36:47.490 --> 00:36:50.039
+Mario Vega: Barnabas, we missed your comment. Could you repeat? Please.
+
+115
+00:36:52.160 --> 00:36:58.100
+Barnabas: Yeah, I'm not sure if it's better now, or it's too bad.
+
+116
+00:36:58.410 --> 00:36:59.969
+Will Corcoran: Yes, that sounds better.
+
+117
+00:37:00.900 --> 00:37:09.809
+Barnabas: Yeah, okay, so it's also possible that we do not include Bezu then in
+
+118
+00:37:10.438 --> 00:37:16.859
+Barnabas: like, right now, Devnet 7 is basically for meant to be for peerless testing.
+
+119
+00:37:16.990 --> 00:37:19.920
+Barnabas: This would be very good if busy would have a
+
+120
+00:37:20.650 --> 00:37:25.889
+Barnabas: non bpo, but a pure death, or the branch that we could be testing on
+
+121
+00:37:26.200 --> 00:37:33.040
+Barnabas: on this feature, because right now we are basically like calling back features just because Bezoo is not yet on
+
+122
+00:37:33.520 --> 00:37:42.370
+Barnabas: and period of time. Not so I would I would actually push for having modexp in 11 0,
+
+123
+00:37:42.710 --> 00:37:45.640
+Barnabas: and have all those features tested as well.
+
+124
+00:37:45.880 --> 00:37:49.179
+Barnabas: especially if all the Es are on board except Peso.
+
+125
+00:37:51.330 --> 00:37:55.999
+Barnabas: and then try to push to be included in this one.
+
+126
+00:38:04.940 --> 00:38:08.910
+Mario Vega: I mean, watch Devnet 0 without all the clients. I think that's fine.
+
+127
+00:38:11.810 --> 00:38:23.280
+Andrew Ashikhmin: So I have a question about Ps. We are working to implement it on the Cl. Side in Kaplan. But is there anything required on the Yale side.
+
+128
+00:38:23.410 --> 00:38:26.369
+Andrew Ashikhmin: because we we won't be ready in in 2 weeks.
+
+129
+00:38:26.540 --> 00:38:33.080
+Andrew Ashikhmin: Yeah, on the sales side. But maybe, if if yeah, so, is it something kind of trivial on the outside.
+
+130
+00:38:36.070 --> 00:38:39.050
+Andrew Ashikhmin: Oh, no changes at all on the L. Side.
+
+131
+00:38:41.120 --> 00:38:42.310
+Andrew Ashikhmin: Poopia does.
+
+132
+00:38:46.537 --> 00:38:53.979
+Parithosh Jayanthi: Maybe one of the El Devs can talk about the change set, but last I checked it shouldn't be a very massive change set.
+
+133
+00:38:54.600 --> 00:38:56.910
+Andrew Ashikhmin: But there is a kind of a there is a change.
+
+134
+00:38:57.270 --> 00:38:58.670
+Parithosh Jayanthi: Yeah, there is a change.
+
+135
+00:38:59.685 --> 00:39:00.070
+Andrew Ashikhmin: Okay.
+
+136
+00:39:08.400 --> 00:39:10.659
+Mario Vega: And some just share the
+
+137
+00:39:11.440 --> 00:39:15.529
+Mario Vega: the Pr. For the execution. Apis. I think that's the main chain right? The engine Api.
+
+138
+00:39:16.540 --> 00:39:22.439
+Parithosh Jayanthi: There was also a networking change. Maybe Roman has some details on how large the changes were.
+
+139
+00:39:22.990 --> 00:39:31.690
+Roman: Yeah, it's a small networking change to treat the proofs differently. And and then mostly the engine Api changes.
+
+140
+00:39:34.920 --> 00:39:52.010
+Justin Florentine (Besu): Yeah. For us, the engine Api is less of a concern than it is the checking, the cell proofs on the transactions that are incoming. We have an issue with our native crypto integration that popped up. Somebody was reporting it in discord, and so we need to nail that down before
+
+141
+00:39:52.380 --> 00:39:55.139
+Justin Florentine (Besu): being certain we could ship the cell proofs.
+
+142
+00:40:05.440 --> 00:40:12.049
+Marcin Sobczak: Yeah, so summarizing it. There is not a lot of changes, but they are definitely not trivial.
+
+143
+00:40:16.910 --> 00:40:21.650
+Mario Vega: And Kevin in the chat is mentioning, is asking for details on the on the issue. Justin.
+
+144
+00:40:27.650 --> 00:40:53.584
+Justin Florentine (Besu): Yeah, I was gonna post those in the chat. It's a we're like, I said, we're still investigating it. It's a really weird packaging issue. That's very, very isolated to like osx on intel type use case. So it's weird and we don't understand it, which is got us reluctant to moving forward but, on the other hand, it's an almost negligible proportion of our client base. So
+
+145
+00:40:54.150 --> 00:40:57.130
+Justin Florentine (Besu): we need to understand this issue better before we disregard it.
+
+146
+00:40:59.280 --> 00:41:00.239
+Barnabas: Could we not
+
+147
+00:41:00.340 --> 00:41:06.520
+Barnabas: use a branch to test? In the meantime? I mean, I understand that this is a super niche bug.
+
+148
+00:41:06.730 --> 00:41:12.680
+Barnabas: but in the same time. It would be very valuable, I think, to have Bezo on boarded on 11, 7.
+
+149
+00:41:16.620 --> 00:41:22.280
+Justin Florentine (Besu): Yeah, nobody's debating the value of having it done. It's just not ready yet.
+
+150
+00:41:34.270 --> 00:41:41.419
+Mario Vega: Okay, it seems like, also, we are divided on MoD. Xp, should we defer that decision until
+
+151
+00:41:42.865 --> 00:41:46.629
+Mario Vega: Acde, because it seems like a
+
+152
+00:41:47.640 --> 00:41:56.379
+Mario Vega: if there's issues right now, with pure desk alone, it might be it might delay even further. If we include MoD. Xp.
+
+153
+00:41:58.310 --> 00:42:03.460
+Mario Vega: That's just the sentiment I feel any thoughts.
+
+154
+00:42:10.170 --> 00:42:12.540
+Barnabas: Didn't sound like a pure death issue to me.
+
+155
+00:42:22.160 --> 00:42:26.410
+Mario Vega: And Tim is asking in the in the chat if there's other clients with issues at the moment.
+
+156
+00:42:35.930 --> 00:42:39.450
+Tim Beiko: Yeah. And I guess maybe to expand on that a little bit is I.
+
+157
+00:42:39.800 --> 00:43:01.310
+Tim Beiko: If we do have it seems like we have rest. Geth another mind who could start working on MoD. Xp, I feel like there's value in trying to get 3 clients to interrupt. And, you know, find any potential issues in MoD. Xp. Given how uncontentious the eips are. So that's
+
+158
+00:43:01.760 --> 00:43:30.109
+Tim Beiko: I would personally bias towards having them included in Devnet 0 even if it means like, yeah, we don't have all clients on day one for definite 0. They're also pretty trivial eips. So you can even imagine something where, like, you know, if say, base 2 is fixing their bug and doesn't make it for devnet 0 at all by definition. One like the incremental work to add, MoD. Xp. Should be pretty small, so they could maybe like join straight into Devnet one or something like that. But I
+
+159
+00:43:30.410 --> 00:43:32.973
+Tim Beiko: I feel like MoD. Xp is so
+
+160
+00:43:33.971 --> 00:43:38.390
+Tim Beiko: I don't unanimously like desired that we should just get
+
+161
+00:43:38.610 --> 00:43:54.160
+Tim Beiko: testing it asap, and then it also gives us the more time. If we, if we've like, confirmed those to have further discussions in Acd about like what would be the bigger features we'd want to bring for Devnet one while keeping the focus on, peered us. And, like, you know.
+
+162
+00:43:54.420 --> 00:43:57.009
+Tim Beiko: relatively small changes in the next couple of weeks.
+
+163
+00:44:02.240 --> 00:44:08.443
+Mario Vega: Yeah, also, we can start preparing the tests. In the in this week. And we're gonna prioritize prioritize
+
+164
+00:44:08.990 --> 00:44:09.980
+Mario Vega: modexp.
+
+165
+00:44:17.540 --> 00:44:21.740
+Mario Vega: Some mentions that we should add the payoff code.
+
+166
+00:44:21.980 --> 00:44:26.109
+Mario Vega: But it feels to me that that's higher complexity than modexp.
+
+167
+00:44:27.730 --> 00:44:31.920
+Mario Vega: So maybe we should defer that discussion for devnet one. If that's okay.
+
+168
+00:44:32.120 --> 00:44:36.500
+Mario Vega: Or does anybody feel like we should definitely include it in definite 0?
+
+169
+00:44:37.280 --> 00:44:38.250
+Mario Vega: Yeah, Johan.
+
+170
+00:44:38.410 --> 00:44:49.039
+jochem-brouwer (EthJS): I just wanted to say, I don't think we should include it for def net 0. And that's also because I have a Pr open for pay, because the current eip is not.
+
+171
+00:44:49.660 --> 00:44:54.080
+jochem-brouwer (EthJS): and it misses some edge edge cases from the erp.
+
+172
+00:44:54.250 --> 00:45:02.639
+jochem-brouwer (EthJS): and if there is some some offer of the pay opcode. Here, then, please review this eip, because I really want to get this in the Fussaka
+
+173
+00:45:02.850 --> 00:45:09.030
+jochem-brouwer (EthJS): that none of the authors had has left on review there yet, so would be really helpful.
+
+174
+00:45:16.840 --> 00:45:17.540
+Mario Vega: Cool.
+
+175
+00:45:17.980 --> 00:45:29.160
+Mario Vega: Okay, it sounds like we have a decision at the moment. So just to summarize devnet 0 in 2 weeks, that is, that includes peer does, and Bop
+
+176
+00:45:29.450 --> 00:45:35.729
+Mario Vega: ppo sorry, and the 2 MoD. X eips.
+
+177
+00:45:35.890 --> 00:45:42.520
+Mario Vega: and that is, Eap 78, 23, and eap 78, 83.
+
+178
+00:45:49.680 --> 00:45:53.340
+Mario Vega: Are there any opposing opinions?
+
+179
+00:46:07.890 --> 00:46:12.559
+Mario Vega: Cool? Okay? So I think it sounds like we have a plan. Great.
+
+180
+00:46:14.570 --> 00:46:17.790
+Mario Vega: Yeah. Anyway, I have this this other document.
+
+181
+00:46:20.210 --> 00:46:27.400
+Mario Vega: I I we can continue on adding things to this, and just please keep an eye on it. If there's
+
+182
+00:46:27.820 --> 00:46:36.599
+Mario Vega: any opinions on the rest of the Eaps. Please just reach out. And we can just discuss for the Eaps that we have one to include them in one.
+
+183
+00:46:38.790 --> 00:46:42.395
+Mario Vega: Okay, cool.
+
+184
+00:46:43.270 --> 00:46:51.879
+Mario Vega: yeah. And going back to peer, does, I think we we cut that off will. Is there any other discussion on Peer? Does that needs to be had.
+
+185
+00:46:57.371 --> 00:46:58.929
+Will Corcoran: No, I don't believe so.
+
+186
+00:47:01.210 --> 00:47:06.499
+FLCL: Raise a small suggestion to limit book count per transaction.
+
+187
+00:47:08.410 --> 00:47:13.170
+FLCL: To like who?
+
+188
+00:47:16.490 --> 00:47:20.040
+FLCL: Maybe not to the next network
+
+189
+00:47:20.760 --> 00:47:29.470
+FLCL: webinars. But maybe we could discuss it and confirm potential inclusion like 2, not one or so.
+
+190
+00:47:32.450 --> 00:47:46.200
+FLCL: So the idea is to bring additional field that would mean that, like in range of
+
+191
+00:47:46.340 --> 00:47:53.610
+FLCL: in time. Range of current fork. Transaction cannot hold more blobs than bloat.
+
+192
+00:48:02.710 --> 00:48:04.050
+Mario Vega: Yes, ma'am.
+
+193
+00:48:06.300 --> 00:48:26.427
+Marcin Sobczak: Yes, it will be extremely helpful to to have a cap on Max. Number of blocks per transactions like. If we I mean having, like Max blocks per block at let's say 72, and then, like having 72 block transactions will be like
+
+194
+00:48:26.870 --> 00:48:40.939
+Marcin Sobczak: harder to handle than than transactions with with lower amount of blobs. And we see no point in in allowing such a big amount of data in in one transaction. So
+
+195
+00:48:40.940 --> 00:48:57.580
+Marcin Sobczak: having a cap on on blocks per transactions to 1215, or whatever will make our life simpler. And yes, we would like to to have something like that. If if there is no position.
+
+196
+00:49:07.620 --> 00:49:08.590
+Mario Vega: Disturbance.
+
+197
+00:49:09.170 --> 00:49:18.749
+terence: Yeah. So I agree. I also raised my hand as well, I think, like another venue. To bring this up is at the local, because this
+
+198
+00:49:18.900 --> 00:49:27.390
+terence: will change how layer 2 raw batch poster work. Typically because today, like
+
+199
+00:49:27.390 --> 00:49:51.039
+terence: their tools, they typically some there, too, they post one blob per transaction, but some of them actually do prefer batching as much as they can to essentially amortize the execution tip amount, because currently the tape is specified in the execution format rather than the blob da format. Because of that there is a cost saving that you can do
+
+200
+00:49:51.080 --> 00:50:14.449
+terence: to essentially batch post blobs like for the bigger amount, such that you just have to pick the tip once. So I guess the raw venue will be like, well, like, yeah, definitely can bring some raw venue. I don't see this reason not to do this, but you'll be good to give Rob a little bit of heads up, because this because because this this will change how they work.
+
+201
+00:50:14.470 --> 00:50:28.070
+terence: And then I and it's also worth mentioning. Different rob, or slightly different, like base OP Stack office. They like they like like they they all work di-differently here.
+
+202
+00:50:33.880 --> 00:50:34.910
+Mario Vega: Yes, Francis.
+
+203
+00:50:37.786 --> 00:50:40.353
+Francis Li: Yeah, I agree with Terrace, I think.
+
+204
+00:50:41.050 --> 00:51:09.129
+Francis Li: this. There's no reason to not have it. And I guess my suggestion, or like my like, 2 cents here is that, can we maybe tentatively include it and have clients start working on it. And we just kind of like give it a like initial tentative number 9 or whatever to start with. And then we, we can start gathering like information and stuff. But I feel like the work can be started. Now.
+
+205
+00:51:16.440 --> 00:51:19.500
+Mario Vega: Just for context. Do we have an eip number in this?
+
+206
+00:51:20.290 --> 00:51:21.830
+Mario Vega: How does that work in progress
+
+207
+00:51:38.870 --> 00:51:46.120
+Mario Vega: assume? No, no eap now? And yes, I think we can.
+
+208
+00:51:47.510 --> 00:51:50.310
+Mario Vega: I don't know if it if it's a good call to add it
+
+209
+00:51:50.520 --> 00:51:57.099
+Mario Vega: to Devnet 0. I don't think so. It feels to me that if we add this, it should be added to Devnet one at least.
+
+210
+00:52:03.190 --> 00:52:11.479
+Francis Li: I don't think they're the eip for that, but I do remember seeing a consensus spec. Pr for that, if I remember correctly.
+
+211
+00:52:13.550 --> 00:52:15.460
+Derek G: Yeah, there's a Pr linked in the chat.
+
+212
+00:52:22.890 --> 00:52:23.650
+Mario Vega: Thank you.
+
+213
+00:52:31.540 --> 00:52:33.490
+Mario Vega: Just get Kevin Kevin.
+
+214
+00:52:35.694 --> 00:52:44.415
+Kevaundray Wedderburn: Yeah, I vaguely remember that being this proposal to have a 10 MB limit on the transaction size
+
+215
+00:52:45.200 --> 00:52:50.049
+Kevaundray Wedderburn: does. Does this limit also include the number of blobs that are in the transaction.
+
+216
+00:52:53.860 --> 00:53:00.049
+Mario Vega: I think what that was a block limit. Right? If I'm not mistaken, you're talking about 79, 34,
+
+217
+00:53:00.270 --> 00:53:06.050
+Mario Vega: and that's Rlp execution, log size, and I don't think it will be included because it's only
+
+218
+00:53:06.160 --> 00:53:11.440
+Mario Vega: the Rrlp which does not include the network version of the transaction. So I don't think this is?
+
+219
+00:53:13.620 --> 00:53:15.110
+Mario Vega: Or do you mean like.
+
+220
+00:53:15.110 --> 00:53:16.460
+Kevaundray Wedderburn: Think there was a
+
+221
+00:53:17.610 --> 00:53:23.049
+Kevaundray Wedderburn: oh, I thought there was one to limit the size of a particular transaction on the P. 2 P. Network or.
+
+222
+00:53:23.810 --> 00:53:28.790
+Ben Adams: There's 1 to limit the gas of the transaction.
+
+223
+00:53:28.790 --> 00:53:30.210
+Kevaundray Wedderburn: Okay, I see. Right?
+
+224
+00:53:30.390 --> 00:53:31.900
+Kevaundray Wedderburn: Yeah, not that one. Yeah.
+
+225
+00:53:42.330 --> 00:53:45.620
+Mario Vega: Francis, I see that your hand's still up. Do you have other comments? Or
+
+226
+00:53:45.730 --> 00:53:47.020
+Mario Vega: was that from the last time.
+
+227
+00:53:48.190 --> 00:53:49.830
+Francis Li: Oh, it was from last time. Sorry.
+
+228
+00:53:57.650 --> 00:54:04.430
+Mario Vega: Alright any other opinions on this topic. It feels to me that it's deferred at least to 11
+
+229
+00:54:09.480 --> 00:54:11.630
+Mario Vega: unless anyone wants to chime in.
+
+230
+00:54:21.450 --> 00:54:28.829
+Mario Vega: Okay, if not, we can move on. Next topic would be
+
+231
+00:54:30.037 --> 00:54:36.652
+Mario Vega: this pr, it was raised as a topic by Alex. I don't know if he's in the call.
+
+232
+00:54:38.090 --> 00:54:40.200
+Mario Vega: this is the the link to the Pr.
+
+233
+00:54:40.380 --> 00:54:45.089
+Mario Vega: And it hasn't merged. I don't know if there's any other things that you want to add
+
+234
+00:54:45.770 --> 00:54:50.110
+Mario Vega: to this topic Justin or Alex.
+
+235
+00:54:53.680 --> 00:54:56.460
+Justin Traglia: No, we talked about this just a little bit ago.
+
+236
+00:54:56.660 --> 00:54:58.020
+Justin Traglia: I've just merged it.
+
+237
+00:55:04.930 --> 00:55:07.050
+Mario Vega: Okay, cool sounds good.
+
+238
+00:55:11.120 --> 00:55:20.799
+Mario Vega: if nothing to discuss about that, we can just move into history. Expiry. Barnabas, I think that you were going to discuss this today, or was it baritosh?
+
+239
+00:55:23.160 --> 00:55:25.990
+Barnabas: Yeah, I can try to discuss
+
+240
+00:55:30.120 --> 00:55:32.469
+Barnabas: my keeps dropping off. Sorry
+
+241
+00:55:33.942 --> 00:55:51.309
+Barnabas: so we wanted to begin testing history expiry. Possibly the portal. And we have asked them to add the support, for so we can try to do arbitrary history drop at any specific height.
+
+242
+00:55:52.180 --> 00:55:54.380
+Barnabas: This is still work in progress.
+
+243
+00:55:55.066 --> 00:56:07.149
+Barnabas: Regarding dropping history in Oppolio and Mainnet, we were discussing to push the possible deadline for that to next month. So, like 1st of June first.st The polio.
+
+244
+00:56:07.490 --> 00:56:09.500
+Barnabas: How would everyone feel about that?
+
+245
+00:56:09.620 --> 00:56:12.489
+Barnabas: Because the original deadline was 1st of May?
+
+246
+00:56:13.220 --> 00:56:19.709
+Barnabas: But I think we still have some. Yeah, that's that haven't defaulted to dropping history on support. Yeah.
+
+247
+00:56:24.130 --> 00:56:26.540
+Barnabas: this is a pretty much history, only.
+
+248
+00:56:31.780 --> 00:56:50.209
+Parithosh Jayanthi: Yeah, and in terms of readiness. Please, also include like documentation or user guides, or something that we can point to and test, especially for a public test net. So would you guys be okay with 1st of June as a deadline for including documentation.
+
+249
+00:56:58.760 --> 00:57:00.850
+Justin Florentine (Besu): Base. He's fine with one gin.
+
+250
+00:57:18.960 --> 00:57:20.309
+Mario Vega: Any other yields.
+
+251
+00:57:27.153 --> 00:57:34.409
+Marius: I don't. I cannot say anything to that yet. We have it in the code
+
+252
+00:57:35.494 --> 00:57:44.320
+Marius: but it's hidden behind the flag. With probably not going to
+
+253
+00:57:45.090 --> 00:57:50.369
+Marius: enable it by default. For quite some time. So
+
+254
+00:57:51.507 --> 00:57:58.650
+Marius: yeah. But I think we would probably be able to create documentation in 2 weeks.
+
+255
+00:58:08.640 --> 00:58:10.349
+Mario Vega: Any comments from Nethermind.
+
+256
+00:58:29.910 --> 00:58:32.340
+Mario Vega: or any comments from Arragon or Red.
+
+257
+00:58:34.310 --> 00:58:37.580
+Roman: I'm checking in with the team right now.
+
+258
+00:58:40.860 --> 00:58:47.709
+Andrew Ashikhmin: In Aragon we have a Pr. In, but it's not merged yet, so we're still reviewing it and
+
+259
+00:58:48.400 --> 00:58:51.729
+Andrew Ashikhmin: but in any case we want.
+
+260
+00:58:52.350 --> 00:58:56.959
+Andrew Ashikhmin: Most likely we won't be. We won't make a release by the 1st of June.
+
+261
+00:58:57.100 --> 00:59:00.929
+Andrew Ashikhmin: so we may. Maybe we'll make a release in in a couple of months.
+
+262
+00:59:09.070 --> 00:59:21.450
+Parithosh Jayanthi: I guess that's 1 of the questions. Is there some reason we have to coordinate this across clients? Or is the understanding now that every client just enables history expiry whenever they're ready.
+
+263
+00:59:26.140 --> 00:59:37.210
+Andrew Ashikhmin: I think we agreed to do it by by Fusaka. So I think, yeah, to me it sounds like as long as every client does it before it's okay.
+
+264
+00:59:40.330 --> 00:59:45.774
+Marek Moraczyński: I think we don't have to coordinate it. And basically just
+
+265
+00:59:46.400 --> 01:00:01.160
+Marek Moraczyński: say that we will not drop before before some date right? And this should be good enough coordination, and then it's up to client when exactly we will release something here.
+
+266
+01:00:10.570 --> 01:00:28.550
+Parithosh Jayanthi: Yeah, I think the main issue with that approach was we had agreed on a deadline of May first, st and essentially, it didn't happen. So the question is, are we just now setting arbitrary deadlines? Or is the 1st of May like the 1st of June? Does it have any purpose?
+
+267
+01:00:28.680 --> 01:00:31.470
+Parithosh Jayanthi: Besides, just a signal.
+
+268
+01:00:32.960 --> 01:00:56.229
+Justin Florentine (Besu): I think that's true. But okay, because the 1st one was arbitrary, and then we wanted to kind of delay it till after Petra shipped when so when Petra slipped a little bit, that was no longer the case. And so now we have another arbitrary deadline, which is fine. But it's after Petra, which is the point. So I think that's that's how I square that concern Perry.
+
+269
+01:00:57.880 --> 01:01:10.789
+Parithosh Jayanthi: Okay, so we can set it as 1st of June, and then we just bring it up on the weekly meeting to see if there's any update and try to at least have some clients that are ready by then, I guess.
+
+270
+01:01:14.050 --> 01:01:17.369
+Ben Adams: We can do on Sopalia.
+
+271
+01:01:19.130 --> 01:01:21.599
+Parithosh Jayanthi: Yeah, this was, this is answerable. Yeah.
+
+272
+01:01:41.770 --> 01:01:43.919
+Mario Vega: Okay, sounds good.
+
+273
+01:01:44.770 --> 01:01:48.100
+Mario Vega: Anything else regarding history expiry.
+
+274
+01:02:02.410 --> 01:02:06.069
+Mario Vega: Okay? Just to summarize. We're expecting 1st of June
+
+275
+01:02:06.590 --> 01:02:11.910
+Mario Vega: to be a release or document and our documentation for sepolia history expiry.
+
+276
+01:02:14.580 --> 01:02:20.329
+Mario Vega: Great. Yeah, I think that's everything we had for the agenda today.
+
+277
+01:02:20.830 --> 01:02:24.410
+Mario Vega: Is there any other topics that anyone wants to raise.
+
+278
+01:02:35.570 --> 01:02:36.330
+Mario Vega: Okay?
+
+279
+01:02:36.670 --> 01:02:42.540
+Mario Vega: Sounds good. Okay? So yeah, we can let everyone go with 20 min to spare.
+
+280
+01:02:42.830 --> 01:02:45.330
+Mario Vega: Great thanks. Everyone for joining.
+
+281
+01:02:47.760 --> 01:02:48.830
+Ansgar Dietrichs: Thanks. Everyone.
+
+282
+01:02:49.100 --> 01:02:49.950
+Andrew Ashikhmin: Thank you.
+
+283
+01:02:49.950 --> 01:02:50.360
+Dmitrii Shmatko: Bye.
+
+284
+01:02:50.570 --> 01:02:51.210
+Mario Vega: Bye.
+

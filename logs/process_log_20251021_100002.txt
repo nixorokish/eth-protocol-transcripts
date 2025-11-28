@@ -1,0 +1,21 @@
+2025-10-21T10:00:02.866366 - === Processing meetings from last 1 days ===
+2025-10-21T10:00:03.099404 - Step 1: Fetching closed GitHub issues...
+2025-10-21T10:00:24.959765 -   ✓ Found 1 matched meetings
+2025-10-21T10:00:24.960453 -   ⚠ Found 1 potential meetings that didn't match
+2025-10-21T10:00:24.961290 -   Saved 1 unmatched issues to logs/failed_matches_20251021_100002.json
+2025-10-21T10:00:24.961404 - 
+============================================================
+2025-10-21T10:00:24.961486 - [1/1] Processing: All Core Devs - Consensus (ACDC) #167, October 16, 2025
+2025-10-21T10:00:24.961576 -   ⏭ Already processed (cached)
+2025-10-21T10:00:24.961656 - 
+No new meetings to upload
+2025-10-21T10:00:24.964828 - 
+============================================================
+2025-10-21T10:00:24.964926 - === SUMMARY ===
+2025-10-21T10:00:24.965004 - ✓ Successfully processed: 0
+2025-10-21T10:00:24.965077 - ⏭ Skipped (cached/exists): 1
+2025-10-21T10:00:24.965160 - ⚠ No recording found: 0
+2025-10-21T10:00:24.965238 - ⚠ Skipped short recordings: 0
+2025-10-21T10:00:24.965403 - 
+Log saved to: logs/process_log_20251021_100002.txt
+2025-10-21T10:00:24.965531 - Unmatched issues saved to: logs/failed_matches_20251021_100002.json

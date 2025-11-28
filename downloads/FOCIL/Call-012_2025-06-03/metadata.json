@@ -1,0 +1,14 @@
+{
+  "meeting_id": "842 6574 5580",
+  "topic": "Focil Breakout",
+  "meeting_type": "FOCIL",
+  "meeting_number": "12",
+  "start_time": "2025-06-03T13:54:42Z",
+  "duration_minutes": 63,
+  "recording_count": 5,
+  "downloaded_at": "2025-10-10T21:34:45.102945",
+  "files": [
+    "transcript.vtt",
+    "chat.txt"
+  ]
+}

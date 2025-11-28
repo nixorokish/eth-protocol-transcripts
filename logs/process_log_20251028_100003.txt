@@ -1,0 +1,29 @@
+2025-10-28T10:00:03.174684 - === Processing meetings from last 1 days ===
+2025-10-28T10:00:03.610596 - Step 1: Fetching closed GitHub issues...
+2025-10-28T10:00:28.692051 -   ✓ Found 2 matched meetings
+2025-10-28T10:00:28.693766 -   ⚠ Found 0 potential meetings that didn't match
+2025-10-28T10:00:28.703304 - 
+============================================================
+2025-10-28T10:00:28.703596 - [1/2] Processing: RPC Standards # 15 | October 27, 2025
+2025-10-28T10:00:28.703735 -   Meeting IDs: 879 4371 9720
+2025-10-28T10:00:28.704163 -   Date: October 27, 2025
+2025-10-28T10:00:31.965967 -   Recording found: 72 minutes
+2025-10-28T10:00:38.560890 - 
+============================================================
+2025-10-28T10:00:38.561180 - [2/2] Processing: All Core Devs - Testing (ACDT) #59, Oct 27, 2025
+2025-10-28T10:00:38.561401 -   Meeting IDs: 842 5123 7513, 884 7930 8162, 864 6616 9680
+2025-10-28T10:00:38.561742 -   Date: Oct 27, 2025
+2025-10-28T10:00:41.591696 -   Recording found: 59 minutes
+2025-10-28T10:00:47.913757 - 
+============================================================
+2025-10-28T10:00:47.913994 - Uploading 2 meeting folders to GitHub in single commit...
+2025-10-28T10:00:54.590971 - ✓ Successfully uploaded 6 files in single commit
+2025-10-28T10:00:54.595215 - 
+============================================================
+2025-10-28T10:00:54.595354 - === SUMMARY ===
+2025-10-28T10:00:54.595436 - ✓ Successfully processed: 2
+2025-10-28T10:00:54.595507 - ⏭ Skipped (cached/exists): 0
+2025-10-28T10:00:54.595573 - ⚠ No recording found: 0
+2025-10-28T10:00:54.595637 - ⚠ Skipped short recordings: 0
+2025-10-28T10:00:54.595745 - 
+Log saved to: logs/process_log_20251028_100003.txt

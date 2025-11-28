@@ -1,0 +1,1442 @@
+WEBVTT
+
+1
+00:02:14.980 --> 00:02:16.330
+Pooja Ranjan: Hi paditosh.
+
+2
+00:02:17.340 --> 00:02:18.270
+Parithosh Jayanthi: No good move.
+
+3
+00:02:19.750 --> 00:02:24.490
+Pooja Ranjan: I don't see the link shared on zoom. Sorry on acd.
+
+4
+00:02:25.190 --> 00:02:26.810
+Parithosh Jayanthi: Sorry you don't see what.
+
+5
+00:02:27.288 --> 00:02:31.610
+Pooja Ranjan: Zoom Link shared for this meeting on acd call. I don't know if everybody will.
+
+6
+00:02:31.610 --> 00:02:36.970
+Parithosh Jayanthi: Yes. Oh, I forgot to. Sorry I copied it in the wrong chat.
+
+7
+00:02:37.100 --> 00:02:40.959
+Pooja Ranjan: Okay, no worries. Yeah. If you will share that, it will be helpful.
+
+8
+00:02:41.355 --> 00:02:42.539
+Parithosh Jayanthi: Just did, yeah.
+
+9
+00:02:44.480 --> 00:02:46.972
+Parithosh Jayanthi: I put it on the portal chat by mistake.
+
+10
+00:02:47.250 --> 00:02:48.550
+Pooja Ranjan: No, it is
+
+11
+00:03:00.820 --> 00:03:07.179
+Pooja Ranjan: so. This is automatically recording. So it's all good. Whenever you are ready, just like you, to move the stream over.
+
+12
+00:03:07.820 --> 00:03:15.020
+Parithosh Jayanthi: Okay, perfect. This is really nice and professional. Also, the issue looks really nice and automated. Now.
+
+13
+00:03:15.630 --> 00:03:22.559
+Pooja Ranjan: Yeah, it is. We are still working on a couple of more things, but I think it is in in better shape right now.
+
+14
+00:03:22.840 --> 00:03:24.973
+Parithosh Jayanthi: Yeah, this is actually great.
+
+15
+00:03:25.980 --> 00:03:32.900
+Parithosh Jayanthi: I was still scared the 1st time, cause I wasn't sure if I if I did everything right. But it looks like everything's working.
+
+16
+00:03:32.900 --> 00:03:40.930
+Pooja Ranjan: Yep, yep, it is especially for streaming. It is more streamlined, but for the calls which are not being streamed, it is still.
+
+17
+00:03:40.930 --> 00:03:41.350
+Parithosh Jayanthi: Yeah.
+
+18
+00:03:41.350 --> 00:03:44.832
+Pooja Ranjan: Some data. Yeah, we'll be there soon.
+
+19
+00:07:50.600 --> 00:07:55.580
+Parithosh Jayanthi: Everyone. Let's give it another minute for people to join, and then we can start off.
+
+20
+00:08:07.330 --> 00:08:13.599
+Parithosh Jayanthi: If you especially have friends who have strong opinions on Bpo. Fox. Please text them. Now to show up.
+
+21
+00:09:30.440 --> 00:09:33.089
+Parithosh Jayanthi: Okay, let's get started.
+
+22
+00:09:34.170 --> 00:09:42.449
+Parithosh Jayanthi: So 1st point of business. We did have Petra about week and a half ago. Now. I think
+
+23
+00:09:42.630 --> 00:09:52.199
+Parithosh Jayanthi: there haven't been any real analyses published yet, but have client teams noticed anything so far? Anything you want to talk about or discuss.
+
+24
+00:10:09.790 --> 00:10:19.879
+Parithosh Jayanthi: Yeah. Great. Then that's I guess. Good news. The 1st topic of business is gonna be for sake of net 0 planning.
+
+25
+00:10:21.139 --> 00:10:36.430
+Parithosh Jayanthi: So there's been a message on on the interrupt chat that basically clarifies what eips are a part of Fussaka technet 0. So we I'll just link it over here again. So everyone's
+
+26
+00:10:37.080 --> 00:10:44.330
+Parithosh Jayanthi: Everyone knows what vip they refer to. Essentially, it's pure das MoD xp upper limit.
+
+27
+00:10:44.850 --> 00:10:47.690
+Parithosh Jayanthi: We have a MoD. Xp gas cost increase.
+
+28
+00:10:48.000 --> 00:10:49.619
+Parithosh Jayanthi: Let me just mute. Yeah.
+
+29
+00:10:50.010 --> 00:11:05.459
+Parithosh Jayanthi: Mud xp. Gas cost increase and blob parameter. Only hard fox. I know that the Bpo fox are still a point of discussion that we will have to the rest of a city. But at this moment are all teams. Okay with
+
+30
+00:11:05.910 --> 00:11:10.589
+Parithosh Jayanthi: with both the MoD. Xp eips being included for Fusappa Devnet 0.
+
+31
+00:11:14.950 --> 00:11:20.999
+Parithosh Jayanthi: And I think the main argument against it would be if it's significant amount of work for implementation on the El side.
+
+32
+00:11:22.610 --> 00:11:26.599
+Parithosh Jayanthi: Okay, get them. Bezel. Say it's good for them.
+
+33
+00:11:28.450 --> 00:11:36.529
+Parithosh Jayanthi: Right? As well. Okay, is there anyone against having both vips? Okay, perfect. So I think all
+
+34
+00:11:36.710 --> 00:11:46.150
+Parithosh Jayanthi: Els are in agreement there. The document has already been changed. Let me find it quick, Link.
+
+35
+00:11:46.390 --> 00:11:54.910
+Parithosh Jayanthi: that's yeah. So you should be able to see the Fusaka devnet 0 specs over there
+
+36
+00:11:56.000 --> 00:12:06.270
+Parithosh Jayanthi: once you do have your client ready, then please reach out to us, and we can already have a kurtosis config updated and start testing on that.
+
+37
+00:12:08.110 --> 00:12:11.980
+Parithosh Jayanthi: Anything else that needs to be discussed for Fosaka devnet 0.
+
+38
+00:12:19.882 --> 00:12:28.417
+Andrew Ashikhmin: So I'd like to discuss Bpo, because there was a suggestion by Marius to treat
+
+39
+00:12:29.350 --> 00:12:35.999
+Andrew Ashikhmin: like the, and like to have explicit folks on the outside for Bpo.
+
+40
+00:12:37.310 --> 00:12:42.049
+Andrew Ashikhmin: So what what was there agreement on that? Are we doing that.
+
+41
+00:12:42.560 --> 00:12:51.200
+Parithosh Jayanthi: Yeah. So that would be the next big topic. Marius, since you posted a comment about it, do you? 1st wanna articulate your position.
+
+42
+00:12:53.298 --> 00:13:01.539
+MariusVanDerWijden: Sure, I posted my position in in Acd channel a couple of days ago.
+
+43
+00:13:03.556 --> 00:13:04.500
+MariusVanDerWijden: Basically.
+
+44
+00:13:06.810 --> 00:13:11.942
+MariusVanDerWijden: These Bpos are are just normal, hard forks on the execution layer.
+
+45
+00:13:13.110 --> 00:13:22.219
+MariusVanDerWijden: they. The only reason why we don't have them as normal hard forks on the consensus layer is because the consensus layer
+
+46
+00:13:23.390 --> 00:13:32.679
+MariusVanDerWijden: people. Update I don't want to copy a bunch of boilerplate code for for the folks.
+
+47
+00:13:34.222 --> 00:13:45.790
+MariusVanDerWijden: But since the rules change we need to also update the fork. Id.
+
+48
+00:13:46.340 --> 00:13:52.490
+MariusVanDerWijden: Otherwise we might peer with peers that are on the
+
+49
+00:13:53.865 --> 00:13:58.100
+MariusVanDerWijden: on the wrong fork. And so
+
+50
+00:13:59.970 --> 00:14:07.839
+MariusVanDerWijden: my position is that we have a mechanism to update the folk Id. We have a mechanism to update, to, to specify folks.
+
+51
+00:14:08.000 --> 00:14:13.919
+MariusVanDerWijden: So, and we should limit the amount of changes that we need to do
+
+52
+00:14:14.493 --> 00:14:18.200
+MariusVanDerWijden: and just use the mechanism that we have.
+
+53
+00:14:19.389 --> 00:14:29.240
+MariusVanDerWijden: The downside to doing this is that we can only specify a set number of Bpos,
+
+54
+00:14:35.190 --> 00:14:46.250
+MariusVanDerWijden: and the, that's not really a problem for anyone, except maybe for testing if they want to specify
+
+55
+00:14:46.370 --> 00:14:52.890
+MariusVanDerWijden: an unbound number of folks, but I don't see
+
+56
+00:14:53.350 --> 00:15:06.339
+MariusVanDerWijden: any reason to do that like if we have. If we specify 5 Bpos then I don't see a point in doing more than that on any definite
+
+57
+00:15:07.760 --> 00:15:08.450
+MariusVanDerWijden: yep.
+
+58
+00:15:12.350 --> 00:15:24.519
+Parithosh Jayanthi: Okay, thank you. That makes sense. I think on the, is there someone on the Cl side who can articulate the issue over there, because this will be something that I guess affects both of you guys.
+
+59
+00:15:24.770 --> 00:15:31.950
+Parithosh Jayanthi: or it could still be a complete hard fork on this El side, and not a complete hard fork on the Cl. Side right.
+
+60
+00:15:34.490 --> 00:15:37.368
+MariusVanDerWijden: Yeah, I I think we should like
+
+61
+00:15:38.390 --> 00:15:49.503
+MariusVanDerWijden: limit this discussion to the El side, like, there's no reason to get the Cl involved. They will do what what they want to do, and we can do what we want to do.
+
+62
+00:15:50.510 --> 00:16:02.779
+Parithosh Jayanthi: Got it, because there's also parallel long Cl discussion. So I was thinking, if 1st we can have the positions of the 2 sides and then see if there's any overlap or not. And if not, then we make 2 separate decisions.
+
+63
+00:16:04.407 --> 00:16:07.179
+Parithosh Jayanthi: Yeah. Potus, do you wanna go for the Cl side.
+
+64
+00:16:07.390 --> 00:16:20.149
+potuz: Yeah. So so I agree with Marius that I mean you, we can have separate discussions about the L and the Cl. These are completely independent decisions. But I think the same problem of peering appears on both sides.
+
+65
+00:16:20.250 --> 00:16:28.229
+potuz: I mean, it's it's they are independent problems. But but it is exactly the same problem. So it is a discussion to be having in both sides.
+
+66
+00:16:31.350 --> 00:16:41.260
+Parithosh Jayanthi: Got it. So it's the exact same point, essentially, that you need to unpeer or repeer with someone which means your folk id likely needs to change. And at that point.
+
+67
+00:16:41.260 --> 00:16:59.449
+potuz: I mean, not necessarily a fork. Id. But the abstract problem here is, when do you want peer with someone that is on a different fork. Do you want to do this at the handshake level? Or do you want to downscore it later on, because they're feeding you bad data? I mean? The question is, how early in the pipeline do you want to ampeer from these people?
+
+68
+00:17:01.980 --> 00:17:11.060
+Parithosh Jayanthi: Okay, that feels like an implementation topic that maybe we can deal with on the next pieces on the next discussion point.
+
+69
+00:17:11.069 --> 00:17:18.129
+potuz: I don't think it's an implementation topic. I mean, if we if you want to do this at the handshake level, then it has to be part of the p. 2 p. Spec.
+
+70
+00:17:19.930 --> 00:17:20.640
+Parithosh Jayanthi: Okay.
+
+71
+00:17:24.050 --> 00:17:25.739
+Parithosh Jayanthi: Terrence, do you wanna go.
+
+72
+00:17:26.460 --> 00:17:38.140
+terence: Sure, but like on the sales side. So I've implemented the Bpo stuff right? So like on the sales side, the peering. They actually use this like Max commitments per blob.
+
+73
+00:17:38.140 --> 00:17:57.760
+terence: And that's actually cap at like a very, very high number already. That's like 4,096. So that's like the Max. You can go. So I think on Cl. Side it's slightly different. But like what said, yes, maybe we can like change it to more like a side. But Cl doesn't have a main pool. So it's slightly different as well. So yeah, it's not clear to me what's the best path forward.
+
+74
+00:18:01.880 --> 00:18:09.070
+Parithosh Jayanthi: Okay, and Rahul also has a comment, do you? Wanna just read it out, Raul.
+
+75
+00:18:09.840 --> 00:18:29.309
+Raúl Kripalani: Besides, kind of like the protocol and the peer to peer details. I think there's another relevant point here, which is, it does change a Bpo change does change the rules and therefore it clients that it breaks back backwards compatibility, and therefore, I think.
+
+76
+00:18:29.360 --> 00:18:54.439
+Raúl Kripalani: in just a general sense, it should be treated as a hard fork also for signaling in terms of like communicating. Why in the future, like in the future, communicating why the change change a particular rule at a particular point in time. Otherwise, it's just gonna be blended into kind of like a file somewhere, an obscure file somewhere. It's gonna be really hard to communicate this change and track it over time.
+
+77
+00:18:55.790 --> 00:19:09.709
+Parithosh Jayanthi: Yep, that makes sense. So at least summarizing the points. Till now it seems like hard folks would be the most straightforward way to go. Is there anyone on either sides arguing for a non hard fork approach?
+
+78
+00:19:10.870 --> 00:19:12.290
+Parithosh Jayanthi: Yeah. Photos.
+
+79
+00:19:12.620 --> 00:19:22.170
+potuz: Yeah, if it's possible to avoid the hard work, I would rather avoid it on the Cl side. I think we can just signal this on the handshake.
+
+80
+00:19:22.760 --> 00:19:27.959
+potuz: and not add all of the boilerplate of having an actual hard fork on the sealed side.
+
+81
+00:19:29.420 --> 00:19:38.899
+potuz: It's not a hill that I want to die on, but if we can just only scope it so that at the time of the handshake you signal this.
+
+82
+00:19:39.160 --> 00:19:42.099
+potuz: it would make our life much easier, I believe.
+
+83
+00:19:42.790 --> 00:19:44.740
+potuz: and it would not delay peer doubts.
+
+84
+00:19:45.910 --> 00:19:55.660
+Parithosh Jayanthi: Yeah. And I guess that is to point then that if we were to do it just with the handshake, then it would leave scope for some bad data, right?
+
+85
+00:19:57.220 --> 00:19:58.180
+potuz: I'm sorry.
+
+86
+00:19:58.740 --> 00:20:07.729
+Parithosh Jayanthi: Gajinder's point was, if we only do it with handshake, that means they would lead to some scope for bad data, because you're not doing handshakes all the time.
+
+87
+00:20:08.520 --> 00:20:23.079
+potuz: I mean, if if you get a handshake, I mean, that's quite, quite normal, right? If I get a handshake from someone that tells me. I am in this set of consensus rules, and it sends me bad data anyways. Then that's either a buggy client or it's a malicious client.
+
+88
+00:20:23.220 --> 00:20:41.680
+potuz: but we can deal with that. The issue here is that if we don't do it at the handshake level, we might be talking to clients that are honestly thinking that they are on the same fork as we are, and sending us the wrong gas computation. And we can only find out about this after the El has returned that the payload is invalid.
+
+89
+00:20:42.040 --> 00:20:47.090
+potuz: So this leads to a situation in which we reconnect to peers that are in the wrong fork.
+
+90
+00:20:47.290 --> 00:20:56.489
+potuz: So I think the right solution to this problem would be I mean, the solution that I would prefer on this problem would be that we set an idea at the handshake level.
+
+91
+00:20:56.730 --> 00:21:00.530
+potuz: and on top of that we rely on this thing that if the
+
+92
+00:21:00.660 --> 00:21:05.739
+potuz: client is buggy and is sending us the wrong computation, then the the block will be invalid eventually.
+
+93
+00:21:10.080 --> 00:21:16.639
+Parithosh Jayanthi: Okay? That makes sense. So is there anyone speaking against the hard folk at this point? Then
+
+94
+00:21:17.760 --> 00:21:23.789
+Parithosh Jayanthi: sorry on the Cl side doing it, the handshake approach and on the El side, doing it as the as a hard work.
+
+95
+00:21:40.080 --> 00:21:55.809
+Parithosh Jayanthi: Okay, it. Okay. Maybe we again just open it from each side per perspective. So for the El side let's 1st finish that discussion, and then we can open up the Cl side discussion so on the El side. Roman, do you wanna go.
+
+96
+00:21:56.840 --> 00:22:05.240
+Roman: I just want to ask a question like, wh, what are what are we actually implementing then for? Devnet 0,
+
+97
+00:22:05.380 --> 00:22:11.539
+Roman: like, are we just predefining 5 future vpo hard forks. And that's it.
+
+98
+00:22:12.170 --> 00:22:18.469
+Roman: And if that's the case, like, why are we doing this now for Fusaka instead of
+
+99
+00:22:19.120 --> 00:22:22.499
+Roman: I don't know later, when the actual Bpo. Time comes.
+
+100
+00:22:26.212 --> 00:22:52.669
+Parithosh Jayanthi: It isn't necessarily on the critical path for Fusaka. But one of the ideas is that if we can showcase that the Bpo approach actually works, then we don't need to do a massive scale increase directly at Fusaka, but we could 1st deliver us at roughly the same blob count, or a modest increase, and then already pre schedule a blob increase shortly after. So this gives us some amount of time to make sure that everything is working as expected.
+
+101
+00:22:53.670 --> 00:22:59.570
+Parithosh Jayanthi: So Bpo would be the primary mechanism in which Fusaka actually gets the scaling.
+
+102
+00:23:01.930 --> 00:23:03.440
+Parithosh Jayanthi: Yeah, Terrence.
+
+103
+00:23:04.630 --> 00:23:28.900
+terence: Actually think there is a gap today in how the consensus spec is defined with regards to Bpo, right? Because when you have, we all upgrade to the correct like something id. That's right. But whenever Bpo like changes this number, like, I think there is a missing gap that p. 2 P. Interface spec is not defined today. Is that saying that? Okay, based on that, we have to
+
+104
+00:23:28.900 --> 00:23:37.279
+terence: like connect to the new peer. And here is the new peer, id blah blah, and that part is actually missing in the spec today. So we probably should update that.
+
+105
+00:23:44.100 --> 00:23:52.519
+Parithosh Jayanthi: Okay, maybe. Could you put that as an issue on the consensus specs report, and then we can track that and make sure that someone has a look at this.
+
+106
+00:23:58.330 --> 00:24:22.740
+Parithosh Jayanthi: Okay? So on the El side, that means that we are basically choosing the hard folk approach. And we are just setting a bunch of Bpo times in advance. And we're agreeing to a fixed number. And that fixed number could be 5, which should be also okay from a testing perspective. And if and when we need more than 5, we would just go through the cycle, and the Els would schedule essentially more Bpo's for us.
+
+107
+00:24:22.960 --> 00:24:25.779
+Parithosh Jayanthi: does that sound? Okay, for all the El teams
+
+108
+00:24:35.650 --> 00:24:38.560
+Parithosh Jayanthi: are any El teams against it, perhaps.
+
+109
+00:24:48.740 --> 00:24:52.240
+Parithosh Jayanthi: And also just to clarify, is this fine for the testing teams?
+
+110
+00:25:00.780 --> 00:25:03.620
+Parithosh Jayanthi: Yeah, okay.
+
+111
+00:25:03.620 --> 00:25:05.559
+Mario Vega: I don't see a problem. Yeah.
+
+112
+00:25:07.170 --> 00:25:13.629
+Parithosh Jayanthi: I. I also don't see an issue with this approach for kurtosis tests. Yeah. Cannabis.
+
+113
+00:25:14.450 --> 00:25:21.659
+Barnabas: Yeah, I got a quick question. So on the Es side, we need the timestamp now inside of the blob schedule
+
+114
+00:25:26.030 --> 00:25:27.520
+Barnabas: indigence as well.
+
+115
+00:25:28.107 --> 00:25:30.432
+Justin Florentine (Besu): Yeah. Why do you need that.
+
+116
+00:25:32.260 --> 00:25:42.274
+Barnabas: We were discussing that last week to have the timestamp in there, so that you don't have to actually have Bpo one time defined before. I'm just curious if
+
+117
+00:25:43.190 --> 00:25:46.720
+Barnabas: if you still need that, or if we agree not to have that anymore.
+
+118
+00:25:48.920 --> 00:26:00.080
+Justin Florentine (Besu): So I'm of a mind that we only need it outside of the schedule itself. So it's a hard fork. It activates at a time slot, and then the details of what goes into the hard fork is defined in the blob schedule.
+
+119
+00:26:03.130 --> 00:26:03.890
+Barnabas: Okay.
+
+120
+00:26:05.930 --> 00:26:09.899
+Barnabas: This request was made by Roman. I I think, last week.
+
+121
+00:26:10.270 --> 00:26:17.259
+Barnabas: So I'm just curious. If now we are, we are all on the same page that we don't need the timestamp inside the schedule.
+
+122
+00:26:23.425 --> 00:26:23.660
+Roman: Yeah.
+
+123
+00:26:23.660 --> 00:26:24.010
+Parithosh Jayanthi: Or.
+
+124
+00:26:24.410 --> 00:26:33.490
+Roman: I can clarify a bit that all of my misconceptions regarding the video format were coming from a fact that
+
+125
+00:26:34.390 --> 00:26:37.160
+Roman: I did not appreciate that this needs
+
+126
+00:26:37.918 --> 00:26:42.500
+Roman: work id updating as well until Marius pointed that out.
+
+127
+00:26:45.470 --> 00:26:49.379
+Roman: So I I resend all of my previous comments.
+
+128
+00:26:51.560 --> 00:26:53.730
+Barnabas: Okay. So we don't need the timestamp in there.
+
+129
+00:26:57.840 --> 00:27:17.110
+Andrew Ashikhmin: I wanted to ask about the format, because in the eap and in the example shared, the values are rendered as Json numbers, while in the rendered east fixtures, I saw that the values were rendered as hex strings.
+
+130
+00:27:17.700 --> 00:27:23.079
+Andrew Ashikhmin: so could we actually render them everywhere as as numbers, not strings.
+
+131
+00:27:24.300 --> 00:27:28.700
+Mario Vega: I think. Never mind. Needs it at hex strings, and that is only hive, I think.
+
+132
+00:27:29.768 --> 00:27:33.910
+Mario Vega: I see. Yep, yep, yep, yeah.
+
+133
+00:27:34.110 --> 00:27:36.650
+Mario Vega: I mean, the problem is that we have to
+
+134
+00:27:36.930 --> 00:27:42.785
+Mario Vega: homogenize everything to to be either extreme or decimal, that that is a problem in East.
+
+135
+00:27:44.602 --> 00:27:47.860
+Mario Vega: do you want decimals or decimals.
+
+136
+00:27:49.490 --> 00:27:56.396
+Andrew Ashikhmin: Well, I I prefer them to be a small integers. Well, I mean, we could. But but
+
+137
+00:27:56.870 --> 00:28:01.610
+Andrew Ashikhmin: okay, we could implement reading both formats, but it's a bit.
+
+138
+00:28:02.510 --> 00:28:17.040
+Parithosh Jayanthi: I think we definitely shouldn't mix it. I think Netherland is the only one using hex right now. So for the Netherland chain spec format. We can continue using hex. But for everyone else we should keep them on the same format they exist at right now.
+
+139
+00:28:18.950 --> 00:28:20.190
+Parithosh Jayanthi: Yeah, Dustin.
+
+140
+00:28:20.680 --> 00:28:37.930
+Justin Florentine (Besu): So there is one case where we would have to intermix them, which kind of sucks, because my understanding is that Json uses doubles under the hood, and so for any integer values that could blow through, that you might need a workaround where you hex encode it, or at least stringify. It
+
+141
+00:28:38.190 --> 00:28:46.129
+Justin Florentine (Besu): seems to be a known issue with Json, and it kind of contributed to the intermixing and the design. I am also not a fan of it, but
+
+142
+00:28:46.240 --> 00:28:47.689
+Justin Florentine (Besu): I think it's a thing.
+
+143
+00:28:51.260 --> 00:28:53.039
+Parithosh Jayanthi: Okay. Mark.
+
+144
+00:28:53.040 --> 00:29:14.270
+Marek Moraczyński: Yeah, just to clarify about. Never mind format. I I'm almost sure that we should handle not hacks as well by default. We have hacks everywhere, but I'm almost sure that we can handle other numbers to be confirmed by some testing. But yeah, I think it shouldn't be a problem.
+
+145
+00:29:18.190 --> 00:29:25.590
+Parithosh Jayanthi: Awesome. So if that is the case, then we should be standardizing on integas and not on hex.
+
+146
+00:29:30.090 --> 00:29:41.154
+Mario Vega: We can give it a try to change everything to decimal. I I would like I would like to 1st make a pass on the generation of tests to see if anything like
+
+147
+00:29:41.910 --> 00:29:54.679
+Mario Vega: is to see if this this Json error produces something that is invalid, and I'll have to get back to you. And and but yeah, I can keep up the an update on the on the discord.
+
+148
+00:29:54.830 --> 00:29:59.090
+Mario Vega: Someone from the east team can can can check on this. Yeah.
+
+149
+00:30:02.780 --> 00:30:15.050
+Parithosh Jayanthi: Awesome, and we will update the eip and whatever prs we've already made to remove the timestamp inside the Bpo array, and instead, it will just have the Bpo one time, and so on.
+
+150
+00:30:15.440 --> 00:30:18.040
+Parithosh Jayanthi: similar to every other hard folk on the El side.
+
+151
+00:30:20.370 --> 00:30:22.879
+Parithosh Jayanthi: Any other? El said questions.
+
+152
+00:30:29.810 --> 00:30:48.999
+Parithosh Jayanthi: okay, and I guess you guys have so yeah, side summary for Fussaka net. 0, you guys have the MoD Xp stuff that has to go in and the Bpo. Changes for reading the Genesis file. I think, besides that, most of the Fusaka devnet 0 topics are Cl related.
+
+153
+00:30:49.120 --> 00:30:52.210
+Parithosh Jayanthi: Any other El side comments questions.
+
+154
+00:30:55.150 --> 00:30:59.129
+Parithosh Jayanthi: Great? So let's start the Cl set
+
+155
+00:30:59.270 --> 00:31:05.860
+Parithosh Jayanthi: topic again. I guess. Are there any open questions for how the Bpo format needs to be on the Cl side.
+
+156
+00:31:12.763 --> 00:31:14.279
+Justin Traglia: No, I don't believe so.
+
+157
+00:31:18.030 --> 00:31:19.210
+Parithosh Jayanthi: Yeah, put us.
+
+158
+00:31:19.930 --> 00:31:25.470
+potuz: I would have disagreed with Justin. I don't know how it has to be on the Cl. Side.
+
+159
+00:31:25.900 --> 00:31:26.750
+potuz: I mean
+
+160
+00:31:27.050 --> 00:31:39.450
+potuz: we either. We leave it as it is now, and we're gonna start down scoring peers, or we have to do something on the P. 2 P. Layer so that we can actually signal that we are on this or that fork.
+
+161
+00:31:40.310 --> 00:31:43.720
+Justin Traglia: I thought that we were talking about the format of the schedule.
+
+162
+00:31:44.680 --> 00:31:46.450
+Justin Traglia: Not like, yeah, that's integration.
+
+163
+00:31:46.830 --> 00:31:56.020
+Parithosh Jayanthi: I think at at this point it's the whole Bpo topic in general. So yeah, I guess the open question is, what put us stated right now.
+
+164
+00:31:56.020 --> 00:32:01.119
+potuz: Right, I mean, do we need to agree on how this is going to be signaled?
+
+165
+00:32:05.330 --> 00:32:07.689
+Barnabas: Is there any issue? Actually,
+
+166
+00:32:09.410 --> 00:32:15.880
+Barnabas: like, we only gonna have an issue. If we bump, bump the next blobs down right?
+
+167
+00:32:17.640 --> 00:32:22.140
+Barnabas: Because then we could have an embedded block which has more blobs than what you're expecting.
+
+168
+00:32:22.140 --> 00:32:35.989
+potuz: You can have it both ways, I mean, if you increase the blob count and you send a block with low blob count, then the gas in the next payload is going to be different on one fork or the other one.
+
+169
+00:32:39.230 --> 00:32:42.139
+potuz: I mean, even if you send a block without any blobs.
+
+170
+00:32:42.290 --> 00:32:44.340
+potuz: The gas might be different.
+
+171
+00:32:44.630 --> 00:33:10.409
+potuz: So I think we need to. We need to agree on on what is the best way. I mean, I have a proposal, but it doesn't mean that it's the best proposal, and I don't even know how to implement that. But but if at least we agree on like the the. When do we want to start banning these peers? If it's at the handshake level, we, we agree that someone is going to go and specify it, and if it's not at the handshake level and it's on down scoring, then we could just leave it as it is now.
+
+172
+00:33:15.270 --> 00:33:25.530
+Parithosh Jayanthi: It feels like. If we want to hit the Fusaka devnet 0 deadline. We should leave it as it is now, but it sounds like the handshake approach is better, longer term.
+
+173
+00:33:25.700 --> 00:33:33.160
+Parithosh Jayanthi: Would this be a massive change if we were to tackle the handshake filtering in the future before academic one?
+
+174
+00:33:33.320 --> 00:33:38.189
+Parithosh Jayanthi: And that would give us enough time for figuring out the how, who? What? And so on.
+
+175
+00:33:46.020 --> 00:33:50.370
+Parithosh Jayanthi: Okay, that sounds good. Any objections to this approach?
+
+176
+00:33:55.220 --> 00:33:56.570
+Parithosh Jayanthi: Yeah, Barnabas.
+
+177
+00:33:57.280 --> 00:34:02.509
+Barnabas: Did we not just include the gas cost calculation in the Cl.
+
+178
+00:34:03.040 --> 00:34:05.710
+potuz: Hell, no hell, no.
+
+179
+00:34:07.850 --> 00:34:10.950
+Parithosh Jayanthi: I think that's gonna add, that's opening a whole other can of worms.
+
+180
+00:34:12.570 --> 00:34:15.000
+Parithosh Jayanthi: Yeah, I would also not do that.
+
+181
+00:34:18.570 --> 00:34:29.370
+Parithosh Jayanthi: Okay. Since there's no immediate objection to Portus's approach. Portus, did you have an idea on how we can achieve this? Where do we specify this? P. 2. P. Change.
+
+182
+00:34:29.370 --> 00:34:37.840
+potuz: You know I'm sorry I'm not the right person, and we just lost the expert on the prison team. I don't really know
+
+183
+00:34:38.100 --> 00:34:38.899
+potuz: it says I mean.
+
+184
+00:34:38.909 --> 00:34:39.349
+Parithosh Jayanthi: It.
+
+185
+00:34:39.350 --> 00:34:46.140
+potuz: As part of the handshake message. I would just add this, a single configuration on the handshake message.
+
+186
+00:34:47.484 --> 00:34:50.399
+Parithosh Jayanthi: Is this something that you guys could help us with? Raul.
+
+187
+00:34:52.530 --> 00:35:04.069
+Raúl Kripalani: Yeah, yeah, we definitely can. But I honestly need to understand a little bit better. Why this is not formulated as a fork in itself. I I don't think I have full context here, so.
+
+188
+00:35:04.070 --> 00:35:33.139
+potuz: Oh, I can. I can actually answer to that thing if we specify a full fork, then that adds, depends on the client. But at least I can tell. For prison. It adds a lot of boilerplate, a lot of codes application, a lot of new testing that needs to be added. We are getting good at it. We went through many, many forks, but this is a place where there can be a lot of bugs included, and it takes a lot of time to actually check that we are adding everything to at the same time correctly.
+
+189
+00:35:33.140 --> 00:35:33.540
+Raúl Kripalani: Yeah.
+
+190
+00:35:33.540 --> 00:35:39.390
+potuz: And it's fully tested. So we want to try to avoid this. That was the whole point of this Vpo forks.
+
+191
+00:35:39.670 --> 00:35:58.189
+Raúl Kripalani: Got it, got it. So let me let me restate that to to make sure that I understand it. Basically from the protocol perspective. And from the conceptual perspective, we kinda agree that conceptually it is a hard fork, but because of implementation, difficulties and practicalities, it's better formulated as an independent entity to be communicated on the wire separately.
+
+192
+00:35:58.730 --> 00:36:04.530
+potuz: Correct. So we want to minimize what? What are the things that are being communicated? But but exactly what you just said.
+
+193
+00:36:04.530 --> 00:36:20.630
+Raúl Kripalani: Okay. Okay, yeah, I, I can stand behind that. Yeah, it's it's a matter of adding a field in that case, and maybe like a hash of the Bpo schedule. If if it's if there is a standard interoperable format or like something else, we can, we can figure that out. Yeah.
+
+194
+00:36:23.620 --> 00:36:24.200
+Raúl Kripalani: So
+
+195
+00:36:24.780 --> 00:36:25.300
+Parithosh Jayanthi: Awesome.
+
+196
+00:36:25.590 --> 00:36:28.969
+Raúl Kripalani: Harry, you can you can. You can assign this to me, and I can help steer it.
+
+197
+00:36:29.350 --> 00:36:31.209
+Parithosh Jayanthi: That's amazing. Thank you so much.
+
+198
+00:36:35.090 --> 00:36:36.530
+Parithosh Jayanthi: Yeah, Terrence.
+
+199
+00:36:37.510 --> 00:36:59.100
+terence: Let's check. Here is what other Cl team think, because I don't think I fully agree with Potus like, if today, if you look at Fusa, right? Like just peer does by itself. It's actually a quite a simple change, because there's no block structure change. There's no state structure change. So it is a hard work, but the only changes are, of course, the new license.
+
+200
+00:36:59.100 --> 00:37:12.340
+terence: Pr does stuff, but if without Pr does, the only changes are just. P. 2, p. Which is what we wanted. Right, we want to have some sort of like time activation. And you jump to a new subnet and stuff like that. So basically.
+
+201
+00:37:12.600 --> 00:37:21.169
+terence: yeah, basically, I do think maybe it is worth looking at, like the hard work as a approach versus like trying something else.
+
+202
+00:37:21.510 --> 00:37:29.200
+terence: But I'm not so sure. So I'm actually like curious what other Cl team think about that? And I and I could be wrong here.
+
+203
+00:37:29.200 --> 00:37:57.849
+Raúl Kripalani: Just just to just to add, There, sorry also kind of like. Take my perspective from somebody with fresh eyes and kind of like, you know, with a bit of lack of knowledge here. But it it sounds like a lot of the concerns are based on like how we approach hard forks today in clients, which is by using the boilerplate and so on. But, given that we're like the solution that seems to be agreed here is to add a protocol
+
+204
+00:37:59.003 --> 00:38:02.410
+Raúl Kripalani: field to avoid all that.
+
+205
+00:38:02.510 --> 00:38:23.690
+Raúl Kripalani: Wouldn't it be simpler? Because all we need in reality on the wire is to bump up a number on the protocol which would be the fork itself. Right? And that number is coming from. Yeah. All the system to actually that that requires boiler plating. But maybe you can intercept that, and maybe we can have something like a second path that takes precedence.
+
+206
+00:38:24.178 --> 00:38:31.190
+Raúl Kripalani: And at the implementation level. And that could be an easy, easy thing to implement. So it does not activate the entire
+
+207
+00:38:31.350 --> 00:38:36.269
+Raúl Kripalani: traditional hard fork machinery. But it's but it's
+
+208
+00:38:36.510 --> 00:38:46.649
+Raúl Kripalani: it may be a hack quote unquote, but at least it does not percolate at the protocol level, which I think is gonna ossify, and it might be hard to pull out in the future.
+
+209
+00:38:56.010 --> 00:39:01.929
+Raúl Kripalani: Sorry. I don't know if that was that was too long, or maybe, unclear, I can rephrase it necessary.
+
+210
+00:39:01.930 --> 00:39:26.300
+Parithosh Jayanthi: No, that sounds like a silence of agreement potentially but maybe we can create a thread for this topic in the the consensus dev channel on ether and d and discuss a longer term solution. Either way, the decision for today would be that this won't be a blocker for Forsaka devnet 0 we can come to an agreement on
+
+211
+00:39:26.930 --> 00:39:31.639
+Parithosh Jayanthi: what the decision needs to be for full circuit devnet one, and then block over there.
+
+212
+00:39:32.410 --> 00:39:42.540
+Parithosh Jayanthi: and it would be great if we can. If raul you could create the thread on consensus dev, and then we can take it forward there as to what the proper solution should be.
+
+213
+00:39:42.700 --> 00:39:43.290
+Raúl Kripalani: Sure.
+
+214
+00:39:46.460 --> 00:39:48.090
+Parithosh Jayanthi: Awesome. Thank you.
+
+215
+00:39:48.260 --> 00:39:55.839
+Parithosh Jayanthi: So that should be the Bpo topic. Does anyone else have any points to add or discuss? For Bpo's?
+
+216
+00:40:04.890 --> 00:40:05.495
+Parithosh Jayanthi: Okay.
+
+217
+00:40:06.627 --> 00:40:22.050
+Parithosh Jayanthi: Let's move on to folks. Specific stuff. So pure das in itself. We do have devnet 7 up and running Barnabas. Do you want to give us an update on how it's going, and if there's anything worth knowing.
+
+218
+00:40:25.170 --> 00:40:29.900
+Barnabas: It's been pretty smooth, I think, the backfilling is the only question at this point
+
+219
+00:40:31.070 --> 00:40:33.640
+Barnabas: whether clients are able to backfill.
+
+220
+00:40:35.960 --> 00:40:44.120
+Barnabas: and I think every single team is testing that independently. I haven't actually had the chance to take a look and do
+
+221
+00:40:44.480 --> 00:40:46.360
+Barnabas: through testing.
+
+222
+00:40:47.400 --> 00:40:53.980
+Parithosh Jayanthi: Okay, got it. So it's just a question of clients actually testing their code and making sure that it's working.
+
+223
+00:40:55.310 --> 00:41:00.500
+Barnabas: Right? And we also have a checkpoint sync that's fully compatible. Now.
+
+224
+00:41:02.830 --> 00:41:03.510
+Parithosh Jayanthi: Nice
+
+225
+00:41:04.331 --> 00:41:14.909
+Parithosh Jayanthi: do any Cl. Devs have an update on backfill? Has anything been harder or easier than expected? Something that needs discussing today? Or is it just a matter of time? Now?
+
+226
+00:41:26.300 --> 00:41:36.720
+Parithosh Jayanthi: Okay, I'll take that as a signal that it's just a matter of time. Then prism doesn't implement backfill. Okay, yet
+
+227
+00:41:37.360 --> 00:41:38.030
+Parithosh Jayanthi: cool.
+
+228
+00:41:40.499 --> 00:41:46.580
+Parithosh Jayanthi: Yeah. Do reach out. Sorry. Do reach out to us, and we should be able to help with testing that.
+
+229
+00:41:49.310 --> 00:41:54.290
+Parithosh Jayanthi: But yeah, other than that. I think we'll assume that client teams are working on the topic.
+
+230
+00:42:01.598 --> 00:42:05.420
+Parithosh Jayanthi: Will. Do. You maybe want to go? Sorry, Barnabas. Yeah. Go ahead.
+
+231
+00:42:05.700 --> 00:42:11.689
+Barnabas: Yeah. My quick question would be if every client team would be on track to
+
+232
+00:42:11.980 --> 00:42:16.389
+Barnabas: ship 0 images by Monday next week. Monday.
+
+233
+00:42:20.060 --> 00:42:28.729
+Barnabas: we? We wouldn't need like every single client combinations. But it would be nice to have at least 3 ears and 3 sales.
+
+234
+00:42:32.060 --> 00:42:34.669
+Barnabas: and it looks like. We already have 3 pls.
+
+235
+00:42:43.080 --> 00:42:44.219
+Parithosh Jayanthi: Yeah. Mario.
+
+236
+00:42:44.520 --> 00:42:48.030
+Mario Vega: I think the main problem would be that we haven't finished tests.
+
+237
+00:42:48.835 --> 00:42:53.450
+Mario Vega: The main blocker has been so far that we are creating a new
+
+238
+00:42:54.021 --> 00:43:06.290
+Mario Vega: east format to run gear, das blobs and verification of the of the proofs. So that's been a little bit complicated on our side, and we're still like trying to fix that out.
+
+239
+00:43:07.910 --> 00:43:29.400
+Mario Vega: but I don't think we will be able to have. I mean, maybe maybe for for the end of the week we could probably have the finish with the test. Also, modex is still work in progress. So I think we are the main blocker at the moment. If we want to launch without without these tests, I mean, it's it would be okay as long as we don't trigger
+
+240
+00:43:29.400 --> 00:43:41.329
+Mario Vega: Modex, probably. But yeah, I think generally next week is gonna be like safer for us to have a release of East with the modex test and also the pure desk test.
+
+241
+00:43:45.940 --> 00:44:01.709
+Parithosh Jayanthi: Okay, thank you. Yeah. I think since we have Prs Devnet 7 running, we we can still take a call on it. On Thursday, if we urgently need Fussaka devnet 0, or if we can wait a few extra days for the test releases and so on.
+
+242
+00:44:01.930 --> 00:44:05.100
+Parithosh Jayanthi: But it doesn't sound like a decision we have to take today.
+
+243
+00:44:09.323 --> 00:44:12.459
+Parithosh Jayanthi: Would you guys also be having a Bpo test? Mario.
+
+244
+00:44:14.926 --> 00:44:20.273
+Mario Vega: Need to check on that. Yeah, I would definitely have to upload it somehow.
+
+245
+00:44:21.200 --> 00:44:23.640
+Mario Vega: but yeah, no, I don't have an answer now. Yeah.
+
+246
+00:44:23.640 --> 00:44:44.779
+Parithosh Jayanthi: Okay? If you, since you guys already have a lot on your plate, maybe the Bpo test for now can be done on kurtosis, because we already merged in the pr slash. Have one open pr left to have the ability in kurtosis. So for now we can just do Bpo tests on kurtosis and then eventually they can come to execution spec test. So you guys don't have to spend time on that right now.
+
+247
+00:44:44.780 --> 00:44:47.919
+Mario Vega: That that sounds amazing. Yeah, yeah, okay, thank you.
+
+248
+00:44:48.420 --> 00:44:48.980
+Parithosh Jayanthi: Cool.
+
+249
+00:44:50.316 --> 00:44:56.989
+Parithosh Jayanthi: Will do you wanna maybe take over a bit for us. Pieta. Spec discussions.
+
+250
+00:44:58.940 --> 00:45:05.660
+Will Corcoran: Yeah, sure, the I think the majority of items have been discussed. There's 2 that are
+
+251
+00:45:06.962 --> 00:45:15.959
+Will Corcoran: still open. 5, 19 that's tracked on the Fussaka devnet 0 spec. Which
+
+252
+00:45:16.480 --> 00:45:31.260
+Will Corcoran: forget who opened that? Oh, Manu! Open that. Not sure on the status of that. And then also Francis the get side blob get blob sidecar spec still continues to be open, which
+
+253
+00:45:31.480 --> 00:45:39.659
+Will Corcoran: it's been open for a while. Not not sure what the hold up is on that, or if anything's blocking it.
+
+254
+00:45:46.040 --> 00:45:50.779
+Manu: I can talk about the 1st one at least from prism. We are
+
+255
+00:45:51.110 --> 00:45:56.750
+Manu: very probably going to implement the same strategy, that low star.
+
+256
+00:45:56.910 --> 00:46:02.889
+Manu: that is to say, have a blind and local flag internally.
+
+257
+00:46:17.710 --> 00:46:20.180
+Parithosh Jayanthi: Could you repeat what the flag does? Please.
+
+258
+00:46:20.730 --> 00:46:26.402
+Manu: Yeah, so it's written
+
+259
+00:46:27.660 --> 00:46:29.914
+Manu: in in the in the issue.
+
+260
+00:46:31.404 --> 00:46:35.370
+Manu: Basically, this blind and local flag. Let's
+
+261
+00:46:35.930 --> 00:46:47.470
+Manu: user, say to the bigger nod. Okay, if you are building a locally building a block with some blobs.
+
+262
+00:46:47.800 --> 00:46:49.640
+Manu: do not send the
+
+263
+00:46:50.070 --> 00:46:56.220
+Manu: data related to blobs, to the validator client and the validator client won't send won't send them back.
+
+264
+00:46:57.776 --> 00:47:08.350
+Manu: But the main con of using this is that the node operator must have a sticky connection between the
+
+265
+00:47:08.590 --> 00:47:11.430
+Manu: validate, the client and become not.
+
+266
+00:47:11.840 --> 00:47:14.960
+Manu: It's a it's a needed condition.
+
+267
+00:47:15.770 --> 00:47:19.700
+Manu: and the main pro is that it will save a lot of bandwidth
+
+268
+00:47:19.880 --> 00:47:23.689
+Manu: between the beginner and the and the validator client.
+
+269
+00:47:25.060 --> 00:47:31.790
+Manu: My main proposal in this Github ticket was to do it by default.
+
+270
+00:47:32.000 --> 00:47:38.189
+Manu: but the main issue is that in this case we have a state full
+
+271
+00:47:38.320 --> 00:47:42.050
+Manu: beacon Api, which is something we avoid.
+
+272
+00:47:42.780 --> 00:47:49.303
+Manu: We avoid it to do with the beacon Api, and so using this
+
+273
+00:47:49.930 --> 00:47:52.590
+Manu: implementing a blind and local flag
+
+274
+00:47:52.810 --> 00:47:55.100
+Manu: for a client. It's kind of hacked to
+
+275
+00:47:57.370 --> 00:48:01.686
+Manu: avoid. Yes, big big data.
+
+276
+00:48:03.610 --> 00:48:07.069
+Manu: transmission between the beginner and validator client.
+
+277
+00:48:21.070 --> 00:48:31.410
+Parithosh Jayanthi: Okay, are there any other points people wanna add to the Pr, or should we just reach out to the Maintainers to be merging it soon.
+
+278
+00:48:41.400 --> 00:48:45.829
+Parithosh Jayanthi: Okay, we'll follow up on that later. Then.
+
+279
+00:48:49.440 --> 00:48:52.070
+Will Corcoran: And then regarding 5, 24.
+
+280
+00:48:52.200 --> 00:48:54.400
+Will Corcoran: Don't see Francis on here.
+
+281
+00:48:54.960 --> 00:49:01.357
+Will Corcoran: I don't know, Justin, if you have any context on that. That seems as if that
+
+282
+00:49:02.780 --> 00:49:13.200
+Will Corcoran: it hasn't received any conversation for several weeks, so I'm not sure if it's just been forgotten, or if it's blocked by something that I'm not catching.
+
+283
+00:49:15.100 --> 00:49:19.180
+Justin Traglia: I don't really have any context on it. I just left a review a while ago.
+
+284
+00:49:19.180 --> 00:49:22.199
+Will Corcoran: Okay, I'll I'll ping Francis.
+
+285
+00:49:24.400 --> 00:49:35.209
+Will Corcoran: That's really all I had, and then I don't know, Otis. I saw the the post that you shared with. That you did the work on the Rl. And see
+
+286
+00:49:35.708 --> 00:49:39.429
+Will Corcoran: the random linear network coding as it relates to like
+
+287
+00:49:39.910 --> 00:49:43.249
+Will Corcoran: determining Max Blob count. I don't know if that's
+
+288
+00:49:43.730 --> 00:49:49.829
+Will Corcoran: I just added it into my list of things that I'm keeping track of. I don't know if that's.
+
+289
+00:49:50.210 --> 00:49:59.720
+potuz: No. So currently, this this linear coding is only being tested and implemented only for broadcasting of blocks.
+
+290
+00:50:00.573 --> 00:50:05.610
+potuz: There's other people Francesco's here who's been evaluating the
+
+291
+00:50:05.890 --> 00:50:14.600
+potuz: viability of random linear network coding for blob propagation. But it's not really clear. I mean, currently, with the current
+
+292
+00:50:14.850 --> 00:50:28.169
+potuz: assumptions in that work, it actually makes it worse. So so for da and for propagation of blobs, that type of erature coding is still far is early research.
+
+293
+00:50:29.470 --> 00:50:30.420
+Will Corcoran: Alright! Thanks.
+
+294
+00:50:30.420 --> 00:50:36.120
+Parithosh Jayanthi: Yeah, I think the Ilnc stuff might be prime candidate for new Acd discussion topics.
+
+295
+00:50:38.290 --> 00:50:54.509
+Raúl Kripalani: Yeah, this is by the way, just chiming in, this is something that the peer to peer networking team plans to also help drive. So yeah. Happy to to help here. One thing that I wanted to say is that I I agree in that in itself.
+
+296
+00:50:54.600 --> 00:51:17.600
+Raúl Kripalani: in itself, everything else. As it stands today, it probably won't help. And to actually truly leverage the benefits of approaches like network coding. Well, we're gonna need to change the meshing topologies and even use transports like Udp and and other stuff so, or unreliable data grams and quick and stuff like that. So so yeah, so it's a it's a major work stream.
+
+297
+00:51:22.060 --> 00:51:30.109
+Will Corcoran: Great. Yeah, other than that. Everything else seems to be covered on the on the spec for a few second 0, and was discussed earlier in the call.
+
+298
+00:51:31.580 --> 00:51:33.140
+Parithosh Jayanthi: Awesome. Thank you.
+
+299
+00:51:33.868 --> 00:51:37.849
+Parithosh Jayanthi: So any other blockers towards Devnet Co.
+
+300
+00:51:45.036 --> 00:51:49.890
+Barnabas: As well.
+
+301
+00:51:50.070 --> 00:52:00.539
+Barnabas: So last week I tried the mock builder, and we seem to have some issues, and Paban mentioned that he was going on it. But I'm not sure if anyone would have an update
+
+302
+00:52:00.990 --> 00:52:03.260
+Barnabas: regarding the Mev stack.
+
+303
+00:52:08.870 --> 00:52:12.929
+Parithosh Jayanthi: Yeah, I'm guessing the builder specs have to be updated for Fusaka. Right?
+
+304
+00:52:14.040 --> 00:52:15.699
+Barnabas: That should be done early.
+
+305
+00:52:16.210 --> 00:52:16.665
+Parithosh Jayanthi: Okay.
+
+306
+00:52:17.120 --> 00:52:23.829
+stokes: Yeah, we have, like a provisional version of those. There's we might change them, but they're good enough for now.
+
+307
+00:52:27.680 --> 00:52:40.060
+Barnabas: Any of the clients should be ready to be tested with, by the way, because pavement mentioned that it was a lighthouse bug. But I'm happy to try it out with anyone else. If anyone ever done implementation.
+
+308
+00:52:45.003 --> 00:52:54.210
+Parithosh Jayanthi: Just we want that pawan's uses lighthouse underneath. So if there's a lighthouse bug, then one other client testing it won't help you.
+
+309
+00:52:56.210 --> 00:53:05.280
+Barnabas: Yeah. But he mentioned that this specific bug that he saw was not related to lighthouse.
+
+310
+00:53:05.850 --> 00:53:09.069
+Barnabas: like the mock builder should in theory be working.
+
+311
+00:53:11.150 --> 00:53:13.850
+Barnabas: But yeah, we haven't had a way to verify it.
+
+312
+00:53:13.960 --> 00:53:14.620
+Barnabas: So.
+
+313
+00:53:16.550 --> 00:53:24.350
+Parithosh Jayanthi: Yeah, I think we can push more for that. Once we're done with step net 0. And we have basic Fusaka stuff working.
+
+314
+00:53:24.860 --> 00:53:28.719
+Parithosh Jayanthi: But yeah, I think it's a good idea for teams to start looking at it. At least.
+
+315
+00:53:32.383 --> 00:53:39.480
+Parithosh Jayanthi: I see Camille was on the call. As well want to give us an update on the performance tablets.
+
+316
+00:53:40.090 --> 00:53:55.299
+Kamil Chodoła: Hi, yeah, I I was off for last week, so do not have much, but captured what we what our team done. So for performance Def. Net. We are in the preparation for a second version of that which will be more minute aligned.
+
+317
+00:53:55.560 --> 00:54:10.850
+Kamil Chodoła: and it will be clean, clearer for everyone to ensure which gas limit is more, is safer than other. Comparing to our general Perfnet, which was running some crazy numbers and was exposing some
+
+318
+00:54:10.990 --> 00:54:17.070
+Kamil Chodoła: performance leaks, some some performance possibilities fixes
+
+319
+00:54:17.300 --> 00:54:35.879
+Kamil Chodoła: in cleaner, cleaner way, and also in meantime we are reviving one of our previous researches with upcoats, research with worst case research. And right now making it much more better observable for any of the client teams. So this is work in progress.
+
+320
+00:54:36.210 --> 00:54:45.689
+Kamil Chodoła: And yeah, we will run it again on the latest versions and share some results on the gas limit research project. So right now, yeah. Still working on New Perfnet.
+
+321
+00:54:47.720 --> 00:55:03.139
+Parithosh Jayanthi: Awesome. Thank you. And I think the other topic related to that was, we have 60 million on supolia already. Do we want to start pushing on Hoodie? Or has anyone seen anything on suppolia that indicates we should stop right now.
+
+322
+00:55:09.920 --> 00:55:17.279
+Kamil Chodoła: I guess, as signaling already started to happen on Mainnet. We should do that on Hoodie as soon as we can.
+
+323
+00:55:17.470 --> 00:55:23.429
+Kamil Chodoła: so we can see if there is anything problematic on bigger amount of validators.
+
+324
+00:55:27.306 --> 00:55:46.260
+Parithosh Jayanthi: Yeah, Marius, just to your point. Sam did an initial analysis once did. Went into 60 million. He didn't really notice any changes or nothing worth writing about yet. But we have to still do a follow up, and we're 1st finishing up the Petra. Follow up before we do the 60 million follow up.
+
+325
+00:55:48.831 --> 00:56:12.460
+Parithosh Jayanthi: Okay, so that sounds like we should go ahead with 60 million for Hoodie. Sorry for Hoodie. At least and I see that there's a bunch of discussions on the gas limit testing topic. Especially related to 10 MB. Blocks. Do you? Do you feel like discussing it, Tony, or I don't know if Ben is on here.
+
+326
+00:56:13.630 --> 00:56:14.350
+Ben Adams: Hey?
+
+327
+00:56:15.303 --> 00:56:20.530
+Ben Adams: I mean, the network will basically break with without it.
+
+328
+00:56:22.480 --> 00:56:27.789
+Ben Adams: I think it makes sense to to be into soccer, and then we don't have to worry about that as an element.
+
+329
+00:56:32.505 --> 00:56:38.880
+Ben Adams: Because we can't. We can't propagate blocks larger than 10 MB, so we should cap cap it.
+
+330
+00:56:39.010 --> 00:56:44.869
+Ben Adams: and then we don't have to worry about the block size when increasing gasoline.
+
+331
+00:56:45.830 --> 00:56:47.290
+Parithosh Jayanthi: Got it. Yeah.
+
+332
+00:56:49.525 --> 00:56:55.900
+Parithosh Jayanthi: yeah. But I guess that isn't directly related to anything that happens at 60 million gas right?
+
+333
+00:56:56.200 --> 00:56:59.740
+Ben Adams: Now well fine to about 105.
+
+334
+00:57:00.360 --> 00:57:01.070
+Parithosh Jayanthi: Okay.
+
+335
+00:57:04.870 --> 00:57:25.810
+Parithosh Jayanthi: cool. And one thing that Pk also brought up over the over the last week is that the 10 MB. Block size also includes a test of slashing. So we will probably test od at 60 million with a bunch of slashings in there so that we can make sure that this will land up on the network. Fine.
+
+336
+00:57:34.090 --> 00:57:40.579
+Parithosh Jayanthi: Okay. Anything else on the performance guest limit topic that we should be discussing today.
+
+337
+00:57:47.317 --> 00:57:52.659
+Ben Adams: There is a discussion about transaction limit and
+
+338
+00:57:55.480 --> 00:57:57.399
+Ben Adams: I don't know if it's worth discussing today.
+
+339
+00:58:01.515 --> 00:58:12.889
+Parithosh Jayanthi: Yeah, I'm all I I only saw that discussion from earlier today. I haven't fully caught up on it. I don't know if anyone has something else to add to the topic right now.
+
+340
+00:58:16.043 --> 00:58:25.379
+Ben Adams: So originally it was set at 30 million guests. And we're thinking that maybe
+
+341
+00:58:27.520 --> 00:58:30.290
+Ben Adams: 5 million guests might be more sensible.
+
+342
+00:58:31.010 --> 00:58:36.129
+Ben Adams: based on what transactions you're entering, because the ones over 5 billion are
+
+343
+00:58:36.900 --> 00:58:41.380
+Ben Adams: either subdividable in smaller transactions or
+
+344
+00:58:43.090 --> 00:58:47.989
+Ben Adams: then mining, which are also subdividable into smaller transactions.
+
+345
+00:58:49.440 --> 00:58:51.680
+Ben Adams: And if a transaction
+
+346
+00:58:52.160 --> 00:58:57.999
+Ben Adams: eats the entire block, then it's it's not very fair to other transactions that want to be in there.
+
+347
+00:59:00.400 --> 00:59:03.670
+Ben Adams: You can parallelize a single transaction
+
+348
+00:59:04.470 --> 00:59:07.230
+Ben Adams: like, if, if the block is a 1 transaction
+
+349
+00:59:08.250 --> 00:59:12.609
+Ben Adams: that then becomes our worst case in terms of, are we using.
+
+350
+00:59:23.360 --> 00:59:38.119
+Parithosh Jayanthi: Yeah, makes sense. But maybe you could add that as a discussion topic for Acd this week, I think that would give more people time to catch up on the discussion. To begin with, and probably Acd is a better platform for discussing
+
+351
+00:59:38.620 --> 00:59:40.610
+Parithosh Jayanthi: wider protocol changes.
+
+352
+00:59:45.960 --> 00:59:58.123
+Parithosh Jayanthi: Okay? Then the last topic on the agenda for me is history expiry? Has any client made any progress over the last week?
+
+353
+00:59:59.150 --> 01:00:04.129
+Parithosh Jayanthi: something people wanna discuss releases, defaults, change documentation.
+
+354
+01:00:20.610 --> 01:00:34.159
+Parithosh Jayanthi: Okay? I think there is a portal call happening. Immediately after this. So in case any client teams are interested in that, then please head over there to discuss history, expiry.
+
+355
+01:00:37.081 --> 01:00:40.269
+Parithosh Jayanthi: Anything else that needs discussion today?
+
+356
+01:00:46.970 --> 01:00:50.540
+Parithosh Jayanthi: Okay, then, thank you. Everyone for joining and have a nice day.
+
+357
+01:00:52.950 --> 01:00:53.910
+potuz: See you guys.
+
+358
+01:00:55.130 --> 01:00:56.000
+Kamil Chodoła: Thank you. Bye.
+
+359
+01:00:56.800 --> 01:00:57.460
+Fredrik: Bye.
+
+360
+01:00:58.050 --> 01:00:58.820
+Mario Vega: Thank you.
+

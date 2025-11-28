@@ -1,4 +1,4 @@
-# pmissues_monitor.py (updated version)
+# pmissues_monitor.py (updated date extraction)
 import requests
 import os
 import re
@@ -11,19 +11,48 @@ load_dotenv()
 def extract_date_from_text(text):
     """Extract date from title or body text"""
     date_patterns = [
-        r'(\w+ \d{1,2}, \d{4})',  # September 29, 2025
-        r'(\w+ \d{1,2}(?:st|nd|rd|th)?, \d{4})',  # September 26th, 2025
-        r'(\d{1,2}/\d{1,2}/\d{4})',  # 10/6/2025
-        r'(\d{4}-\d{2}-\d{2})',  # 2025-09-29
+        # Full month names with various formats
+        r'\b(\w{3,9}\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4})\b',  # September 26th, 2025 or September 26 2025
+        r'\b(\d{1,2}\s+\w{3,9}\s+\d{4})\b',  # 26 September 2025
+        
+        # ISO and slash formats
+        r'\b(\d{4}-\d{2}-\d{2})\b',  # 2025-09-29
+        r'\b(\d{1,2}/\d{1,2}/\d{4})\b',  # 10/6/2025
+        r'\b(\d{1,2}[-/.]\d{1,2}[-/.]\d{2})\b',  # 10-6-25 or 10/6/25
     ]
     
     for pattern in date_patterns:
-        match = re.search(pattern, text)
+        match = re.search(pattern, text, re.IGNORECASE)
         if match:
             date_str = match.group(1)
-            # Remove ordinal suffixes
+            # Remove ordinal suffixes and extra spaces
             date_str = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str)
+            date_str = re.sub(r'\s+', ' ', date_str).strip()
+            
+            # Try to parse to validate it's a real date
+            test_formats = [
+                '%B %d %Y',  # September 26 2025
+                '%B %d, %Y',  # September 26, 2025
+                '%b %d %Y',  # Sep 26 2025
+                '%b %d, %Y',  # Sep 26, 2025
+                '%d %B %Y',  # 26 September 2025
+                '%d %b %Y',  # 26 Sep 2025
+                '%Y-%m-%d',  # 2025-09-26
+                '%m/%d/%Y',  # 09/26/2025
+                '%m-%d-%Y',  # 09-26-2025
+                '%m-%d-%y',  # 09-26-25
+            ]
+            
+            for fmt in test_formats:
+                try:
+                    datetime.strptime(date_str, fmt)
+                    return date_str
+                except:
+                    continue
+            
+            # If no format worked, still return the string
             return date_str
+    
     return None
 
 def parse_issue_for_meeting_info(issue):
@@ -31,36 +60,52 @@ def parse_issue_for_meeting_info(issue):
     title = issue.get("title", "")
     body = issue.get("body", "")
     
-    # Try to find date in title first, then body
+    # Try to find date in title first (more reliable), then body
     meeting_date = extract_date_from_text(title)
     if not meeting_date and body:
-        meeting_date = extract_date_from_text(body)
+        meeting_date = extract_date_from_text(body[:500])
+    
+    # Extract meeting number from title if present
+    meeting_number = None
+    number_match = re.search(r'#(\d+)', title)
+    if number_match:
+        meeting_number = number_match.group(1)
+    
+    # Normalize title for matching (remove spaces, lowercase)
+    title_normalized = title.lower().replace(" ", "")
     
     # Find ALL matching meeting IDs for this meeting name
     matched_meetings = []
     for meeting_id, meeting_info in WHITELISTED_MEETINGS.items():
         meeting_name = meeting_info["name"]
-        # Check for various name formats
+        meeting_name_normalized = meeting_name.lower().replace(" ", "")
+        
+        # Check if the normalized meeting name (without spaces) appears in normalized title
+        # Also check the part before parentheses
+        meeting_name_base = meeting_name.split("(")[0].strip() if "(" in meeting_name else meeting_name
+        meeting_name_base_normalized = meeting_name_base.lower().replace(" ", "")
+        
         if any([
-            meeting_name.lower() in title.lower(),
-            meeting_name.replace(" - ", " ").lower() in title.lower(),
-            meeting_name.split("(")[0].strip().lower() in title.lower() if "(" in meeting_name else False,
+            meeting_name.lower() in title.lower(),  # Original exact match
+            meeting_name_normalized in title_normalized,  # Space-insensitive match
+            meeting_name_base_normalized in title_normalized,  # Match without parenthetical part
         ]):
             matched_meetings.append({
                 "meeting_id": meeting_id,
                 "meeting_name": meeting_name,
                 "owner": meeting_info["owner"],
                 "date_str": meeting_date,
+                "meeting_number": meeting_number,
                 "issue_number": issue.get("number"),
                 "issue_title": title,
                 "closed_at": issue.get("closed_at")
             })
     
-    # Return all possible meeting IDs for this meeting
     if matched_meetings:
         return {
             "possible_meeting_ids": [m["meeting_id"] for m in matched_meetings],
             "meeting_name": matched_meetings[0]["meeting_name"],
+            "meeting_number": meeting_number,
             "date_str": meeting_date,
             "issue_number": issue.get("number"),
             "issue_title": title,
@@ -80,29 +125,49 @@ def get_recently_closed_issues(days_back=7):
         "Accept": "application/vnd.github.v3+json"
     }
     
-    params = {
-        "state": "closed",
-        "since": (datetime.now() - timedelta(days=days_back)).isoformat(),
-        "per_page": 100
-    }
+    # Calculate cutoff date
+    cutoff_date = datetime.now() - timedelta(days=days_back)
     
-    response = requests.get(url, headers=headers, params=params)
+    all_closed_issues = []
+    page = 1
+    max_pages = 20  # Fetch up to 2000 issues total
     
-    if response.status_code != 200:
-        print(f"✗ GitHub API error: {response.status_code}")
-        return []
+    print(f"  Searching for issues closed after {cutoff_date.strftime('%Y-%m-%d')}")
     
-    issues = response.json()
+    while page <= max_pages:
+        params = {
+            "state": "closed",
+            "per_page": 100,
+            "page": page,
+            "sort": "updated",
+            "direction": "desc"
+        }
+        
+        print(f"  Fetching page {page}...", end=" ")
+        response = requests.get(url, headers=headers, params=params)
+        
+        if response.status_code != 200:
+            print(f"\n✗ GitHub API error: {response.status_code}")
+            break
+        
+        issues = response.json()
+        print(f"got {len(issues)} issues")
+        
+        if not issues:
+            print("  No more issues found")
+            break
+        
+        # Add all issues closed within our window
+        for issue in issues:
+            if issue.get("closed_at"):
+                closed_date = datetime.fromisoformat(issue["closed_at"].replace("Z", "+00:00"))
+                if closed_date > cutoff_date.replace(tzinfo=closed_date.tzinfo):
+                    all_closed_issues.append(issue)
+        
+        page += 1
     
-    # Filter for issues closed within our time window
-    recently_closed = []
-    for issue in issues:
-        if issue.get("closed_at"):
-            closed_date = datetime.fromisoformat(issue["closed_at"].replace("Z", "+00:00"))
-            if closed_date > datetime.now(closed_date.tzinfo) - timedelta(days=days_back):
-                recently_closed.append(issue)
-    
-    return recently_closed
+    print(f"  ✓ Found {len(all_closed_issues)} closed issues in date range")
+    return all_closed_issues
 
 # Test it
 if __name__ == "__main__":

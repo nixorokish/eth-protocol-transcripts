@@ -1,0 +1,726 @@
+WEBVTT
+
+1
+00:00:10.532 --> 00:00:12.379
+Nicolas Consigny: Okay. Good. Hello! Hello!
+
+2
+00:00:20.870 --> 00:00:21.980
+Ansgar Dietrichs: Hello! Hello!
+
+3
+00:02:07.900 --> 00:02:10.427
+Carl Beekhuizen: Oh, plus Troy is gonna be a very interesting call.
+
+4
+00:02:20.400 --> 00:02:21.330
+Ansgar Dietrichs: What's that? Sorry?
+
+5
+00:02:23.170 --> 00:02:26.413
+Carl Beekhuizen: I'm just saying, at this rate it's gonna be a very intimate call. If
+
+6
+00:02:27.420 --> 00:02:30.340
+Carl Beekhuizen: we, we have several people open up.
+
+7
+00:02:30.950 --> 00:02:31.849
+Ansgar Dietrichs: That's fine.
+
+8
+00:02:32.701 --> 00:02:38.744
+Ansgar Dietrichs: Yeah. I mean, maybe just while we're waiting, anyway, like, just for context, I think, we
+
+9
+00:02:40.420 --> 00:02:52.109
+Ansgar Dietrichs: yeah, maybe I'll say this, and then we start screaming, streaming. I'm not screaming. I think we, as a message said, had this message like a month or so ago in the in the roll call chat. I think.
+
+10
+00:02:52.110 --> 00:03:11.499
+Ansgar Dietrichs: as the l. 1 is kind of reorienting a little bit how it thinks about the Evm. And l. 1, and execution and everything. I think that will also impact the roll call effort. And so I think that kind of is, these plans are consolidating on the l 1 side right now, my timeline there, that it's just not a rough timeline in my mind. But I think basically throughout June
+
+11
+00:03:11.550 --> 00:03:23.050
+Ansgar Dietrichs: kind of the one side of that picture will kind of solidify. And then in July we can kind of figure out what are the implications for roll call, and then so I would expect that maybe on the August roll call or so we we will discuss
+
+12
+00:03:23.220 --> 00:03:42.529
+Ansgar Dietrichs: what? What does the path forward look like for for this kind of the this, the specific side of the L 2 standardization effort, because there's also, of course, the separate Josh Rudolph, call going on as well. So basically like how to how to divide the the responsibilities up. That doesn't make sense to merge them.
+
+13
+00:03:42.570 --> 00:03:53.510
+Ansgar Dietrichs: What's the path forward? I think I like. That's my rough timeline. So maybe for for people that are like, Oh, why, why is there not so much content for these calls? I think. Kind of August ish is what probably I would expect for like figuring out the future here.
+
+14
+00:03:54.520 --> 00:04:00.540
+Ansgar Dietrichs: But yeah, with that, maybe we can start screaming, streaming, and get the call going.
+
+15
+00:04:10.080 --> 00:04:12.540
+Nicolas Consigny: And we are live. Let's go.
+
+16
+00:04:14.590 --> 00:04:15.325
+Carl Beekhuizen: Great. Thank you.
+
+17
+00:04:16.157 --> 00:04:25.760
+Carl Beekhuizen: Hello! Welcome everyone to roll. Call number 12. That's issue 1461, and the ethereum slash. Pm, repo link in the chat.
+
+18
+00:04:27.160 --> 00:04:39.769
+Carl Beekhuizen: Yeah. So 1st topic of the day, something we touched on a little bit last time. But just to rerase, because this has come up again on multiple acds. And that's the idea of having a
+
+19
+00:04:40.070 --> 00:04:45.089
+Carl Beekhuizen: a limit on the number of blobs that a single transaction can carry.
+
+20
+00:04:46.360 --> 00:04:59.450
+Carl Beekhuizen: This helps us. Interest like, have some more sensible boundaries on the the main pool, and just generally how things propagate. And so it makes it a little bit easier to
+
+21
+00:04:59.740 --> 00:05:01.260
+Carl Beekhuizen: reason about.
+
+22
+00:05:01.410 --> 00:05:11.829
+Carl Beekhuizen: And so this is very helpful for all, one for dev. So last time there weren't any objections raised for this but as this is now likely to be done, something that strips on the l. 1, i think it's worth
+
+23
+00:05:12.260 --> 00:05:17.509
+Carl Beekhuizen: just re-raising. Does anyone have any objections to seeing something like this happened.
+
+24
+00:05:19.330 --> 00:05:28.600
+Joshua Colvin - OCL: No objections. I am curious what the limit will be, cause we, you know, Arbitram, we currently limit ourselves to 3 blobs per transaction.
+
+25
+00:05:30.560 --> 00:05:35.780
+Carl Beekhuizen: So I think the exact limit is still like under discussion.
+
+26
+00:05:37.080 --> 00:05:41.150
+Carl Beekhuizen: there were some some people arguing for 7.
+
+27
+00:05:42.470 --> 00:05:48.297
+Carl Beekhuizen: I think. Yeah, I. It would be nice if it's a number that's easier to pack into
+
+28
+00:05:49.110 --> 00:05:53.137
+Carl Beekhuizen: into the block, in into the the target. And Max,
+
+29
+00:05:53.760 --> 00:05:57.440
+Carl Beekhuizen: but yeah, I, I don't foresee 3 being an issue. For now.
+
+30
+00:05:58.100 --> 00:06:06.339
+Carl Beekhuizen: yeah, sounds good. Yeah, we do that because Max number of blobs minus the target number of blobs is 3. And so that way, you were not jacking up the price.
+
+31
+00:06:06.972 --> 00:06:07.940
+Carl Beekhuizen: I see. I see.
+
+32
+00:06:09.300 --> 00:06:10.660
+Carl Beekhuizen: Yeah, okay.
+
+33
+00:06:11.180 --> 00:06:33.100
+Ansgar Dietrichs: Yeah, I think I think, basically, like right now, probably this 7 is just in discussion, because I think that's the, together with the transaction object itself. That's like a 1 MB below 1 MB kind of object. So that's nice for the mempool. Otherwise we you know, 8 is just like kind of a nice round number 9. It would be the the Count maximum in in after Petra. So those are, I think, reasonable candidates.
+
+34
+00:06:33.400 --> 00:07:01.929
+Ansgar Dietrichs: I think the overall idea would be to just set the limit for now, anyway. Just just so, we have a limit to reason about as we go to hopefully, much larger total numbers in in Fusaka and and then adjust later on. So basically, if we start with a say 7 or something, and then it turns out that that's actually quite constraining for several. Then we would just in the in the Hard Fork, afterwards in in Glamsterdam next year. We would then just raise that ceiling. These these are not like permanent locked in decisions, just something to to get going.
+
+35
+00:07:10.110 --> 00:07:12.270
+Carl Beekhuizen: Yep, okay, great.
+
+36
+00:07:14.170 --> 00:07:22.850
+Carl Beekhuizen: Next topic of discussion is, I'm going to talk to some of the things happening. With respect to the Evm. On the o. 1,
+
+37
+00:07:23.580 --> 00:07:26.380
+Carl Beekhuizen: and some of the research calls that have been happening as well.
+
+38
+00:07:27.700 --> 00:07:37.680
+Ansgar Dietrichs: Yeah. So I just wanted to let me maybe share my screen share and entire screen share.
+
+39
+00:07:37.950 --> 00:07:39.700
+Ansgar Dietrichs: Can you see my screen?
+
+40
+00:07:41.169 --> 00:07:57.860
+Ansgar Dietrichs: This? Obviously, this is a very empty slide. That was just. I just wanted to basically, briefly, just make sure that in terms of Acd recap, it's mentioned. So obviously, since the last roll call the pack traffic on ethereum l. 1 has shipped the main one aspect, that in which this does affect
+
+41
+00:07:58.170 --> 00:08:16.979
+Ansgar Dietrichs: L. Twos, or at least indirectly, is that the l 1 Ebm now has support for erp 7, 7 0, 2. Which is this is basically allows delegation for Uas. So uas basically can can act as smart accounts. That has seen quite meaningful uptake already. With
+
+42
+00:08:17.240 --> 00:08:32.559
+Ansgar Dietrichs: most major ua wallets like metamask already having support for this, which means that over time users will start expecting support for this, and then, of course, it would be nice if if they also have support for this on the L. 2 side. So
+
+43
+00:08:32.787 --> 00:08:49.649
+Ansgar Dietrichs: just saying that I think as this is now live on l. 1, this should probably at least be like as an L. 2. You should have a strategy around this. And if the if the strategy for some reason is that you specifically do not want to support this. That's also fine, but, like, I think, just heads up. You should. You should make sure you have a strategy for this in place.
+
+44
+00:08:50.000 --> 00:08:54.739
+Ansgar Dietrichs: I'm not sure if there's any anything anyone would want to talk about on this topic specifically.
+
+45
+00:09:03.120 --> 00:09:03.800
+Ansgar Dietrichs: yeah.
+
+46
+00:09:03.900 --> 00:09:04.700
+Ansgar Dietrichs: Otherwise,
+
+47
+00:09:06.210 --> 00:09:12.022
+Ansgar Dietrichs: always feel free. I it happens to be that like I'm 1 of the quarters of the Ips. I think we have met on the call. Who is
+
+48
+00:09:12.430 --> 00:09:20.610
+Ansgar Dietrichs: Another one of the co-authors and the main champion of the Ap. So yeah, I think if if if you have questions or something, I think we we could, we'd be happy to
+
+49
+00:09:20.780 --> 00:09:50.249
+Ansgar Dietrichs: to answer them. And then just another quick slide before I go to the research side, like, Yeah, Fusaka. Carl already mentioned the request for feedback. Other thing, just to briefly mention, for Fusaka coming up scope wise. Obviously there was this big change. The Uf. Was removed from from the scope. So it's for now, unclear, if and when uf will come to ethereum mainnet, which does mean that like again, if you have, if you have a strategy around Uf for your own l. 2,
+
+50
+00:09:50.260 --> 00:09:54.230
+Ansgar Dietrichs: and please be advised that changed on l. 1. So
+
+51
+00:09:54.390 --> 00:10:16.349
+Ansgar Dietrichs: take that into account, and Prs will continue to be in Fusaka. It's the main feature for Fuzaka. So so the blob throughput will increase. The exact numbers are still Cbd, and depend on how quickly we can get to stability at different throughput levels there. And it will be a significant change over the 9 maximum and 6 6 target that we have today. But the exact numbers we yeah
+
+52
+00:10:17.180 --> 00:10:36.260
+Ansgar Dietrichs: are are to be determined, and then there will be some some small Evm changes. Where again, kind of if you are evm equivalent. Yeah. Just heads up there. Some repricing around MoD. X. And then also at least proposed. There are some small individual changes now to basically replace the bigger changes of Uf
+
+53
+00:10:36.370 --> 00:10:39.800
+Ansgar Dietrichs: with some more targeted smaller changes.
+
+54
+00:10:39.950 --> 00:10:54.880
+Ansgar Dietrichs: Yeah, so so just that. And then the main thing I wanted to briefly talk about or to talk about is we had the protocol research call number 2. And these are basically like calls where we just talk about the future of the ethereum l, 1 network. And just just
+
+55
+00:10:54.950 --> 00:11:06.420
+Ansgar Dietrichs: last week on Wednesday, and there was a topic that I think I wanted to briefly summarize. And because I think it's kind of relevant for for the topic of evm equivalence in general.
+
+56
+00:11:06.420 --> 00:11:27.379
+Ansgar Dietrichs: And that was so basically, like the call last week was specifically on the kind of this. This quadrant of the ethereum roadmap that's like the short term execution layer focused changes. So basically like where we are now for the 1st time in basically 5 years again, trying to increase throughput, which we have not done since since before the merge, basically
+
+57
+00:11:27.747 --> 00:11:34.729
+Ansgar Dietrichs: and on this topic 1 1 aspect is specifically as we get going. I think it's good to
+
+58
+00:11:34.730 --> 00:12:02.820
+Ansgar Dietrichs: to talk a little about how we are approaching the topic, because that has implications on future Avm changes, but also just like general changes, and how they might be relevant for the L. 2 s. As well and specifically like, I gave this brief talk about scaling loops. I'll give a shortened version of this now, or just like talk about the L 2 relevant aspects there. So I think the way at least I think about this from the l 1 side is that we will have. We'll be starting to build this loop in terms of
+
+59
+00:12:03.282 --> 00:12:15.259
+Ansgar Dietrichs: identifying the individual bottlenecks that keep us from scaling throughput, and then having 3 different ways of addressing them. And so basically 3 different feedback loops. The 1st one is improve meaning just like
+
+60
+00:12:15.830 --> 00:12:22.053
+Ansgar Dietrichs: in like on the engineering side, on the client side, basically like, remove the bottlenecks by just
+
+61
+00:12:22.970 --> 00:12:50.990
+Ansgar Dietrichs: things like changing the database or things like that. Right? So basically where you actually, it's an engineering way of addressing the bottleneck. The second one is contain, and basically just like make it so that that bottleneck does not hold back the scaling of the overall chain. And the 3rd one is actual protocol changes, and so, in terms of identify, like the the individual bottlenecks that they are like we. I think we are getting more sophisticated on this. On the one side. Now, there's different dimensions, right? Like different
+
+62
+00:12:50.990 --> 00:13:09.950
+Ansgar Dietrichs: types of bottlenecks that you have. This is more an example. This is by no means comprehensive, or even the right necessarily structuring or something. But this is supposed to give you like a bit of an impression of like how we think about how we approach identifying scaling bottlenecks. And of course, by the way I'm talking about this now.
+
+63
+00:13:09.950 --> 00:13:27.359
+Ansgar Dietrichs: most of you from the L 2 side will have already much more sophisticated thoughts on this like for you. All this might even look a bit naive, because you've been having to face the kind of the challenge of scaling for a long time now. So, as we are ramping up. I still think it's good to like sync on how we think about these things. So that's kind of how we approach the kind of the individual.
+
+64
+00:13:27.480 --> 00:13:31.250
+Ansgar Dietrichs: and like, just like thinking about types of bottlenecks that they are.
+
+65
+00:13:31.350 --> 00:13:32.340
+Ansgar Dietrichs: And
+
+66
+00:13:33.200 --> 00:13:44.740
+Ansgar Dietrichs: and then in terms of what? Basically, as as we understand which of them are holding us back from from getting to our throughput. So, for example, right now on the on the ethereum, l. 1, there's just like concerns around the
+
+67
+00:13:44.740 --> 00:14:07.019
+Ansgar Dietrichs: the worst case size of of blocks. And there's some some kind of constants where basically, just if that size becomes larger than 10 MB, the p. 2 P. Has some issues dealing with this. So so that's just like a short term bottleneck. And then how do we address these bottlenecks from the 1 point of view, as I said, improve, contain change.
+
+68
+00:14:07.020 --> 00:14:08.550
+Ansgar Dietrichs: The interesting thing is that
+
+69
+00:14:09.160 --> 00:14:37.220
+Ansgar Dietrichs: naturally the only of the 3 tools that is available for L. 2 s. As they want to scale or have been scaling in the past is the improve side. And because improve really just means not just, it's actually quite, quite the challenge, of course, but like means engineering improvements. And that does not specifically, if you, you can remain evm equivalent. Even as you change the make make changes on the engineering side, of course.
+
+70
+00:14:37.300 --> 00:14:38.220
+Ansgar Dietrichs: and
+
+71
+00:14:38.280 --> 00:14:50.949
+Ansgar Dietrichs: the second one contain contain is interesting, because contain means like, sometimes when you identify a worst case, bottleneck. So, for example, Zk, Evms face that often. Right? So basically, like, you have a just like you have a bottleneck
+
+72
+00:14:50.950 --> 00:15:18.620
+Ansgar Dietrichs: with like, say, catch or something. Right now you could change it by actually making a change like the last point, the change to the protocol rules. But then you're no longer evm equivalent, and that is often a tricky thing to kind of like. Get right so often. What you want to do is you just want to accept that bottleneck, but just contain it. So it doesn't help. It doesn't block you from overall having a high throughput level, and the L. 2 s. Have one tool that we like us have one tool that we don't have, which is the sequencer so often. What happens is just that the sequencer just has a limit on how many
+
+73
+00:15:19.210 --> 00:15:33.029
+Ansgar Dietrichs: transactions of a certain type get included in into a block. And that's something that because we have fully permissionless sequencing or fully permissionless block building on the l 1 side, we can't do on the l 1 side. And so that's 1 tool you have that we don't have. And
+
+74
+00:15:33.695 --> 00:15:37.580
+Ansgar Dietrichs: so basically, how we think about contain is
+
+75
+00:15:38.409 --> 00:15:49.169
+Ansgar Dietrichs: is through in protocol changes, which, of course, is harder for you to do as you stay if I'm equivalent but the nice thing is, as we basically now have to double down on this and become much more
+
+76
+00:15:49.510 --> 00:15:56.889
+Ansgar Dietrichs: proficient in regularly doing these things. I think we'll do. We'll build up a lot of like more generalized
+
+77
+00:15:56.950 --> 00:16:22.120
+Ansgar Dietrichs: tooling around this, which then hopefully can also be used specifically on the L 2 side for addressing L. 2 specific bottlenecks. So basically, the 3 types of containment that at least I saw in preparing this talk was just like you, can, you can cap a certain type of activity. So just, you just only allow this amount of catch x per block or something, or you only allow 10 MB block size or something like this. Just basically put a cap on. And just consider everything invalid that goes above that that block
+
+78
+00:16:22.120 --> 00:16:34.129
+Ansgar Dietrichs: you still need to importantly like in order to to contain any dimension you have to actually do metering in protocol. You can't have a rule that makes a block invalid over 10 MB. If you don't have the size as a parameter to be like a
+
+79
+00:16:34.130 --> 00:16:41.750
+Ansgar Dietrichs: available parameter. In the 1st place, so you basically, you do have to do to to basically always add metering in protocol for any type of
+
+80
+00:16:42.440 --> 00:17:05.346
+Ansgar Dietrichs: bottleneck that you want to cap to contain. And then, yeah, capping basically is a very simple thing to do. It does not affect the the average case resource throughput. But it is. It does have this this problem that it's not robust at high consumption, meaning that like, if the cap actually starts to to eat into what the natural demand level would be. It has these problematic side effects.
+
+81
+00:17:05.839 --> 00:17:10.259
+Ansgar Dietrichs: reprice. You can just make the thing more expensive again. Simple to do
+
+82
+00:17:10.290 --> 00:17:39.649
+Ansgar Dietrichs: reduces the throughput, of course, but is a robust thing to do. This is another thing where, like, right now, we have been hearing from our tools sometimes that basically, they would ideally want to have a different pricing level for several things. So like again, think of making more expensive, for example, or just make several computer operations that are just really expensive. For example, to prove for Zk Avms more expensive right now. That's just very hard to do as part of probably like us, needing to do this as well on the l. 1. You can expect that in the future we will probably make
+
+83
+00:17:39.720 --> 00:17:52.740
+Ansgar Dietrichs: pricing levels more of a dynamic parameter that you can just like change with a configuration file or something which would make it much easier to to have different pricing schedules on L. Two's versus the l. 1,
+
+84
+00:17:52.740 --> 00:18:12.379
+Ansgar Dietrichs: and then the last one would be like some more heavy handed multi dimensional kind of pricing new dimension, which we did once on the l. 1 for for blob prices, of course, and we know that there's interest on the L. 2 to potentially do this as well. We we had one breakout session on roll call.
+
+85
+00:18:12.380 --> 00:18:22.880
+Ansgar Dietrichs: and that's, of course, the conceptually the cleanest solution. But it is complex. So. But as we kind of ramp up tooling around this as well on the other one, hopefully, that also helps us for kind of
+
+86
+00:18:22.940 --> 00:18:33.305
+Ansgar Dietrichs: delivering these L 2 specific, that there's a router there. So that's kind of the contain. And then the last thing, just briefly, the last part of the of the loop, the the change.
+
+87
+00:18:33.840 --> 00:18:39.600
+Ansgar Dietrichs: I don't think I had another slide on this right? Yeah, that was the last slide. So basically just changes as well where like,
+
+88
+00:18:40.080 --> 00:18:53.179
+Ansgar Dietrichs: that's just often when we talk to tools again with evm equivalents, there's just sometimes things like new features that would help with throughput, that just you can't add, because you you that would break compatibility with the l. 1. But now, as we also like, change the l. 1 to be more
+
+89
+00:18:54.540 --> 00:19:23.009
+Ansgar Dietrichs: basically to allow for these, for these features that improve the bottlenecks that should hopefully also give you benefits on the L 2, because you get that for free. So yeah, I think, basically, just like, I think it's just like as a general topic, something where you should, you should be aware that that's now now something that's changing about how the l 1 relates to the L. 2 s. Because that was just like that entire kind of topic of the execution layer was something that was just more or less ossified, rigid on the l 1. And basically so you were on your own
+
+90
+00:19:23.308 --> 00:19:33.750
+Ansgar Dietrichs: and now, as the one itself also scales, I think you should like have like, have some sort of strategy understanding of to what extent. That's maybe something you'd want to collaborate with, or just
+
+91
+00:19:33.750 --> 00:19:52.919
+Ansgar Dietrichs: take as an input. But be aware that that's now something that's mutable under the hood basically and do your own scaling on top. But basically just something that it's a significant change to how the l 1 operates that you should be aware of. So yeah, that that's kind of what I wanted to. I hope that was somewhat useful and like happy to also like, of course, talk a little about if if there's feedback or something on this point. But
+
+92
+00:19:53.460 --> 00:19:56.149
+Ansgar Dietrichs: yeah, that would be it for me.
+
+93
+00:19:58.320 --> 00:20:05.790
+Ansgar Dietrichs: And yeah, if wait, I don't have a list of people raising dance. Ty!
+
+94
+00:20:06.890 --> 00:20:15.919
+Tsahi OCL: Hi, yeah. 1st of all, we'd be very we we off chain labs are also looking into how we can make
+
+95
+00:20:16.920 --> 00:20:36.096
+Tsahi OCL: pricing a more dynamic thing, and what what it should look like. And we are working in some I think interesting directions, and would be really really interested to, you know, collaborate to know where the l 1 go is going and how we can.
+
+96
+00:20:39.239 --> 00:20:49.110
+Tsahi OCL: use those mechanisms. I I think it's a very positive direction more. Generally.
+
+97
+00:20:49.950 --> 00:20:59.849
+Tsahi OCL: I've been following some conversations in the l. 1, and one thing that worries me in their look
+
+98
+00:21:00.100 --> 00:21:09.419
+Tsahi OCL: in in the l. 1 look at scaling is that it seems like l. 1 only cares about scaling
+
+99
+00:21:11.648 --> 00:21:18.491
+Tsahi OCL: prover nodes like we'll solve staking by with some sort of
+
+100
+00:21:19.691 --> 00:21:32.479
+Tsahi OCL: proposer builder separation. And now what we want, and after that, what we want to do is, make sure that the builder can be scaled, and
+
+101
+00:21:32.710 --> 00:21:42.380
+Tsahi OCL: that's like the the limit that we really care about. And it seems like from my experience, is that
+
+102
+00:21:42.960 --> 00:22:05.190
+Tsahi OCL: the actual nodes that are important are nodes that don't care about that don't try to prove the network that don't try to stake on the network that what they do is execute the network, and they execute the entire network. They do it just to keep up. They do it to answer Rpcs. They do it to trace. They do, if calls
+
+103
+00:22:05.510 --> 00:22:06.400
+Tsahi OCL: like
+
+104
+00:22:07.120 --> 00:22:19.700
+Tsahi OCL: for every, even us off chain labs ourselves, we run one node that really needs to be able to. We have. Let's say we have 3 prover nodes
+
+105
+00:22:20.430 --> 00:22:26.230
+Tsahi OCL: that we run to debug in multiple ways, and many more than that
+
+106
+00:22:26.380 --> 00:22:31.810
+Tsahi OCL: executor nodes right. Rpc. Nodes, and infura has Rpc. Nodes, and.
+
+107
+00:22:32.110 --> 00:22:38.889
+Tsahi OCL: like most of the nodes on the chain, and most of the question of what scaling is and what are the requirements
+
+108
+00:22:39.390 --> 00:22:45.680
+Tsahi OCL: is for executing nodes is for nodes. That will do. Rpc. Calls and Eth. Calls and
+
+109
+00:22:46.540 --> 00:22:51.559
+Tsahi OCL: and things like that. And that's the thing that worries me when I look at
+
+110
+00:22:52.280 --> 00:22:54.539
+Tsahi OCL: where the l. 1 is going.
+
+111
+00:22:55.130 --> 00:22:57.750
+Tsahi OCL: I'd be happy to hear more
+
+112
+00:22:58.670 --> 00:23:07.929
+Tsahi OCL: from other L. Twos here and from other people in the erection, because, like, I feel that either I'm missing something very basic or
+
+113
+00:23:08.870 --> 00:23:10.280
+Tsahi OCL: or someone else's.
+
+114
+00:23:11.240 --> 00:23:13.680
+Ansgar Dietrichs: Yeah, this is great.
+
+115
+00:23:14.000 --> 00:23:21.070
+Ansgar Dietrichs: like a great comment. And by the way, this this makes me think that maybe what we should do is at some point. Maybe next month or something. Have a
+
+116
+00:23:21.519 --> 00:23:34.660
+Ansgar Dietrichs: like a roll call breakout, where we just try to like. Bring the people on the from the one side that think about scaling now, and the people from their 2 other side that have been thinking about this for quite a while together, right and like, discuss these things, I think that would probably be productive. Obviously, I'm only
+
+117
+00:23:34.660 --> 00:23:51.449
+Ansgar Dietrichs: I mean I am now involved with the scaling effort from the other one, but, like there are many more people, and so I can only talk about some aspects of this, and I think, and similarly assume, like many people from the 2 side that think about this are not on the call here right now. So I think that would probably be very productive thing to do in terms of what you specifically talked about.
+
+118
+00:23:51.480 --> 00:24:13.269
+Ansgar Dietrichs: And I think this is right. We actually like it's interesting. We had on the research call. We had Micah, towards the end. Kind of like, have a bit of a discussion, session, leader discussion, session, where he was pointing out that Rpc. Notes are like a very, very important consumer of the chain that needs to be more front and center in in our kind of
+
+119
+00:24:13.754 --> 00:24:21.060
+Ansgar Dietrichs: considerations around minimum requirements and the load. And and basically how we, how we, how we basically
+
+120
+00:24:21.957 --> 00:24:24.050
+Ansgar Dietrichs: do scaling. And
+
+121
+00:24:24.200 --> 00:24:31.940
+Ansgar Dietrichs: I think from the one side at least, how we think about this is that we have this hardware
+
+122
+00:24:32.350 --> 00:24:56.359
+Ansgar Dietrichs: minimum requirements envelope that we recently formalized. There's now in Meta Eap. I forget the number, but you can find it if you search for this, and where we basically lay out an ethereum node needs to have at least this, this hardware, this this hardware, like RAM CPU disk and whatnot, and the intention here would be to like.
+
+123
+00:24:56.720 --> 00:25:15.560
+Ansgar Dietrichs: for now at least scale, while staying in that envelope. So we already like, by formalizing this with a couple months ago. We already, like put it at a level that's maybe somewhat higher than it used to be informally understood to be so. So we already gave ourselves a little bit more breathing room. But other than that, we expect to basically like we are focused on just like getting more
+
+124
+00:25:16.058 --> 00:25:34.779
+Ansgar Dietrichs: more of a headroom here for for increased throughput, not by just making it harder to run a node, and yes, that the exception there is like block building. So we might be more okay with leaning into features that make block building more complex. But then
+
+125
+00:25:34.780 --> 00:26:04.379
+Ansgar Dietrichs: that would have the nice effect that, like a normal following notes, whether that is a note for staking or just for Rpcs for for like, for for basically tracing, for for any kind of like more just executing and consuming the chain. And the idea would be that those requirements should not change whatsoever. Now, of course, that, for example, right now that that hardware like envelope says that you you'd need to like have at least, I think, 4 TB of of Nvme.
+
+126
+00:26:04.380 --> 00:26:08.100
+Ansgar Dietrichs: Ssds. And so, whereas
+
+127
+00:26:08.450 --> 00:26:32.130
+Ansgar Dietrichs: we mostly like the state size right now is a fraction of that. And then there's history. And we're trying to like ship history expiry where the history goes away. But that means that like state might grow quite a bit. And so that will impact performance of Rpc notes and whatnot. So so this is something we actively monitoring. But in principle we're trying to like basically stay within the same pre-communicated hardware envelope. For now. And if that ever were to change, we would like, be careful about
+
+128
+00:26:32.650 --> 00:26:36.810
+Ansgar Dietrichs: changing that. I'm not sure that. Does that answer that question, or like answer that comment at all, or like.
+
+129
+00:26:39.202 --> 00:26:44.400
+Tsahi OCL: It does. But like, yeah, the the thing that I think
+
+130
+00:26:45.350 --> 00:26:48.319
+Tsahi OCL: I'm worried to keep in mind is because
+
+131
+00:26:48.490 --> 00:26:55.212
+Tsahi OCL: a large part is saying that staker nodes will not need, especially, I think, when looking at the
+
+132
+00:26:56.130 --> 00:27:01.780
+Tsahi OCL: further down the line plans right for zk proven ethereum
+
+133
+00:27:04.390 --> 00:27:09.420
+Tsahi OCL: in zk proven ethereum staker nodes will not have to execute blocks at all.
+
+134
+00:27:11.120 --> 00:27:16.039
+Tsahi OCL: just for staking, and and that's and that's good and fine.
+
+135
+00:27:16.360 --> 00:27:23.659
+Tsahi OCL: I think that even then notes that do have to execute the blockchain are very important.
+
+136
+00:27:31.790 --> 00:27:34.408
+Ansgar Dietrichs: Sorry I was muted. Yeah, I I agree. And
+
+137
+00:27:36.240 --> 00:27:47.450
+Ansgar Dietrichs: actually, I think the the meta erp that's kind of this like hardware requirements. Erp actually has a different category for stakers, and just like just full nodes. And the idea is that, like the the requirements for full nodes should always be
+
+138
+00:27:47.550 --> 00:28:11.410
+Ansgar Dietrichs: at or below the ones for stakers. Right? And so now, of course, in principle, you can also have a full node that just consumes the Zkvm proof, and so it doesn't execute. But then, for some use cases you do need to execute. As you said, right? So like, I think this kind of this level of resolution, of just like just distinguishing between full notes and staking nodes. That's fine for now, but for the future we have to become more sophisticated in
+
+139
+00:28:11.410 --> 00:28:27.120
+Ansgar Dietrichs: stateless nodes, stateful nodes, nodes that have to execute the nodes that don't have to execute. Then there's also not having to execute, but wanting to have the state diff for some type use cases that's enough. Right? So if you only need say the logs and the State diffs. But you don't actually need to execute.
+
+140
+00:28:27.200 --> 00:28:34.570
+Ansgar Dietrichs: or you only need to execute individual transactions or something for some use. Cases that's enough for some. It's not so. I think
+
+141
+00:28:34.980 --> 00:28:36.289
+Ansgar Dietrichs: I don't really have much
+
+142
+00:28:36.570 --> 00:28:55.540
+Ansgar Dietrichs: like this is not something where we have results yet to or like. We don't have a strategy for this yet. It's other than just acknowledging that we are aware that we need a strategy there. We can't just like scale and just accept that execution now no longer is possible on any reasonable hardware that that's not. That's not how we would approach this. But yeah, it is a generally hard getting more sophisticated there.
+
+143
+00:28:55.740 --> 00:28:56.800
+Ansgar Dietrichs: and
+
+144
+00:28:57.060 --> 00:29:02.820
+Ansgar Dietrichs: is something we have to we. Still, we're still in the in. The process of figuring out how to think about this, I guess, is is the point.
+
+145
+00:29:03.020 --> 00:29:11.269
+Ansgar Dietrichs: And and again, I think we have a lot there to learn from. L. 2 s. As you all have already like, dealt with higher throughput levels. And with all of these questions. And so I think
+
+146
+00:29:11.560 --> 00:29:21.410
+Ansgar Dietrichs: my point here is, I think, by default, a lot of the l 1. People are more like focused on the l 1 and the L 2 people are focused on the L 2. And I think this is really a topic where we really benefit a lot from bridging this
+
+147
+00:29:21.590 --> 00:29:23.059
+Ansgar Dietrichs: between del one and tier, 2.
+
+148
+00:29:23.720 --> 00:29:25.610
+Tsahi OCL: Absolutely. I'm
+
+149
+00:29:26.100 --> 00:29:33.989
+Tsahi OCL: really trying to keep up with what's happening in the l. 1. But I think that a dedicated for room or something would be.
+
+150
+00:29:34.390 --> 00:29:39.956
+Tsahi OCL: you know anything that like,
+
+151
+00:29:41.160 --> 00:29:47.410
+Tsahi OCL: yeah. Arranges communication around. That topic will be very, very good.
+
+152
+00:29:49.520 --> 00:29:55.839
+Ansgar Dietrichs: Yeah, no, that's really good feedback. And I think they're just yeah. What I would say is just like, Give us a little bit more time to like.
+
+153
+00:29:55.960 --> 00:30:03.211
+Ansgar Dietrichs: actually have a strategy from the at 1 point. So, and then they think then, like right now, it's still very much in the exploratory phase.
+
+154
+00:30:04.030 --> 00:30:06.310
+Ansgar Dietrichs: talking there already, of course, makes sense, but I think
+
+155
+00:30:07.390 --> 00:30:13.730
+Ansgar Dietrichs: a little bit later this year, I think, will be the moment in time when it really makes sense to formally kick off some collaboration effort on this.
+
+156
+00:30:14.210 --> 00:30:14.900
+Ansgar Dietrichs: Yeah.
+
+157
+00:30:15.730 --> 00:30:17.819
+Ansgar Dietrichs: But yeah, good point
+
+158
+00:30:21.030 --> 00:30:22.960
+Ansgar Dietrichs: any any other.
+
+159
+00:30:23.370 --> 00:30:25.236
+Carl Beekhuizen: Just touching quickly on the
+
+160
+00:30:25.860 --> 00:30:28.859
+Carl Beekhuizen: Rpc requirements. I mean, right now, it's kind of
+
+161
+00:30:29.580 --> 00:30:33.830
+Carl Beekhuizen: rate, limited or constrained by full node requirements.
+
+162
+00:30:34.280 --> 00:30:42.079
+Carl Beekhuizen: and so we don't really need a separate specification for now. And I think we definitely would have and would need if we switched over to the
+
+163
+00:30:42.210 --> 00:30:50.630
+Carl Beekhuizen: retail side of things we're also looking at like standardizing what we expect through the hardware to look like.
+
+164
+00:30:51.598 --> 00:30:53.689
+Carl Beekhuizen: There's like another dimension that's
+
+165
+00:30:54.330 --> 00:31:01.740
+Carl Beekhuizen: useful to be able to to talk about and reason about so yeah, there's there's there's lots of public similarization across the entire spectrum needs to happen.
+
+166
+00:31:11.220 --> 00:31:12.940
+Ansgar Dietrichs: Yeah, great.
+
+167
+00:31:14.110 --> 00:31:17.930
+Ansgar Dietrichs: And yeah, any anyone else that had any.
+
+168
+00:31:18.280 --> 00:31:21.509
+Ansgar Dietrichs: any anything, any thoughts that come to mind on this topic or anything.
+
+169
+00:31:25.190 --> 00:31:32.060
+Ansgar Dietrichs: I think we already. I think it's it's it's clear that this is not a 1 time topic to bring up. Once I think this will, this will become
+
+170
+00:31:32.170 --> 00:31:34.199
+Ansgar Dietrichs: something to focus on in the future.
+
+171
+00:31:38.000 --> 00:31:41.000
+Ansgar Dietrichs: But yeah, then, that's all for me, for everything. For now, just because
+
+172
+00:31:41.380 --> 00:31:44.479
+Ansgar Dietrichs: I think I just wanted to get the conversation, started a little bit.
+
+173
+00:31:46.240 --> 00:31:54.040
+Carl Beekhuizen: Good thanks, Oscar. That brings us on to general discussion. Does anyone have any topics they would like to raise or discuss?
+
+174
+00:32:05.060 --> 00:32:06.830
+Carl Beekhuizen: Okay, I'm gonna take that as a note.
+
+175
+00:32:07.875 --> 00:32:11.469
+Carl Beekhuizen: Then, yeah, thank you. Everyone for attending
+
+176
+00:32:12.650 --> 00:32:19.240
+Carl Beekhuizen: And yeah, we'll chat Async cool. Thank you. Bye.
+
+177
+00:32:19.480 --> 00:32:20.080
+Nicolas Consigny: Thank you. Guys.
+
+178
+00:32:20.470 --> 00:32:21.250
+Florian Huc: You, everyone.
+
+179
+00:32:22.050 --> 00:32:22.870
+Ansgar Dietrichs: Thanks. Bye, everyone.
+
+180
+00:32:22.870 --> 00:32:23.690
+Andreas Freund (He/Him): Thank you.
+
+181
+00:32:23.690 --> 00:32:24.799
+Tsahi OCL: Thank you. Bye-bye.
+

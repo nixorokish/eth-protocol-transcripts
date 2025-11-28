@@ -22,6 +22,9 @@ WHITELISTED_MEETINGS = {
     "913 4859 2283": {"name": "All Core Devs - Execution (ACDE)", "owner": "Tim Beiko"},
     "822 2793 8777": {"name": "All Wallet Devs", "owner": "Nico"},
     "857 1853 2657": {"name": "Roll Call", "owner": "Nico"},
+    "875 9142 7897": {"name": "All Core Devs - Execution (ACDE)", "owner": "Nico"},
+    "819 7347 6602": {"name": "All Core Devs - Consensus (ACDC)", "owner": "zoom-bot"},
+    "899 0207 8896": {"name": "Gas Repricing", "owner": "zoom-bot"}
 }
 
 # Convert to format without spaces for API calls

@@ -1,0 +1,50 @@
+00:07:09	Justin Traglia:	Gm
+00:07:17	Sebastian Lujan:	gm
+00:08:02	thomasthiery:	Gm everyone! Thanks again Jihoon for running today’s breakout <3
+00:08:39	Jihoon:	https://forkcast.org/rank
+00:09:00	Jihoon:	https://x.com/nixorokish/status/1944856240276038063
+00:10:05	Jihoon:	https://ethereum-magicians.org/t/epbs-focil-compatibility/24777
+00:10:14	Justin Traglia:	Reacted to "https://ethereum-mag..." with ❤️
+00:10:22	Pooja Ranjan:	Reacted to "https://ethereum-mag..." with ❤️
+00:11:20	Enrico Del Fante (tbenr):	Reacted to "https://ethereum-mag..." with ❤️
+00:12:44	Jihoon:	https://github.com/ethereum/consensus-specs/pull/4351
+00:13:43	Jihoon:	Reacted to "Gm everyone! Thanks ..." with ❤️
+00:14:12	thomasthiery:	I can’t talk but curious to hear if people have opinions on FOCIL and GLamsterdam
+00:15:02	Enrico Del Fante (tbenr):	For me S: ePBS as priority and A: FOCIL
+00:15:12	Justin Traglia:	Personally, I want to see ePBS & FOCIL in glamsterdam. But ePBS would probably be the official headliner. Save 6 sec slots for another fork.
+00:15:18	thomasthiery:	And especially if there are things people are concerned about around the proposal itself, or is it just a matter of priority
+00:15:27	NC:	Replying to "For me S: ePBS as pr..."
+
+Pretty much the same for Lodestar
+00:15:47	Katya Riazantseva:	will vote for FOCIL in Glamsterdam
+00:16:10	Katya Riazantseva:	the readiness is quite good imo
+00:16:28	Marc:	Nethermind team supports including FOCIL but only alongside or after epbs
+00:16:28	thomasthiery:	No no it’s not official
+00:16:43	thomasthiery:	I think it’s meant not to be an actual formal voting mechanism
+00:16:49	Katya Riazantseva:	Reacted to "Personally, I want t..." with 👍
+00:17:47	Justin Florentine (Besu):	Forkcast is marketing - it's a communication tool only
+00:17:49	Justin Traglia:	Yeah it has been a lot of fun 🙂
+00:19:16	Katya Riazantseva:	2
+00:19:22	Justin Traglia:	Reacted to "2" with 👍
+00:20:27	Stefano De Angelis:	Main concerns are around bandwidth consumption and how FOCIL impacts slot times. Would it be safe to reduce slot times with FOCIL implemented?
+00:20:47	Jihoon:	Reacted to "Main concerns are ar..." with 👍
+00:21:15	Justin Florentine (Besu):	i think it is safer to reduce slot times AFTER focil is included, as opposed to prior
+00:22:36	Jihoon:	Replying to "i think it is safer ..."
+
+Could you elaborate on why?
+00:23:05	Stefano De Angelis:	With shorter slot times, we might realize that FOCIL is not possible to achieve with the current design
+00:23:22	Enrico Del Fante (tbenr):	Replying to "i think it is safer ..."
+
+I think every changes on slot structure should be done BEFORE slot reduction
+00:24:26	Jihoon:	Replying to "i think it is safer ..."
+
+Ah right, so it's not just about FOCIL. I also think so
+00:25:35	Justin Florentine (Besu):	Replying to "i think it is safer ..."
+
+right, it the difference between compressing all the stuff you want to get done in a slot, vs. finding more time in the slot later to do more things.  one is easier to design than the other, assuming priorities don't change.
+00:27:05	Justin Florentine (Besu):	Replying to "With shorter slot ti..."
+
+this is fair. it is also a matter of priority - i personally think CR is more important than shorter slot times.
+00:28:00	Stefano De Angelis:	What about the number of includers?
+00:30:59	Marc:	presentation sounds good
+00:31:08	Sebastian Lujan:	Sounds awesome!

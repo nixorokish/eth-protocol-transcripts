@@ -1,0 +1,37 @@
+2025-10-10T12:59:17.786920 - === Processing meetings from last 7 days ===
+2025-10-10T12:59:19.206613 - Step 1: Fetching closed GitHub issues...
+2025-10-10T12:59:38.787172 -   ✓ Found 4 matched meetings
+2025-10-10T12:59:38.787572 -   ⚠ Found 1 potential meetings that didn't match
+2025-10-10T12:59:38.788150 -   Saved 1 unmatched issues to logs/failed_matches_20251010_125917.json
+2025-10-10T12:59:38.788191 - 
+============================================================
+2025-10-10T12:59:38.788227 - [1/4] Processing: FOCIL Breakout #21, October 7, 2025
+2025-10-10T12:59:38.788260 -   ⏭ Already processed (cached)
+2025-10-10T12:59:38.788295 - 
+============================================================
+2025-10-10T12:59:38.788327 - [2/4] Processing: EIP Editing Office Hour (EIP + ERC) Meeting #74, Oct 07, 2025
+2025-10-10T12:59:38.788355 -   ⏭ Already processed (cached)
+2025-10-10T12:59:38.788380 - 
+============================================================
+2025-10-10T12:59:38.788404 - [3/4] Processing: All Core Devs - Testing (ACDT) #56, Oct 6, 2025
+2025-10-10T12:59:38.788430 -   ⏭ Already processed (cached)
+2025-10-10T12:59:38.788455 - 
+============================================================
+2025-10-10T12:59:38.788492 - [4/4] Processing: All Core Devs - Consensus (ACDC) #166, October 2, 2025
+2025-10-10T12:59:38.788516 -   Meeting IDs: 859 6920 2880, 837 0323 9965, 819 7347 6602
+2025-10-10T12:59:38.788538 -   Date: October 2, 2025
+2025-10-10T12:59:41.720804 -   Recording found: 50 minutes
+2025-10-10T12:59:46.701227 - 
+============================================================
+2025-10-10T12:59:46.701319 - Uploading 1 meeting folders to GitHub in single commit...
+2025-10-10T12:59:52.360261 - ✗ Failed to batch upload
+2025-10-10T12:59:52.363674 - 
+============================================================
+2025-10-10T12:59:52.363761 - === SUMMARY ===
+2025-10-10T12:59:52.363815 - ✓ Successfully processed: 1
+2025-10-10T12:59:52.363867 - ⏭ Skipped (cached/exists): 3
+2025-10-10T12:59:52.363915 - ⚠ No recording found: 0
+2025-10-10T12:59:52.364136 - ⚠ Skipped short recordings: 0
+2025-10-10T12:59:52.364279 - 
+Log saved to: logs/process_log_20251010_125917.txt
+2025-10-10T12:59:52.364334 - Unmatched issues saved to: logs/failed_matches_20251010_125917.json

@@ -5,7 +5,7 @@ import base64
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
 from dateutil import parser
-from meetings_config import WHITELISTED_MEETING_IDS
+from meetings_config import WHITELISTED_MEETINGS
 
 load_dotenv()
 
@@ -38,8 +38,18 @@ def get_zoom_access_token():
         "account_id": account_id
     }
     
-    response = requests.post(url, headers=headers, data=data)
-    return response.json().get("access_token")
+    try:
+        response = requests.post(url, headers=headers, data=data, timeout=30)
+        if response.status_code == 200:
+            return response.json().get("access_token")
+        else:
+            print(f"✗ Failed to get Zoom access token: {response.status_code}")
+            if response.text:
+                print(f"  Error: {response.text[:200]}")
+            return None
+    except requests.exceptions.RequestException as e:
+        print(f"✗ Network error getting Zoom access token: {e}")
+        return None
 
 def get_all_recordings_in_range(access_token, from_date, to_date, debug=False):
     """Get ALL recordings in a date range from whitelisted users"""

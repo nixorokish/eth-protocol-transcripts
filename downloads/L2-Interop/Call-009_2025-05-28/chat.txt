@@ -1,0 +1,109 @@
+00:03:04	read.ai meeting notes:	Lisandro and Teck Yuan added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:03:39	Fireflies.ai Notetaker Alan:	Talk to Fireflies: (Web-search enabled)
+• Say: Hey Fireflies how can you help?
+• Type: /ff help
+to get started.
+View real-time notes and transcription for this meeting here: https://app.fireflies.ai/live/01JW6ZMHC7AQXS5426PNDX96X5?ref=live_chat
+00:04:14	Joxes | Wonderland:	Gm!
+00:04:20	Maurice | Anoma:	gmgm
+00:04:42	dylandedi:	Gm!
+00:05:07	Zodomo | Omni Network:	gm!
+00:05:18	Daniel:	gm
+00:05:31	John Church:	👋
+00:05:52	Riely Chen:	👋
+00:05:59	Ulyana Skladchikova:	👋
+00:07:13	frangio:	https://github.com/ethereum/L2-interop/blob/main/docs/message-passing/erc-7786-working-group.md
+00:07:36	frangio:	https://github.com/ethereum/ERCs/pull/1050
+00:09:44	Orest Tarasiuk (t1):	And No security ;)
+00:09:51	Aram Kocharyan:	Reacted to "And No security ;)" with 😂
+00:09:57	Jim Chang:	Reacted to "And No security ;)" with 😂
+00:09:58	Evan Chipman:	Reacted to "And No security ;)" with 😂
+00:10:01	Tomoki Adachi | Futaba:	Reacted to "And No security ;)" with 😂
+00:10:59	Orest Tarasiuk (t1):	https://x.com/orestta/status/1925891565743988739?s=46&t=BsEBfMI4zdX0UF1nkoYYew
+00:11:00	dylandedi:	You can see the agenda and link to al notes here https://www.notion.so/Interopolis-Community-Hub-1ea97cf6990c8067be50f9a8df597a47?pvs=18
+00:11:01	Orest Tarasiuk (t1):	Ef
+00:11:29	Joxes | Wonderland:	Reacted to "You can see the agen..." with ❤️
+00:11:32	Jim Chang:	Reacted to "You can see the agen..." with ❤️
+00:11:48	Ian Norden:	Is the venue for ZuBerlin known?
+00:11:51	Chris Haug:	https://zuberlin.city
+00:11:58	Orest Tarasiuk (t1):	Yes, warschauer str
+00:12:01	Chris Haug:	Replying to "Is the venue for ZuB..."
+
+can DM you reg that
+00:12:02	Ian Norden:	Ty
+00:12:10	Chris Haug:	Reacted to "Yes, warschauer str" with 👍
+00:12:11	Ian Norden:	Replying to "Is the venue for ZuB..."
+
+Yes please
+00:13:10	John Church:	Oh awesome.
+00:13:39	John Church:	Any recordings on solver economics?
+00:14:01	Orest Tarasiuk (t1):	No video but we have some audio and notes
+00:14:06	John Church:	Reacted to "No video but we have..." with 👍
+00:14:10	Ellie Davidson:	No official recording, but the transcript and notes from the session were linked by Dylan above!
+00:14:22	John Church:	Reacted to "No official recordin..." with 👍
+00:14:22	Ellie Davidson:	Reacted to "You can see the ag..." with ❤️
+00:14:26	John Church:	Replying to "No official recordin..."
+
+Thank you!
+00:14:29	Allan | Offchain Labs:	Very interested in solver exploration
+00:14:41	Evan Chipman:	Reacted to "Very interested in s…" with ➕
+00:14:55	Ellie Davidson:	Reacted to "Very interested in..." with ➕
+00:17:08	Helena F:	Reacted to "You can see the agen..." with ❤️
+00:19:29	Kanishk | Across:	Reacted to "Very interested in..." with ➕
+00:21:58	Alexander:	https://github.com/openintentsframework/OIF
+00:22:41	Marissa Posner:	Huge props to Josh for pushing all of this forward!
+00:22:49	Gurnoor Narula:	Reacted to "Huge props to Josh f..." with ❤️
+00:22:52	iPhone:	Reacted to "https://github.com/o…" with ❤️
+00:23:47	Tom Teman:	Reacted to "Huge props to Josh f..." with ❤️
+00:24:51	Ellie Davidson:	Reacted to "Huge props to Josh..." with ❤️
+00:25:25	dmarz:	Bullishhhhh
+00:27:51	Jim Chang:	Reacted to "Huge props to Josh f..." with ❤️
+00:27:54	Jim Chang:	Reacted to "https://github.com/o..." with ❤️
+00:29:29	Will Corcoran:	Reacted to "Huge props to Josh f..." with ❤️
+00:30:25	Tom Teman:	Reacted to "Bullishhhhh" with 🐂
+00:30:52	Zodomo | Omni Network:	is there a repo for the interop wallet?
+00:31:07	TiTi (Wonderland):	Yes, let me share it, one sec
+00:31:36	Skele | Wonderland:	https://github.com/defi-wonderland/ambire-extension
+00:31:42	TiTi (Wonderland):	Reacted to "https://github.com..." with 👍
+00:31:48	Kanishk | Across:	Reacted to "https://github.com..." with ❤️
+00:31:49	Zodomo | Omni Network:	Reacted to "https://github.com/d..." with 👍
+00:31:52	TiTi (Wonderland):	https://github.com/ethereum/wallet-poc
+00:32:11	TiTi (Wonderland):	Replying to "https://github.com..."
+
+we are working here and pushing the PRs to the ethereum repo. Still WIP
+00:32:35	Mat Nisenson:	Reacted to "https://github.com/d..." with ❤️
+00:32:35	Kanishk | Across:	Reacted to "we are working her..." with ❤️
+00:32:38	Mat Nisenson:	Reacted to "https://github.com/d..." with 👍
+00:34:35	Joxes | Wonderland:	Reacted to "https://github.com/d..." with ❤️
+00:34:45	TiTi (Wonderland):	https://defi-wonderland.notion.site/Interoperable-Addresses-Wallet-2019a4c092c780d09070fc06a1043303
+00:34:47	Kanishk | Across:	Replying to "https://github.com..."
+
+thank you so much for setting this up!. if possible, could you open issues for incoming changes ? would help contributors to collaborate and learn more on the direction for the poc.
+00:34:56	Kanishk | Across:	Reacted to "https://defi-wonde..." with ❤️
+00:35:08	Oscar M | Ledger:	Reacted to "https://defi-wonderl..." with ❤️
+00:35:40	Joshua Rudolf:	Reacted to "Huge props to Josh f..." with ❤️
+00:36:11	Joxes | Wonderland:	Reacted to "https://github.com/e..." with ❤️
+00:36:47	Joshua Rudolf:	Reacted to "https://x.com/orestt..." with 😍
+00:36:48	Joshua Rudolf:	Reacted to "You can see the agen..." with ❤️
+00:37:06	Joshua Rudolf:	Reacted to "https://github.com/o..." with ❤️
+00:39:11	frangio:	l2.eth sounds great!
+00:39:13	Joshua Rudolf:	Reacted to "Bullishhhhh" with 🐂
+00:39:17	Skele | Wonderland:	Reacted to "l2.eth sounds grea..." with ❤️
+00:39:25	Joxes | Wonderland:	Reacted to "l2.eth sounds great!" with ❤️
+00:39:46	Joshua Rudolf:	Reacted to "thank you so much fo..." with 💯
+00:41:38	TiTi (Wonderland):	Reacted to "l2.eth sounds grea..." with ❤️
+00:41:43	Skele | Wonderland:	also, the main purpose of the new /chains list, is to have "prettier" names for chains, which would serve as the initial values when migration to the `l2.eth` resolver happens
+00:45:05	Joshua Rudolf:	Reacted to "l2.eth sounds great!" with ❤️
+00:46:57	Joshua Rudolf:	Reacted to "also, the main purpo..." with 👍
+00:46:59	Joshua Rudolf:	Reacted to "https://defi-wonderl..." with ❤️
+00:53:08	Zodomo | Omni Network:	@Vaibhav Chellani where can we contact you on other platforms
+00:53:08	Allan | Offchain Labs:	Love this - very cool
+00:53:10	Nam:	v cool
+00:53:21	Tomoki Adachi | Futaba:	cool
+00:53:22	Vaibhav Chellani:	Vaibhavchellani on TG
+00:53:25	Zodomo | Omni Network:	Reacted to "Vaibhavchellani on T..." with 👍
+00:53:41	Zodomo | Omni Network:	thanks all!

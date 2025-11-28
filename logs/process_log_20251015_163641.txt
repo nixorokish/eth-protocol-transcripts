@@ -1,0 +1,50 @@
+2025-10-15T16:36:41.999922 - === Processing meetings from last 5 days ===
+2025-10-15T16:36:43.536735 - Step 1: Fetching closed GitHub issues...
+2025-10-15T16:37:03.718042 -   ✓ Found 5 matched meetings
+2025-10-15T16:37:03.718548 -   ⚠ Found 4 potential meetings that didn't match
+2025-10-15T16:37:03.719057 -   Saved 4 unmatched issues to logs/failed_matches_20251015_163641.json
+2025-10-15T16:37:03.719142 - 
+============================================================
+2025-10-15T16:37:03.719200 - [1/5] Processing: EIP Editing Office Hour (EIP + ERC) Meeting #75, Oct 14, 2025
+2025-10-15T16:37:03.719254 -   Meeting IDs: 851 1464 8304
+2025-10-15T16:37:03.719303 -   Date: Oct 14, 2025
+2025-10-15T16:37:07.056428 -   Recording found: 65 minutes
+2025-10-15T16:37:12.489074 - 
+============================================================
+2025-10-15T16:37:12.489261 - [2/5] Processing: PQ Interop #12, October 15, 2025
+2025-10-15T16:37:12.489385 -   Meeting IDs: 899 1066 9821
+2025-10-15T16:37:12.489475 -   Date: October 15, 2025
+2025-10-15T16:37:15.417806 -   ⚠ No recording found
+2025-10-15T16:37:15.418028 - 
+============================================================
+2025-10-15T16:37:15.418123 - [3/5] Processing: All Core Devs - Execution (ACDE) #222, October 9, 2025
+2025-10-15T16:37:15.418200 -   Meeting IDs: 854 5172 3466, 882 6983 6469, 913 4859 2283, 875 9142 7897
+2025-10-15T16:37:15.418269 -   Date: October 9, 2025
+2025-10-15T16:37:18.286725 -   Recording found: 94 minutes
+2025-10-15T16:37:25.084033 - 
+============================================================
+2025-10-15T16:37:25.084402 - [4/5] Processing: EIP-7928 Breakout #4, Oct 8, 2025
+2025-10-15T16:37:25.084497 -   Meeting IDs: 889 0262 7473
+2025-10-15T16:37:25.084573 -   Date: Oct 8, 2025
+2025-10-15T16:37:27.905093 -   Recording found: 36 minutes
+2025-10-15T16:37:33.309284 - 
+============================================================
+2025-10-15T16:37:33.309521 - [5/5] Processing: RPC Standards # 14 | October 13, 2025
+2025-10-15T16:37:33.309611 -   Meeting IDs: 879 4371 9720
+2025-10-15T16:37:33.309767 -   Date: October 13, 2025
+2025-10-15T16:37:36.204006 -   Recording found: 76 minutes
+2025-10-15T16:37:41.513168 - 
+============================================================
+2025-10-15T16:37:41.513423 - Uploading 4 meeting folders to GitHub in single commit...
+2025-10-15T16:37:49.091089 - ✓ Successfully uploaded 12 files in single commit
+2025-10-15T16:37:49.095361 - 
+============================================================
+2025-10-15T16:37:49.095455 - === SUMMARY ===
+2025-10-15T16:37:49.095537 - ✓ Successfully processed: 4
+2025-10-15T16:37:49.095605 - ⏭ Skipped (cached/exists): 0
+2025-10-15T16:37:49.095727 - ⚠ No recording found: 1
+2025-10-15T16:37:49.095846 - ⚠ Skipped short recordings: 0
+2025-10-15T16:37:49.095935 - 
+Log saved to: logs/process_log_20251015_163641.txt
+2025-10-15T16:37:49.096012 - Unmatched issues saved to: logs/failed_matches_20251015_163641.json
+2025-10-15T16:37:49.096109 - Failed processing saved to: logs/failed_processing_20251015_163641.json

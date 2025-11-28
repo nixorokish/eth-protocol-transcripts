@@ -1,0 +1,19 @@
+00:01:44	Ansgar Dietrichs:	gm gm
+00:01:50	Ivo Kubjas:	Reacted to "gm gm" with 👋
+00:01:54	Carl Beekhuizen:	Replying to "gm gm"
+
+gm
+00:02:37	Nicolas Consigny:	We can start streaming whenever
+00:04:20	Carl Beekhuizen:	Agenda: https://github.com/ethereum/pm/issues/1461
+00:21:48	Carl Beekhuizen:	Can you elaborate on what you mean by making pricing more “dynamic”, @Tsahi OCL. Similar to what Ansgar was talking about or do you have new mechanisms in mind?
+00:24:50	Carl Beekhuizen:	https://eips.ethereum.org/EIPS/eip-7870
+00:25:05	Carl Beekhuizen:	Replying to "https://eips.ethereu..."
+
+^ hw requirements for L1
+00:25:50	Carl Beekhuizen:	Replying to "https://eips.ethereu..."
+
+Full Node
+4 TB NVMe
+32 GB RAM
+4cores / 8threads
+50 Mbps up / 15 Mbps down

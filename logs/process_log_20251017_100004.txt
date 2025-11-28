@@ -1,0 +1,25 @@
+2025-10-17T10:00:04.117393 - === Processing meetings from last 1 days ===
+2025-10-17T10:00:04.663646 - Step 1: Fetching closed GitHub issues...
+2025-10-17T10:00:27.841826 -   ✓ Found 1 matched meetings
+2025-10-17T10:00:27.842255 -   ⚠ Found 1 potential meetings that didn't match
+2025-10-17T10:00:27.842800 -   Saved 1 unmatched issues to logs/failed_matches_20251017_100004.json
+2025-10-17T10:00:27.842878 - 
+============================================================
+2025-10-17T10:00:27.842938 - [1/1] Processing: All Core Devs - Testing (ACDT) #57, Oct 13, 2025
+2025-10-17T10:00:27.843002 -   Meeting IDs: 842 5123 7513, 884 7930 8162, 864 6616 9680
+2025-10-17T10:00:27.843061 -   Date: Oct 13, 2025
+2025-10-17T10:00:31.432381 -   Recording found: 63 minutes
+2025-10-17T10:00:36.304823 - 
+============================================================
+2025-10-17T10:00:36.304913 - Uploading 1 meeting folders to GitHub in single commit...
+2025-10-17T10:00:43.099439 - ✓ Successfully uploaded 3 files in single commit
+2025-10-17T10:00:43.103884 - 
+============================================================
+2025-10-17T10:00:43.103995 - === SUMMARY ===
+2025-10-17T10:00:43.104072 - ✓ Successfully processed: 1
+2025-10-17T10:00:43.104147 - ⏭ Skipped (cached/exists): 0
+2025-10-17T10:00:43.104219 - ⚠ No recording found: 0
+2025-10-17T10:00:43.104286 - ⚠ Skipped short recordings: 0
+2025-10-17T10:00:43.104352 - 
+Log saved to: logs/process_log_20251017_100004.txt
+2025-10-17T10:00:43.104420 - Unmatched issues saved to: logs/failed_matches_20251017_100004.json

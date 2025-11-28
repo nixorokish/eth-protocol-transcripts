@@ -1,0 +1,1194 @@
+WEBVTT
+
+1
+00:03:15.000 --> 00:03:21.640
+Joshua Rudolf: Hey, Miss Love, excited to have you present today. It's gonna be a good one.
+
+2
+00:03:21.640 --> 00:03:24.390
+Mislav: Having me very excited to present.
+
+3
+00:03:24.940 --> 00:03:26.310
+Joshua Rudolf: Yeah, that's gonna be good.
+
+4
+00:03:33.810 --> 00:03:35.570
+Joshua Rudolf: Hello, everybody.
+
+5
+00:03:36.570 --> 00:03:37.570
+Oscar Morke ┃ Ledger: Hello! And all.
+
+6
+00:03:38.290 --> 00:03:40.010
+Joshua Rudolf: Thank you for joining.
+
+7
+00:03:40.150 --> 00:03:43.790
+Joshua Rudolf: Let's see. Got some AI's hopping in
+
+8
+00:03:58.610 --> 00:04:01.570
+Joshua Rudolf: noisy ais.
+
+9
+00:04:02.700 --> 00:04:04.160
+Joshua Rudolf: Welcome, welcome.
+
+10
+00:04:06.620 --> 00:04:07.470
+Orest Tarasiuk (t1): Hey, guys.
+
+11
+00:04:10.410 --> 00:04:11.070
+Mislav: So.
+
+12
+00:04:30.820 --> 00:04:32.359
+Joshua Rudolf: Looking tropical mom.
+
+13
+00:04:35.570 --> 00:04:36.110
+Orest Tarasiuk (t1): I'm tired.
+
+14
+00:04:36.110 --> 00:04:37.659
+Orest Tarasiuk (t1): Aropolis style.
+
+15
+00:04:38.340 --> 00:04:41.999
+Nam: Yeah, I the number of comments I've gotten about this
+
+16
+00:04:42.490 --> 00:04:48.219
+Nam: high, because, like normally, I only ever wear a high ceiling shirt. And everybody's like instantly like, what are you wearing? Why are you doing this?
+
+17
+00:04:51.540 --> 00:04:55.249
+Nam: But yeah, or else you look, you look interoperative style. Where is that.
+
+18
+00:04:56.660 --> 00:05:01.380
+Orest Tarasiuk (t1): This is a team off site in Turkey is mia.
+
+19
+00:05:02.000 --> 00:05:04.830
+Orest Tarasiuk (t1): So it's actually very close to Athens.
+
+20
+00:05:05.160 --> 00:05:08.420
+Orest Tarasiuk (t1): and I think the vibe is quite interrupted to see.
+
+21
+00:05:10.310 --> 00:05:11.100
+Joshua Rudolf: Nice.
+
+22
+00:05:12.260 --> 00:05:15.749
+Joshua Rudolf: I still have my interrupt list shirt. It's a good one. Good swag for me.
+
+23
+00:05:16.270 --> 00:05:16.789
+Orest Tarasiuk (t1): Nice.
+
+24
+00:05:19.450 --> 00:05:20.799
+Joshua Rudolf: Alright, we can.
+
+25
+00:05:20.800 --> 00:05:22.790
+Orest Tarasiuk (t1): Pico didn't happen. Josh.
+
+26
+00:05:23.550 --> 00:05:29.200
+Joshua Rudolf: Yeah, it's true. Now. The the swag from Interopolis was top notch.
+
+27
+00:05:29.670 --> 00:05:30.420
+Joshua Rudolf: Good branding.
+
+28
+00:05:31.820 --> 00:05:33.630
+Orest Tarasiuk (t1): I have it on me as well.
+
+29
+00:05:34.560 --> 00:05:35.610
+Orest Tarasiuk (t1): So running.
+
+30
+00:05:39.150 --> 00:05:44.190
+Joshua Rudolf: Cool. We'll get started here in a second share. The agenda.
+
+31
+00:06:07.810 --> 00:06:15.140
+Joshua Rudolf: All right. Let's get started cool. This is the Inter. L. 2 interrupt working group call Number 10
+
+32
+00:06:15.290 --> 00:06:30.409
+Joshua Rudolf: shared the agenda in the chat. We have 3 main agenda items today, starting off with a presentation from biconomy on enabling gasless one-click ethereum. After that we have an update on the
+
+33
+00:06:30.580 --> 00:06:50.830
+Joshua Rudolf: kohaku, which is a prototype wallet for interop and privacy being worked on by the Ef and Wonderland team, and then last up, we have a discussion on base roll-ups, and how they potentially fit in into the general sort of interop acceleration
+
+34
+00:06:51.030 --> 00:06:57.540
+Joshua Rudolf: work, happening more broadly in the ethereum ecosystem, and we have a few special guests coming
+
+35
+00:06:57.690 --> 00:07:00.200
+Joshua Rudolf: who will present their thoughts on base roll-ups
+
+36
+00:07:01.800 --> 00:07:05.140
+Joshua Rudolf: cool. So yeah, let's kick things off with Muslav.
+
+37
+00:07:05.280 --> 00:07:06.500
+Joshua Rudolf: Whenever you're ready.
+
+38
+00:07:06.920 --> 00:07:12.803
+Mislav: Yeah, I'm ready. Hello, everyone. I'm just gonna do the classic. Can you see my screen.
+
+39
+00:07:13.150 --> 00:07:13.659
+Joshua Rudolf: Yep.
+
+40
+00:07:14.170 --> 00:07:40.790
+Mislav: Yeah, all right, great. So we got a lot of ground to cover, so won't be saying too much. I'm mislove. I'm the Vp of product at Bykonomy been working as an ethereum evm developer, researcher, evangelist since 2016. So been quite a while. And this is something I'm extremely proud to present. It's the culmination of basically 2 years of my life. And together with by economy and other people who have
+
+41
+00:07:40.790 --> 00:08:10.609
+Mislav: contributed on this, is basically we call them verifiable multi-chain scripts. These are scripts which are injected into call data and executed on chain. But I'll show you much more about them. But what they enable is gasless, one click ethereum and a few other things. But this is what we're going to focus on today. So the idea here is that the web. 3 Ux and Devx still, aren't that great? We've made enormous strides since, like I joined in 2016. The difference is now night and day, and things are
+
+42
+00:08:10.610 --> 00:08:37.539
+Mislav: going in a great direction. But signing multiple transactions across chains is still kind of a nightmare. So you go, you know, approve plus execute. But then you wait for the bridge to complete. Then you do something on the destination. If there are multiple chains that are, you know the destinations, then it becomes even more complex. Writing smart contracts for simple logic is Overkill. I am a firm believer that we are writing way too many smart contracts, and that a lot of these things need to be
+
+43
+00:08:37.539 --> 00:09:03.990
+Mislav: able to be written in other languages and then injected into blockchain through a scripting engine, which which I'll explain and gas management and transaction batching is still kind of complex. And for batching, I think it's kind of primitive, because you can only batch static call data which doesn't really respond to like changes with on-chain conditions. Division number one make every action a single signature, no matter how many
+
+44
+00:09:04.000 --> 00:09:20.579
+Mislav: function calls chains or what span of time it it spans. It should always be a single signature vision number 2 make gas, a thing of the past, even for Eoa users. And I would say, even for non. 7, 7, 0 2 users we need to like really get
+
+45
+00:09:20.580 --> 00:09:50.479
+Mislav: the entire ethereum ecosystem, forgetting about like manual gas management by users and enable division number 3. And this one might be the most ambitious, is enable non-contract developers to write like 90% of the application code for any any ethereum application or evm application. And so I'm going to show you a quick demo of what I mean by gasless one click ethereum. So you can see here, I'm in like the worst case situation for
+
+46
+00:09:50.480 --> 00:10:19.440
+Mislav: Evm user. I've got 10 Usdc on arbitrum, and I want to supply to a Morpho finance pool, which is on base, and I need to supply we. So I've got the wrong token on the wrong chain, and, to make matters worse. I don't have gas on arbitrum. I don't have gas on base, and, to make matters even worse, I'm using a regular eoa account that hasn't been upgraded to 7,702. And so what you can see here now that we
+
+47
+00:10:19.440 --> 00:10:22.850
+Mislav: we are able with, I'm on the local machine.
+
+48
+00:10:22.930 --> 00:10:26.615
+Mislav: So we are able essentially to
+
+49
+00:10:28.060 --> 00:10:39.120
+Mislav: to execute. These multi-chain flows gaslessly and orchestrate them across chains. So what you can see now is, I have signed an Erc, 20, permit message that
+
+50
+00:10:39.120 --> 00:11:03.019
+Mislav: moves my funds to an orchestrator contract. This is a smart account owned by the user. The orchestration across multiple chains is happening on that orchestration smart account owned by the user, and the end results after everything is done are transferred to the user's eoa. I can go to Morpho and see now that I should have. Sometimes it takes a while to update, but we can check it on chain
+
+51
+00:11:03.020 --> 00:11:27.400
+Mislav: that I have actually executed 2 transactions on 2 chains with a single gasless signature by the user. And if I go to base scan, I can see that I did actually receive re, 7, we on base. So this is the type of things that we can achieve with multi-chain scripting and the framework that we have built my presentation. So I'm kind of trying to get a lot across in a
+
+52
+00:11:27.400 --> 00:11:37.730
+Mislav: bit of time. So what we do is we change the model from transactions into what we call super transactions. Super transactions are essentially
+
+53
+00:11:38.140 --> 00:11:54.270
+Mislav: multiple function calls across multiple chains condensed into a single hash by the usage of a Merkle tree. Basically, we hash all the instructions, put them into a merkle tree, and then the user signs the root hash of the merkle tree, which approves all the function calls across all chains.
+
+54
+00:11:54.270 --> 00:12:18.199
+Mislav: This is how a super transaction looks. So you have payment instructions on any chain. And yeah, very important. This supports cross chain gas. You can pay for gas in Erc 20 tokens or sponsor gas across chains. So pay for gas on optimism with, like Usdc on polygon or arbitrum, or wherever these are like optimism, arbitrum polygon instructions. You hash all of them. You get this super transaction hash. When the user signs that hash.
+
+55
+00:12:18.250 --> 00:12:33.749
+Mislav: They approve all of the actions across all of the chains, asynchronous ordering. Obviously, if you're going across chains sometimes, you're going to have asynchronous execution where the next transaction needs to wait for the previous one. We do this by the usage of preconditions. So, for example, in this case.
+
+56
+00:12:33.750 --> 00:12:54.610
+Mislav: the transaction on the destination chain didn't execute until it received a predefined minimum amount of funds. But this was not done by the relayer. This was not done by the bundler or the off chain infrastructure. This was actually enforced in the encoded call data that was encoded when we were building this super transaction. So the
+
+57
+00:12:54.610 --> 00:13:19.299
+Mislav: the destination chain transaction cannot even execute on chain until all preconditions are met. This is done so that the entire system is trustless and permissionless. This is essentially how the ordering works. You simulate the transaction until it stops reverting, and again all the preconditions are encoded into the call data itself, so it will keep reverting until, like everything is met, and then the relayer. Once the simulation stops reverting.
+
+58
+00:13:19.300 --> 00:13:29.630
+Mislav: it executes the next transaction in order composable batch executes. So one very important thing is, if you do a swap, then supply. You cannot know ahead of time
+
+59
+00:13:29.640 --> 00:13:42.880
+Mislav: how much you'll actually get from the swap right there is Mev. There is slippage. There is unknown runtime conditions. What we can do in this scripting is intercept any function call, and instead of having a predefined
+
+60
+00:13:42.940 --> 00:14:12.429
+Mislav: parameter like supply, 100 Usdc. You can say, Hey, supply, however, much was received from the previous transaction, dynamically injected on chain into the parameter during runtime. And this is basically how it's done, you say, like encode composable function data lending protocol, and instead of putting the amount as a fixed amount, you say, give me the Runtime Erc. 20 balance of some token on some account, and inject it as a parameter into the next function. Call
+
+61
+00:14:12.430 --> 00:14:36.530
+Mislav: Erc. These super transactions interplay really nicely with Eip. 7,702 and Erc 7,715. Basically, you don't really want these scripts to execute directly on your main account or your Eoa, because they can access all of the funds on that account where they are executing. So you want to sandbox the account for security. What you saw in the demo was us actually approving a fixed amount of
+
+62
+00:14:36.530 --> 00:14:54.670
+Mislav: tokens to this orchestrator account to execute basically these transactions. So it's always sandboxed. The script can never access more than you actually gave it. Right now, we are using like normal. Erc, 20 approve or Erc 20 permit signatures. But when Eip, 7,702
+
+63
+00:14:54.670 --> 00:15:18.099
+Mislav: comes into play and becomes more prevalent. We can use Erc 7,715 to request funds from the user's account to the orchestrator account and then execute there. This is extremely, extremely secure, and it uses basically the browser-based model of like sandboxing requests from applications and showing to the user the maximum amount of funds that any application can access at any time.
+
+64
+00:15:18.552 --> 00:15:38.580
+Mislav: And now this is like very esoteric. We're still not there in in our building. But we already have a plan for this. These scripts can be general purpose during complete. Basically, they can include, if else conditionals, loops, schedulings, early halt and everything. So anything, basically that you can build with like a contract you would be able to build with these scripts.
+
+65
+00:15:38.580 --> 00:16:01.920
+Mislav: They're not a match for everything that a smart contract is a match for. But you could like store something to transient storage from the previous instruction. Read it in the next instruction, and then do all of this. So it's important you can. It's all encoded in the call data. So this is very important for me to emphasize. There is nothing happening off chain in a trusted environment. There is nothing that you have to trust beyond the blockchain code itself.
+
+66
+00:16:01.970 --> 00:16:19.499
+Mislav: The relayer only posts this specially encoded call data on chain. But then all validation of like conditionals, loops, holds preconditions. Everything is done by a smart contract on chain, and we are now working on a typescript scripting Dsl, where basically, it's
+
+67
+00:16:19.990 --> 00:16:48.490
+Mislav: a very easy way to write multi-chain scripts which are verified on chain and and execute there. But like you write it in a very natural sort of like domain specific language, which is a library in typescript. We call it abstract. Js, if you want to play around with this. This is in production today. We already have clients using this. Go to docs. Biconomyio, get in touch with me. I am ox Shaman. This is not 0 X. This is ox
+
+68
+00:16:48.490 --> 00:17:03.170
+Mislav: on telegram and on Twitter. I am ox underscore shaman. And yeah, I have to mention some of our core technical contributors who made this happen. And yeah, this is the end of my presentation. I hope I was on time.
+
+69
+00:17:05.329 --> 00:17:07.309
+Joshua Rudolf: That was perfect. Thank you so much.
+
+70
+00:17:08.529 --> 00:17:10.549
+Joshua Rudolf: Any quick questions for Muslav.
+
+71
+00:17:12.140 --> 00:17:20.910
+CJ Cobb: I had a quick question. The 1st transaction like you said there was no gas like, where did the gas come from? The user didn't have gas. How did you get it started?
+
+72
+00:17:21.200 --> 00:17:51.000
+Mislav: So you get it started here. In this case this was a token that supports erc 20 permit. So you signed an off chain message which permitted the orchestrator account to spend the funds from the Eoa. And then within that erc 20 permit message. We actually inject the hash of the root merkle tree, so that at the same time you sign both the permission for tokens to be spent, and you approve all of the instructions. So this is kind of a
+
+73
+00:17:51.240 --> 00:18:13.360
+Mislav: let's call it a hack until we have Erc 7,715 fully available, so we can do it with like Erc 20 permit tokens. If the token didn't support Erc 20 permit, we can do it by actually appending the super transaction hash to the call data of a normal Erc 20 approved call. Then you just need to have enough gas for like approve.
+
+74
+00:18:13.490 --> 00:18:31.199
+Mislav: You don't need the gas for the entire instruction set just for the approval of the token, to the to the orchestrator account. But even then, like some of our clients, they will like just refund that small amount of gas, because it's a deterministic amount you always just need for one approved call. And and that's it.
+
+75
+00:18:31.740 --> 00:18:32.900
+CJ Cobb: Okay. Thanks.
+
+76
+00:18:34.470 --> 00:18:44.230
+Skele | Wonderland: I have a quick one. By the way, this is amazing congrats. My question is on the example you did with the view balance function.
+
+77
+00:18:44.836 --> 00:18:50.530
+Skele | Wonderland: Is it possible to also use the return value? Or, for example, a swap, a non view function.
+
+78
+00:18:50.780 --> 00:19:08.980
+Mislav: Yes, you can inject anything. So basically, you can call any function call, or you can get the return value of any previous instruction. So this is now working in a sort of single instruction context. But if you look in how we usually do it in our examples.
+
+79
+00:19:08.980 --> 00:19:37.250
+Mislav: we will always say, for example, execute composable batch calls, there will always be multiple instructions. So, for example, approve, then swap, then approve, then deposit, and in those you will always have like an argument that's done like this. But then you can also, in this instruction you can store the output of this instruction into transient storage and then use that transient storage as a as a as a parameter. In the next next function, call.
+
+80
+00:19:38.190 --> 00:19:47.970
+Skele | Wonderland: Perfect that makes sense, thanks, and a follow up question. Since you were mentioning transient storage, this assumes you are atomically executing all the instructions
+
+81
+00:19:48.160 --> 00:19:50.570
+Skele | Wonderland: on the chain of execution. Right.
+
+82
+00:19:50.700 --> 00:20:16.539
+Mislav: Yes, single chain execution is atomic, so all the instructions on a single chain are batched into an atomic bundle. But if you go across chains, then it becomes non atomic. But we do have like a cleanup system where you can define cleanup transactions in case any of these destination chain transactions fails. How do you handle this gracefully and fall back? But yes, to answer your question. Everything on the same chain is atomic.
+
+83
+00:20:17.290 --> 00:20:19.250
+Skele | Wonderland: Perfect. Thank you.
+
+84
+00:20:28.740 --> 00:20:31.299
+Joshua Rudolf: Okay, great thanks. Again for the presentation. Islaf.
+
+85
+00:20:31.900 --> 00:20:32.810
+Mislav: Yeah, cheers.
+
+86
+00:20:35.270 --> 00:20:36.850
+Mislav: Thank you for having me.
+
+87
+00:20:37.800 --> 00:20:38.520
+Joshua Rudolf: Absolutely.
+
+88
+00:20:38.847 --> 00:20:55.889
+Nam: Sorry. Maybe one quick question if I can. Still what like? What is the like? Integration mode? If you wanted to support. Like a new bridge or new chain. Is that something that, like the team has to do? Is it something that, like people can do themselves like.
+
+89
+00:20:56.090 --> 00:21:16.400
+Mislav: You can do it yourself. Basically, the idea is that this just orchestrates call data. Right? It just does, multiple function calls across multiple chains composably. As long as a bridge can be triggered by calling an on chain function like a contract function call. You can integrate it yourself. You don't need to ask us for for integration.
+
+90
+00:21:17.310 --> 00:21:34.649
+Nam: Cool. And what about like a new chain like, I guess, like right like, if I want to like, I don't like launch nom chain. I want to have this part experience of non chain like, can I do that myself as well? Do I have to talk to you guys about getting like your like. I assume, like you will have specific relayers that you'll run to make this happen, or.
+
+91
+00:21:34.850 --> 00:21:44.410
+Mislav: So we don't run relayers. We have a network of relayers. Basically, it's it's a permissionless network. You can. You can join it by like
+
+92
+00:21:44.680 --> 00:21:58.759
+Mislav: getting behind the Pathfinder. So there's now like a lot of like network architecture that we do there with the relayers. I purposefully kind of skip that for brevity. But yeah, it's in principle, it's permissionless. As long as you like. Stake tokens. Because
+
+93
+00:21:58.820 --> 00:22:27.199
+Mislav: one thing that I also didn't mention you stake tokens to guarantee liveness of execution. So there's also a slashing mechanism. If you don't execute like what you promised to execute as a relayer like you will get slashed, and it's all like censorship, resistant and trustless and permissionless. But essentially you stake tokens, and that enables you to join the network, and then you can join on another chain that you want to join. Like, add another chain, and as far as the contracts go they are open source contracts that you can permissionlessly deploy
+
+94
+00:22:27.569 --> 00:22:37.919
+Mislav: on on any chain. So they're just like similar to account abstraction contracts. They're they're you just need to deploy them on a chain to to add support.
+
+95
+00:22:38.620 --> 00:22:39.800
+Nam: Cool. Thank you.
+
+96
+00:22:41.630 --> 00:22:45.709
+Marc: And a follow up on that question, is that network like
+
+97
+00:22:46.890 --> 00:22:50.820
+Marc: specific like a private network? Or is it like a
+
+98
+00:22:52.700 --> 00:22:56.800
+Marc: Is there an Erc for for that network to participate as earlier.
+
+99
+00:22:57.879 --> 00:23:20.459
+Mislav: Anyone can join as a relayer for the network. In principle, it's I didn't, wanna you know. I promise not to not to shill like the token stuff and stuff. But it's in principle. You have to just stake the the Bico token, and and then you can join. It's a public network. It's a permissionless network in in principle, like we're still working on the fully permissionless aspect. To be honest, we kind of have, like
+
+100
+00:23:20.660 --> 00:23:36.649
+Mislav: 10 Major Node operators. Now who are running these nodes. But the core idea that we outline in the light paper and the white paper is that we really want like to have hundreds of node operators supporting thousands of chains, because the interesting thing about this super transaction, if
+
+101
+00:23:36.800 --> 00:24:04.779
+Mislav: if there is like one node that can execute on one chain. But you have a super transaction that touches some chain that that node cannot execute. You can split a single super transaction to be executed across multiple nodes. So this means that in a future where we might have like 100 500, a thousand ethereum roll ups, you would be able to always find a combination of nodes that can execute your entire path right? So that was also one of the big design decisions. When we were building the protocol.
+
+102
+00:24:06.620 --> 00:24:07.650
+Marc: Okay. Thank you.
+
+103
+00:24:13.970 --> 00:24:24.169
+Joshua Rudolf: Okay, great. Well, let's move on. And yeah, if any further discussion or questions, yeah, please message me, Slav, on telegram, or we can continue the conversation in the telegram group. As well
+
+104
+00:24:24.860 --> 00:24:25.570
+Joshua Rudolf: cool.
+
+105
+00:24:25.720 --> 00:24:33.940
+Joshua Rudolf: Next up we have the kohaku wallet, which I will actually start off with sharing my screen here.
+
+106
+00:24:34.820 --> 00:24:35.635
+Joshua Rudolf: Second.
+
+107
+00:24:41.670 --> 00:24:45.170
+Joshua Rudolf: Okay, hopefully, you all can see my screen.
+
+108
+00:24:46.290 --> 00:24:47.489
+Joshua Rudolf: Second review.
+
+109
+00:24:48.820 --> 00:25:10.420
+Joshua Rudolf: Cool. Okay. Well, I just want to take a couple of minutes here to give a quick overview around Kohaku. What kohaku is, what our goals are, and just share a little bit briefly around. Yeah, why, we are excited for this work. And why we think this can be something valuable in terms of
+
+110
+00:25:10.700 --> 00:25:12.600
+Joshua Rudolf: yeah, helping
+
+111
+00:25:13.050 --> 00:25:42.430
+Joshua Rudolf: accelerate innovation and just general ux improvements at the wallet layer, which is a critical layer for interop. I think we all agree over the next 6 to 12 months in particular. So yes, what is kohaku? It's a prototype wallet for interop and privacy being developed by the Ef. And the Wonderland team. Yeah, very big. Shout out. And thanks to the Wonderland team who's doing a lot of the heavy lifting behind the scenes for the kohaku wallet.
+
+112
+00:25:42.520 --> 00:25:56.170
+Joshua Rudolf: and also, yes, big thank you. And Big shout out to the Ambier team, Kohaku is a fork of Ambuyer and kohaku is Japanese for amber. So that's the name. Goals
+
+113
+00:25:56.290 --> 00:26:13.110
+Joshua Rudolf: like I mentioned, I think, sort of prototype emerging standards for interrupt and privacy and just general acceleration of ux improvements. There are many, I yeah, very confident, very bullish on a lot of the improvements and innovation happening at the wallet layer over the next
+
+114
+00:26:13.110 --> 00:26:30.559
+Joshua Rudolf: 6 or 12 months. But I think it's something that we really can't over invest in again just such a critical area for ethereum so excited to have this as just another effort to be collaborating, closely, collaborating closely with all of this existing wallet teams on this as well.
+
+115
+00:26:30.590 --> 00:26:36.440
+Joshua Rudolf: And yeah, just to emphasize this is A for testnet and prototype purposes only
+
+116
+00:26:36.540 --> 00:26:53.850
+Joshua Rudolf: really quickly some of the main features. Maybe I'll just go through the v 1 here. The v 1 is integrating interoperable addresses. Aka chain, specific addresses, 7, 8, 2, 8, 7, 9, 3, 0, also integrating the open, intense framework, and 7, 6, 8, 3 across to support
+
+117
+00:26:53.850 --> 00:27:08.010
+Joshua Rudolf: cross chain sends, and then the last big piece of the v 1 feature here is universal balances, universal balance views which is displaying. Yeah, aggregating same asset balances across chain. So rather than having
+
+118
+00:27:08.020 --> 00:27:35.300
+Joshua Rudolf: 7 different flavors of Eth or 6 different flavors of Usdc to the user sort of yeah, abstracting that away, and showing that as a single asset to the users, I'll drop a link to this and drop a link to the roadmap, so you can sort of. We can spend more time for anyone that wants to dig more into the to the roadmap. Here, I'll just share this really quickly. We have some screens here, showing, yeah, what chain specific addresses can look like.
+
+119
+00:27:35.490 --> 00:27:43.059
+Joshua Rudolf: Here it is in the send screen, using something like Alice at arbitrum and the open, intense framework.
+
+120
+00:27:46.220 --> 00:27:48.890
+Joshua Rudolf: Here's yeah, universal balance fuse.
+
+121
+00:27:49.460 --> 00:27:50.760
+Joshua Rudolf: And
+
+122
+00:27:51.220 --> 00:28:01.750
+Joshua Rudolf: yeah, another example of universal balances here. And I think, actually, we have Titi here from the Wonderland team, who's gonna yeah, maybe spend a bit more time sharing some of the details. And
+
+123
+00:28:02.210 --> 00:28:04.449
+Joshua Rudolf: yeah, going to these screens a bit more.
+
+124
+00:28:04.760 --> 00:28:06.249
+Joshua Rudolf: Tt, whenever you're ready.
+
+125
+00:28:07.120 --> 00:28:10.149
+TiTi (Wonderland): Great let me share my screen as well.
+
+126
+00:28:10.570 --> 00:28:16.389
+TiTi (Wonderland): Man's gonna okay. Hope you can see.
+
+127
+00:28:17.850 --> 00:28:18.500
+Joshua Rudolf: Perfect.
+
+128
+00:28:19.660 --> 00:28:45.919
+TiTi (Wonderland): Okay, I was going to give you some updates on the interoperable addresses standards. But let me 1st go through a little bit more details on the wallet stuff. So as Josh mentioned, we are working on having an SDK that is protocol and well diagnostic, and we are integrating it into kohaku. That is, fork, as he mentioned
+
+129
+00:28:45.920 --> 00:28:58.999
+TiTi (Wonderland): as a as a prototype. But the idea is to have an amazing developer experience to make it really easy for all wallets to to adopt all these features that really improve the user experience.
+
+130
+00:28:59.000 --> 00:29:27.270
+TiTi (Wonderland): As the 1st version, we are supporting the standards of interoperable addresses. Both the the serialization and also the resolution. Because for I'm going to go into more details later with the interrupt addresses, standard stuff. But we are moving the Github chain list on chain, and it's part of the resolution of the address which looks something like this
+
+131
+00:29:27.380 --> 00:29:38.609
+TiTi (Wonderland): uninterrupt address. So our SDK already supports the resolution of this right now through the Github list, and then it's going to be moved into an on-chain resolution.
+
+132
+00:29:38.710 --> 00:29:58.830
+TiTi (Wonderland): And it's going to be extremely smooth for wallets to just upgrade the dependency and have that ready on their end for for it. And then the other portion that it's supported on the 1st version is the cross chance, and we are able to do that through the through supporting Erc. 7,683.
+
+133
+00:29:58.830 --> 00:30:24.079
+TiTi (Wonderland): Thanks to all the work from Oif and the universal balances right now is going to be a display that is going to look something like this, as Josh mentioned, integrating like aggregating all the flavors. When you have Eve, you don't have to care where you have it right now, it's going to show you the aggregated balance, and on the next version that we are start working on.
+
+134
+00:30:24.080 --> 00:30:40.780
+TiTi (Wonderland): you're going to be able to use this as a chain agnostic asset, to do cross chain, transfer swaps and everything. And again, this is something we can do, thanks to the because they are also working on supporting multiple inputs
+
+135
+00:30:40.780 --> 00:31:03.849
+TiTi (Wonderland): into when you open the intense. So it would have like this sort of multiple legs to be resolved atomically on the solver side. Then, if the user wants to transfer, I don't know like to if to bob at Mainnet, and at least being our user has. If in in our bedroom on base
+
+136
+00:31:04.254 --> 00:31:33.369
+TiTi (Wonderland): and it's going to care only about the the total balance she has of Eth, and then just triggers the transaction to send to Eth to Bob without thinking about where the the asset is on which chain that will be fully obstructed to the users. Thanks to the efforts on this and the solvers that will support this, and then this is like mainly the main improvement we can do on
+
+137
+00:31:34.101 --> 00:32:00.410
+TiTi (Wonderland): interrupt and cross chain. Calls. But on top of that we are also integrating privacy. So privacy. It's a little tricky, because you need to know a lot about Ck, and then you care about like, what if I leak information? What if somehow it's able, like trustability. So we're thinking all that as as a system of the ux that we need to provide for the users to have privacy adopted.
+
+138
+00:32:00.701 --> 00:32:12.349
+TiTi (Wonderland): I will go like really quick through this, because I think we don't have much time, but of course feel free to reach out to us. If you have any questions, suggestions, anything, we are more than open to that.
+
+139
+00:32:12.350 --> 00:32:37.677
+TiTi (Wonderland): The idea is to have the to have privacy natively into the wallet. So you don't have to download something like another app or interact with a different website to get a privacy on chain. This will be done inside the wallet. Thanks to our SDK, that right now is going to support privacy pools as the privacy protocol and
+
+140
+00:32:38.310 --> 00:33:03.179
+TiTi (Wonderland): And yeah, we're going to focus mainly on on this amazing developer experience. So you will be able to like, select a private mode and you will have already bureau balance. There are some details and stuff like, for instance, you would need to so if you transfer a specific amount that would be like leaking or allowing some traceability. Then we have some
+
+141
+00:33:03.180 --> 00:33:08.184
+TiTi (Wonderland): formula for even amounts to be deposited. There are other like
+
+142
+00:33:08.930 --> 00:33:36.929
+TiTi (Wonderland): 7, 7, 0, 2 session key stuff that would allow an automatically, top up. So another thing privacy protocols have is like, you have this window where it's checked that you are a good actor to then get your funds mixed with others. So here's what you can see here on the pending side, because it's like being reviewed. It's not a Kyc process. It's a compliance process of change of your
+
+143
+00:33:37.040 --> 00:33:43.820
+TiTi (Wonderland): like, the let's say like. And then a chain analysis of of your of your address.
+
+144
+00:33:43.970 --> 00:34:10.619
+TiTi (Wonderland): And then, once you're into the pool. You can withdraw privately, and you can mix within the anonymity set of the volume that is inside of it. But okay, I don't want to get too much into the details. But the thing is that there are many things to be considered when you're integrating privacy into a wallet, and we want to abstract all that to the user. For instance, like creating the Ck proofs and stuff like for the user, I refer to the wallets.
+
+145
+00:34:11.002 --> 00:34:14.059
+TiTi (Wonderland): That are going to be integrating all this.
+
+146
+00:34:14.060 --> 00:34:32.149
+TiTi (Wonderland): and then the user will have this interface where they just use their private if and it sends like to Alice in a private way, like Alice, cannot know what's Bob? Assume this. This is Bob. What's Bob address for this? Okay,
+
+147
+00:34:32.610 --> 00:35:01.909
+TiTi (Wonderland): so this is like a brief overview of the work we're doing for the 1st 2 versions for interrupt and privacy to really improve the Us. And then, if we do have time a little note I wanted to do and recap on the standards we're working on. So we have 7, 9, 30, which is the binary format, and 7, 8, 28, which is the human readable format of these interrupt addresses that mainly look like this
+
+148
+00:35:01.910 --> 00:35:22.599
+TiTi (Wonderland): address. Patching. There have been some concerns about compatibility with cap. 10. And did we have pushed a document that goes into these details? You can check it out. Yeah, the ethereum slash l 2 interrupt repo. But the Tldr is that it is compatible. So that's good news.
+
+149
+00:35:22.800 --> 00:35:52.170
+TiTi (Wonderland): The other thing we're going to work on is to get L. 2 Eth. So through this Second Level domain. We are going to register the chain list data that currently lives inside the Github Repo of Af. It's going to move on chain for on-chain resolution of having the chain Id that corresponds for that chaining. Right now we are awaiting some upgrades that are going to happen on ens
+
+150
+00:35:52.200 --> 00:36:19.510
+TiTi (Wonderland): about a new controller and stuff, and we have already proposed the temperature check on the Nsdao with positive signals. So once the upgrade is done, we are going to create the executable proposal and get L. 2, and after that the chains inside the the current report are going to be moved on chain and get registered for this on-chain resolution of chain. Ids.
+
+151
+00:36:20.703 --> 00:36:28.869
+TiTi (Wonderland): I think I went through that pretty quickly, so feel free to let me know if you have any questions, and I'm going to share all the links through the chat.
+
+152
+00:36:34.590 --> 00:36:37.439
+Joshua Rudolf: Thanks so much. Titi, any questions
+
+153
+00:36:41.530 --> 00:36:47.130
+Joshua Rudolf: cool. And yeah, get in touch anyone that wants to chat more about this or get more involved.
+
+154
+00:36:47.760 --> 00:36:49.920
+Joshua Rudolf: And yeah, thanks again to the Wonderland team.
+
+155
+00:36:50.792 --> 00:36:55.917
+Thomas Clowes | Unruggable - ENS: Hi, Josh, am I quickly alright to ask a question? I'm not sure if there's any process, or if you just ask away.
+
+156
+00:36:56.140 --> 00:36:57.400
+Joshua Rudolf: No go. Yeah, go for it.
+
+157
+00:36:58.088 --> 00:37:19.589
+Thomas Clowes | Unruggable - ENS: Yeah, thanks for this. Tp, I'm an active participant in the ens dow. So I'm aware of this proposal. I was just curious as to in an ideal world, what your timelines for getting l. 2 east, and this proposal pushed through would be so that I can kind of communicate that within the dow.
+
+158
+00:37:20.120 --> 00:37:24.730
+TiTi (Wonderland): Oh, yeah. Within 2 weeks, for instance.
+
+159
+00:37:26.250 --> 00:37:47.809
+Thomas Clowes | Unruggable - ENS: Okay, I think that that might be optimistic. I know that kind of there's always a certain amount of inertia within ens, and obviously with Vcc coming up. That might be pushy. But yeah, everyone's kind of very compelled to to move this along, so I will feed that back.
+
+160
+00:37:49.710 --> 00:37:51.120
+TiTi (Wonderland): Thank you so much.
+
+161
+00:37:57.660 --> 00:38:01.109
+Joshua Rudolf: Cool. Okay, last up on the agenda. We have
+
+162
+00:38:01.370 --> 00:38:21.599
+Joshua Rudolf: based roll-ups and shared sequencing, and how they can best fit into the accelerate interop vision. We have a few based experts here joining us. So yeah, really excited to have them share their own perspectives here. And I think we will have starting off with Drew from the fabric team.
+
+163
+00:38:21.600 --> 00:38:34.290
+Joshua Rudolf: who can maybe. Yeah. Also, just give a quick refresher on yeah, what are base roll-ups and how they how they can fit into everything here and sort of the broader vision for this. So yeah, Drew, whenever you're ready.
+
+164
+00:38:36.320 --> 00:38:37.170
+Drew Van der Werff: Awesome.
+
+165
+00:38:40.950 --> 00:38:44.950
+Drew Van der Werff: Yeah, just the classic is my screen shared on the presentation.
+
+166
+00:38:45.280 --> 00:38:48.129
+Joshua Rudolf: It's perfect. Yep. We see the the full screen.
+
+167
+00:38:48.300 --> 00:38:49.140
+Joshua Rudolf: Okay.
+
+168
+00:38:49.140 --> 00:38:51.659
+Joshua Rudolf: Want to go into slideshow view or keep it like this. But either way.
+
+169
+00:38:51.660 --> 00:38:55.309
+Drew Van der Werff: Yeah, do that. It's a little tougher that work.
+
+170
+00:38:55.520 --> 00:38:56.100
+Joshua Rudolf: Yep.
+
+171
+00:38:56.700 --> 00:39:05.176
+Drew Van der Werff: Great to meet everyone, and thanks for having us on. I do re-listen to these. I haven't joined any in the past. But yeah,
+
+172
+00:39:06.050 --> 00:39:20.610
+Drew Van der Werff: just a quick intro on 2 efforts that I've helped driving. One is called Commit boost, and one is called fabric. Both are supported by 5 0, 1 c. 3 or nonprofit that is focused on mostly outer protocol infrastructure supporting ethereum
+
+173
+00:39:20.700 --> 00:39:48.600
+Drew Van der Werff: commit. Boost is a new sidecar that allows validators to do things like issue. Pre. Comps. And fabric is both a coordination effort, but also trying to get specs into place that will support based roll-ups and some unification around certain parts of the stack because it makes sense to have it. So that's a bit about that. And yeah, we have grants from across the ethereum community, including some folks from folks on this call. So really appreciate that?
+
+174
+00:39:49.687 --> 00:40:17.360
+Drew Van der Werff: Yeah. So this, you know, there's some debates around interop and based roll-ups. Josh had this Tweet, but I think in my mind, I don't know if Justin's on the call, and I think, when based roles was initially proposed. You know, it was supposed to solve kind of everything. There wasn't a lot of specifics around it, and this is great for meme, but maybe causes confusion or frustration from some, and I think for us at fabric we see
+
+175
+00:40:17.780 --> 00:40:41.469
+Drew Van der Werff: base ropes is a very unique application to solve a certain type of interop, and I don't know if everyone on this call believes in synchronous composability, I think everyone here kind of likes async a bit more, but this is, you know, base ropes may not fit within asynchronous composability. It may not be the best solution. I think we're fully admitting that. But where it does make sense is when you want l. 1 l. 2. Synchronous composability.
+
+176
+00:40:41.470 --> 00:41:06.379
+Drew Van der Werff: And we do think that base ropes is the best solution for that, and it fits well within the context of that. And throughout our journey we somewhat learned. And I'll talk a bit about this, of maybe some middle ground between giving up fully your sequencing rights and implications that has for an L. 2 versus getting like towards being half based, or what we call this thing called Sigma Boost, which I'll get into. But Josh asked this question on Twitter the other day. Jason, who is the technical lead
+
+177
+00:41:06.380 --> 00:41:12.790
+Drew Van der Werff: for fabric, couldn't join because he had an appointment that he just absolutely couldn't move. And
+
+178
+00:41:12.790 --> 00:41:37.749
+Drew Van der Werff: this is kind of his view is the Holy Grail is l. 1 to L. 2. Synchronous composability. And there are multiple solutions to get there. We're obviously biased. But we think that to have that Holy Grail, particularly with the l. 1, you need a shared sequencer, which there are other solutions for that. But you need tight coordination with the l. 1 proposer, and then you need to rework with the l. 1. And the reason for that one proposer is most. You know.
+
+179
+00:41:37.750 --> 00:41:46.659
+Drew Van der Werff: they have the monopoly over the block in ethereum. And so that's, you know, somewhat of our view. Base roll-ups happens to fit these 3 requirements
+
+180
+00:41:47.210 --> 00:42:14.490
+Drew Van der Werff: and a bit of a view on maybe, like the intent based ecosystem. This is kind of a bit of a jab, but hopefully, in a friendly way versus what we get with synchronous composability to sort of say here, you know, I believe in. We need this intense. We need the chain to act like one chain. But it really isn't 1 chain. It's a bunch of things strung together, and I'm not saying based isn't also strung together, but at least with synchronous composability. It forces you to be one chain.
+
+181
+00:42:14.490 --> 00:42:38.389
+Drew Van der Werff: and you know personally just a bit skeptical of all this liquidity, provisioning things that have to happen, and I come from Tradfi and just would encourage people to read the front of the Wall Street Journal in 2,008, 2,009, when liquidity did dry up. But I know in the near term it's a great solution, and maybe in the long term we can solve some of these things so it can become more robust. But with synchronous composability, the advantages you get is.
+
+182
+00:42:38.390 --> 00:43:00.109
+Drew Van der Werff: it's just a more general purpose solution. You don't need the liquidity requirements to go across roll-ups, or between the l. 1 and L. 2. Excuse me across base roll-ups in between l. 1 and L. 2, and then, from a developer experience. You know, you really just have to deploy in one place on the l 1 or on a base roll up and anyone can access that. And so it's just streamlined for those developers.
+
+183
+00:43:01.067 --> 00:43:07.309
+Drew Van der Werff: This is what a base roll up is. I know I just started it without explaining it. For those who
+
+184
+00:43:07.980 --> 00:43:20.239
+Drew Van der Werff: don't know. Hopefully, most people on this call do. This is Justin Drake's definition. I simply just think of it as today. You have what we call classic roll-ups. They're running their centralized sequencer.
+
+185
+00:43:20.520 --> 00:43:32.929
+Drew Van der Werff: Get rid of that centralized sequencer and replace it with an ethereum validator or a proposer. And that's somewhat a rough estimate of what a base roll-up is, I think the other thing to just dispel. And what worked a lot to do is
+
+186
+00:43:33.270 --> 00:43:39.240
+Drew Van der Werff: based. Rope's narrative has been pitched as somewhat of like a eth value accrual, or.
+
+187
+00:43:39.320 --> 00:43:47.180
+Drew Van der Werff: you know, an ethereum aligned thing to do, and the only reason you do is to become aligned. As I've mentioned. I think it actually
+
+188
+00:43:47.180 --> 00:44:11.650
+Drew Van der Werff: is a unique thing that ethereum can provide for the end. Users of ethereum. It, you know, obviously will help with value cruelty theoretically. But it's more about what ethereum can do for you, not what you can do for ethereum. And so that's 1 of the things we just operate under is what are the unique benefits of using ethereum as your sequencer. And what can that provide to the end user of ethereum itself, which in this case are roll up developers.
+
+189
+00:44:13.340 --> 00:44:29.899
+Drew Van der Werff: So here are 5 different pitches of why you'd want to become based and the benefits you get from using that I kind of mentioned this 1st one. But as a roll up developer or your role that becomes based, you don't have to focus so much on
+
+190
+00:44:30.210 --> 00:44:58.970
+Drew Van der Werff: getting Usdc on your chain, getting an oracle on your chain like chain link on there you get to inherit a lot of the infrastructure that's already there, and the liquidity on the l 1 and other base roll-ups. So it's pretty creative in the sense of as more base roll-ups launch. You get to benefit from that, you know, not specifically unique to base roll-ups. It just is a little more natural because of the way the technology is built. You only have to develop your app. In one place you launch it, and everyone can access it.
+
+191
+00:44:59.050 --> 00:45:17.779
+Drew Van der Werff: While there are some debates around liveliness and censorship because of things like gateways and pre-comps. There is this general consensus that we're trying to get towards a more permissionless full pipeline. And so, yeah, there are liveliness and censorship resistance benefits you do get from being based
+
+192
+00:45:17.930 --> 00:45:29.520
+Drew Van der Werff: and then mitigate regulatory risk. If you're running centralized sequencer. Obviously the Feds know who you are, it's a little harder to shut something down when it's on the l 1. Validators. And then
+
+193
+00:45:29.860 --> 00:45:42.630
+Drew Van der Werff: we have thought a lot about customization of the sequencing. We think this is an underexplored area within the context of base roll-ups. We have some research and posts coming about this. We thought about this in the context of Commit boost a lot, and how
+
+194
+00:45:42.670 --> 00:46:01.260
+Drew Van der Werff: validators can sell sequencing rules to end users mainly in the ford and precomps. But there's a whole host of other ideas people can have, and roll-ups could request all the way from, you know. Where do my block by tip? There's a whole host of things people look at, but we're we're pushing on the research side of that. So
+
+195
+00:46:01.470 --> 00:46:18.919
+Drew Van der Werff: and then the other thing I think we hear a lot about. And one thing Josh has highlighted is, but when and hopefully, I've given a good pitch on why you should become based, or think about it. To be honest, there are 2 base roll-ups out there, Tycho and Faucet.
+
+196
+00:46:19.351 --> 00:46:41.249
+Drew Van der Werff: They're not. I think both teams would say. They're not in their end state. They're still working on things. And so this is how we view the components required for a base roll up, and the check mark means that there's a spec in place, or it's already implemented, and it's somewhat ready to go. There are changes required by certain teams to get there. The gray is, you know, there's been some work done.
+
+197
+00:46:41.250 --> 00:46:47.279
+Drew Van der Werff: but, you know, probably needs a little bit more, and then, if there isn't a checkbox it's still not ready.
+
+198
+00:46:47.280 --> 00:47:11.429
+Drew Van der Werff: And so, you know, we'll share these slides afterwards. I'm not going to go through each one of these. But a lot of work has been done and tested to help us get to this place. And yeah, the base ropes that are launched. They're using probably some reference implementation of these that we've we've worked on, or other teams have done. There's been quite a few folks that have contributed to all this, or they're taking some shortcuts. That's maybe how they got there already live in production.
+
+199
+00:47:12.670 --> 00:47:13.180
+Drew Van der Werff: So
+
+200
+00:47:13.280 --> 00:47:19.280
+Drew Van der Werff: yeah, we'll share these slides afterwards, so you can take a look, and then we have a link to find out more on somewhat each of these boxes.
+
+201
+00:47:21.540 --> 00:47:26.949
+Drew Van der Werff: The other thing we realized is, there is apprehension for existing l. 2 s. To give up
+
+202
+00:47:27.110 --> 00:47:54.600
+Drew Van der Werff: their sequencing rights fully to the l. 1 proposer. And there's a lot of reasons for this, and we talked with existing L. 2 s. App developers as well as institutions just trying to get a sense on what their appetite would be for something like a base roll up, and the solution it provides. And one of the things we realize is, is there a way to get synchronous composability with the l. 1 without giving up
+
+203
+00:47:54.890 --> 00:47:56.910
+Drew Van der Werff: your sequencer.
+
+204
+00:47:57.020 --> 00:48:02.449
+Drew Van der Werff: And this is where we came up with this concept of signal boost, and essentially what it is is, you still run
+
+205
+00:48:02.620 --> 00:48:32.519
+Drew Van der Werff: your centralized sequencer. But when you want synchronous composability with the l. 1, maybe there's a certain use case for that on your roll up. You can actually request that from the l 1 proposer through this proposal. So it's more or less like, instead of giving up your sequencing right? You're actually closely coordinating with the l 1 proposer, instead of just fully giving it up, and so kind of on demand. You can ask for the synchronous composability with the l. 1. You have to pay for it, but you can get it, and this has received quite a bit of
+
+206
+00:48:32.520 --> 00:48:38.210
+Drew Van der Werff: reception from teams, and even tyco has reference implementation. Now around this, and how they're thinking about it.
+
+207
+00:48:39.080 --> 00:48:56.299
+Drew Van der Werff: So with that, here's a link to the docs that we have at fabric. There's, you know, dozens of other teams working on base roll-ups that have contributed in certain ways to this that have repos as well. So it's not just us. But hopefully I didn't take up too much time. And Josh thanks for having me and for everyone listening.
+
+208
+00:48:58.290 --> 00:48:59.339
+Joshua Rudolf: Thanks so much. Drew.
+
+209
+00:49:00.450 --> 00:49:25.200
+Joshua Rudolf: Yeah. And I want to maybe give the mic over to either Brecht or Dono. If either of you want to jump in next. But yeah, the main thing that's on my mind, and we don't have to spend time on this, I guess question in particular, but it's just sort of, and it's probably a hard one to spend just a few minutes on. But it's around timelines and the actual sort of making the path a bit more legible for what this looks like, for getting these benefits of
+
+210
+00:49:25.260 --> 00:49:53.589
+Joshua Rudolf: base roll-ups, which I think we all agree are real. But what is the actual sort of pragmatic path to providing this value to end users. And what is this? Something that we think there is a legible path to making happen in the next 6 to 12 months? Or is there more consensus that this is still a little bit further out? And what are the biggest blockers? What are the biggest challenges to making this happen. And I'm not saying, this is like, I just genuinely want to sort of understand, what is the path here.
+
+211
+00:49:54.800 --> 00:49:57.269
+Joshua Rudolf: So yeah, I don't know. Go ahead.
+
+212
+00:49:57.270 --> 00:50:24.999
+Drew Van der Werff: It's a little bit unknown, I think, like the the key blockers, at least from my perspective, one is real time proving, and that's to get the real synchronous composability in place. Otherwise it's a little more Async. So we all know that that's progressing. But it's still not in a place that, you know we're ready yet. For that. And the the other thing we've been really focused on is the Pre comps. And so when you become a base roll up today. If you don't have pre comps, your confirmation time is bounded by the ethereum slot. Time
+
+213
+00:50:25.000 --> 00:50:38.970
+Drew Van der Werff: and ethereum may speed up its slot times, but still like a 6 second slot. Time isn't what you get on an L. 2 today. And so there is a degradation of ux. So they have this concept called pre comps, which is similar to what you do when you swipe your credit card
+
+214
+00:50:39.000 --> 00:50:51.220
+Drew Van der Werff: at Starbucks, you swipe it, you get your coffee. Your money actually doesn't move for a few days, but visa issues Starbucks a pre-conf saying, Hey, the money will make it so. Just give them their coffee, and in this instance it's an l 1 proposer providing that Pre comp.
+
+215
+00:50:51.788 --> 00:51:15.140
+Drew Van der Werff: we've been working on this for a while. There are teams actually live today. I can't go into details. I'm sure they'll announce things at Ecc. For Pre. Comps actually happening in mainnets, not in size, but we at least on the fabric side. They're using the specs that we all collectively outlined, called the constraints Api mainly, which is just an extension of the current pbs pipeline.
+
+216
+00:51:15.140 --> 00:51:44.119
+Drew Van der Werff: There's a couple small Api changes required. We're trying to get our own sort of implementation in Hoodie and testing done, probably by the end of Q, 3 is what we're targeting. We need to change the relay. You have to change the builder. You have this thing called the gateway as well. But there are already Pre. Comps happening on Mainnet, and I expect that to take up into Year End, and that's probably the other sort of big unlock, not only for the blob cost perspective. We see this in Tyco. I'm not going to go into all the details, but also, just yeah, that improved ux that we have.
+
+217
+00:51:44.608 --> 00:52:06.471
+Drew Van der Werff: And then, yeah, I mean, it depends on the role of optimism like they have to change their inbox contract. We've we've outlined a spec of how to do that. But will they do that? Tbd, but then people can take this and sort of run with it, and that would obviously have to be battle tested and and things like that. So yeah, I see some potential. In the next 6 to 18 months, I would say, for us to see what way more robust
+
+218
+00:52:07.020 --> 00:52:22.850
+Drew Van der Werff: setup. And I know I just talked a bunch. One other thing I'll say is, solutions like signal boost are a great stepping stone, I think, for someone like Tycho, or a new roll up to use that, or even optimism to adjust, to, to have more of a base roll up experience or synchronous composability that we're shooting for.
+
+219
+00:52:23.790 --> 00:52:26.019
+Joshua Rudolf: Got it. It doesn't require all these changes.
+
+220
+00:52:26.840 --> 00:52:32.329
+Joshua Rudolf: Speaking of Tycho. So I see we have Bret here. Do you want to maybe jump in and share any thoughts that you have here.
+
+221
+00:52:32.930 --> 00:52:48.290
+Brecht Devos: Yeah, yeah, I guess. So. I guess, like, the single boosting is like for existing. Rob. Take Alicia. So I guess yeah, I think I'm not sure like what the planning there is, but I guess in the next couple of months we'll be working on that. And then for
+
+222
+00:52:48.430 --> 00:52:56.099
+Brecht Devos: because the extreme end of like synchronous computibility. Hopefully, we'll add, Okay, we'll have something usable at the end of this year.
+
+223
+00:52:56.410 --> 00:53:12.170
+Brecht Devos: But for that to happen, there's also, like some other stuff like, of course, like the real time proving if you don't want to just have like te proofs. And it seems like you have all the Ziki proving each day there's like a new Zik Vm that is like real time proving so that looks pretty good to be happening like in the next couple of months hopefully.
+
+224
+00:53:12.290 --> 00:53:33.960
+Brecht Devos: And then, like, Yeah, if you actually want to build like, well, the full, like unified ethereum experience, then I guess you also kind of have to convince like one builders, or at least like gateways, to kind of build one blocks and 2 blocks together. And so I think that's kind of like, also kind of one of the challenges, but hopefully, that will also kind of make sense for for those people to actually do it.
+
+225
+00:53:33.960 --> 00:53:55.819
+Brecht Devos: Otherwise, I think, yeah, if you just like, wanna if you create your own base for Ops, then you can make whatever standards you want. So I guess not many problems there. If you actually want to get like other roll-ups involved in your kind of like interrupt system, then, yeah, I guess there's some some standardization also necessary for like block sharing for proof aggregation for that kind of stuff. But yeah, hopefully.
+
+226
+00:53:55.820 --> 00:54:19.080
+Brecht Devos: yeah, I guess the path is kind of clear how we can get like well, horizontal scalability, for, like L twos, where everybody, every L 2 block, can actually sell each l. 1 block, and we can just aggregate proof for all those based roll-ups as well. I guess that's that's the goal. But I guess hopefully, at least this year we'll have kind of like at least like one roll up system hopefully, Tyco gwyneth kind of like doing this on its own, and then working from there.
+
+227
+00:54:21.840 --> 00:54:25.389
+Joshua Rudolf: Thanks, Brick Dono. Anything you want to add from the L. 2D. Side.
+
+228
+00:54:27.373 --> 00:54:37.849
+donnoh | L2BEAT: Yeah. So I don't think it makes sense for me to to repeat what extreme were were saying, like, I think we all agree on the on the benefits of our basic concern in terms of
+
+229
+00:54:38.397 --> 00:54:41.019
+donnoh | L2BEAT: you know, could be neutral share, sequencer and
+
+230
+00:54:43.200 --> 00:54:52.729
+donnoh | L2BEAT: and that this is the only way to get synchronous responsibility with the one right? So I see there are some like interesting questions in the chat. So I want to provide a little bit of
+
+231
+00:54:53.160 --> 00:54:59.709
+donnoh | L2BEAT: the other side of the story. So to me it's very surprising
+
+232
+00:55:00.341 --> 00:55:05.590
+donnoh | L2BEAT: that there is no project live today. That I know of that is, that has a shared sequencer
+
+233
+00:55:06.251 --> 00:55:10.769
+donnoh | L2BEAT: like. There are a lot of projects with centralized sequencers.
+
+234
+00:55:10.930 --> 00:55:15.467
+donnoh | L2BEAT: and for them it would be very, very easy to to do a stress answer.
+
+235
+00:55:16.090 --> 00:55:25.330
+donnoh | L2BEAT: one obvious example is, roll up as a service providers like conduit. They service like 25 plus chains.
+
+236
+00:55:25.500 --> 00:55:33.730
+donnoh | L2BEAT: and for them it would be very easy to to just have a shared sequencer between all of them, but, as far as I know, none of them is working on it right so
+
+237
+00:55:34.690 --> 00:55:37.899
+donnoh | L2BEAT: and like, if you if you really think about it.
+
+238
+00:55:39.191 --> 00:55:42.479
+donnoh | L2BEAT: or like me personally, I cannot think of
+
+239
+00:55:43.890 --> 00:55:46.180
+donnoh | L2BEAT: Very significant use cases.
+
+240
+00:55:46.974 --> 00:55:55.659
+donnoh | L2BEAT: That emerged just out of synchronicity. I feel like the most important property that you need is atomicity
+
+241
+00:55:56.406 --> 00:56:07.899
+donnoh | L2BEAT: as well. And there are we know of, you know, big projects working on on providing atomicity? Before real improving or before you know one. So
+
+242
+00:56:08.070 --> 00:56:18.029
+donnoh | L2BEAT: there are examples like the superchain, there is the Ag layer, there is the elastic chain that are building these very big, difficult infrastructures.
+
+243
+00:56:18.180 --> 00:56:21.469
+donnoh | L2BEAT: very complicated infrastructures to to provide optimistic.
+
+244
+00:56:21.650 --> 00:56:22.810
+donnoh | L2BEAT: And
+
+245
+00:56:24.720 --> 00:56:36.839
+donnoh | L2BEAT: what I what I wanted to say is that I want to invite projects working on base sequencing, to, to look to into the layer. You know the the super chain
+
+246
+00:56:37.000 --> 00:56:42.420
+donnoh | L2BEAT: and elastic chain specifically as a atomicity providers.
+
+247
+00:56:43.710 --> 00:56:45.050
+donnoh | L2BEAT: And
+
+248
+00:56:45.300 --> 00:56:58.639
+donnoh | L2BEAT: there are some nuances in these solutions. Not all of them work in the same way, for example, the super chain allows to send messages well before proofs are generated. So it's very easy to do. Synchronous composability between
+
+249
+00:56:58.800 --> 00:57:10.250
+donnoh | L2BEAT: change in the superchain. The problem is that all the chains in the superchain needs to be standard. The good news is that everyone can deploy their own custom cluster if they want to outside of the like official super chain one
+
+250
+00:57:10.854 --> 00:57:18.719
+donnoh | L2BEAT: maybe someone can work on trying to build a base roll up stock cluster that is atomic.
+
+251
+00:57:19.636 --> 00:57:24.553
+donnoh | L2BEAT: I know that the elastic chain will provide, interrupt all the
+
+252
+00:57:26.020 --> 00:57:31.480
+donnoh | L2BEAT: at the time the proof were generated, but they have super fast prover. So maybe that's good enough.
+
+253
+00:57:32.170 --> 00:57:35.101
+donnoh | L2BEAT: And yeah glare. I I don't remember
+
+254
+00:57:36.120 --> 00:57:37.150
+donnoh | L2BEAT: But
+
+255
+00:57:38.037 --> 00:57:49.099
+donnoh | L2BEAT: the only the other cool thing that these projects provide is a shared bridge. Right? So there have been a lot of discussion regarding shared bridges. Why, we need shared bridges. You don't want to.
+
+256
+00:57:49.761 --> 00:57:58.190
+donnoh | L2BEAT: Mobile sets on one because it's expensive. So all these projects already provide short bridges, offer the layer and elastic change. The already live.
+
+257
+00:57:58.360 --> 00:58:08.810
+donnoh | L2BEAT: The super chain will have one during the next upgrade, I think at the end of July, and also
+
+258
+00:58:09.140 --> 00:58:15.350
+donnoh | L2BEAT: like another another button that I see I'm gonna Block twitter. Oh.
+
+259
+00:58:21.705 --> 00:58:34.250
+donnoh | L2BEAT: another block that I see is, of course, that base roll ups are forced to publish transactions very often and is expensive. We've seen projects like we're trying to monitoring the liveness of these projects. And we've seen
+
+260
+00:58:34.679 --> 00:58:54.480
+donnoh | L2BEAT: some of them publishing transaction less often because transaction fees are super competitive between the L. Twos and base roll up are. It's very difficult for base roll up to be competitive. So one thing that would help for sure is if a 1 was cheaper, so I also kind of invite people to to push for scaling a 1 where possible.
+
+261
+00:58:55.557 --> 00:59:04.730
+donnoh | L2BEAT: I think it's more beneficial to to scale it one, for example, than having 6 second Oslot times. Because projects today, you know, they want to publish transactions.
+
+262
+00:59:05.370 --> 00:59:10.779
+donnoh | L2BEAT: Not very often, because again, it's super expensive and transaction fees are are very competitive.
+
+263
+00:59:12.750 --> 00:59:15.010
+donnoh | L2BEAT: And yeah, that's all from my side.
+
+264
+00:59:15.500 --> 00:59:31.949
+donnoh | L2BEAT: Oh, yeah, sorry. Another thing is, you know, all these projects are not incredibly neutral, of course, like the super chain, nuclear and elastic chain. Unfortunately, I think it's impossible to build one that is currently neutral. All of them would have some sort of governance. So until we have built in booking, I think, unfortunately.
+
+265
+00:59:35.730 --> 00:59:37.390
+Joshua Rudolf: Thanks, Donna Victor.
+
+266
+00:59:40.260 --> 01:00:04.890
+Victor Graf: Yeah, my question is, basically is around the interplay between real time proving. And you know, based Rops. And you know, a synchronous composability like this. So basically, we have, you know, kind of surprisingly enough, we have multiple zk, vms, now that can, you know with the next like, right now do real time, proving, you know, most of the time, and then within a few months, probably will be able to do it. You know, 99% of the time
+
+267
+01:00:05.020 --> 01:00:08.410
+Victor Graf: or more. But kind of we still have cases where we're going to have
+
+268
+01:00:08.670 --> 01:00:27.509
+Victor Graf: proofs, not get generated in time. For any variety of reasons, you know, just simple reliability reasons, for instance, and basically I don't. It's it's not clear to me what the like, what, how a base roll up, or also other solutions that that rely on real time proving react when a proof is not available on time.
+
+269
+01:00:33.386 --> 01:00:36.719
+Ellie Davidson: I I mean, I have thoughts. I could jump in here. So if
+
+270
+01:00:36.880 --> 01:01:05.570
+Ellie Davidson: generally the way that real time proving is used in synchronous composability, like in the way that, for example, that aglare intends to use it is that you build the block so like you build 1st the 1st part of block A, you generate a proof, and then you actually pass this proof into Block B. So if you didn't generate the proof in time, then presumably the proposer just like would act like they didn't build the block in time, and that block would be skipped. I mean, there's probably some other ways you could handle it. But
+
+271
+01:01:05.610 --> 01:01:07.760
+Ellie Davidson: that's how I generally see it happening.
+
+272
+01:01:12.760 --> 01:01:16.421
+Victor Graf: Yeah, that that's kind of my understanding as well. And it's got these a little bit.
+
+273
+01:01:17.040 --> 01:01:39.140
+Victor Graf: unfortunate that that kind of is the reaction, especially because if you want shorter block times, for example, you know, going from 12 seconds to 6 seconds to 2 seconds to, you know, even shorter levels of like latency in terms of the interaction times. You definitely have the cases you definitely have have it become the case that you know 2 second real time proving is not really
+
+274
+01:01:39.590 --> 01:01:48.630
+Victor Graf: gonna like, you know, maybe can do it. But maybe but like at that point, you know, you're even like having achieving greater than 99% liability is gonna be pretty hard.
+
+275
+01:01:49.150 --> 01:02:13.429
+Ellie Davidson: Yeah, I mean, I will say, technically, an alternative to requiring real time proving is if the roll-ups have shared settlement so like they share the same settlement contract. You can still enforce atomicity that way, and you don't need real time proving for it. But that's just a really big ask for a lot of roll ups to share a settlement contract. But I mean with things like aglare, for example, that is essentially what they're doing
+
+276
+01:02:13.430 --> 01:02:27.609
+Ellie Davidson: in a little bit of a different way like aglayer doesn't necessarily guarantee atomicity in their current design. I don't know just pointing it out, for, like technical correctness, you don't technically need shared or real time proofs. If you have shared settlement.
+
+277
+01:02:28.500 --> 01:02:29.950
+Victor Graf: I appreciate that. Thank you.
+
+278
+01:02:45.810 --> 01:02:51.519
+Ellie Davidson: I maybe have, like a quick question, about based roll ups. So
+
+279
+01:02:51.954 --> 01:03:01.699
+Ellie Davidson: yes, it's like known that based roll-ups can be expensive because they have to post to ethereum very often. But like, where are we, I guess, with like the
+
+280
+01:03:02.030 --> 01:03:14.470
+Ellie Davidson: roll up pre confirmations where you? The idea where you would have like a pre-confer for a based roll up that would essentially pre-confirm transactions for like 5 min, and then they would submit those to the l 1.
+
+281
+01:03:14.874 --> 01:03:19.170
+Ellie Davidson: I think that that was that used to be the design. But I'm not sure where the status of that is.
+
+282
+01:03:19.400 --> 01:03:21.079
+Ellie Davidson: Yeah, I'm on. Maybe you know.
+
+283
+01:03:24.110 --> 01:03:51.443
+Ahmad Bitar | Nethermind: Yeah. So on the L 2 pre confirmations. We already. It's live on Tyco Hekla, which is the the testnet of Tyco. We have 3 participants that that are that have developed l, 2 pre confined chainbound and Garka all 3 participants are pre-confing blocks right now
+
+284
+01:03:51.990 --> 01:04:14.689
+Ahmad Bitar | Nethermind: every 2 seconds for for Tycho Hicklan, only posting once a batch is ready to post. So basically, this increases like improves the ux for the user significantly, where they can get like fast confirmations on their transactions, and at the same time reduces the cost, because you can only submit like a
+
+285
+01:04:14.690 --> 01:04:36.080
+Ahmad Bitar | Nethermind: a batch every couple of slots, instead of having to submit a batch or a block, every l 1 slot, or every 2 slots, or whatever the time. Of course, there are limitations to what can be aggregated. Because, for example, currently, the implementation for Whitelisted
+
+286
+01:04:36.080 --> 01:05:01.736
+Ahmad Bitar | Nethermind: pre-confers so that the pre-confers are basically Whitelisted agents addresses. And later on we're working on on making this permission list. So actually, the l, 1 validators can opt in to become pre-confers based on their slots and based on being able to force. Include the the pre-confed batches.
+
+287
+01:05:02.440 --> 01:05:08.180
+Ahmad Bitar | Nethermind: and this is this is this is coming like like.
+
+288
+01:05:08.320 --> 01:05:28.867
+Ahmad Bitar | Nethermind: I think, Whitelisted pre conflution should come to Mainnet. In q. 1 q. 2 of the next year. Hopefully sooner. But I don't want to be too optimistic.
+
+289
+01:05:30.825 --> 01:05:31.540
+Ahmad Bitar | Nethermind: yeah.
+
+290
+01:05:31.900 --> 01:05:43.309
+Ahmad Bitar | Nethermind: but a solution has. Solutions are are there, and things are looking better for base roll ups in terms of cost. And optimizing costs for for posting.
+
+291
+01:05:43.310 --> 01:06:06.529
+Ahmad Bitar | Nethermind: Yeah? And also like looking at a lot of the grievances that roll ups have right now, like, for example, the price of posting blobs or the cost of Zk proofs. For example, all of these are being scaled up and sped up by the advancement of technology. You see the advancement of Zk proofs
+
+292
+01:06:06.530 --> 01:06:18.930
+Ahmad Bitar | Nethermind: happening, and Twitter and all the news about all the speed ups that succinc that Z, that risk 0 and other teams are working on openvm, etc. I can't mention them all, but
+
+293
+01:06:18.960 --> 01:06:30.799
+Ahmad Bitar | Nethermind: a lot of teams are working on these, reducing the cost for posting as Ek proofs, and additionally, the l. 1 core devs are persistent on scaling up the blobs, so that
+
+294
+01:06:30.800 --> 01:06:49.620
+Ahmad Bitar | Nethermind: enough capacity is there for roll ups. Actually, in my opinion, right now, like, if we go with the Fusaka peer das and the numbers that we're looking into. I think there will be ample amount of blobs, especially with the compression and aggregation that we have, and blob sharing research that have been done.
+
+295
+01:06:49.780 --> 01:07:09.060
+Ahmad Bitar | Nethermind: There will be ample amount of blob space for for rollups to use on on dell. One so blobs costs of blobs on dell, one plus zk posting on dell. One should be significantly lower in the coming couple of months or or quarters.
+
+296
+01:07:12.230 --> 01:07:13.560
+Joshua Rudolf: Awesome. Thanks, so much
+
+297
+01:07:13.880 --> 01:07:23.239
+Joshua Rudolf: cool. Well, we are at time. Thanks. All for the yeah. Good conversation on based and shared sequencing. And we can. Yeah, maybe continue the conversation in the telegram group.
+
+298
+01:07:25.380 --> 01:07:28.670
+Joshua Rudolf: Cool? Thanks. All for joining. See you next time.
+

@@ -1,0 +1,1230 @@
+WEBVTT
+
+1
+00:05:47.670 --> 00:05:48.420
+Davide Crapis: Hello.
+
+2
+00:07:41.840 --> 00:07:50.289
+Davide Crapis: okay, I think we can start. People may trickle in a little bit more. But we have all the main interested parties.
+
+3
+00:07:50.830 --> 00:07:57.920
+Davide Crapis: Yeah. So we can start with a couple of updates. I think the focus
+
+4
+00:07:58.330 --> 00:07:59.289
+Ben Adams: I'll help him.
+
+5
+00:07:59.790 --> 00:08:01.439
+Davide Crapis: Can you guys hear me?
+
+6
+00:08:02.890 --> 00:08:06.260
+Maria Silva: Yes, yes, we can hear you, David.
+
+7
+00:08:06.760 --> 00:08:07.610
+Davide Crapis: Yeah,
+
+8
+00:08:09.190 --> 00:08:32.040
+Davide Crapis: yeah. So the focus is, we discussed with Ansgar before the call. And we wanted to like, maybe focus a little bit more towards like getting ready for Glamsterdam, like some of these changes that we've worked on and like discussed, maybe see how we can like kind of use. This call and this working group to like.
+
+9
+00:08:32.039 --> 00:08:43.409
+Davide Crapis: organize ourselves a little bit more, so that we have a little bit lead time. And we make sure that, like these changes are ready for Glamsterdam. So we can start with a couple of updates.
+
+10
+00:08:43.890 --> 00:09:09.900
+Davide Crapis: And then Asgar also can lead a more in-depth discussion on this point. Yeah. So maybe if Marcin wanted to start like, he wanted to give an updates on Perfnet, yeah, I think he gave a very nice presentation at the research call previously. But a lot has happened since then, including the interrupt progress. So yeah, I'm excited about this.
+
+11
+00:09:18.550 --> 00:09:20.279
+Marcin Sobczak: Hi! Do! Do you hear me?
+
+12
+00:09:21.690 --> 00:09:22.900
+Davide Crapis: Yes, yes.
+
+13
+00:09:23.826 --> 00:09:34.390
+Marcin Sobczak: Okay, so a few words about our findings in in a perfnet project.
+
+14
+00:09:34.520 --> 00:09:46.060
+Marcin Sobczak: So as probably no one is surprised. Modex is our bottleneck of the the whole ethereum.
+
+15
+00:09:46.210 --> 00:09:54.360
+Marcin Sobczak: So right now we have the the worst client performing at only 11 megas per second.
+
+16
+00:09:54.590 --> 00:09:56.090
+Marcin Sobczak: and
+
+17
+00:09:58.194 --> 00:10:07.745
+Marcin Sobczak: what we can say here like if we want to push cost limit to 60 million before Fusaka. And then
+
+18
+00:10:08.350 --> 00:10:19.880
+Marcin Sobczak: all clients, especially Argon and gav would need to improve significantly performance. Otherwise, we can do it.
+
+19
+00:10:20.380 --> 00:10:33.819
+Marcin Sobczak: And on Fussaka we will reprise the modex, and the target is to go for 100 million gas limit
+
+20
+00:10:34.334 --> 00:11:00.219
+Marcin Sobczak: so we need to perform at at least 53 megas per second. And even after the pricing Oregon and graph are not there yet. So we have 2 options, or actually 3. 1 is to improve performance in clients. If it's it is possible. Second is to increase modex pricing even more and we can do both.
+
+21
+00:11:00.540 --> 00:11:02.550
+Marcin Sobczak: I swear alright.
+
+22
+00:11:03.180 --> 00:11:14.760
+Marcin Sobczak: So but achieving this level of 33 megagas per second is not
+
+23
+00:11:14.800 --> 00:11:38.000
+Marcin Sobczak: enough, as modex will still be a bottleneck. So we need to reprise it wisely and think a few steps ahead, and I would like to to present like some analysis of of next next steps and next bottlenecks. So if we exclude modex
+
+24
+00:11:38.464 --> 00:11:56.715
+Marcin Sobczak: then our but bottlenecks looks like this. So even without modex, we are not out of the 100 million gas limit requirement yet free client. 3 clients out of 5 are but never mind, and bezel needs to
+
+25
+00:11:57.480 --> 00:12:12.590
+Marcin Sobczak: improve a bit. So for bezel to to achieve 53 megas per second. There is a need to optimize Ec. Art and Ec. Recover. And for never mind, we need to improve. Ec. Mall.
+
+26
+00:12:13.900 --> 00:12:15.020
+Marcin Sobczak: and
+
+27
+00:12:17.280 --> 00:12:34.519
+Marcin Sobczak: there are no other blockers between 100 120 million. So, after doing this, small optimizations, which should be possible because of other clients are performing better in this compiles we should be able to
+
+28
+00:12:34.520 --> 00:12:50.350
+Marcin Sobczak: to move, of course, if we only take into consideration the computation, computing like, not state, etc. So, focusing only on computing, we should be able to go to even 120.
+
+29
+00:12:51.350 --> 00:13:15.860
+Marcin Sobczak: But what are the bottlenecks? Then, as we said, for best one. Never mind, is easy. Recover, and easy more for other clients, if you look at worst cases, easy recovery and be similar. So we have like bottlenecks on the protocol level. Not only client specifics.
+
+30
+00:13:16.649 --> 00:13:33.090
+Marcin Sobczak: Let's take a look on them one by one. So the fastest clients on Ec. Art are graph. And Arigon performing at 58 mega gas per second Bazel needs to improve significantly
+
+31
+00:13:33.140 --> 00:14:00.159
+Marcin Sobczak: and for never mind and Ref. It seems reasonable to to point it in in having, like 50 megas per second performance. It doesn't seem like impossible to to improve it is faster than easy app. So Aragon is outperforming other clients by a lot, and it should be quite easy for everyone to achieve at least 50
+
+32
+00:14:00.990 --> 00:14:12.503
+Marcin Sobczak: easy pairing. Never mind and Ref need to improve. But generally it looks fast and doesn't even need repricing based on this data. Maybe we don't have.
+
+33
+00:14:13.090 --> 00:14:26.468
+Marcin Sobczak: maybe we need to better test cases. But basing on on this, what we have, it doesn't need for pricing, and if you cover it's the biggest bottleneck except
+
+34
+00:14:27.708 --> 00:14:43.651
+Marcin Sobczak: modex. So the best clients performing at 58 and it will be probably challenging to for every client to go to at least 50, but might be possible. So as a summary
+
+35
+00:14:44.740 --> 00:14:55.950
+Marcin Sobczak: after Fusaka. If we reprise Modex to not be the bottleneck anymore, then we should be able to go to 120 mega gas.
+
+36
+00:14:56.220 --> 00:15:01.240
+Marcin Sobczak: and it's reasonable to
+
+37
+00:15:01.790 --> 00:15:09.900
+Marcin Sobczak: it's probably to able to to go even to 150 megas per limit without repricing more things.
+
+38
+00:15:10.020 --> 00:15:20.870
+Marcin Sobczak: and for sure we'll not go further than 170, because it's like the the fastest clients are performing at this level.
+
+39
+00:15:21.420 --> 00:15:26.441
+Marcin Sobczak: So we probably need to answer some questions at this point.
+
+40
+00:15:27.500 --> 00:15:43.499
+Marcin Sobczak: maybe. The level of 120 or 150 mega gas mega gas limit is enough, or we need to go further. I don't know.
+
+41
+00:15:44.591 --> 00:15:59.200
+Marcin Sobczak: Our computations. A bottleneck at this level, or there are other limitations. Probably. It's it will be stayed at this point. Do we really need more gas limit
+
+42
+00:15:59.450 --> 00:16:12.449
+Marcin Sobczak: and are a pass like multi dimensional gas metering, which is a brilliant idea and will be present that later today. Is it coming
+
+43
+00:16:13.480 --> 00:16:40.079
+Marcin Sobczak: to the ethereum? If it is then like it will change the the way, how we think about limiting blocks. So probably further analysis doesn't have sense. But if we are talking about modex repricing and looking for the best way to to do it. Then we need to consider other steps. So what will happen if we will reprise Ecm. And easy recovery? What is the next bottleneck. So next
+
+44
+00:16:40.420 --> 00:16:46.529
+Marcin Sobczak: it looks like, we can target even at 200 million plus limit
+
+45
+00:16:47.385 --> 00:16:53.394
+Marcin Sobczak: free free clients are ready for it. And let's take a look at them. So
+
+46
+00:16:54.410 --> 00:17:04.930
+Marcin Sobczak: graph is ready for 200 and for 250 needs to optimize only, like precompile.
+
+47
+00:17:05.079 --> 00:17:14.529
+Marcin Sobczak: Argon is also ready for 200 and for 250 needs to optimize blank Catsac and some client specific opcodes
+
+48
+00:17:15.623 --> 00:17:19.849
+Marcin Sobczak: in rough. It's only like we compile.
+
+49
+00:17:20.410 --> 00:17:25.860
+Marcin Sobczak: And in Basil it's a black catac and some opcoats.
+
+50
+00:17:26.050 --> 00:17:30.486
+Marcin Sobczak: And I'm not 100% sure that we are testing bezel
+
+51
+00:17:31.160 --> 00:17:34.360
+Marcin Sobczak: correct way. We added, warm up.
+
+52
+00:17:35.930 --> 00:17:37.183
+Marcin Sobczak: Yeah. But
+
+53
+00:17:38.541 --> 00:17:49.818
+Marcin Sobczak: I I think that this numbers would be a bit higher for bezos. So I'm not sure that it is accurate. So
+
+54
+00:17:51.060 --> 00:17:58.680
+Marcin Sobczak: let's take a look one by one at at this new new bottlenecks so black.
+
+55
+00:18:01.030 --> 00:18:09.219
+Marcin Sobczak: like all clients, should be able to achieve 66 megas per second. Cats like is even faster.
+
+56
+00:18:09.910 --> 00:18:28.919
+Marcin Sobczak: So we should be able to to achieve 200 million customer pricing maybe even 220 and for sure, not more than 265 because fastest clients are performing at this level, and even 250 will be extremely challenging.
+
+57
+00:18:29.880 --> 00:18:56.990
+Marcin Sobczak: So one last step in the future. What if we price also Blake and Katzak, then? Ref, and never mind, is already on the moon gaff is starting to the moon or ready for 300 million gas limit, and we need to take a closer look at Ergon and Basil. But 1st gaff. So only already ready for 300 million
+
+58
+00:18:57.460 --> 00:19:07.309
+Marcin Sobczak: only 2 opticals to be optimized for 400,000,004 more to 500 million seems like 500 million is achievable
+
+59
+00:19:08.132 --> 00:19:09.617
+Marcin Sobczak: in Aragon,
+
+60
+00:19:10.540 --> 00:19:15.710
+Marcin Sobczak: 2 OP. Codes to be optimized for 250 million and a few more for 300,
+
+61
+00:19:17.170 --> 00:19:34.750
+Marcin Sobczak: and in bezel there are like 10 OP. Codes to be optimized for 250, and 6 more for 300. But again, I'm not sure if we are testing Bezel correctly, maybe warm up is still not not good enough
+
+62
+00:19:36.575 --> 00:19:51.600
+Marcin Sobczak: so coming back to modex, because this is my main focus in this presentation right now it's performing at 11 megas per second. So 36 million feels safe. But even 45 isn't comfortable
+
+63
+00:19:52.140 --> 00:20:20.679
+Marcin Sobczak: before Fusaka. If Arigon and gaff will optimize. Then we can go for 60 million. If not, we can do nothing. In Fusaka we reprice modex, and after Fusaka 120 million will be achieved with only small improvements in and potentially 150 seems realistically achievable without other
+
+64
+00:20:23.764 --> 00:20:30.554
+Marcin Sobczak: potential. Next steps would be to reprise easy recovery seat and easy Mall.
+
+65
+00:20:31.569 --> 00:20:41.159
+Marcin Sobczak: if we will potentially do it in grand, we'll be able to go to 200 million, and maybe 220, and
+
+66
+00:20:42.000 --> 00:20:44.479
+Marcin Sobczak: as a last step.
+
+67
+00:20:45.310 --> 00:21:04.449
+Marcin Sobczak: if we reprice Blake and Catsac, then some clients are ready for 500 250 to 300 remains realistic. Because there are like, probably too many blockers at this in this area to to go further.
+
+68
+00:21:04.900 --> 00:21:14.870
+Marcin Sobczak: So we want to reprise Modex, and after Osaka the next bottleneck.
+
+69
+00:21:15.000 --> 00:21:29.279
+Marcin Sobczak: except Modex, will be performing at 40 to 50 megabits per second up to 58, so we shouldn't aim we shouldn't expect modex to perform slower like. We don't want
+
+70
+00:21:29.280 --> 00:21:44.832
+Marcin Sobczak: it to to be a bottleneck after Fussaka. So it's absolutely minimal requirement for us to to replace modex to perform at 50 55 megabits per second if we want
+
+71
+00:21:45.340 --> 00:21:58.910
+Marcin Sobczak: to not have modex as as a bottleneck after next repricing potential. Next repricing, then we need to aim in range 66 to 73. So probably we want modex, that's 75 plus.
+
+72
+00:21:59.570 --> 00:22:05.300
+Marcin Sobczak: Yeah. And if we consider blank and category pricing, then we need to aim in 100 mega gas and more.
+
+73
+00:22:05.470 --> 00:22:11.010
+Marcin Sobczak: And so it looks like that on this graph
+
+74
+00:22:12.550 --> 00:22:40.520
+Marcin Sobczak: 100 million is not realistic with current shape of 8, 7, 8, 8, 3. And because, like no one is achieving the speed 75 megas per second looks achievable, but it will require improving in Oregon and gaff being 3 times faster, which probably will be extremely challenging or impossible.
+
+75
+00:22:40.580 --> 00:22:45.349
+Marcin Sobczak: and even the level of of 55 is is far away. So
+
+76
+00:22:46.250 --> 00:23:10.299
+Marcin Sobczak: why current pricing is like that in 3. So it's focused mostly on on addressing edge case scenarios. 3 out of out of 4 changes made to modex pricing are affecting only 0 point 3% of historical modex calls but addressing like worst case scenarios.
+
+77
+00:23:10.300 --> 00:23:22.239
+Marcin Sobczak: 4th change is bumping mean price from from 200 to 500, and has wider effect. But all the changes are affecting. About 38% of modex calls. According to Tony's report.
+
+78
+00:23:22.240 --> 00:23:41.839
+Marcin Sobczak: which is linked here. I I will paste it on the chat later, and we even already know affected addresses. So impact of this Api in current shape is relatively small while pushing performance bottleneck much it's pushing from 11 to 26. So a few times
+
+79
+00:23:42.687 --> 00:23:59.319
+Marcin Sobczak: but there are no more edge cases to cover what we can do now, if we want to. To have modex performing faster is to add general cost increase, but then it will affect 100% of usages instead of just the 38.
+
+80
+00:23:59.570 --> 00:24:18.149
+Marcin Sobczak: So what we can do. Potential change is like at the very end of modex pricing equation. Result is divided by 3. So we can achieve significant cost increase by changing the variable from 3 to 2, or by not dividing it at also
+
+81
+00:24:18.190 --> 00:24:36.739
+Marcin Sobczak: invariant one. If we divide by 2 instead of 3, a cost will be higher by 50%. We will move worst case from 26 to about 39 megas per second. 100% of modex calls would be affected, and and performance
+
+82
+00:24:36.790 --> 00:24:47.489
+Marcin Sobczak: still wouldn't be fast enough, so not a good option invariant. 2. We will not divide the result at that at all. So price will be tripled
+
+83
+00:24:49.650 --> 00:24:58.659
+Marcin Sobczak: current. Worst case will be moved from 26 to about 78, 100
+
+84
+00:24:58.840 --> 00:25:07.364
+Marcin Sobczak: percent of modex calls would be affected. Yes, and price will be increased by 200%. So so tripled
+
+85
+00:25:08.540 --> 00:25:21.671
+Marcin Sobczak: after such increase we could potentially potentially revert the the previous changes, but probably not worth it at. It will require additional testing. And
+
+86
+00:25:22.538 --> 00:25:38.890
+Marcin Sobczak: it's covering only worst cases without any impact or common reward use cases. So so, in my opinion, if we want to to modify this, we just need to add one more change and don't touch the previous ones.
+
+87
+00:25:39.405 --> 00:25:55.969
+Marcin Sobczak: Yeah. So at the at the end, we need to answer the question, do we want to make modex significantly faster for our clients, but for the cost of affecting 100% of users and calls and tripping the price.
+
+88
+00:25:56.020 --> 00:26:08.129
+Marcin Sobczak: Or maybe we want to make changes as small as possible. So currently, only 38% of calls are affected. But it will require hard optimizations from Oregon graph, and probably bezel.
+
+89
+00:26:08.150 --> 00:26:32.310
+Marcin Sobczak: So if you want to be at at the level of 70 5 megas per second. So we're ready for 200 million gas limit and more. There are 2 options we can triple the price and then will be there, or they need to triple the performance, which will be extremely challenging. So that's the
+
+90
+00:26:32.310 --> 00:26:49.680
+Marcin Sobczak: open question at the end, what we want to do. So, in my opinion, let's try to optimize Modex in Graph and Aragon, and in the meantime I will prepare a Pr pr draft to triple modex pricing, and we need to decide what to do next.
+
+91
+00:26:50.770 --> 00:26:52.320
+Marcin Sobczak: Are there any questions.
+
+92
+00:27:00.850 --> 00:27:01.690
+Davide Crapis: Yeah. Kevin.
+
+93
+00:27:04.412 --> 00:27:13.479
+kev: Yeah, I have a few questions. Is modex bad for a particular range of input sizes, or is it just across the board.
+
+94
+00:27:15.180 --> 00:27:16.249
+Marcin Sobczak: Can you repeat?
+
+95
+00:27:17.251 --> 00:27:20.969
+kev: Is modex bad for a particular range of input sizes.
+
+96
+00:27:25.970 --> 00:27:37.369
+Marcin Sobczak: it was. But the the worst cases like edge cases are already addressed. And right now it's
+
+97
+00:27:38.830 --> 00:27:54.370
+Marcin Sobczak: we can consider, like the common cases which are on network, as as the worst cases or close towards cases. So like, there is the nothing to optimize. We can only change general pricing of it.
+
+98
+00:27:55.622 --> 00:28:04.319
+kev: Oh, I was saying that for the is it bad for like 2, 56 bits input, or is it bad for all of the ranges
+
+99
+00:28:04.610 --> 00:28:06.429
+kev: like, if he was to reprice it.
+
+100
+00:28:11.852 --> 00:28:27.880
+Marcin Sobczak: From what we have. It's performing similar for for our valued Rangers. It's already like narrow narrowed down a lot. Because if let's say, basic modular
+
+101
+00:28:28.040 --> 00:28:32.260
+Marcin Sobczak: is in common cases, it's almost always duty to buy.
+
+102
+00:28:32.430 --> 00:28:58.132
+Marcin Sobczak: And that's our current worst cases. If it's smaller than 52 Byte, we are pricing it as 52 Byte. So there is, no way to explore it by using a small basin modul law, and if it's higher than 52 Byte, then we are dub doubling the this part of of equations like so so
+
+103
+00:28:58.590 --> 00:29:16.258
+Marcin Sobczak: price is doubled. So it's also not anymore a worst case. And for exponent above 200 2,256 bits
+
+104
+00:29:17.921 --> 00:29:34.800
+Marcin Sobczak: price is doubled, and at exactly 52 Byte based on modulo and 256 exponent we have at case for that, and I would need to check. But it's probably one of the the worst cases.
+
+105
+00:29:35.460 --> 00:29:45.710
+kev: Okay, I see. And if you was to reprice MoD. X. Free. X. Do you know how many contracts would be affected like is it used a lot.
+
+106
+00:29:48.100 --> 00:29:53.563
+Marcin Sobczak: Yeah, it will affect every every modex call so so
+
+107
+00:29:56.220 --> 00:30:15.860
+Marcin Sobczak: a a lot a lot of them all the contracts would be would be affected like it is. Why, in the initial like, in the current shape of this ipad we did it this way to affect as small actors as possible. But seems like just this increase
+
+108
+00:30:16.248 --> 00:30:27.409
+Marcin Sobczak: seems not be enough. And if we want to go further, then there is like no more edge cases to cover, and if we change the general pricing, then everyone is affected.
+
+109
+00:30:28.490 --> 00:30:29.469
+kev: Okay, I see.
+
+110
+00:30:30.056 --> 00:30:33.250
+kev: Yeah, I had 2 other questions, but I didn't wanna hope to
+
+111
+00:30:33.530 --> 00:30:44.699
+kev: time. Oh, I see. No one else has their hands up. Pretty easy. Add Marlin. Pairings. Is this because most clients are using a very old library.
+
+112
+00:30:46.450 --> 00:30:52.010
+kev: I think it's the matter. Labs library from like 6 or something years ago.
+
+113
+00:31:06.580 --> 00:31:08.380
+Davide Crapis: Oh, yeah, thank you.
+
+114
+00:31:09.920 --> 00:31:12.950
+Davide Crapis: Seems there is no answer, but maybe plausible.
+
+115
+00:31:13.820 --> 00:31:19.170
+Davide Crapis: Oh, Bezu is not using that one, Luis saying, There you go! So.
+
+116
+00:31:19.170 --> 00:31:38.790
+Ivo Kubjas: Actually, I think. And like they are using some old closed player library. I have like done some benchmarks like if we, if you would replace the implementation with knar crypto, and like it gives like approximately 3, 4 times faster, easy pairing, and easy more
+
+117
+00:31:39.210 --> 00:31:42.399
+Ivo Kubjas: so I I can share the the spreadsheet for that.
+
+118
+00:31:43.690 --> 00:31:50.840
+kev: I think gaff uses Ganak right now, or at least they recently switch to it.
+
+119
+00:31:51.490 --> 00:31:52.670
+kev: I think.
+
+120
+00:31:52.890 --> 00:31:57.060
+Ivo Kubjas: So for Pls. 12, 3, 8, 1, but not for P. And J. 5, 4. I think.
+
+121
+00:32:03.830 --> 00:32:04.790
+kev: Okay. Yeah.
+
+122
+00:32:06.607 --> 00:32:26.000
+Davide Crapis: Kev. It seems that if there are, there is any other questions maybe you can ask in the group. It seems like a kind of important discussion. And yeah, we can move to Yasek, who also has an update on the repricing eip, or Asgar has something to say. Yeah.
+
+123
+00:32:26.490 --> 00:32:40.439
+Ansgar Dietrichs: Yeah, just just a very quick comment. I'll put it in chat. I just want to make sure that people are aware in general, we should keep in mind that basically the way we approach these pricing or these this basic benchmarking, pricing considerations
+
+124
+00:32:40.440 --> 00:33:09.960
+Ansgar Dietrichs: before Glam, saddam, and after Glam Saddam will be very, very different. So before Glam Saddam, we're kind of in this world now, where all the different opcodes and precompiles are differently fast on per gas, basically on all the clients. And so basically, we just now always constantly chase the next bottleneck and remove the next bottleneck and the next bottleneck and try to reprice and whatnot, and there's always one specific bottleneck. And then in Glam Saddam the idea, at least, is, and we can talk about it a bit later in the section properly. But the idea would be that we basically make it so that all of the compute operations cost the same
+
+125
+00:33:10.080 --> 00:33:39.019
+Ansgar Dietrichs: per kind of time that they take at least at the fork, and then, of course, over time, then start, things will diverge again. But basically that means that after that fork, we will no longer be in the mode of like tackling the next specific bottleneck, because all of them will kind of be equally good or equally bad. So then it will be much more a loop of figuring out where we can push more where we can basically make things faster so that we can make them cheaper again afterwards. So just wanted to. As a general kind of comment of like, we should realize that what we're doing right now, this kind of effort is more like a
+
+126
+00:33:39.020 --> 00:33:42.130
+Ansgar Dietrichs: until Glamsterdam kind of process, that's all.
+
+127
+00:33:47.570 --> 00:33:55.399
+Davide Crapis: Yeah, makes sense. And then maybe after yazik, we can like discuss more on this approach. And like, what's the priority for
+
+128
+00:33:56.130 --> 00:33:57.439
+Davide Crapis: Less than them. Yeah.
+
+129
+00:33:59.570 --> 00:34:03.649
+Jacek Glen: Okay, guys, can you see my screen? I hope you can.
+
+130
+00:34:04.250 --> 00:34:05.034
+Davide Crapis: Yep.
+
+131
+00:34:06.288 --> 00:34:13.320
+Jacek Glen: So what Martin showed was the the scenario. If we increase a gas limit
+
+132
+00:34:13.590 --> 00:34:16.430
+Jacek Glen: with, especially with the focus on
+
+133
+00:34:16.750 --> 00:34:32.609
+Jacek Glen: keeping pre compiles safe in terms, they they compute enough. The computation is enough to increase the gas limit. Now, as a reminder, this eip
+
+134
+00:34:32.730 --> 00:34:37.900
+Jacek Glen: comes from a slightly different angle and basically says.
+
+135
+00:34:38.239 --> 00:34:48.649
+Jacek Glen: What what if, rather than increasing a gas limit, will our computational cost of? Well, the cost of certain OP codes?
+
+136
+00:34:48.830 --> 00:34:57.170
+Jacek Glen: So this aip specifically focus on OP codes plus some click on piles.
+
+137
+00:34:57.610 --> 00:35:03.090
+Jacek Glen: And we're not touching MoD. X, because marching eip is much better in
+
+138
+00:35:03.290 --> 00:35:06.219
+Jacek Glen: the pricing mode X. But we
+
+139
+00:35:06.480 --> 00:35:12.430
+Jacek Glen: touch in this eip. Let me just slow down. An Ec padding
+
+140
+00:35:13.709 --> 00:35:25.360
+Jacek Glen: the main problem with lowering cost of Ec. Paying as per this schema here was exactly the performance of Geth and Eragon.
+
+141
+00:35:25.710 --> 00:35:32.300
+Jacek Glen: but, as Igor has mentioned before, there is a Gnark library
+
+142
+00:35:32.840 --> 00:35:48.040
+Jacek Glen: right here, which is provided here we measured it and confirmed. This is about 4 to even 5 times faster in the worst cases than the existing.
+
+143
+00:35:48.470 --> 00:35:52.919
+Jacek Glen: so that removes the bottleneck of lowering cost of easy padding.
+
+144
+00:35:53.240 --> 00:35:58.489
+Jacek Glen: Again, in this schema, when we lower cost of most of the OP codes
+
+145
+00:35:59.060 --> 00:36:07.389
+Jacek Glen: and as anskard mentioned before, this eip aims to
+
+146
+00:36:07.990 --> 00:36:18.040
+Jacek Glen: rebalance the computational cost across everything. So the same unit of computation will cost the same gas
+
+147
+00:36:18.730 --> 00:36:21.538
+Jacek Glen: in theory, because in practice
+
+148
+00:36:22.957 --> 00:36:36.750
+Jacek Glen: clients differ between each other. On matching pages slides. You could already see the difference between the clients. Unfortunately, I didn't have time to prepare the my, take on this.
+
+149
+00:36:36.950 --> 00:36:41.849
+Jacek Glen: It's not different from marching, but as soon as I prepare it I will post it to the group.
+
+150
+00:36:43.700 --> 00:36:46.549
+Jacek Glen: In the meantime I can show you some
+
+151
+00:36:46.780 --> 00:36:54.860
+Jacek Glen: more into another interesting slides. What we did on the new precompied. So bls 12.
+
+152
+00:36:55.680 --> 00:37:03.100
+Jacek Glen: And for the bsl, 12, we have, what 7 new precompied.
+
+153
+00:37:03.360 --> 00:37:07.159
+Jacek Glen: which we measured, using the same method.
+
+154
+00:37:07.300 --> 00:37:13.179
+Jacek Glen: and let me just state, jump straight to the conclusions.
+
+155
+00:37:13.380 --> 00:37:29.440
+Jacek Glen: and we, according to our measurement, the the gas proposed in the eap is surprisingly accurate, and all our measurements actually confirm that, with one exception, that we
+
+156
+00:37:29.590 --> 00:37:36.090
+Jacek Glen: might want to lower mapping for the G. 2. But it's a minor thing
+
+157
+00:37:36.820 --> 00:37:43.210
+Jacek Glen: now, having said so, I need to go a little bit deeper into details.
+
+158
+00:37:43.510 --> 00:37:54.080
+Jacek Glen: because there's an interesting case of Ms multiplication g, 1 and G. 2. Multiplication, which
+
+159
+00:37:55.750 --> 00:37:57.800
+Jacek Glen: let me just show you this.
+
+160
+00:37:58.980 --> 00:37:59.790
+Jacek Glen: Here.
+
+161
+00:38:00.740 --> 00:38:04.790
+Jacek Glen: So the red line is the
+
+162
+00:38:05.410 --> 00:38:11.700
+Jacek Glen: nominal gas, cost what we want to charge the blue lines is the
+
+163
+00:38:11.850 --> 00:38:22.609
+Jacek Glen: actual measured gas cost, so, as you can see for evm one, this matches almost exactly as if
+
+164
+00:38:23.250 --> 00:38:28.179
+Jacek Glen: the Gasco schema, or schedule was made for evm one.
+
+165
+00:38:29.410 --> 00:38:34.710
+Jacek Glen: If we jumped out. If we go to Bessel, for example.
+
+166
+00:38:35.770 --> 00:38:42.919
+Jacek Glen: we see some variation here, but it's not as much different as you would expect.
+
+167
+00:38:45.149 --> 00:38:52.639
+Jacek Glen: Oh, I didn't mention but the x axis is the number of pairs
+
+168
+00:38:53.690 --> 00:38:57.910
+Jacek Glen: that I'll use for the multiplication in a single call.
+
+169
+00:39:07.490 --> 00:39:10.139
+kev: Yes, like you've muted yourself, I think.
+
+170
+00:39:13.800 --> 00:39:14.890
+Jacek Glen: Oh, sorry
+
+171
+00:39:17.666 --> 00:39:21.630
+Jacek Glen: What was the last last thing you heard me saying?
+
+172
+00:39:21.880 --> 00:39:24.500
+kev: But number of pairs.
+
+173
+00:39:24.500 --> 00:39:25.600
+kev: Oh, okay.
+
+174
+00:39:26.010 --> 00:39:27.689
+Jacek Glen: So a number of person
+
+175
+00:39:28.190 --> 00:39:39.219
+Jacek Glen: on the X-axis it looks good for the so the lead lines cover the blue lines for the Evm. One. And if we scroll to the things where it doesn't look nice.
+
+176
+00:39:39.550 --> 00:39:48.479
+Jacek Glen: for example 11, we can see that what we expect as a gas cost
+
+177
+00:39:48.950 --> 00:39:56.639
+Jacek Glen: differs quite a lot, especially in a low number of kpaths.
+
+178
+00:39:57.710 --> 00:40:05.760
+Jacek Glen: It's not a huge problem, but it might be an issue if you look.
+
+179
+00:40:06.180 --> 00:40:11.760
+Jacek Glen: if you've considered some kind of vector attack on the network. So here's another
+
+180
+00:40:12.030 --> 00:40:19.710
+Jacek Glen: diagram. But as you, I want to show you, be with me for a moment the
+
+181
+00:40:20.490 --> 00:40:22.930
+Jacek Glen: and let me explain to you.
+
+182
+00:40:23.270 --> 00:40:32.940
+Jacek Glen: So the numbers on on the Y axis shows you how much the actual computation.
+
+183
+00:40:33.140 --> 00:40:44.599
+Jacek Glen: It's worse than gas cost that we charge for that specific precompile. So we can see that
+
+184
+00:40:45.080 --> 00:40:53.220
+Jacek Glen: in this case, in this case, for them it's fine. It's almost one for anything larger than 32.
+
+185
+00:40:53.460 --> 00:40:58.559
+Jacek Glen: But for the pulse lower than 32, it might be up to 8 times more
+
+186
+00:40:58.690 --> 00:41:01.780
+Jacek Glen: costly to execute it.
+
+187
+00:41:02.210 --> 00:41:02.920
+Jacek Glen: It's
+
+188
+00:41:03.040 --> 00:41:17.030
+Jacek Glen: not a huge issue in terms of security, because those precompied are expensive anyway. And the possible vector of attack is quite low, if none existing really.
+
+189
+00:41:17.200 --> 00:41:33.029
+Jacek Glen: but interesting to see that that actually differences between implementations sometimes quite substantial as as per the
+
+190
+00:41:33.310 --> 00:41:42.690
+Jacek Glen: this case here of 11, and and going back to Asgard, note about having the same
+
+191
+00:41:43.020 --> 00:41:46.009
+Jacek Glen: gas cost per computational unit.
+
+192
+00:41:46.924 --> 00:41:52.019
+Jacek Glen: As we as we see here, clients differ between each other.
+
+193
+00:41:55.170 --> 00:42:07.739
+Jacek Glen: but in general we we can confirm. Bls, 12 is safe to be implemented. Good to go. And the pricing is, actually very accurate.
+
+194
+00:42:12.130 --> 00:42:14.200
+Jacek Glen: Okay, any questions.
+
+195
+00:42:21.140 --> 00:42:26.750
+Davide Crapis: Thanks, Yasik. Maybe we can. Segue. Is there any direct question.
+
+196
+00:42:33.880 --> 00:42:44.220
+Jacek Glen: Kev. Ask if it's safe, even at a hundred? No, it's safe at the moment. So 45, or whatever is the current limit
+
+197
+00:42:44.920 --> 00:42:49.350
+Jacek Glen: if we go to 100, I'm afraid it won't be that much safe anymore.
+
+198
+00:43:02.770 --> 00:43:03.440
+Davide Crapis: Yeah.
+
+199
+00:43:04.090 --> 00:43:29.680
+Davide Crapis: okay, yeah. I had a question relating to like, maybe, like, how do people feel about like such a change for change for Amsterdam like we haven't done like such a big rebalancing of prices before, but maybe this we can segue into like Asgar section, because I know he wants to talk about. This thing as well.
+
+200
+00:43:31.480 --> 00:43:32.160
+Davide Crapis: Yeah.
+
+201
+00:43:41.060 --> 00:43:44.870
+Ansgar Dietrichs: One sec. I have small technical difficulties. If you give me 30 more seconds.
+
+202
+00:43:44.870 --> 00:43:45.420
+Davide Crapis: Yep.
+
+203
+00:43:57.800 --> 00:44:15.679
+Davide Crapis: and then in the meantime, so we are taking more time than I was expecting. So there was going to be another presentation from Maria on this new, like multi dimensional gas metering proposal that we have.
+
+204
+00:44:15.850 --> 00:44:37.860
+Davide Crapis: which I think is quite interesting for this discussion. But if we probably won't have enough time, so maybe we can go on with the discussion, and then we move this presentation to the next time. So we also have enough time to discuss and to address all the questions. But yeah, let's see, after section terminates. Yeah.
+
+205
+00:44:39.740 --> 00:44:47.328
+Ansgar Dietrichs: Yeah could. Maybe there's someone else I'll put put the link to. I just had 2 slides literally in my presentation. If someone else could maybe share their screen.
+
+206
+00:44:47.910 --> 00:44:50.349
+Davide Crapis: Yeah, I can try to present this. Yeah.
+
+207
+00:45:00.360 --> 00:45:01.280
+Ansgar Dietrichs: Sorry about that.
+
+208
+00:45:01.640 --> 00:45:02.820
+Davide Crapis: Noise-noise.
+
+209
+00:45:06.250 --> 00:45:10.356
+Ansgar Dietrichs: Perfect. Yeah, if you could full screen
+
+210
+00:45:17.340 --> 00:45:22.260
+Ansgar Dietrichs: yeah. And so so basically, I'm not sure if maybe it's easier to read if you go to slideshow
+
+211
+00:45:22.590 --> 00:45:23.580
+Ansgar Dietrichs: and
+
+212
+00:45:23.880 --> 00:45:35.496
+Ansgar Dietrichs: yeah, perfect. So basically, like, the the idea is just, I wanted to briefly like, talk about Amsterdam. It's not super well prepared just a few thoughts here, basically. And so basically,
+
+213
+00:45:36.500 --> 00:46:02.490
+Ansgar Dietrichs: just for general context, this is just my best guesstimate in terms of governance process for ethereum. But, like, I think we have roughly 2 guaranteed months for Erp proposals for the Glumston process. And there's a good chance that there's still going to be some more time after that. But basically at that point it will already be, oh, this erp is coming late into the process. Maybe we can't fit it in anymore. These kind of things, whereas, like anything that
+
+214
+00:46:02.490 --> 00:46:27.370
+Ansgar Dietrichs: wants to be properly considered, basically will have to be proposed within the next roughly, plus minus 2 months, I would say, and then that would just be the general kind of erp. And then there would definitely be more time than that for finalizing any parameters that come come with an erp, but just to give us like a general idea of the timelines here. So I think it's already like urgent enough that we should start to really have a concrete plan of like. What are the features we want
+
+215
+00:46:27.370 --> 00:46:38.020
+Ansgar Dietrichs: to see in Amsterdam here from the pricing side? Because it's not that much time. And so yeah, I just wanted to briefly like, run through the different categories here.
+
+216
+00:46:38.080 --> 00:47:01.770
+Ansgar Dietrichs: So the 1st one basically just is like, kind of what Jessica already was talking about just now in terms of compute. But basically the general category of, I think we really want to ideally. Not all of that has to be in Lamsterdam. But ideally, we really want to get to a place where, for all of the 3 major resource types that is compute, that is, state access. And that is data. We really homogenize all different types of
+
+217
+00:47:01.770 --> 00:47:10.919
+Ansgar Dietrichs: operations that touch that specific resource so that they all cost the same per amount of effort that they cost. Right? So that means for compute. It's just the amount of time.
+
+218
+00:47:11.270 --> 00:47:37.240
+Ansgar Dietrichs: And that should be basically like the per second cost should always be the same in terms of gas, no matter what kind of computer use. And for compute, we are the farthest along. I think we have a good chance of like basically, and being ready and being agreed for Glam Saddam, I am a bit worried that, as of today, we are not necessarily in a place that we will have the same true about the other 2.
+
+219
+00:47:37.300 --> 00:47:54.799
+Ansgar Dietrichs: We're just as unfortunate because as we want as we need to like this is a little bit like the next point. But as we need to basically reprice these different dimensions relative to each other, basically, if we have a dimension like State, where basically, things are still very much mispriced. The different type different ways. You can basically
+
+220
+00:47:54.990 --> 00:48:24.569
+Ansgar Dietrichs: cause stress in terms of loads and reads and writes and whatnot, that just means that we basically have to make everything much more expensive. So that we can basically create more headroom for scaling. Whereas if we, if we homogenize everything first, st then we basically only have to have to reprice to the extent necessary. So basically, like 1 point I want to make is that, as of today, we are not yet on a track where we will have state repricing ready, because no one's yet working on it deeply for Glamsterdam. So if we, if we think we would want to have a 1st batch of changes
+
+221
+00:48:24.620 --> 00:48:51.100
+Ansgar Dietrichs: for State ready as well, we would really need to very soon start to think hard about like, what even are we tracking here? What are the different things we were trying to benchmark? Obviously, state is just more complex because it's not as pure as compute, but just wanted to flag this. Maybe in the at the end we can have a quick discussion about how we think about this. But but yeah, I really am worried that as of right now, we're not necessarily on track to change anything in Amsterdam. There
+
+222
+00:48:51.150 --> 00:49:10.109
+Ansgar Dietrichs: and then. The 3rd one obviously is data. Data is in a way less problematic. It's a bit simpler. You don't actually have to do any any benchmarking. Also, there's some switching back and forth between the presentation and emails I don't know. And anyway.
+
+223
+00:49:10.700 --> 00:49:26.820
+Ansgar Dietrichs: in terms of data, it's really just about like making sure that that in principle we don't have any big oversights in terms of what contributes to basically like the worst case size of a block.
+
+224
+00:49:27.089 --> 00:49:47.859
+Ansgar Dietrichs: Yeah. And then the question is, just, am I overlooking anything by even categorizing it and compute state and data? These are usually the 3 that come up the most. But there's, of course, also like memory and and kind of related questions. So like, if there's anything else kind of urgent that we also want to track. Then, yeah, that we also need to need to pay attention to. And then this is another major one.
+
+225
+00:49:48.220 --> 00:49:59.480
+Ansgar Dietrichs: We probably also really want to like, make a change in Amsterdam that changes the relative pricing. So basically like, not only look at like that. All the different ways to access date
+
+226
+00:49:59.600 --> 00:50:05.712
+Ansgar Dietrichs: are priced according to how much actual time they take, for example, but also specifically,
+
+227
+00:50:06.580 --> 00:50:30.310
+Ansgar Dietrichs: want to make sure that, like, how much headroom do we have, for example, for data, or for state versus for compute, and and basically that a block that only uses compute has the same kind of worst case load as a block that only uses a lot of state or access, a lot of data. And the big problem there is that with compute, we can probably kind of make these changes without many
+
+228
+00:50:30.470 --> 00:50:36.279
+Ansgar Dietrichs: big backwards compatibility questions, because most of that is just making things cheaper. And
+
+229
+00:50:36.730 --> 00:50:50.200
+Ansgar Dietrichs: as we start really changing the ratio between resources, though we we will. We will not get around having to just make big changes to pricing that that will potentially impact existing contracts. And so I think we pretty urgently. If if any of this
+
+230
+00:50:50.210 --> 00:51:14.090
+Ansgar Dietrichs: is supposed to be in Amsterdam, then we really urgently need to start having a strategy, for like how we even think about backwards compatibility and like how to even analyze mainnet for contracts that could potentially break as things become more expensive, this kind of thing, and obviously like a lot of these are kind of weird edge cases, because in principle you're not supposed to hard code, hard code gas limits for sub courts and whatnot. But of course, that sometimes in some cases happens. So
+
+231
+00:51:14.140 --> 00:51:17.320
+Ansgar Dietrichs: we really need to have a strategy for this.
+
+232
+00:51:17.800 --> 00:51:30.840
+Ansgar Dietrichs: And also why is this even so urgent for Glamsterdam. Well, because in Glamsdam specific specifically with these 2 headline features that are in discussion right now, epbs, slash delayed execution and block lab access lists, the relative amount of
+
+233
+00:51:30.920 --> 00:51:37.480
+Ansgar Dietrichs: available resources for all of these 3 categories will change quite a bit. And if you briefly want to go to the other slide, David.
+
+234
+00:51:37.560 --> 00:52:06.439
+Ansgar Dietrichs: And just I was just trying. I'm not sure how correct this is. This is just a sketch of like trying to map out like, how does do these 2 features potentially change like affect all of these dimensions? Just so you get a feeling for like, why does the relative availability of these kind of change, maybe. And so like, if you look at epbs, right? So basically, there's 2 things you will have a longer window for propagation of the of the payload. Which just means you can have more data, right? So basically, you could
+
+235
+00:52:06.540 --> 00:52:30.670
+Ansgar Dietrichs: well, either make all data cheaper, or we just basically now have more time more way to basically raise the gas limit before data becomes a problem again and then on. But Epbs also gives you more room for execution. But, interestingly enough, now, it's a different window like today. Basically like it kind of doesn't matter. You can split your time equally between downloading and or executing. You have to be ready by 4 seconds into the slot, right for other stations.
+
+236
+00:52:30.670 --> 00:52:49.400
+Ansgar Dietrichs: But with epbs you would have a different deadline or delayed execution. You would have a different deadline for just having received and verified that you have the payload, and having fully executed it. So that means that now you have, like this specific extra headroom just for execution that you could not otherwise use for data. So that's the first.st That's basically a way in which
+
+237
+00:52:49.520 --> 00:52:55.079
+Ansgar Dietrichs: compute basically now could explicitly be cheaper than data, because because you have more time for that right.
+
+238
+00:52:55.080 --> 00:53:20.059
+Ansgar Dietrichs: and not only compute, but also because you have more time for execution. It also means more state access. So in a way, data should now, in relative terms, become more expensive because there's like a tighter constraint on data than there is on execution relative to what we have before. But all of these dimensions we have more room now in absolute terms, and then block level access list is even more messy, in a sense, because it has many different
+
+239
+00:53:20.060 --> 00:53:24.409
+Ansgar Dietrichs: ways in which it impacts performance. And again, I'm not even sure that this is quite
+
+240
+00:53:24.940 --> 00:53:45.200
+Ansgar Dietrichs: conclusive, or like even the right way of approaching it. But the way I think about it is like there's these 2 different sides of buckle up access lists. There's the at least in the current proposal. There's the read locations, just the locations, not the values. What that allows you is, you can basically just at the very start of the block already start loading all the values that will be accessed doing the bug execution. And
+
+241
+00:53:45.760 --> 00:54:10.110
+Ansgar Dietrichs: 2 nice things. One, you basically you can. You can start loading them all at the very beginning. You don't have to wait until they actually hit, and you can load them in parallel which gives you extra performance versus sequentially so overall. This means you will be able to have more. State reads specifically but right, not not writes just reads so that that specific only gives you more reads. And then with the other proposed part of access, is this
+
+242
+00:54:10.560 --> 00:54:15.200
+Ansgar Dietrichs: is the stative. So basically like, you typed out again and
+
+243
+00:54:16.890 --> 00:54:25.105
+Ansgar Dietrichs: noise. Yeah. Sorry for conquering your device here. And the other
+
+244
+00:54:25.990 --> 00:54:54.710
+Ansgar Dietrichs: a big one is basically like the the right locations and the values, and that basically impacts the ability gives us the ability to parallelize transaction execution. So it gives us more compute. And it also impacts State this time, because it actually lets you start computing the post execution post block, state route at the very top of the of the block already, which which also allows you in principle, gives us more time, more ability to allow for more rights and make rights cheaper.
+
+245
+00:54:54.860 --> 00:55:07.860
+Ansgar Dietrichs: The one way in which actually, like block accesses make things worse, though, is that basically now has this extra sidecar to the block which now couples state and data in a way so meaning that, like every State access now
+
+246
+00:55:07.860 --> 00:55:30.279
+Ansgar Dietrichs: also increases the data size of a block, because that value has then to be written into the X list by the mine, afterwards by the producer. And that actually means that is a counteracting force. So basically, like all of these, will give us more state access. This actually now gives us less state access again. And we would have to actually like benchmark exactly like where that
+
+247
+00:55:30.280 --> 00:55:32.480
+Ansgar Dietrichs: net or net comes out on.
+
+248
+00:55:32.480 --> 00:55:52.210
+Ansgar Dietrichs: And basically just just began giving you the intuition that basically like any repricings that we want to do and that are not just like like that. This none of this affects Esx work right, like the the just, making sure that all the different types of compute are homogenized in their price, that that is valid either way. But like.
+
+249
+00:55:52.210 --> 00:56:17.190
+Ansgar Dietrichs: if we think about how expensive should compute in general be compared to state access like this. Basically, we have to take, we have to make sure that we base it on the actual version of ethereum that will be live in Lamsterdam. So just want to give you like a feeling for how complex all of this is, but also how, if we do not make any relative re pricing at all in Amsterdam, then we actually are in a pretty bad place. Because then we actually created a lot of extra headroom for some specific type of consumption.
+
+250
+00:56:17.190 --> 00:56:41.469
+Ansgar Dietrichs: But we can't actually make use of it, because now we will be blocked by some bottlenecks of exactly the types of resources that we could not make cheaper so, and especially like the state side of this, is actually quite messy because it's affected in all these different ways. So basically, just if we can go back to the other slide, so basically just wanted to highlight that it's a pretty complex topic, and I just think that we kind of at least in terms of like the kinds of
+
+251
+00:56:41.470 --> 00:56:54.629
+Ansgar Dietrichs: general proposals for Glamsterdam. We probably need to have them out into. Maybe I don't know. Maybe there's a bit more headroom there, but like kind of in the next few months, and I feel like right now. The main one that we will get is the State reprising, the compute repricing. But I think
+
+252
+00:56:54.720 --> 00:57:09.707
+Ansgar Dietrichs: on these, on all of these other fronts. Ideally, we should at least some of those we should also kind of get ready for Glam. Saddam. And yeah, just wanted to highlight basically that problem. And just to briefly mention other potential pricing features, that's really much more optional in case that's possible.
+
+253
+00:57:09.990 --> 00:57:37.230
+Ansgar Dietrichs: one idea, what? Just to make actually sure that, like data and blobs count against the same kind of cap of data. Of course Blobs should have a discount factor because you only need to sample them. You don't have to fully download them. But basically the idea could be that they actually get to move basically like call data into this blob gas limit. And then the other one is this multidimensional metering proposal that I'm not sure we'll have time to actually talk about today. But basically, that's also a really interesting new proposal by
+
+254
+00:57:37.250 --> 00:57:40.239
+Ansgar Dietrichs: Maria and David.
+
+255
+00:57:40.600 --> 00:58:06.880
+Ansgar Dietrichs: and actually, like the multi dimensional metering, would also allow us to have more general targeted caps. So already in Fussaka. We will have the total size cap on a block. But but size is really the only thing you can cap today, because size is something you can statically analyze everything else is a runtime value. So in order to have a cap on a runtime like the total amount of I don't know catch ups in a block, or whatever, if we wanted to have such a cap somewhere.
+
+256
+00:58:06.880 --> 00:58:29.129
+Ansgar Dietrichs: and that actually requires, as a prerequisite multidimensional metering, because you 1st have to track that specific operation separately from everything else before you can cap it. So only if you were to decide to ship the multidimensional metering in Amsterdam would more types of caps even be a potential option? And then the last thing, I think Sophia also mentioned it in chat earlier was the idea of potentially already
+
+257
+00:58:29.130 --> 00:58:44.509
+Ansgar Dietrichs: having a Zk Vmware pricing in Amsterdam as well. So again, all this just and ideally, if we have a few minutes to discuss this briefly, I'd be really curious of people's takes like, where do you agree? In terms of urgency of things? We should ideally try to get into Glamsterdam, and
+
+258
+00:58:44.510 --> 00:58:54.819
+Ansgar Dietrichs: is there maybe some activity that I'm not yet aware of or like? How do we? How could we try to like coordinate on making progress on this Preglam. Sit down. Yeah, that's kind of all from my side.
+
+259
+00:58:56.150 --> 00:58:59.341
+Davide Crapis: Yep, we have 8 min. So I think,
+
+260
+00:59:01.420 --> 00:59:15.860
+Davide Crapis: yeah, maybe to your second point, yeah, I'm also curious, like, whether there is any work that we started already, that any team started on like benchmarking for state, not just for compute.
+
+261
+00:59:16.830 --> 00:59:28.729
+Ansgar Dietrichs: Yeah. So actually, in principle, I think my understanding is that Guillaume's team is ramping up to start doing that that kind of work exactly, and I don't think they have so far been focused on like
+
+262
+00:59:29.440 --> 00:59:37.389
+Ansgar Dietrichs: results that would immediately inform Amsterdam decisions. But they're definitely a team to to go talk to at least about this.
+
+263
+00:59:40.180 --> 00:59:43.749
+Ansgar Dietrichs: I'm not actually sure what Guillaume's team is called something something.
+
+264
+00:59:45.330 --> 00:59:51.470
+Ansgar Dietrichs: It's it's the team that basically previously also worked on vertical and statelessness, and and so on.
+
+265
+00:59:52.510 --> 00:59:55.260
+Ansgar Dietrichs: I am stateless. Team makes sense.
+
+266
+01:00:01.850 --> 01:00:02.950
+Davide Crapis: yeah. Francis.
+
+267
+01:00:04.030 --> 01:00:07.487
+Francis Li: Yeah. Quick question about like benchmarking state.
+
+268
+01:00:08.740 --> 01:00:18.200
+Francis Li: every client, maybe not every client. A lot of clients use different databases, etc, and have very different access patterns like, how does this work of like benchmarking state.
+
+269
+01:00:20.850 --> 01:00:23.970
+Ansgar Dietrichs: Yeah, so this is why stages in general just harder. We kind of need to
+
+270
+01:00:24.060 --> 01:00:35.479
+Ansgar Dietrichs: think harder about what it even means to benchmark in principle. You can just benchmark per client, right? It will just be that the results will just be much more different across clients, because they make different choices.
+
+271
+01:00:35.540 --> 01:00:57.810
+Ansgar Dietrichs: So it doesn't always mean that because on state, like on compute, whenever you have a client that's vastly slower than another client on a specific operation that's usually an indication that that client should increase their performance on state. It can just be that, like a client, is just slow on a certain type of access pattern, because it just that falls out of their different implementation choice. And we might just not be able to do anything about it.
+
+272
+01:00:57.880 --> 01:01:11.889
+Ansgar Dietrichs: But we still need to just track it. So so I think we can still, like the types of the types of acts of situations, you benchmark would still be the same across all clients. Right? It's just that. The results will then
+
+273
+01:01:12.440 --> 01:01:14.390
+Ansgar Dietrichs: look much more different
+
+274
+01:01:17.420 --> 01:01:18.100
+Ansgar Dietrichs: or or.
+
+275
+01:01:18.100 --> 01:01:18.640
+Francis Li: Yeah.
+
+276
+01:01:18.640 --> 01:01:25.040
+Ansgar Dietrichs: Did you have a different? Or do you think it's it even like, yeah, are there other complications? You see.
+
+277
+01:01:27.710 --> 01:01:46.610
+Francis Li: Not other communications. It's just that kind of it's really hard, because everybody is like so different in these situations, like unlike compute and stuff. So yeah, just curious, like, how like we are thinking about it. The the second thing I want to kind of like maybe touch a little bit, because you mentioned like about the priorities and stuff.
+
+278
+01:01:47.020 --> 01:02:07.340
+Francis Li: I feel like you'll be really great if we can like, because we're already doing this like homo, homogeneous like a pricing thing. It'll be really great to make things like really, really configurable, so that potentially it can be adopted. And else can pro price things differently based on their kind of like different situations and stuff.
+
+279
+01:02:08.070 --> 01:02:16.830
+Francis Li: And just try to mention it and see if that will become a priority. And if there's anything that we can potentially help like, push that forward.
+
+280
+01:02:20.270 --> 01:02:33.380
+Ansgar Dietrichs: Yeah, that's a very good point, I think, with a lot of these changes in general, like we are now only now starting to get into the habit of thinking, how does this relate to L. 2 s. That's also why I put, for example, L, 2, extensibility for specifically this data.
+
+281
+01:02:33.870 --> 01:03:02.629
+Ansgar Dietrichs: pricing the data metering change, because that would hopefully be something we can make easily extensible for L twos to use because they have been asking for a way to separate out call data pricing from everything else for a long time now, of course. But yeah, there's also other questions of like, exactly make make pricing more modular in general, so that it's easier for L. Twos to actually just deviate from l 1 pricing in general. That's something that I think is a really really good long term goal. And then the question is, can we already make this 1st batch of changes
+
+282
+01:03:03.000 --> 01:03:09.610
+Ansgar Dietrichs: be implemented in a way that allows for that? Or is that something that basically will take more time to to find a strategy for.
+
+283
+01:03:10.640 --> 01:03:35.509
+Davide Crapis: Yeah. And maybe one comment here, I think, like we had discussed a bit of this like potentially having a standard config for this pricing parameters at interop with Francis. We also talked to Marius from Gaff. I think it's his intuition was like a little bit pushing back, saying that, like at the moment, like all these parameters
+
+284
+01:03:35.510 --> 01:04:00.420
+Davide Crapis: are in the compiled code, and then, if you take them out into like some config, it would slow things down significantly. But it was just this intuition, like we don't have like any like analysis, or like any measurement of like, how much slower it would actually be.
+
+285
+01:04:00.420 --> 01:04:04.440
+Davide Crapis: So I think it would be like something interesting to explore potentially as well.
+
+286
+01:04:05.490 --> 01:04:11.560
+Francis Li: Okay, so seems like the kind of like the thing that might need like investigating is like
+
+287
+01:04:11.770 --> 01:04:20.539
+Francis Li: trying to do a Poc, maybe on rest. I'm guessing, like some of the clients, and see how hard it is to make it comfortable. And either any like performance impacts, etc.
+
+288
+01:04:25.130 --> 01:04:26.740
+Francis Li: Does that sound right?
+
+289
+01:04:26.740 --> 01:04:30.909
+Davide Crapis: Yeah, that's my understanding, Ansgar, or what do you think.
+
+290
+01:04:30.910 --> 01:04:32.270
+Ansgar Dietrichs: Sorry say again.
+
+291
+01:04:33.920 --> 01:05:00.900
+Francis Li: Oh, no, no, just trying to say that it seems like the current blocker or unknown, for making things configurable is mainly about okay, we should probably like, try to plc it in some of the clients, evm complete implementations and see if it makes things really hard for hard force, or like changing Evm or whatever, or and if it makes a little bit difference on the performance side. So if there's no issues, it seems like we can do it
+
+292
+01:05:01.140 --> 01:05:01.820
+Francis Li: potentially.
+
+293
+01:05:01.820 --> 01:05:30.849
+Ansgar Dietrichs: I'd be curious. We have a lot of client devs on the call. Whether people have general comments on the feasibility of making pricing either fully modular. I'm not sure if that's even a coherent thing to say, because I think pricing is not just a table of values. There's also this logic that, like some, some operations, have, like some specific kind of pricing logic. So I'm not sure how exactly you would make that fully modular. But basically like at least making it more modular like, how how feasible do people think that is so? How easy would it be?
+
+294
+01:05:41.440 --> 01:05:43.970
+Ansgar Dietrichs: Or maybe it's the kind of thing that we just have to
+
+295
+01:05:44.520 --> 01:05:55.040
+Ansgar Dietrichs: to basically just like try as a pilot project, basically to to see, I could imagine that that's the kind of the part of the code that just many people don't have a strong opinion on, because it hasn't been touched that much in the in the past.
+
+296
+01:05:55.990 --> 01:06:15.149
+Davide Crapis: Yeah, yeah, and yeah, to respond to Francis, I think that would be a really nice Poc to have like. And to ask our point. I mean, the functions like those functions. Add parameters right? Like, what we take out is the parameters themselves, right? Like in the simplest implementation. Basically.
+
+297
+01:06:15.340 --> 01:06:22.539
+Davide Crapis: and you don't. The function we can commit to them. We don't need to modularize them right?
+
+298
+01:06:23.540 --> 01:06:35.170
+Ansgar Dietrichs: I mean, it depends, like, for example, also need the the way to like handle data a little bit differently. To begin with, right? So ideally modular, modular pricing there would give them that flexibility as well.
+
+299
+01:06:36.090 --> 01:06:53.710
+Davide Crapis: Okay, okay, alright. So I think we need to wrap up. But yeah. And we are overflowing with Maria's presentation on the multi dimensional guest meeting. So I'll try to set the next call a bit like earlier, maybe
+
+300
+01:06:54.130 --> 01:07:15.690
+Davide Crapis: the week after next, since I think next there is the research call at the same time? Yeah. So we can continue the discussion there. And I'll try to see if we can make progress on like the with the stateless team. If maybe invite them
+
+301
+01:07:16.140 --> 01:07:32.399
+Ansgar Dietrichs: And I think we will also like, from the kind of the l 1 scaling kind of track Df will kind of. We'll keep working on this quite a bit in the next few weeks. So if any anyone from outside the F, that also is basically wants to collaborate on on these topics outside of
+
+302
+01:07:32.400 --> 01:07:47.079
+Ansgar Dietrichs: just the the compute homogenization, because that one, I think, is already the most kind of specific. So any of the other topics there specifically state or something. If you want to collaborate on that, do reach out to Marius or Tim, or me
+
+303
+01:07:47.260 --> 01:07:54.230
+Ansgar Dietrichs: or Davida specifically, on pricing, I think that that really makes
+
+304
+01:07:54.370 --> 01:08:05.520
+Ansgar Dietrichs: makes a lot of sense. And then but also do do go and read Maria's and and David's work on on the multi dimensional metering that's actually really nice work, if I may say so.
+
+305
+01:08:05.960 --> 01:08:16.249
+Davide Crapis: Thanks. Anskar, yeah, we'll link it. Yeah. Maria sent it. We'll also send it to the group. And then we can start with that one next time. Yeah. And thanks everyone.
+
+306
+01:08:19.050 --> 01:08:20.430
+Francis Li: Alright. Thank you, everybody.
+
+307
+01:08:26.490 --> 01:08:27.569
+Ansgar Dietrichs: Thanks. Everyone.
+
