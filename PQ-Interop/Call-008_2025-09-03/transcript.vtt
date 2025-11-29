@@ -1,0 +1,1710 @@
+WEBVTT
+
+1
+00:03:23.740 --> 00:03:24.669
+KaydenML: Good morning.
+
+2
+00:04:53.660 --> 00:04:55.940
+Will Corcoran: Ow, we'll start in just a second.
+
+3
+00:04:58.620 --> 00:05:00.019
+Ladislaus: Well, hi folks.
+
+4
+00:05:01.180 --> 00:05:01.820
+Will Corcoran: Blue.
+
+5
+00:05:09.180 --> 00:05:14.430
+Will Corcoran: How does anyone on this call is from the cat herders or protocol support, are they?
+
+6
+00:05:32.180 --> 00:05:33.660
+Will Corcoran: Okay, well…
+
+7
+00:05:34.580 --> 00:05:46.899
+Will Corcoran: The call was, I was trying out the livestream. I see it on YouTube, but I don't think that there's anyone here to flip it on to the livestream, so we'll see if that happens or not.
+
+8
+00:05:47.320 --> 00:05:48.580
+Will Corcoran: It's all an experiment.
+
+9
+00:05:49.280 --> 00:05:54.809
+Will Corcoran: Alright, so we had the agenda that was posted yesterday.
+
+10
+00:05:55.010 --> 00:06:02.669
+Will Corcoran: in the, in the GitHub, we're gonna start off… sorry, I've lost track of it real quick.
+
+11
+00:06:06.340 --> 00:06:07.350
+Will Corcoran: Thank you.
+
+12
+00:06:12.290 --> 00:06:24.339
+Will Corcoran: Okay, got too many tabs open. All right, so we had a internal commitment to ship the specs for DevNet Zero on the 31st, which was Monday.
+
+13
+00:06:24.540 --> 00:06:25.959
+Will Corcoran: Just curious if…
+
+14
+00:06:26.280 --> 00:06:33.579
+Will Corcoran: maybe O or Gadjinder, if one of you could kick us off by giving us an update on the status of that?
+
+15
+00:06:41.250 --> 00:06:42.920
+Will Corcoran: Congratulations.
+
+16
+00:06:42.920 --> 00:06:48.440
+unnawut: So for Rheem, I think…
+
+17
+00:06:49.120 --> 00:07:08.230
+unnawut: So we are… we're just waiting for the specs for the transition functions, that Guy Jinder just mentioned in the… in the Telegram group, so we have to review those, and then get them… get them merged into the repo, and then, trigger that into our… our codebase.
+
+18
+00:07:08.430 --> 00:07:11.469
+unnawut: So that's… I think that's, like, the… the main…
+
+19
+00:07:11.650 --> 00:07:20.689
+unnawut: remaining part. Then there are, like, some other small features that we are developing, but it's not really, it's not really a blocker for definite zero.
+
+20
+00:07:20.690 --> 00:07:35.170
+unnawut: For example, like, we are… we are building, like, persistent, so basically DB on top of our client, generating, like, the SecP keys, stuff like that. So I guess, like, for us, in order to get DevNet Zero ready.
+
+21
+00:07:35.410 --> 00:07:44.209
+unnawut: So, right, get the specs, the remaining specs merged as soon as possible, and hopefully, like, we could trickle those down into our codebase and, you know,
+
+22
+00:07:44.540 --> 00:07:48.780
+unnawut: Let's say, like, 3 to 5 days from… From when it's merged.
+
+23
+00:07:55.590 --> 00:08:15.380
+unnawut: But on the other hand, the other update I can give is, in terms of Rheem itself, regardless of the specs, we were able to run the 3SF under a, you know, a local 4-node environment, for a few hundred slots, so that seems… seems fine.
+
+24
+00:08:15.380 --> 00:08:20.789
+unnawut: So it's only a matter of, like, refactoring our code, to align with the…
+
+25
+00:08:20.970 --> 00:08:25.690
+unnawut: The… the specs that's, being, being, submitted.
+
+26
+00:08:31.990 --> 00:08:38.170
+Will Corcoran: Guillaume, or someone from the Zeeam team, are one of you able to provide an update?
+
+27
+00:08:42.049 --> 00:08:46.469
+Guillaume: Yeah, I should be… oh, can you guys hear me?
+
+28
+00:08:46.930 --> 00:08:47.490
+Will Corcoran: Yep.
+
+29
+00:08:47.830 --> 00:09:00.779
+Guillaume: Okay, I don't know where your gender is. Yeah, I don't have the full, picture, but I can definitely provide some of a… part of an update. So, we… we merged the metrics, things.
+
+30
+00:09:01.130 --> 00:09:13.969
+Guillaume: The last, like, yesterday, I think? Yeah, I've been busy, integrating some PR, so we're, we're getting ready. Regarding the…
+
+31
+00:09:14.590 --> 00:09:16.490
+Guillaume: what's that called?
+
+32
+00:09:19.020 --> 00:09:37.510
+Guillaume: testnet, so itself, like, the Kurtosis configuration and the… and the config from, sorry, not the config, the Genesis generator. I am waiting to hear back from, from PK, so I hope I'm going to… to hear from him soon, but I think we're more or less good to go.
+
+33
+00:09:37.800 --> 00:09:40.000
+Guillaume: We just have to,
+
+34
+00:09:40.080 --> 00:09:53.589
+Guillaume: to do the… yeah, to give it a trial, so we're building the images. All we need to do is to have the kurtosis configuration to check everything works. If something fails, we're going to start debugging.
+
+35
+00:09:53.590 --> 00:10:00.399
+Guillaume: So, yeah, okay, ideally, that will be done in a couple hours, we'll see, but,
+
+36
+00:10:00.400 --> 00:10:05.699
+Guillaume: But it shouldn't be too complicated, given the simplicity of the… of the genesis.
+
+37
+00:10:06.190 --> 00:10:22.429
+Guillaume: Regarding the graph… sorry, the Grafana stuff, I haven't done that yet, but I'm going… that wasn't in my plan to do it today. I was a bit held back by some debugging, but, yeah, I will, I will do it today.
+
+38
+00:10:22.430 --> 00:10:26.650
+Guillaume: And, we can also make some progress on that.
+
+39
+00:10:26.860 --> 00:10:34.999
+Guillaume: There's probably a ton of other things, but, it doesn't come to mind just now, so, yeah, that's it for the update so far.
+
+40
+00:10:43.180 --> 00:10:45.120
+Will Corcoran: Sorry, I was muted. Gotcha.
+
+41
+00:10:46.070 --> 00:10:51.940
+Katya Riazantseva: Yeah, hello, everyone. Question to Guillaume, do you mean any specific metrics by this PR?
+
+42
+00:10:52.230 --> 00:10:54.740
+Katya Riazantseva: Or… Maybe just in general.
+
+43
+00:10:54.740 --> 00:11:12.930
+Guillaume: No, it's not related to… no, no, it's just about the ability to export metrics, so we're not specifying any metrics yet. It's really just the ability to post them somewhere, so that they can be loaded into Grafana, so that we can do some basic debugging during the…
+
+44
+00:11:12.930 --> 00:11:21.949
+Guillaume: the post-quantum testnet launch, so nothing, yeah, nothing as advanced or as organized as what you're doing, it's just a capability.
+
+45
+00:11:22.430 --> 00:11:25.879
+Katya Riazantseva: Yes, thank you, got it. But that's great, anyway.
+
+46
+00:11:28.720 --> 00:11:33.410
+Will Corcoran: And then, oh, you had in the chat, I think, also something related to metrics?
+
+47
+00:11:33.670 --> 00:11:37.760
+Will Corcoran: maybe… I don't know if there's anything you want to say, but you're also
+
+48
+00:11:37.870 --> 00:11:41.070
+Will Corcoran: Thinking for a moment that you needed to have specific metrics in mind?
+
+49
+00:11:41.580 --> 00:11:56.390
+unnawut: Yeah, so it's basically what Guillaume said, both, I think, like, both Reem and Zim are able to export the metrics now, it's just a matter of, like, defining where exactly do we want to measure, and make sure, like, that we are measuring, like, the exact right same moment, so we…
+
+50
+00:11:56.530 --> 00:11:59.130
+unnawut: We have metrics that are usable across clients.
+
+51
+00:12:01.120 --> 00:12:02.440
+Will Corcoran: Okay, great.
+
+52
+00:12:02.440 --> 00:12:18.270
+unnawut: Yeah, so I think that would be best after we merge the remaining specs for the fork choice, because I guess, like, most of the measurements that we want to do for DevNet Zero at least, is probably somewhere around those, like, those, like, consensus and fork choice.
+
+53
+00:12:20.260 --> 00:12:23.580
+Katya Riazantseva: And… I think kurtosis would be great as well.
+
+54
+00:12:27.140 --> 00:12:36.300
+unnawut: Can you elaborate a bit, having kurtosis metrics? I mean, no, just running the clients on kurtosis.
+
+55
+00:12:36.840 --> 00:12:40.689
+Katya Riazantseva: If I got it correct, it's not possible now, right?
+
+56
+00:12:43.340 --> 00:12:45.629
+unnawut: I think Guillaume is working on that, right?
+
+57
+00:12:46.430 --> 00:12:58.830
+Guillaume: So, I'm not sure I understand the question, like, yes, it's possible to get metrics on kurtosis, they have containers to collect them, but… I mean, just in general, running on kurtosis.
+
+58
+00:12:58.830 --> 00:13:00.580
+Katya Riazantseva: Is it possible already?
+
+59
+00:13:00.850 --> 00:13:15.830
+Guillaume: Yes, sorry, to run the definite on Krutosis? No, it's not possible. That was what I tried to convey during my update. This is something that I need to work on with PK, but I'm gonna do it this week and see how far we get.
+
+60
+00:13:16.270 --> 00:13:17.750
+Katya Riazantseva: Okay, great, thank you.
+
+61
+00:13:21.670 --> 00:13:28.870
+unnawut: Do I understand correctly that, but eventually for, like, to complete DevNet Zero, we'll still need to run that?
+
+62
+00:13:28.990 --> 00:13:30.790
+unnawut: on kurtosis.
+
+63
+00:13:31.590 --> 00:13:38.250
+Guillaume: Most likely, yes. I mean, if we're going to get any support from, the ETH Commander Ops.
+
+64
+00:13:38.650 --> 00:13:50.790
+Guillaume: This is their favorite tool. Okay, maybe favorite is a strong word, but this is the tool they inherited, so they've been maintaining it, and all their infrastructure is done from,
+
+65
+00:13:50.820 --> 00:13:58.570
+Guillaume: from this tool. I personally hate it, but that's because it's very good for
+
+66
+00:13:58.570 --> 00:14:20.570
+Guillaume: running an environment that is quite stable when you are doing debugging, it's really, really difficult, but I have some updates to it that I hope I can get them to merge. So, yeah, it's not gonna be use… it's not gonna be available for this DevNet, unfortunately, but yes, so, as a result, expect that we will be running Kurtosis configurations, and, I mean, we.
+
+67
+00:14:20.900 --> 00:14:38.099
+Guillaume: ETH Planner Ops, presumably, will be running those Kratosis configurations, and we just provide them with Docker images, and this is what Kryptosis does. It downloads the images, runs the clients, initialize the Genesis
+
+68
+00:14:38.140 --> 00:14:49.680
+Guillaume: the Genesis block and all the Genesis configuration for everybody, and then, supposedly, that avoids the situation where, you know, everybody runs their node in their little corner.
+
+69
+00:14:49.770 --> 00:15:07.770
+Guillaume: and someone forgot one switch and another one. So, it's supposed to save time, and according to them, it saves a lot of time when you're deploying testnets and things like this. So, like I said, for development, it's horrible, but when it comes to actually running a testnet, it's a very good tool.
+
+70
+00:15:14.160 --> 00:15:19.650
+Will Corcoran: Great, so, I guess, before we move on, was there anything that,
+
+71
+00:15:20.010 --> 00:15:27.930
+Will Corcoran: I don't know, from either the Rheem or Zim side, or the quadruvium, regarding…
+
+72
+00:15:28.140 --> 00:15:35.620
+Will Corcoran: updates to the spec for DevNet 1, I know that that was sort of, like, the fast follow, both things were being done in parallel.
+
+73
+00:15:45.990 --> 00:15:51.040
+gajinder: Yeah, I've, I've joined in. So, yeah, I would like to add that,
+
+74
+00:15:51.270 --> 00:15:54.330
+gajinder: I think specs for DevNet Zero are mostly there.
+
+75
+00:15:54.550 --> 00:15:58.060
+gajinder: Sumi, oh, and June, we had a conversation,
+
+76
+00:15:58.240 --> 00:16:02.509
+gajinder: Following up on, the folk choice as well, and,
+
+77
+00:16:02.790 --> 00:16:09.459
+gajinder: Yeah, so it was… I mean, a whole lot of it was simple translation from what Vitalik has done.
+
+78
+00:16:09.650 --> 00:16:12.620
+gajinder: And is 3SF Mini, P2P?
+
+79
+00:16:12.810 --> 00:16:17.579
+gajinder: And sticker, codes, and,
+
+80
+00:16:18.100 --> 00:16:22.550
+gajinder: So we just need to clean it up, and I think we are good to go on that.
+
+81
+00:16:22.970 --> 00:16:28.229
+gajinder: And we should be able to translate it to our clients easily as well.
+
+82
+00:16:31.930 --> 00:16:32.640
+Will Corcoran: Excellent.
+
+83
+00:16:32.950 --> 00:16:34.650
+Will Corcoran: Good to see you, Gadgetter.
+
+84
+00:16:35.900 --> 00:16:43.079
+Will Corcoran: So, I know that, Tomah, we were gonna try to do a walkthrough of whatever we can with the, multi-sig.
+
+85
+00:16:43.260 --> 00:16:52.179
+Will Corcoran: Spec, before we jump to that, Mercy, I saw your comment that you wanted to talk through this PR that I'm dropping in the chat right now.
+
+86
+00:16:53.070 --> 00:16:54.809
+Will Corcoran: Regarding the hash sig?
+
+87
+00:16:55.100 --> 00:17:00.850
+Will Corcoran: Could you maybe… Tee that up and let people know what you're looking for feedback on?
+
+88
+00:17:01.660 --> 00:17:06.489
+Mercy Boma Naps-Nkari: Yeah, so there's a concern of merging it to the housing, or…
+
+89
+00:17:06.859 --> 00:17:16.739
+Mercy Boma Naps-Nkari: using it as a support, so… so that is what I need to know. Are we going to use this? Because on the last call, Lijanda did mention that we still need it, or they had saying gripo, so…
+
+90
+00:17:17.150 --> 00:17:20.550
+Mercy Boma Naps-Nkari: I don't know if Benedict is here, if he will be the one to…
+
+91
+00:17:20.710 --> 00:17:23.220
+Mercy Boma Naps-Nkari: Show more light on how this is going to go down.
+
+92
+00:17:26.960 --> 00:17:39.690
+Thomas Coratger: I think that right now, Benedict is on holidays. I think he will come back soon, and once he comes back, I will discuss that with him.
+
+93
+00:17:40.160 --> 00:17:50.520
+Thomas Coratger: to check, I have the problem in mind, and yeah, I definitely need to check with him if we'll include that into the repo or not.
+
+94
+00:17:54.670 --> 00:17:55.500
+Will Corcoran: Excellent.
+
+95
+00:17:56.410 --> 00:17:58.589
+Will Corcoran: Great. And then Tamar.
+
+96
+00:17:58.960 --> 00:18:04.509
+Will Corcoran: While we've got you, Is there anything that you can do to kind of help
+
+97
+00:18:05.110 --> 00:18:11.339
+Will Corcoran: Help us walk through and learn a bit more about this, multisig spec.
+
+98
+00:18:11.340 --> 00:18:17.759
+Thomas Coratger: Yeah, yeah, you can do that. Maybe, Guillaume, you had a question before? Like, you raised your hand, so…
+
+99
+00:18:17.760 --> 00:18:32.340
+Guillaume: Yeah, I had a hopefully quick question. So, that tool that Nercy is working on, do we need it for the testnet? Because my understanding is that it's going to be round robin, so we don't really need any validators, so, yeah.
+
+100
+00:18:32.340 --> 00:18:37.070
+Thomas Coratger: My understanding is that we don't need it for this testnet, and we can take our time, like, there's no rush.
+
+101
+00:18:37.070 --> 00:18:39.249
+Guillaume: Is this the correct assessment?
+
+102
+00:18:39.950 --> 00:18:47.419
+gajinder: Yes, we don't need it for DevNet 0, but even in DevNet 1, the proposals will be now proven, just that,
+
+103
+00:18:47.630 --> 00:18:50.770
+gajinder: Now the validators will sign it. In DevNet0, there is…
+
+104
+00:18:50.970 --> 00:18:53.670
+gajinder: No signing of proposal or votes.
+
+105
+00:18:53.890 --> 00:18:56.600
+gajinder: So… Next up.
+
+106
+00:18:59.220 --> 00:18:59.830
+Thomas Coratger: Yep.
+
+107
+00:19:00.190 --> 00:19:01.300
+Thomas Coratger: Exactly.
+
+108
+00:19:04.140 --> 00:19:10.320
+Thomas Coratger: So, yeah, let me go through… through the codebase, I will share my screen.
+
+109
+00:19:12.180 --> 00:19:19.450
+Thomas Coratger: That we can all the… Together, so… can you see my screen?
+
+110
+00:19:20.200 --> 00:19:21.440
+Will Corcoran: Yep, perfect.
+
+111
+00:19:22.060 --> 00:19:33.990
+Thomas Coratger: Perfect. So… What I did, so basically my work was about, like, migrating the spec Python file.
+
+112
+00:19:34.170 --> 00:19:36.970
+Thomas Coratger: So basically, if we open, like, the…
+
+113
+00:19:37.640 --> 00:19:43.590
+Thomas Coratger: the spec repo, here we have some docs from the clients, where we have markdowns file.
+
+114
+00:19:43.820 --> 00:19:47.119
+Thomas Coratger: This is what was presented last week by Gajinder.
+
+115
+00:19:47.330 --> 00:19:58.500
+Thomas Coratger: another file that will be emerged, but this was, this was the goal there. So, my… my work is in the source,
+
+116
+00:19:58.630 --> 00:20:01.850
+Thomas Coratger: folder. Here we have Lizardine spec.
+
+117
+00:20:02.350 --> 00:20:05.279
+Thomas Coratger: Folder, and inside we have some subspec.
+
+118
+00:20:05.780 --> 00:20:13.530
+Thomas Coratger: So, we have different folders there, that contains, each of them, different… different type of subspecs.
+
+119
+00:20:14.150 --> 00:20:25.999
+Thomas Coratger: Also, we have a type folder that contains very basic types, such as, I will just show you one, for example, just UIN64.
+
+120
+00:20:26.090 --> 00:20:39.019
+Thomas Coratger: Maybe at some point, we will, like, just import an existing type of another Ethereum library, but this is not a problem, this is just a very minor change, so for now, we just defined a very simple type.
+
+121
+00:20:40.070 --> 00:20:50.219
+Thomas Coratger: And so you have other types for that. So, for example, like the output of a hash function, or any small types defined in this
+
+122
+00:20:50.340 --> 00:20:54.920
+Thomas Coratger: Folder, so we can add any type we want there as we go.
+
+123
+00:20:55.110 --> 00:20:59.460
+Thomas Coratger: This is just, like, a separate folder.
+
+124
+00:20:59.840 --> 00:21:19.580
+Thomas Coratger: The only constraint there, maybe just after I will move to the main spec, is just to have, like, very typed structure so that we don't have any possible confusion, always puts some types in the stuff we define.
+
+125
+00:21:20.620 --> 00:21:31.679
+Thomas Coratger: In the subspec, I have different folders, so I have a chain folder, where I define some very basic, DevNet config constants.
+
+126
+00:21:31.950 --> 00:21:35.400
+Thomas Coratger: So, just all of the constants are there, for example.
+
+127
+00:21:35.920 --> 00:21:41.569
+Thomas Coratger: Just to site one, the slot duration, and anything, so you have all of the config there.
+
+128
+00:21:42.270 --> 00:21:57.900
+Thomas Coratger: Then I have a folder contains all of the containers. So, for example, we have a block file in there, and we have a specific class for specific objects, for example, a block body, or a block header.
+
+129
+00:21:58.020 --> 00:22:00.500
+Thomas Coratger: Or simply a block.
+
+130
+00:22:00.630 --> 00:22:04.849
+Thomas Coratger: And so, we can just reuse these basic objects all around the code.
+
+131
+00:22:05.010 --> 00:22:13.070
+Thomas Coratger: for… at the moment, they are very simple, because we based everything on the simplest possible things. This is always linked.
+
+132
+00:22:13.260 --> 00:22:25.709
+Thomas Coratger: to the… some docs that we have in the Markdown files, so this is always very simple, very lean, containing only the minimal info that we want, and we can update these classes as we go.
+
+133
+00:22:27.130 --> 00:22:38.209
+Thomas Coratger: So we have one file per point, for example, we have one block file, one checkpoint file, one config file, and one state file to contain everything that we need.
+
+134
+00:22:38.580 --> 00:22:40.570
+Thomas Coratger: So that is about the container.
+
+135
+00:22:41.430 --> 00:22:46.350
+Thomas Coratger: If we speak about, then we have also the networking, so…
+
+136
+00:22:46.450 --> 00:22:54.230
+Thomas Coratger: Again, some constants, some gossip sub stuff, and some messaging stuff, so…
+
+137
+00:22:54.460 --> 00:23:06.370
+Thomas Coratger: At the moment, these are just all the basic defines. We can update, remove, modify anything that we want, but this contains, like, let's say, basic config for the networking layer.
+
+138
+00:23:07.640 --> 00:23:14.760
+Thomas Coratger: That is all about the generic stuff, but now, if we talk about, like, the cryptographic layer, let us say.
+
+139
+00:23:14.970 --> 00:23:34.910
+Thomas Coratger: We have first defined, like, the koala bear, that is our prime field. So, for those who are not aware of, a prime field is, this is a prime that will dictate how we operate over our finite field. So, this is a prime number, this one.
+
+140
+00:23:35.100 --> 00:23:44.420
+Thomas Coratger: And we define the… this name, his name is Koalaber, and then we define the finite field operation over this prime field.
+
+141
+00:23:44.540 --> 00:23:54.169
+Thomas Coratger: So, just basic operations like addition, subtraction, points negation, multiplication.
+
+142
+00:23:54.280 --> 00:24:09.910
+Thomas Coratger: power, so that we can use any element of this class with just a plus to define the addition. This… all of this function overwrites the different operators, so that this is very easy to use.
+
+143
+00:24:11.060 --> 00:24:29.370
+Thomas Coratger: Just to show you there, also, we have a test folder at the root of the repo, where we have also tests for all of the subspecs. So, if we take, for example, the Koala Bear subspec right here, we have tests for the field.
+
+144
+00:24:29.520 --> 00:24:34.619
+Thomas Coratger: And if we open this test about the field, we have very basic tests.
+
+145
+00:24:34.650 --> 00:24:51.940
+Thomas Coratger: For example, we just test addition, we test subtraction, we test point negation, we test multiplication, all of this, with very basic numbers. So that, for example, we check that the multiplication is equal to unexpected values and anything.
+
+146
+00:24:52.150 --> 00:24:56.369
+Thomas Coratger: So, very basic tests, just to check that everything is okay.
+
+147
+00:24:57.320 --> 00:25:00.980
+Thomas Coratger: So, after defining all of these basics.
+
+148
+00:25:01.360 --> 00:25:05.200
+Thomas Coratger: Finally, we just have the finite field defined.
+
+149
+00:25:05.500 --> 00:25:11.559
+Thomas Coratger: And what is very nice in there is that if at some point we want to change the prime field.
+
+150
+00:25:11.660 --> 00:25:22.099
+Thomas Coratger: We just have to change the prime there, and the two or three constants that are there, but the rest of the class remains the same, because this will always be the same.
+
+151
+00:25:22.990 --> 00:25:33.230
+Thomas Coratger: Of course, like, the implementation, they are not defined in an optimized… optimized way. This is just defined, like, to satisfy the needs that we need.
+
+152
+00:25:33.230 --> 00:25:45.039
+Thomas Coratger: in the simplest possible way, but this is not optimized, so that if we'll… if you look at Plonky 3 version, this will be obviously completely different, and a much longer implementation.
+
+153
+00:25:46.310 --> 00:25:59.649
+Thomas Coratger: Then, if we go to the Poseidon there, you have the Poseidon implementation that is more complex than Coalaber, so we'll not look into the very easy details of this one, but…
+
+154
+00:25:59.980 --> 00:26:10.669
+Thomas Coratger: Basically, this contains some constants that are there, generated by such script from the… from… from the paper.
+
+155
+00:26:11.410 --> 00:26:30.769
+Thomas Coratger: And it also contains the main file that is the permutation file. And so, basically, the function that we expose to the user is just this one, the permutation. This is what the function… this is the function that the user will use when using Poseidon.
+
+156
+00:26:31.400 --> 00:26:47.750
+Thomas Coratger: Inside this function, we have a call to all the other functions of the file to generate this permutation, but the user will only interfere with the permit function, nothing else. The user shouldn't call any other function of this file.
+
+157
+00:26:48.310 --> 00:26:53.649
+Thomas Coratger: And so, inside this permutation, we just call the round constant, do.
+
+158
+00:26:53.790 --> 00:27:03.880
+Thomas Coratger: In fact, we have… we can decouple that into different steps, that we have a first step there, that is an initial layer of the… of the hash.
+
+159
+00:27:04.200 --> 00:27:18.000
+Thomas Coratger: then some full rounds, then some partial round, and finally some other full round. So this is basically the decoupling of the function, and there you have, each time some utils.
+
+160
+00:27:18.560 --> 00:27:33.620
+Thomas Coratger: if you want to go deeper into the function, I tried to put EV comment on each line so that the user is aware of what we are doing each time, and can follow the steps line by line, but…
+
+161
+00:27:33.930 --> 00:27:51.539
+Thomas Coratger: Roofly, the step is processed by layer, and so you have an initial layer, another layer, another one, and a final one. This is the step of the function, and at the end, you just return the final state, and your permutation is done. And this is what the user will want to call.
+
+162
+00:27:52.300 --> 00:28:00.139
+Thomas Coratger: And so the same, if you look at the testing file there, I just put a test on the permutation, so…
+
+163
+00:28:00.290 --> 00:28:06.490
+Thomas Coratger: how I generated this test, I just… Took random inputs.
+
+164
+00:28:07.480 --> 00:28:11.030
+Thomas Coratger: And I computed the expected outputs.
+
+165
+00:28:11.190 --> 00:28:27.990
+Thomas Coratger: using Plonk E3 library, which is already audited and performing already in production, and so I just compare my Python implementation with the Plonk E3 implementation to be sure that I obtain exactly the same results.
+
+166
+00:28:28.120 --> 00:28:33.120
+Thomas Coratger: The same for the two widths of the permutation, 16 and 24.
+
+167
+00:28:33.990 --> 00:28:45.550
+Thomas Coratger: That is my Poseidon implementation. And finally, let's say the most complicated one, so I will not go into the detail there also, but the XMSSC nature.
+
+168
+00:28:45.830 --> 00:28:59.830
+Thomas Coratger: So, basically, it mimics exactly the Rust implementation, so you shouldn't find anything new, because these are the same tests, the same functions, the same implementation, the same interface as the Rust implementation.
+
+169
+00:29:00.220 --> 00:29:17.410
+Thomas Coratger: And just as a note, we don't want any client teams to develop this primitives themselves, because we just provide them the code, and we just want them to use the code, so this is not needed for you to re-implement that.
+
+170
+00:29:17.750 --> 00:29:32.720
+Thomas Coratger: For security reasons, because we think that this is quite complex to have every single detail perfect, and we prefer, for now, clients laying on, like, a common, futurly audited library.
+
+171
+00:29:33.780 --> 00:29:36.119
+Thomas Coratger: I will just present you this file.
+
+172
+00:29:36.490 --> 00:29:45.200
+Thomas Coratger: That is the interface file, and in this interface file, you have, like, the main interface the user will use.
+
+173
+00:29:45.650 --> 00:29:55.230
+Thomas Coratger: So, in the header of the file there, I put, like, the specification high-level function, which are key gen, sign, and verify.
+
+174
+00:29:55.490 --> 00:30:03.780
+Thomas Coratger: These are the three functions the users should use. To generate the key, to sign a new message, and to verify a signature.
+
+175
+00:30:04.080 --> 00:30:11.780
+Thomas Coratger: And so, this… the three functions are provided inside this XMSS class.
+
+176
+00:30:12.240 --> 00:30:19.320
+Thomas Coratger: So you basically initialize the class with a couple of parameters that comes from the other file.
+
+177
+00:30:19.640 --> 00:30:28.449
+Thomas Coratger: then you generate your key. You generate your key through different steps. As you can see, you have an activation epoch, because
+
+178
+00:30:28.490 --> 00:30:43.389
+Thomas Coratger: no matter what your lifetime is, you can generate a smaller activation time, and so you can choose to have, for example, a big lifetime, but a smaller activation time. This is what these arguments are about.
+
+179
+00:30:44.160 --> 00:30:59.219
+Thomas Coratger: And, you just basically generate your key. So, you go through the procedure, generating some random parameters, generating some, some Merkle tree to build your XMSS, your XMSS stuff.
+
+180
+00:30:59.370 --> 00:31:04.659
+Thomas Coratger: this is, like, the theory of XMSS, and I will not go into the details, like, to…
+
+181
+00:31:04.790 --> 00:31:13.720
+Thomas Coratger: avoid overloading my talk, but at the end, the goal is to generate these. These are the public key and the secret key.
+
+182
+00:31:13.900 --> 00:31:17.790
+Thomas Coratger: This is the final output of the key generation.
+
+183
+00:31:18.050 --> 00:31:35.819
+Thomas Coratger: So, in the public key, you have, for example, the roots of the Merkel tree, and some parameters, and in the secret key, you have a bunch of parameters. So, you have the tree, you have some PRF key, you have some parameters, you have your activation epoch, and the number of active epochs that you chose.
+
+184
+00:31:36.770 --> 00:31:45.660
+Thomas Coratger: Now that you have this, you are able to sign a new message. So, as you can see, the secret key should be one of the parameters.
+
+185
+00:31:45.800 --> 00:31:56.829
+Thomas Coratger: as well as the epoch, as well as the message that you want to sign. So, through the sign function, you can sign any new message. Again, this goes through a procedure.
+
+186
+00:31:56.990 --> 00:32:03.460
+Thomas Coratger: Be careful there, I put a warning that should be also in the Rust implementation from Benedict.
+
+187
+00:32:03.600 --> 00:32:11.199
+Thomas Coratger: A secret key for a given epoch must never be used to sign two different messages.
+
+188
+00:32:11.900 --> 00:32:22.679
+Thomas Coratger: And again, we go through another procedure that you can study, but at the end, the important stuff is that you generate a signature.
+
+189
+00:32:22.900 --> 00:32:28.070
+Thomas Coratger: This signature contains the pass that will then be used to
+
+190
+00:32:28.340 --> 00:32:32.900
+Thomas Coratger: to verify UC nature, some hashes, and a randomness row.
+
+191
+00:32:33.570 --> 00:32:43.080
+Thomas Coratger: And finally, the final function, the most important one to spec, because the verify function is the one that we will use into the…
+
+192
+00:32:43.210 --> 00:32:46.900
+Thomas Coratger: The aggregation, of signature.
+
+193
+00:32:47.860 --> 00:32:59.679
+Thomas Coratger: So, via this function, you can verify the message. So, via the public key, via the epoch, via the message, and the signature that was generated there, you can just verify the message.
+
+194
+00:33:00.350 --> 00:33:01.000
+Thomas Coratger: And so…
+
+195
+00:33:01.760 --> 00:33:09.300
+Will Corcoran: If you could pause real quick, Gadjinder had a question. Gadjnender, was this, specific to a section that was just covered, or…
+
+196
+00:33:09.590 --> 00:33:19.929
+gajinder: Yes. So basically, when, you mentioned about, the API of key generation, which is basically there is active… activation epoch, and there is,
+
+197
+00:33:20.270 --> 00:33:29.629
+gajinder: there is lifetime, and then there is how many epochs it is to be active, right? So, in this activation epoch for us would be zero.
+
+198
+00:33:30.800 --> 00:33:31.610
+Thomas Coratger: Yep.
+
+199
+00:33:31.780 --> 00:33:32.580
+Thomas Coratger: Yep.
+
+200
+00:33:34.120 --> 00:33:34.870
+Thomas Coratger: Correct.
+
+201
+00:33:35.630 --> 00:33:38.410
+gajinder: Or max active epochs is a lifetime, I mean.
+
+202
+00:33:38.870 --> 00:33:39.400
+gajinder: What?
+
+203
+00:33:39.400 --> 00:33:52.740
+Thomas Coratger: The… here, the activation epoch is the starting epoch for which the key will be valid. And the new active epoch is the number of consecutive epochs the key will be used for.
+
+204
+00:33:52.820 --> 00:34:00.279
+Thomas Coratger: So, I think that in the constant we define for the DevNets, there is a lifetime of 2 to the power 32,
+
+205
+00:34:00.810 --> 00:34:08.230
+Thomas Coratger: And you can define a smaller activation range for the key generation to be faster.
+
+206
+00:34:09.820 --> 00:34:12.090
+gajinder: Yeah, that's the clarification I wanted. Thank you.
+
+207
+00:34:12.090 --> 00:34:12.679
+Thomas Coratger: Yep.
+
+208
+00:34:16.429 --> 00:34:28.799
+Thomas Coratger: And so then… so you have the sign, and you have, finally, the verify, and so the verify function is able to verify the signature of any message, and at the end, it just outputs a Boolean.
+
+209
+00:34:29.360 --> 00:34:47.279
+Thomas Coratger: and it will just verify the pass and check that the route that it obtained by rehashing everything is just the expected route. If I just show you this verify pass function there, it is in the Merkle tree file.
+
+210
+00:34:47.500 --> 00:34:50.649
+Thomas Coratger: At the very end, what is important is JAD.
+
+211
+00:34:51.159 --> 00:35:07.009
+Thomas Coratger: It means after iterating through the entire path of the marker tree, the final computed node should be the root of the tree. And if it is the case, it just outputs through, and the verification succeeds.
+
+212
+00:35:07.260 --> 00:35:12.599
+Thomas Coratger: So that is basically the interface, and then you have a bunch of file,
+
+213
+00:35:12.860 --> 00:35:29.629
+Thomas Coratger: to do some different stuff. We can, of course, simplify this file. Some of these files are just here to make some randomness, so we can just simplify them, or anything, but the important stuff to remind is the interface.
+
+214
+00:35:29.940 --> 00:35:33.410
+Thomas Coratger: Another important step about,
+
+215
+00:35:34.320 --> 00:35:41.809
+Thomas Coratger: about the constant is that here, I have a constant file where I define some constant parameters.
+
+216
+00:35:42.020 --> 00:35:44.710
+Thomas Coratger: About, the signature scheme.
+
+217
+00:35:45.040 --> 00:35:50.329
+Thomas Coratger: And we can instantiate a new signature scheme by modifying this file.
+
+218
+00:35:50.910 --> 00:35:55.360
+Thomas Coratger: For the DevNet0, we agreed on this parameter.
+
+219
+00:35:55.700 --> 00:36:04.740
+Thomas Coratger: based on the benchmark done by Benedict on easy implementation, this seems to be the best one we have for now.
+
+220
+00:36:05.270 --> 00:36:11.929
+Thomas Coratger: Best, the problem is that if you try to use that into the Python spec, this will be…
+
+221
+00:36:12.100 --> 00:36:16.480
+Thomas Coratger: Way too slow, because the activation time is long.
+
+222
+00:36:16.600 --> 00:36:32.920
+Thomas Coratger: the Python implementation is not optimized, and Python is not optimized, so this will be really slow. The key generation will take a couple of minutes, or hours. This is not good. So, I just created another test configuration.
+
+223
+00:36:33.890 --> 00:36:39.609
+Thomas Coratger: Where the parameters are not intended for production use case, but are really, really small.
+
+224
+00:36:40.090 --> 00:36:46.889
+Thomas Coratger: And so we can just conduct our test and run our test suite in a reasonable amount of time.
+
+225
+00:36:47.670 --> 00:36:48.420
+Thomas Coratger: Yeah.
+
+226
+00:36:48.560 --> 00:37:04.639
+Thomas Coratger: And so, this is finally it. At the moment, this is just the specs that I have, but we will iterate with time, and I think that my next step will be to implement the state transition function and everything around 3SF, basically.
+
+227
+00:37:04.900 --> 00:37:16.930
+Thomas Coratger: So yeah, that is basically it, and also, I will maybe… I will probably do a more extensive presentation of this during the Lean Consensus call on Friday.
+
+228
+00:37:18.730 --> 00:37:19.400
+Thomas Coratger: Yep.
+
+229
+00:37:23.170 --> 00:37:41.819
+gajinder: Yeah, just to echo what Camille said in the chat, can we also sort of, in the constant, put what exactly is the signature size in bytes, as well as what exactly will be the root of mercury in bytes if it's not 32 bytes and is different because we are using a different hasher?
+
+230
+00:37:48.390 --> 00:38:01.730
+Thomas Coratger: I think that this can be configured into the… into the constant. This is something that we can change, but I am not exactly sure, because this is a constant that we have from the beginning.
+
+231
+00:38:01.750 --> 00:38:09.459
+Thomas Coratger: inside the REST implementation, so I am not exactly sure about the consequences if we modify this constant.
+
+232
+00:38:09.640 --> 00:38:14.630
+gajinder: No, not asking to modify the constants, but for example, you know, if we have
+
+233
+00:38:14.790 --> 00:38:22.790
+gajinder: that, okay, signature size equal to these many bytes, so we… I mean, it's basically for the reference, very clear to the eye that, okay, you know, this is what we…
+
+234
+00:38:23.050 --> 00:38:28.340
+gajinder: Need to create the type for, and similarly, what is the public key size in bytes?
+
+235
+00:38:28.340 --> 00:38:42.740
+Thomas Coratger: Yeah, yeah, yeah, yeah, exactly. Yeah, yeah, yeah, yeah, the… yeah, the public key and all of these parameters are constrained by the constants that we chose in the stuff, yeah.
+
+236
+00:38:44.660 --> 00:38:49.069
+gajinder: Yeah, I mean, can we just put the final calculation out there so that, you know.
+
+237
+00:38:49.280 --> 00:38:52.269
+gajinder: We don't have to derive it in our own way. That is…
+
+238
+00:38:52.270 --> 00:38:52.809
+Thomas Coratger: Yeah, yeah, yeah.
+
+239
+00:38:53.270 --> 00:39:03.460
+Thomas Coratger: we can put… so you mean having the signature size calculated directly into the Python spec as a function of the parameters we have, right?
+
+240
+00:39:05.360 --> 00:39:13.499
+gajinder: No, even for… just, say, const signature size is equal to this, and const public key size is equal to this.
+
+241
+00:39:13.500 --> 00:39:15.140
+Thomas Coratger: Yeah, yeah, yeah, yeah, yeah.
+
+242
+00:39:15.430 --> 00:39:18.969
+Kamil Salakhiev: Maybe just have a comment there with signature site, etc.
+
+243
+00:39:20.860 --> 00:39:36.769
+Thomas Coratger: Yeah, yeah, I think, yeah, I just saw your comments. I think it's what Ro just mentioned is 3,000 bytes for the production config, for the constants that we chose in the production config.
+
+244
+00:39:36.810 --> 00:39:47.610
+Thomas Coratger: the test config is not relevant at all, because this is just to run some tests, so this is not relevant at all, but for the production config that we chose for the DevNet, this is the size, yeah.
+
+245
+00:39:50.510 --> 00:39:56.029
+Will Corcoran: Tomah, fantastic presentation, really great stuff.
+
+246
+00:39:56.610 --> 00:40:02.350
+Will Corcoran: Earlier, there was a question from Giacomo in the chat, I don't know if you saw those, do…
+
+247
+00:40:02.480 --> 00:40:08.080
+Will Corcoran: We perform domain separation in the XMSS signatures. Is this part of the spec?
+
+248
+00:40:08.500 --> 00:40:17.100
+Thomas Coratger: Yep, this is part of the spec, and we perform domain separation. I can link you to the specific part of the spec about this, yeah.
+
+249
+00:40:19.380 --> 00:40:20.230
+Thomas Coratger: Yep.
+
+250
+00:40:29.070 --> 00:40:33.960
+Thomas Coratger: Yeah, I will send you the link afterwards, but yeah, we'll do some domain separation.
+
+251
+00:40:36.400 --> 00:40:43.060
+Will Corcoran: Great. Any other questions on…
+
+252
+00:40:43.610 --> 00:41:00.209
+Thomas Coratger: Knowing also that I… I have heard by… this is another topic, but I have heard by Hamil and Justine that the encodings that we have right now at the top of the hypercube that was,
+
+253
+00:41:00.780 --> 00:41:03.490
+Thomas Coratger: The last work of Benedict and Dimitri.
+
+254
+00:41:03.630 --> 00:41:15.939
+Thomas Coratger: was maybe not the most optimal one for recursive aggregation in the minimal ZKVM, so maybe this will change in the future, but this is just a parenthesis.
+
+255
+00:41:19.570 --> 00:41:35.529
+Thomas Coratger: Don't know if you, Justine, want to add something about that, but for the moment in the spec, I just put the hypercube stuff, because this is the latest config that we had, and the, let us say, the most performant one, but this main change is the future.
+
+256
+00:41:36.950 --> 00:41:56.440
+Justin Drake: Yeah, so just to provide a little bit of context, there's two parts to the Winternet's verifier. There's the verification of the chains, and this is just, like, very simple hashing, and that determines how much hashing is involved, and also how big your signatures are.
+
+257
+00:41:56.540 --> 00:42:06.019
+Justin Drake: And then there's this other thing, which is called de-encoding, which basically takes the message that you're trying to sign and encodes it into
+
+258
+00:42:06.290 --> 00:42:12.059
+Justin Drake: a point on those, on those chains, what we call a point in the hypercube. And…
+
+259
+00:42:12.170 --> 00:42:22.630
+Justin Drake: What we've done so far in the papers is that we've assumed that the encoding is free, and we only look to optimize the signature size and the amount of hashing.
+
+260
+00:42:22.810 --> 00:42:31.940
+Justin Drake: But actually, you know, in practice, the encoding is not free, and it needs to be SNOCified. And right now, as it's defined, it's not Snox-friendly.
+
+261
+00:42:32.500 --> 00:42:37.559
+Justin Drake: And so one of the things that we're looking to do in the workshop in Cambridge in October
+
+262
+00:42:37.680 --> 00:42:40.470
+Justin Drake: Is try and co-design
+
+263
+00:42:40.790 --> 00:42:48.630
+Justin Drake: a… an encoding which is maximally friendly to the ZKVM that we're developing. So, on the one hand, we have Emil.
+
+264
+00:42:48.640 --> 00:43:00.939
+Justin Drake: who has this new ISA, which we call Lean ISA, which has four opcodes and four precompiles. And on the other hand, we have Benedict and Dmitri and…
+
+265
+00:43:01.340 --> 00:43:03.890
+Justin Drake: And we held it up.
+
+266
+00:43:04.180 --> 00:43:10.780
+Justin Drake: You know, experts in encodings, and if we get all of these people in the same room, then hopefully we can… we can have a good outcome.
+
+267
+00:43:22.220 --> 00:43:22.970
+Will Corcoran: Excellent.
+
+268
+00:43:23.370 --> 00:43:28.980
+Will Corcoran: I guess that was the last item on the agenda.
+
+269
+00:43:29.120 --> 00:43:33.470
+Will Corcoran: we… I don't know, Gedgender, O…
+
+270
+00:43:34.460 --> 00:43:45.859
+Will Corcoran: Guillaume, June, I see some activity on the project board. Is there anything that we wanted to go through on the project board with open tests? Anything, any blockers?
+
+271
+00:43:46.190 --> 00:43:49.070
+Will Corcoran: At this particular time. Lattice loss.
+
+272
+00:43:50.550 --> 00:43:59.789
+Ladislaus: Yeah, so before we get there, I have a quick clarifying question for Tumar, or I guess for the group. And Gajinder hinted at this already,
+
+273
+00:43:59.790 --> 00:44:12.130
+Ladislaus: I'm just curious, do we… do we have, I guess, benchmarks, or a bit of an intuition, like, how, activation time, like, shortened activation time for the key generation.
+
+274
+00:44:12.150 --> 00:44:16.639
+Ladislaus: Sort of relates to the… to the lifetime.
+
+275
+00:44:17.040 --> 00:44:18.600
+Ladislaus: I think we only… we would…
+
+276
+00:44:18.920 --> 00:44:23.380
+Ladislaus: As my understanding is that we'd only need this indefinite one, but…
+
+277
+00:44:23.590 --> 00:44:34.379
+Ladislaus: So, like, how… I guess the concrete question would be, like, how do we have to set, or should we think about activation time with a constant lifetime of the key?
+
+278
+00:44:34.720 --> 00:44:45.809
+Thomas Coratger: I think that maybe I have seen, like, Dimitri in this call, so maybe he will better answer than me about discussion, but my points,
+
+279
+00:44:46.210 --> 00:44:48.009
+Thomas Coratger: There, if that's…
+
+280
+00:44:48.540 --> 00:44:59.349
+Thomas Coratger: at the end, like, the key generation algorithm could be long. For example, if we assume, like, 2 to the power 32 lifetime.
+
+281
+00:44:59.460 --> 00:45:07.180
+Thomas Coratger: the running the key generation could take 1 to 2 hours, I think, using the Rust implementation.
+
+282
+00:45:07.350 --> 00:45:10.530
+Thomas Coratger: And so… For that, if…
+
+283
+00:45:10.660 --> 00:45:15.769
+Thomas Coratger: we want to use that… we will use that in DevNet 0 and DevNet 1.
+
+284
+00:45:16.070 --> 00:45:27.429
+Thomas Coratger: We can just say that we will use this lifetime, but we want our validators to have, like, a much restricted activation time.
+
+285
+00:45:27.560 --> 00:45:40.810
+Thomas Coratger: So that we can just put in… into the input of the function, smaller activation time, so that it will reduce drastically the key generation, and we don't need 2 to the power 32.
+
+286
+00:45:40.980 --> 00:45:42.480
+Thomas Coratger: at least for DevNet.
+
+287
+00:45:42.930 --> 00:45:53.190
+Thomas Coratger: And I think that this is also currently under investigation, if we will… we will have this,
+
+288
+00:45:53.680 --> 00:46:01.860
+Thomas Coratger: Also needed for the final mainnet, because maybe we will give the opportunity to new validators to enter
+
+289
+00:46:02.030 --> 00:46:11.010
+Thomas Coratger: Without having to do, like, the full key generation if they want to opt in for a smaller activation time, for example.
+
+290
+00:46:11.590 --> 00:46:14.429
+Thomas Coratger: this is the point of having that, I think.
+
+291
+00:46:15.630 --> 00:46:34.279
+Dmitry Khovratovich: Well, what is definitely possible is to, have this, lifetime sort of dynamic, so that the validator may start with a shorter time, like, show a smaller tree, like, to the 20 or something, but then the tree can grow. Well, the public key may change, but at least
+
+292
+00:46:34.400 --> 00:46:47.609
+Dmitry Khovratovich: For the beginning, we don't have spent that much time to activate. We can start with 200 points, and then by increasing the tree size, we can go up to 232, incrementally. We just have to update the public key on the fly.
+
+293
+00:46:50.100 --> 00:47:09.140
+Gajinder Singh: So that would be some sort of an epoch processing, where you will say that, okay, you know, in every epoch, I will enroll the new update for the key. But, I mean, maybe we could move to that sort of a scenario, but in that sense, basically, the clients will have to continually generate the key for the next epoch as well.
+
+294
+00:47:11.780 --> 00:47:22.080
+Justin Drake: So there are complications if we allow for key rotation. For example, slashing becomes significantly more complicated, because you might need to slash someone on a
+
+295
+00:47:22.260 --> 00:47:24.130
+Justin Drake: Already rotated key.
+
+296
+00:47:25.400 --> 00:47:30.789
+Justin Drake: So… I think the suggestion that I prefer is to have
+
+297
+00:47:30.980 --> 00:47:34.800
+Justin Drake: A very long maximum lifetime of 2 to the 32,
+
+298
+00:47:34.970 --> 00:47:38.769
+Justin Drake: And, you know, that has a minimal impact on the signature size.
+
+299
+00:47:39.150 --> 00:47:47.280
+Justin Drake: And if you want to generate fewer keys, then you just generate fewer keys. And then everything stays, fixed size.
+
+300
+00:47:47.500 --> 00:47:51.569
+Justin Drake: across all of the devnets, and also across mainnet.
+
+301
+00:47:53.600 --> 00:47:57.850
+Justin Drake: And you don't have the… any key rotation logic, which doesn't complicate the slashing.
+
+302
+00:48:11.080 --> 00:48:20.940
+Gajinder Singh: And apart from this, Justin, do we think that for different, kind of signatures, we will enroll different keys into the validator, or…
+
+303
+00:48:21.640 --> 00:48:26.160
+Gajinder Singh: What kind of scheme do we think, for example, for a test tuition and proposal?
+
+304
+00:48:30.070 --> 00:48:38.470
+Justin Drake: So, my thinking is that there's basically one pub key per validator, and it's fixed for the lifetime of the validator.
+
+305
+00:48:38.670 --> 00:48:47.170
+Justin Drake: And… For, are you asking about the…
+
+306
+00:48:47.350 --> 00:48:54.280
+Justin Drake: the complications with the proposing and the attesting. I mean, there's various solutions here. Like, one is
+
+307
+00:48:55.010 --> 00:49:00.430
+Justin Drake: In the slot where you're a proposer, you just don't test, and your proposal is sort of…
+
+308
+00:49:01.350 --> 00:49:05.069
+Justin Drake: Includes the… the attestation, implicitly.
+
+309
+00:49:05.520 --> 00:49:08.729
+Justin Drake: And then, another way to do it is to…
+
+310
+00:49:09.380 --> 00:49:20.119
+Justin Drake: To basically split the keys into two groups, the proposer keys and the attester keys, and then the main trade-off here is that you basically
+
+311
+00:49:20.390 --> 00:49:25.150
+Justin Drake: Have to… have to spend, twice the time to do the… the keychain.
+
+312
+00:49:25.410 --> 00:49:28.960
+Justin Drake: But yeah, the first proposal seemed to… to work fine.
+
+313
+00:49:40.270 --> 00:50:00.219
+Jun: Just one quick question, follow-up question. So, what, do you mean that, proposer can include the vote, implicitly in the block when he, when he proposed? So, I just wanna, be more clarified about your first suggestion.
+
+314
+00:50:02.440 --> 00:50:10.569
+Justin Drake: Right, so we have a container for the motion of a vote, which has the source and the target and whatever other things, and that object can…
+
+315
+00:50:10.950 --> 00:50:13.890
+Justin Drake: Literally be part of, of, of the…
+
+316
+00:50:14.270 --> 00:50:21.999
+Justin Drake: the block that's being proposed. And so… The… the main, kind of.
+
+317
+00:50:22.590 --> 00:50:25.209
+Justin Drake: Thing that's a little bit exceptional is that
+
+318
+00:50:25.350 --> 00:50:32.849
+Justin Drake: This particular vote is not going to get aggregated with all of the other votes, because the message that's being signed is different.
+
+319
+00:50:33.500 --> 00:50:39.370
+Justin Drake: But, otherwise, it's just mixed in with,
+
+320
+00:50:39.610 --> 00:50:45.499
+Justin Drake: With the other votes, kind of, as part of the state transition function.
+
+321
+00:50:50.410 --> 00:51:02.370
+Gajinder Singh: Right, but if, for example, I mean, this might just work for proposer and attestation coupling, but it might not work for archetypes, where we might have to then enroll them into the validator, I guess.
+
+322
+00:51:04.980 --> 00:51:07.230
+Justin Drake: Sorry, it wouldn't work for what?
+
+323
+00:51:08.420 --> 00:51:12.609
+Gajinder Singh: So for, for example, for signing, slashing messages, or,
+
+324
+00:51:14.540 --> 00:51:20.740
+Gajinder Singh: So, I mean, if, for example, some node wants to, submit some slashing, or…
+
+325
+00:51:22.160 --> 00:51:24.819
+Gajinder Singh: I think, in that, they are signed right.
+
+326
+00:51:28.300 --> 00:51:30.949
+Justin Drake: So, in a slashing message.
+
+327
+00:51:31.110 --> 00:51:37.389
+Justin Drake: My understanding is that you have previously signed attestations from other validators, like you as…
+
+328
+00:51:37.500 --> 00:51:44.599
+Justin Drake: the entity, you know, putting slash pull messages on-chain, you just have to sign Your… your block.
+
+329
+00:51:44.750 --> 00:51:47.110
+Justin Drake: That contains the slashable messages.
+
+330
+00:51:47.450 --> 00:51:56.449
+Justin Drake: I mean, right now, we do have Randall, which uses signatures, but there's a way to do RANDAL with just commit reveal that doesn't… doesn't rely on signatures.
+
+331
+00:52:03.330 --> 00:52:03.790
+Gajinder Singh: Yeah, basically.
+
+332
+00:52:03.790 --> 00:52:04.790
+Justin Drake: Do you have a…
+
+333
+00:52:04.790 --> 00:52:12.339
+Gajinder Singh: Whistleblower, so I'm thinking that a whistleblower might be signing so that they will get the rewards, but right now we don't have whistleblower.
+
+334
+00:52:12.810 --> 00:52:14.720
+Gajinder Singh: rewards, I think.
+
+335
+00:52:20.450 --> 00:52:32.570
+Justin Drake: So the problem with whistleblower rewards is if it's an entity other than the proposer receiving the rewards, the proposer can just steal the rewards for themselves. They could just look
+
+336
+00:52:32.890 --> 00:52:37.630
+Justin Drake: Inside the… what's being whistleblown, and just copy-paste, and sign it.
+
+337
+00:52:37.740 --> 00:52:42.869
+Justin Drake: If I recall correctly, on the Beacon chain today.
+
+338
+00:52:43.210 --> 00:52:48.300
+Justin Drake: Maybe I'm wrong, but the…
+
+339
+00:52:48.960 --> 00:52:59.370
+Justin Drake: there is no signature for whistleblowing. You just provide on-chain slashable messages, and then there is indeed a reward for the current proposer, but it's not
+
+340
+00:52:59.560 --> 00:53:01.570
+Justin Drake: A reward for someone else, and…
+
+341
+00:53:02.180 --> 00:53:06.930
+Justin Drake: And here again, like, the… the proposer signature will… will handle that.
+
+342
+00:53:15.110 --> 00:53:21.070
+Justin Drake: I mean, one thing we have today is the, the sync committee, but, that will go away.
+
+343
+00:53:21.450 --> 00:53:28.960
+Justin Drake: So, as far as I can tell, the only two places where we need to do signatures are proposals and attestations, and for proposals.
+
+344
+00:53:29.380 --> 00:53:36.170
+Justin Drake: We just, handle this as a special case, where you don't attest directly, you just attest
+
+345
+00:53:36.500 --> 00:53:39.070
+Justin Drake: Indirectly for… through your proposals.
+
+346
+00:53:52.580 --> 00:53:55.740
+Will Corcoran: Great. Camille.
+
+347
+00:53:56.040 --> 00:53:57.060
+Will Corcoran: Did you…
+
+348
+00:53:57.280 --> 00:54:03.199
+Will Corcoran: want to share your screen and do a quick update on the PQ aggregation simulation work that you've been in?
+
+349
+00:54:04.680 --> 00:54:07.180
+Kamil Salakhiev: Yeah, sure, I can do it really quick.
+
+350
+00:54:07.290 --> 00:54:13.650
+Kamil Salakhiev: I already once went through, this report, but it's been a long time ago, and since then, actually.
+
+351
+00:54:13.920 --> 00:54:15.790
+Kamil Salakhiev: Yeah, we performed a lot of…
+
+352
+00:54:15.920 --> 00:54:32.160
+Kamil Salakhiev: a lot of more simulations. Basically, we were not really satisfied with some results, like, well, we noticed that we just… if we use our standard assumptions, like the AP7870, restrictions, like 50 megabits per second per node.
+
+353
+00:54:32.950 --> 00:54:42.300
+Kamil Salakhiev: have… we use standard cohesive stuff, who basically can aggregate in around 3.9 seconds, which is not acceptable, considering targeting 4-second blocks.
+
+354
+00:54:42.420 --> 00:54:43.639
+Kamil Salakhiev: post-second slots.
+
+355
+00:54:43.760 --> 00:54:53.539
+Kamil Salakhiev: So, ideally, it would be maybe having something around 2 seconds, so that we have some time for block propagation and global snark propagation, what is aggregated.
+
+356
+00:54:55.220 --> 00:55:07.640
+Kamil Salakhiev: So, yeah, we conducted more experiments, so, yeah, repeat apologies. Oh, yeah, maybe I'll add that, yeah, we also… from the last time, we also added tests for the
+
+357
+00:55:07.830 --> 00:55:25.040
+Kamil Salakhiev: well, so what we call aggregators-only grid. This is basically a grid topology, but the grid only is among the aggregating nodes, whereas, non-aggregating nodes, the signatories, basically the signers, they, send their signatures directly to
+
+358
+00:55:25.970 --> 00:55:40.830
+Kamil Salakhiev: grid aggregators, so, that way, we actually don't need to expose the requirement for the, all our testers to basically expose their public addresses, because, well.
+
+359
+00:55:40.980 --> 00:55:58.770
+Kamil Salakhiev: for whoever participates in GRID, we basically need to know their IP address, and this breaks some existing privacy assumptions. I have a small section about privacy discussions here, after some discussions with Raul, Chabo, and others from the P2P,
+
+360
+00:55:59.730 --> 00:56:00.410
+Kamil Salakhiev: Yep.
+
+361
+00:56:00.520 --> 00:56:10.620
+Kamil Salakhiev: There are still some privacy concerns, for example, the aggregators that might actually learn the IP address of validators who sign the message.
+
+362
+00:56:10.650 --> 00:56:21.639
+Kamil Salakhiev: We basically want to avoid this, but there are ways how to avoid this, so I provided some ideas, but we… but yeah, it requires some additional investigations.
+
+363
+00:56:23.650 --> 00:56:32.079
+Kamil Salakhiev: Basically, yeah, also starts… since last time, we also tested, Gossip Sub 1.2, basically Gossip Sub with I don't want messages.
+
+364
+00:56:33.030 --> 00:56:49.880
+Kamil Salakhiev: really briefly, I can say that Wisp 1.2 really doesn't give a lot of improvements, because basically what it does is once some peer receives some signature, and wants to advertise that it already has the signature and sends
+
+365
+00:56:49.880 --> 00:56:53.670
+Kamil Salakhiev: I don't want message, so basically…
+
+366
+00:56:53.720 --> 00:57:00.230
+Kamil Salakhiev: everyone else is not sending this signature, again. But usually.
+
+367
+00:57:01.260 --> 00:57:10.369
+Kamil Salakhiev: The other duplicate signatures, they are already kind of in the wire, so the message was already sent, so basically duplicates already received.
+
+368
+00:57:10.520 --> 00:57:12.170
+Kamil Salakhiev: So, yo.
+
+369
+00:57:12.530 --> 00:57:19.459
+Kamil Salakhiev: We also tested, this topology, as I said, with, aggregators-only grid.
+
+370
+00:57:19.930 --> 00:57:23.930
+Kamil Salakhiev: Which is on graphic, as a label, basically.
+
+371
+00:57:24.150 --> 00:57:26.550
+Kamil Salakhiev: Grid Signature Cup Direct, so…
+
+372
+00:57:27.640 --> 00:57:30.169
+Kamil Salakhiev: Or, that means, basically, well, each…
+
+373
+00:57:30.460 --> 00:57:41.120
+Kamil Salakhiev: signer sends to four random aggregators. It actually provided some worse results compared to the classic grid, but that's because we're gonna have one more… one additional hope.
+
+374
+00:57:41.510 --> 00:57:45.120
+Kamil Salakhiev: But the world, yeah, it's still better than Coastal.
+
+375
+00:57:45.370 --> 00:57:52.760
+Kamil Salakhiev: Yeah, there are also, like, plots for the number of duplicates for different topologies, if anyone's interested.
+
+376
+00:57:53.060 --> 00:57:59.119
+Kamil Salakhiev: And, yeah, then for global aggregation, so, for…
+
+377
+00:57:59.300 --> 00:58:03.469
+Kamil Salakhiev: Standard BOSSI topology were basically, yeah, in this solution.
+
+378
+00:58:04.330 --> 00:58:08.439
+Kamil Salakhiev: 100 megabits per second speed for nodes, and
+
+379
+00:58:09.090 --> 00:58:26.890
+Kamil Salakhiev: using SNARG aggregation rate of 10 snags per second. This is the rate that, I asked Emil, kind of, what is the expected rate, well, yeah, we might get. And using 1,000 signatures per second, aggregation rate for signatures.
+
+380
+00:58:27.200 --> 00:58:45.569
+Kamil Salakhiev: Yeah, we basically got this result, so basically, yeah, we need approximately 4 seconds to aggregate a lot. And that's for 8,000 validators, split into 8 subnets, so each subnet has 1024 validators, and among them, 10% are behaving like aggregators.
+
+381
+00:58:45.720 --> 00:58:52.710
+Kamil Salakhiev: And, if we use grid, results a bit better, 3.2 seconds, but still, that's a lot, I think.
+
+382
+00:58:52.850 --> 00:58:57.950
+Kamil Salakhiev: And then we started kind of exploring what we actually can do, what we can expect to…
+
+383
+00:58:58.260 --> 00:59:01.499
+Kamil Salakhiev: Reach our target, basically, in 2 seconds.
+
+384
+00:59:01.640 --> 00:59:09.690
+Kamil Salakhiev: First thing, I think, which we can test is, yeah, aggregation-only topology, that's also… Gives…
+
+385
+00:59:10.060 --> 00:59:27.469
+Kamil Salakhiev: Well, just to check how this topology behaves, and here we're paying for grid 3.4 seconds. A bit worse, as I said, because of additional hope. But yeah, some other things that, yeah, we can expect is that, well, according to Nielsen law, we might expect that
+
+386
+00:59:28.470 --> 00:59:36.729
+Kamil Salakhiev: Yeah, bandwidth limit grows kind of 50% per year, and if current requirement is 15 megabits per second.
+
+387
+00:59:36.730 --> 00:59:53.380
+Kamil Salakhiev: According to EAP7870, we might expect, like, in 4 years, we maybe can pull through bandwidth limit of 200 megabits, and if we do this, yeah, results got better, so we… with grid topology, we go below 3 seconds.
+
+388
+00:59:53.710 --> 01:00:02.340
+Kamil Salakhiev: And then, if we actually increase our compute power from 10 snarks per second to 20 snacks per second, that's kind of optimistic assumption.
+
+389
+01:00:02.520 --> 01:00:11.069
+Kamil Salakhiev: But if we can do this, then, yeah, basically, with grid topology, aggregation could happen within 2.3 seconds.
+
+390
+01:00:11.270 --> 01:00:13.260
+Kamil Salakhiev: Yeah.
+
+391
+01:00:13.680 --> 01:00:31.220
+Kamil Salakhiev: that's… that's kind of the results of our simulation. Some other things that we actually wanted to check that… but we just weren't capable is kind of… here we use TCP, but instead we could use Quick. We actually integrated Quick into our simulation.
+
+392
+01:00:31.220 --> 01:00:47.699
+Kamil Salakhiev: But the simulation time kind of increased exponentially. Yeah, we basically need to optimize a bit how we've worked. Maybe instead of doing this actual encryption, we can just replace it with some artificial sleep.
+
+393
+01:00:47.870 --> 01:01:00.049
+Kamil Salakhiev: And do some other stuff, maybe, yeah, if we spend more time on this, yeah, we can test out. We could improve situation, and so, it definitely will improve, but I don't expect…
+
+394
+01:01:00.760 --> 01:01:17.840
+Kamil Salakhiev: Also, we kind of tested a lot of different other ideas that actually didn't provide much improvements, like distributing signatures. Well, first call kind of happens to… with large for now, to many neighbors, and the…
+
+395
+01:01:17.950 --> 01:01:22.189
+Kamil Salakhiev: Next stops happens, like, like, using standard voice setup.
+
+396
+01:01:22.330 --> 01:01:28.239
+Kamil Salakhiev: Just to few neighbors that didn't have much, they had actually created a lot of duplicates.
+
+397
+01:01:28.410 --> 01:01:44.649
+Kamil Salakhiev: Yeah, there are also some optimizations that we applied, like, for global aggregators, it doesn't make sense, for example, to propagate SNARC from each group more than once. So if we, for example, already observed some SNARC from group 1, and then we receive another SNARC,
+
+398
+01:01:45.250 --> 01:01:53.259
+Kamil Salakhiev: assuming it kind of proves the same number of signatures, it doesn't make sense to propagate the second snack again, or the second snark again. So…
+
+399
+01:01:55.120 --> 01:02:01.490
+Kamil Salakhiev: Another optimization we can do is kind of, for example, early announcement of Snark, so we kind of send pit field, not…
+
+400
+01:02:01.630 --> 01:02:08.759
+Kamil Salakhiev: when… some aggregator created the SNARC, but actually when it started the aggregation process.
+
+401
+01:02:08.920 --> 01:02:21.000
+Kamil Salakhiev: And that way, global aggregator can send their, I want message, and once the snark is ready, yeah, local aggregator already knows who to send their snack. So, yeah.
+
+402
+01:02:21.980 --> 01:02:27.929
+Kamil Salakhiev: Ideas like that, yeah, we also checked in this report, and yeah, maybe there are other ideas, yeah, if you…
+
+403
+01:02:28.080 --> 01:02:33.540
+Kamil Salakhiev: If you want us to check them, we are happy to implement them in our simulator and check
+
+404
+01:02:33.890 --> 01:02:41.049
+Kamil Salakhiev: If they provide any improvements, but yeah, that's… yeah, that's kind of the final set of this report. Yeah, I will share it to everyone.
+
+405
+01:02:42.630 --> 01:02:48.749
+Kamil Salakhiev: Yeah, feel free to, you know, comment or DM me if you have any questions.
+
+406
+01:02:52.290 --> 01:03:02.050
+Will Corcoran: Excellent, thanks, Camille. Here's… have you shared that with some of the other networking people that are going to be in Cambridge, with, Giannis and Raul?
+
+407
+01:03:02.690 --> 01:03:05.600
+Kamil Salakhiev: Yes, Raul went through this,
+
+408
+01:03:06.630 --> 01:03:11.080
+Kamil Salakhiev: I don't remember if Yanis was in one of the groups where I sent and discussed that.
+
+409
+01:03:11.260 --> 01:03:16.410
+Kamil Salakhiev: What picture was there? But yeah, anyway, maybe I will send to the Q&A.
+
+410
+01:03:16.700 --> 01:03:17.620
+Kamil Salakhiev: Cool, buddy.
+
+411
+01:03:18.850 --> 01:03:20.010
+Kamil Salakhiev: Sounds like working.
+
+412
+01:03:21.730 --> 01:03:22.480
+Will Corcoran: Very cool.
+
+413
+01:03:25.390 --> 01:03:32.400
+Will Corcoran: Yeah, it'll be interesting to see what type of performance we are hitting at the conclusion of that workshop versus now.
+
+414
+01:03:38.830 --> 01:03:48.700
+Will Corcoran: Great. Were there any… I guess, final items? Anyone blocked on anything on the project board, or…
+
+415
+01:03:49.260 --> 01:03:50.979
+Will Corcoran: related work.
+
+416
+01:03:59.880 --> 01:04:02.099
+Will Corcoran: Alright, no news, that's good news.
+
+417
+01:04:02.970 --> 01:04:04.190
+Will Corcoran: Bet.
+
+418
+01:04:05.070 --> 01:04:07.290
+Will Corcoran: I think is it for… for this week.
+
+419
+01:04:07.740 --> 01:04:23.360
+Will Corcoran: I'll hope to see all of you on Friday, as noted in the chat earlier, and by Tomah, we've got lean consensus call number 7. We're gonna be doing an even deeper dive into
+
+420
+01:04:23.500 --> 01:04:31.480
+Will Corcoran: the multi-sig spec, and I know that we're gonna hear from Philippe, and Emil, and Justin.
+
+421
+01:04:31.590 --> 01:04:35.259
+Will Corcoran: I might talk a little… Tomah, it's gonna be a good time.
+
+422
+01:04:38.520 --> 01:04:39.190
+Will Corcoran: Alright.
+
+423
+01:04:39.450 --> 01:04:40.290
+Justin Drake: Thanks, Will.
+
+424
+01:04:40.290 --> 01:04:40.850
+Ladislaus: shake.
+
+425
+01:04:40.850 --> 01:04:42.600
+Thomas Coratger: Thanks a lot.
+
+426
+01:04:43.940 --> 01:04:45.360
+Thomas Coratger: It's great.
+
+427
+01:04:46.780 --> 01:04:48.570
+Ladislaus: Bye, guys, thank you.
+

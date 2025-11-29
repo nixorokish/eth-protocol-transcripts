@@ -1,0 +1,30 @@
+00:03:29	read.ai meeting notes:	Kai added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:04:24	Jun:	gm
+00:04:25	KaydenML:	Gm
+00:04:42	kwame:	gm
+00:04:51	Mercy Boma Naps-Nkari:	gm
+00:05:02	Bubbles Notetaker:	Hi, I'm taking notes and action items for Tamaghna Choudhuri.
+
+Get Bubbles' AI meeting notetaker: https://bubbl.es/notetaker
+
+Remove me: https://bubbl.es/remove-notetaker?t=3du3Ljq6hi7kG1YTx1ggBdXi71uKxXxFN
+00:05:39	Will Corcoran:	Gm!!
+00:05:50	Fireflies.ai Notetaker Fu Chua:	Talk to Fireflies: (Web-search enabled) • Say: Hey Fireflies how can you help? • Type: /ff help to get started.  View Realtime notes here: https://app.fireflies.ai/live/01K4MV95Z06W84ZJJSHEGC3F81?ref=live_chat
+00:07:30	Will Corcoran:	https://github.com/syjn99/leanView
+00:07:38	Will Corcoran:	https://github.com/leanEthereum/pm/issues/40
+00:17:42	Mercy Boma Naps-Nkari:	Do we need the three API endpoints or is there a specific one you need for the start?
+00:19:14	grapebaba:	Hi, I’m transcribing this call with my Tactiq AI Extension: https://tactiq.io/r/transcribing
+00:25:30	Will Corcoran:	https://github.com/leanEthereum/leanSpec/tree/main/src/lean_spec/subspecs/ssz
+00:27:31	Jun:	Do we use sha-256 for hashing in SSZ merklization?
+00:29:37	Will Corcoran:	https://github.com/qdrvm/qlean-mini
+00:31:54	Justin Drake:	qlean—I like the name 🙂
+00:32:00	Kamil Salakhiev:	Reacted to "qlean—I like the nam..." with ❤️
+00:32:05	Gajinder Singh:	Reacted to "qlean—I like the nam..." with ❤️
+00:32:11	Will Corcoran:	https://github.com/leanEthereum/pm/blob/main/breakout-rooms/leanConsensus/pq-interop/pq-devnet-0.md
+00:34:00	Jun:	Reacted to "https://github.com/l..." with 👍
+00:34:27	Dmitriy Khaustov:	Reacted to "qlean—I like the nam..." with ❤️
+00:52:20	Jay:	Good day everyone

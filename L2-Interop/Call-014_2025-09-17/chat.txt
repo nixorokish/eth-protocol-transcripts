@@ -1,0 +1,90 @@
+00:04:11	read.ai meeting notes:	Lisandro added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:04:15	Supernormal AI Notetaker:	Hi there 👋 I was invited by 𝗝𝘂𝗱𝗲 to transcribe and take notes for this meeting. Learn more: https://supernorm.al/zoom
+
+Type /𝗵𝗲𝗹𝗽 at any time to see what else I can do.
+00:04:23	Blockscout assistant:	To start the notetaking and recording, the meeting host needs to be present and approve the recording pop-up message.
+00:04:30	Rostislav's Fellow Note Taker:	Waiting for the Zoom host’s permission to begin taking notes and recording.
+00:05:02	Jude's MeetGeek Notetaker:	I’m recording this meeting with MeetGeek.ai for note taking purposes.
+00:06:03	Blockscout assistant:	Recording permission was denied, leaving the meeting.
+00:06:03	Rostislav's Fellow Note Taker:	This meeting cannot be recorded because the host has denied permission.
+00:06:12	Jim's Circleback:	Jim is using Circleback (https://circleback.ai) to record and generate AI meeting notes for this meeting.
+00:06:14	Fireflies.ai Notetaker Alan:	Alan invited Fireflies.ai here to record & take notes. View Security & Privacy info: https://fireflies.ai/policy  Type: '/ff leave' - Remove Fireflies  View Realtime notes here: https://app.fireflies.ai/live/01K57C4R082ZGD5NRZ0EF32TSV?ref=live_chat
+00:06:51	0age:	gm
+00:07:00	Joshua Rudolf:	https://github.com/ethereum/pm/issues/1725
+00:07:00	qedk:	gm
+00:07:02	alexander:	gm
+00:07:05	Kanishk | Across:	gm
+00:07:09	Jaack:	gm
+00:07:25	Hudson Jameson:	Is Joshua's volume low for anyone else?
+00:07:51	Brian Seong:	gm
+00:07:56	Orest Tarasiuk (t1):	Replying to "Is Joshua's volume l..."
+
+no
+00:08:03	Hudson Jameson:	Reacted to "no" with 👍
+00:08:04	vcastellm:	Replying to "Is Joshua's volume l..."
+
+SG to me
+00:08:08	Kanishk | Across:	Reacted to "no" with 👍
+00:08:09	Hudson Jameson:	Reacted to "SG to me" with 👍
+00:08:10	Kanishk | Across:	Reacted to "SG to me" with 👍
+00:08:11	qedk:	Replying to "Is Joshua's volume l..."
+
+sg
+00:08:52	Joshua Rudolf:	https://eips.ethereum.org/EIPS/eip-7785
+00:08:58	Ndeto | Unruggable:	https://erc-7785-demo-ui.vercel.app/
+00:09:58	Kanishk | Across:	Reacted to "https://erc-7785-d..." with 👌
+00:10:11	Joshua Rudolf:	Reacted to "https://erc-7785-dem..." with 👌
+00:13:03	Thomas Clowes | Unruggable - ENS:	Links to contracts here: https://erc-7785-demo-ui.vercel.app/learn
+00:13:08	Joshua Rudolf:	Reacted to "Links to contracts h..." with 👍
+00:21:55	Skele | Wonderland:	https://github.com/defi-wonderland/L2Resolver
+00:26:15	Orest Tarasiuk (t1):	Not a rollup :P
+00:26:24	Skele | Wonderland:	that's what 7930 solve, which is being used on the OIF efforts to support ANY chain identifier type
+00:28:16	Joshua Rudolf:	Reacted to "that's what 7930 sol..." with 👍
+00:28:22	dmarz:	https://hackmd.io/6BD6JVfbRKq2pIqJhJhOmQ
+00:28:41	Kanishk | Across:	Reacted to "https://hackmd.io/..." with 👍
+00:28:47	Joshua Rudolf:	Reacted to "https://hackmd.io/6B..." with 🙏
+00:31:05	Nam:	Is multi-proving about supporting this proof system specifically for the built-in canonical rollup bridges, or for applications using the multiprover?
+00:31:38	dmarz:	A simple L2 security and finalization roadmap
+00:31:42	dmarz:	https://ethereum-magicians.org/t/a-simple-l2-security-and-finalization-roadmap/23309
+00:34:11	Orest Tarasiuk (t1):	What’s the name of the project @dmarz ?
+00:34:47	dmarz:	idk i guess we need a fun code name or something haha, WGTALM isn't too sexy
+00:34:57	Kanishk | Across:	Reacted to "idk i guess we nee..." with 😂
+00:35:18	dmarz:	in terms of code bases and such it will be PoCs for a bit so there wont be one source of that for a while. I think the goal would be for it to be in the EF repo likely long term for neutrality
+00:36:28	Orest Tarasiuk (t1):	Reacted to "idk i guess we need ..." with 👀
+00:38:08	Orest Tarasiuk (t1):	Demo?
+00:39:53	p g:	@dmarz is multi-prover differ going to be like DVN solution by LayerZero ( afaik it allows multiple proof providers like Google Cloud + LayerZero Labs + Netherlands etc.) ?
+00:40:17	dmarz:	o link?
+00:40:21	Slava | Eco:	https://eco.com/docs/getting-started/permit3/overview 
+https://github.com/eco/permit3
+00:42:02	p g:	Replying to "o link?"
+
+https://medium.com/layerzero-official/layerzero-v2-explaining-dvns-02e08cce4e80 
+
+https://docs.layerzero.network/v2/concepts/modular-security/security-stack-dvns
+00:42:03	Joshua Rudolf:	@Kiryl would be curious to hear more about any trust assumptions / offchain components around the “approval system"
+00:42:19	Nam:	Replying to "o link?"
+
+I interpreted his answer to be no
+00:42:30	Nam:	Replying to "o link?"
+
+I.e. its about replacing the native proof system
+00:44:12	Nam:	Replying to "o link?"
+
+I'm biased of course, but it does seem like another instance of fragemented "modiular verification" interfaces
+00:46:25	Shahrukh Rao:	https://github.com/eco/permit3/blob/main/docs/concepts/architecture.md  - gh link with the architecture deep dive
+00:46:59	Manu @ BootNode:	Reacted to "https://github.com/e..." with 👍
+00:47:46	Stas:	This sounds like an allowance specific solution? My understanding is that when you build x-chain solutions you need to deal with a larger scale of ops, including execution which is all vendor specific. Am I missing something?
+00:47:57	p g:	Replying to "o link?"
+
+Ofc — the vision is definitely bigger here. Would be interesting to see how Optimism / Arbitrum would react to the proposal once ready.
+00:48:02	Kanishk | Across:	Reacted to "This sounds like a..." with 👍
+00:48:35	Marissa Posner:	Reacted to "This sounds like an ..." with 👍
+00:50:52	Nam:	Reacted to "Ofc — the vision ..." with ➕
+00:50:53	Shahrukh Rao:	Replying to "This sounds like an ..."
+
+The idea here is to provide tooling for abstraction to initialize execution without enshrining any specific execution if I understand your question
+00:50:56	qedk:	cheers

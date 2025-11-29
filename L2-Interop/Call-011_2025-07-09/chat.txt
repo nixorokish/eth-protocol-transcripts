@@ -1,0 +1,117 @@
+00:07:39	read.ai meeting notes:	Lisandro and Teck Yuan added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:07:44	Supernormal AI Notetaker:	Hi there 👋 I was invited by 𝗝𝘂𝗱𝗲 to transcribe and take notes for this meeting. Learn more: https://supernorm.al/zoom
+
+Type /𝗵𝗲𝗹𝗽 at any time to see what else I can do.
+00:08:03	Blockscout assistant:	To start the notetaking and recording, the meeting host needs to be present and approve the recording pop-up message.
+00:08:27	Blockscout assistant:	Recording permission was denied, leaving the meeting.
+00:14:16	Joshua Rudolf:	Agenda for today: 
+https://github.com/ethereum/pm/issues/1608 
+
+Kohaku experimental wallet repo: 
+https://github.com/ethereum/wallet-poc
+00:14:49	frangio:	what standards are needed?
+00:15:00	Skele | Wonderland:	perfect :)
+00:15:04	Gori | Wonderland:	♥️
+00:15:36	Joshua Rudolf:	@cyp @ status.network did you want to share anything on some of the stuff you’re up to :)
+00:17:40	Nikola Mandic:	Could you guys share links to the solutions mentioned as a stealth address protocols/wallets?
+00:18:43	Skele | Wonderland:	https://defi-wonderland.notion.site/Overview-Deterministic-Secret-Generation-from-a-Signature-2269a4c092c780d7b171eed265fd8fca
+00:24:03	Nikola Mandic:	Reacted to "https://defi-wonderl..." with 👍
+00:32:26	Marissa Posner:	Here is a link to Polymer’s implementation for anyone curious: https://github.com/polymerdao/prover-contracts/tree/main/contracts/core/native_fallback
+00:32:34	Sam:	Reacted to "Here is a link to Po..." with 👍
+00:32:35	Joxes | Wonderland:	Reacted to "Here is a link to Po..." with 👍
+00:32:36	Ian | Polymer Labs:	Reacted to "Here is a link to Po..." with 👍
+00:32:37	Joshua Rudolf:	Reacted to "Here is a link to Po..." with 😍
+00:32:40	Matthew mteam:	Reacted to "Here is a link to Po..." with 😍
+00:34:22	Sam:	Is it worth pushing so hard for native interop? I think L1 will never be fast enough to have an interop latency that provides a UX that feels instant. On top of the L1 latency, we also have latency impacts through the asynchronous nature of L2 settlement.
+00:34:34	Marissa Posner:	Here is the link to the onchain config telegram group: https://t.me/+W7rwnHS3qKA0MDEx
+00:34:47	Joxes | Wonderland:	I would love to read more about the approach (3)
+00:35:09	Marissa Posner:	Reacted to "I would love to read..." with ➕
+00:35:17	Joshua Rudolf:	Reacted to "I would love to read..." with ➕
+00:36:24	Joxes | Wonderland:	Replying to "Is it worth pushing ..."
+
+with fast blocks and SSF I think it is worth to explore.
+00:36:39	Ian | Polymer Labs:	Ill put something together and share it in the chat!
+00:36:43	Joxes | Wonderland:	Reacted to "Ill put something to..." with ❤️
+00:36:45	Orest Tarasiuk (t1):	Reacted to "Ill put something to..." with 👀
+00:36:47	Orest Tarasiuk (t1):	Reacted to "I would love to read..." with ➕
+00:36:47	Ian | Polymer Labs:	Reacted to "Here is the link to ..." with ❤️
+00:38:24	Ahmad Bitar | Nethermind:	Replying to "Is it worth pushing ..."
+
+i actually believe that native interop is probably the most secure and probably the best direction to go for all crosschain interop
+00:38:37	Joshua Rudolf:	Reacted to "i actually believe t..." with 💯
+00:38:41	Joshua Rudolf:	Reacted to "Here is the link to ..." with ❤️
+00:38:43	cyp | status.network:	Reacted to "i actually believe t..." with 💯
+00:38:48	Sam:	@Joxes | Wonderland Agreed.. but I think it will mainly be used as a backbone or fallback solution for way faster solutions.
+00:38:57	Joxes | Wonderland:	Reacted to "i actually believe t..." with 🤞
+00:39:28	Orest Tarasiuk (t1):	friction==delay?
+00:39:29	Sam:	@Ahmad Bitar | Nethermind I mean, I definitely don’t say no to it if it allows an „instant“ UX 😄
+
+But dont see this as practically doable
+00:39:44	Ahmad Bitar | Nethermind:	Reacted to "@Joxes | Wonderland ..." with 👍
+00:40:53	Nam:	Just noodling a bit on the "slow native Interop" comment, I wonder how much of this comes back to cross-chain messaging (ala 7786 and the likes). If we all agree that this slow settlement practically need to be paired with a fast path in most use cases, does that become the same problem?
+00:41:47	Ian | Polymer Labs:	Reacted to "i actually believe t..." with 💯
+00:41:55	Ian | Polymer Labs:	Reacted to "with fast blocks and..." with 💯
+00:41:59	Ian | Polymer Labs:	Reacted to "@Joxes | Wonderland ..." with 👍
+00:43:02	Ahmad Bitar | Nethermind:	to me, you focus on fixing the problem of interopability first then you try to make it faster
+00:43:41	Joshua Rudolf:	Replying to "Just noodling a bit ..."
+
+Hmm what do ya mean by “become the same problem”
+00:44:07	Sam:	Replying to "to me, you focus on ..."
+
+fair 🤔
+00:44:19	Allan | Offchain Labs:	Reacted to "Hmm what do ya mean ..." with ☝️
+00:44:28	Orest Tarasiuk (t1):	Reacted to "Hmm what do ya mean ..." with ☝️
+00:47:17	CJ Cobb:	Replying to "to me, you focus on ..."
+
+What does this mean exactly?
+00:48:37	CJ Cobb:	Replying to "to me, you focus on ..."
+
+“Fixing the problem of interoperability” , I feel like latency is one of the biggest problems in interoperability
+00:49:17	Ahmad Bitar | Nethermind:	for me, this means the following:
+solve interop between the rollup and the base layer
+use base layer as a settlement layer to implement cross rollup interop.
+improve speed of cross rollup interop by introducing preconfirmations to interop messages (here i dont mean the preconfirmations for l2 or L1 transaction)
+00:50:31	Kalman Lajko:	Reacted to "to me, you focus on ..." with 👍
+00:50:49	Kalman Lajko:	Reacted to "for me, this means t..." with 👍
+00:51:27	Barnabé Monnot:	Replying to "to me, you focus on ..."
+
+What kind of preconfirmations do you mean then? Where are these interop messages posted if not on the L1 or L2s?
+00:52:50	Sam:	An agreed structure as LXLY from Polygon would be needed for standardized efficient data syncs over all stacks. 
+
+That’s what AggLayer is using today, and any kind of settlement process/verifier can be added. 
+… and the AggLayer sequencer itself provides pre-confs to tackle the latency issue.
+00:53:00	Ahmad Bitar | Nethermind:	Replying to "to me, you focus on ..."
+
+it could potentially be an AVS that provide some crypto economic commitment to a message or a call being passed from an L2 to another without waiting for L1 settlement of these chains
+00:54:41	Matthew mteam:	https://x.com/mteamisloading/status/1942588359655792976
+00:55:07	Barnabé Monnot:	Replying to "to me, you focus on ..."
+
+@Ahmad Bitar | Nethermind right but I guess your point 2 seemed to imply that you wouldn’t consider this a “solved solution” for interop. but I see the point about having escalating confirmations
+00:55:56	Nam:	Replying to "Just noodling a bi..."
+
+If I as a developer want to use this settlement mechanism but some other fast path, am I "practically forced" to figure out this fast path myself. If so, doesn't every developer, when they simply want to send value or instructions (like for keystore rollups), then effectively come up with their own messaging standard unless we standardize 7786?
+00:57:07	Sam:	Replying to "to me, you focus on ..."
+
+Also when we have such systems in place, if enshrined or not, it will be super hard to reach acceptable latency numbers.
+00:57:11	Matthew mteam:	https://docs.spire.dev/education-hub/what-is-a-based-rollup
+00:57:15	Joshua Rudolf:	Replying to "Just noodling a bit ..."
+
+Gotcha, meaning the fast path is fragmented, even if slow path is unified and standardized
+00:59:27	Ahmad Bitar | Nethermind:	isn't that similar to Gwyneth has been pushing though :O
+01:00:00	Orest Tarasiuk (t1):	But now we’ll have per-tx gas limits so it’ll break…
+01:00:01	Allan | Offchain Labs:	Replying to "Just noodling a bit ..."
+
+I would expect “fast path” providers to bake in a standardized “slow path” as a sort of fallback mechanism within their protocol. Across Prime is exploring that model as I understand it, and we’ve discussed something similar with the Polymer team also
+01:00:30	Joshua Rudolf:	Reacted to "I would expect “fast..." with 👍
+01:02:09	Brecht's Notetaker (Otter.ai):	Takeaways from the meeting 👉💬 
+
+[ ] Marissa to share the link to the ongoing discussion around the ERC-7785 on-chain config work, which could potentially be extended to include the Interop registry contract. (Marissa)
+[ ] Follow up on the feasibility and potential next steps for standardizing the Interop registry contract, potentially as an addition or amendment to the existing ERC-7785 work. (Ian)
+
+See full summary - https://otter.ai/u/09khB4U7bH3wDoUTpWS1qD9GvDE?utm_source=va_chat&utm_content=wrapup_v4&tab=chat&message=b606b9b0-f3b8-442c-ace5-2a90e80a2b40
+01:02:15	Ian | Polymer Labs:	Reacted to "I would expect “fast..." with 👍
+01:03:24	Nam:	Reacted to "Gotcha, meaning th..." with ➕

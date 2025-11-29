@@ -1,0 +1,49 @@
+00:16:00	FLCL:	Most users continue to use centralized endpoints? But what's alternative, full node? Portal in the current form?
+00:17:14	Dirk Jäckel:	For mobile users there is currently no alternative.
+00:19:34	Dirk Jäckel:	It doesn't sound good for me :-(
+00:29:40	Meld:	Is there specs written with this new focus ? 
+Which is the expected roadmap ? 
+Who will take care of Hive Test if this are still used?
+00:35:03	amirulashraf:	*someday
+00:37:00	Meld:	We are interested in continue working!
+00:38:32	Marius:	Replying to "We are interested in..." 
+
+ Great, which team are you on? (Trying to take notes)
+00:38:50	Meld:	Replying to "We are interested in..."
+
+Samba
+00:39:17	Marius:	Reacted to Samba with "👍"
+00:43:32	Simon | Besu:	Some members of Besu team are keen to see the integration happen, and we previously agreed to, but we want to reevaluate the change of plans before committing now.
+
+We don’t have much portal knowledge within the team.
+Progress via a besu plugin has been made by Samba team (meldsun, Derek).
+We would likely be happy to support if they are in a position to continue working on it.
+00:44:17	Paul Jickling:	Reacted to "Some members of Be..." with 👍
+00:44:33	lightclient:	Reacted to "Some members of Besu..." with 👍
+00:44:54	grapebaba:	Reacted to "Some members of Be..." with 👍
+00:44:57	grapebaba:	Reacted to "Samba" with 👍
+00:47:53	Simon | Besu:	What are the options for syncing a near-head EL node post-rolling window 4444s?
+
+Can we use a recent era entry as a trusted checkpoint to begin syncing from?
+
+Or would portal history network unlock some better syncing options?
+00:49:36	Marius:	How do you feel about finding a different name for the slimmed down portal history network. I keep getting confused which flavor someone is talking about
+00:49:49	lightclient:	Well 4444 will never expire data <5 months due to weak subjectivity
+00:49:54	lightclient:	Simon ^
+00:54:03	Simon | Besu:	Replying to "Well 4444 will never..."
+
+I guess geth plans to sync all headers backwards the same way as now? But then only request the most recent 5 months of blocks over devp2p?
+ 
+Or do you plan to use portal for sync somehow?
+00:54:31	Rafael:	How to choose the nodeID, random based on key (I suppose XOR metrics will be maintained)? I guess it is relevant in order to store content the node is interested in.
+00:56:56	Meld:	What about the json-rpc endpoints, will they be deprecated ?
+01:03:23	grapebaba:	@Felix feel free to DM me in discord
+01:05:50	Felix:	yes I will!
+01:08:42	Paul Jickling:	portal-dev in the eth r&d discord
+01:09:12	Kim:	Ok, makes sense
+01:09:39	FLCL:	ty
+01:09:40	Meld:	Thanks!
+01:09:47	grapebaba:	thanks
+01:09:49	Derek Sorken:	Thank you!
+01:09:49	thinkAfCod:	Thanks
+01:09:50	Simon | Besu:	thanks

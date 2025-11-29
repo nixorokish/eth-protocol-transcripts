@@ -1,0 +1,396 @@
+00:07:08	Pilar Rodríguez:	Hi everyone!
+00:07:16	Leon - Hubble AI:	hello
+00:07:25	Banavara:	Hello everyone
+00:07:41	Robert Brighton:	Hello All!
+00:07:46	Zhengfa@Sparsity:	Hello
+00:07:56	Fireflies.ai Notetaker Michael:	Michael invited Fireflies.ai here to record & take notes. View Security & Privacy info: https://fireflies.ai/policy
+
+Type:
+'/ff leave' - Remove Fireflies
+
+View Realtime notes here: https://app.fireflies.ai/live/01K9WEE9VQM24XA805NKH5ZPX7?ref=live_chat
+00:07:59	Matt | Pinata:	The music is back
+00:08:04	Pilar Rodríguez:	wohoo
+00:08:06	Davide Crapis:	yeah
+00:08:07	MinChi Park:	Gm everyone
+00:08:07	James Young | Collab.Land:	feels like I stepped in to a movie
+00:08:10	Jason-AliasAI:	OASF taxonomie is awesome
+00:08:11	MinChi Park:	Epic music
+00:08:12	Davide Crapis:	gm
+00:08:13	g:	GM GM!
+00:08:15	Denver Baumgartner:	sick
+00:08:21	Abhi:	gmgm!
+00:08:24	Wyatt:	gm
+00:08:32	Hanks:	gm
+00:08:35	MinChi Park:	Reacted to "feels like I stepped..." with 👍
+00:08:36	Matt Kaye:	gm
+00:08:41	Alejandro | Vaulter Agents:	gm
+00:08:45	Sofia | Vyper:	Wow, gm everyone!
+00:08:52	chris:	Gm
+00:09:09	Robert Brighton:	Dreamy music
+00:09:25	Davide Crapis:	Declining all notetakers, but we’ll share notes
+00:09:26	MinChi Park:	Note to my future self: always have welcoming epic music when you do community calls
+00:09:35	Albena:	GM everyone!
+00:09:36	Davide Crapis:	Reacted to "Note to my future se..." with ❤️
+00:09:41	Molly Mackinlay:	InterPlanetary vibes!
+00:09:41	Abhi:	Reacted to "Note to my future se..." with ❤️
+00:09:42	Alessandro Voto:	GM
+00:09:44	Batman:	Reacted to "Note to my future se..." with ❤️
+00:09:46	Jennie:	Hey everyone!
+00:10:02	Abhi:	Reacted to "InterPlanetary vibes..." with 😍
+00:10:02	Pilar Rodríguez:	Argentine music could help set the vibes
+00:10:09	Davide Crapis:	Reacted to "Argentine music coul..." with 😃
+00:10:12	Robert Brighton:	Reacted to "Argentine music coul..." with 😃
+00:10:14	Davide Crapis:	We need that for next week
+00:10:16	Abhi:	Reacted to "Argentine music coul..." with 😃
+00:10:16	MinChi Park | CoinFello:	Reacted to "Argentine music coul..." with 😃
+00:10:20	Robert Brighton:	A must
+00:10:27	James Young | Collab.Land:	Reacted to "Declining all noteta..." with 👍
+00:10:31	Pilar Rodríguez:	Reacted to "We need that for nex..." with ❤️
+00:10:33	James Young | Collab.Land:	Reacted to "Note to my future se..." with ❤️
+00:10:35	Pilar Rodríguez:	Reacted to "A must" with 🧉
+00:10:50	Leon - Hubble AI:	Great vibe
+00:10:58	jyx:	nice munic
+00:10:59	Marko Stokić:	Vibe killed
+00:10:59	James Young | Collab.Land:	Replying to "Note to my future se..."
+
+just need some AI generated short video animations to complete the look
+00:11:32	newOS.computer:	gm
+00:11:35	Davide Crapis:	Reacted to "Vibe killed" with 😂
+00:11:36	MinChi Park | CoinFello:	Reacted to "just need some AI ge..." with ❤️
+00:11:38	James Young | Collab.Land:	Reacted to "Vibe killed" with 😂
+00:11:45	MinChi Park | CoinFello:	Replying to "Note to my future se..."
+
+Even better
+00:11:52	Lambert | Karum AI:	gm
+00:11:53	MinChi Park | CoinFello:	Reacted to "Vibe killed" with 😂
+00:11:59	Ash:	Gm
+00:12:10	Robert Brighton:	Trustless Agent Day hype
+00:12:27	Nathan Vandy:	Gm in the pm!
+00:12:28	Davide Crapis:	*trustless 🙂
+00:12:41	Nathan Vandy:	Reacted to "*trustless 🙂" with 👍
+00:12:45	Nathan Vandy:	Reacted to "Agent Day hype" with 👍
+00:12:59	Robert Brighton:	Reacted to "*trustless 🙂" with 👍
+00:13:33	Davide Crapis:	Spec PR
+https://github.com/MarcoMetaMask/ERCs/commit/a320a8bf8b333bce1563b46bf44f1c913889bfbb
+00:13:38	Davide Crapis:	^see pr here
+00:14:13	David Mihal:	Is there a full PR? This is just a commit
+00:14:24	Davide Crapis:	Ya just the commit
+00:14:28	David Mihal:	Reacted to "Ya just the commit" with 👍
+00:15:33	Davide Crapis:	Registration guide
+https://github.com/erc-8004/best-practices/blob/main/README.md
+00:15:44	bond.credit:	Reacted to "Registration guide..." with ❤️
+00:16:28	Justin Bebis:	Reacted to "Registration guide..." with ❤️
+00:16:56	Michael Kantor:	At Hashgraph Online, we’re working on Registry Brokers, which index + aggregate AI Agents anywhere on the planet.  
+
+If you’re launching ERC-8004 on your network’s L1 / L2, feel free to reach out to our team or the form on our website to have your agents registered. 
+
+https://x.com/HashgraphOnline/status/1983989241312059857
+00:17:04	Davide Crapis:	And… see all Taxonomies here:
+https://schema.oasf.outshift.com/0.8.0/skill_categories
+00:17:26	Davide Crapis:	Reacted to "At Hashgraph Online,..." with 🔥
+00:18:14	Davide Crapis:	Replying to "At Hashgraph Online,..."
+
+Awesome, reminder that we want to maintain a singleton registry per chain
+
+So ping the 8004 when you know of new chains thinking to deploy
+00:18:15	Francesco Andreoli:	Never forget about endpoints
+00:18:17	Hanks:	Reacted to "Registration guide
+h..." with ❤️
+00:18:27	Davide Crapis:	Reacted to "Never forget about e..." with 😂
+00:18:36	Justin Bebis:	Replying to "And… see all Taxo..."
+
+no finance category...
+00:18:42	Sebastian Varela:	Replying to "And… see all Taxonom..."
+
+x2
+00:18:44	Pilar Rodríguez:	https://github.com/erc-8004/best-practices
+00:18:47	Michael Kantor:	And images! Agents with images come up MUCH better in explorers.
+00:18:49	shawn cheng:	Reacted to "Never forget about e..." with 😂
+00:18:51	Fireflies.ai Notetaker Blockze:	Blockzealous invited Fireflies.ai here to record & take notes. View Security & Privacy info: https://fireflies.ai/policy
+
+Type:
+'/ff leave' - Remove Fireflies
+
+View Realtime notes here: https://app.fireflies.ai/live/01K9WF26Q16P2YZ592H0HSW6G2?ref=live_chat
+00:19:23	Michael Kantor:	Current agents on testnet with images: https://registry.hashgraphonline.com/search?registries=erc-8004&meta.imageStatus=with-image
+00:21:08	Michael Kantor:	Will do! What is your telegram Davide? Let’s keep in touch.
+00:21:16	g:	Is the intention of the registry to be a singleton or for multiple projects to have their own implementation?
+00:21:18	Davide Crapis:	Replying to "At Hashgraph Online,..."
+
+@davidecrapis
+00:21:23	Michael Kantor:	Reacted to "@davidecrapis" with ❤️
+00:22:27	Davide Crapis:	One 8004 registry per chain
+00:22:31	g:	Reacted to "One 8004 registry pe..." with ❤️
+00:22:37	Davide Crapis:	The registry is the point of aggregation
+00:22:37	Marco De Rossi:	Replying to "And… see all Taxonom..."
+
+Finance is a domain! Not a skill! https://schema.oasf.outshift.com/0.8.0/domain_categories
+00:23:08	Justin Bebis:	if anyone wants to work on OASF type skills for finance, i'm working from here:
+
+https://www.notion.so/bytemasons/Finance-OASF-Tags-2a9f74b747f880cc8b93c1a7b3ae8cca?source=copy_link
+00:23:15	Justin Bebis:	comments should be on for everyone
+00:23:43	Nathan Vandy | bond.credit:	Reacted to "At Hashgraph Online,..." with 👏
+00:24:13	Alejandro | Vaulter Agents:	Replying to "Current agents on ..."
+
+Nice UI, could you add login with wallet?
+00:24:15	Pilar Rodríguez:	Love it! We’re actively using Pinata for Cambrian’s agent
+00:24:52	Matt | Intuition:	Mattiverse DAO on full display <3
+00:24:59	Davide Crapis:	Reacted to "Mattiverse DAO on fu..." with 😃
+00:25:04	Francesco Andreoli:	Great to see you here Matt!
+00:25:10	Matt | Pinata:	The Matts are everywhere
+00:25:19	bond.credit:	Matts United -- joining Uniswap Cup?
+00:25:20	Pilar Rodríguez:	https://docs.filecoin.io/builder-cookbook/filecoin-pin/erc-8004-agent-registration
+00:25:23	Leon - Hubble AI:	we are using Pinata as well
+00:25:35	Marco De Rossi:	Replying to "The Matts are everyw..."
+
+It’s a conspiracy
+00:26:09	Francesco Andreoli:	Reacted to "It’s a conspiracy" with 😁
+00:26:22	James Young | Collab.Land:	Reacted to "https://docs.filecoi..." with 🙏
+00:26:56	Michael Kantor:	Replying to "Current agents on te..."
+
+Yes! The API supports wallet authentication already, at the moment the frontend requires an email which you can use a throwaway with if needed and connect your wallet aftewards.
+00:27:12	Michael Kantor:	Matt^3
+00:27:33	Jason-AliasAI:	Reacted to "And… see all Taxonom..." with ❤️
+00:27:52	Matevž Jekovec (Oasis):	is there a way to use ipfs pinning from go/python without the CLI?
+00:27:59	Russell Dempsey:	data-set command will be changing, run  —help  if the cmd doesn’t work.. should be  show <id>  and  list|ls  in the future. docs will be updated as it changes
+00:28:21	Russell Dempsey:	Replying to "data-set command wil..."
+
+@Matevž Jekovec (Oasis) if you run the filecoin-pin pinning server, it will do the things for you via HTTP calls.
+00:28:45	Russell Dempsey:	Replying to "data-set command wil..."
+
+https://ipfs.github.io/pinning-services-api-spec/  for api schema
+00:29:11	Jennifer Wang:	https://docs.filecoin.io/builder-cookbook/filecoin-pin/erc-8004-agent-registration
+00:29:31	Russell Dempsey:	Replying to "is there a way to us..."
+
+oops. meant to answer here.. yes, you can run filecoin-pin pinning server and then query with HTTP requests, spec at https://ipfs.github.io/pinning-services-api-spec/
+00:29:53	Matt | Intuition:	Reacted to "Great to see you her..." with 🫂
+00:29:58	Matt | Intuition:	Reacted to "The Matts are everyw..." with 🫂
+00:30:02	Billy Luedtke:	👀
+00:30:09	Matt | Intuition:	Reacted to "It’s a conspiracy" with 😂
+00:30:50	bond.credit:	Friendly Neighbourhood FileCoin Storage Providers is a new one 🕸️
+00:30:52	Jennifer Wang:	pin.filecoin.cloud (pin your agent file right here!)
+00:31:26	Matt | Pinata:	Replying to "Love it! We’re activ..."
+
+Love to hear it! Let us know if you ever want to chat about Cambrian!
+00:31:46	Matt | Pinata:	Replying to "we are using Pinata ..."
+
+Thanks for building with us Leon! Let us know if you ever want to chat about Hubble!
+00:32:46	Matt Hamilton:	Tutorial for filecoin-pin and 8004 https://docs.filecoin.io/builder-cookbook/filecoin-pin/erc-8004-agent-registration
+00:32:59	Leon - Hubble AI:	❤️
+00:33:11	Russell Dempsey:	Reacted to "Tutorial for filecoi..." with 🙏
+00:33:17	Russell Dempsey:	Reacted to "pin.filecoin.cloud (..." with 🔥
+00:33:27	Jennifer Wang:	Tell us  your agents/pining service/onchain storage  needs IRL if you are at Buenos Aries,  https://www.fildev.io/FDS-7
+00:33:31	Pilar Rodríguez:	no
+00:33:31	Matt Hamilton:	And a slightly longer recording of what I just presented https://www.youtube.com/watch?v=vU8Po444mp8
+00:33:39	Eugenia Tellechea:	Reacted to "Tell us  your agents..." with ❤️
+00:33:43	Pilar Rodríguez:	yes
+00:33:46	Russell Dempsey:	Reacted to "Tell us  your agents..." with ❤️
+00:33:47	Molly Mackinlay:	https://luma.com/depin-day-ba for the launch event - would love to invite all 8004 builders to join or attend remotely!
+00:33:50	Molly Mackinlay:	Reacted to "And a slightly longe..." with 🙏
+00:33:51	Pilar Rodríguez:	Reacted to "https://luma.com/dep..." with ❤️
+00:33:52	Molly Mackinlay:	Reacted to "And a slightly longe..." with 👍
+00:33:56	Antonio Sabado:	Reacted to "https://luma.com/dep..." with ❤️
+00:34:01	Russell Dempsey:	Reacted to "And a slightly longe..." with 👍
+00:34:03	Russell Dempsey:	Reacted to "And a slightly longe..." with 🙏
+00:34:08	Molly Mackinlay:	Reacted to "Tutorial for filecoi..." with 🙏
+00:34:10	Marko Stokić:	Still sad I missed ID 1337
+00:34:40	Juan:	hi all!
+00:34:41	Nathan Vandy | bond.credit:	Reacted to "Still sad I missed I..." with 😃
+00:34:56	Molly Mackinlay:	Reacted to "pin.filecoin.cloud (..." with 🔥
+00:35:02	Jessy Huang:	8004scan.io
+00:35:03	Molly Mackinlay:	Reacted to "Friendly Neighbourho..." with 💙
+00:35:10	Juan:	here representing thirdweb - excited for 8004
+00:35:23	Leon - Hubble AI:	Good to see you here Juan
+00:35:27	Nathan Vandy | bond.credit:	Gm Juan!
+00:35:35	Davide Crapis:	Reacted to "here representing th..." with ❤️
+00:35:40	Eugenia Tellechea:	Reacted to "And a slightly longe..." with 👍
+00:35:49	Davide Crapis:	Replying to "here representing th..."
+
+hullo
+00:36:06	Francesco Andreoli:	Great work on this YQ
+00:36:35	Marco De Rossi:	If you follow the best practices, your agent will look amazing on 8004scan (and any other explorer) 😇 https://github.com/erc-8004/best-practices/blob/main/README.md
+00:36:49	Niels | bond.credit:	Reacted to "If you follow the ..." with ❤️
+00:36:54	Billy Luedtke:	Reacted to "If you follow the be..." with ❤️
+00:37:16	Nathan Vandy | bond.credit:	Reacted to "If you follow the be..." with ❤️
+00:37:51	Niels | bond.credit:	Yeah great to see visibility increase. @YQ let me know if you want to be connected to Scattering.io team, they may be interested in these data.
+00:38:00	Davide Crapis:	Reacted to "If you follow the be..." with ❤️
+00:38:01	Davide Crapis:	Reacted to "If you follow the be..." with 🔥
+00:38:03	Marco De Rossi:	Great work YQ!
+00:38:04	Davide Crapis:	Reacted to "If you follow the be..." with 😃
+00:38:08	Leon - Hubble AI:	great work！
+00:38:09	Robert Brighton:	Looks great
+00:38:19	Jessy Huang:	Very cool
+00:38:27	Davide Crapis:	God’s work @YQ
+00:38:31	Alejandro | Vaulter Agents:	Reacted to "If you follow the ..." with ❤️
+00:38:36	Matt Wright:	🔥🔥🔥
+00:38:41	Leon - Hubble AI:	we indeed need a standard for registry info
+00:38:42	Jessy Huang:	YQ also wrote a series: 
+Chapter 1 x402: https://x.com/yq_acc/status/1983260307251479024
+Chapter 2 More x402: https://x.com/yq_acc/status/1983666744276480070
+Chapter 3 8004: https://x.com/yq_acc/status/1985302546349425147
+Chapter 4 3009: https://x.com/yq_acc/status/1986887722607530418
+Chapter 5 x402x: https://x.com/yq_acc/status/1987968102605484152
+00:38:53	Matt Wright:	Reacted to "we indeed need a sta…" with ❤️
+00:38:56	YQ:	Reacted to "YQ also wrote a seri..." with ❤️
+00:39:01	Antonio Sabado:	Reacted to "YQ also wrote a seri..." with ❤️
+00:39:01	YQ:	Reacted to "God’s work @YQ" with ❤️
+00:39:04	Nina | Khorus.io:	Reacted to "YQ also wrote a seri..." with ❤️
+00:39:06	YQ:	Reacted to "Great work YQ!" with ❤️
+00:39:09	MinChi Park | CoinFello:	Reacted to "YQ also wrote a seri..." with ❤️
+00:39:10	James Young | Collab.Land:	Reacted to "YQ also wrote a seri..." with ❤️
+00:39:11	Niels | bond.credit:	Shout out to Eigen Labs - currently joining from The Vault: Buenos Aires.
+00:39:17	Sean Brennan - regent.cx:	Reacted to "YQ also wrote a seri..." with ❤️
+00:39:20	YQ:	Reacted to "Yeah great to see vi..." with ❤️
+00:39:25	MinChi Park | CoinFello:	Reacted to "Shout out to Eigen L..." with ❤️
+00:39:34	William Mendoza Gopar:	Reacted to "YQ also wrote a seri..." with ❤️
+00:39:45	Antonio Sabado:	Reacted to "Shout out to Eigen L..." with ❤️
+00:39:47	Jessy Huang:	Reacted to "Shout out to Eigen L..." with ❤️
+00:39:50	Leon - Hubble AI:	Agent0 is very helpful! Great work!
+00:39:51	YQ:	Ty everyone
+00:39:52	shawn cheng:	Reacted to "YQ also wrote a seri..." with ❤️
+00:40:00	Leon - Hubble AI:	Reacted to "Shout out to Eigen L…" with ❤️
+00:40:09	Jessy Huang:	https://sdk.ag0.xyz/
+00:40:21	Molly Mackinlay:	Agent0 is awesome!! 💪
+00:40:33	Albena:	Reacted to "YQ also wrote a se..." with ❤️
+00:41:18	Matt | Pinata:	🔥
+00:41:26	Matt | Pinata:	This is awesome Marco
+00:41:32	Matevž Jekovec (Oasis):	is the a public RPC for accessing ERC8004 registry that doesn't need API token?
+00:41:37	Davide Crapis:	Reacted to "This is awesome Marc..." with ❤️
+00:42:13	Antonio Sabado:	amazing Marco  👍
+00:42:58	Matevž Jekovec (Oasis):	I thought registering agents too and submitting reputation/validation requests/responses
+00:43:16	junhao:	Reacted to "YQ also wrote a seri..." with ❤️
+00:43:22	Niels | bond.credit:	That's awesome
+00:43:47	Matevž Jekovec (Oasis):	would it be a lot of work to run python/ts light client for ethereum?
+00:43:59	Robert Brighton:	Cookin in the kitchen
+00:44:06	Michael Kantor:	Re OASF, would recommend using the OASF enum values versus hardcoded strings.
+00:45:00	Molly Mackinlay:	Yep!
+00:45:02	Marco De Rossi:	Docs: https://sdk.ag0.xyz/
+00:45:39	Marco De Rossi:	TG group for Agent0 contributors and maintainers: https://t.me/agent0kitchen
+00:45:50	Pilar Rodríguez:	Reacted to "TG group for Agent0 ..." with 👍
+00:46:17	Sydney Lai:	Can someone relink the ecosystem form? Forgot to submit
+00:47:07	Niels | bond.credit:	Replying to "Can someone relink..."
+
+I have it somewhere
+00:47:27	Sydney Lai:	Replying to "Can someone relink t..."
+
+Thanks bro - they just shared the QR
+00:47:29	Marko Stokić:	I see Nader tho
+00:47:29	Jennie | AWE:	What’s the telegram link for 8004 builders?
+00:47:36	Niels | bond.credit:	Reacted to "Thanks bro - they ..." with 👍
+00:47:39	Jessy Huang:	Let me send all the links here
+00:47:43	Jennie | AWE:	Reacted to "Let me send all the ..." with ❤️
+00:47:45	Niels | bond.credit:	Replying to "Can someone relink..."
+
+perf!
+00:47:47	Matevž Jekovec (Oasis):	we can't here you?
+00:47:53	Niels | bond.credit:	Reacted to "Let me send all th..." with ❤️
+00:47:56	shawn cheng:	Reacted to "Let me send all the ..." with 🙏🏽
+00:47:57	Marko Stokić:	Replying to "we can't here you?"
+
+Works for me
+00:48:03	Niels | bond.credit:	Replying to "we can't here you?"
+
+worksfor me
+00:48:04	Matevž Jekovec (Oasis):	works now, sorry
+00:48:28	Eugenia Tellechea:	Yes!
+00:48:37	Niels | bond.credit:	Replying to "works now, sorry"
+
+You are forgiven by the Council of Matts
+00:48:41	Jessy Huang:	👉 Join the builder group: t.me/ERC8004  
+👉 Open ecosystem page: https://airtable.com/app1VXoPRyVjgK4d5/shrDb6c0ql0YifNE2
+👉 Fill to show up on the ecosystem page: https://form.fillout.com/t/e8VGKbnf7Wus
+00:48:52	James Young | Collab.Land:	@Robert Brighton we can not hear anything
+00:48:52	Marko Stokić:	If there’s sound you should unmute
+00:49:54	Jennie | AWE:	Reacted to "👉 Join the builder ..." with 👍
+00:50:25	Pilar Rodríguez:	Is there any link where we can later take a look at the video with sound enabled?
+00:51:54	Robert Brighton:	Yes - I will make sure it gets shared. Apologies for that !
+00:52:46	Juan:	Reacted to "Good to see you he..." with ❤️
+00:52:49	Juan:	Reacted to "Gm Juan!" with ❤️
+00:53:00	Robert Brighton:	Reacted to "Is there any link wh..." with 👍
+00:53:13	Francesco Andreoli:	Need to jump, thanks everyone
+00:53:21	Davide Crapis:	Reacted to "Need to jump, thanks..." with 👍
+00:54:07	Amin Iman:	Reacted to "Let me send all the ..." with ❤️
+00:54:24	Amin Iman:	Reacted to "Need to jump, thanks..." with 👍
+00:54:30	Amin Iman:	Reacted to "Is there any link wh..." with 👍
+00:54:43	Russell Dempsey:	wth is that theme Denver… I like it..
+00:54:48	Davide Crapis:	Love the security applications on top of 8004
+00:54:53	Pilar Rodríguez:	Reacted to "Love the security ap..." with ❤️
+00:54:55	Matt | Intuition:	Reacted to "Love the security ap..." with 🔥
+00:55:12	Denver Baumgartner:	feel free to reach out at:
+twitter: @semioticlabs
+telegram: @denverba
+github: @denverbaumgartner
+00:55:27	Davide Crapis:	Reacted to "feel free to reach o..." with ❤️
+00:55:31	Denver Baumgartner:	Replying to "feel free to reach o..."
+
+we will be open sourcing this simulation environment, hope it is helpful in your research
+00:55:41	Nathan Vandy | bond.credit:	Reacted to "Need to jump, thanks..." with 👍
+00:55:54	Denver Baumgartner:	Replying to "wth is that theme De..."
+
+Dark High Contrast
+00:56:00	Zadok7.eth:	Reacted to "we will be open so..." with ❤️
+00:56:27	Davide Crapis:	Reacted to "we will be open sour..." with ❤️
+00:56:35	Niels | bond.credit:	Reacted to "Love the security ..." with 🔥
+00:56:42	Marko Stokić:	Validator Agent: https://github.com/oasisprotocol/erc-8004
+Long Demo: https://drive.google.com/file/d/1CM4yrIZyfRboGjLg6qp8QOVKRajt492E/view?usp=sharing
+Attestation and Build Verification: https://github.com/ptrus/rofl-registry
+00:56:54	Sydney Lai:	Reacted to "Validator Agent: htt..." with 🎉
+00:56:56	Michael Kantor:	Reacted to "Validator Agent: htt..." with 🎉
+00:58:26	Eugenia Tellechea:	Reacted to "Validator Agent: htt..." with 🎉
+00:58:37	Russell Dempsey:	Reacted to "Dark High Contrast" with 🙏
+00:58:46	Russell Dempsey:	Reacted to "we will be open sour..." with ❤️
+01:00:23	Alejandro | Vaulter Agents:	oh Nader, I lost count of how many of your videos I've seen, thanks!
+01:00:33	Jessy Huang:	Reacted to "oh Nader, I lost cou..." with 😃
+01:00:34	Jessy Huang:	Reacted to "Validator Agent: htt..." with 🎉
+01:00:38	Amin Iman:	Reacted to "oh Nader, I lost cou..." with 😃
+01:00:39	Amin Iman:	Reacted to "Validator Agent: htt..." with 🎉
+01:01:06	Juan:	hyped
+01:03:21	Pilar Rodríguez:	The previous day (the 20th), there is Agentic Zero (AI x crypto summit) taking place also at La Rural, you can check the agenda and speakers at the following link: https://agenticzero.xyz/
+01:03:23	Robert Brighton:	Hyped
+01:03:41	Jennie | AWE:	hyoed
+01:03:42	Leon - Hubble AI:	❤️
+01:03:47	Niels | bond.credit:	Superr hyped - thanks so much to the team
+01:03:48	Nathan Vandy | bond.credit:	Reacted to "The previous day (th..." with ❤️
+01:03:53	Jennie | AWE:	Will there be a live-streaming for that day
+01:04:05	Jessy Huang:	Trustless Agent Day sign up: https://luma.com/i1vu0n7p
+01:04:08	Antonio Sabado:	awesome event Davide, sadly I will not be there
+01:04:09	Davide Crapis:	Reacted to "The previous day (th..." with ❤️
+01:04:10	Marco De Rossi:	Official tweet on the event from EF, and RT from Consensys, Google and Coinbase will arrive later today
+01:04:14	Antonio Sabado:	i'll be there on the next one
+01:04:27	Antonio Sabado:	Reacted to "Official tweet on th..." with ❤️
+01:04:31	Davide Crapis:	Replying to "The previous day (th..."
+
+Yes this is a great event and we’ll also have 8004 representation there! 🙂
+01:04:37	Jessy Huang:	Replying to "Trustless Agent Day ..."
+
+There will be livestream and recording of the day done by the Devconnect team
+01:04:41	Pilar Rodríguez:	Reacted to "Yes this is a great ..." with ❤️
+01:04:44	Jennie | AWE:	Reacted to "There will be livest..." with ❤️
+01:04:44	Jessy Huang:	Reacted to "Yes this is a great ..." with ❤️
+01:04:45	Jessy Huang:	Reacted to "The previous day (th..." with ❤️
+01:04:46	Davide Crapis:	Reacted to "awesome event Davide..." with ❤️
+01:04:47	Marco De Rossi:	Reacted to "The previous day (th..." with ❤️
+01:04:50	Batman:	Reacted to "The previous day (th..." with ❤️
+01:04:53	Jessy Huang:	Reacted to "Official tweet on th..." with ❤️
+01:05:00	Batman:	Reacted to "Yes this is a great ..." with ❤️
+01:05:13	Marco De Rossi:	Reacted to "Yes this is a great ..." with ❤️
+01:05:47	Davide Crapis:	Reacted to "i'll be there on the..." with 🔥
+01:06:05	Pilar Rodríguez:	Reacted to "Trustless Agent Day ..." with ✅
+01:06:05	Michael Kantor:	Great event everyone!
+01:07:12	shawn cheng:	This is so important, very excited for this
+01:07:14	Davide Crapis:	Reacted to "Official tweet on th..." with 🔥
+01:07:17	Nina | Khorus.io:	🤩love this event 🙂
+01:07:46	Juan:	gg
+01:07:52	Amin Iman:	Where can we find recording of this call from today?
+01:08:11	Denver Baumgartner:	gg
+01:08:15	Marko Stokić:	Damn deterministic AI is still mindboggling
+01:08:18	Jessy Huang:	Replying to "Where can we find re..."
+
+Will be posting
+01:08:23	Amin Iman:	Reacted to "Will be posting" with ❤️
+01:08:32	Hanks:	thx
+01:08:35	Juan:	ty all
+01:08:36	Alejandro | Vaulter Agents:	thanks!
+01:08:36	JP:	Thank you!
+01:08:36	Jennie | AWE:	Thx guys!

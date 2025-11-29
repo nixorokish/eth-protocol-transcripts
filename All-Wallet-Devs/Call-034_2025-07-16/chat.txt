@@ -1,0 +1,4 @@
+00:05:30	Vandan | MetaMask:	Many ERCs/EIPs to read 😀
+00:09:26	Vandan | MetaMask:	https://github.com/MetaMask/metamask-improvement-proposals/blob/main/MIPs/mip-6.md
+00:15:54	Vandan | MetaMask:	https://github.com/MetaMask/metamask-improvement-proposals/blob/main/MIPs/mip-5.md
+00:19:10	Fredrik:	Thanks cya!

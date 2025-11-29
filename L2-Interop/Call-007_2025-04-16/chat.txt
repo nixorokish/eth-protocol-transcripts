@@ -1,0 +1,239 @@
+00:13:24	read.ai meeting notes:	Lisandro and Teck Yuan added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:14:23	0age:	gm
+00:15:06	Joxes | Wonderland:	Gmgm
+00:15:15	QEDK:	gm
+00:15:16	Sam Jernigan:	hi!
+00:15:39	Fireflies.ai Notetaker Jacob:	Talk to Fireflies:
+• Type: /ff help
+to get started.
+View real-time notes and transcription for this meeting here: https://app.fireflies.ai/live/01JRHGS4AYV5XV8XWKCPHK7F8K?ref=live_chat
+00:25:26	Hart Lambur:	Nice presentation @sergey
+00:25:44	sergey:	Reacted to "Nice presentation @s..." with ❤️
+00:25:53	QEDK:	in a non-EVM context, how are selectors being planned to be processed?
+00:26:14	Michael Lewellen:	Reacted to "Nice presentation @s..." with ❤️
+00:27:29	Galen:	Reacted to "Nice presentation @s..." with ❤️
+00:28:15	sergey:	Replying to "in a non-EVM context..."
+
+What do you mean by selectors? The spec includes this header that I mentioned that just has info on {sender, source chain, destination chain, receiver}. These can be encoded and sent to non-evm chains as well. Would need to have the right encoding/decoding.
+00:29:45	Jacob | Glacis:	How does it compare work with 7281 (xERC20)?
+Will it be compatible with cluster standards (SupERC20)?
+Will it work with alt VMs?
+
+Agree with neutrality.
+00:30:10	CJ Cobb:	Definitely will work with alt VMs, that was one of the main goals of 7786
+00:30:10	Sam Patel:	Reacted to "How does it compare …" with 👍
+00:30:29	Skele | Wonderland:	xERC20s or Superc20s will not be impacted by this, as they would still use the underlying messaging protocol for verification-access-control
+00:30:34	frangio:	Replying to "in a non-EVM context..."
+
+@QEDK do you mean function selectors of the interface, or attribute selectors?
+00:31:09	QEDK:	Replying to "in a non-EVM conte..."
+
+I mean the function selector of executeMessage() / sendMessage() + emitting a selector.
+00:31:10	Jacob | Glacis:	Reacted to "Definitely will work..." with ❤️
+00:32:11	Jim:	Would be cool for xERC20s to automatically use 7786, as opposed to having interfaces for each GMP that it leverages
+00:32:15	QEDK:	Replying to "in a non-EVM conte..."
+
+I see this making a lot of sense in the EVM context but I'm wondering if we should designate this to be primarily EVM / EVM+ or make it to be more encompassing.
+00:32:26	frangio:	Reacted to "Would be cool for xE..." with 👍
+00:32:35	Jacob | Glacis:	Reacted to "Would be cool for xE..." with 👍
+00:33:12	Adachi Tomoki | Futaba:	Reacted to "Would be cool for xE..." with 👍
+00:34:02	Lumi | Offchain Labs:	Reacted to "Would be cool for xE..." with 👍
+00:34:22	Natacha:	Reacted to "Would be cool for xE..." with 👍
+00:34:32	Skele | Wonderland:	Replying to "Would be cool for ..."
+
+hmm not sure I understand this concern, xERC20 does not need to specify "how" it communicates with messaging protocols, it just needs to accept incoming mint/burn calls from them.
+so it's kinda already supported, am I missing anything?
+00:35:33	Marissa Posner:	7786 doesn’t enforce decentralized verification. It allows bridges with completely different trust models to implement the same interface. That means wallets may treat messages from centralized bridges the same as decentralized ones unless they implement their own trust policies. A canonical-bridge based sender that calls IERC7786Receiver.executeMessage() is far superior to a multisig bridge calling the same function. How are you guys thinking about this?
+00:35:43	Zodomo | Omni Network:	Replying to "Would be cool for xE..."
+
+Right, the contract making the mint/burn calls to the xERC20 would be the one that would benefit from supporting this
+00:36:04	Skele | Wonderland:	Replying to "Would be cool for ..."
+
+exactly!
+00:36:08	Skele | Wonderland:	Reacted to "Right, the contrac..." with 👍
+00:36:30	Jim:	Replying to "Would be cool for xE..."
+
+That’s what I meant, sorry for communicating it poorly
+00:36:56	Wei Dai:	Since 7786 is enforcing CAIP-2 and CAIP-10—do we already have good consensus on CAIP-10 being the cross-chain address standard?
+00:37:07	Greg Markou:	Replying to "Since 7786 is enforc..."
+
+Yes/no
+00:37:09	Skele | Wonderland:	Replying to "Would be cool for ..."
+
+no worries :)
+00:37:31	CJ Cobb:	Replying to "7786 doesn’t enforce..."
+
+The wallet can still be aware of the underlying security properties of the gateway that’s calling executeMessage and choose to trust or not trust. The idea is not to trust any gateway, but to choose which gateways to trust, based on security, decentralization, etc.
+00:37:53	Rithy Thul:	Reacted to 7786 doesn’t enforce... with "🙏"
+00:38:03	Joshua Rudolf:	Reacted to "7786 doesn’t enforce..." with 👍
+00:38:19	teddy | wonderland:	Replying to "Since 7786 is enfo..."
+
+we are working on ERC-7930 which should be more efficient and extensible
+00:38:36	Skele | Wonderland:	Replying to "Since 7786 is enfo..."
+
+https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365
+00:38:46	Wei Dai:	Reacted to "we are working on ER..." with 👍
+00:38:47	Natacha:	Reacted to "https://ethereum-mag..." with 👍
+00:39:04	Greg Markou:	Replying to "Since 7786 is enforc..."
+
+Can we ensure this gets mapped back to CAIPs since we do have quite a lot of of other networks drafting off of it
+00:39:13	Greg Markou:	Replying to "Since 7786 is enforc..."
+
+Assuming it becomes canonical
+00:39:32	frangio:	Replying to "Since 7786 is enforc..."
+
+@Greg Markou can you clarify what you mean by mapping to CAIPs?
+00:40:01	Greg Markou:	Replying to "Since 7786 is enforc..."
+
+If 7930 is a better version of CAIP-10 it would be nice to build anew CAIP off of 10, to ensure we have ERC<>CAIP mapping
+00:40:02	Marissa Posner:	Replying to "7786 doesn’t enforce..."
+
+So the assumption is that the onus is on the wallet devs?
+00:40:34	Skele | Wonderland:	Replying to "Since 7786 is enfo..."
+
+oh, we are building a new CAIP that "merges/leverages" borh CAIP-2&10
+00:40:48	Greg Markou:	Replying to "7786 doesn’t enforce..."
+
+I’d agree with CJ here
+00:40:56	Jim:	Replying to "7786 doesn’t enforce..."
+
+I imagine the devX is functionally similar to any modular verification scheme for existing GMPs
+00:40:58	Joxes | Wonderland:	Reacted to "oh, we are building ..." with 👍
+00:41:01	CJ Cobb:	Replying to "7786 doesn’t enforce..."
+
+Yes you still need to choose your interop provider, and that should be an informed decision. The idea is (hopefully) that the API you use to send/receive is the same, so you don’t need to change your code to use a diff provider.
+00:41:03	frangio:	Replying to "Since 7786 is enforc..."
+
+there's actually some issue with that we've been actively discussing. please see this thread: https://github.com/ethereum/ERCs/pull/1002#discussion_r2033969922
+00:41:06	Greg Markou:	Replying to "Since 7786 is enforc..."
+
+Cries in standards
+00:41:14	Skele | Wonderland:	Reacted to "Cries in standards" with 😂
+00:41:15	Joshua Rudolf:	Reacted to "Cries in standards" with 😂
+00:41:20	Joxes | Wonderland:	Reacted to "Cries in standards" with 😂
+00:41:22	frangio:	Reacted to "Cries in standards" with 😂
+00:41:32	Jim:	Reacted to "Cries in standards" with 👍
+00:41:40	Zodomo | Omni Network:	Reacted to "Cries in standards" with 😂
+00:41:46	TiTi (Wonderland):	Reacted to "Cries in standards" with 😂
+00:41:53	T Y:	Reacted to "Cries in standards" with 😂
+00:42:04	luke:	Reacted to "Cries in standards" with 😂
+00:42:50	Lumi | Offchain Labs:	Reacted to "Cries in standards" with 😂
+00:43:00	Greg Markou:	How many competing address standards are out there right now?
+
+I ask because with caip-10 we’re already fragmented (eg: Safe decided to not use it). Like good alignment here and easier to track
+00:43:34	donnoh | L2BEAT:	Reacted to "7786 doesn’t enforce..." with 👍
+00:43:49	Jaack (Routescan):	Replying to "7786 doesn’t enforce…"
+Wouldn’t a ‘Stage’ classification be needed like the one vitalik did for Rollups? I believe L2BEAT already has some classification done
+00:44:22	Lumi | Offchain Labs:	Replying to "7786 doesn’t enforce..."
+
+@donnoh | L2BEAT get on it ser
+00:44:42	Skele | Wonderland:	we understand the friction caip-10 might have, hopefully we can re-open the convo w SAFE to get their thoughts regarding interop-addresses
+00:45:22	donnoh | L2BEAT:	Replying to "7786 doesn’t enforce..."
+
+yes we will assess the bridges
+00:45:28	T Y:	Reacted to "yes we will assess t..." with ❤️
+00:45:39	Joshua Rudolf:	Reacted to "yes we will assess t..." with ❤️
+00:45:41	Marissa Posner:	Replying to "7786 doesn’t enforce..."
+
+Yes it would be good if there was an accompanying spec for bridge developers who want to integrate with 7786 that would allow dApps and wallets to route messages through the bridge in a standardized way.
+00:45:59	Lumi | Offchain Labs:	Reacted to "yes we will assess t..." with ❤️
+00:46:00	Marissa Posner:	Reacted to "Yes you still need t..." with 👍
+00:46:09	Jim:	Reacted to "yes we will assess t..." with ❤️
+00:49:18	Lumi | Offchain Labs:	Reacted to "Wouldn’t a ‘Stage’ c..." with ➕
+00:52:17	Zodomo | Omni Network:	Reacted to "yes we will assess t..." with ❤️
+00:52:17	Joxes | Wonderland:	Reacted to "yes we will assess t..." with ❤️
+00:52:43	frangio:	Reacted to "yes we will assess t..." with ❤️
+00:53:12	Wei Dai:	“Each attribute key MUST have the format of a Solidity function signature”
+
+Why is this enforced? Is a 4-byte attribute key enough?
+
+This may limit generalizability beyond EVM
+00:53:53	Lumi | Offchain Labs:	Reacted to "“Each attribute key ..." with ➕
+00:54:21	QEDK:	what Wei said (this was related to my first question)
+00:54:49	T Y:	Reacted to "“Each attribute key ..." with ➕
+00:55:02	Matt Rice:	Is the goal that protocols should be able to hot swap 7786 implementations without changing contract code that sends the messages?
+
+Was that realistic in your testing? In the example implementations of LZ, HL, Axelar, were they swappable with no changes from the calling side (including fee computations)?
+00:55:05	QEDK:	Reacted to "“Each attribute k..." with ➕
+00:55:43	Greg Markou:	Replying to "“Each attribute key ..."
+
+It should be the function selector not the signature?
+00:57:05	frangio:	Replying to "Is the goal that pro..."
+
+https://github.com/ethereum/ERCs/pull/981
+00:57:37	donnoh | L2BEAT:	Reacted to "“Each attribute key ..." with ➕
+00:57:52	QEDK:	Replying to "“Each attribute k..."
+
+yeah any selector, a lot of VMs will also not have bytes4 event selectors.
+00:58:42	Greg Markou:	Replying to "“Each attribute key ..."
+
+Was going to say this is actually really tough enforcement
+00:58:59	Greg Markou:	Replying to "“Each attribute key ..."
+
+This needs to be part of the wire protocol and requires padding accordingly
+00:59:54	Greg Markou:	TBH as long as you separate out fee from token in/out amounts we’re fine
+01:01:33	frangio:	Replying to "“Each attribute key ..."
+
+please share this feedback here: https://ethereum-magicians.org/t/erc-7683-cross-chain-intents-standard/19619
+01:01:51	Joshua Rudolf:	https://github.com/ethereum/L2-interop/blob/49eb2e9da10ad3183e3a2c1bc978c9a311233999/PROPERTIES.md
+01:02:20	Greg Markou:	FWII If you’re building out token bridging please please consider adopting a clean separation of fee from token_amount in/out.
+
+This allows you to take payment in whatever you want (eth/usdc/sol) and not effect the underlying transfer amount as much so users can more easily receive 1:1 (in the non-swap case)
+01:02:34	Joshua Rudolf:	Reacted to "FWII If you’re build..." with 👍
+01:02:49	Joxes | Wonderland:	Reacted to "FWII If you’re build..." with 👍
+01:02:55	Joshua Rudolf:	Reacted to "please share this fe..." with 👍
+01:03:04	Lumi | Offchain Labs:	Reacted to "FWII If you’re build..." with 👍
+01:03:07	Joxes | Wonderland:	Replying to "FWII If you’re build..."
+
++1
+01:03:14	Lumi | Offchain Labs:	Reacted to "FWII If you’re build..." with ➕
+01:03:17	Matt Cutler | Blocknative | Gas Network:	Replying to "TBH as long as you s…"
+Clarifying question: if the fee is not properly structured - or if the fee is insufficient - the transaction will fail and/or be delayed. So feels like a standardized a protocol here would facilitate orderly settlement.
+01:03:45	Matt Cutler | Blocknative | Gas Network:	Reacted to "FWII If you’re build…" with 👍
+01:04:14	Matt Cutler | Blocknative | Gas Network:	Reacted to "FWII If you’re build…" with ➕
+01:04:42	Wei Dai:	7786 implementations are not actually required to guarantee delivery of messaging requests right? (In the sense that it’s more like UDP than TCP)
+01:05:26	QEDK:	Typically asynchronous + guarantee is difficult
+01:05:33	Lumi | Offchain Labs:	Alt VMs + Minimal app rollups (ie just rust program as an L2 proven with a RiscV zkVM)
+01:05:36	Joxes | Wonderland:	Reacted to "Typically asynchrono..." with 👍
+01:07:18	QEDK:	Are we planning to target non-reexecution or reexecution?
+01:07:47	frangio:	Replying to "Are we planning to t..."
+
+do you mean message replay?
+01:08:01	QEDK:	Replying to "Are we planning to..."
+
+correct
+01:08:14	CJ Cobb:	Replying to "Are we planning to t..."
+
+Yes the gateway should ensure only once execution
+01:08:15	frangio:	Replying to "Are we planning to t..."
+
+7786 requires a message to be delivered only once
+01:08:42	QEDK:	Replying to "Are we planning to..."
+
+including both reexecution of failed message (if and when) and non-reexecution of successful messages
+01:08:51	QEDK:	Reacted to "7786 requires a me..." with 👍
+01:08:56	Sam Patel:	Reacted to "Are we planning to t…" with 👍
+01:09:00	QEDK:	Reacted to "Yes the gateway sh..." with 👍
+01:09:45	CJ Cobb:	Replying to "Are we planning to t..."
+
+What exactly is a failed message?
+01:10:30	Zodomo | Omni Network:	Replying to "Are we planning to t..."
+
+Assuming they mean executed but reverted. Imo if a message reverts, the protocol still attempted delivery once so replays need to be negotiated outside of the spec.
+01:10:53	Sam Patel:	Reacted to "Are we planning to t…" with ➕
+01:11:51	QEDK:	it depends if messages can fail or not, if delivery can never fail - then one aspect is resolved because re-execution is a non-concern.
+01:11:53	Joshua Rudolf:	When we say “new interop protocols”, does anyone have thoughts on what sorts of protocols? What they are trying to do
+01:12:11	CJ Cobb:	Replying to "Are we planning to t..."
+
+If the execution reverts, it basically was not delivered, and can be retried
+01:12:32	QEDK:	Reacted to "If the execution r..." with 👍
+01:12:39	Joshua Rudolf:	7755
+01:12:40	Joshua Rudolf:	Nice yep
+01:12:45	QEDK:	Replying to "Are we planning to..."
+
+got it - just wanted to clarify.
+01:12:59	CJ Cobb:	Reacted to "got it - just wanted..." with 👍

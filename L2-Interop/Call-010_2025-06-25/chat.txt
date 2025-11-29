@@ -1,0 +1,176 @@
+00:03:31	Supernormal AI Notetaker:	Hi there 👋 I was invited by 𝗝𝘂𝗱𝗲 to transcribe and take notes for this meeting. Learn more: https://supernorm.al/zoom
+
+Type /𝗵𝗲𝗹𝗽 at any time to see what else I can do.
+00:03:39	read.ai meeting notes:	Lisandro and Teck Yuan added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:03:49	f:	Sup
+00:03:50	Jünger:	Gm
+00:03:56	Joshua Rudolf:	Gmgm
+00:04:00	Oscar Morke ┃ Ledger:	gmgm
+00:04:04	Blockscout assistant:	To start the notetaking and recording, the meeting host needs to be present and approve the recording pop-up message.
+00:04:05	Blockscout assistant:	I'm Blockscout assistant, ready to take notes for Ulyana Skladchikova.
+To start the notetaking and recording, the meeting host needs to approve the recording pop-up message.
+00:04:05	Rostislav's Fellow Note Taker:	Waiting for the Zoom host’s permission to begin taking notes and recording.
+00:04:16	Rostislav's Fellow Note Taker:	This meeting cannot be recorded because the host has denied permission.
+00:04:19	Fireflies.ai Notetaker Jeremy:	Talk to Fireflies: (Web-search enabled)
+• Say: Hey Fireflies how can you help?
+• Type: /ff help
+to get started.
+View real-time notes and transcription for this meeting here: https://app.fireflies.ai/live/01JY5NKRK6B2M4BT05AZD593F3?ref=live_chat
+00:04:34	Jünger:	AI horde
+00:05:43	Jünger:	Shame Orest, you didn’t ping me in Turkey
+00:06:04	Joshua Rudolf:	agenda: https://github.com/ethereum/pm/issues/1591
+00:07:07	Brecht's Notetaker (Otter.ai):	Hi, I'm an AI assistant helping Brecht take notes for this meeting. Follow along the transcript here:  https://otter.ai/u/BbMkTC8I0sCtQNkJNikXXs2aQv0?utm_source=va_chat_link_1
+You'll also be able to see screenshots of key moments, add highlights, comments, or action items to anything being said, and get an automatic summary after the meeting.
+
+00:08:58	Orest Tarasiuk (t1):	Replying to "Shame Orest, you did..."
+
+Oh damn true! PING jünger.local 😄
+00:09:05	Skele | Wonderland:	already nerd-sniped by this
+00:09:09	Orest Tarasiuk (t1):	Reacted to "AI horde" with 💯
+00:09:10	Orest Tarasiuk (t1):	Reacted to "AI horde" with 😪
+00:09:28	Orest Tarasiuk (t1):	Reacted to "AI horde" with 🫨
+00:14:31	Nam:	Is there a link to this presentation we can share with others?
+00:15:46	TY:	Reacted to "Is there a link to t..." with ➕
+00:17:14	TiTi (Wonderland):	Amazing work!! thanks!
+00:17:20	Ivan:	Super cool
+00:18:46	Ivan:	Reacted to "Is there a link to t..." with ➕
+00:18:52	rithythul (koompi):	cool
+00:19:02	Maurice:	Reacted to "Is there a link to t…" with ➕
+00:19:03	rithythul (koompi):	Thanks for the presentation
+00:19:53	hang leang:	Reacted to "Thanks for the prese…" with 👌
+00:20:21	Ian Norden:	Reacted to "Is there a link to t..." with ➕
+00:20:40	Barnabé Monnot:	Reacted to "Thanks for the prese…" with 👌
+00:20:45	Barnabé Monnot:	Reacted to "Is there a link to t…" with ➕
+00:20:49	Allan | Offchain Labs:	Reacted to "Thanks for the pre..." with 👌
+00:20:56	Joshua Rudolf:	Reacted to "Thanks for the prese..." with 👌
+00:24:09	Skele | Wonderland:	btw, how can we collaborate on these efforts?
+00:24:10	f:	It’s very easy to spin up a node
+https://github.com/bcnmy/mee-node-deployment
+00:24:21	Ahmed Al-Balaghi:	Reacted to "Thanks for the prese…" with 👌
+00:24:22	Ivan:	Reacted to "Thanks for the prese..." with 👌
+00:24:29	Mislav:	Thanks!
+00:24:44	Mislav:	https://blog.biconomy.io/eip-7702-from-transactions-to-composable-multi-chain-programs-verfiable-scripting-on-the-evm/
+00:24:59	Mislav:	btw, how can we collaborate on these efforts?
+
+Ping @oxshaman on TG
+00:26:01	Skele | Wonderland:	Reacted to "btw, how can we co..." with ❤️
+00:27:17	Vaelyn  | ECH:	Reacted to "btw, how can we co..." with ❤️
+00:27:55	Marissa Posner:	Reacted to "Is there a link to t..." with ➕
+00:29:57	Joshua Rudolf:	https://notes.ethereum.org/@rudolf/kohaku-wallet
+00:30:01	Jünger:	Reacted to "https://notes.ethere..." with ❤️
+00:30:03	Ellie Davidson:	Reacted to "https://notes.ethere..." with ❤️
+00:30:06	TY:	Reacted to "https://notes.ethere..." with ❤️
+00:30:09	Joshua Rudolf:	Reacted to "btw, how can we coll..." with ❤️
+00:30:24	Vaelyn  | ECH:	Reacted to "https://notes.ethe..." with ❤️
+00:30:37	Mojmir Racak:	Reacted to "https://notes.ethere..." with ❤️
+00:32:50	Vandan Parikh:	Great to see the privacy angle incorporated here. 🙏
+00:32:58	donnoh | L2BEAT:	Reacted to "Great to see the pri..." with 💯
+00:34:25	hang leang:	Reacted to "Great to see the pri…" with 💯
+00:36:30	Joxes | Wonderland:	Reacted to "Great to see the pri..." with ❤️
+00:36:32	Ian Norden:	Reacted to "Great to see the pri..." with 💯
+00:36:33	Ian Norden:	Reacted to "https://notes.ethere..." with ❤️
+00:36:44	TiTi (Wonderland):	https://defi-wonderland.notion.site/Interoperable-Addresses-Wallet-2019a4c092c780d09070fc06a1043303
+00:36:45	Vandan Parikh:	TiTi - this is super impressive. Truly rockin now!!
+00:36:50	Marc:	Reacted to "Great to see the pri…" with 💯
+00:36:51	TiTi (Wonderland):	Reacted to "TiTi - this is sup..." with ❤️
+00:36:57	Vaelyn  | ECH:	Reacted to "https://defi-wonde..." with ❤️
+00:36:59	Ian Norden:	Reacted to "https://defi-wonderl..." with ❤️
+00:37:15	Joxes | Wonderland:	Reacted to "TiTi - this is super..." with ❤️
+00:38:24	Marc:	Wonderland team, how can we get in touch to collaborate?
+00:40:22	Mislav:	Reacted to "https://defi-wonderl..." with ❤️
+00:41:01	Joshua Rudolf:	Reacted to "https://defi-wonderl..." with ❤️
+00:41:16	Skele | Wonderland:	Replying to "Wonderland team, h..."
+
+@marc you can ping us on tg: @skeletor_spaceman
+00:42:21	Mislav:	Sharding is back! :)
+00:42:29	Jünger:	Replying to "Sharding is back! :)"
+
+Always has been
+00:42:33	Mislav:	Reacted to "Always has been" with ❤️
+00:42:36	Ellie Davidson:	Reacted to "Always has been" with ❤️
+00:42:40	Joshua Rudolf:	Reacted to "Always has been" with ❤️
+00:42:43	donnoh | L2BEAT:	Reacted to "Always has been" with ❤️
+00:44:08	Marc:	Reacted to "@marc you can ping u…" with 👌
+00:45:59	Joxes | Wonderland:	Replying to "Sharding is back! :)"
+
+permissionless sharding
+00:48:16	Joshua Rudolf:	Maybe we can touch on timelines / path for end users being able to leverage the interop benefits made possible by based rollup / shared sequencing 💕
+00:48:25	Ulyana @ Blockscout:	Reacted to "@marc you can ping u..." with ❤️
+00:49:12	Ian Norden:	Reacted to "Always has been" with ❤️
+00:49:53	vaibhav jindal:	Does only the L1 proposer has block building right for based rollup?
+00:49:53	Nam:	+1 to easily understand how based rollups would help "solve interop" and what needs to happen for that
+00:50:10	Joxes | Wonderland:	great question here is how to come up with the right token bridging methods; I know shared bridges has been discussed somewhere, is there a discussion chat about it?
+00:54:27	Ladislaus:	Replying to "Does only the L1 pro..."
+
+yes, ultimately the rotating, ephemeral L1 proposer sequences a based rollup
+00:54:53	Drew Van der Werff:	Replying to "+1 to easily underst..."
+
+Here is a bit of an education on based rollup in the context of broader interop and where it does and does not fit in. Please ping me if this does not help!
+
+https://eth-fabric.github.io/website/education/composability
+00:55:45	Nam:	What would be the benefit of "just having a shared sequencer"?
+00:57:17	Joshua Rudolf:	Replying to "great question here ..."
+
+Not aware of any, but happy to support if someone wants to lead 🙂
+00:57:31	Joshua Rudolf:	Reacted to "What would be the be..." with 👍
+00:58:05	Joshua Rudolf:	Reacted to "Here is a bit of an ..." with 👍
+00:58:10	Joshua Rudolf:	Reacted to "yes, ultimately the ..." with 🙏
+00:58:25	Ahmad Bitar | Nethermind:	Replying to "great question here ..." 
+
+ Some research on the topic:
+https://ethresear.ch/t/embedded-rollups-part-1-introduction/21460
+https://ethresear.ch/t/embedded-rollups-part-2-shared-bridging/21461
+00:58:35	Joxes | Wonderland:	Reacted to "Some research on the..." with 👍
+00:58:36	Ladislaus:	Replying to "What would be the be..."
+
+L1<>L2 and L2<>L2 synchronous contract calls, transfers, orchestrated by a credibly neutral entity, the L1 validator
+00:58:38	Drew Van der Werff:	Reacted to "Some research on the..." with 👍
+00:58:40	Vaelyn  | ECH:	Reacted to "Some research on t..." with ❤️
+00:58:47	Joshua Rudolf:	Reacted to "Some research on the..." with ❤️
+00:58:49	Joshua Rudolf:	Reacted to "Some research on the..." with 👍
+00:58:52	Drew Van der Werff:	Reacted to "L1<>L2 and L2<>L2 sy..." with 👍
+00:58:53	TiTi (Wonderland):	Reacted to "Some research on t..." with 👍
+00:58:55	Vaelyn  | ECH:	Reacted to "L1<>L2 and L2<>L2 ..." with 👍
+01:01:22	Nam:	Replying to "What would be the ..."
+
+Do we get that by simply sharing a sequencer? Wouldn't we need additional building blocks for lets say synchronous contract calls?
+01:01:36	Ian Norden:	Reacted to "Do we get that by si..." with 👍
+01:01:55	Nam:	Replying to "What would be the ..."
+
+(in reference to why does conduit not simply share a sequencer that donno.eth mentioned)
+01:02:12	Nam:	Replying to "What would be the ..."
+
+it sounds to me that a shared sequencer is necessary, but not sufficient
+01:02:25	Ian Norden:	Reacted to "it sounds to me that..." with 👍
+01:02:49	donnoh | L2BEAT:	Reacted to "it sounds to me that..." with 👍
+01:04:04	Ladislaus:	Replying to "What would be the be..."
+
+IMO, it is to a large extent also a social coordination question - 
+for example: why don't Arbitrum and Optimism share a sequencer?
+01:04:05	frangio:	Replying to "What would be the be…"
+yes i think thats right, the sequencer needs additional special logic to properly handle the dependencies between synchronously composed transactions
+01:04:06	Joshua Rudolf:	Replying to "What would be the be..."
+
+Yeah would love to understand what else is needed
+01:06:01	frangio:	Replying to "What would be the be…"
+i think for sync comp you need to execute txs concurrently. also need the api for end users to submit sync transaction pairs
+01:06:29	Ellie Davidson:	Replying to "What would be the be..."
+
+To get atomicity we need: 
+Either real-time proving or shared settlement
+New sequencing software that knows how to build (execute) blocks simultaneously
+A way to represent atomic transactions on chain / a way for users to specify they want the transaction to be atomic.
+01:06:41	frangio:	Reacted to "To get atomicity we …" with 👍
+01:06:42	Joshua Rudolf:	Reacted to "i think for sync com..." with 👍
+01:06:43	Joxes | Wonderland:	Reacted to "To get atomicity we ..." with 👍
+01:06:44	Joshua Rudolf:	Reacted to "To get atomicity we ..." with 👍
+01:07:05	Nam:	Reacted to "To get atomicity w..." with 👍
+01:07:08	Barnabé Monnot:	Reacted to "To get atomicity we ..." with 👍
+01:07:25	Ian Norden:	Reacted to "To get atomicity we ..." with 👍
+01:07:28	Nam:	Replying to "What would be the ..."
+
+Is it just me, but isn't the answer for why Optimism and Arbitrum not share a sequencer then that it doesn't give us anything until we have all these?

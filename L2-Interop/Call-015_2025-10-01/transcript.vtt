@@ -1,0 +1,1554 @@
+WEBVTT
+
+1
+00:08:20.830 --> 00:08:21.680
+Joshua Rudolf: Hello.
+
+2
+00:08:31.540 --> 00:08:33.220
+Joshua Rudolf: Gene, welcome, everybody.
+
+3
+00:09:48.420 --> 00:09:52.389
+Joshua Rudolf: Oh, I see we have Roberto here. Roberto, are you presenting in the…
+
+4
+00:09:52.820 --> 00:09:55.170
+Joshua Rudolf: Presenting the slides, anyone else joining to…
+
+5
+00:09:55.790 --> 00:09:58.939
+Roberto Saltini: Yeah, Mika. Myself and Mikai, yeah.
+
+6
+00:09:58.940 --> 00:09:59.869
+Joshua Rudolf: Okay, cool.
+
+7
+00:10:00.240 --> 00:10:02.430
+Joshua Rudolf: We'll get started here in a second.
+
+8
+00:10:29.730 --> 00:10:30.570
+Joshua Rudolf: Alrighty.
+
+9
+00:10:30.960 --> 00:10:34.879
+Joshua Rudolf: Welcome, everyone. This is the L2 Interop Working Group.
+
+10
+00:10:35.040 --> 00:10:40.299
+Joshua Rudolf: call number 15, and issue 1741 in the PM repo.
+
+11
+00:10:40.850 --> 00:10:47.710
+Joshua Rudolf: We can… yeah, get started. The agenda today is starting off with…
+
+12
+00:10:47.930 --> 00:10:55.789
+Joshua Rudolf: fast synchronous finality, followed by some updates on the ENS-based chain registry.
+
+13
+00:10:56.080 --> 00:11:05.629
+Joshua Rudolf: sync composability from SSV network, and lastly, some quick notes on L2 withdrawal windows and the 7-day challenge periods.
+
+14
+00:11:06.500 --> 00:11:07.250
+Joshua Rudolf: Cool.
+
+15
+00:11:07.580 --> 00:11:10.709
+Joshua Rudolf: I will hand it off to you, Roberto, whenever you're ready.
+
+16
+00:11:11.720 --> 00:11:12.720
+Roberto Saltini: Thank you.
+
+17
+00:11:13.950 --> 00:11:18.580
+Roberto Saltini: Are you able to enable screen sharing?
+
+18
+00:11:19.000 --> 00:11:20.370
+Joshua Rudolf: Yeah, try again.
+
+19
+00:11:24.640 --> 00:11:25.400
+Joshua Rudolf: Should be good.
+
+20
+00:11:25.400 --> 00:11:26.090
+Roberto Saltini: Cool.
+
+21
+00:11:26.390 --> 00:11:27.160
+Roberto Saltini: Yep.
+
+22
+00:11:33.950 --> 00:11:39.500
+Roberto Saltini: Cool, yep, I think Mikan is… We start on this.
+
+23
+00:11:41.130 --> 00:11:43.210
+Mikhail Kalinin: Kate, can you hear me?
+
+24
+00:11:44.430 --> 00:11:45.310
+Roberto Saltini: Yep, yep.
+
+25
+00:11:45.890 --> 00:11:53.740
+Mikhail Kalinin: Cool. Hey everyone, so… Fast synchronous finality for Ethereum protocol.
+
+26
+00:11:57.990 --> 00:12:04.240
+Mikhail Kalinin: Today, many systems rely on economic finality as a signal.
+
+27
+00:12:04.420 --> 00:12:07.740
+Mikhail Kalinin: And we all know that economic finality is slow.
+
+28
+00:12:08.030 --> 00:12:18.539
+Mikhail Kalinin: But the problem… the problem is that, there are use cases that does not, require… that don't require that strong penality.
+
+29
+00:12:18.650 --> 00:12:23.459
+Mikhail Kalinin: And, they have to… and they rely on it, they have to,
+
+30
+00:12:23.860 --> 00:12:31.880
+Mikhail Kalinin: experience increased costs and latency. And we propose fast synchronous finality as a solution to this problem.
+
+31
+00:12:35.770 --> 00:12:46.089
+Mikhail Kalinin: Yeah, let's go a bit into detail and break it down into three aspects. In the first place, it relies on the synchronous network.
+
+32
+00:12:46.230 --> 00:12:55.229
+Mikhail Kalinin: Which specifically means that any vote that's cast by an honest validator is received by all
+
+33
+00:12:55.520 --> 00:13:00.720
+Mikhail Kalinin: Honest… well, other honest validators at the end of the same slot.
+
+34
+00:13:01.680 --> 00:13:07.219
+Mikhail Kalinin: Finality in this context means that if block is finalized.
+
+35
+00:13:07.750 --> 00:13:14.230
+Mikhail Kalinin: Then it will never leave the canonical chains if the, assumption
+
+36
+00:13:14.360 --> 00:13:18.430
+Mikhail Kalinin: Above, and the one that we will introduce later, hold.
+
+37
+00:13:18.560 --> 00:13:25.029
+Mikhail Kalinin: It also means that the block, will be eventually finalized by economic finality.
+
+38
+00:13:25.680 --> 00:13:32.630
+Mikhail Kalinin: And the… the last but not least, it drastically fast,
+
+39
+00:13:32.800 --> 00:13:36.949
+Mikhail Kalinin: The block can be finalized within one slot time frame.
+
+40
+00:13:42.700 --> 00:13:48.999
+Mikhail Kalinin: We also assume that a portion of the stake can be dishonest.
+
+41
+00:13:49.290 --> 00:14:02.529
+Mikhail Kalinin: The max fraction of the adversarial stake that is supported by fast synchronous finality is 25%. This is a configurable parameter, and by changing this parameter.
+
+42
+00:14:02.880 --> 00:14:06.769
+Mikhail Kalinin: One, change the trade-off between liveness and safety.
+
+43
+00:14:06.890 --> 00:14:13.449
+Mikhail Kalinin: So the higher this value is, the safer the block that is finalized will be.
+
+44
+00:14:17.970 --> 00:14:25.149
+Mikhail Kalinin: Now, let's compare it to, well-known economic finality that we're all used to.
+
+45
+00:14:25.570 --> 00:14:36.140
+Mikhail Kalinin: The fast synchronous finality is tolerable to a less fraction of the adversary, and it comes with zero economic security.
+
+46
+00:14:36.440 --> 00:14:43.049
+Mikhail Kalinin: It also relies on, it has a strong assumption on the network conditions.
+
+47
+00:14:43.230 --> 00:14:55.040
+Mikhail Kalinin: But given all that, it's… 80 times faster than the economic finality, which is roughly a 99% improvement.
+
+48
+00:15:01.600 --> 00:15:05.080
+Roberto Saltini: Thank you, Mikhail. So, just want to go over a bit…
+
+49
+00:15:05.710 --> 00:15:14.859
+Roberto Saltini: high level how this, asynchronous functionality works, just to give you an idea of how, you know, how we can achieve this magic of one slot.
+
+50
+00:15:14.890 --> 00:15:34.400
+Roberto Saltini: For synchronous polarization. So just looking at this example, we have a block B10, which for now, we assume is canonical, will always be canonical. I'll explain why we can assume this later. In this example, let's assume that the weight of a committee is 100.
+
+51
+00:15:34.500 --> 00:15:43.230
+Roberto Saltini: And what we want to do, we want to check if we can apply fast synchronous finalization to block B11.
+
+52
+00:15:43.540 --> 00:15:50.419
+Roberto Saltini: So in this scenario, and we are currently at the end of this lot of B13.
+
+53
+00:15:51.500 --> 00:16:10.099
+Roberto Saltini: So, in this scenario, we have that, 80, we have a weight of 80 in terms of LMD votes for B11, and 85 for its child, B13. So, overall, the support that B11 has received in terms of LMD, or head votes, is…
+
+54
+00:16:10.240 --> 00:16:19.130
+Roberto Saltini: 165. And in order to be able to first synchronize funnelize B11, what we want to do, you see it on the right.
+
+55
+00:16:19.250 --> 00:16:36.109
+Roberto Saltini: We want to check that the support of B11 is larger than half of the maximum support that any child of B10 can receive, so either B11 or any of its siblings. So, more than half of this.
+
+56
+00:16:36.180 --> 00:16:44.550
+Roberto Saltini: plus the maximum adversial weight that, dishonest weight that might have supported B11.
+
+57
+00:16:44.710 --> 00:16:58.540
+Roberto Saltini: And this is because this dishonest weight might be taken away, because it's dishonest, and so dishonest validators might give the weight to be 11, and then take it away, so…
+
+58
+00:16:58.540 --> 00:17:09.360
+Roberto Saltini: By removing this, we want… we still want to make sure that B11, the weight on B11 is larger than enough of the maximum possible weight that can support any…
+
+59
+00:17:09.550 --> 00:17:12.660
+Roberto Saltini: any, any sibling of, of B11.
+
+60
+00:17:13.270 --> 00:17:25.369
+Roberto Saltini: So if we… so that the maximum possible weight, essentially, is the weight of the committee from the slot of B11 till the point where we were on FSF.
+
+61
+00:17:25.780 --> 00:17:32.590
+Roberto Saltini: Plus this proposal boost, which is an extra 40% of a committee weight that is given to a timely block.
+
+62
+00:17:32.650 --> 00:17:46.559
+Roberto Saltini: And you see this in the forest, so if one substitutes everything, we end up with a threshold of 160. So in this case, the support for Bill Ivan is 165, which is more than 160.
+
+63
+00:17:46.560 --> 00:17:52.929
+Roberto Saltini: So we can fast synchronize, finalize our beloved. This is just to give you an idea.
+
+64
+00:17:53.080 --> 00:18:01.320
+Roberto Saltini: With what we do, we essentially count attestations, and we have quite, quite strong, conditions to ensure that,
+
+65
+00:18:01.450 --> 00:18:09.609
+Roberto Saltini: what… when we first synchronize something, it is actually going to be… or it's part of the chemical chain, of course, assuming synchrony.
+
+66
+00:18:22.090 --> 00:18:24.000
+Joshua Rudolf: I think you're muted, Roberto.
+
+67
+00:18:26.290 --> 00:18:28.000
+Roberto Saltini: Thank you, Little Hatha.
+
+68
+00:18:28.050 --> 00:18:45.109
+Roberto Saltini: As I said, we assume that the SAB11 is canonical. We can do this if SAB11 is the latest economically finalized block. So then we try to first synchronously finalize its child, which is B11. If we succeed, then we know B11 will always be canonical.
+
+69
+00:18:45.110 --> 00:18:53.699
+Roberto Saltini: So we can do the same to each child, and so on, and so forth. So that's very high level, how this algorithm works.
+
+70
+00:18:55.250 --> 00:18:58.659
+Roberto Saltini: We do have. We have been able to run some…
+
+71
+00:18:58.790 --> 00:19:03.280
+Roberto Saltini: preliminary performance measurements. Now, these are on proof of concepts.
+
+72
+00:19:03.900 --> 00:19:12.680
+Roberto Saltini: We ran this for a day, for 24 hours. And the results we got are, in my opinion, pretty good. Like, in…
+
+73
+00:19:13.020 --> 00:19:23.709
+Roberto Saltini: Nearly 95% of the cases, we've been able to fast synchronously finalize a block in one slot in less than 12 seconds.
+
+74
+00:19:24.120 --> 00:19:38.060
+Roberto Saltini: For two slots, we go up to nearly 99% of the times, and then, above 99% for, for being able to fast synchronize finalize a block in less than
+
+75
+00:19:38.320 --> 00:19:51.889
+Roberto Saltini: three slots, and as you can see, it's just in, 7, 7, 8 slots, we get to 100% of the time, which… which is… so if you look, like, you know, less than a minute is…
+
+76
+00:19:52.600 --> 00:19:57.170
+Roberto Saltini: we are basically there to 100%. And, one comment on this.
+
+77
+00:19:57.700 --> 00:20:05.690
+Roberto Saltini: This long, say, long tail, we think, is due to late blocks, or blocks that,
+
+78
+00:20:06.150 --> 00:20:14.109
+Roberto Saltini: Where the parent… the slot of the parent is not the slot before, so there is… between the slot of a block and the slot of the parent, there are empty slots.
+
+79
+00:20:14.770 --> 00:20:15.679
+Roberto Saltini: And this…
+
+80
+00:20:15.990 --> 00:20:30.470
+Roberto Saltini: Because of the rule, this can impact the performance, but we are working currently on an improvement to mitigate this issue, and… but we haven't been able to run the measurements on, so we…
+
+81
+00:20:30.980 --> 00:20:35.669
+Roberto Saltini: We hope that, we can get even better results than these results.
+
+82
+00:20:36.240 --> 00:20:41.719
+Roberto Saltini: So just… I want to conclude just, giving you an overview of where we are, what
+
+83
+00:20:41.910 --> 00:20:58.179
+Roberto Saltini: the next steps are. So, currently we have a draft specification and a proof of correctness. There are two proof of concepts in Takeway Lighthouse that are tracking the latest spec, and there's also a proof of concept in PRISM that is implementing a portion of the specs.
+
+84
+00:20:58.300 --> 00:21:05.910
+Roberto Saltini: We have, as I've shown you, we have some preliminary performance measurements, and we're also working on fixing this empty slot case.
+
+85
+00:21:06.240 --> 00:21:23.790
+Roberto Saltini: Next thing is finalizing what we have currently going on. Writing spec tests, we want to get more measurements. We want to get some proof… some of the proof of concepts of production, and eventually have fast synchronous functionality implemented in any client. And importantly.
+
+86
+00:21:23.940 --> 00:21:28.670
+Roberto Saltini: There is no hard fork required for… for fast synchronous functionality.
+
+87
+00:21:29.350 --> 00:21:35.860
+Roberto Saltini: It's… Essentially, there are changes that have already gone in a long time ago, and…
+
+88
+00:21:36.200 --> 00:21:44.160
+Roberto Saltini: it's, you know, it's an algorithm that can be applied, just basically by analyzing attestations, as I've shown you before.
+
+89
+00:21:44.880 --> 00:21:55.260
+Roberto Saltini: So, with some references, we share the slides later for you, and this is all. Thank you, and open to questions.
+
+90
+00:22:01.010 --> 00:22:02.410
+Roberto Saltini: Trying to stop…
+
+91
+00:22:05.720 --> 00:22:06.370
+Joshua Rudolf: Artist?
+
+92
+00:22:06.910 --> 00:22:24.390
+Orest Tarasiuk (t1): I guess I'd have the same question as Martin from the chat. Like, I also, like, I really like the idea, and great to see this, yeah, being pushed so badly. And yet, I still struggle a bit with my mental model of how much stronger the assumption set.
+
+93
+00:22:24.390 --> 00:22:32.940
+Orest Tarasiuk (t1): for FSF is over economic finality. Like, what Francesco is saying, okay, like, an FSF final block
+
+94
+00:22:32.940 --> 00:22:44.719
+Orest Tarasiuk (t1): will eventually be fine… finalized, assuming the assumptions hold, but we are kind of having this beta of 25 instead of 33.
+
+95
+00:22:50.210 --> 00:22:50.860
+Roberto Saltini: Beautiful.
+
+96
+00:22:52.520 --> 00:22:54.660
+Roberto Saltini: Thank you, frozen? Froze, what?
+
+97
+00:23:04.580 --> 00:23:07.029
+Joshua Rudolf: Maybe we can come back to Orist.
+
+98
+00:23:13.650 --> 00:23:15.760
+Joshua Rudolf: Any other questions in the meantime?
+
+99
+00:23:16.160 --> 00:23:18.850
+Joshua Rudolf: Oh, okay, you're back, Curtis, we lost you for a second.
+
+100
+00:23:19.440 --> 00:23:22.970
+Joshua Rudolf: We heard the first part of your question, but the second half we… Missed.
+
+101
+00:23:22.970 --> 00:23:37.370
+Orest Tarasiuk (t1): Yeah, I'm sorry. So, basically, I'm struggling to develop an intuition for how much stronger assumptions we would be introducing with FSF. Like, my gut feeling is it's, like, 25,
+
+102
+00:23:37.560 --> 00:23:47.419
+Orest Tarasiuk (t1): Or 75% of the notes are non-Byzantine versus 67% are non-Byzantine. So a slight
+
+103
+00:23:47.870 --> 00:23:51.509
+Orest Tarasiuk (t1): increase in assumptions. Is that adequate?
+
+104
+00:23:53.680 --> 00:23:59.069
+Roberto Saltini: Me… Yet, for what… We have, at the moment, yes. Like…
+
+105
+00:23:59.830 --> 00:24:09.419
+Roberto Saltini: In a way, it could be possible to, so that the reason why we have this 25% is that if you have a higher threshold, the adversary can just prevent
+
+106
+00:24:09.730 --> 00:24:18.139
+Roberto Saltini: fast synchronous phonization of any block, just by not doing anything. And now you don't see any progression in fast synchronous functionality. You don't know anymore whether
+
+107
+00:24:18.340 --> 00:24:34.580
+Roberto Saltini: It's because the network is bad, or that's why the adversary is just not cooperating, and that's really why there is… in theory, for safety only, you can go up to 33%, but then, again, you have… you enable the adversary to prevent the algorithm from working.
+
+108
+00:24:35.570 --> 00:24:36.150
+Orest Tarasiuk (t1): Nope.
+
+109
+00:24:38.460 --> 00:24:57.400
+Ellie Davidson: I think maybe another note is that, like, this definitely doesn't replace full finality, and, like, there'll still be use cases that should probably wait for full finality, but I think for a lot of use cases today, this is actually stronger than what they do. Just, like, a lot of use cases today do not wait for full finality, and instead just wait for, like, block confirmations.
+
+110
+00:24:57.400 --> 00:25:01.579
+Ellie Davidson: And FSF is, like, a lot stronger for that, anyway.
+
+111
+00:25:01.680 --> 00:25:07.510
+Ellie Davidson: But yeah, some use cases should still wait for full finality if they don't feel comfortable with these trust assumptions.
+
+112
+00:25:08.630 --> 00:25:23.179
+Orest Tarasiuk (t1): Would it be fair to make this mental exercise? We could require that all nodes be synchronous, and only treat a block as fastly synchronously finalized once
+
+113
+00:25:23.950 --> 00:25:30.909
+Orest Tarasiuk (t1): Let's say 99.9% of the previous validator set that was online attested to it.
+
+114
+00:25:31.430 --> 00:25:38.540
+Orest Tarasiuk (t1): Like, this would be almost the same level of certainty, but still probably doable in a couple of blocks.
+
+115
+00:25:38.680 --> 00:25:42.190
+Orest Tarasiuk (t1): Rather than in, in, in, 13 minutes.
+
+116
+00:25:45.030 --> 00:25:45.550
+Ellie Davidson: So…
+
+117
+00:25:45.550 --> 00:25:46.490
+Roberto Saltini: Do you mean to…
+
+118
+00:25:48.380 --> 00:25:50.829
+Ellie Davidson: So, are what you're describing, kind of.
+
+119
+00:25:50.990 --> 00:25:54.440
+Ellie Davidson: It kind of reminds me of…
+
+120
+00:25:55.420 --> 00:26:03.119
+Ellie Davidson: I guess, are what you kind of… are what you're describing, saying, like, you know, the entire stake of an epoch would, like, vote on a block?
+
+121
+00:26:03.330 --> 00:26:04.050
+Orest Tarasiuk (t1): Yeah.
+
+122
+00:26:04.170 --> 00:26:14.270
+Ellie Davidson: I mean, I think that that's possible, I guess it's just a very different paradigm of what we have now, where, like, only a committee votes on each slot, and then you get the entire stake over the epoch.
+
+123
+00:26:15.620 --> 00:26:16.360
+Orest Tarasiuk (t1): Hmm.
+
+124
+00:26:18.480 --> 00:26:22.170
+Roberto Saltini: Yeah, and then what you're saying, basically, you need to wait the entire epoch, right?
+
+125
+00:26:23.060 --> 00:26:23.670
+Orest Tarasiuk (t1): Hmm.
+
+126
+00:26:25.590 --> 00:26:31.479
+Orest Tarasiuk (t1): Right, I see. It's because of the committees that we can't make this mental exercise. Yeah, makes sense.
+
+127
+00:26:31.620 --> 00:26:32.600
+Orest Tarasiuk (t1): Gotcha.
+
+128
+00:26:34.440 --> 00:26:35.110
+Ellie Davidson: But, I mean.
+
+129
+00:26:35.110 --> 00:26:36.000
+Roberto Saltini: ticket.
+
+130
+00:26:36.560 --> 00:26:37.670
+Ellie Davidson: Sorry, go ahead.
+
+131
+00:26:38.050 --> 00:26:43.799
+Roberto Saltini: I would say, like, if you want to do that, if you're happy to wait for an EPO queue, essentially, you can just, at the beginning of an EPO queue.
+
+132
+00:26:44.950 --> 00:26:52.490
+Roberto Saltini: You can fast synchronously finalize the… what was the greatest analyzed checkpoint that you saw in the previous lot.
+
+133
+00:26:53.940 --> 00:26:59.869
+Roberto Saltini: You could do that, and that… and that's safe against 33%.
+
+134
+00:27:00.250 --> 00:27:01.420
+Orest Tarasiuk (t1): Hmm. So…
+
+135
+00:27:02.160 --> 00:27:02.700
+Mikhail Kalinin: Yeah.
+
+136
+00:27:02.850 --> 00:27:20.720
+Mikhail Kalinin: Maybe, in the context of what you have said, in the context of your mental model, if we, like, say that the block is final, we need synchrony to all other validators to vote on it in all further slots, you know, so that it will get more, much more weight.
+
+137
+00:27:22.640 --> 00:27:30.509
+Mikhail Kalinin: This is, like, one of the places where synchrony is required, where we rely on the synchrony, in this case.
+
+138
+00:27:30.990 --> 00:27:39.080
+Mikhail Kalinin: Once every… all the entire set votes in it, that block is, like, we'll have, like.
+
+139
+00:27:39.660 --> 00:27:43.330
+Mikhail Kalinin: A lot of weight, which… A little bit difficult.
+
+140
+00:27:43.510 --> 00:27:46.169
+Mikhail Kalinin: To get through… to reworkout.
+
+141
+00:27:46.390 --> 00:27:47.730
+Mikhail Kalinin: So, yeah.
+
+142
+00:27:52.110 --> 00:27:52.780
+Joshua Rudolf: Ian?
+
+143
+00:27:54.120 --> 00:28:00.159
+Ian Norden: Hey, my question's in a bit of a different direction, so I don't want to interrupt if this conversation is continuing.
+
+144
+00:28:02.840 --> 00:28:07.130
+Ian Norden: But if not, the question is, so in the context of L2 interop, this is…
+
+145
+00:28:07.240 --> 00:28:13.269
+Ian Norden: as an interop protocol, if I want to use this, I have to be able to verify this finality mechanism on the L2s.
+
+146
+00:28:13.460 --> 00:28:21.160
+Ian Norden: Which I think should be trivial. You know, you can hand away that problem of just saying that it's… you can use a snark to verify this.
+
+147
+00:28:21.260 --> 00:28:28.100
+Ian Norden: finality gadget inside of an L2 execution environment, but you need a public input to verify it against.
+
+148
+00:28:28.190 --> 00:28:45.849
+Ian Norden: So, we need, we still need that L1 origin view, and we… or, you know, L1Sload or something to actually verify this finality gadget, against inside of the L2 execution environment before it's actually, like, useful for interop protocols,
+
+149
+00:28:46.620 --> 00:28:51.730
+Ian Norden: like, on-chain interop protocols. It's still useful, obviously, for, like, node operators and other off-chain activities.
+
+150
+00:28:53.060 --> 00:28:59.720
+Ellie Davidson: I mean, Yes, you're right, although I don't think it would be any different than…
+
+151
+00:28:59.880 --> 00:29:09.759
+Ellie Davidson: than needing that information today, like, I don't… I don't think it introduces any new… anything new than just… today, you also need a way to verify, like, the state of the L1.
+
+152
+00:29:09.930 --> 00:29:18.350
+Ian Norden: I completely agree. I just feel like this is still something that's, like, kind of neglected in these conversations, is that none of this really matters until that's solved.
+
+153
+00:29:18.480 --> 00:29:20.419
+Ellie Davidson: No, yeah, it's a good… it's a good point.
+
+154
+00:29:35.300 --> 00:29:36.440
+Joshua Rudolf: Are there questions?
+
+155
+00:29:43.730 --> 00:29:47.579
+Joshua Rudolf: If not, we can move on to the next agenda item.
+
+156
+00:29:47.800 --> 00:29:58.849
+Joshua Rudolf: Thank you, Roberto, Mikel, for the presentation. Actually, before we move on, Ellie, did you have anything else that you wanted to add on this topic, just in terms of, sort of, I don't know, potential roadmap and next steps?
+
+157
+00:29:59.360 --> 00:30:16.419
+Ellie Davidson: Yeah, so, if those of you who don't know, I have recently joined the Ethereum Foundation, and so my first task is that I will be working on, fast synchronous finality. So, as part of that, I will be reaching out to a bunch of people in this group, to kind of get feedback on
+
+158
+00:30:16.420 --> 00:30:23.419
+Ellie Davidson: feedback on it to see, you know, how best different projects are able to use it, and how it can benefit them. So, yeah.
+
+159
+00:30:23.460 --> 00:30:25.150
+Ellie Davidson: Look, look for that.
+
+160
+00:30:28.030 --> 00:30:29.430
+Joshua Rudolf: Awesome. Thanks, Ellie.
+
+161
+00:30:29.570 --> 00:30:31.149
+Joshua Rudolf: We are excited to have you.
+
+162
+00:30:32.190 --> 00:30:40.649
+Joshua Rudolf: Cool. Up next… Some updates on the ENS-based chain registry from Unruggable and Wonderland.
+
+163
+00:30:40.790 --> 00:30:44.759
+Joshua Rudolf: Yeah, anyone from Unrogable wanna jump in first?
+
+164
+00:30:46.190 --> 00:30:54.389
+Ndeto | Unruggable: Yeah, oh… I'm here. So, my name is Martin, and I'm representing on Rugby Bowl.
+
+165
+00:30:54.860 --> 00:30:56.250
+Ndeto | Unruggable: We've been walking…
+
+166
+00:31:05.390 --> 00:31:06.550
+Joshua Rudolf: Did we lose, Martin?
+
+167
+00:31:06.550 --> 00:31:08.530
+Orest Tarasiuk (t1): Bad Wi-Fi day-to-day.
+
+168
+00:31:14.140 --> 00:31:15.359
+Thomas Clowes | Unruggable - ENS: How does it?
+
+169
+00:31:16.270 --> 00:31:26.100
+Thomas Clowes | Unruggable - ENS: That is typical that Martin, has just… his Wi-Fi failed. He's in Nairobi, Kenya, so I know that they have notoriously bad Wi-Fi.
+
+170
+00:31:26.270 --> 00:31:27.139
+Thomas Clowes | Unruggable - ENS: Oh, is hepat?
+
+171
+00:31:27.140 --> 00:31:30.739
+Ndeto | Unruggable: Wow, that's… is it, can you guys hear me real?
+
+172
+00:31:32.270 --> 00:31:33.229
+Orest Tarasiuk (t1): No, we can.
+
+173
+00:31:33.230 --> 00:31:34.539
+Joshua Rudolf: Better, I think, yeah.
+
+174
+00:31:34.540 --> 00:31:38.879
+Ndeto | Unruggable: No, you can. Okay, let me… let me get started then. Sorry about that.
+
+175
+00:31:43.470 --> 00:31:44.430
+Ndeto | Unruggable: Okay.
+
+176
+00:31:45.830 --> 00:31:47.760
+Ndeto | Unruggable: Sharing my screen…
+
+177
+00:31:51.070 --> 00:31:53.940
+Ndeto | Unruggable: Great. You can see my screen?
+
+178
+00:31:55.690 --> 00:31:56.270
+Joshua Rudolf: Yep.
+
+179
+00:31:57.830 --> 00:32:00.210
+Ndeto | Unruggable: Amazing. So…
+
+180
+00:32:02.050 --> 00:32:10.830
+Ndeto | Unruggable: Well, as I said, my name is Martin, and I will be taking us through this, Ethereum chain registry.
+
+181
+00:32:11.020 --> 00:32:13.630
+Ndeto | Unruggable: So, starting with.
+
+182
+00:32:24.740 --> 00:32:26.549
+Joshua Rudolf: Thomas, do you maybe want to jump in?
+
+183
+00:32:26.650 --> 00:32:27.810
+Joshua Rudolf: While we wait for him.
+
+184
+00:32:29.730 --> 00:32:42.920
+Thomas Clowes | Unruggable - ENS: Yeah, absolutely. I know that Martin's internet in Nairobi, Kenya's, notoriously unreliable. Hopefully, people can hear me, and mine is working better.
+
+185
+00:32:43.120 --> 00:32:47.260
+Thomas Clowes | Unruggable - ENS: I was expecting Martin to do this, so I don't have the presentation up, but I can just kind of…
+
+186
+00:32:49.040 --> 00:32:51.420
+Thomas Clowes | Unruggable - ENS: give… Martin.
+
+187
+00:32:51.420 --> 00:32:52.510
+Ndeto | Unruggable: Keep my net truck?
+
+188
+00:32:52.640 --> 00:32:54.439
+Ndeto | Unruggable: My network is still bad.
+
+189
+00:32:55.300 --> 00:32:58.240
+Joshua Rudolf: Yeah, we lost you again, if you want to give it another shot.
+
+190
+00:32:58.240 --> 00:33:03.390
+Ndeto | Unruggable: I'm so sorry about that. Okay, so where were we? Let me try one last time.
+
+191
+00:33:04.670 --> 00:33:18.589
+Ndeto | Unruggable: Yeah, we were saying… I was saying we first explored ERC7785, which, was proposing a 32-byte chain identifier, which will be derived by using the chain name itself.
+
+192
+00:33:18.810 --> 00:33:30.420
+Ndeto | Unruggable: along with, some auxiliary attributes of that chain to derive that chain identifier. But in the work that we've been doing, we've come to…
+
+193
+00:33:31.440 --> 00:33:46.159
+Ndeto | Unruggable: realize that we can achieve the same result without having to use the 7785 identifiers. And the part that we have chosen is to have these human-friendly chain names,
+
+194
+00:33:46.240 --> 00:33:56.320
+Ndeto | Unruggable: like, you know, optimism.cid or whatever, ENS domain we'll choose, resolved to a 7930 identifier.
+
+195
+00:33:56.410 --> 00:34:00.309
+Ndeto | Unruggable: So, I'm going to send a couple of links on the…
+
+196
+00:34:00.440 --> 00:34:05.740
+Ndeto | Unruggable: Charts that contain the original specs, and as well as 7930.
+
+197
+00:34:05.850 --> 00:34:09.889
+Ndeto | Unruggable: And yeah, so the purpose of this is just to have
+
+198
+00:34:10.420 --> 00:34:17.469
+Ndeto | Unruggable: registry that can resolve from this human-friendly name to a 7930 identifier and back.
+
+199
+00:34:19.219 --> 00:34:31.180
+Ndeto | Unruggable: So, we have, three main contracts within this registry, and we have the chain registry, which is the source of truth. This links, the chain…
+
+200
+00:34:31.179 --> 00:34:39.490
+Ndeto | Unruggable: label to its own record, and lookups, in this case, are keyed in, or rather, the main lookup will be the
+
+201
+00:34:39.710 --> 00:34:43.670
+Ndeto | Unruggable: The hash of the label, which we're calling the label hash.
+
+202
+00:34:43.870 --> 00:34:52.450
+Ndeto | Unruggable: And, we have the chain resolver on this other end, which… whose work is to…
+
+203
+00:34:53.270 --> 00:35:09.779
+Ndeto | Unruggable: return the chain… the 79… 7930 identifier from the label, and the reverse chain resolver, which does the opposite. It takes the 7930 identifier, and it returns our chain name
+
+204
+00:35:09.780 --> 00:35:17.400
+Ndeto | Unruggable: For us. So these three main contracts make up the chain registry, and if you look here, this is the architecture.
+
+205
+00:35:17.470 --> 00:35:33.679
+Ndeto | Unruggable: I have mentioned that the registry here is going to be the source of truth, and we have both resolvers, the forward resolver that returns the chain… the 7930 identifier, and back. Both of them refer to the chain registry as the source of truth.
+
+206
+00:35:33.880 --> 00:35:49.340
+Ndeto | Unruggable: And, that takes us to the chain registry itself. So, this registry, in order to work with these resolvers, it needs to… it needs to expose these two functions.
+
+207
+00:35:49.420 --> 00:36:01.879
+Ndeto | Unruggable: That is the chain name and the chain ID. These are the… these are the… this interface is what the resolvers, both the forward and the reverse resolver, use to work with this chain registry to
+
+208
+00:36:02.120 --> 00:36:07.290
+Ndeto | Unruggable: Return the information that we're trying to pull about this registry.
+
+209
+00:36:07.820 --> 00:36:14.429
+Ndeto | Unruggable: And moving on to the… Next contract, the chain resolver.
+
+210
+00:36:15.070 --> 00:36:17.290
+Ndeto | Unruggable: These three turns of,
+
+211
+00:36:17.800 --> 00:36:31.560
+Ndeto | Unruggable: 7930 identifier, given the label, and the chain resolver is an ENS resolver that is fully compliant with the ENS spec ENS IP10.
+
+212
+00:36:31.740 --> 00:36:45.259
+Ndeto | Unruggable: And what this means is that we can use this resolver and the chain name that we will give, for example, base.cid.eth, to be able to set and resolve
+
+213
+00:36:45.660 --> 00:36:49.779
+Ndeto | Unruggable: specific type of ENS records. We can…
+
+214
+00:37:15.490 --> 00:37:38.919
+Thomas Clowes | Unruggable - ENS: I think we have once again lost Martin, so I will just jump in again, Thomas from Unruggable. I've posted links to these slides and a demo, which kind of demonstrates this end-to-end in the chat, so people can kind of look at this directly, as well as a link to our Learn page on that demo that links to all of the sort of external material,
+
+215
+00:37:38.920 --> 00:38:00.360
+Thomas Clowes | Unruggable - ENS: for anyone that sort of wants to upskill in terms of ENS-specific specifications and architectural patterns, but the short version is that, kind of, having conversed with the Wonderland team, who did, kind of, lots of work, in relation to these, kind of, resolver concepts, previously, we've kind of
+
+216
+00:38:00.360 --> 00:38:07.119
+Thomas Clowes | Unruggable - ENS: essentially built an ENS resolver that allows you to resolve, a chain name
+
+217
+00:38:07.130 --> 00:38:13.149
+Thomas Clowes | Unruggable - ENS: as a subdomain of an ENS name to its 7930 chain identifier.
+
+218
+00:38:13.210 --> 00:38:18.849
+Thomas Clowes | Unruggable - ENS: Our intention is to kind of document this, within the,
+
+219
+00:38:18.850 --> 00:38:43.739
+Thomas Clowes | Unruggable - ENS: Ethereum Foundation's Interop repo and kind of request feedback and commentary from the community here, and we're also going to kind of piece together a post to post on the ENS forum to get insight from the ENS community as well. Unruggable's context is obviously ENS, so kind of we're hopeful that, sort of, we've architected this correctly from
+
+220
+00:38:43.740 --> 00:39:02.299
+Thomas Clowes | Unruggable - ENS: the get-go, and kind of we've discussed with various, aligned stakeholders, but, yeah, in the interest of, sort of, opening this up to the community and making sure that we get this right first time, we want to, sort of, at least have a brief period where we
+
+221
+00:39:02.300 --> 00:39:14.449
+Thomas Clowes | Unruggable - ENS: Welcome external contributions, but in the grand scheme of things, this is actually sort of quite simple conceptually, so we're hoping that we can kind of move this along
+
+222
+00:39:14.450 --> 00:39:34.319
+Thomas Clowes | Unruggable - ENS: quite quickly, and have a kind of solution that people can integrate with that allows for resolution of chain identifiers on-chain, as opposed to utilizing centralized resources like we do at the moment. For example, the GitHub repo, et cetera, et cetera.
+
+223
+00:39:34.500 --> 00:39:44.020
+Thomas Clowes | Unruggable - ENS: I don't know if anyone from the Wonderland team wants to kind of add some additional context from their end. Of course, I'm happy to answer any questions as well.
+
+224
+00:39:45.320 --> 00:39:59.200
+Skele | Wonderland: Sure, I can add, just two extra things. First of all, thank you to the Unreggable team, they've been, shipping, great improvements to all of these, and they're basically, getting this ready to be…
+
+225
+00:39:59.280 --> 00:40:08.599
+Skele | Wonderland: finally, deployed and accepted by the NSDAO as well. So, besides that, one note,
+
+226
+00:40:08.820 --> 00:40:28.449
+Skele | Wonderland: to take into consideration is that the… both the registry and the resolver use 7930, but 7930 is not enshrined, neither on the register or the resolver. The main idea for this is, for now, we are going to be using 7930, as it is the…
+
+227
+00:40:28.600 --> 00:40:39.589
+Skele | Wonderland: A standard that we currently all agree on, but in any case, in the future, that we might end up with, an improvement or modification on how…
+
+228
+00:40:39.610 --> 00:40:55.509
+Skele | Wonderland: do we, I don't know, signal or identify chain IDs? Obviously, this, what we've all built is dynamic enough for us to be able to switch to whatever other standard, in the future.
+
+229
+00:40:55.610 --> 00:41:08.249
+Skele | Wonderland: Also, and this is kind of important, maybe, Josh, if you want, you can also comment on this a little bit, but the migration process from GitHub to on-chain,
+
+230
+00:41:08.280 --> 00:41:25.650
+Skele | Wonderland: has a script that we developed, we can share the repo later, it's a simple script. But this… the important thing here is for any chain, or chain operator, or whoever that wants to set a new name. I know some of the names
+
+231
+00:41:25.660 --> 00:41:32.219
+Skele | Wonderland: Some teams might want to change. They should do that as soon as possible.
+
+232
+00:41:32.240 --> 00:41:41.620
+Skele | Wonderland: Hopefully Josh is going to be contacting some of you, just to try to get, those changes in place, and we'll have a
+
+233
+00:41:41.770 --> 00:41:48.759
+Skele | Wonderland: A simple flow for you to communicate those changes, so we can basically yeah, good.
+
+234
+00:41:48.960 --> 00:41:57.349
+Skele | Wonderland: A clean migration with, say, cute or nice names, over, on-chain, which might be way difficult.
+
+235
+00:41:57.430 --> 00:42:13.219
+Skele | Wonderland: way more difficult to change in the near future, whenever… when everything hits mainnet. Also, one thing to note, you might be asking, hey, what's the, let's say, the ownership or governance process of modifying all of these domains, or handling
+
+236
+00:42:13.220 --> 00:42:17.969
+Skele | Wonderland: This, second level domain. Those are still undefined.
+
+237
+00:42:18.090 --> 00:42:35.799
+Skele | Wonderland: And we'll have more comments on that later, but it's, the important thing is to just move forward, do this first step, migrate over… everything over on-chain, and then we can also experiment on different ownership mechanisms to handle this registry and resolver.
+
+238
+00:42:39.290 --> 00:42:41.910
+Joshua Rudolf: Thanks, Kelly. Yeah, sorry, Thomas, if you had something?
+
+239
+00:42:42.960 --> 00:43:06.230
+Thomas Clowes | Unruggable - ENS: Yeah, I was just gonna say, kind of, to add to what Skele said there, our initial intention is to kind of set up a multi-sig of some sort with community stakeholders, and that will kind of be outlined in our specification within the Interop rep repo and on the ENS forum, and kind of we welcome feedback on who people would like to see on the
+
+240
+00:43:06.230 --> 00:43:18.830
+Thomas Clowes | Unruggable - ENS: that, but we want to kind of do this iteratively. That will be sort of a get-this-out-the-door multisig, and obviously ownership can be transitioned over to a different model as, appropriate.
+
+241
+00:43:18.830 --> 00:43:26.399
+Thomas Clowes | Unruggable - ENS: The only other thing was I saw that Massimo asked a question in the chat about ENS resolution.
+
+242
+00:43:26.420 --> 00:43:33.250
+Thomas Clowes | Unruggable - ENS: ENS has kind of adapted over the years, and there are more ENS IP specifications
+
+243
+00:43:33.250 --> 00:43:48.710
+Thomas Clowes | Unruggable - ENS: So there is kind of forward resolution, and there's reverse resolution, which is also kind of often referred to as primary name resolution, whereby you can kind of resolve the ENS name associated with an address.
+
+244
+00:43:48.800 --> 00:44:08.479
+Thomas Clowes | Unruggable - ENS: In the context of this, it's conceptually somewhat different, in that we want to, for example, resolve base.l2.eth to a 7930 identifier, but we're not trying to kind of reverse a,
+
+245
+00:44:08.780 --> 00:44:26.900
+Thomas Clowes | Unruggable - ENS: address back to a primary name, so it doesn't strictly fit into the kind of primary name paradigm. So that Learn link that I posted on our demo does kind of outline a number of sort of ENS IPs, which are essentially specification proposals for ENS
+
+246
+00:44:26.900 --> 00:44:40.129
+Thomas Clowes | Unruggable - ENS: specifically that allow for this kind of new paradigm whereby you can pass in a 7930 chain identifier and get the string representation of a chain back
+
+247
+00:44:40.130 --> 00:45:04.960
+Thomas Clowes | Unruggable - ENS: Instead, and yeah, similarly, ENSIPs, kind of, from my experience, it's, people propose them and then implement them, and if the implementation is good, people copy, and then it becomes enshrined as a specification. So we're hoping that, kind of, we could demonstrate this as a productionized use case that kind of proves the value of the specifications we're
+
+248
+00:45:04.960 --> 00:45:08.080
+Thomas Clowes | Unruggable - ENS: Composing, and then over time, they will become enshrined.
+
+249
+00:45:14.310 --> 00:45:19.609
+Joshua Rudolf: Perfect. So yes, we will be reaching out to L2 teams, to…
+
+250
+00:45:19.810 --> 00:45:25.970
+Joshua Rudolf: coordinate on some of this. I see there's a few L2 teams here, if anyone has questions or thoughts that they want to share right now.
+
+251
+00:45:26.110 --> 00:45:31.379
+Joshua Rudolf: Otherwise, we can… yeah, maybe leave it… leave it there.
+
+252
+00:45:31.380 --> 00:45:40.909
+Jaack (Routescan): I have a… I have a question in this, so is this, still just related to L2 chain IDs, or is this…
+
+253
+00:45:41.700 --> 00:45:47.650
+Jaack (Routescan): like, from the get-go, extended to all L1s, and even on EDMs.
+
+254
+00:45:48.510 --> 00:45:51.350
+Joshua Rudolf: Yeah, the intention is to support all chains.
+
+255
+00:45:52.890 --> 00:45:56.829
+Jaack (Routescan): Okay, wouldn't, wouldn't, like, have a .ETH
+
+256
+00:45:57.690 --> 00:46:13.520
+Jaack (Routescan): extension be kind of biased in this? I… I… I don't understand, like, people would get… who just use, like, solana.eth to, I don't know, sol.cid.eth to reference something, maybe…
+
+257
+00:46:13.710 --> 00:46:17.669
+Jaack (Routescan): Maybe a new extension name would be…
+
+258
+00:46:17.950 --> 00:46:20.889
+Jaack (Routescan): More, you know, test biased.
+
+259
+00:46:21.470 --> 00:46:22.400
+Joshua Rudolf: Yeah.
+
+260
+00:46:22.400 --> 00:46:23.520
+Jaack (Routescan): That's the ID?
+
+261
+00:46:24.740 --> 00:46:36.759
+Joshua Rudolf: Yeah, yeah, I think Skelly mentioned that you can… that there's maybe ways around this, and I think our primary, like, our goal is to support all chains. At the same time, our primary focus is within the Ethereum ecosystem.
+
+262
+00:46:37.160 --> 00:46:43.609
+Joshua Rudolf: We're not attempting to force or to necessarily, sort of…
+
+263
+00:46:44.480 --> 00:46:53.159
+Joshua Rudolf: Make sure that we are coordinating with all ecosystems here, but we do want to at least be compatible and support any chain that wants to be compatible.
+
+264
+00:46:53.310 --> 00:46:58.830
+Joshua Rudolf: And yes, I think, yeah, Simon also mentioned that there's other ways that, you know, other chains.
+
+265
+00:46:58.830 --> 00:46:59.460
+Jaack (Routescan): Yeah.
+
+266
+00:46:59.460 --> 00:47:00.420
+Joshua Rudolf: Compatible, so…
+
+267
+00:47:00.960 --> 00:47:03.250
+Jaack (Routescan): Okay, makes sense, makes sense.
+
+268
+00:47:05.740 --> 00:47:15.599
+Joshua Rudolf: Okay, cool. Well, just so that we're, a little short on time, maybe let's go on to the next topic, which is SSV network and…
+
+269
+00:47:15.710 --> 00:47:17.189
+Joshua Rudolf: Sync composability.
+
+270
+00:47:19.460 --> 00:47:27.880
+massimo: Hi everybody, I'm gonna start sharing my screen. Hope the Wi-Fi curse does not hit us again, sorry.
+
+271
+00:47:28.200 --> 00:47:30.990
+massimo: I already started on the wrong foot, sharing the wrong screen.
+
+272
+00:47:35.910 --> 00:47:50.580
+massimo: No, yeah, you're right. Okay, so this is the… this… this… the request to speak was actually kind of like an introduction of a new project that the SSV network is working on, and we named it Compose.
+
+273
+00:47:52.220 --> 00:48:11.560
+massimo: And, like, it's essentially an explanation of how we went about it, what we studied, in order to, well, create it, and what it tries to solve. Starting with, well, this is the table of contents, quickly, we're gonna go through the,
+
+274
+00:48:11.560 --> 00:48:18.990
+massimo: where we started with the functionality that we want to achieve, which is the Ethereum composability.
+
+275
+00:48:18.990 --> 00:48:42.860
+massimo: and extend it to the L2s, and then the UX research that we did, the summary of it, at least, for brevity, and the comparison between asynchronous and synchronous composability, research we did on existing solutions, and then our own solution, like, our own, we think, improvements upon it, and a quick overview of, well, how it works in practice.
+
+276
+00:48:42.890 --> 00:49:02.060
+massimo: So, starting with, I think, what most of us in here are already familiar, Ethereum composability is essentially the ability to, create, well, compose, basically, like Legos, using, like, functions from some contracts, and create a new contract that basically uses them, once again, like Legos.
+
+277
+00:49:02.060 --> 00:49:10.369
+massimo: The best part about this is that wrapping some function calls in another rep… in another function call.
+
+278
+00:49:10.370 --> 00:49:28.229
+massimo: make sure that when a user actually decals this one, it has a guarantee that this will execute somewhat atomically, so all or nothing, and most importantly, synchronously in the same block. So, this is very powerful.
+
+279
+00:49:28.240 --> 00:49:45.620
+massimo: It's obviously the reason why… one of the reasons why Ethereum is successful, and, like, in reality, visually, it looks like this, where I can compose one single function call of many others, and they all belong in the same blocks, block, like I said.
+
+280
+00:49:46.950 --> 00:50:05.919
+massimo: separated from all of this, like, this is basically what I just talked about is the North Star, the target of what we want… sort of, like, the UX they want to achieve, we wanted to achieve, and extend it to DL2s, which is exactly, the opposite at the moment. We're gonna see that, later on.
+
+281
+00:50:05.920 --> 00:50:13.229
+massimo: But the next section, at least, is going to be about the UX, or what are the tools currently available.
+
+282
+00:50:13.230 --> 00:50:26.059
+massimo: for achieving this, or at least, what the tools can do to facilitate this in some kind of way. And it mainly focuses on two, things.
+
+283
+00:50:26.060 --> 00:50:44.940
+massimo: making, like, allowing developers to create multiple calls and put them in a single transaction, and then targeting multiple chains in a single goal. It can be either one or multiple transactions, but in a single, let's say, user interaction, so to speak.
+
+284
+00:50:45.050 --> 00:50:59.110
+massimo: And the result is… I'm putting… I skipped a lot of slides that I presented in a different call, just for brevity, but the result is that we have accounts abstraction, ERC437, which basically works well.
+
+285
+00:50:59.110 --> 00:51:08.459
+massimo: If everyone switches to smart accounts, because the bad side, the negative side of it, is that, users, like, their smart account has a different funding.
+
+286
+00:51:08.460 --> 00:51:32.439
+massimo: And so, there has to be some transfer of funds, which is another transaction that a user is forced to sign, or, you know, it's not ideal in any way. The other thing is security concerns, because user operations are signed using ETH sign type data, and the user is signing on a hexadecimal string, not knowing exactly what they're signing off on.
+
+287
+00:51:32.700 --> 00:51:48.009
+massimo: EIP5792 is wallet send calls, the additional wallet RPC calls, which basically, it lets the wallets decide how they want to support it. It's just a request of, hey, please.
+
+288
+00:51:48.010 --> 00:51:54.719
+massimo: batch some of these calls in a single go, but it doesn't tell wallets how to do it. The best,
+
+289
+00:51:54.720 --> 00:52:10.649
+massimo: result that we saw was MetaMask, MetaMask implementation, which under the hood actually uses EIP7702, which is setting the user's EOA code to an external contract, which basically
+
+290
+00:52:10.650 --> 00:52:28.689
+massimo: it's kind of like a mix of the two, a little bit. It's by delegation, by virtue of delegation, and allowing the user to sign an authorization, you have a contract living, quote-unquote, inside of the user's EOA, and then there's no movement of funds, because the singleton entity is kind of like…
+
+291
+00:52:28.690 --> 00:52:42.529
+massimo: using natively the funds of the user's EOA. But obviously… but the problem is, this is not usable on its own, because there is no RPC method to sign the authorization. MetaMask is able to do it, because
+
+292
+00:52:42.600 --> 00:52:46.780
+massimo: It's an internal request happening within the…
+
+293
+00:52:47.030 --> 00:53:06.729
+massimo: the wallet's backend, and so they're kind of cheating in that way. And so it's also, like, why EIP57 and 2 is kind of… it's gated, right? Like, MetaMask can't do it because they're a wallet. Like, if I want to build a web app, yeah, a web app using IP7702, at the moment, I cannot.
+
+294
+00:53:06.730 --> 00:53:08.660
+massimo: For the second part.
+
+295
+00:53:08.670 --> 00:53:19.920
+massimo: the targeting multiple chains, it's important because, if I want to achieve our goal, which is synchronous composability, the two different, rollups, or L2s.
+
+296
+00:53:19.920 --> 00:53:33.980
+massimo: need a way to correlate what are apparently to independent transactions. And, we have not found any… we haven't found any solutions for this, essentially. Which is why, in the end, we'll see, we have come up with our own.
+
+297
+00:53:35.020 --> 00:53:51.600
+massimo: Now, quick overview of, what is currently, like, the… what was currently available in terms of composability, and it's asynchronous composability, whereas, the, the ability to compose different,
+
+298
+00:53:51.620 --> 00:54:08.339
+massimo: let's say, intentions from the user point of view, are made possible asynchronous, and this is why the finality, the presentation that was made before is actually, comes into place, because the several minutes,
+
+299
+00:54:08.340 --> 00:54:14.129
+massimo: Waiting or delay can be reduced using that, but it's still gonna be,
+
+300
+00:54:14.150 --> 00:54:28.279
+massimo: a delay, and it can only be reduced so much, and most importantly, it doesn't guarantee the atomicity. Like, if anything breaks in here, there's no way to reverse the course of actions.
+
+301
+00:54:28.860 --> 00:54:47.280
+massimo: Whereas what we want to achieve is this, the confirmation that these actions are part of the same L2 blocks, and they're going to be part of the same L1 block as well. And if one of them fails, like, nothing is going to be pushed to the L1.
+
+302
+00:54:48.430 --> 00:55:00.390
+massimo: The way we went about it is by studying, Espresso's CERC. So, we're talking about mailbox contracts that allow for sequencer-to-sequencer messaging.
+
+303
+00:55:00.390 --> 00:55:09.900
+massimo: And this way, basically, the two sequencers can simulate the execution of function calls.
+
+304
+00:55:09.920 --> 00:55:20.349
+massimo: And they have to agree on, essentially the number of messages exchanged, or, more importantly, the status of them.
+
+305
+00:55:20.940 --> 00:55:31.250
+massimo: I think this one is a better, like, more visual representation, of it. So, when I roll up one, I lock some, funds.
+
+306
+00:55:31.250 --> 00:55:42.170
+massimo: I then send to the outbox the fact that I have locked them, and so I request for the rollout B to mint on the equivalent on their side.
+
+307
+00:55:42.170 --> 00:55:57.030
+massimo: And so, when that happened, on roller B, I can also chain the request to train them, or do something, like put them in the lending pool, or whatever. And then what I want to, let's say, like, this is an example of a flash loan, for example, right?
+
+308
+00:55:57.030 --> 00:56:03.399
+massimo: So on the return, once I traded it, or… it's not, actually, sorry, it's a swap, not a flash loan.
+
+309
+00:56:03.400 --> 00:56:25.790
+massimo: Once I swap them, I want to send back the funds to roll-up A, and so I do essentially the reverse action. I lock them first, and then send on the outbox the fact that I want roll-up A to mint. Rollup A finds this message on the inbox, and now the inbox and outbox are specular, so the simulation
+
+310
+00:56:25.810 --> 00:56:42.159
+massimo: is confirmed, and I think we have a… yeah, sorry, I'll get back to that slide later on, but essentially, once the sequencer has gone through the full simulation, it has the confirmation that the blocks can be… so that the function can be included.
+
+311
+00:56:42.490 --> 00:56:44.760
+massimo: like I said, this is,
+
+312
+00:56:44.960 --> 00:57:03.010
+massimo: probably not new to some of you, but previous solutions were using a shared sequencer, whereas with our, solution, we use a shared publisher, and the sequences remain, independent entities, so there's no request to sort of, like, change, current, L2
+
+313
+00:57:03.010 --> 00:57:05.169
+massimo: I don't know,
+
+314
+00:57:05.170 --> 00:57:21.150
+massimo: infrastructure, or the way they design their own L2. Most importantly, a shared sequencer is a form of centralization, and it also brings itself to scaling issues, where with our design, we think that this can be overcome.
+
+315
+00:57:22.760 --> 00:57:32.559
+massimo: it's… and essentially, it basically is an extension of CERC, to a means for distributed coordination amongst, sequencers.
+
+316
+00:57:32.870 --> 00:57:45.150
+massimo: This is, like I said, I already kind of explained it, but the important part is that at the end of the simulation, the sequencer sends a vote for,
+
+317
+00:57:45.150 --> 00:57:57.720
+massimo: like, signaling the fact that the simulation went okay, and when the share publisher has enough votes, it sends back an acknowledgement that the decision has been reached. We call this,
+
+318
+00:57:57.740 --> 00:58:12.640
+massimo: our agreeing, agreement algorithm, two-phase committee, two-phase commit, and, at the end, they basically send back their own block, and the share publisher, publisher is in charge of publishing, the block to the L1.
+
+319
+00:58:14.500 --> 00:58:34.409
+massimo: I said that we came up with our own, solutions, because eventually, like I said, the two roll-ups have to, find a way to recognize two… what… what could be looking, like two independent transactions, transactions as actually belonging together. So the fact that they have to
+
+320
+00:58:34.410 --> 00:58:47.149
+massimo: kickstart this simulation, phase, and we came up with a custom RPC, call, that the sequencers, implement, and it's essentially…
+
+321
+00:58:47.380 --> 00:58:59.269
+massimo: As we see here, like, the identifier of the chain and the transaction itself. The problem that we find ourselves is that, obviously, the transaction has to be signed.
+
+322
+00:58:59.270 --> 00:59:07.890
+massimo: But commonly, a web app cannot sign it, because the methods to do that are, like, deprecated or forbidden.
+
+323
+00:59:07.920 --> 00:59:14.839
+massimo: And, we turned ourselves to signed user operations, because at the moment, it allows the user to sign
+
+324
+00:59:14.840 --> 00:59:30.659
+massimo: the user operation as a message, and then the transaction that sends the user operation to the chain, it's a different thing. And so we have another custom RPC method on the sequencer that basically takes a user operation and signs the transaction that should include it.
+
+325
+00:59:30.910 --> 00:59:39.710
+massimo: And the conjunction of these two makes it so that, basically, the output of this compose, build sign-use operation transaction method
+
+326
+00:59:40.400 --> 00:59:44.050
+massimo: is assigned, transaction. And then…
+
+327
+00:59:44.520 --> 01:00:00.109
+massimo: you can use, basically, the output of this one as the input of this one, making up the payload for a cross-chain transaction. Then the sequencer are able to identify this operation as a cross-chain operation, and they start the simulation, basically.
+
+328
+01:00:00.370 --> 01:00:18.310
+massimo: Like, I have skipped the minutiae of the ZK proofs, but of course, like, upon reaching consensus, they also send a ZK proof of the simulation itself. The shared publisher packages up the multiple, proofs into
+
+329
+01:00:18.470 --> 01:00:22.490
+massimo: an aggregated proof to the L1.
+
+330
+01:00:24.310 --> 01:00:41.919
+massimo: and where there is room for improvement, we have improved, we think that we have improved by allowing… by using user operation, and allow you, basically, to compose, like, LEGO bricks, not by building custom contracts, but by mixing and matching, contract calls into a user operation.
+
+331
+01:00:41.920 --> 01:00:52.309
+massimo: And, the problem that we found is that, what I already mentioned, custom account… current account abstraction solutions have significant drawbacks.
+
+332
+01:00:52.310 --> 01:01:00.889
+massimo: Namely, the funding, but also the fact that what the user's citing is not, very, intelligible.
+
+333
+01:01:01.090 --> 01:01:18.970
+massimo: we… in our opinion, in my opinion, it would be much, much easier if a sign authorization RPC would have been implemented and supported. This would basically abstract away the funds, funds movement, and it would act as if the users natively
+
+334
+01:01:18.970 --> 01:01:22.680
+massimo: accessing a smart account from their own, EOA.
+
+335
+01:01:23.730 --> 01:01:26.000
+massimo: Yeah, I think this is it.
+
+336
+01:01:26.270 --> 01:01:28.329
+massimo: Thank you for listening.
+
+337
+01:01:31.720 --> 01:01:38.740
+Joshua Rudolf: Thanks, Massimo. There is a question in the chat from Ed on the trust assumptions of the shared publisher. Do you want to maybe…
+
+338
+01:01:39.400 --> 01:01:40.140
+Joshua Rudolf: Share a few quick.
+
+339
+01:01:40.140 --> 01:01:43.310
+massimo: Yeah, sorry, opening up the chat, which is…
+
+340
+01:01:43.440 --> 01:01:46.419
+massimo: Incredibly small when you're sharing the screen.
+
+341
+01:01:50.930 --> 01:01:54.759
+Ed Felten: The question is, what is the trust assumption about the shared publisher?
+
+342
+01:01:57.390 --> 01:01:59.450
+massimo: Yeah, the… yeah, go ahead. Oh, sorry, Alan.
+
+343
+01:01:59.720 --> 01:02:15.490
+Alon Muroch | SSVLabs: Hey guys, Alan, I'm from the SSV team. So the shared publisher is, as the name suggests, only publishes, meaning that if the shared publisher fails, the roll-ups themselves will be able to finalize,
+
+344
+01:02:15.530 --> 01:02:33.810
+Alon Muroch | SSVLabs: By, by settling on the L1, independently. Of course, for cross-chain transactions, that… that means that there's no coordination layer for that. They can still do cross-chain transactions, though the actual checks for the mailboxes is…
+
+345
+01:02:33.810 --> 01:02:49.449
+Alon Muroch | SSVLabs: done by the shared publisher. The shared publisher is important to say, it's gonna be based on Ethereum validators, it's not a centralized entity. So Ethereum validators will be the one running the shared publisher code, and actually be the shared publisher.
+
+346
+01:02:50.170 --> 01:02:55.470
+Ed Felten: So that's an assumption about liveness. Are there assumptions about things like non-equivocation?
+
+347
+01:02:58.740 --> 01:03:01.630
+Alon Muroch | SSVLabs: What do you mean, if you can give an example?
+
+348
+01:03:01.950 --> 01:03:10.470
+Ed Felten: Yeah, so suppose that the shared publisher tells chain A the message you sent was delivered to chain B, but it tells chain B there was no message sent.
+
+349
+01:03:11.070 --> 01:03:22.740
+Alon Muroch | SSVLabs: Oh, no, no, so the shared publisher is not telling anyone anything. So the shared publisher is… when they do the simulation, the sequencers, when they do the simulation, we're using a 2PC consensus protocol.
+
+350
+01:03:22.740 --> 01:03:31.369
+Alon Muroch | SSVLabs: The shared publisher is the coordinator of that protocol, so they know the origin and the destination of the, just the coordination phase, or the simulation phase.
+
+351
+01:03:31.370 --> 01:03:50.659
+Alon Muroch | SSVLabs: The shared publisher's main responsibility is to just produce an aggregated proof of the different chains, and inside that aggregated proof, we also add mailbox proofs. So that's the responsibility of the shared publisher. And again, the shared publisher is not a centralized entity, it's going to be based on Ethereum validators.
+
+352
+01:03:50.690 --> 01:04:04.590
+Alon Muroch | SSVLabs: And so, there is no trust assumption on… like, the shared publisher can't fake it because it needs to produce, ultimately, a ZK proof. Now, there is liveness, challenges there, but maybe the shared publisher didn't produce any proof.
+
+353
+01:04:04.630 --> 01:04:12.069
+Alon Muroch | SSVLabs: That's why we're building it to be based and not a centralized entity to mitigate that as much as possible.
+
+354
+01:04:12.400 --> 01:04:18.050
+Ed Felten: Right, but what if it produces two different proofs that prove that two different possible histories?
+
+355
+01:04:19.370 --> 01:04:21.210
+Ed Felten: That's the equivocation question.
+
+356
+01:04:21.820 --> 01:04:24.579
+Alon Muroch | SSVLabs: Oh, God, so, so, two, two different histories, you mean?
+
+357
+01:04:24.760 --> 01:04:25.450
+Ed Felten: Yeah.
+
+358
+01:04:26.180 --> 01:04:36.940
+Alon Muroch | SSVLabs: So again, each sequencer is responsible for producing its own, its own proofs and its own blocks. The shared publisher is not producing blocks on the behalf of the chains.
+
+359
+01:04:36.940 --> 01:04:46.570
+Alon Muroch | SSVLabs: It's passively receiving those blocks from the sequencers, and then produces, produces blocks. Sorry, produces an aggregated, proof for them.
+
+360
+01:04:48.400 --> 01:04:50.449
+Ed Felten: Let's take this offline.
+
+361
+01:04:50.580 --> 01:04:51.170
+Alon Muroch | SSVLabs: Sure.
+
+362
+01:04:53.390 --> 01:04:58.879
+Joshua Rudolf: So we just have, 3 minutes left. OS, I see your hand is up. Is this something that you want to get to now, or should we move it
+
+363
+01:04:59.120 --> 01:05:00.060
+Joshua Rudolf: async.
+
+364
+01:05:00.580 --> 01:05:15.440
+Orest Tarasiuk (t1): Just super briefly, this shared, like, non-shared sequencing model would still require the individual sequences to have opted into the system, right? To actually consume, like, use CERC, use the mailboxes.
+
+365
+01:05:15.440 --> 01:05:34.509
+Alon Muroch | SSVLabs: Yeah, so we differentiate between two types of roll-ups. Type 1 is integrated roll-ups, meaning that they fully integrate it into the Compose layer, meaning that they produce ZK proofs, and the share publisher takes those proofs and aggregates them. There's another type of roll-up
+
+366
+01:05:34.780 --> 01:05:48.020
+Alon Muroch | SSVLabs: called included roll-ups, maybe the naming should be better, but included roll-ups are roll-ups that we did not choose to integrate into the Compose network. Roll-ups, for example, like base or optimism in Arbitrum.
+
+367
+01:05:48.020 --> 01:06:01.910
+Alon Muroch | SSVLabs: We can enable synchronous composable transactions between integrated and included roll-ups, but we cannot guarantee, obviously, synchronous composable transactions between two included roll-ups, because
+
+368
+01:06:01.930 --> 01:06:04.120
+Alon Muroch | SSVLabs: To include ropes can also do all that.
+
+369
+01:06:04.210 --> 01:06:12.950
+Alon Muroch | SSVLabs: Or that they don't guarantee authenticity. So that's… that's kind of… there's two types of rollups that can play along with this protocol.
+
+370
+01:06:13.590 --> 01:06:14.430
+Orest Tarasiuk (t1): Thank you.
+
+371
+01:06:21.430 --> 01:06:23.510
+Joshua Rudolf: Thank you, Heland and Massimo.
+
+372
+01:06:23.840 --> 01:06:24.520
+massimo: Think so.
+
+373
+01:06:24.520 --> 01:06:34.460
+Joshua Rudolf: Yeah, sorry. I guess we can, yeah, we can end it there. Just, I guess, for the last agenda item, I'll just cover really quickly in the final minute here.
+
+374
+01:06:34.600 --> 01:06:50.780
+Joshua Rudolf: topic is L2 withdrawal windows and reducing the 7-day challenge period. I guess just a couple of super quick notes. Yeah, as many here know, this is something we have by design on optimistic roll-ups to protect against, strong censorship attacks, but it's also a bit of a bottleneck on…
+
+375
+01:06:50.910 --> 01:07:01.519
+Joshua Rudolf: UX and interop, so we are exploring designs and potential paths to reducing this 7-day period to something like potentially 1 day.
+
+376
+01:07:01.520 --> 01:07:11.599
+Joshua Rudolf: This isn't the first time that this topic has been brought up, of course, and want to make sure that we do this in an informed and secure way. There is a reason why we landed on 7 days.
+
+377
+01:07:12.440 --> 01:07:14.429
+Joshua Rudolf: So, so, I, I think that, yeah.
+
+378
+01:07:14.840 --> 01:07:26.630
+Joshua Rudolf: hope to organize some discussions on this topic with L2 teams, the folks over at L2Beat. This is really just sort of an open invitation for feedback, and anyone who would like to participate in these conversations.
+
+379
+01:07:26.650 --> 01:07:35.260
+Joshua Rudolf: Yeah, so just wanted to flag this here quickly as something that is on the radar as well. And if anyone has anything to, I don't know, want to chime in in the final 30 seconds here on this topic.
+
+380
+01:07:43.100 --> 01:07:45.349
+Joshua Rudolf: If not, we can continue this on the next call.
+
+381
+01:07:49.830 --> 01:07:52.269
+Joshua Rudolf: Cool, okay, well then, let's end on time.
+
+382
+01:07:52.500 --> 01:07:53.809
+Joshua Rudolf: Thanks all for joining.
+
+383
+01:07:54.490 --> 01:07:55.569
+Joshua Rudolf: See you next time.
+
+384
+01:07:55.940 --> 01:07:56.499
+Orest Tarasiuk (t1): Thank you, buddy.
+
+385
+01:07:56.500 --> 01:07:57.540
+massimo: Thank you for having us.
+
+386
+01:07:57.540 --> 01:07:57.990
+Ian Norden: Thanks.
+
+387
+01:07:59.370 --> 01:08:00.120
+Mikhail Kalinin: Aye.
+
+388
+01:08:01.960 --> 01:08:04.659
+Orest Tarasiuk (t1): Alright guys, enjoy your, spin planning.
+

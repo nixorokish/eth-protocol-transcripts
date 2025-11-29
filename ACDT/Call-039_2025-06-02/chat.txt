@@ -1,0 +1,263 @@
+00:05:45	Gabriel Trintinalia | Besu:	gn gn
+00:07:19	Barnabas:	looks like we are back to pre ACDT rename numbers
+00:07:51	Barnabas:	We need to have more controversial topics to discuss to attract more people? EOF for fusaka anyone?
+00:08:01	Gabriel Trintinalia | Besu:	Reacted to "We need to have more..." with 😅
+00:08:02	Francesco:	Replying to "looks like we are ba..."
+
+More governance power per person
+00:08:04	Mario Vega:	Reacted to "We need to have more..." with 😅
+00:08:05	Will Corcoran:	I believe the calendar invite still notes this call as “Pectra Interop Testing”
+00:08:06	Parithosh Jayanthi:	Reacted to "We need to have more..." with 😂
+00:08:16	Parithosh Jayanthi:	Oh thank you! We can fix that post call
+00:08:28	Ben Adams:	Replying to "We need to have more..."
+
+EOF was quite close; could add it back ;)
+00:08:31	Will Corcoran:	Reacted to "We need to have more..." with 😅
+00:08:38	Dmitrii Shmatko:	Reacted to "We need to have more..." with 😅
+00:08:39	Pooja Ranjan:	We are live
+00:08:40	Ben Adams:	Reacted to "We need to have more..." with 😅
+00:08:41	Barnabas:	Reacted to "EOF was quite close;..." with 😂
+00:08:42	Justin Florentine (Besu):	Replying to "We need to have more..."
+
+I will if you will 🙂
+00:08:43	Francesco:	Replying to "I believe the calend..."
+
+On my calendar it is “All Core Devs Testing - ACDT”
+00:08:53	Parithosh Jayanthi:	https://ethpandaops.io/posts/eip7691-retrospective/
+00:09:22	Ben Adams:	Replying to "I believe the calend..."
+
+Testing All Core  Devs
+00:10:20	Will Corcoran:	Replying to "I believe the calend..."
+
+Yep, you are correct - that was just the one that was added to my personal cal a few months back.
+00:10:53	Kamil Chodoła:	Was looking on metrics on nethermind and all good
+00:11:04	Barnabas:	should we signal first to 48M then to 60M ?
+00:12:31	Justin Florentine (Besu):	i think a 48M step is unnecessary unless we think there are interesting network effects to learn by stopping there.
+00:14:10	Toni Wahrstätter:	If it's true that the max CL size is 2.5 mib, then we can hit the 10min limit at 65m. 60m should be safe.
+00:18:32	Barnabas:	https://github.com/probe-lab/eth-das-guardian
+00:18:37	Barnabas:	just became open source a few hours ago
+00:18:58	Manu:	Reacted to "https://github.com/p..." with 👍
+00:19:02	Agnish Ghosh:	Reacted to "https://github.com/p..." with 👍
+00:19:03	Parithosh Jayanthi:	Reacted to "https://github.com/p..." with 🔥
+00:19:05	Agnish Ghosh:	Reacted to "https://github.com/p..." with 🔥
+00:19:26	Csaba Kiraly:	Reacted to "https://github.com/p..." with 🔥
+00:20:24	Will Corcoran:	Wasn’t the spec convo about Val Cust punted from ACDC to this call?
+00:20:31	Parithosh Jayanthi:	Replying to "Wasn’t the spec conv..."
+
+yup
+00:20:33	chanderprakash sharma:	GM GM
+00:20:44	Will Corcoran:	Reacted to "yup" with 👍
+00:20:47	Barnabas:	Reacted to "yup" with 👍
+00:21:51	Barnabas:	Can we aim for full impl by devnet 1?
+00:21:51	Francesco:	Just to make sure, has everyone seen this? https://github.com/ethereum/consensus-specs/pull/4320/files
+00:22:32	Francesco:	Replying to "Just to make sure, h..."
+
+This is the PR
+00:25:55	Barnabas:	Justin should be on his way to the call now
+00:26:05	Agnish Ghosh:	yeah
+00:26:08	Agnish Ghosh:	it's a good spec
+00:26:09	Justin Traglia:	Hello
+00:26:10	Agnish Ghosh:	right
+00:26:24	Barnabas:	Replying to "Hello"
+
+We are talking about https://github.com/ethereum/consensus-specs/pull/4320/files
+00:26:29	Justin Traglia:	Reacted to "We are talking about..." with 👍
+00:26:30	Agnish Ghosh:	i wasn't aware this was merged
+00:26:34	Parithosh Jayanthi:	Replying to "Hello"
+
+Do you mind talking through this change justin?
+00:26:40	Parithosh Jayanthi:	Replying to "Hello"
+
+I can call on you next
+00:26:42	Manu:	Replying to "i wasn't aware this ..."
+
+same
+00:27:03	Justin Traglia:	Replying to "Hello"
+
+Sure
+00:27:07	Justin Traglia:	Replying to "Hello"
+
+What questions are there?
+00:27:08	Parithosh Jayanthi:	@Francis is your point for this topic or can I call on you next?
+00:27:30	Parithosh Jayanthi:	Replying to "Hello"
+
+I think present and see if there are CL questions since they weren’t aware
+00:28:11	Agnish Ghosh:	https://github.com/ethereum/consensus-specs/pull/4320/
+
+with this, i'm more confident about network stability
+00:28:19	Agnish Ghosh:	thanks
+00:28:21	Barnabas:	Replying to "i wasn't aware this ..."
+
+is there something we could do, to communicate future spec changes better?
+00:28:39	Barnabas:	Reacted to "https://github.com/e..." with 🎉
+00:28:43	Agnish Ghosh:	Replying to "i wasn't aware this ..."
+
+we did discord threads, what's better than that
+00:29:50	Francesco:	Replying to "i wasn't aware this ..."
+
+Yeah it was a public discussion just a bit buried in a thread in peerdas-testing, should have tagged people in the main channel
+00:30:36	Barnabas:	They should just run with supernode flags @Manu
+00:31:18	Agnish Ghosh:	for multi BN setups its better to be a supernode
+00:31:53	Agnish Ghosh:	we can change to MAY NOT
+00:32:11	Dmitrii Shmatko:	I’d vote for MAY NOT too
+00:32:28	Agnish Ghosh:	yes
+00:33:01	Agnish Ghosh:	point we did implement it, thinking twice before throwing it away :D
+00:33:04	Francis:	Replying to "@Francis is your poi…"
+should be fine, agree with the new spec
+00:33:19	marek:	Replying to "If it's true that th..."
+
+Does "max CL size" mean overhead by CL fields in the block size?
+00:33:44	Parithosh Jayanthi:	Replying to "If it's true that th..."
+
+Its max amount of cl data that could possibly exist, imagine tons of attester slashings
+00:34:18	chanderprakash sharma:	What are the pros and cons of shifting to a static custody model?
+00:34:49	marek:	Reacted to "Its max amount of cl..." with 👍
+00:34:55	kasey:	Validator registration via beacon api
+00:36:54	pawan:	Replying to "Validator registrati..."
+
+Is this the mev registration api or something else?
+00:37:52	Justin Traglia:	Reacted to "https://github.com/e..." with 🎉
+00:39:01	James He:	Replying to "Validator registrati..."
+
+It’s actually the /eth/v1/validator/prepare_beacon_proposer  endpoint that Manu mentioned , validator registration is only builder path. We have a metric on that endpoint being called
+00:39:57	kasey:	Replying to "Validator registrati..."
+
+My mistake. I was referring to /eth/1/validator/register_validator. I thought we used the registrations created as a result of calling this, but per James this is only called when using the builder.
+00:40:10	Raúl Kripalani:	i think custody groups are calculated from node ids, right?
+00:40:14	Raúl Kripalani:	not from actual validators?
+00:40:43	Parithosh Jayanthi:	Replying to "not from actual vali..."
+
+That is as it initially worked, however there is a heuristic on top that says that if you have more validators you custody more
+00:40:53	Parithosh Jayanthi:	Replying to "not from actual vali..."
+
+That’s the validator custody topic we’re talking about now
+00:41:23	Justin Traglia:	Replying to "not from actual vali..."
+
+https://github.com/ethereum/consensus-specs/blob/dev/specs/fulu/validator.md#validator-custody
+00:41:43	Raúl Kripalani:	Replying to "not from actual vali..."
+
+perfect, that's what i was looking for
+00:41:47	Raúl Kripalani:	Replying to "not from actual vali..."
+
+thanks!
+00:41:57	Justin Traglia:	Reacted to "thanks!" with ❤️
+00:42:01	Agnish Ghosh:	ok
+00:42:19	pawan:	Reacted to "It’s actually the /e..." with 👍
+00:42:38	Agnish Ghosh:	MAY is good
+00:42:43	Justin Traglia:	Yup let’s do MAY
+00:42:54	Barnabas:	Replying to "Yup let’s do MAY"
+
+can you do a PR?
+00:42:57	Francesco:	Agree with taking it offline
+00:43:02	Justin Traglia:	Replying to "Yup let’s do MAY"
+
+Yes, I will
+00:43:04	Agnish Ghosh:	Reacted to "Agree with taking it..." with ❤️‍🔥
+00:43:12	Barnabas:	can we do may functionality with devnet 1 next monday?
+00:43:17	Justin Traglia:	Reacted to "Agree with taking it..." with ❤️‍🔥
+00:43:19	Raúl Kripalani:	yep, agree, MAY as a backstop awaiting a final solution
+00:43:20	Agnish Ghosh:	Reacted to "can we do may functi..." with 🙂
+00:43:25	Agnish Ghosh:	Replying to "can we do may functi..."
+
+whip
+00:43:34	Will Corcoran:	Reacted to "can we do may functi..." with 🔥
+00:43:34	Barnabas:	Reacted to "whip" with 😮‍💨
+00:43:49	Will Corcoran:	I
+00:43:49	Barnabas:	Reacted to "Yes, I will" with 👍
+00:44:03	Barnabas:	Replying to "yep, agree, MAY as a..."
+
+whats the final solution?
+00:44:15	Parithosh Jayanthi:	https://eips.ethereum.org/EIPS/eip-7917
+00:44:21	Barnabas:	Reacted to "https://eips.ethereu..." with 🎉
+00:44:30	Raúl Kripalani:	Replying to "yep, agree, MAY as a..."
+
+for validator custody, clarifying any extra heuristics that need to be added
+00:44:35	Raúl Kripalani:	Replying to "yep, agree, MAY as a..."
+
+(if any)
+00:44:37	Barnabas:	Heads up everyone, we plan to launch devnet 1 next monday, 9th of June!
+00:44:43	Gabriel Trintinalia | Besu:	Reacted to "Heads up everyone, w..." with 🚀
+00:44:48	Dmitrii Shmatko:	Reacted to "Yup let’s do MAY" with 👍
+00:44:48	Will Corcoran:	Reacted to "https://eips.ethereu..." with 🎉
+00:44:55	Justin Traglia:	https://github.com/ethereum/consensus-specs/pull/4190
+00:45:02	Barnabas:	https://notes.ethereum.org/@ethpandaops/fusaka-devnet-1
+00:45:10	Will Corcoran:	Reacted to "Heads up everyone, w..." with 🚀
+00:46:07	pawan:	Can you link the PR @Justin Traglia ?
+00:46:11	Mario Vega:	Replying to "Heads up everyone, w..."
+
+We need to make an eest release before then, we have open PRs for both new EIPs, so will try to prepare the release asap
+00:46:18	Justin Traglia:	Yeah 2 messages up
+00:46:22	Justin Traglia:	Replying to "https://github.com/e..."
+
+here
+00:46:36	pawan:	Reacted to "Yeah 2 messages up" with 👍
+00:46:39	Justin Traglia:	Replying to "Can you link the PR ..."
+
+https://github.com/ethereum/consensus-specs/pull/4190
+00:47:16	Gabriel Trintinalia | Besu:	Besu on track
+00:47:18	Barnabas:	https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7825.md
+00:47:21	Justin Traglia:	Also want to mention that we’re going to make a CL specs release on Tuesday: https://github.com/ethereum/consensus-specs/pull/4346
+00:47:28	Barnabas:	https://eips.ethereum.org/EIPS/eip-7918
+00:47:31	Ben Adams:	Nethermind on track
+00:47:42	Roman:	Reth same
+00:47:45	Agnish Ghosh:	Replying to "https://github.com/e..."
+
+can implement by end of this week, i _may_ not make it to Berlin tho :(
+00:47:57	Andrew Ashikhmin:	Erigon is on track
+00:48:42	Gabriel Trintinalia | Besu:	Reacted to "Erigon is on track" with 🚀
+00:48:46	Gabriel Trintinalia | Besu:	Reacted to "Reth same" with 🚀
+00:48:50	Gabriel Trintinalia | Besu:	Reacted to "Nethermind on track" with 🚀
+00:48:51	Agnish Ghosh:	Nimbus eth 1 update btw: on track with 7918, currently testing fusaka devnet 0 action items
+00:49:02	Agnish Ghosh:	particularly bpo
+00:49:17	pawan:	Can you link the PR @Raúl Kripalani ?
+00:49:39	Justin Traglia:	Replying to "Can you link the PR ..."
+
+https://github.com/ethereum/EIPs/pull/9840
+00:49:44	Justin Traglia:	Replying to "Can you link the PR ..."
+
+There is no CL specs PR yet
+00:50:21	Barnabas:	How many devnets do you guys want lol
+00:50:27	Will Corcoran:	Reacted to "How many devnets do ..." with 🤣
+00:50:28	Justin Traglia:	https://github.com/ethereum/consensus-specs/pull/4346
+00:50:33	Parithosh Jayanthi:	Replying to "How many devnets do ..."
+
+Uint64 max
+00:50:37	nixo:	Reacted to "Uint64 max" with 💯
+00:50:41	Gabriel Trintinalia | Besu:	Reacted to "Uint64 max" with 💯
+00:50:41	Agnish Ghosh:	Reacted to "Uint64 max" with 💯
+00:50:44	nixo:	Reacted to "How many devnets do ..." with 🤣
+00:50:46	Agnish Ghosh:	Replying to "How many devnets do ..."
+
+anything is ok :)
+00:50:47	Justin Traglia:	Reacted to "Uint64 max" with 💯
+00:50:48	marek:	Reacted to "Uint64 max" with 💯
+00:50:50	Raúl Kripalani:	Reacted to "Uint64 max" with 💯
+00:50:51	Barnabas:	Reacted to "Uint64 max" with 💯
+00:51:36	Gabriel Trintinalia | Besu:	besu implements it
+00:51:41	Phil Ngo:	Reacted to "Uint64 max" with 💯
+00:52:25	Agnish Ghosh:	okay
+00:52:30	Will Corcoran:	@J Sunnyside Labs wanted to note the need for getBlobsV2 metrics for EL side….
+00:52:52	Barnabas:	@Justin Traglia do we wanna keep bpo fork schedules for all future forks ? Including fulu? Esp if we won’t backfill for electra/deneb
+00:53:05	J Sunnyside Labs:	https://discord.com/channels/595666850260713488/1252403418941624532/1374373828691497064
+00:53:22	Agnish Ghosh:	gotta run, catching up offline :)
+00:53:28	Parithosh Jayanthi:	Reacted to "gotta run, catching ..." with 👍🏽
+00:54:14	Justin Florentine (Besu):	i'm unclear what the ask is for ELs
+00:55:04	Justin Florentine (Besu):	ty!
+00:56:03	Parithosh Jayanthi:	https://testinprod.notion.site/Sunnyside-Devnet-Updates-05-30-Internal-2008fc57f54680ea81cde6acaa6d55fc
+00:57:07	spencer-tb:	Reacted to "Heads up everyone, w..." with 🚀
+00:57:11	spencer-tb:	Reacted to "We need to make an e..." with 🙏
+00:58:43	Justin Traglia:	Replying to "@Justin Traglia do w..."
+
+Nah, I don’t think we should include fulu here, unless it’s different than electra. But that’s not the plan.
+00:59:49	pawan:	Might have been captured in a different metric
+01:01:52	Barnabas:	Reacted to "Nah, I don’t think w..." with 👍
+01:01:56	Barnabas:	Replying to "@Justin Traglia do w..."
+
+What about on the EL side?
+01:02:10	Barnabas:	Replying to "@Justin Traglia do w..."
+
+should blob schedule list osaka as a field?
+01:05:55	Gabriel Trintinalia | Besu:	👍
+01:05:58	Will Corcoran:	Sounds good
+01:06:00	Marius:	Yep
+01:06:05	Leo:	👍

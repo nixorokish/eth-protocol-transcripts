@@ -1,0 +1,1174 @@
+WEBVTT
+
+1
+00:06:25.060 --> 00:06:26.140
+Akash | ECH: Hey, Sam.
+
+2
+00:06:27.190 --> 00:06:27.900
+Sam: Hey, how's it going?
+
+3
+00:06:29.120 --> 00:06:35.310
+Akash | ECH: Going good. We are livestreaming this meeting on Ethereum Protocol YouTube channel, so let me know when you're ready.
+
+4
+00:06:36.700 --> 00:06:42.900
+Sam: Sure, yeah, we'll probably give people a good 5-10 minutes to show up, since it's usually a slow start.
+
+5
+00:09:44.530 --> 00:09:45.470
+Sam: Hello.
+
+6
+00:11:47.620 --> 00:11:53.409
+Sam Wilson: Hey everyone, just gonna give a few more minutes before we start. Just gonna go post a message, be right back.
+
+7
+00:13:29.060 --> 00:13:31.609
+Sam Wilson: Alright, we can probably get started if you want to get the stream set up.
+
+8
+00:13:36.460 --> 00:13:38.040
+Akash | ECH: Yeah, if you'll, ….
+
+9
+00:14:07.580 --> 00:14:23.559
+Sam Wilson: Alright, so I guess this is, All Wallet devs call number 35. We're gonna be talking about a few different things today. Erc7920, MetaMask Improvement Proposal Number 6, as well as, two changes to,
+
+10
+00:14:25.280 --> 00:14:40.809
+Sam Wilson: the 5792 capability set. So, yeah, I guess let's kick it off with a little bit of discussion about an MDN-like wallet API page. So, this is a project I've been kicking around for a while,
+
+11
+00:14:40.810 --> 00:14:56.080
+Sam Wilson: I haven't been able to spend any time on it, so I'm just bringing it up here, maybe to get some interest from other developers, wallets, in the space. I'd like to build, an MDN-like resource that documents all of the wallet APIs that are available.
+
+12
+00:14:56.310 --> 00:15:04.170
+Sam Wilson: Preferably with, like, a can-I-use style interface. If this is something that interests you, something you'd like to work on, give me a message on Discord.
+
+13
+00:15:04.280 --> 00:15:08.050
+Sam Wilson: I'd be happy to, you know, give you a hand and get you started.
+
+14
+00:15:10.280 --> 00:15:11.040
+Sam Wilson: …
+
+15
+00:15:11.560 --> 00:15:27.819
+Sam Wilson: Yeah, so that's about it on that for now. We can kick that off to later, if we want to talk about it more, because I think we actually have some technical discussions today. Do we have somebody from MetaMask here to talk about, MIP6?
+
+16
+00:15:30.100 --> 00:15:40.309
+Alex Donesky: Oh, I don't know how this got… I'm from MetaMask, I don't know how this got on our, … on the agenda, but … who pushed this onto the agenda? I'm happy to talk about it.
+
+17
+00:15:40.310 --> 00:15:47.169
+Sam Wilson: Oh, we, we talked about it last time, and we just wanted to bring it back up and see if anybody had any thoughts on it after reading.
+
+18
+00:15:47.610 --> 00:15:55.850
+Alex Donesky: I see, okay, cool. I missed last time, so… I see… Okay, so….
+
+19
+00:15:55.850 --> 00:15:56.860
+Sam Wilson: That's… yeah.
+
+20
+00:15:57.280 --> 00:16:15.670
+Alex Donesky: Sure, yeah, I mean, so I'd imagine some folks here are familiar with, like, CASA and, the capes? If not, though, that's the Chain Agnostic Standards Alliance. So let me… I can drop…
+
+21
+00:16:17.390 --> 00:16:21.750
+Alex Donesky: I can drop the… GitHub org…
+
+22
+00:16:22.140 --> 00:16:27.340
+Alex Donesky: If you bear with me for a second… but basically, you know,
+
+23
+00:16:28.250 --> 00:16:37.710
+Alex Donesky: Juan Bumblefudge maybe has dropped into this meeting before. He sort of runs it, and this is a, you know, effort to…
+
+24
+00:16:37.870 --> 00:16:54.590
+Alex Donesky: create some standards that, you know, bridge and sort of go above any particular ecosystem and can glue them together, and so we at MetaMask have been, for a while, adopting, the,
+
+25
+00:16:54.590 --> 00:17:11.330
+Alex Donesky: a few of these, these capes, the, the sort of central ones, being Cape 25 and Cape 27, which, describe… here, sorry, I'm just gonna drop this in there. And these describe, sort of, handshake and,
+
+26
+00:17:11.420 --> 00:17:16.880
+Alex Donesky: … Sort of request protocols, that… …
+
+27
+00:17:17.200 --> 00:17:33.120
+Alex Donesky: theoretically, and actually at the moment, now we have a full implementation in MetaMask as a sort of parallel API alongside our 1193 API, the injected Ethereum provider.
+
+28
+00:17:34.090 --> 00:17:42.819
+Alex Donesky: And so, happy to… if anyone has any questions or wants to play around with it, I can… I can drop some resources for doing that. But, yeah, this…
+
+29
+00:17:42.920 --> 00:17:45.730
+Alex Donesky: Allows you to, you know.
+
+30
+00:17:45.920 --> 00:17:50.700
+Alex Donesky: Query and provides product… standardization and protocols for,
+
+31
+00:17:51.120 --> 00:17:57.510
+Alex Donesky: yeah, making requests, to EBM chains, to,
+
+32
+00:17:57.650 --> 00:18:11.190
+Alex Donesky: you know, Solana, Cosmos, you know, you name your… the ecosystem, and these are all, standardized within the sort of CASA framework. They have namespacing and, …
+
+33
+00:18:11.500 --> 00:18:18.309
+Alex Donesky: and various standardization within… if you explore within the chain agnostic link that I linked.
+
+34
+00:18:18.430 --> 00:18:24.070
+Alex Donesky: … And, … Yeah, that's… that's the kind of overall…
+
+35
+00:18:24.590 --> 00:18:39.160
+Alex Donesky: purpose, and we are… yeah, these standards power our quote-unquote multi-chain API, which has a number of, you know, improvements, UX improvements, to, you know, the standard
+
+36
+00:18:39.380 --> 00:18:49.170
+Alex Donesky: EIP1193, … API interface that we're sort of used to, in the EVM world at least, and …
+
+37
+00:18:49.280 --> 00:18:55.710
+Alex Donesky: Yeah, we think this is a great standard. We've been working on it and helping shape it for some time.
+
+38
+00:18:56.040 --> 00:19:03.500
+Alex Donesky: with CASA, with WalletConnect, and we would encourage others to do the same. We've been kind of slow to
+
+39
+00:19:03.710 --> 00:19:10.919
+Alex Donesky: to DevRel it as much, and sort of promote it as much as we'd like, but that's the kind of… that's the rough idea. …
+
+40
+00:19:11.210 --> 00:19:15.530
+Alex Donesky: So yeah, happy to answer any questions, or concerns.
+
+41
+00:19:18.940 --> 00:19:27.639
+Sam Wilson: If you could ask, like, one action from wallet developers on the call, what would you like them to do? Leave a comment on your discussion thread, or… or….
+
+42
+00:19:27.910 --> 00:19:42.039
+Alex Donesky: Yeah, I mean, I would… I would love, … I… I think the… so MIP20… MIP6 is a decent place, MIP5 is, … MIP5 and MIP6 are kind of…
+
+43
+00:19:42.450 --> 00:19:47.939
+Alex Donesky: More or less the same thing. Would love for… for folks to engage. There's a discussion thread.
+
+44
+00:19:48.130 --> 00:19:57.939
+Alex Donesky: There. I would also encourage you all to take a look at Cape 25, which I can link, …
+
+45
+00:19:58.940 --> 00:20:01.140
+Alex Donesky: as, like, a, you know, I think it's the…
+
+46
+00:20:02.470 --> 00:20:07.790
+Alex Donesky: Probably the best entry point into sort of understanding what's being, … …
+
+47
+00:20:08.130 --> 00:20:12.189
+Alex Donesky: what we're going for, with this new API.
+
+48
+00:20:12.330 --> 00:20:16.940
+Alex Donesky: And it will link you to some of the corollary and ancillary,
+
+49
+00:20:17.300 --> 00:20:30.750
+Alex Donesky: PRs, or standards. And… yeah, and so, engage there. There's a Discord, there's the CASA Discord, I'll drop an invite in the…
+
+50
+00:20:30.880 --> 00:20:40.540
+Alex Donesky: the, Zoom chat here as well, so if anyone's interested in, you know, we're… yeah, we're eager for other,
+
+51
+00:20:40.780 --> 00:20:45.409
+Alex Donesky: Adopters, and… We think that this is, like.
+
+52
+00:20:45.980 --> 00:20:53.399
+Alex Donesky: the path forward, or, you know, it's… it's… there's obviously a lot of paths forward, but we're… this is our chosen path forward for, sort of.
+
+53
+00:20:53.610 --> 00:21:04.030
+Alex Donesky: bringing our wallet into a more agnostic world where we're not particularly… we're not… no longer just an EVM only, …
+
+54
+00:21:04.310 --> 00:21:16.480
+Alex Donesky: wallet, and this is kind of the tip of the spear, for that effort. So I'll drop some links, in the Zoom chat, the CAPE25, MIP5, and, …
+
+55
+00:21:16.620 --> 00:21:24.490
+Alex Donesky: the CASA Discord invite link, so… looking for engagement, thoughts on any and all of those places.
+
+56
+00:21:28.040 --> 00:21:29.280
+Sam Wilson: Awesome, thank you so much.
+
+57
+00:21:29.620 --> 00:21:30.230
+Alex Donesky: Yeah.
+
+58
+00:21:34.650 --> 00:21:37.870
+Sam Wilson: If there aren't any questions, I guess we can move on to the next topic.
+
+59
+00:21:42.430 --> 00:21:49.370
+Sam Wilson: Which is EAP7920, which is by, Sola, who I think I saw on the call. Yeah, so I'll turn it over to you.
+
+60
+00:21:49.760 --> 00:21:56.299
+Sola: Hi, yeah. Thanks, Sam. … Yeah, just wanted to talk a little bit about 7920.
+
+61
+00:21:56.700 --> 00:22:00.660
+Sola: We merged the draft PR, I think, …
+
+62
+00:22:00.850 --> 00:22:05.929
+Sola: Three to four months ago, in, … Just, … Haven't, yet, kind of.
+
+63
+00:22:06.590 --> 00:22:17.220
+Sola: brought it up to the wallet devs, and I was hoping you'd do that on this call and see if I can get some feedback, and we'd like… we'd also like to move it into review, formal review, so if anyone,
+
+64
+00:22:17.810 --> 00:22:37.529
+Sola: Would love to be a part of that process, just let me know. I'll start off by just explaining what it is. So 7920, allows, basically batch signing of off-chain signatures, so EIP712 signatures. 712 signatures, are becoming pretty,
+
+65
+00:22:37.760 --> 00:22:43.050
+Sola: Quite popular, in the ecosystem, largely because they allow,
+
+66
+00:22:43.200 --> 00:22:53.830
+Sola: apps to interact with EOAs, without relying on state… state changes and state modifications. You can think of state changes as kind of, like, a slightly slower,
+
+67
+00:22:54.180 --> 00:23:11.760
+Sola: costly process, to go back and forth between two parties, and so both sides can kind of agree on… can kind of speak to each other without… without that process. It kind of speeds things up, and it doesn't require the EOA to hold any ETH. And so off-chain signatures are kind of…
+
+68
+00:23:11.930 --> 00:23:15.440
+Sola: Picking up a hyper-liquid polymarket wallet sign-in, and…
+
+69
+00:23:15.560 --> 00:23:23.339
+Sola: some payment protocols are also kind of picking it up. But with that kind of popularity, I think there's a need for
+
+70
+00:23:23.490 --> 00:23:30.830
+Sola: A workflow, sort of improvement to allow multiple off-chain messages to be signed in one signature.
+
+71
+00:23:30.940 --> 00:23:35.810
+Sola: And that's what 7920 does. It basically, allows the user to.
+
+72
+00:23:36.110 --> 00:23:52.990
+Sola: kind of look at a bunch of messages and say, okay, I agree with all this, and then put one signature on the set of messages, and then have those messages be verifiable by apps and also on-chain. And what's really cool about 7920 is that it allows,
+
+73
+00:23:53.560 --> 00:23:54.510
+Sola: …
+
+74
+00:23:54.730 --> 00:24:10.480
+Sola: in order to verify that any single message was signed, you don't need to know about what else was in the batch. You can just kind of only look for your message in the batch signature and verify that, and so it really lightens the load on apps.
+
+75
+00:24:10.570 --> 00:24:15.299
+Sola: In that regard. And some of the other benefits, I'll just kind of go through it.
+
+76
+00:24:16.410 --> 00:24:30.850
+Sola: Yeah, single signature, isolated verification, you don't need to know everything that was signed, you just need to know about the thing that you care about being assigned. And then it's also human-readable, and so EIP712, …
+
+77
+00:24:31.400 --> 00:24:44.540
+Sola: kind of… the major benefit of it is that you have full visibility into what you're signing, and 7920 kind of builds on top of that. And so, all the benefits of 712 are preserved. …
+
+78
+00:24:44.830 --> 00:24:59.630
+Sola: And then it's also compatible with, 712 signatures, so in the sense that you can write a verifier for 7920 that can also still verify 712 signatures that weren't, signed as 7920.
+
+79
+00:24:59.630 --> 00:25:11.680
+Sola: And, stepping back, I'll explain. What that means is you… essentially, a… you can think of a, a regular EIP712 signature as a batch of one.
+
+80
+00:25:11.800 --> 00:25:16.419
+Sola: Or a Merkle tree with only one entry, where the root and the,
+
+81
+00:25:16.610 --> 00:25:30.490
+Sola: leaf nodes are, are the same. And so that, that, that sort of, that primitive allows, 79 and 20-aware apps to validate signatures that were signed by, older wallets. And so it's backwards compatible.
+
+82
+00:25:30.490 --> 00:25:40.549
+Sola: And then it also allows for new verification modes. So, one of the cool things you can do with 7920 is you can say that, hey, this message,
+
+83
+00:25:41.140 --> 00:25:54.040
+Sola: And you can say that two messages can only be signed together, or you can say that, hey, these two messages can never be signed together. And so you can now, start to kind of… you can have full visibility into the batch if you care.
+
+84
+00:25:54.050 --> 00:26:03.790
+Sola: Or not… no visibility into the batch. And so that's kind of a cool, cool feature. But yeah, the full spec for this is up on…
+
+85
+00:26:03.830 --> 00:26:04.760
+Sola: the, …
+
+86
+00:26:06.020 --> 00:26:23.839
+Sola: on the, … we have a thread going on Ethereum Magicians, and then we also… we also are up on the Ethereum EIT website. And then I also set up a website just for 7920. It's called ERC7920.org. I'll paste a link in the Zoom here.
+
+87
+00:26:24.060 --> 00:26:41.679
+Sola: And I would love for, you know, folks to just sort of engage with it, and… and like I said earlier, we're looking for, kind of, reviewers, formal reviewers, for… for the next phase of this, and just anyone who has thoughts and ideas on ways to improve this.
+
+88
+00:26:41.680 --> 00:26:49.589
+Sola: I'll also put my, Discord and Twitter links on the website, so you can reach out to me anytime. But yeah, that's it.
+
+89
+00:26:52.880 --> 00:26:56.139
+Sam Wilson: That sounds super cool. What kind of use cases do you envision for this?
+
+90
+00:26:57.200 --> 00:27:05.130
+Sola: So I started working on this because I was working on a DEX that needed, … we were a gas-free decks, and, …
+
+91
+00:27:05.250 --> 00:27:06.959
+Sola: We had, …
+
+92
+00:27:07.190 --> 00:27:22.009
+Sola: we had this two-signature problem that everyone has. It's like, oh, you need to approve a permit 2 or 3 009, or whatever, transfer with… transfer with authorization. Basically, you have to do a token approval.
+
+93
+00:27:22.040 --> 00:27:37.120
+Sola: And then a swap approval right after each other. And, that was super frictional, and so this, for example, would allow the user to sign… to sign one message that has kind of all of it, everything in that one batch.
+
+94
+00:27:37.120 --> 00:27:55.240
+Sola: And also just kind of apps that are coming up, I see a lot of, like, Hyperliquid has an off-chain signature for, you know, setting leverage before you trade, and there's a bunch of pre-configurations that need to happen before you trade. That all can be batched into one.
+
+95
+00:27:55.240 --> 00:28:09.309
+Sola: placing multiple orders on their decks, without having to kind of post separate, you know, make separate calls, that, that would be huge. And also wallet sign-in. I noticed a lot of apps have,
+
+96
+00:28:09.770 --> 00:28:26.949
+Sola: kind of a separate signature. Well, they have one signature for the terms of service and the, privacy policy, saying, hey, I agree to both terms of service and privacy policy. With 78920, you can split that up and have the user, agree to
+
+97
+00:28:27.120 --> 00:28:36.180
+Sola: Privacy policy in one message, in terms of service, and then in another message, and then have the app kind of hold both signatures in isolation.
+
+98
+00:28:36.380 --> 00:28:49.120
+Sola: and verify them in com… verify them together if you want both… both of them signed in one batch, or verify them kind of separately, if you care about that. So just a lot of use cases for…
+
+99
+00:28:49.210 --> 00:28:57.819
+Sola: Workflows that require, sort of, multi-message workflows. And I think those are kind of increasingly going to become more prominent.
+
+100
+00:28:59.300 --> 00:29:02.089
+Sam Wilson: Cool, thanks. Oris, your hand's up.
+
+101
+00:29:02.400 --> 00:29:11.510
+Orest Tarasiuk (t1): A quick question, like you said, this is the problem everyone has, and has had for a while. Do you see, like, is there some predecessor work to this?
+
+102
+00:29:12.680 --> 00:29:30.849
+Sola: Not really. Oh, if you look at the full spec, there is a new JSON RPC method, that is needed, and it's… I called it Sign Type Data V5, but all it really does is that it computes, a,
+
+103
+00:29:30.990 --> 00:29:35.740
+Sola: The Merko, so it signs a… it signs a batch signature, computes…
+
+104
+00:29:35.750 --> 00:29:41.099
+Sola: the batch signature, but it also returns a Merkle root that you can use to verify the…
+
+105
+00:29:41.100 --> 00:30:00.330
+Sola: the batch, off-chain. And it does require developers to have a new verifier for 7920, so it's… there are things that need to be done, but I don't think these are large things, particularly because of the UX improvements that we get here. I think they're… they're quite…
+
+106
+00:30:00.330 --> 00:30:01.630
+Sola: They're pretty achievable.
+
+107
+00:30:02.900 --> 00:30:03.690
+Orest Tarasiuk (t1): Thank you.
+
+108
+00:30:05.700 --> 00:30:06.410
+Sam Wilson: Adam?
+
+109
+00:30:07.380 --> 00:30:17.320
+Adam Fuller: Yeah, the only other… the prior art which I was reminded of was the… I don't know if you've come across Bikeconomy's super transactions idea, which isn't sort of exactly equivalent, but…
+
+110
+00:30:17.530 --> 00:30:19.510
+Adam Fuller: They have an approach where they…
+
+111
+00:30:19.820 --> 00:30:22.809
+Adam Fuller: So, like, similarly, I think, at using my group to…
+
+112
+00:30:23.130 --> 00:30:26.210
+Adam Fuller: Essentially sign with one signature a bunch of different
+
+113
+00:30:26.970 --> 00:30:38.869
+Adam Fuller: on-chain calls, so that could be on one chain or across chains, and that's how they, sort of, like, make their, sort of, I think their modular execution environment makes multiple calls with one… with one user's signature, so I don't know if you've seen that.
+
+114
+00:30:38.870 --> 00:30:47.000
+Adam Fuller: But that… but there might be some interesting folks to talk… to talk to, or at least, check their work, because that's powering stuff in… their stuff in production right now.
+
+115
+00:30:48.070 --> 00:30:51.869
+Sola: Got it. I have not, I will check that out. Thanks for pointing that out.
+
+116
+00:30:55.740 --> 00:30:57.239
+Sam Wilson: So how does this, …
+
+117
+00:30:57.480 --> 00:31:04.560
+Sam Wilson: interact with 7702, and being able to do, like, multiple calls in the same,
+
+118
+00:31:05.710 --> 00:31:18.379
+Sam Wilson: account, right? I guess you could probably mix that with, what is it, 1271 to do, signatures on-chain? Or off-chain signatures, rather? So, like, have you thought about how it would interact with, like, rich accounts?
+
+119
+00:31:19.420 --> 00:31:25.839
+Sola: So… what I… I've kind of been thinking about this as almost like a… a, …
+
+120
+00:31:26.400 --> 00:31:32.960
+Sola: separate problem. So 7702 is really cool for, for allowing wallets, too.
+
+121
+00:31:33.170 --> 00:31:42.559
+Sola: kind of batch multiple transactions into one call. I've been thinking about this more as a way for developers to
+
+122
+00:31:42.690 --> 00:31:43.640
+Sola: …
+
+123
+00:31:44.340 --> 00:31:57.059
+Sola: talk to EOAs more efficiently, without relying on state change. So it's more of a… it's more for off-chain use cases, is what I've been kind of thinking about. Whereas 7702 is, I mean.
+
+124
+00:31:57.300 --> 00:32:04.180
+Sola: kind of a game changer for on-chain batching. 7920s are kind of similar, but for off-chain.
+
+125
+00:32:04.410 --> 00:32:08.919
+Sam Wilson: I think you can do off-chain with 7702 as well, though. You could sign a, …
+
+126
+00:32:09.320 --> 00:32:15.970
+Sam Wilson: A transaction that deploys your account, and then implements 1271 to do, like, a batch Verification?
+
+127
+00:32:18.490 --> 00:32:25.159
+Sam Wilson: And then you wouldn't actually have to play the transaction on-chain to get the results, you could just do it off-chain and see if the signature validates?
+
+128
+00:32:26.060 --> 00:32:32.200
+Sola: That is cool. I am just running into 1271, so I will check that out. That is pretty cool.
+
+129
+00:32:32.810 --> 00:32:37.500
+Sam Wilson: Yeah, just a thought, like, I have no idea if that's practical, but maybe something worth looking at.
+
+130
+00:32:41.480 --> 00:32:42.370
+Sola: Sounds good.
+
+131
+00:32:46.440 --> 00:32:50.200
+Sam Wilson: Cool. So, any other questions on 7920?
+
+132
+00:32:51.020 --> 00:32:56.160
+Sam Wilson: If not, thank you so much for presenting that. That's a really interesting proposal.
+
+133
+00:32:57.320 --> 00:33:04.679
+Sam Wilson: And then we can move on to, the gas limit override capability if, Adam is here. I think I saw you.
+
+134
+00:33:04.680 --> 00:33:05.070
+Adam Hodges @ Base: Yep.
+
+135
+00:33:05.070 --> 00:33:05.610
+Sam Wilson: Yeah.
+
+136
+00:33:06.400 --> 00:33:12.270
+Adam Hodges @ Base: … Hey everyone, I'm Adam. I work on Coinbase Smart Wallet. …
+
+137
+00:33:12.380 --> 00:33:17.530
+Adam Hodges @ Base: And we, have been pushing EFP5792
+
+138
+00:33:17.810 --> 00:33:26.220
+Adam Hodges @ Base: Pretty hard, which is the wallet send calls method. And one of the feedback that we get from our developers is.
+
+139
+00:33:26.390 --> 00:33:29.140
+Adam Hodges @ Base: You know, …
+
+140
+00:33:29.270 --> 00:33:33.830
+Adam Hodges @ Base: They have no way to communicate a gas limit for the calls that they're making to the wallet.
+
+141
+00:33:34.230 --> 00:33:43.829
+Adam Hodges @ Base: And so, … like, we use a 4337 account extracted wallet, and right now we're delegating
+
+142
+00:33:44.000 --> 00:33:50.750
+Adam Hodges @ Base: Gas… call gas limit estimation to the bundler, and the bundler doesn't always have context on the calls that are being made.
+
+143
+00:33:50.980 --> 00:33:55.570
+Adam Hodges @ Base: So, for example, like a DEX swap that's going through a swap router.
+
+144
+00:33:55.820 --> 00:34:05.350
+Adam Hodges @ Base: has pretty non-deterministic gas usage. It might get routed to any number of DEXs, and the bundler might hit one path that doesn't get flexed.
+
+145
+00:34:05.470 --> 00:34:11.659
+Adam Hodges @ Base: And when it's actually submitted on-chain, which can cause the user out to revert if it runs out of gas.
+
+146
+00:34:11.900 --> 00:34:17.750
+Adam Hodges @ Base: So… all that to say, with the old ETHIN transaction.
+
+147
+00:34:17.960 --> 00:34:29.550
+Adam Hodges @ Base: RPC, there was a parameter called gas, where the apps could just specify the gas limit, and I think most, wallets respected that gas limit when constructing the transaction.
+
+148
+00:34:29.780 --> 00:34:33.330
+Adam Hodges @ Base: There is no similar functionality in wallets and calls.
+
+149
+00:34:33.780 --> 00:34:35.550
+Adam Hodges @ Base: Which was…
+
+150
+00:34:35.780 --> 00:34:54.240
+Adam Hodges @ Base: it's one of the considerations, in the, in the bottom of the ERC it's discussed. I mean, it's tricky, right? Because, like, an app can't give an account abstracted wallet a call gas limit, because it doesn't know about the smart contracts that are actually being used by the wallet, doesn't have that context.
+
+151
+00:34:54.360 --> 00:35:11.099
+Adam Hodges @ Base: And similarly, the wallet doesn't really know that much context about the calls that are being made. So, my proposal here is to add a capability to 5792 to allow the apps to, per call that they're making, …
+
+152
+00:35:11.200 --> 00:35:18.349
+Adam Hodges @ Base: Specify a gas limit for each call, and then the wallet will be responsible for calculating any overhead that's associated with batching.
+
+153
+00:35:18.530 --> 00:35:20.790
+Adam Hodges @ Base: That… those calls on-chain.
+
+154
+00:35:21.270 --> 00:35:28.690
+Adam Hodges @ Base: So I've drafted up, kind of like a rough draft of NERC. I was hoping to get some
+
+155
+00:35:29.080 --> 00:35:38.210
+Adam Hodges @ Base: feedback, just kind of gauge interest from folks on the call, if anyone else has run into similar things with 5792, or thinks this could be useful.
+
+156
+00:35:38.400 --> 00:35:44.319
+Adam Hodges @ Base: Would appreciate, some discussion in the thread, or if anyone has any feedback here.
+
+157
+00:35:44.490 --> 00:35:50.929
+Adam Hodges @ Base: But I imagine people take some time to read it, but… It's hopefully pretty straightforward.
+
+158
+00:35:51.620 --> 00:35:52.300
+Adam Hodges @ Base: Yeah.
+
+159
+00:35:52.710 --> 00:35:53.610
+Adam Hodges @ Base: Also.
+
+160
+00:35:56.530 --> 00:35:57.989
+Sam Wilson: Awesome, thanks so much.
+
+161
+00:35:59.960 --> 00:36:03.560
+Sam Wilson: I mean, it makes sense, I think this is a… Proposal that we probably need.
+
+162
+00:36:05.520 --> 00:36:06.640
+Sam Wilson: …
+
+163
+00:36:07.270 --> 00:36:13.329
+Sam Wilson: Looking for feedback, same as, everybody else. Do you have any… do you have a prototype implementation already, or…?
+
+164
+00:36:13.820 --> 00:36:14.770
+Adam Hodges @ Base: …
+
+165
+00:36:15.060 --> 00:36:24.069
+Adam Hodges @ Base: Not… not really, no. I mean, the next thing I'm going to be talking about is the Server Wallet API, and I've implemented it on that API, and it's, …
+
+166
+00:36:24.830 --> 00:36:32.060
+Adam Hodges @ Base: But it's not really something that's exposed to developers currently, so I don't have a demo up today, but maybe that's something I work on.
+
+167
+00:36:36.430 --> 00:36:38.830
+Sam Wilson: Cool. Any, any questions on this one, or…?
+
+168
+00:36:39.890 --> 00:36:41.949
+Sam Wilson: Seems like we have some support in the chat.
+
+169
+00:36:43.490 --> 00:36:45.920
+Adam Fuller: I think one thing I've… …
+
+170
+00:36:46.180 --> 00:36:49.740
+Adam Fuller: Was the example at the moment is all, at the level of the…
+
+171
+00:36:50.690 --> 00:36:54.100
+Adam Fuller: Cool, rather than, like, there's not a way to provide a top level.
+
+172
+00:36:54.660 --> 00:37:01.420
+Adam Fuller: top-level gas, and, like, maybe that's intentional, and I don't know if you thought about So rather.
+
+173
+00:37:01.610 --> 00:37:05.470
+Adam Hodges @ Base: Yeah, it's intentional, and at least my rationale is that, like.
+
+174
+00:37:05.690 --> 00:37:16.770
+Adam Hodges @ Base: an app doesn't really know if or how the calls are going to be batched. Like, take, for example, like, an EOA wallet that's implemented in 5792.
+
+175
+00:37:16.960 --> 00:37:29.700
+Adam Hodges @ Base: like, what does it mean when you're giving an EOA wallet one gas limit for, like, 3 transactions? And how does it interpret that? Divided by 3, or like… yeah, so I think it really has to be, like, per call.
+
+176
+00:37:41.020 --> 00:37:41.750
+Adam Hodges @ Base: Yep.
+
+177
+00:37:42.100 --> 00:37:43.230
+Sam Wilson: Yeah, that makes sense.
+
+178
+00:37:45.100 --> 00:37:50.319
+Sam Wilson: I might, instead of calling it an override, I might call it a hint, just as a suggestion.
+
+179
+00:37:51.600 --> 00:37:52.180
+Adam Hodges @ Base: Sure.
+
+180
+00:37:53.340 --> 00:37:56.979
+Sam Wilson: Because in, like, the current APIs.
+
+181
+00:37:57.290 --> 00:38:02.269
+Sam Wilson: it sets the gas limit, whereas this one, I think, would just be hinting to the wallet to increase it.
+
+182
+00:38:02.660 --> 00:38:05.369
+Sam Wilson: Or maybe decrease it, but probably only increase.
+
+183
+00:38:07.220 --> 00:38:07.950
+Adam Hodges @ Base: Yeah.
+
+184
+00:38:08.100 --> 00:38:27.440
+Adam Hodges @ Base: I mean, I guess it's… well, so in my current implementation, at least, and I don't know that every wall would implement it this way, I take the limit that's passed in for each call, and I don't change that limit, but I do add the batching overhead on top of that to account for, like, our, like, execute batch function.
+
+185
+00:38:27.740 --> 00:38:30.740
+Sam Wilson: So it'd be, like, an override for that call, and that makes sense. Okay.
+
+186
+00:38:31.130 --> 00:38:35.210
+Adam Hodges @ Base: But, I mean, yeah, terminology, I don't know what is idiomatic here.
+
+187
+00:38:38.050 --> 00:38:39.820
+Sam Wilson: It's bike shedding. Call it whatever.
+
+188
+00:38:40.400 --> 00:38:41.080
+Adam Hodges @ Base: Shit.
+
+189
+00:38:45.190 --> 00:38:46.060
+Sam Wilson: Yep, go ahead.
+
+190
+00:38:46.840 --> 00:38:52.429
+Ivo Georgiev | Ambire: I still think that, hint makes way more sense than override, because…
+
+191
+00:38:52.720 --> 00:39:05.909
+Ivo Georgiev | Ambire: Even if you support the capability, in some cases, you might opt to ignore the value, while in other cases, you might opt to use it. I'm talking from the context of a wallet that, let's say, supports
+
+192
+00:39:05.940 --> 00:39:18.739
+Ivo Georgiev | Ambire: EOAs, pure EOAs, 7702, smart accounts, everything. So, in some cases, depending on your implementation and your design decisions, you might simply decide not to use it.
+
+193
+00:39:18.740 --> 00:39:29.069
+Ivo Georgiev | Ambire: Like, if you're estimating, like, a bunch of calls, and you have the capability to estimate all of them together, but…
+
+194
+00:39:29.170 --> 00:39:40.170
+Ivo Georgiev | Ambire: Some of them have the gas hint, and others don't. For example, one is a badge that comes from one app, and the other one is a badge that comes from another app that doesn't use.
+
+195
+00:39:40.320 --> 00:39:43.909
+Adam Hodges @ Base: This capability, so in this case, you'll have mixed calls.
+
+196
+00:39:43.910 --> 00:39:58.129
+Ivo Georgiev | Ambire: That some of them have the gas hints, others don't, and you would be able to estimate all of them together, so in this case, you have nothing to do with the… you cannot do anything with the hints for certain cause.
+
+197
+00:39:58.470 --> 00:40:11.049
+Ivo Georgiev | Ambire: Per se. So, I still think that hint makes a lot more sense than, than any other language, like override or gas limit. Something like gas limit hint, I think, makes the most sense.
+
+198
+00:40:13.370 --> 00:40:24.370
+Adam Hodges @ Base: Okay, I will say that, like, in my current proposal, I explicitly, if the capability is included on one call, it must be
+
+199
+00:40:24.700 --> 00:40:30.980
+Adam Hodges @ Base: included on all calls, but I'm curious to know more about the use case for you, like, partial… ….
+
+200
+00:40:30.980 --> 00:40:31.670
+Ivo Georgiev | Ambire: Yeah.
+
+201
+00:40:32.140 --> 00:40:43.560
+Ivo Georgiev | Ambire: For example, in Umbuyer, you can… we can receive, batches from multiple apps, and you can… you can batch them together. So, like, you can get a request from Uniswap, and…
+
+202
+00:40:43.560 --> 00:40:54.189
+Ivo Georgiev | Ambire: right after this, go on Aave, for example, without signing, and then sign them together. So, you would have, 5, 7, 9, 2 batches from multiple dApps, so, like, 2 batches.
+
+203
+00:40:56.540 --> 00:40:59.350
+Ivo Georgiev | Ambire: That would get bunched together into one transaction.
+
+204
+00:41:00.580 --> 00:41:07.869
+Adam Hodges @ Base: That's neat. Yeah, I'll have to look into that, but I agree that gas limit makes more sense here. And if you think it should be…
+
+205
+00:41:08.070 --> 00:41:10.119
+Adam Hodges @ Base: Remove the restriction.
+
+206
+00:41:10.440 --> 00:41:16.209
+Adam Hodges @ Base: For making it required on every call, then, we can certainly make that change as well.
+
+207
+00:41:16.500 --> 00:41:24.650
+Ivo Georgiev | Ambire: No, I actually think this restriction makes sense, but you can still have multiple requests from different apps, and then they cannot…
+
+208
+00:41:24.650 --> 00:41:37.579
+Ivo Georgiev | Ambire: like, they don't talk to each other, so they cannot enforce this restriction across different batches. But in one batch, I think it makes perfect sense. Like, in one particular batch, I don't… personally, I don't see a use case of…
+
+209
+00:41:37.590 --> 00:41:45.520
+Ivo Georgiev | Ambire: having some calls that are hinted and some not. Maybe someone can bring out such a use case, but I don't think so.
+
+210
+00:41:45.760 --> 00:41:46.149
+Sam Wilson: I mean….
+
+211
+00:41:46.150 --> 00:41:46.490
+Ivo Georgiev | Ambire: order.
+
+212
+00:41:46.490 --> 00:41:51.160
+Sam Wilson: The simple one would be, like, an approved swap, right? Like, Uniswap wouldn't know how…
+
+213
+00:41:51.660 --> 00:41:56.399
+Sam Wilson: How much gas they approved for a random token is gonna cost, but they would know how much the swap would.
+
+214
+00:41:56.550 --> 00:41:57.200
+Sam Wilson: Roughly.
+
+215
+00:41:57.200 --> 00:42:09.140
+Ivo Georgiev | Ambire: Yes, actually, I was gonna say the same thing. They can, no, but it adds extra overhead for them to implement this ERC, and it will be much easier for app developers if
+
+216
+00:42:09.220 --> 00:42:20.609
+Ivo Georgiev | Ambire: if actually you allow some calls to be unhinted, because they care about the gas of the call to their app, they don't care about the approval to use DT, for example.
+
+217
+00:42:24.250 --> 00:42:26.060
+Adam Hodges @ Base: Makes sense that…
+
+218
+00:42:26.310 --> 00:42:37.470
+Adam Hodges @ Base: you know, dApp developers would feel that way as a wallet developer. It's kind of also similarly hard to know the approval gas limit for any given token, but…
+
+219
+00:42:37.730 --> 00:42:44.369
+Adam Hodges @ Base: Yeah, maybe we move this into this discussion today, and I'll think more about it as well.
+
+220
+00:42:46.290 --> 00:42:55.220
+Ivo Georgiev | Ambire: Yeah, this should definitely be discussed separately, because from a wallet developer perspective, if you have a mixed batch, then it kind of becomes pointless.
+
+221
+00:42:57.120 --> 00:42:57.810
+Adam Hodges @ Base: Yep.
+
+222
+00:43:10.320 --> 00:43:10.990
+Sam Wilson: Awesome.
+
+223
+00:43:11.370 --> 00:43:15.160
+Sam Wilson: Yeah, thanks again for bringing that up, that's great, I think that's a super useful proposal.
+
+224
+00:43:15.260 --> 00:43:16.240
+Sam Wilson: …
+
+225
+00:43:16.930 --> 00:43:22.319
+Sam Wilson: I don't know if that covered or didn't cover 7836, but if you want to talk about that one too, please do.
+
+226
+00:43:22.460 --> 00:43:28.280
+Adam Hodges @ Base: Yeah, that's another one. So this ERC is in draft, …
+
+227
+00:43:28.430 --> 00:43:40.780
+Adam Hodges @ Base: it probably still needs some love, and I just wanted to bring it up, to… to urge people to, review it and give feedback. I guess I can introduce it. It's a, …
+
+228
+00:43:40.970 --> 00:43:55.490
+Adam Hodges @ Base: it's a… basically, it's a server API for, a wallet server API for, signing transactions, kind of similar to 5792, but without the signing step. So, it's kind of split up into
+
+229
+00:43:55.510 --> 00:44:04.110
+Adam Hodges @ Base: Wallet prepare calls and wallet send prepared calls, and kind of the usage pattern would be, think of, like, a, a session key.
+
+230
+00:44:04.280 --> 00:44:22.429
+Adam Hodges @ Base: kind of, that's been given to an app, and so the app still doesn't really know how to prepare a transaction and submit a transaction. That should still be the wallet's responsibility, but it does have a signer, and so it can sign without any wallet UI. And so…
+
+231
+00:44:22.630 --> 00:44:34.800
+Adam Hodges @ Base: The idea is the app gives the calls and prepare calls, which would generate, I don't know, in our case, like, a 4337 user op, and return that to the… to be signed by the client.
+
+232
+00:44:34.970 --> 00:44:52.910
+Adam Hodges @ Base: the client would sign it and then submit it through send prepared calls, which would go through the bundler. This is something that we found pretty useful for shielding our clients from the complexities of creating user ops and submitting them and, and stuff like that, so…
+
+233
+00:44:53.010 --> 00:45:07.940
+Adam Hodges @ Base: I think it also has a lot of use cases around, like, app wallets and session keys and stuff like that. So, anyone who's worked on anything similar to that, we'd love some feedback on the draft.
+
+234
+00:45:08.190 --> 00:45:10.540
+Adam Hodges @ Base: … And, yep.
+
+235
+00:45:11.410 --> 00:45:14.359
+Adam Hodges @ Base: There's a… there's a Telegram chat as well, if you…
+
+236
+00:45:14.470 --> 00:45:18.129
+Adam Hodges @ Base: like, an invite to that. I can figure out how to do that.
+
+237
+00:45:22.690 --> 00:45:26.669
+Sam Wilson: Yeah, I'm sure… I mean, I'd be interested in that, if you want to shoot that over.
+
+238
+00:45:28.560 --> 00:45:31.000
+Adam Hodges @ Base: Yeah, if I can figure out how to use Telegram.
+
+239
+00:45:31.610 --> 00:45:32.930
+Sam Wilson: Heh, yeah.
+
+240
+00:45:33.310 --> 00:45:34.040
+Sam Wilson: Yeah.
+
+241
+00:45:35.250 --> 00:45:36.350
+Adam Hodges @ Base: That's all I got.
+
+242
+00:45:36.840 --> 00:45:39.389
+Sam Wilson: Awesome, appreciate it. ….
+
+243
+00:45:40.060 --> 00:45:45.029
+Adam Fuller: I think… I think the one… there was one question on the spec of 7836, which was…
+
+244
+00:45:45.710 --> 00:45:48.520
+Adam Fuller: Why there are sponsors, like a list of…
+
+245
+00:45:49.820 --> 00:45:56.150
+Adam Fuller: a list of calls, that was the only dangling question, I think, in the telegram, as well as there's also some questions about some folks wanting to use it for slightly
+
+246
+00:45:56.620 --> 00:46:02.840
+Adam Fuller: different purposes, and I think keeping it focused makes sense, but the list of calls thing is an open question.
+
+247
+00:46:04.500 --> 00:46:08.489
+Adam Hodges @ Base: Yeah, I don't… I saw that question, I don't have the answer for that. It probably…
+
+248
+00:46:08.980 --> 00:46:13.580
+Adam Hodges @ Base: It might be just cruft from our initial draft, where we weren't really sure
+
+249
+00:46:13.740 --> 00:46:17.069
+Adam Hodges @ Base: what this was gonna look like, but I think, in practice.
+
+250
+00:46:17.600 --> 00:46:21.610
+Adam Hodges @ Base: We, we return a, a single,
+
+251
+00:46:22.130 --> 00:46:28.220
+Adam Hodges @ Base: call. So, I think… I think we could revise the… the accuracy.
+
+252
+00:46:33.080 --> 00:46:38.609
+Adam Fuller: Nice, and I think there are… there are a few, actually a few implementations of this in the world already, as in, like.
+
+253
+00:46:38.910 --> 00:46:41.730
+Adam Fuller: In different apps and libraries.
+
+254
+00:46:41.860 --> 00:46:45.560
+Adam Fuller: Most of which are aligned to couplers, like, slightly different, but…
+
+255
+00:46:45.680 --> 00:46:49.960
+Adam Fuller: This one, yeah, it feels like it would be worth trying to get this over the line.
+
+256
+00:46:50.130 --> 00:46:52.060
+Adam Fuller: So we can align those things, and…
+
+257
+00:46:52.570 --> 00:46:54.890
+Adam Fuller: Actually, because it seems to be already useful.
+
+258
+00:47:08.750 --> 00:47:14.189
+Sam Wilson: Awesome. Well, thanks, everybody. That's the end of scheduled discussion for today. If we want to chat a little bit, we can.
+
+259
+00:47:14.520 --> 00:47:19.269
+Sam Wilson: … If anybody has anything random they want to talk about, otherwise we can call it for today.
+
+260
+00:47:22.220 --> 00:47:23.320
+Sam Wilson: Yeah, go for it.
+
+261
+00:47:23.580 --> 00:47:30.059
+Ivo Georgiev | Ambire: Actually, what I brought up in the chat is quite interesting. So, you know the URC for signing with Ethereum?
+
+262
+00:47:30.070 --> 00:47:44.819
+Ivo Georgiev | Ambire: And, a while back, they decided that, they will use plain text rather than 712, for good reasons. There is a specific article, there is a blog article explaining it, I think it's linked in the ERC as well.
+
+263
+00:47:44.920 --> 00:47:51.769
+Ivo Georgiev | Ambire: Anyway, at this point, things are a bit different, and maybe it's worth revisiting.
+
+264
+00:47:55.320 --> 00:47:57.670
+Sam Wilson: Like, making sign in with Ethereum V2.
+
+265
+00:47:58.240 --> 00:48:01.020
+Ivo Georgiev | Ambire: Pretty much, yeah. Over 712.
+
+266
+00:48:01.340 --> 00:48:12.999
+Ivo Georgiev | Ambire: I'm not sure how people feel about this, this is why I'm bringing it up. Otherwise, I would have simply went on to draft it or something, but I personally am not sure whether this is a good idea.
+
+267
+00:48:18.320 --> 00:48:22.209
+Sam Wilson: So, what does 712 support?
+
+268
+00:48:22.340 --> 00:48:26.100
+Sam Wilson: bring for sign-in with Ethereum. It's pretty much only off-chain, right?
+
+269
+00:48:27.890 --> 00:48:40.650
+Ivo Georgiev | Ambire: Yeah, well, structured data is always better than plain text, right? So, if we're moving towards a more structured data point of view, then this can allow wallets to be more localized at one point.
+
+270
+00:48:40.650 --> 00:48:49.800
+Ivo Georgiev | Ambire: It can also allow better… better accessibility, and, yeah, basically that's the argument. Structured data should be better, in theory.
+
+271
+00:48:50.970 --> 00:48:54.169
+Sam Wilson: I mean, it is still structured data, it's just a different kind of structure.
+
+272
+00:48:54.310 --> 00:48:57.880
+Sam Wilson: … But I do see your point, it would be nice. I don't, like…
+
+273
+00:48:58.140 --> 00:49:03.460
+Sam Wilson: Could you ever get rid of the plain text parser, or would that always continue to exist as, like, a legacy thing?
+
+274
+00:49:05.090 --> 00:49:17.809
+Ivo Georgiev | Ambire: Well, I'm not sure. If everyone migrates to the new EAP, then it's easy to get rid of it. I mean, it's a matter of dApps moving to the new ERC, if there is a new ERC.
+
+275
+00:49:24.920 --> 00:49:29.560
+Sam Wilson: Yeah, I mean, as a non-wallet developer who has to do zero work for this, yeah, go for it.
+
+276
+00:49:29.750 --> 00:49:30.250
+Sam Wilson: It's always.
+
+277
+00:49:30.250 --> 00:49:33.389
+Ivo Georgiev | Ambire: No, I'm not… I actually… I'm not… I'm not sure.
+
+278
+00:49:36.640 --> 00:49:40.040
+Ivo Georgiev | Ambire: It doesn't seem to be that many strong points for it.
+
+279
+00:49:49.200 --> 00:49:49.689
+Adam Fuller: Yeah, I feel like….
+
+280
+00:49:49.690 --> 00:50:01.010
+Ivo Georgiev | Ambire: Usually, the strong point was brought up earlier in the conversation, and I totally forgot about it. It can be part of the barge signing, so that's one cool thing. And you can get rid of…
+
+281
+00:50:01.160 --> 00:50:07.819
+Ivo Georgiev | Ambire: Stuff like requiring people to sign privacy policy, terms of use, and log in separately.
+
+282
+00:50:08.000 --> 00:50:12.080
+Ivo Georgiev | Ambire: And without this, you cannot put it as part of the Merco badge.
+
+283
+00:50:13.160 --> 00:50:14.739
+Ivo Georgiev | Ambire: So yeah, that's one thing.
+
+284
+00:50:21.750 --> 00:50:32.449
+Orest Tarasiuk (t1): I meant to follow up on that, actually. Why is it valuable to split the terms and conditions and the privacy policy signatures?
+
+285
+00:50:33.000 --> 00:50:37.049
+Orest Tarasiuk (t1): Is this a legal requirement, or why would this be valuable?
+
+286
+00:50:37.050 --> 00:50:55.160
+Ivo Georgiev | Ambire: I don't know about Terms of Use and privacy policy, but you certainly have to split login from Terms of Use, specifically because of how the sign-in with Ethereum proposal is written, because it bounds you to certain… to a certain message, and you cannot add any additional things to that message.
+
+287
+00:50:55.160 --> 00:51:12.720
+Ivo Georgiev | Ambire: So, this is one potential argument. If you require a few separate signatures to log into your dApp, then with the batching proposal that was proposed, that was discussed earlier in the call, then this can happen. But that's only if it all uses 712.
+
+288
+00:51:16.130 --> 00:51:17.070
+Orest Tarasiuk (t1): Gotcha.
+
+289
+00:51:36.450 --> 00:51:40.409
+Sam Wilson: Cool. Yeah, I think it's a good idea to look into. Thanks for bringing it up.
+
+290
+00:51:40.820 --> 00:51:42.240
+Sam Wilson: Yeah, that's a great idea.
+
+291
+00:51:42.410 --> 00:51:48.939
+Sam Wilson: Awesome. So I think, with that, I'm going to call it here. Thanks, everybody, for coming out, a lot of good discussion today. We'll see you all in a month.
+
+292
+00:51:50.150 --> 00:51:51.560
+Orest Tarasiuk (t1): See you, thank you guys.
+
+293
+00:51:51.790 --> 00:51:52.550
+Sola: Thanks, guys.
+

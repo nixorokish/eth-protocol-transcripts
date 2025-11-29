@@ -1,0 +1,1946 @@
+WEBVTT
+
+1
+00:05:12.770 --> 00:05:15.350
+Parithosh Jayanthi: Hey? Can you hear? People hear me? Okay.
+
+2
+00:05:17.300 --> 00:05:17.790
+spencer-tb: Yeah.
+
+3
+00:05:29.450 --> 00:05:31.700
+Justin Florentine (Besu): Good Eth. O'clock. Everyone.
+
+4
+00:05:34.170 --> 00:05:38.559
+Parithosh Jayanthi: Here we go, and you have a bird in your background. Justin.
+
+5
+00:05:42.680 --> 00:05:45.090
+Justin Florentine (Besu): It's always sunny in Philadelphia, my friend.
+
+6
+00:05:48.300 --> 00:05:52.510
+Barnabas: Is it just a machine? Or is it like a green screen where you just fake it?
+
+7
+00:06:01.870 --> 00:06:03.929
+Barnabas: That's the green screen. Yeah.
+
+8
+00:06:04.370 --> 00:06:06.830
+Parithosh Jayanthi: Video doesn't prove anything. Justin.
+
+9
+00:06:07.920 --> 00:06:09.529
+Barnabas: It's all AI generated.
+
+10
+00:06:22.580 --> 00:06:24.370
+Francis: A month. They are fine.
+
+11
+00:06:31.080 --> 00:06:32.350
+Francis: that's what.
+
+12
+00:06:56.710 --> 00:07:00.140
+Parithosh Jayanthi: Let's give people another minute to join. And then we can start.
+
+13
+00:08:20.970 --> 00:08:26.589
+Parithosh Jayanthi: Okay, let's start out then. And people can still filter in slowly.
+
+14
+00:08:27.372 --> 00:08:33.539
+Parithosh Jayanthi: And yeah, thanks will for mentioning. I think we do have to rename the the testing call.
+
+15
+00:08:37.659 --> 00:08:43.310
+Parithosh Jayanthi: Okay? So the 1st thing we yeah, thank you. And we should be live
+
+16
+00:08:44.707 --> 00:08:56.250
+Parithosh Jayanthi: the 1st topic I wanted to bring up was, Petra retrospectives? We have our blog post lives that we that I've shared in the chat here.
+
+17
+00:08:58.060 --> 00:09:25.830
+Parithosh Jayanthi: one second. Yeah, we have a blog post live that I've shared in the chat here, and the blog post talks about the approach used for figuring out what the blob count was for Petra. So the proposal was 6 9, and we've had the blob count live for about a month now, or a couple of weeks at least, and Sam and Andrew from the team have done an analysis based on data from Homestakers to figure out how that number actually played out on Meannet
+
+18
+00:09:26.352 --> 00:09:34.829
+Parithosh Jayanthi: tldr of the post. The estimation was actually quite good. I think 6 9 sort of hit, the perfect mark of what the network is able to handle
+
+19
+00:09:35.140 --> 00:09:36.670
+Parithosh Jayanthi: potentially today.
+
+20
+00:09:37.283 --> 00:09:41.310
+Parithosh Jayanthi: Which is good news for pierdas estimation topics.
+
+21
+00:09:42.263 --> 00:09:56.400
+Parithosh Jayanthi: Yeah, we'd suggest people to have a look at that. If there's any discussions and please bring it up in the Acd issue next week, or we can discuss our own. If people want more data or more
+
+22
+00:09:57.110 --> 00:09:59.790
+Parithosh Jayanthi: information about any of the estimations.
+
+23
+00:10:03.220 --> 00:10:16.569
+Parithosh Jayanthi: The next topic I had was the gas limit. So we've had gas limit at 60 million on both sepulia as well as Hoodie for about a week. 2 weeks now.
+
+24
+00:10:17.392 --> 00:10:35.040
+Parithosh Jayanthi: There was an initial post made by Sam looking into the data, and in general it does any. Has any other client team spent some time on the topic? Anything you guys have observed anything we should observe over the next week or 2.
+
+25
+00:10:44.060 --> 00:10:54.789
+Parithosh Jayanthi: Okay? Then, I guess. Over the next couple of days we should slowly start signaling a gas limit, increase officially as well. But we can do that, Async.
+
+26
+00:10:55.760 --> 00:11:01.940
+Parithosh Jayanthi: and it would be great if client teams can spend some time over the next days looking through the metrics and making sure we're not missing anything.
+
+27
+00:11:04.780 --> 00:11:06.359
+chanderprakash sharma: Gmgm everyone.
+
+28
+00:11:10.600 --> 00:11:17.447
+Parithosh Jayanthi: Yeah. Okay. So the next topic I have on the list is, Fusaka devnet 0.
+
+29
+00:11:18.954 --> 00:11:19.520
+Barnabas: Burnt.
+
+30
+00:11:20.045 --> 00:11:26.119
+Barnabas: We go to that. Can we? 1st signal to 48 million done to 60
+
+31
+00:11:27.830 --> 00:11:30.889
+Barnabas: instead of jumping straight to 60 on main? Not, I mean.
+
+32
+00:11:33.650 --> 00:11:37.309
+Parithosh Jayanthi: Yeah, do fan teams have an opinion on the steps?
+
+33
+00:11:37.980 --> 00:11:39.850
+Parithosh Jayanthi: What would you guys prefer?
+
+34
+00:11:42.870 --> 00:11:45.450
+Parithosh Jayanthi: Yeah, commute. And then pen meeting.
+
+35
+00:11:45.450 --> 00:11:46.050
+Kamil Chodoła: Yeah.
+
+36
+00:11:46.757 --> 00:11:59.100
+Kamil Chodoła: In my opinion, we already see, like 1716 or 17% of validators already signaling 60 million. So I guess they won't go for sure lower
+
+37
+00:12:00.315 --> 00:12:03.170
+Kamil Chodoła: we do not have probably anything
+
+38
+00:12:03.500 --> 00:12:15.979
+Kamil Chodoła: problematic, for now to go for 2 60, both from our tests and from the research done by Sam. Seems like 60 is like a reasonable option
+
+39
+00:12:16.230 --> 00:12:27.270
+Kamil Chodoła: would be, for sure, nice to see smaller steps, but I don't think it is necessarily needed for 60, so, like 60, we can go directly, we should consider smaller steps moving forward.
+
+40
+00:12:29.460 --> 00:12:32.690
+Kamil Chodoła: not not like very smaller steps, but for sure.
+
+41
+00:12:33.410 --> 00:12:43.590
+Kamil Chodoła: not going for 30, 40, maybe going by every 2015, 20, but 60 seems like a
+
+42
+00:12:44.260 --> 00:12:45.810
+Kamil Chodoła: no brainer, at least, for now.
+
+43
+00:12:46.280 --> 00:12:51.900
+Barnabas: The only reason I bring up this point is because we're almost doubling the gas limit now.
+
+44
+00:12:52.170 --> 00:12:54.840
+Barnabas: which is like a very, very big change.
+
+45
+00:13:01.850 --> 00:13:03.960
+Parithosh Jayanthi: Yeah, Ben, do you wanna go.
+
+46
+00:13:05.506 --> 00:13:13.029
+Ben Adams: Yeah, I was just gonna say something similar to how come they landed? That 60 million seems post
+
+47
+00:13:13.200 --> 00:13:16.189
+Ben Adams: Hector, with the Cold exchange.
+
+48
+00:13:17.640 --> 00:13:25.830
+Ben Adams: Seems okay above 60, we should, you know, think about a more cautious
+
+49
+00:13:27.370 --> 00:13:35.219
+Ben Adams: you know, if you want to go to like 120. I don't think we should double again. We should take it in more cautious steps. Beyond that.
+
+50
+00:13:37.170 --> 00:14:02.200
+Parithosh Jayanthi: Yeah, I think the argument that was presented that also made sense to me was that gas limit changes tends to have a decent chunk of coordination effort. And if we haven't noticed any big problems until 60 million, then we can basically go to 60 million and then spend that extra coordination budget for smaller jumps post 60 million. So we could even do 10 million instead of expecting a larger jump beyond that number
+
+51
+00:14:03.040 --> 00:14:09.190
+Parithosh Jayanthi: seems to be so far that client teams are okay with that approach. Are there any objections to that approach?
+
+52
+00:14:19.500 --> 00:14:37.860
+Parithosh Jayanthi: Yeah. And bringing up a point, Tony posted in chat? Cl, if it's true that the Cl. Max limit size is 2 and a half MB. Which is something we should spend some time figuring out as well. Then we can hit 10 MB, only at 65 million. So 60 should actually be safe.
+
+53
+00:14:47.320 --> 00:15:01.000
+Parithosh Jayanthi: Okay, then, I think this week we can spend some time on getting some statistics for the Max Cl size and it seems like that shouldn't be a blocker for the next jump. At least, if anything, it would be the blocker for jumps after that.
+
+54
+00:15:07.510 --> 00:15:11.070
+Parithosh Jayanthi: Okay, any other updates on
+
+55
+00:15:11.450 --> 00:15:22.760
+Parithosh Jayanthi: the 60 million topic, at least. For now we will again talk about gas limit towards the end. But just to close up the 60 million topic, do we have anything else for now?
+
+56
+00:15:27.790 --> 00:15:28.720
+Parithosh Jayanthi: Okay.
+
+57
+00:15:30.191 --> 00:15:53.159
+Parithosh Jayanthi: moving on to the next agenda item, there's 1 Prdas announcement, which is, we've had a Prdas testing channel. Up until now. We've decided to sunset that as well as sunsetting Prdas Devnet 7. All Prdas testing, moving forward will happen on the Fusaka testing stream. So we have Fusaka Devnet 0,
+
+58
+00:15:53.160 --> 00:16:04.400
+Parithosh Jayanthi: and that also implies that all the chats will be moving to the interrupt chat. So please move your conversation there and keep them in threads as much as possible, so that the
+
+59
+00:16:04.550 --> 00:16:06.749
+Parithosh Jayanthi: there's an easier overview for the Channel.
+
+60
+00:16:09.480 --> 00:16:15.740
+Parithosh Jayanthi: and I'll hand it over to Barnabas for Fusaka Devnet. 0 updates over the last week. Do you want to go.
+
+61
+00:16:16.330 --> 00:16:20.425
+Barnabas: Sure. So 0 started out with
+
+62
+00:16:21.550 --> 00:16:31.050
+Barnabas: electrogenesis, and we port fullu in epoch 256, where we kept the maximum blob count at 9,
+
+63
+00:16:31.430 --> 00:16:37.840
+Barnabas: then 256 epochs. Later, in in epoch 2, 512, we have increased the
+
+64
+00:16:38.440 --> 00:16:56.800
+Barnabas: maximum count to 12 with Bpo. With the 1st Bpo. Then in the second Bpo. 250 60 pops. Later we increase it to 15, then to 18. Then we went back down to 9, and now, in a few minutes we're going to go up to 20.
+
+65
+00:17:00.620 --> 00:17:01.250
+Parithosh Jayanthi: Do you have.
+
+66
+00:17:01.250 --> 00:17:02.550
+Barnabas: All the Bpo's work.
+
+67
+00:17:04.050 --> 00:17:13.129
+Parithosh Jayanthi: And did all the Bpo's lead to all clients successfully upgrading and downgrading? Or was there any any bug around.
+
+68
+00:17:13.589 --> 00:17:22.169
+Barnabas: We we didn't see any forks we saw some other peering issues in different plans, but none of them seem to be related to Bpo itself.
+
+69
+00:17:24.660 --> 00:17:38.080
+Parithosh Jayanthi: Awesome. And I think, before Fusaka went live. You also sent the newer version block types to the network. Right? Was that test also conducted as expected? Or was there anything founder.
+
+70
+00:17:38.920 --> 00:17:40.379
+Barnabas: Yeah, there was no issues.
+
+71
+00:17:42.880 --> 00:17:45.370
+Parithosh Jayanthi: Awesome, very promising, that. Thank you.
+
+72
+00:17:47.475 --> 00:18:00.930
+Parithosh Jayanthi: Anything else for fusap and net 0. What else is planned for the network? Is it just the last Ppo, and then some sync testing, or, are you gonna be doing malicious column withholding? What's the plan?
+
+73
+00:18:02.273 --> 00:18:08.019
+Barnabas: I think the best would be to do some testing and see if clients are able to back to you. Now
+
+74
+00:18:08.890 --> 00:18:10.249
+Barnabas: we check one thing.
+
+75
+00:18:14.650 --> 00:18:18.719
+Parithosh Jayanthi: Awesome, and we also have the probe tool that.
+
+76
+00:18:18.950 --> 00:18:33.380
+Parithosh Jayanthi: Yeah, I'm not sure if it was presented on this call yet, but we have a tool built by the pro lab team that would request certain columns that the node is advertising at least based on the Cse to make sure that the
+
+77
+00:18:33.590 --> 00:18:36.859
+Parithosh Jayanthi: advertised columns are actually being delivered on the network.
+
+78
+00:18:37.370 --> 00:18:47.199
+Parithosh Jayanthi: So it should be integrated, I guess, over the next few days into the testing stack, and then we'll, I guess, reach out to you if your node is lying.
+
+79
+00:18:52.360 --> 00:19:03.319
+yiannisbot: Yeah 100%. This is ready. I'm actually going to share the link in the the Github Repository link in the chat. And happy to receive feedback, and
+
+80
+00:19:03.460 --> 00:19:04.800
+yiannisbot: of course reach out.
+
+81
+00:19:04.960 --> 00:19:07.959
+yiannisbot: Oh, yeah, someone shared it already. Yeah, Barnabas, thanks.
+
+82
+00:19:09.820 --> 00:19:13.360
+Barnabas: Yeah, we are the building ui, for it.
+
+83
+00:19:14.720 --> 00:19:19.739
+yiannisbot: Excellent. Thank you. Yeah. Let us know. In case of problems, or whatever else.
+
+84
+00:19:25.340 --> 00:19:27.012
+Parithosh Jayanthi: Okay, thank you.
+
+85
+00:19:27.960 --> 00:19:36.400
+Parithosh Jayanthi: perfect. Moving on to the next topic. Could we get an update on where client teams are with data custody.
+
+86
+00:19:41.520 --> 00:19:48.070
+Manu: I can start for freedom. So yes, we implemented validator custody.
+
+87
+00:19:48.320 --> 00:19:53.639
+Manu: but we did not yet implement the backfill.
+
+88
+00:19:54.240 --> 00:19:56.230
+Manu: That means that if you start
+
+89
+00:19:56.910 --> 00:20:08.439
+Manu: with a given validator, count and you increase it, we won't backfill the already past blocks.
+
+90
+00:20:08.890 --> 00:20:12.300
+Manu: After having increased the valid account.
+
+91
+00:20:13.300 --> 00:20:18.140
+Parithosh Jayanthi: And is this something that you guys plan on implementing? Or what is the.
+
+92
+00:20:18.140 --> 00:20:22.660
+Manu: It is under. Yes, implementation is in progress right now.
+
+93
+00:20:24.430 --> 00:20:27.390
+Barnabas: Is this causing issues in implementation?
+
+94
+00:20:27.620 --> 00:20:29.720
+Barnabas: Is this something that we need to have.
+
+95
+00:20:31.900 --> 00:20:42.070
+Manu: Let me check if Casey is on the call now. Yeah. As far as I know, there is no no issue with implementation right now with backfill and.
+
+96
+00:20:45.490 --> 00:21:03.199
+Parithosh Jayanthi: Yeah, I think issues with implementation. The worry was that it's been taking so long. Could we maybe hear from other clients as well as to what the status is and like what the eta is. Is this a feature? We're expecting to have feature complete by the next step, net, cycle? Or will this take another
+
+97
+00:21:03.450 --> 00:21:05.629
+Parithosh Jayanthi: month or 2 months to implement.
+
+98
+00:21:06.730 --> 00:21:17.149
+pawan: I think, for lighthouse. We're expecting to have it done by end of this week, like at least before the interrupt event. So
+
+99
+00:21:17.390 --> 00:21:28.300
+pawan: yeah, like, it is a little tricky to implement mainly because of the backfill like when you mentioned, and also like dynamically, when the validator
+
+100
+00:21:28.840 --> 00:21:38.824
+pawan: when the custody count changes based on the number of validators you need to backfill. Accordingly, before advertising the updated
+
+101
+00:21:39.670 --> 00:21:40.870
+pawan: web before
+
+102
+00:21:41.120 --> 00:21:51.319
+pawan: updating the advertised Cgc, so it's a little bit tricky implementation wise, but I think we should be able to get it done before the interrupt event.
+
+103
+00:21:56.830 --> 00:22:03.139
+Parithosh Jayanthi: Okay, thank you. Maybe we 1st finish client updates, and then I can
+
+104
+00:22:03.980 --> 00:22:06.140
+Parithosh Jayanthi: allow Francis to speak. If that's okay.
+
+105
+00:22:07.730 --> 00:22:14.960
+Parithosh Jayanthi: are there any other client teams here? Is it niche? Or someone else here? Yeah.
+
+106
+00:22:15.190 --> 00:22:16.009
+Agnish Ghosh: Yeah. Yeah.
+
+107
+00:22:16.280 --> 00:22:27.939
+Agnish Ghosh: So from members, we have validated custody. We have the access column backfilling. But I think there was a recent Pr.
+
+108
+00:22:28.550 --> 00:22:35.610
+Agnish Ghosh: yeah, I think, Francesco. And yeah, so okay, this.
+
+109
+00:22:35.610 --> 00:22:36.440
+Parithosh Jayanthi: One intent.
+
+110
+00:22:36.440 --> 00:22:45.740
+Agnish Ghosh: Okay, this is March. So I I don't think I don't. I don't. Yeah, I don't think we do need valid, validated custody backfilling.
+
+111
+00:22:46.190 --> 00:22:58.229
+Agnish Ghosh: Oh, because you can check the you can check this new Pr, I think it says that only update the new Cgc after
+
+112
+00:22:58.630 --> 00:23:02.229
+Agnish Ghosh: the retention period. Something like that.
+
+113
+00:23:02.957 --> 00:23:06.649
+Agnish Ghosh: But we do have the mechanism there.
+
+114
+00:23:08.670 --> 00:23:14.070
+Agnish Ghosh: There are a few issues. I think I raised this at least 2 weeks ago
+
+115
+00:23:14.240 --> 00:23:19.550
+Agnish Ghosh: that is with validator custody we have a dynamic da
+
+116
+00:23:19.980 --> 00:23:25.840
+Agnish Ghosh: and the da can like. Oh, let's say, if you're using key manager based setups.
+
+117
+00:23:25.940 --> 00:23:31.199
+Agnish Ghosh: Oh, the da can change or, like the validator custody can change
+
+118
+00:23:31.980 --> 00:23:36.780
+Agnish Ghosh: at any given time. Slot, and let's say it can even change
+
+119
+00:23:38.770 --> 00:23:45.870
+Agnish Ghosh: like let's say at slot start, and in the 1st 2 seconds, so oh.
+
+120
+00:23:46.040 --> 00:23:50.099
+Agnish Ghosh: it it can. It can be a situation where your custody count is 20,
+
+121
+00:23:50.330 --> 00:23:57.589
+Agnish Ghosh: and right at like 800 ms into the slot. It can become like 54.
+
+122
+00:23:57.960 --> 00:24:03.317
+Agnish Ghosh: And you have, like around 200 ms or 2 50 ms to
+
+123
+00:24:04.450 --> 00:24:17.070
+Agnish Ghosh: maybe get the excess columns into your day from gossip or something like maybe so there are. There are different ways you can tackle, but I think
+
+124
+00:24:17.730 --> 00:24:26.720
+Agnish Ghosh: I think the best approach would be to have a very a constant da condition.
+
+125
+00:24:26.940 --> 00:24:31.600
+Agnish Ghosh: Either I do samples per slot, or I do number of columns
+
+126
+00:24:31.840 --> 00:24:36.780
+Agnish Ghosh: if I'm a super note, because if validator custody moves all over the place.
+
+127
+00:24:37.290 --> 00:24:40.120
+Agnish Ghosh: I'm not very sure about the network stability.
+
+128
+00:24:42.110 --> 00:24:58.130
+Parithosh Jayanthi: Isn't the idea that the Csc. Etc. Only changes on the epoch transition. So even if your validator custody changes, you will have a certain amount of time before you have to make that change right? It's not that you would have only a couple of 100 ms to react.
+
+129
+00:24:59.880 --> 00:25:00.520
+Agnish Ghosh: Oh.
+
+130
+00:25:01.130 --> 00:25:10.960
+Agnish Ghosh: I I'm not sure if that is clearly mentioned in respect. I think it's more of a Cl implementation detail, although I may not be sure but
+
+131
+00:25:13.950 --> 00:25:18.060
+Parithosh Jayanthi: Yeah, Francesco, do you wanna go? Maybe you have some insight on that.
+
+132
+00:25:18.060 --> 00:25:26.229
+Francesco: Yeah. So I mean, 1 1 thing is, I guess everyone probably should take a look at this. Pr, I think we discussed it in in a thread. So
+
+133
+00:25:26.570 --> 00:25:35.699
+Francesco: maybe this might also be why, Agnish might be the only one that has seen it already. But yeah, basically, the Pr. I think, should simplify the situation
+
+134
+00:25:35.700 --> 00:25:56.760
+Francesco: quite a bit, and I guess it was Justin already merged it, because it essentially doesn't require a backfill when your custody increases. It just says that you can. Essentially, you're free to just wait until the custody period is passed, and you actually have already kind of organically done the not backfilling, but like you've kept up with the chain.
+
+135
+00:25:57.400 --> 00:26:00.729
+Francesco: So you you already have all of the things that you need at that point
+
+136
+00:26:00.800 --> 00:26:29.710
+Francesco: to increase your advertised custody. So I think that that kind of simplifies like both of the questions that were posed like both on the backfilling size and on the side of basically, it's not quite as dynamic, because it doesn't really jump all over the place like, even if it increases by, you know, 1st by one, and then by 3, and then by 5. It doesn't really matter. You're still going to wait until the 2 weeks or 18 days, or whatever has passed before actually making any changes.
+
+137
+00:26:30.200 --> 00:26:55.349
+Francesco: That's on the increasing side. But yeah, the decreasing side is is generally easier, like, at least on the you know, backfilling part, you just don't throw away anything, and there's there's nothing to to backfill, because you already have more than you actually need. So to me, it seems like this actually takes care of both of the concerns, like both on the backfilling sides and on the side of the of things, being a bit like too jumping all over the place.
+
+138
+00:26:55.951 --> 00:27:02.270
+Francesco: But yeah, for the second one, if this is not enough for some reason I
+
+139
+00:27:02.580 --> 00:27:09.330
+Francesco: so the spec doesn't say things like you. You mentioned pari around, only changing at epoch transitions, or something like that.
+
+140
+00:27:09.540 --> 00:27:19.550
+Francesco: I, personally would prefer not to make the spec too rigid around these things. But I think maybe we could have some note that essentially just says that it's a bit up to implementers.
+
+141
+00:27:20.151 --> 00:27:24.200
+Francesco: Again, if needed. On top of of already this pr, that was merged.
+
+142
+00:27:24.470 --> 00:27:40.039
+Francesco: Because, yeah, in principle, it's definitely not. It shouldn't be the case that I mean, even in the old spec. It wasn't meant to be the case that if the custody increased 0 point 5 seconds before you were about to attest, now you have to throw away your attestation, and and make sure that you scramble to
+
+143
+00:27:40.040 --> 00:27:56.459
+Francesco: to subscribe to new subnets, or something like that, like it was definitely always meant to be that there is some flexibility to implementers to kind of handle this kind of changes in custody in a way that makes sense for them.
+
+144
+00:27:56.737 --> 00:28:04.030
+Francesco: But yeah, I don't know. I I think 1st of all, I guess people should take a look at this, and then if something is needed on top, we can discuss that.
+
+145
+00:28:06.530 --> 00:28:15.810
+Parithosh Jayanthi: Awesome. Thank you. Manu, do you wanna go? Or should we have Justin 1st present the Pr. And then, if there are questions, discuss it. After that.
+
+146
+00:28:17.726 --> 00:28:20.099
+Manu: Yeah, as you wishes. I have some
+
+147
+00:28:20.430 --> 00:28:25.369
+Manu: concerns and remark about this very dark custody. Pull request.
+
+148
+00:28:25.540 --> 00:28:26.930
+Manu: But yes, maybe.
+
+149
+00:28:27.370 --> 00:28:34.209
+Parithosh Jayanthi: So that we are all on the same page about what this Pr aims to achieve. And then we can do questions.
+
+150
+00:28:34.210 --> 00:28:34.890
+Manu: Okay.
+
+151
+00:28:35.230 --> 00:28:41.030
+Justin Traglia: Hi, yeah, sorry I didn't realize you guys weren't aware this was merged, I mean.
+
+152
+00:28:41.460 --> 00:28:48.533
+Justin Traglia: Ignish brought up some concerns with me privately, and I made a Pr to what I thought would resolve those concerns.
+
+153
+00:28:49.360 --> 00:28:54.459
+Justin Traglia: I mean it kind of just adjusts when and like when we drop
+
+154
+00:28:55.110 --> 00:29:01.979
+Justin Traglia: custodied sidecars, or like the columns. And also when we start backfilling like a niche product that
+
+155
+00:29:02.710 --> 00:29:12.579
+Justin Traglia: like when custody changes, if it changes more frequently, it might be an issue to like constantly delete and re backfill. So we sort of came up with like a
+
+156
+00:29:13.400 --> 00:29:15.760
+Justin Traglia: unless I don't know how to say it
+
+157
+00:29:16.590 --> 00:29:21.740
+Justin Traglia: like something that wouldn't require backfilling, like every other sneapock or something.
+
+158
+00:29:23.400 --> 00:29:25.551
+Justin Traglia: I mean to me it makes sense. You just
+
+159
+00:29:26.580 --> 00:29:40.159
+Justin Traglia: you're required to custody columns which at pretty much any point in time. Sorry you're required to continue keeping columns which you are required to custody at any point in time, and then, like
+
+160
+00:29:40.650 --> 00:29:45.659
+Justin Traglia: after the blob the retention period is over for that blob, you can drop the column.
+
+161
+00:29:46.580 --> 00:29:53.630
+Justin Traglia: And I mean, yeah, pretty much. But oh, Manny, what questions do you have or concerns.
+
+162
+00:29:54.840 --> 00:29:55.790
+Manu: Yeah.
+
+163
+00:29:57.920 --> 00:30:01.809
+Manu: Actually, I know some big node operators have
+
+164
+00:30:01.990 --> 00:30:23.089
+Manu: 2 set of snodes. For example, they have, let's say, one beacon node, a and one beacon node B. The beacon node A is connected to some valid clients, and so we'll have a high Cgc. And beacon. Node B is not is a standby and is not connected to any validator client and have the minimum Cgc.
+
+165
+00:30:23.790 --> 00:30:29.170
+Manu: When they want to to upgrade, let's say a validator client and or a bigger node.
+
+166
+00:30:29.929 --> 00:30:34.240
+Manu: So they, in order to minimize the ipy loss.
+
+167
+00:30:34.670 --> 00:30:35.450
+Manu: Oh.
+
+168
+00:30:36.010 --> 00:30:42.920
+Manu: they will 1st upgrade the beaconnet B, and then they will connect the validator clan to the beaconet B,
+
+169
+00:30:43.320 --> 00:30:44.890
+Manu: and so
+
+170
+00:30:45.080 --> 00:30:54.329
+Manu: beacon dot a will immediately or more or less immediately decrease the Cgc. And beacon dot B. Won't increase its Cgc.
+
+171
+00:30:54.690 --> 00:31:06.869
+Manu: Before 18 days, and if they change, you know, connecting from A to B more often than 18 days. If I'm not wrong with this pull request.
+
+172
+00:31:07.190 --> 00:31:10.489
+Manu: both speaker nodes will have the minimum suggested.
+
+173
+00:31:10.780 --> 00:31:19.510
+Manu: And yeah, so both of you cannot. We won't be able to serve more than than 4 data columns.
+
+174
+00:31:20.630 --> 00:31:26.469
+Manu: which kind of defeats, the purpose of validator custody, and if we
+
+175
+00:31:26.670 --> 00:31:32.739
+Manu: requires a beacon node to backfill, I think there is no more of this kind of issue.
+
+176
+00:31:36.353 --> 00:31:39.408
+Justin Traglia: I mean, I don't say I mean
+
+177
+00:31:39.840 --> 00:31:42.190
+Justin Traglia: you could choose to backfill if you want to.
+
+178
+00:31:42.430 --> 00:31:45.819
+Justin Traglia: I mean, I guess the spec does say should not backfill.
+
+179
+00:31:46.060 --> 00:31:48.080
+Justin Traglia: But I mean, we can change that.
+
+180
+00:31:49.240 --> 00:31:51.959
+Manu: Yeah, the the specs are. You should not? Yes, exactly.
+
+181
+00:31:52.120 --> 00:31:56.880
+Justin Traglia: Yeah, I mean, I can change that to May, or we can change that to May, if necessary.
+
+182
+00:31:57.060 --> 00:32:00.819
+Manu: But even if it's if it is domain it, and if every clients
+
+183
+00:32:00.990 --> 00:32:12.130
+Manu: does not implement backfield, it may be an issue for the parameters that switch from Beaconnet A to Beconut B quite often, because no, none of them will advertise.
+
+184
+00:32:12.280 --> 00:32:13.560
+Manu: Hi suggested.
+
+185
+00:32:14.920 --> 00:32:17.559
+Justin Traglia: Okay, I mean, yeah, we can change that.
+
+186
+00:32:18.210 --> 00:32:20.500
+Justin Traglia: I see some suggestions and the
+
+187
+00:32:20.850 --> 00:32:25.579
+Justin Traglia: comments for like may and may not like, I think both kind of mean the same thing.
+
+188
+00:32:26.240 --> 00:32:27.989
+Justin Traglia: Oh, but I saw it.
+
+189
+00:32:27.990 --> 00:32:32.379
+Justin Traglia: This is somewhat of an implementation detail, and like, I'm not sure if it should really be
+
+190
+00:32:33.050 --> 00:32:36.150
+Justin Traglia: super specific in those specs.
+
+191
+00:32:36.590 --> 00:32:43.080
+Manu: I don't know, because my question is, if no client team implemented I
+
+192
+00:32:44.650 --> 00:32:58.809
+Manu: if yes, this machine, no cliented, no client team implements backfill, and every big node operators do this because node A to become B switch. In this case we will.
+
+193
+00:32:59.200 --> 00:33:04.280
+Manu: We will lose a lot of super nodes. I mean a lot of nodes which should
+
+194
+00:33:05.630 --> 00:33:09.739
+Manu: behave like a super node, will actually behave like no full node.
+
+195
+00:33:11.280 --> 00:33:15.310
+Justin Traglia: I mean, how often does that happen then? A switch from beginning of A to begin with, B.
+
+196
+00:33:15.810 --> 00:33:22.450
+Manu: As soon as there's a reason, you new new client version, as soon as so.
+
+197
+00:33:22.450 --> 00:33:26.320
+Justin Traglia: Wouldn't these like big staking operations just run as this super node, anyway.
+
+198
+00:33:26.610 --> 00:33:27.300
+Manu: Sorry.
+
+199
+00:33:27.870 --> 00:33:30.449
+Justin Traglia: I'm sorry for background noise. Wouldn't these, like
+
+200
+00:33:30.560 --> 00:33:33.980
+Justin Traglia: big sticking operators, run it like a super node anyway.
+
+201
+00:33:34.620 --> 00:33:36.849
+Justin Traglia: like it? Would this even be an issue for them?
+
+202
+00:33:39.300 --> 00:33:44.229
+Manu: It's not an issue for them, but it's maybe an issue for the network. If there is not enough dependent.
+
+203
+00:33:48.780 --> 00:33:53.470
+Parithosh Jayanthi: My concern is with this. With this put request, with this change in the spec.
+
+204
+00:33:55.010 --> 00:34:00.209
+Manu: We, I think we will have less supernodes than expected.
+
+205
+00:34:07.120 --> 00:34:09.520
+Parithosh Jayanthi: Yeah, pawan, do you wanna go? Or Agnesh?
+
+206
+00:34:11.989 --> 00:34:12.540
+pawan: Yeah.
+
+207
+00:34:12.822 --> 00:34:13.670
+Agnish Ghosh: I was just.
+
+208
+00:34:15.469 --> 00:34:20.079
+pawan: Yeah. Sorry. I was just wondering, like, Anu like for prism, like what
+
+209
+00:34:20.673 --> 00:34:35.509
+pawan: like and what endpoint do you use in prism to figure out, like to figure out how many validators are attached to a beacon node? Is it like the subscription endpoints? Is it the
+
+210
+00:34:36.373 --> 00:34:39.279
+pawan: attestation publishing points. How do you figure out
+
+211
+00:34:40.239 --> 00:34:46.459
+pawan: how many validators are attached to a node? Do you take it as input from the user self?
+
+212
+00:34:46.569 --> 00:34:48.349
+pawan: How does it work for you guys.
+
+213
+00:34:48.520 --> 00:34:53.730
+Manu: It is endpoint. Prepar beacon proposal for the Beacon. Api.
+
+214
+00:34:54.920 --> 00:35:12.670
+pawan: Beacon proposal like we, we were considering using the subscription standpoint because it usually in multibn setups the subscription at least for lighthouse. They are sent for, like all the connected beacon nodes from the validator client. So in that case, like
+
+215
+00:35:13.666 --> 00:35:20.670
+pawan: usually most of the time since the subscriptions are sent to everybody, like all the
+
+216
+00:35:20.940 --> 00:35:24.210
+pawan: bns in the multi-node setup sort of become
+
+217
+00:35:24.808 --> 00:35:31.970
+pawan: like, have the same number of validated nodes consistently across them. So that is what we were thinking for lighthouse.
+
+218
+00:35:41.420 --> 00:35:45.069
+Manu: Okay, let me check, but I'm not sure it will.
+
+219
+00:35:45.890 --> 00:35:49.099
+Manu: It will change it. Will, you know.
+
+220
+00:35:49.950 --> 00:35:55.489
+Manu: do anything better regarding the beacon? A to beacon B switch from some
+
+221
+00:35:56.260 --> 00:36:01.229
+Manu: not operator. It will, it will probably behave the same way.
+
+222
+00:36:05.750 --> 00:36:07.670
+Parithosh Jayanthi: Yeah. Agnesh, do you wanna go.
+
+223
+00:36:07.930 --> 00:36:22.379
+Agnish Ghosh: Yeah. So my concern is like, maybe a request to the research team, that is, can there be potential attacks if there is? Like. If somehow a bn is not really
+
+224
+00:36:22.500 --> 00:36:26.319
+Agnish Ghosh: enforcing the validator custody count to be very accurate
+
+225
+00:36:26.710 --> 00:36:31.090
+Agnish Ghosh: like, I understand that validator custody is sort of more like a heuristic
+
+226
+00:36:31.862 --> 00:36:33.920
+Agnish Ghosh: can there be any kind of
+
+227
+00:36:34.100 --> 00:36:44.839
+Agnish Ghosh: network partitioning attacks, or any kind of like potential instability cases that can happen like, say, for these multi Vn setups.
+
+228
+00:36:44.990 --> 00:36:49.561
+Agnish Ghosh: or something similar where the validator custody count is
+
+229
+00:36:50.580 --> 00:36:56.309
+Agnish Ghosh: is basically a virtue of the fact that these validators are pretty much
+
+230
+00:36:56.420 --> 00:36:59.679
+Agnish Ghosh: being listened over by multiple beacon nodes
+
+231
+00:37:00.287 --> 00:37:11.123
+Agnish Ghosh: or like not very inaccurate, like? Not very accurate calculations of validated custody count, can we can we like, can there be any kind of
+
+232
+00:37:11.700 --> 00:37:15.070
+Agnish Ghosh: attacks, or like any kind of problems?
+
+233
+00:37:15.270 --> 00:37:26.469
+Agnish Ghosh: Because, yeah, I mean, we. We came at it as a heuristic. But I don't know if if the number is enforceable or not in this is, it's strict or not strict.
+
+234
+00:37:27.239 --> 00:37:39.009
+Agnish Ghosh: So I just have a question around that, because I understand Pawan's point. And we have been talking about this internally in our team for quite a while now.
+
+235
+00:37:39.612 --> 00:37:49.819
+Agnish Ghosh: But it's like, whenever this discussion comes we just at the very end. The conclusion is, oh, it's just a heuristic. It's it's maybe not a very enforceable number.
+
+236
+00:37:49.980 --> 00:37:57.649
+Agnish Ghosh: So that's that's basically the question, can there be any risks if it's not enforceable? And if it's just a heuristic.
+
+237
+00:38:02.143 --> 00:38:09.566
+Parithosh Jayanthi: Would someone from the research team be able to take that up? Maybe Francesco or Raul.
+
+238
+00:38:10.030 --> 00:38:20.700
+Francesco: I mean, I I guess I don't entirely understand what you mean by like, not very accurate, like
+
+239
+00:38:21.160 --> 00:38:26.310
+Francesco: somewhat. Yeah, I don't. I don't quite understand. Yeah, we're not very accurate means, but in terms of the the risks
+
+240
+00:38:26.830 --> 00:38:32.690
+Francesco: like the the main point of audio custody is really just to ensure that there's
+
+241
+00:38:32.960 --> 00:38:36.810
+Francesco: kind of a baseline of super nodes in the network like that's probably like.
+
+242
+00:38:37.430 --> 00:38:43.749
+Francesco: I don't know. Well, I don't know what a percentage. But like it's, it's like a lot of its value. Just just that.
+
+243
+00:38:43.950 --> 00:38:47.189
+Francesco: So yeah, as long as that's
+
+244
+00:38:47.870 --> 00:38:55.880
+Francesco: kind of insured. But like with with quotes, it doesn't need to be insured in the sense that it's impossible for it not to be the case. But just, you know, if enough
+
+245
+00:38:56.040 --> 00:39:12.999
+Francesco: node operators are not modifying their code, and I mean, you could also include some something like Oh, maybe, if not, all of the node operators are running like very strange setups or something like that. Then hopefully, that's the case. And then another part of it would be that
+
+246
+00:39:13.220 --> 00:39:14.690
+Francesco: in principle.
+
+247
+00:39:14.920 --> 00:39:33.200
+Francesco: you can get like just stronger assurances about basically the percentage of the stake that can be made to vote for something unavailable, for something unavailable being available like to incorrectly vote. So for that you kind of would actually want to maximize the amount of
+
+248
+00:39:33.580 --> 00:39:40.769
+Francesco: nodes that are voting with respect to their actual custody as opposed to something much lower.
+
+249
+00:39:41.860 --> 00:39:45.893
+Francesco: But yeah, but it's not like it's not super crucial.
+
+250
+00:39:47.150 --> 00:39:54.480
+Francesco: So yeah, I don't know then what that practically mean. I mean, I guess. Yeah, I don't know what? Exactly do you have in mind in terms of
+
+251
+00:39:56.050 --> 00:39:57.310
+Francesco: Yeah. So.
+
+252
+00:39:57.850 --> 00:40:00.730
+Agnish Ghosh: I think a better question would be
+
+253
+00:40:00.910 --> 00:40:06.140
+Agnish Ghosh: is let's say the counting of validator custody
+
+254
+00:40:06.340 --> 00:40:15.020
+Agnish Ghosh: is strictly based on the fact that the validator is to be in relation needs to be one to one, or maybe one to many
+
+255
+00:40:16.152 --> 00:40:22.139
+Agnish Ghosh: like. Let's say in multivn setups where
+
+256
+00:40:22.320 --> 00:40:30.820
+Agnish Ghosh: like, let's say, in multibn setups these Vns are detecting. Okay, we have the validator here.
+
+257
+00:40:30.990 --> 00:40:33.899
+Agnish Ghosh: Okay, one more epoch later. We don't have it.
+
+258
+00:40:35.120 --> 00:40:37.030
+Agnish Ghosh: What I'm trying to say is.
+
+259
+00:40:38.250 --> 00:40:42.520
+Agnish Ghosh: is it strict one to one or like?
+
+260
+00:40:42.690 --> 00:40:46.929
+Agnish Ghosh: But in cases for key manager based setups, or
+
+261
+00:40:47.040 --> 00:40:50.759
+Agnish Ghosh: in in a case where even Pawan tried to explain.
+
+262
+00:40:51.403 --> 00:40:52.329
+Agnish Ghosh: I think.
+
+263
+00:40:52.680 --> 00:40:53.550
+Agnish Ghosh: Oh.
+
+264
+00:40:53.740 --> 00:41:01.660
+Agnish Ghosh: at a very granular point of time it's probably one to one. But since we are counting the custody over a
+
+265
+00:41:01.890 --> 00:41:06.825
+Agnish Ghosh: like decent period of time. It's seemingly one too many.
+
+266
+00:41:07.690 --> 00:41:12.780
+Agnish Ghosh: I hope I could explain. But that's that's basically the concern. Like, yeah.
+
+267
+00:41:13.380 --> 00:41:30.540
+Francesco: Yeah, I mean in principle, there's ways to mitigate this like we could just say, I don't know. For example, you use the Max of the validators that you ever detected in the last, however long, in the last 18 days, or I don't know some period or like since last time you started it, or
+
+268
+00:41:31.230 --> 00:41:35.109
+Francesco: whatever we want, I guess, or some kind of
+
+269
+00:41:35.330 --> 00:41:42.930
+Francesco: time weighted average, I don't know. Probably the Max is the thing that would make more sense. So that like, yeah, if you run a multi beacon node setup
+
+270
+00:41:43.170 --> 00:41:47.639
+Francesco: with, like a thousand validators that sometimes are connected to one, sometimes to another, then
+
+271
+00:41:47.760 --> 00:41:51.200
+Francesco: all of those beacon nodes will be super nodes all the time.
+
+272
+00:41:52.440 --> 00:41:54.060
+Francesco: That could be a solution.
+
+273
+00:41:58.557 --> 00:42:01.409
+Parithosh Jayanthi: Maybe we do, Manu, and then Rahul.
+
+274
+00:42:03.680 --> 00:42:04.733
+Manu: Another story
+
+275
+00:42:05.420 --> 00:42:09.200
+Manu: It was from my previous previous international.
+
+276
+00:42:10.933 --> 00:42:11.920
+Parithosh Jayanthi: Then raul.
+
+277
+00:42:11.920 --> 00:42:14.920
+Raúl Kripalani: Yeah. Mine was also resolved in the chat. Sorry.
+
+278
+00:42:15.596 --> 00:42:16.273
+Parithosh Jayanthi: Perfect!
+
+279
+00:42:17.570 --> 00:42:28.059
+Parithosh Jayanthi: good! Then I guess we still have the open. This is still an open topic, right? Or are we changing the should to me or may not. And is that
+
+280
+00:42:28.610 --> 00:42:30.540
+Parithosh Jayanthi: something that everyone's okay with.
+
+281
+00:42:32.450 --> 00:42:35.219
+Justin Traglia: So hope you go. Sorry.
+
+282
+00:42:35.520 --> 00:42:54.500
+Raúl Kripalani: Yeah, sorry. I was just gonna say, I do think we we need. So there's a bunch of edge cases here that I think warrant more like deeper analysis to to like, think through how things would react. So I think we should take it offline and and come up with something, Francesco, I'm I'm happy to bear on this. And Justin.
+
+283
+00:42:57.320 --> 00:43:03.269
+Parithosh Jayanthi: Yep, that sounds prudent to me. For now it seems like we have some
+
+284
+00:43:03.390 --> 00:43:11.570
+Parithosh Jayanthi: understanding at least to have me. That could be the Pr, and then we can have a discussion on that. Pr, and then decide
+
+285
+00:43:11.770 --> 00:43:13.580
+Parithosh Jayanthi: what we do with the topic.
+
+286
+00:43:14.407 --> 00:43:23.389
+Parithosh Jayanthi: Yeah. And regarding Barnabas's point. Could we do May, and hope to have validator custody by next week? If that's okay.
+
+287
+00:43:30.250 --> 00:43:31.570
+Justin Traglia: Oh, yep, let's do it!
+
+288
+00:43:33.490 --> 00:43:41.140
+Parithosh Jayanthi: Okay. Then, Barnabas. Once there's a Pr. Could you add it to the Fusaka devnet? One spec. Please.
+
+289
+00:43:41.140 --> 00:43:42.040
+Barnabas: Yeah.
+
+290
+00:43:42.920 --> 00:43:43.780
+Parithosh Jayanthi: Thank you.
+
+291
+00:43:45.920 --> 00:43:58.149
+Parithosh Jayanthi: Okay, I guess we also need to figure out what edge cases happen with with with the valid data custody changing right, and I would assume we would discuss that on the Pr. So
+
+292
+00:43:58.370 --> 00:44:00.520
+Parithosh Jayanthi: yep, more coming next week, I guess.
+
+293
+00:44:02.907 --> 00:44:08.089
+Parithosh Jayanthi: Continuing with Fusaka devnet. One topics. Then
+
+294
+00:44:08.780 --> 00:44:18.180
+Parithosh Jayanthi: we have eip 7, 9, 1 7. That was sfied on last week's Acdc. This is the deterministic proposal. Look ahead.
+
+295
+00:44:19.746 --> 00:44:27.050
+Parithosh Jayanthi: Do cl client teams. Wanna chime in on this one? Are there any open topics?
+
+296
+00:44:27.240 --> 00:44:33.039
+Parithosh Jayanthi: Is this an understood eip that just needs implementation time?
+
+297
+00:44:36.120 --> 00:44:39.860
+Parithosh Jayanthi: And do note that this introduces beacon state changes.
+
+298
+00:44:40.690 --> 00:44:45.259
+Parithosh Jayanthi: So this is also a warning to all the tooling side, because that will all break.
+
+299
+00:44:49.980 --> 00:44:53.509
+pawan: Is is 7, 9, 1, 7, a target for the next Devnet.
+
+300
+00:44:54.130 --> 00:44:54.750
+Barnabas: Yes.
+
+301
+00:44:55.800 --> 00:45:04.000
+Parithosh Jayanthi: That was the idea. Unless there's severe pushback on either timeline or the eip on this call.
+
+302
+00:45:06.890 --> 00:45:12.250
+pawan: From what I remember Mark telling me with like he had already implemented it in lighthouse.
+
+303
+00:45:12.720 --> 00:45:18.020
+pawan: But I'm not completely sure if it was like a full implementation, or like more of a
+
+304
+00:45:18.490 --> 00:45:20.000
+pawan: Poc or like.
+
+305
+00:45:20.280 --> 00:45:24.679
+pawan: So I'll check with him. But I think you should be able to
+
+306
+00:45:25.258 --> 00:45:29.139
+pawan: get it done like we can talk about it offline. If there are any issues.
+
+307
+00:45:30.550 --> 00:45:40.020
+Parithosh Jayanthi: Okay, other cls, do you guys have an opinion on 7, 9, 1, 7, working implementations or in progress?
+
+308
+00:45:40.480 --> 00:45:44.000
+Parithosh Jayanthi: Do we have the spec ready for this, and already merged in.
+
+309
+00:45:44.960 --> 00:45:52.380
+Justin Traglia: No, there's an open pr for the spec I would appreciate if Cl. Teams did review and approve or disapprove.
+
+310
+00:45:53.880 --> 00:45:56.389
+Justin Traglia: I don't know we're planning on merging it.
+
+311
+00:45:56.390 --> 00:46:03.609
+Barnabas: So he's gonna take a look at that today, and then maybe we can merge it in tomorrow, and then we can start aiming for that next week. Monday.
+
+312
+00:46:04.090 --> 00:46:06.669
+Justin Traglia: Potus has already left his review.
+
+313
+00:46:06.910 --> 00:46:07.590
+Barnabas: Okay.
+
+314
+00:46:09.541 --> 00:46:14.140
+Manu: Prism has in progress. Implementation for this eap.
+
+315
+00:46:17.700 --> 00:46:19.510
+Phil Ngo: Also in progress for lodestar.
+
+316
+00:46:22.280 --> 00:46:43.500
+Parithosh Jayanthi: Awesome. That sounds good then. So I guess the 2 major changes for Fusaka Devnet. One will be at least on the Cl side. The validator custody change pending a Pr that we discussed today as well as 7, 9, 1 7, right are there any other big changes I'm missing in the
+
+317
+00:46:43.790 --> 00:46:44.899
+Parithosh Jayanthi: in the devnet.
+
+318
+00:46:50.300 --> 00:47:01.610
+Parithosh Jayanthi: Okay. Are there any big changes for the Cl. Or sorry El? Not sure.
+
+319
+00:47:01.610 --> 00:47:07.320
+Barnabas: The transaction guest limit cap, and the block base fee bounded by execution cost.
+
+320
+00:47:07.790 --> 00:47:22.640
+Parithosh Jayanthi: Exactly. Do we have some El Devs here who can talk about how their implementations are going? Do you need something? Are there open Prs, that need to be pushed through. Yeah, thank you, Gabriel Bezos on track.
+
+321
+00:47:23.220 --> 00:47:27.900
+Parithosh Jayanthi: Could we hear from? Never mind. Get threat, Eric, on, perhaps.
+
+322
+00:47:33.880 --> 00:47:36.050
+Parithosh Jayanthi: Okay, never minds on track.
+
+323
+00:47:41.210 --> 00:47:48.690
+Parithosh Jayanthi: Cool. I guess we'll that is also on track, and we can follow up with Aragon and get Async.
+
+324
+00:47:50.100 --> 00:47:57.239
+Parithosh Jayanthi: Great looks like we're still on track for Fusaka Devnet one next week. Then that sounds good.
+
+325
+00:47:58.190 --> 00:48:00.680
+Parithosh Jayanthi: awesome. Everyone's also on track perfect.
+
+326
+00:48:03.090 --> 00:48:11.789
+Parithosh Jayanthi: The next topic would be, yeah, Raul, do you want to give us an update on the Bpo networking changes that was
+
+327
+00:48:13.210 --> 00:48:13.480
+Parithosh Jayanthi: to.
+
+328
+00:48:13.480 --> 00:48:43.070
+Raúl Kripalani: Yes, yeah. So the final shape that this has taken is basically having a updated compute for digest function that takes into account the blob schedule and a bit bit. Ma masks the the current maximum blob per block blobs per block, and then adding a few more fee, adding one key to the enr to signal the next intended fork digest that the node is. Gonna take.
+
+329
+00:48:43.405 --> 00:48:57.490
+Raúl Kripalani: There's currently an eip that seem that most people that have chimed in seem to agree with. We made a few a few tweaks here and there, and now there's gonna be a consensus back patch coming in later today.
+
+330
+00:48:59.430 --> 00:49:02.139
+Justin Traglia: And do we want this included for Devnet one.
+
+331
+00:49:04.820 --> 00:49:17.360
+Parithosh Jayanthi: Yeah, I guess that look from the implementation side of things is this relatively quick for client teams to do? Or should we table this for Devnet one, and do it in Devnet 2 instead.
+
+332
+00:49:19.940 --> 00:49:25.867
+Raúl Kripalani: So I guess it. It depends on the kinds of tests that we intend to conduct as well in Devnet one
+
+333
+00:49:26.330 --> 00:49:29.380
+Raúl Kripalani: If so far there have been no
+
+334
+00:49:30.770 --> 00:49:43.590
+Raúl Kripalani: I guess network partitions or network splits observed. So far, I don't think it's necessary. It's urgent to implement it right now. So if there are other things to implement for Devnet one, I think this can wait for Devnet 2.
+
+335
+00:49:45.220 --> 00:49:49.180
+Parithosh Jayanthi: Yeah, I'd also tend to agree right now. Also.
+
+336
+00:49:49.570 --> 00:49:59.850
+Parithosh Jayanthi: as of now peer to peer, changes are still a bit of a pain to debug. So it would be nice if we're not doing that along with a bunch of other changes in a 1 week, times time span.
+
+337
+00:50:01.820 --> 00:50:07.969
+Justin Traglia: I would also support pushing it to Devnet, too, so that we have more time to review the Prs.
+
+338
+00:50:09.750 --> 00:50:22.350
+Parithosh Jayanthi: Awesome. Thank you. And Justin would be possible to have whatever Prs we've discussed merged in this week and potentially a release or a tag or something that client teams could use for testing.
+
+339
+00:50:22.640 --> 00:50:26.420
+Justin Traglia: Yep, I've already mentioned that somewhere in the comments I'll share it again.
+
+340
+00:50:27.064 --> 00:50:31.109
+Justin Traglia: Planning to do release on Tuesday, pretty much after the
+
+341
+00:50:31.380 --> 00:50:35.569
+Justin Traglia: deterministic proposal, look ahead. Pr is approved and merged.
+
+342
+00:50:40.190 --> 00:50:42.029
+Parithosh Jayanthi: Awesome. Thank you.
+
+343
+00:50:42.961 --> 00:50:51.988
+Parithosh Jayanthi: Yeah. The next topic we have. Oh, sorry. Is there anything else to the Bpo networking change that people want to chime in with,
+
+344
+00:50:52.620 --> 00:50:56.000
+Parithosh Jayanthi: everyone's okay with it. What's up feeling?
+
+345
+00:51:00.930 --> 00:51:03.560
+Parithosh Jayanthi: Okay? I'll take that as acceptance.
+
+346
+00:51:05.180 --> 00:51:15.349
+Parithosh Jayanthi: The next topic we have is metrics implementation. So we have a couple here. Katya, do you? Maybe wanna talk about them.
+
+347
+00:51:18.303 --> 00:51:25.159
+Katya Riazantseva: If if someone currently implements get blobs v, 2 I added the metric for it.
+
+348
+00:51:25.460 --> 00:51:29.796
+Katya Riazantseva: So probably you can add it to the clients implementations.
+
+349
+00:51:30.630 --> 00:51:34.689
+Katya Riazantseva: that would be great to see. I'm currently building it for lodestar.
+
+350
+00:51:38.460 --> 00:51:50.119
+Katya Riazantseva: And also it's not clear what what will be with the custody. So yeah, we'll see how it goes. I actually have metrics for it, but
+
+351
+00:51:50.350 --> 00:51:53.389
+Katya Riazantseva: there will be any changes, so maybe
+
+352
+00:51:54.040 --> 00:51:56.019
+Katya Riazantseva: the specs will change as well.
+
+353
+00:51:59.380 --> 00:52:01.519
+Parithosh Jayanthi: That's it from my side.
+
+354
+00:52:02.360 --> 00:52:08.050
+Parithosh Jayanthi: Thank you. Should we add the metrics change to devnet one
+
+355
+00:52:09.044 --> 00:52:13.910
+Parithosh Jayanthi: feels like a relatively minor change for client teams to implement over the next week.
+
+356
+00:52:15.930 --> 00:52:24.713
+Katya Riazantseva: Yeah, it's it's still in this. Pr, 14. So probably we need to merge it, and
+
+357
+00:52:25.580 --> 00:52:31.880
+Katya Riazantseva: to open new prs for any further changes, so it will be easier to follow.
+
+358
+00:52:32.810 --> 00:52:38.859
+Parithosh Jayanthi: Okay, perfect. Barnabas, can you take lead on making sure the metrics pr, get merged. Then.
+
+359
+00:52:41.230 --> 00:52:42.010
+Barnabas: Sure.
+
+360
+00:52:43.100 --> 00:52:52.399
+Parithosh Jayanthi: Thank you. And yeah, I think someone from the Sunnyside Lab team wanted to talk about the same metric. But for the El side.
+
+361
+00:52:53.460 --> 00:52:59.344
+J Sunnyside Labs: Yeah. Hi, I'm jay. Yeah. So we have raised
+
+362
+00:53:00.160 --> 00:53:03.588
+J Sunnyside Labs: metrics for el side, and then
+
+363
+00:53:05.056 --> 00:53:16.209
+J Sunnyside Labs: previously Marius has suggested changes in the naming, and we've asked El teams, but they did not yet respond to it. So
+
+364
+00:53:16.655 --> 00:53:20.020
+J Sunnyside Labs: if they can have a look, and if they are okay.
+
+365
+00:53:20.661 --> 00:53:23.820
+J Sunnyside Labs: We can go ahead and make changes.
+
+366
+00:53:25.140 --> 00:53:32.950
+J Sunnyside Labs: We've already implemented the original versions to rest and metamind, and also either. Emg, yes.
+
+367
+00:53:33.750 --> 00:53:37.030
+J Sunnyside Labs: and Kathy is on open Pr, so
+
+368
+00:53:37.470 --> 00:53:39.739
+J Sunnyside Labs: we can probably change it quickly.
+
+369
+00:53:42.550 --> 00:53:55.850
+Parithosh Jayanthi: Okay, thank you very much. Then. Yeah, let's add, the El metrics change as well to devnet one that way. We can get some progress on the metric side, and then we can still refine it and change it for the future.
+
+370
+00:53:57.670 --> 00:53:58.830
+J Sunnyside Labs: Sure. Thank you.
+
+371
+00:53:59.740 --> 00:54:00.630
+Parithosh Jayanthi: Katya.
+
+372
+00:54:02.043 --> 00:54:13.540
+Katya Riazantseva: Yeah, Perry, regarding to El metrics. May we have a repo for for them as well? That would be great to just to share open prs and discuss.
+
+373
+00:54:14.540 --> 00:54:21.459
+Parithosh Jayanthi: Is this? Is this just gonna be execution metrics similar to consensus metrics or.
+
+374
+00:54:21.460 --> 00:54:23.150
+Katya Riazantseva: Yeah, yeah, I guess so.
+
+375
+00:54:23.910 --> 00:54:30.109
+Parithosh Jayanthi: Okay? Yeah, I, we can sort that out and get back to you on that. Yeah.
+
+376
+00:54:30.110 --> 00:54:30.880
+Katya Riazantseva: Thank you.
+
+377
+00:54:32.362 --> 00:54:46.889
+Parithosh Jayanthi: And to address Justin's point the ask on the El side is to align on get engine, get blobs. V. 2 metrics for all els, so that we can actually visualize what's going on on the
+
+378
+00:54:47.040 --> 00:54:50.039
+Parithosh Jayanthi: hatreage of the requests, or whatever.
+
+379
+00:54:51.330 --> 00:54:55.620
+Justin Florentine (Besu): Okay. I think Katya's ask probably solves what I need. Thank you.
+
+380
+00:54:55.990 --> 00:55:02.790
+Parithosh Jayanthi: Yeah, exactly. So we'll we'll get a place where we can track this. There will be Prs. There'll be a metrics back, and then we can move from there.
+
+381
+00:55:08.540 --> 00:55:22.939
+Parithosh Jayanthi: Okay, I think that should be most of of that. We have a Sunnyside lab team testing update from the 30th of May. Do you guys wanna give a brief intro on what's going on.
+
+382
+00:55:24.212 --> 00:55:27.980
+J Sunnyside Labs: Sure may I share the screen? If you don't mind.
+
+383
+00:55:28.540 --> 00:55:33.930
+Parithosh Jayanthi: Yeah, of course. See, they're out.
+
+384
+00:55:35.100 --> 00:55:37.540
+Parithosh Jayanthi: Yeah. You should be able to share your screen. Now.
+
+385
+00:55:48.300 --> 00:55:54.589
+J Sunnyside Labs: Yeah, let me just quickly share the link in case if you guys don't have it.
+
+386
+00:55:56.627 --> 00:55:58.289
+Parithosh Jayanthi: I got that you can start.
+
+387
+00:55:58.890 --> 00:55:59.490
+J Sunnyside Labs: Sure.
+
+388
+00:56:00.493 --> 00:56:09.359
+J Sunnyside Labs: So yeah, we've done some we've run 7 dead notes over the last 10 days prior to this release.
+
+389
+00:56:09.630 --> 00:56:13.680
+J Sunnyside Labs: and we were focusing mainly on
+
+390
+00:56:14.561 --> 00:56:23.440
+J Sunnyside Labs: the impacts of get lost enablement on different combinations of Ceos.
+
+391
+00:56:23.910 --> 00:56:27.518
+J Sunnyside Labs: And we also run a devnet
+
+392
+00:56:28.330 --> 00:56:37.589
+J Sunnyside Labs: the same spec as 7 or 7, but without loadstine numbers. Whether it becomes more stable and reaches
+
+393
+00:56:37.880 --> 00:56:39.369
+J Sunnyside Labs: higher block points.
+
+394
+00:56:40.951 --> 00:56:58.040
+J Sunnyside Labs: To briefly go through the performance without nimbus and load star. We actually got lower block counts, but block time was more stable, so we don't know what happened. Why, but it was what it was.
+
+395
+00:56:58.210 --> 00:57:04.549
+J Sunnyside Labs: But yeah, we've we. We were more focused on the bottlenecks
+
+396
+00:57:05.130 --> 00:57:09.580
+J Sunnyside Labs: so that we can try to find out like how we can improve
+
+397
+00:57:09.950 --> 00:57:20.260
+J Sunnyside Labs: and reach higher overall block counts to be looked into like each client in particular.
+
+398
+00:57:20.700 --> 00:57:34.319
+J Sunnyside Labs: and for lighthouse we got higher. 53 block counts per block, and when get blob is enabled and 45 without it. So it was like about 15% higher.
+
+399
+00:57:34.880 --> 00:57:38.249
+J Sunnyside Labs: And it was similar for prism as well.
+
+400
+00:57:38.450 --> 00:57:44.690
+J Sunnyside Labs: So 40, while 37 without, and then for grandine
+
+401
+00:57:45.693 --> 00:57:53.680
+J Sunnyside Labs: we somehow couldn't test it further than more than 10 blobs and
+
+402
+00:57:54.020 --> 00:57:57.680
+J Sunnyside Labs: brand 9 team confirms that we were using
+
+403
+00:57:58.655 --> 00:58:09.020
+J Sunnyside Labs: all the image which had some bug. So we will try new grand image later with net 0 spec.
+
+404
+00:58:10.850 --> 00:58:20.939
+J Sunnyside Labs: So moving into analysis. This is the part where it becomes more interesting. That we got some
+
+405
+00:58:21.140 --> 00:58:32.240
+J Sunnyside Labs: ironic results. So 1st of all, this one is not ironic, but we found out that Granddyne was requesting more than once, when it fails.
+
+406
+00:58:32.630 --> 00:58:36.730
+J Sunnyside Labs: while other sales request get blobs
+
+407
+00:58:37.120 --> 00:58:43.879
+J Sunnyside Labs: just once, regardless of like, whether it fails or not, and we could see that
+
+408
+00:58:44.030 --> 00:58:47.659
+J Sunnyside Labs: on Granddyne, when it requests multiple times.
+
+409
+00:58:47.850 --> 00:58:53.350
+J Sunnyside Labs: it were able it was able to get blobs occasionally. So
+
+410
+00:58:54.020 --> 00:59:02.189
+J Sunnyside Labs: if other Ceos also want to implement this optimization, then it might be worth checking it.
+
+411
+00:59:04.605 --> 00:59:14.420
+J Sunnyside Labs: For the data column processing on lighthouse when get blobs was enabled.
+
+412
+00:59:15.406 --> 00:59:21.239
+J Sunnyside Labs: The number of column side cost that was submitted for processing decreased.
+
+413
+00:59:22.286 --> 00:59:30.339
+J Sunnyside Labs: When when the block counts increased it was quite interesting to see why, but
+
+414
+00:59:30.560 --> 00:59:34.559
+J Sunnyside Labs: maybe there was an optimization or some.
+
+415
+00:59:34.730 --> 00:59:37.429
+J Sunnyside Labs: Maybe there was a bulk on metrics.
+
+416
+00:59:38.165 --> 00:59:42.389
+J Sunnyside Labs: We don't really know why, but this was something new that we found.
+
+417
+00:59:43.200 --> 00:59:43.920
+J Sunnyside Labs: Okay.
+
+418
+00:59:44.260 --> 00:59:55.709
+J Sunnyside Labs: And second thing that we found regarding the data column processing was that on lighthouse gas combinations?
+
+419
+00:59:56.784 --> 01:00:04.270
+J Sunnyside Labs: When we disabled get blobs. We didn't get any data column failures.
+
+420
+01:00:04.910 --> 01:00:07.479
+J Sunnyside Labs: but when we enabled get bloops
+
+421
+01:00:07.850 --> 01:00:11.660
+J Sunnyside Labs: we got so many column failures. So
+
+422
+01:00:14.180 --> 01:00:21.119
+J Sunnyside Labs: We cautiously assume that guest was handing
+
+423
+01:00:21.630 --> 01:00:26.269
+J Sunnyside Labs: wrong columns to light us for some reason.
+
+424
+01:00:28.490 --> 01:00:36.170
+J Sunnyside Labs: So this week we're gonna test this with Russ as well. So so we can check whether this is from El or not.
+
+425
+01:00:37.590 --> 01:00:40.889
+J Sunnyside Labs: and we got. We also got similar results
+
+426
+01:00:41.480 --> 01:00:47.219
+J Sunnyside Labs: with prism as well. So with prism. When gap flops is enabled with gas.
+
+427
+01:00:48.078 --> 01:00:50.970
+J Sunnyside Labs: We got more processing failures.
+
+428
+01:00:51.580 --> 01:00:54.620
+J Sunnyside Labs: Anyway, this was interesting.
+
+429
+01:00:55.630 --> 01:00:59.850
+Marius: Quick, quick question, are you? Are you sending?
+
+430
+01:01:00.160 --> 01:01:02.710
+Marius: v. 1. Transactions, or v. 2. Transactions.
+
+431
+01:01:04.710 --> 01:01:05.830
+J Sunnyside Labs: I'm v. 2.
+
+432
+01:01:07.910 --> 01:01:14.579
+Marius: Yeah, because, like, it could be that if you're saying the the phone, then we will.
+
+433
+01:01:14.710 --> 01:01:16.270
+Marius: I have not return the correct.
+
+434
+01:01:16.710 --> 01:01:18.920
+Marius: There you go like that's
+
+435
+01:01:19.860 --> 01:01:26.780
+Marius: I had this error, and everyone complained that there's this error thrown, so I just like silently ignore it now. But
+
+436
+01:01:27.660 --> 01:01:31.450
+Marius: that was one of the one of the one of the things that came up as like
+
+437
+01:01:31.600 --> 01:01:38.301
+Marius: there were still being a bunch of transactions sent with with philosophy, if you want.
+
+438
+01:01:38.880 --> 01:01:42.619
+Marius: and so we didn't return the flows on.
+
+439
+01:01:43.140 --> 01:01:47.369
+Marius: It comes, but I can. I can open trip.
+
+440
+01:01:48.630 --> 01:01:50.759
+J Sunnyside Labs: Okay, that would be appreciated.
+
+441
+01:01:51.280 --> 01:01:53.240
+J Sunnyside Labs: And, Pawan, please.
+
+442
+01:01:54.340 --> 01:02:00.600
+pawan: Yeah, I think the failures could also just be like duplicates like.
+
+443
+01:02:00.760 --> 01:02:21.469
+pawan: do you know, like what specific failure it was on lighthouse? Because if you are getting columns over gossip and also getting them over, get probs. It might just be getting registered as a duplicate column, and that is also like an error. We don't like do anything with the error, but it is still registered as an error
+
+444
+01:02:22.330 --> 01:02:23.790
+pawan: beat that probably.
+
+445
+01:02:24.410 --> 01:02:34.169
+J Sunnyside Labs: Okay, yeah, that that might be one of the reasons, because how we measure this is just total request minus
+
+446
+01:02:34.320 --> 01:02:36.339
+J Sunnyside Labs: number of successes.
+
+447
+01:02:39.166 --> 01:02:41.449
+J Sunnyside Labs: Yeah, that's a good point.
+
+448
+01:02:44.866 --> 01:02:47.643
+J Sunnyside Labs: Maybe we need to count it separately.
+
+449
+01:02:52.808 --> 01:02:58.179
+J Sunnyside Labs: Moving on to the next point that we found interesting was
+
+450
+01:02:59.783 --> 01:03:08.180
+J Sunnyside Labs: the column processing time was inversely proportional to the number of processings on average.
+
+451
+01:03:08.950 --> 01:03:11.780
+J Sunnyside Labs: Say the 1st chart is
+
+452
+01:03:11.890 --> 01:03:18.120
+J Sunnyside Labs: the number of requests, and you can see that Granddyne has the most, and tech who has the least.
+
+453
+01:03:18.740 --> 01:03:23.110
+J Sunnyside Labs: But then, when we measured the timings.
+
+454
+01:03:23.370 --> 01:03:33.980
+J Sunnyside Labs: Teku has taken the most, and Granddyne has taken the least and.
+
+455
+01:03:34.130 --> 01:03:41.329
+Parithosh Jayanthi: Jay. Would it be possible to be summarize in the next minute? Because we have, like one more topic we want to do, and then the rest of the day.
+
+456
+01:03:41.330 --> 01:03:42.080
+J Sunnyside Labs: Sure.
+
+457
+01:03:42.460 --> 01:03:43.320
+Parithosh Jayanthi: Do you think?
+
+458
+01:03:44.390 --> 01:04:00.440
+J Sunnyside Labs: Yeah. Yeah. High reconstruction. Time on lighthouse was already discussed, discussed on the discord and then block pool size. I think we need to increase it on gas. I think 42.6 MB is
+
+459
+01:04:00.710 --> 01:04:07.699
+J Sunnyside Labs: bit too small, because the blob size will be 9 mega megabytes for 72 blobs.
+
+460
+01:04:08.400 --> 01:04:14.569
+J Sunnyside Labs: Say, that was it, and for CPU RAM. But yeah.
+
+461
+01:04:14.570 --> 01:04:17.129
+Marius: Our-. Our block pool is 1 GB.
+
+462
+01:04:18.780 --> 01:04:19.400
+J Sunnyside Labs: That's a.
+
+463
+01:04:19.400 --> 01:04:27.210
+Marius: The full port. Yeah, it's just 1. 1 sender can only send a few blocks.
+
+464
+01:04:29.190 --> 01:04:29.890
+J Sunnyside Labs: Okay.
+
+465
+01:04:29.890 --> 01:04:33.160
+Marius: Size of the of the block pool is 1 GB.
+
+466
+01:04:34.710 --> 01:04:37.329
+J Sunnyside Labs: Okay, let me check with you offline.
+
+467
+01:04:38.740 --> 01:04:48.950
+J Sunnyside Labs: And the rest is yeah. It was all right. Grand and gas. I think, because of the local size we'd had problem along with, like.
+
+468
+01:04:49.330 --> 01:04:52.980
+J Sunnyside Labs: not using the latest image. Yeah, thank you.
+
+469
+01:04:56.610 --> 01:05:10.789
+Parithosh Jayanthi: Thank you very much for the analysis. Could you maybe create some threads on the interrupt chat for whatever topic that you wanted to discuss, and then we can discuss with the respective plan teams and sort them out one by one.
+
+470
+01:05:11.810 --> 01:05:13.320
+J Sunnyside Labs: Yep, sure we'll do.
+
+471
+01:05:14.180 --> 01:05:23.740
+Parithosh Jayanthi: Thank you very much. And I guess you guys should also migrate to the Fusaka devnet 0 spec. Next, for the next version of the net.
+
+472
+01:05:24.770 --> 01:05:31.400
+J Sunnyside Labs: Yeah, we've just enabled it. Today. We've been starting to test it.
+
+473
+01:05:32.810 --> 01:05:44.367
+Parithosh Jayanthi: Perfect. Okay. But at time there's 1 more small topic I wanted to bring up after. But there's one announcement is everyone in general. Okay with
+
+474
+01:05:45.279 --> 01:05:53.679
+Parithosh Jayanthi: canceling next week's call, because we will be in person with the interrupt event. And I think Acd also might be cancelled next week.
+
+475
+01:05:57.300 --> 01:06:03.615
+Parithosh Jayanthi: Okay, we'll still discuss that and post a message on all core devs as well.
+
+476
+01:06:04.130 --> 01:06:07.909
+Parithosh Jayanthi: but yeah, I think if anyone needs to drop, then please feel free to drop
+
+477
+01:06:08.464 --> 01:06:19.490
+Parithosh Jayanthi: the only last topic I wanted to bring up was, do we have column site calls in the Beacon Api event stream already, and if not, are we planning on adding it?
+
+478
+01:06:27.944 --> 01:06:35.429
+Parithosh Jayanthi: I'm not sure. Is there some Cl. Dev or someone owning the Api who's here for the event stream?
+
+479
+01:06:36.300 --> 01:06:45.989
+Dmitrii Shmatko: I I think we don't have it in in backend Api. But for for tackle we have customer implementation, for example.
+
+480
+01:06:47.330 --> 01:06:59.869
+Parithosh Jayanthi: Okay. Then I think we might need to add it to the event stream, because we just started looking at the Zato metrics for it, and we realized that the event was missing which makes sense.
+
+481
+01:07:00.757 --> 01:07:04.169
+Parithosh Jayanthi: Cool. So we will. We'll make a Pr. And then we can take from there.
+
+482
+01:07:06.450 --> 01:07:10.399
+Parithosh Jayanthi: Okay, thank you. Everyone for coming then, and hope you have a nice day.
+
+483
+01:07:14.400 --> 01:07:14.990
+Dmitrii Shmatko: Thank you. Bye.
+
+484
+01:07:14.990 --> 01:07:16.370
+Justin Traglia: Thank you.
+
+485
+01:07:16.580 --> 01:07:17.170
+Marius: Don't see.
+
+486
+01:07:17.170 --> 01:07:17.990
+Kamil Chodoła: Thanks, bye.
+
