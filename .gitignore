@@ -1,4 +1,7 @@
 .env
 .venv/
 __pycache__/
-.tmp_*
+.tmp_*.DS_Store
+downloads/.DS_Store
+**/.DS_Store
+scripts/meetings_config.py

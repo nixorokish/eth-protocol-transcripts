@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 from datetime import datetime
 from pathlib import Path
 
-from pmissues_monitor import get_recently_closed_issues, parse_issue_for_meeting_info
-from zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
-from download_transcripts import download_meeting_artifacts, extract_meeting_info
+from scripts.pmissues_monitor import get_recently_closed_issues, parse_issue_for_meeting_info
+from scripts.zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
+from scripts.download_transcripts import download_meeting_artifacts, extract_meeting_info
 
 load_dotenv()
 
@@ -236,7 +236,7 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
         log(f"\n{'='*60}")
         log(f"Uploading {len(processed_folders)} meeting folders to GitHub in single commit...")
         
-        from github_uploader import batch_upload_to_github
+        from scripts.github_uploader import batch_upload_to_github
         
         try:
             uploaded = batch_upload_to_github(processed_folders, repo_owner, repo_name, log_func=log)
@@ -260,8 +260,8 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
                 # Update README table if any ACD calls were uploaded
                 if uploaded_acd:
                     try:
-                        from generate_readme_table import update_readme_table
-                        from github_uploader import upload_readme_to_github
+                        from scripts.generate_readme_table import update_readme_table
+                        from scripts.github_uploader import upload_readme_to_github
                         
                         if update_readme_table():
                             log(f"✓ Updated README table with new ACD calls")
