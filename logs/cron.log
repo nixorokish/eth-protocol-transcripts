@@ -1784,3 +1784,39 @@ Uploading 1 meeting folders to GitHub in single commit...
 ⚠ Skipped short recordings: 0
 
 Log saved to: logs/process_log_20251127_100005.txt
+=== Processing meetings from last 1 days ===
+Step 1: Fetching closed GitHub issues...
+  Searching for issues closed after 2025-11-27
+  Fetching page 1... got 100 issues
+  Fetching page 2... got 100 issues
+  Fetching page 3... got 100 issues
+  Fetching page 4... got 100 issues
+  Fetching page 5... got 100 issues
+  Fetching page 6... got 100 issues
+  Fetching page 7... got 100 issues
+  Fetching page 8... got 100 issues
+  Fetching page 9... got 100 issues
+  Fetching page 10... got 100 issues
+  Fetching page 11... got 100 issues
+  Fetching page 12... got 100 issues
+  Fetching page 13... got 100 issues
+  Fetching page 14... got 100 issues
+  Fetching page 15... got 100 issues
+  Fetching page 16... got 100 issues
+  Fetching page 17... got 100 issues
+  Fetching page 18... got 18 issues
+  Fetching page 19... got 0 issues
+  No more issues found
+  ✓ Found 4 closed issues in date range
+  ✓ Found 0 matched meetings
+
+No new meetings to upload
+
+============================================================
+=== SUMMARY ===
+✓ Successfully processed: 0
+⏭ Skipped (cached/exists): 0
+⚠ No recording found: 0
+⚠ Skipped short recordings: 0
+
+Log saved to: logs/process_log_20251128_100005.txt

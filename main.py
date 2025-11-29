@@ -261,8 +261,15 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
                 if uploaded_acd:
                     try:
                         from generate_readme_table import update_readme_table
+                        from github_uploader import upload_readme_to_github
+                        
                         if update_readme_table():
                             log(f"✓ Updated README table with new ACD calls")
+                            # Upload README to GitHub
+                            if upload_readme_to_github(repo_owner, repo_name, log_func=log):
+                                log(f"✓ Uploaded README.md to GitHub")
+                            else:
+                                log(f"⚠ Could not upload README.md to GitHub (check manually)")
                         else:
                             log(f"⚠ Could not update README table (check manually)")
                     except Exception as e:

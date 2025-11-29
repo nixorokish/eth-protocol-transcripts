@@ -221,6 +221,154 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
             log(f"      Response: {ref_update_response.text[:500]}")
         return []
 
+def upload_readme_to_github(repo_owner, repo_name, branch="main", log_func=None):
+    """Upload README.md to GitHub repository
+    
+    Args:
+        repo_owner: GitHub repository owner
+        repo_name: GitHub repository name
+        branch: Branch name (default: "main")
+        log_func: Optional function to log messages (takes message string)
+    
+    Returns:
+        True if successful, False otherwise
+    """
+    def log(msg):
+        if log_func:
+            log_func(msg)
+        else:
+            print(msg)
+    
+    token = os.getenv("GITHUB_TOKEN")
+    if not token:
+        log(f"    ✗ GITHUB_TOKEN not set in environment")
+        return False
+    
+    readme_path = Path('README.md')
+    if not readme_path.exists():
+        log(f"    ✗ README.md not found")
+        return False
+    
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    
+    # Read README content
+    try:
+        with open(readme_path, 'r', encoding='utf-8') as f:
+            readme_content = f.read()
+    except Exception as e:
+        log(f"    ✗ Failed to read README.md: {e}")
+        return False
+    
+    # Get the current commit SHA of the branch
+    ref_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/ref/heads/{branch}"
+    try:
+        ref_response = requests.get(ref_url, headers=headers, timeout=30)
+    except requests.exceptions.RequestException as e:
+        log(f"    ✗ Network error getting branch ref: {e}")
+        return False
+    
+    if ref_response.status_code != 200:
+        log(f"    ✗ Cannot access branch {branch}: {ref_response.status_code}")
+        return False
+    
+    base_commit_sha = ref_response.json()['object']['sha']
+    
+    # Get the base tree SHA
+    commit_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/commits/{base_commit_sha}"
+    try:
+        commit_response = requests.get(commit_url, headers=headers, timeout=30)
+    except requests.exceptions.RequestException as e:
+        log(f"    ✗ Network error getting commit: {e}")
+        return False
+    
+    if commit_response.status_code != 200:
+        log(f"    ✗ Cannot access commit: {commit_response.status_code}")
+        return False
+    
+    base_tree_sha = commit_response.json()['tree']['sha']
+    
+    # Create a new tree with README.md
+    tree_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/trees"
+    tree_data = {
+        "base_tree": base_tree_sha,
+        "tree": [{
+            "path": "README.md",
+            "mode": "100644",
+            "type": "blob",
+            "content": readme_content
+        }]
+    }
+    
+    try:
+        tree_response = requests.post(tree_url, headers=headers, json=tree_data, timeout=60)
+    except requests.exceptions.RequestException as e:
+        log(f"    ✗ Network error creating tree: {e}")
+        return False
+    
+    if tree_response.status_code != 201:
+        log(f"    ✗ Failed to create tree: {tree_response.status_code}")
+        try:
+            error_response = tree_response.json()
+            log(f"      Error: {error_response}")
+        except:
+            log(f"      Response: {tree_response.text[:500]}")
+        return False
+    
+    new_tree_sha = tree_response.json()['sha']
+    
+    # Create a new commit
+    commit_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/commits"
+    commit_message = "Update README table with latest ACD calls"
+    commit_data = {
+        "message": commit_message,
+        "tree": new_tree_sha,
+        "parents": [base_commit_sha]
+    }
+    
+    try:
+        commit_response = requests.post(commit_url, headers=headers, json=commit_data, timeout=30)
+    except requests.exceptions.RequestException as e:
+        log(f"    ✗ Network error creating commit: {e}")
+        return False
+    
+    if commit_response.status_code != 201:
+        log(f"    ✗ Failed to create commit: {commit_response.status_code}")
+        try:
+            error_response = commit_response.json()
+            log(f"      Error: {error_response}")
+        except:
+            log(f"      Response: {commit_response.text[:500]}")
+        return False
+    
+    new_commit_sha = commit_response.json()['sha']
+    
+    # Update the branch reference
+    ref_update_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/refs/heads/{branch}"
+    ref_update_data = {
+        "sha": new_commit_sha
+    }
+    
+    try:
+        ref_update_response = requests.patch(ref_update_url, headers=headers, json=ref_update_data, timeout=30)
+    except requests.exceptions.RequestException as e:
+        log(f"    ✗ Network error updating branch: {e}")
+        return False
+    
+    if ref_update_response.status_code == 200:
+        log(f"    ✓ Successfully uploaded README.md")
+        return True
+    else:
+        log(f"    ✗ Failed to update branch: {ref_update_response.status_code}")
+        try:
+            error_response = ref_update_response.json()
+            log(f"      Error: {error_response}")
+        except:
+            log(f"      Response: {ref_update_response.text[:500]}")
+        return False
+
 # Keep the original function for single uploads
 def upload_to_github(local_path, repo_owner, repo_name, branch="main", log_func=None):
     """Original single-folder upload function"""
