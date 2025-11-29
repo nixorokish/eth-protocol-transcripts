@@ -1,4 +1,0 @@
-00:05:03	Pooja Ranjan:	https://github.com/ethereum/pm/issues/1761
-00:34:33	Pooja Ranjan:	https://github.com/ethereum/ERCs/pull/1250  
-
-https://github.com/ethereum/ERCs/pull/1226

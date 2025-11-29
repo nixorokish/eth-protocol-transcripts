@@ -1,7 +1,0 @@
-00:06:44	keri:	https://hive.ethpandaops.io/#/group/generic
-00:11:17	Simsonraj Easvarasakthi:	seems like eth_simulate addition broke most of them?
-00:12:21	Simsonraj Easvarasakthi:	https://hive.ethpandaops.io/#/test/generic/1757904758-903fbd92501efc5db9d68d72555780ab?testnumber=187
-00:29:23	Simsonraj Easvarasakthi:	https://github.com/simsonraj/rpctestgen/pull/1 
-here is how it would like with a warning in rpctestgen
-00:30:30	Simsonraj Easvarasakthi:	here is where we have defined ranges
-https://github.com/ethereum/execution-apis/pull/650/files#diff-fefcab8353c54d2fd9e9379691dd12e95c0d3a4fe837e2da506340fc4889a1f3
