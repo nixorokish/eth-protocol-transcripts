@@ -1,10 +1,14 @@
 # main.py (updated with logging and caching)
 import os
+import sys
 import json
 import requests
 from dotenv import load_dotenv
 from datetime import datetime
 from pathlib import Path
+
+# Add parent directory to path so we can import from scripts
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scripts.pmissues_monitor import get_recently_closed_issues, parse_issue_for_meeting_info
 from scripts.zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
@@ -322,8 +326,8 @@ if __name__ == "__main__":
             process_recent_meetings(days_back=days, force_reprocess=True)
         elif sys.argv[1] == "--test":
             # Test mode: fetch and download a single meeting
-            from zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
-            from download_transcripts import download_meeting_artifacts
+            from scripts.zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
+            from scripts.download_transcripts import download_meeting_artifacts
             
             token = get_zoom_access_token()
             if not token:
