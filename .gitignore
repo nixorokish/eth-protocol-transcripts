@@ -6,3 +6,4 @@ downloads/.DS_Store
 **/.DS_Store
 scripts/meetings_config.py
 run.sh
+logs/
