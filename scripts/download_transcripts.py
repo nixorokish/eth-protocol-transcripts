@@ -95,8 +95,8 @@ def extract_meeting_info(topic):
     
     return meeting_type, meeting_num
 
-def download_meeting_artifacts(recording, access_token, output_dir="downloads", override_meeting_num=None):
-    """Download transcript and chat for a recording"""
+def download_meeting_artifacts(recording, access_token, output_dir=".", override_meeting_num=None):
+    """Download transcript and chat for a recording directly to root directory"""
     
     # Extract meeting info
     topic = recording.get('topic', 'Unknown Meeting')
@@ -109,7 +109,7 @@ def download_meeting_artifacts(recording, access_token, output_dir="downloads", 
     # Get date
     meeting_date = recording.get('start_time', '').split('T')[0]
     
-    # Create folder structure: meeting_type/Call-###_YYYY-MM-DD
+    # Create folder structure: meeting_type/Call-###_YYYY-MM-DD (in root)
     if meeting_num:
         folder_name = f"Call-{int(meeting_num):03d}_{meeting_date}"  # Zero-pad to 3 digits
     else:
@@ -166,7 +166,7 @@ def download_meeting_artifacts(recording, access_token, output_dir="downloads", 
 
 # Test download
 if __name__ == "__main__":
-    from zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
+    from .zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
     
     token = get_zoom_access_token()
     
@@ -179,6 +179,6 @@ if __name__ == "__main__":
     
     if recording:
         print(f"✓ Found recording: {recording.get('topic')}")
-        download_meeting_artifacts(recording, token)
+        download_meeting_artifacts(recording, token, output_dir=".")
     else:
         print("✗ No recording found")

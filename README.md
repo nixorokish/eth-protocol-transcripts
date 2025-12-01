@@ -1,7 +1,6 @@
 Raw chat & transcript files from core development calls facilitated by the EF zoom-bot.
 
-<details>
-<summary>ACD calls</summary>
+# ACD calls
 
 | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -399,4 +398,3 @@ Raw chat & transcript files from core development calls facilitated by the EF zo
 | 01 Jan 2016 | ACDE | 2 | - | [notes](https://github.com/ethereum/pm/blob/master/AllCoreDevs-EL-Meetings/Meeting%201&2.md) | - | - | [logs](https://github.com/ethereum/pm/blob/master/AllCoreDevs-EL-Meetings/Meeting%201&2.md) |
 | 30 Nov 2015 | ACDE | 1 | - | [notes](https://github.com/ethereum/pm/blob/master/AllCoreDevs-EL-Meetings/Meeting%201&2.md) | - | - | [logs](https://github.com/ethereum/pm/blob/master/AllCoreDevs-EL-Meetings/Meeting%201&2.md) |
 
-</details>

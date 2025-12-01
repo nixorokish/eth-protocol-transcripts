@@ -1,9 +1,16 @@
 .env
 .venv/
+venv/
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
 .tmp_*.DS_Store
 downloads/.DS_Store
 **/.DS_Store
 scripts/meetings_config.py
 run.sh
 logs/
+downloads/
+processed_meetings.json
+requirements.txt
