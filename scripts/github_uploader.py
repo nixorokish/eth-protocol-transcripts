@@ -51,7 +51,6 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
         log(f"      Status: {repo_check.status_code}")
         try:
             error_response = repo_check.json()
-            # Sanitize error response to avoid logging sensitive info
             sanitized = {k: v for k, v in error_response.items() if k not in ['message', 'documentation_url']}
             log(f"      Response: {sanitized}")
         except:
@@ -71,7 +70,6 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
         log(f"      Status: {ref_response.status_code}")
         try:
             error_response = ref_response.json()
-            # Sanitize error response to avoid logging sensitive info
             sanitized = {k: v for k, v in error_response.items() if k not in ['message', 'documentation_url']}
             log(f"      Response: {sanitized}")
         except:
@@ -94,7 +92,6 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
         log(f"      Status: {commit_response.status_code}")
         try:
             error_response = commit_response.json()
-            # Sanitize error response to avoid logging sensitive info
             sanitized = {k: v for k, v in error_response.items() if k not in ['message', 'documentation_url']}
             log(f"      Response: {sanitized}")
         except:
@@ -184,11 +181,10 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
         log(f"    ✗ Failed to create tree: {tree_response.status_code}")
         try:
             error_response = tree_response.json()
-            # Sanitize error response to avoid logging sensitive info
             error_msg = error_response.get('message', 'Unknown error')
             log(f"      Error: {error_msg}")
             if 'errors' in error_response:
-                # Log errors array but sanitize any potential sensitive data
+                # Log errors array
                 errors = error_response['errors']
                 log(f"      Details: {errors}")
         except:
@@ -218,7 +214,6 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
         log(f"    ✗ Failed to create commit: {commit_response.status_code}")
         try:
             error_response = commit_response.json()
-            # Sanitize error response to avoid logging sensitive info
             sanitized = {k: v for k, v in error_response.items() if k not in ['message', 'documentation_url']}
             log(f"      Error: {sanitized}")
         except:
@@ -249,7 +244,6 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
         log(f"    ✗ Failed to update branch: {ref_update_response.status_code}")
         try:
             error_response = ref_update_response.json()
-            # Sanitize error response to avoid logging sensitive info
             sanitized = {k: v for k, v in error_response.items() if k not in ['message', 'documentation_url']}
             log(f"      Error: {sanitized}")
         except:
@@ -297,19 +291,30 @@ def upload_readme_to_github(repo_owner, repo_name, branch="main", log_func=None)
         log(f"    ✗ Failed to read README.md: {e}")
         return False
     
-    # Get the current commit SHA of the branch
+    # Get the current commit SHA of the branch (with retry to ensure we get the latest)
     ref_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/ref/heads/{branch}"
-    try:
-        ref_response = requests.get(ref_url, headers=headers, timeout=30)
-    except requests.exceptions.RequestException as e:
-        log(f"    ✗ Network error getting branch ref: {e}")
-        return False
+    base_commit_sha = None
+    for attempt in range(3):
+        try:
+            ref_response = requests.get(ref_url, headers=headers, timeout=30)
+            if ref_response.status_code == 200:
+                base_commit_sha = ref_response.json()['object']['sha']
+                break
+            elif attempt < 2:
+                import time
+                time.sleep(0.5)  # Wait a bit and retry
+                continue
+        except requests.exceptions.RequestException as e:
+            if attempt < 2:
+                import time
+                time.sleep(0.5)
+                continue
+            log(f"    ✗ Network error getting branch ref: {e}")
+            return False
     
-    if ref_response.status_code != 200:
-        log(f"    ✗ Cannot access branch {branch}: {ref_response.status_code}")
+    if not base_commit_sha:
+        log(f"    ✗ Cannot access branch {branch}: {ref_response.status_code if 'ref_response' in locals() else 'unknown'}")
         return False
-    
-    base_commit_sha = ref_response.json()['object']['sha']
     
     # Get the base tree SHA
     commit_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/commits/{base_commit_sha}"
@@ -347,7 +352,6 @@ def upload_readme_to_github(repo_owner, repo_name, branch="main", log_func=None)
         log(f"    ✗ Failed to create tree: {tree_response.status_code}")
         try:
             error_response = tree_response.json()
-            # Sanitize error response to avoid logging sensitive info
             sanitized = {k: v for k, v in error_response.items() if k not in ['message', 'documentation_url']}
             log(f"      Error: {sanitized}")
         except:
@@ -375,7 +379,6 @@ def upload_readme_to_github(repo_owner, repo_name, branch="main", log_func=None)
         log(f"    ✗ Failed to create commit: {commit_response.status_code}")
         try:
             error_response = commit_response.json()
-            # Sanitize error response to avoid logging sensitive info
             sanitized = {k: v for k, v in error_response.items() if k not in ['message', 'documentation_url']}
             log(f"      Error: {sanitized}")
         except:
@@ -403,7 +406,6 @@ def upload_readme_to_github(repo_owner, repo_name, branch="main", log_func=None)
         log(f"    ✗ Failed to update branch: {ref_update_response.status_code}")
         try:
             error_response = ref_update_response.json()
-            # Sanitize error response to avoid logging sensitive info
             sanitized = {k: v for k, v in error_response.items() if k not in ['message', 'documentation_url']}
             log(f"      Error: {sanitized}")
         except:

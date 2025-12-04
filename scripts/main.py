@@ -3,8 +3,9 @@ import os
 import sys
 import json
 import requests
+import subprocess
 from dotenv import load_dotenv
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 # Add parent directory to path so we can import from scripts
@@ -15,6 +16,40 @@ from scripts.zoom_fetcher import get_zoom_access_token, get_recordings_for_meeti
 from scripts.download_transcripts import download_meeting_artifacts, extract_meeting_info
 
 load_dotenv()
+
+def sync_local_git_repo(log_func=None):
+    """Pull latest changes from remote to sync local git repo after API uploads"""
+    def log(msg):
+        if log_func:
+            log_func(msg)
+        else:
+            print(msg)
+    
+    try:
+        # Get the repo root directory (parent of scripts/)
+        repo_root = Path(__file__).parent.parent
+        
+        # Run git pull with rebase to handle divergent branches
+        result = subprocess.run(
+            ['git', 'pull', '--rebase', 'origin', 'main'],
+            cwd=repo_root,
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        
+        if result.returncode == 0:
+            log(f"✓ Synced local git repository with remote")
+            if result.stdout.strip():
+                log(f"  {result.stdout.strip()}")
+        else:
+            log(f"⚠ Failed to sync local git repository: {result.stderr.strip()}")
+            # Don't fail the whole process if git pull fails
+    except subprocess.TimeoutExpired:
+        log(f"⚠ Git pull timed out (this is non-critical)")
+    except Exception as e:
+        log(f"⚠ Error syncing local git repository: {e}")
+        # Don't fail the whole process if git pull fails
 
 def get_processed_meetings_cache():
     """Load cache of already processed meetings"""
@@ -60,8 +95,52 @@ def check_if_exists_on_github(repo_owner, repo_name, meeting_type, meeting_num, 
         return False
 
 # main.py (complete updated function)
-def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
-    """Main orchestration function with caching and logging"""
+def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, check_daily_run=True):
+    """Main orchestration function with caching and logging
+    
+    Args:
+        days_back: How many days back to look for closed issues
+        dry_run: If True, don't actually process, just show what would be processed
+        force_reprocess: If True, ignore cache and reprocess everything
+        check_daily_run: If True, check if we've already run today and skip if so
+    """
+    
+    # Check if we've already run in the last 6 hours (to avoid duplicate runs when computer boots)
+    # This allows for twice-daily runs (10 AM and 10 PM) while preventing rapid re-runs
+    if check_daily_run and not force_reprocess:
+        log_dir = Path("logs")
+        log_dir.mkdir(exist_ok=True)
+        now = datetime.now()
+        
+        # Check for any log file from the last 6 hours
+        cutoff_time = now - timedelta(hours=6)
+        recent_logs = []
+        for log_file in log_dir.glob("process_log_*.txt"):
+            try:
+                # Extract timestamp from filename (format: process_log_YYYYMMDD_HHMMSS.txt)
+                filename = log_file.stem  # Remove .txt extension
+                if len(filename) >= 21:  # process_log_YYYYMMDD_HHMMSS
+                    timestamp_str = filename[12:]  # YYYYMMDD_HHMMSS
+                    log_time = datetime.strptime(timestamp_str, "%Y%m%d_%H%M%S")
+                    if log_time > cutoff_time:
+                        recent_logs.append((log_file, log_time))
+            except:
+                pass
+        
+        if recent_logs:
+            # Check if any recent log shows successful completion
+            for log_file, log_time in sorted(recent_logs, reverse=True):
+                try:
+                    with open(log_file, 'r') as f:
+                        content = f.read()
+                        # If it has a summary section, it completed
+                        if "=== SUMMARY ===" in content:
+                            hours_ago = (now - log_time).total_seconds() / 3600
+                            print(f"✓ Already ran {hours_ago:.1f} hours ago (see {log_file.name}), skipping to avoid duplicate run")
+                            print("  Use --force to override this check")
+                            return
+                except:
+                    pass
     
     # Set up logging
     log_dir = Path("logs")
@@ -248,6 +327,9 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
             if uploaded:
                 log(f"✓ Successfully uploaded {len(uploaded)} files in single commit")
                 
+                # Sync local git repo with remote after successful upload
+                sync_local_git_repo(log_func=log)
+                
                 # Check if any ACD calls were uploaded in this batch
                 uploaded_acd = False
                 for key, value in processed_cache.items():
@@ -269,9 +351,14 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False):
                         
                         if update_readme_table():
                             log(f"✓ Updated README table with new ACD calls")
+                            # Small delay to ensure file is fully written
+                            import time
+                            time.sleep(0.1)
                             # Upload README to GitHub
                             if upload_readme_to_github(repo_owner, repo_name, log_func=log):
                                 log(f"✓ Uploaded README.md to GitHub")
+                                # Sync local git repo after README upload
+                                sync_local_git_repo(log_func=log)
                             else:
                                 log(f"⚠ Could not upload README.md to GitHub (check manually)")
                         else:

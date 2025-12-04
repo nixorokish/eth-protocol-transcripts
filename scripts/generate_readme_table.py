@@ -557,22 +557,27 @@ def update_readme_table():
         for call in flagged_calls:
             print(f"  {call['type']} {call['num']} ({call['date']}): has notes summary AND forkcast page")
     
-    # Find the table section (between <details> tags)
-    # Pattern: <details>...<summary>ACD calls</summary>\n\nTABLE_CONTENT\n\n</details>
-    pattern = r'(<details>\s*<summary>ACD calls</summary>\s*\n\n)(.*?)(\n\n</details>)'
-    
-    replacement = r'\1' + new_table + r'\3'
+    # Find the table section: # ACD calls\n\nTABLE_CONTENT\n\n
+    pattern = r'(# ACD calls\s*\n\n)(.*?)(\n\n(?:#|\Z))'
     
     if re.search(pattern, readme_content, re.DOTALL):
+        replacement = r'\1' + new_table + r'\3'
         updated_content = re.sub(pattern, replacement, readme_content, flags=re.DOTALL)
         
         # Write updated README
-        with open(readme_path, 'w') as f:
+        with open(readme_path, 'w', encoding='utf-8') as f:
             f.write(updated_content)
+            f.flush()  # Ensure content is written to disk
+            if hasattr(os, 'fsync'):
+                try:
+                    os.fsync(f.fileno())  # Force sync to disk
+                except:
+                    pass
         
         return True
     else:
         print("Could not find table section in README.md")
+        print("Expected: # ACD calls\n\n...TABLE...")
         return False
 
 if __name__ == '__main__':
