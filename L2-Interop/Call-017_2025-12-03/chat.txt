@@ -1,0 +1,115 @@
+00:13:52	Wei's MeetGeek Notetaker:	I’m recording this meeting with MeetGeek.ai for note taking purposes.
+00:15:15	Supernormal AI Notetaker:	Hi there 👋 I was invited by 𝗝𝘂𝗱𝗲 to transcribe and take notes for this meeting. Learn more: https://supernorm.al/zoom
+
+Type /𝗵𝗲𝗹𝗽 at any time to see what else I can do.
+00:15:20	read.ai meeting notes:	Isha and Parthasarathy added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:15:39	Blockscout assistant:	To start the notetaking and recording, the meeting host needs to be present and approve the recording pop-up message.
+00:15:39	Blockscout assistant:	Recording permission was denied, leaving the meeting.
+00:15:39	Blockscout assistant:	Recording permission was denied, leaving the meeting.
+00:16:50	Kanishk | Across:	Hi Folks!
+
+it was nice meeting some of y'all at devconnect. Hope everyone made it back home safely!
+00:22:37	Alim Sahin:	Suggested adding ERC7930 to ERC7730(Clear Signing Format) as a formatter. If you have any feedback, I'd like to hear it: https://github.com/ethereum/ERCs/pull/1388
+00:23:10	Orca 0x:	Replying to "Suggested adding ERC..."
+
+we loved to see this! will review
+00:23:15	Alim Sahin:	Reacted to "we loved to see this..." with ❤️
+00:23:25	Joshua Rudolf:	Reacted to "Suggested adding ERC..." with ❤️
+00:23:28	Thomas Clowes | Unruggable - ENS:	https://discuss.ens.domains/t/temp-check-registration-of-on-eth-to-support-interoperable-addressing-standards/21541 
+
+https://docs.ens.domains/ensip/24
+00:23:49	Joshua Rudolf:	Reacted to "https://discuss.ens...." with 🙏
+00:25:56	Christian Montoya:	Can someone drop the link to the SDK?
+00:26:16	Ndeto | Unruggable:	Reacted to https://discuss.ens.... with "❤️"
+00:26:21	Ahmad Bitar | Nethermind:	can someone share the link to the Interoperable Addresses website?
+00:27:07	Orca 0x:	Replying to "Can someone drop the..."
+
+https://www.npmjs.com/package/@wonderland/interop-addresses
+00:27:22	Christian Montoya:	Reacted to "https://www.npmjs.co…" with ❤️
+00:27:32	Orca 0x:	Replying to "can someone share th..."
+
+pending final release on the site, will share asap
+00:27:39	Ahmad Bitar | Nethermind:	Reacted to "pending final releas..." with 🙏
+00:27:56	Christian Montoya:	Great update, feels like all the wishlist items were achieved
+00:28:03	Thomas Clowes | Unruggable - ENS:	Reacted to "Great update, feels ..." with ❤️
+00:28:19	Ndeto | Unruggable:	Reacted to Great update, feels ... with "💯"
+00:28:32	Joshua Rudolf:	Reacted to "Great update, feels ..." with ❤️
+00:29:12	Orca 0x:	Reacted to "Great update, feels ..." with ❤️
+00:30:06	Jude:	Reacted to "Great update, feels ..." with 💯
+00:31:39	Barnabé Monnot:	The slides are part of a longer talk I gave at trustless, find the recording here 🙂 https://x.com/trustlessconf/status/1994084984747962669
+00:31:49	Joshua Rudolf:	Reacted to "The slides are part ..." with 👍
+00:31:53	Kanishk | Across:	Reacted to "The slides are par..." with 👍
+00:31:55	Orest Tarasiuk (t1):	What’s the printer printing, behind Pepe? :D
+00:31:55	Esk3nder.eth:	Reacted to "Great update, feels …" with ❤️
+00:31:59	Barnabé Monnot:	Reacted to "Great update, feels ..." with ❤️
+00:32:01	Kanishk | Across:	Reacted to "What’s the printe..." with 😂
+00:32:05	Kanishk | Across:	Reacted to "What’s the printe..." with ❤️
+00:32:16	Orca 0x:	Reacted to "What’s the printer p..." with ❤️
+00:32:26	Allan | Offchain Labs:	Reacted to "What’s the printer p..." with 😂
+00:33:53	Alon Muroch | SSVLabs:	Reacted to "The slides are part …" with 👍
+00:34:08	John Church:	How should we reach out to you Pepe? (Beyond 3d printing 🙂)
+00:34:20	Pepe Blasco:	Telegram @pepebndc
+00:34:26	John Church:	Reacted to "Telegram @pepebndc" with 👍
+00:34:30	Alon Muroch | SSVLabs:	Reacted to "Telegram @pepebndc" with 👍
+00:40:50	Kanishk | Across:	is there a demo app link that we can check out here ?
+00:40:53	Alon Muroch | SSVLabs:	@Mislav Javor is love to chat more about composable intents
+00:41:31	Mislav Javor:	Replying to "@Mislav Javor is l..."
+
+You can ping me @oxshaman on tg
+00:41:39	Mislav Javor:	Replying to "is there a demo ap..."
+
+will share
+00:43:18	Kanishk | Across:	Reacted to "will share" with 👍
+00:44:50	Joshua Rudolf:	Very cool! @Matt | Nethermind
+00:45:01	Orest Tarasiuk (t1):	Cute UI too
+00:45:02	Ellie Davidson:	Reacted to "Very cool! @Matt | N..." with 🎉
+00:45:09	Orest Tarasiuk (t1):	What’s the tiling window manager?
+00:45:18	Kanishk | Across:	so good! 
+
+could you share the github and app link ?
+00:45:19	John Church:	https://github.com/NethermindEth/OIF-starknet
+00:45:24	Kanishk | Across:	Reacted to "https://github.com..." with ❤️
+00:45:43	Orest Tarasiuk (t1):	Reacted to "https://github.com/N..." with ❤️
+00:45:58	John Church:	Reacted to "Very cool! @Matt | N..." with 🎉
+00:46:04	Pepe Blasco:	Reacted to "https://github.com/N..." with ❤️
+00:46:38	Matt | Nethermind:	Replying to "What’s the tiling wi..."
+
+Rectangle on Mac OS + Karabiner for keys
+00:46:44	Matt | Nethermind:	Testnet app url: https://www.oif-demo.novemberfork.io/
+00:46:57	Orest Tarasiuk (t1):	Reacted to "Testnet app url: htt..." with 🙏
+00:47:01	John Church:	Reacted to "Testnet app url: htt..." with 🔥
+00:51:14	Joshua Rudolf:	https://lucadonnoh.github.io/challenge-period
+00:55:39	Joshua Rudolf:	https://ethereum-magicians.org/t/a-simple-l2-security-and-finalization-roadmap/23309#p-56644-h-2-pragmatic-fast-finality-via-2-of-3-op-zk-tee-2
+00:55:47	Joshua Rudolf:	Pragmatic fast finality ^
+00:58:02	Alon Muroch | SSVLabs:	Sorry need to run, awesome call!
+00:58:15	Alon Muroch | SSVLabs:	Replying to "@Mislav Javor is lov…"
+Just did on the group
+00:58:17	Alon Muroch | SSVLabs:	Replying to "@Mislav Javor is lov…"
+Thanks
+00:58:23	Ahmad Bitar | Nethermind:	Surge has already implemented a version of the 2 out of 3 finality gadget
+00:58:30	Ellie Davidson:	Reacted to "Surge has already im..." with 🎉
+00:58:31	John Church:	Reacted to "Surge has already im..." with 🎉
+00:58:41	Orest Tarasiuk (t1):	Reacted to "Surge has already im..." with 🙏
+00:59:32	Jude:	Reacted to "Testnet app url: htt..." with 🔥
+00:59:46	Ahmad Bitar | Nethermind:	Replying to "Surge has already im..." 
+
+ Pr with the diagram:
+https://github.com/NethermindEth/surge-taiko-mono/pull/130
+01:00:15	Ahmad Bitar | Nethermind:	Replying to "Surge has already im..." 
+
+ Next we are removing TEE and requiring diverse ZK proof types
+01:00:23	Kanishk | Across:	Reacted to "Next we are removi..." with 👀
+01:00:26	Orest Tarasiuk (t1):	Replying to "Surge has already im..."
+
+removing?
+01:00:36	Orest Tarasiuk (t1):	Replying to "Surge has already im..."
+
+What about finality, then?
+01:00:46	Kanishk | Across:	thanks folks!
+01:00:51	Ahmad Bitar | Nethermind:	Replying to "Surge has already im..." 
+
+ Yes, TEE attestations are not reliable

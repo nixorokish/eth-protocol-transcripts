@@ -1,0 +1,626 @@
+WEBVTT
+
+1
+00:03:47.120 --> 00:03:47.970
+Mercy Boma Naps-Nkari: Hello.
+
+2
+00:03:48.310 --> 00:03:49.490
+Mercy Boma Naps-Nkari: Good afternoon.
+
+3
+00:03:51.280 --> 00:03:55.250
+Mercy Boma Naps-Nkari: Oh… Okay, Akash, you're ready.
+
+4
+00:03:59.160 --> 00:04:00.549
+Akash | ECH: Yep, we are live.
+
+5
+00:04:02.130 --> 00:04:03.100
+Mercy Boma Naps-Nkari: Thank you.
+
+6
+00:04:03.400 --> 00:04:09.029
+Mercy Boma Naps-Nkari: Good afternoon, welcome to ROPC Core Standard Call 16.
+
+7
+00:04:09.600 --> 00:04:15.830
+Mercy Boma Naps-Nkari: today's date, December 8th, 2025. We don't have much done on the agenda, but…
+
+8
+00:04:16.329 --> 00:04:19.329
+Mercy Boma Naps-Nkari: I think, Carrie, you shh,
+
+9
+00:04:20.170 --> 00:04:30.959
+Mercy Boma Naps-Nkari: Sims is not here, the first, which is JSON ROPC error code standardization. Since he's not here to update us on that front, I think we can go over to the execution API versioning.
+
+10
+00:04:31.240 --> 00:04:32.539
+Mercy Boma Naps-Nkari: by Curry.
+
+11
+00:04:36.230 --> 00:04:41.780
+keri: Sure, that sounds good. Let's see, I can drop a link in the chat…
+
+12
+00:04:41.780 --> 00:04:43.299
+Mercy Boma Naps-Nkari: Let me shop that.
+
+13
+00:04:44.400 --> 00:04:45.130
+Mercy Boma Naps-Nkari: Okay.
+
+14
+00:04:46.290 --> 00:05:04.520
+keri: Oh, you got it, okay. So basically what I want to do, and what I think would help client developers, is to, have versioning information in execution APIs, and this is mostly for, the Hive specs, so that they can start passing the Hive,
+
+15
+00:05:04.720 --> 00:05:06.270
+keri: the RPC Compact.
+
+16
+00:05:06.470 --> 00:05:17.460
+keri: hive tests, so they're not trying to hit a moving target, because basically right now, anytime something gets merged, a hive test breaks somewhere along the way. So…
+
+17
+00:05:17.790 --> 00:05:24.080
+keri: I have some comments here. I have addressed the feedback, I tagged…
+
+18
+00:05:24.380 --> 00:05:27.910
+keri: Felix to see if he had any other,
+
+19
+00:05:28.410 --> 00:05:32.839
+keri: feedback, I'll probably give it a couple more days.
+
+20
+00:05:33.180 --> 00:05:42.840
+keri: And then, merge it in, and then get something up in Hive where we can run against the… both the version.
+
+21
+00:05:42.940 --> 00:05:46.269
+keri: The tagged version, and then also, like,
+
+22
+00:05:46.410 --> 00:06:00.889
+keri: like, an unstable version, so that clients can see what's coming down the line. But if there are any client developers here who have opinions, or anything like that, or feedback, let me know, or feel free to comment on the PR as well.
+
+23
+00:06:01.120 --> 00:06:06.520
+keri: I don't have any other updates there besides that.
+
+24
+00:06:06.920 --> 00:06:08.660
+keri: So that's it from my end.
+
+25
+00:06:10.960 --> 00:06:18.560
+Mercy Boma Naps-Nkari: Okay, that's good. I wanted to also point out something about, Boom.
+
+26
+00:06:18.950 --> 00:06:21.799
+Mercy Boma Naps-Nkari: But I was hoping Sims and,
+
+27
+00:06:22.390 --> 00:06:27.759
+Mercy Boma Naps-Nkari: this other guy would be here, because I think they're the ones majorly in charge of OpenROPC.
+
+28
+00:06:27.860 --> 00:06:43.809
+Mercy Boma Naps-Nkari: to talk about, proper documentation and also the website on its own, because I feel like we… there's some things that are not in the website already, and I would actually like for us to talk about how we will make,
+
+29
+00:06:44.870 --> 00:06:49.239
+Mercy Boma Naps-Nkari: The website much more proper, and then to align very well with
+
+30
+00:06:49.500 --> 00:06:52.360
+Mercy Boma Naps-Nkari: also with, the open ROPC.
+
+31
+00:06:54.450 --> 00:06:58.960
+Mercy Boma Naps-Nkari: But I… I'm not seeing them here, although I tagged them on Discord, so…
+
+32
+00:06:59.680 --> 00:07:04.230
+Mercy Boma Naps-Nkari: Maybe we can keep that out for… the next call.
+
+33
+00:07:04.580 --> 00:07:05.580
+Mercy Boma Naps-Nkari: What do you think?
+
+34
+00:07:08.970 --> 00:07:19.939
+keri: Yeah, that sounds good to me. I know Zane, is working… Zane with OpenRPC is working on, making the site a lot nicer, and should have…
+
+35
+00:07:20.310 --> 00:07:30.400
+keri: something coming in on the 24th, I think. They have a grant deadline for the EF, so they should have something around then to share.
+
+36
+00:07:30.550 --> 00:07:32.010
+keri: As well, so…
+
+37
+00:07:33.950 --> 00:07:39.679
+Mercy Boma Naps-Nkari: Oh, okay, I wasn't aware of any upcoming, enhancements, but that's okay.
+
+38
+00:07:40.400 --> 00:07:50.200
+Mercy Boma Naps-Nkari: I think that's all we have on our agenda. So, if you have anything you want us to discuss, about the ROPC,
+
+39
+00:07:50.500 --> 00:07:53.480
+Mercy Boma Naps-Nkari: or the repo, or any open PRs also.
+
+40
+00:07:54.000 --> 00:07:55.639
+Mercy Boma Naps-Nkari: Please, the floor is yours.
+
+41
+00:08:11.790 --> 00:08:21.690
+Mercy Boma Naps-Nkari: Oh, okay, I guess we don't have any other thing. Then, I will also like to point out some open PRs, especially the ones we have that have been installed for a very long time.
+
+42
+00:08:22.390 --> 00:08:25.420
+Mercy Boma Naps-Nkari: I will leave that to you, Kira.
+
+43
+00:08:28.030 --> 00:08:32.070
+Mercy Boma Naps-Nkari: It's… is there, like, any possible feedback for this?
+
+44
+00:08:36.070 --> 00:08:39.420
+keri: Do you have ones that you're thinking about specifically?
+
+45
+00:08:39.610 --> 00:08:45.039
+keri: I want to, I'd really like to get this versioning in first, because,
+
+46
+00:08:45.260 --> 00:08:49.669
+keri: you know, once we start adding stuff, it'll start breaking the RPC compact tests again.
+
+47
+00:08:49.930 --> 00:08:55.880
+keri: So that's kind of what I have been waiting on, but, but if there are…
+
+48
+00:08:56.840 --> 00:08:58.639
+keri: Specific ones that you want.
+
+49
+00:08:58.910 --> 00:09:01.290
+keri: I mean, to take a look, I can definitely do that.
+
+50
+00:09:03.920 --> 00:09:06.249
+Mercy Boma Naps-Nkari: I'm trying to drop them on the chart.
+
+51
+00:09:06.640 --> 00:09:07.610
+keri: Okay, perfect.
+
+52
+00:09:11.680 --> 00:09:17.989
+Mercy Boma Naps-Nkari: And, okay, for the… since, Sims is not here, but if anyone has any,
+
+53
+00:09:19.360 --> 00:09:26.280
+Mercy Boma Naps-Nkari: points about the JSON ROPC error code standardization, that is ongoing? Like, any…
+
+54
+00:09:28.090 --> 00:09:33.940
+Mercy Boma Naps-Nkari: improvements or suggestions. This is the PR. We can leave our comments there.
+
+55
+00:10:00.630 --> 00:10:06.089
+keri: Cool. Do you know, has anything changed in the JSON IPC error codes?
+
+56
+00:10:06.570 --> 00:10:07.690
+keri: PR.
+
+57
+00:10:08.390 --> 00:10:09.000
+keri: Major?
+
+58
+00:10:09.000 --> 00:10:13.439
+Mercy Boma Naps-Nkari: No, not… nothing has been changed yet. There's… it's still, like.
+
+59
+00:10:13.630 --> 00:10:23.670
+Mercy Boma Naps-Nkari: the last time we left it, so I'm saying… because our last discussion, we were supposed to, like, move over to the ACDT call to get more client views on it, but…
+
+60
+00:10:24.020 --> 00:10:34.639
+Mercy Boma Naps-Nkari: I did not hear from Sims, so I was expecting if we… if I'm able to get back or get in contact with him before this week, we can move it over to ACDT.
+
+61
+00:10:35.210 --> 00:10:36.879
+Mercy Boma Naps-Nkari: Next week, Monday.
+
+62
+00:10:38.080 --> 00:10:46.519
+Mercy Boma Naps-Nkari: We can add it to the agenda, so that if any improvement or for that suggestion, we can also align it properly.
+
+63
+00:10:48.140 --> 00:10:52.439
+keri: Cool. Yeah, and I think, I think it'd be good to get it on the ACDT.
+
+64
+00:10:52.610 --> 00:10:57.860
+keri: call next week, even though, it looks like Simpson has,
+
+65
+00:10:59.070 --> 00:11:02.020
+keri: Address some of the comments already, so…
+
+66
+00:11:02.780 --> 00:11:13.430
+keri: I would say let's get it on the call on the agenda next Monday, and then hopefully we can either get more feedback or… or, move towards merging it.
+
+67
+00:11:15.040 --> 00:11:20.389
+Mercy Boma Naps-Nkari: Yes, and that was… I think, I saw a comment about…
+
+68
+00:11:20.520 --> 00:11:24.039
+Mercy Boma Naps-Nkari: One of the error codes, I can't remember where, I think it's on this code.
+
+69
+00:11:25.130 --> 00:11:27.159
+Mercy Boma Naps-Nkari: And now I can access my Discord.
+
+70
+00:11:31.800 --> 00:11:37.430
+Mercy Boma Naps-Nkari: Yeah, about, it gets log error.
+
+71
+00:11:41.640 --> 00:11:46.539
+Mercy Boma Naps-Nkari: Let me just drop the links to the trade.
+
+72
+00:11:47.550 --> 00:11:51.400
+Mercy Boma Naps-Nkari: So, is this something we need to take a look at?
+
+73
+00:11:53.410 --> 00:11:55.669
+Mercy Boma Naps-Nkari: Oh, we need to add to the agenda also.
+
+74
+00:12:05.350 --> 00:12:09.560
+keri: That's a good question. I'm not sure. I can…
+
+75
+00:12:11.230 --> 00:12:16.179
+keri: Take a look. I sort of think, Felix might have merged this one.
+
+76
+00:12:17.210 --> 00:12:18.740
+keri: But I can double check.
+
+77
+00:12:18.870 --> 00:12:22.669
+keri: And see if a response is needed, or if we need to, put it on…
+
+78
+00:12:23.110 --> 00:12:24.360
+keri: One of the agendas.
+
+79
+00:12:25.100 --> 00:12:31.519
+Mercy Boma Naps-Nkari: Okay, like, I was thinking this should be also be part of the error audition and the error codes we were working on.
+
+80
+00:12:32.070 --> 00:12:33.800
+keri: Yeah, I think it should.
+
+81
+00:12:36.080 --> 00:12:36.840
+Mercy Boma Naps-Nkari: Okay.
+
+82
+00:12:37.240 --> 00:12:37.780
+keri: Yeah.
+
+83
+00:12:42.290 --> 00:12:49.549
+Mercy Boma Naps-Nkari: That is from my end. I don't know if… Any other PIN?
+
+84
+00:12:57.430 --> 00:12:58.660
+keri: Nothing for my end.
+
+85
+00:13:05.470 --> 00:13:17.069
+Mercy Boma Naps-Nkari: Okay, so, wheelsen, Chase, Katya, Nikitas… I'm sorry if I pronounced your name wrongly. Do you have any…
+
+86
+00:13:17.440 --> 00:13:21.020
+Mercy Boma Naps-Nkari: any imputes for this call before we call it a day?
+
+87
+00:13:23.600 --> 00:13:33.020
+Chase Wright: I guess I can say hello. I'm Chase. I just joined the EF, and my responsibilities are around node infrastructure and RPC stuff.
+
+88
+00:13:33.150 --> 00:13:44.360
+Chase Wright: So, this is my first time joining the call, so I'm kind of just listening in, getting a feel for what you guys are doing before I try to have any opinions on anything.
+
+89
+00:13:46.070 --> 00:13:49.850
+Mercy Boma Naps-Nkari: Okay, thank you for joining us. Thank you, Katya.
+
+90
+00:13:50.340 --> 00:13:54.560
+Mercy Boma Naps-Nkari: Okay, so that's basically… All for today.
+
+91
+00:13:54.910 --> 00:13:59.589
+Mercy Boma Naps-Nkari: I guess we'll have to come again on… next week… next two weeks, rather.
+
+92
+00:14:03.160 --> 00:14:04.769
+Mercy Boma Naps-Nkari: Oh, okay, sorry.
+
+93
+00:14:05.140 --> 00:14:06.530
+Mercy Boma Naps-Nkari: You can unmute.
+
+94
+00:14:07.410 --> 00:14:15.100
+Nikita Meshcheriakov: Yeah, hi guys, I'm from Nethermine team. I'm working on RPC compatibility now, and…
+
+95
+00:14:15.380 --> 00:14:20.170
+Nikita Meshcheriakov: Yeah, I wanted just to discuss a few, guest internal
+
+96
+00:14:20.420 --> 00:14:23.449
+Nikita Meshcheriakov: issues that we face in Nethermind.
+
+97
+00:14:23.890 --> 00:14:27.250
+Nikita Meshcheriakov: I probably need to talk to someone from guest team.
+
+98
+00:14:30.120 --> 00:14:38.330
+Mercy Boma Naps-Nkari: Okay, so the idea of this call is to convey any information or to discuss anything pertaining to JSON ROPC.
+
+99
+00:14:40.590 --> 00:14:47.979
+Mercy Boma Naps-Nkari: we can have a broader discussion, and then we… we might… if there is no time left, we can still continue on the Discord.
+
+100
+00:14:49.280 --> 00:14:51.229
+Mercy Boma Naps-Nkari: the JSNRP6 channel.
+
+101
+00:14:52.330 --> 00:14:54.599
+Nikita Meshcheriakov: Yeah, I will raise Dish on Discord.
+
+102
+00:14:55.070 --> 00:14:59.770
+Nikita Meshcheriakov: I talked to Felix about it, but, on number…
+
+103
+00:14:59.770 --> 00:15:02.450
+Mercy Boma Naps-Nkari: Okay, can you make an intro about it? Can you, like…
+
+104
+00:15:03.260 --> 00:15:13.939
+Nikita Meshcheriakov: Yes, so, it's an issue with transaction types, so inside the Geth ignores them, and Nethermine doesn't, so we…
+
+105
+00:15:14.470 --> 00:15:17.510
+Nikita Meshcheriakov: Check transaction types on RPC calls.
+
+106
+00:15:18.220 --> 00:15:20.920
+Nikita Meshcheriakov: And, like… Act.
+
+107
+00:15:21.090 --> 00:15:23.079
+Nikita Meshcheriakov: According to transaction type.
+
+108
+00:15:24.800 --> 00:15:26.430
+Nikita Meshcheriakov: Yeah, that's the issue.
+
+109
+00:15:30.820 --> 00:15:34.600
+Mercy Boma Naps-Nkari: Okay, kira, do you have anything to say to this?
+
+110
+00:15:36.380 --> 00:15:40.050
+keri: Okay, sorry, can you summarize that one more time? I didn't understand.
+
+111
+00:15:40.510 --> 00:15:48.549
+Nikita Meshcheriakov: Yes, so, for example, when you do it call, guess, and put transaction type, in transaction.
+
+112
+00:15:48.690 --> 00:15:52.840
+Nikita Meshcheriakov: Guess we'll ignore it, just remove from JSON.
+
+113
+00:15:52.960 --> 00:16:00.679
+Nikita Meshcheriakov: Entirely. But in never mind, we will use this transaction type and execute transaction as transaction of this type.
+
+114
+00:16:02.510 --> 00:16:08.220
+keri: Gotcha. Does that come out in the, JSON RPC? Like, what comes back, or…
+
+115
+00:16:08.660 --> 00:16:16.130
+Nikita Meshcheriakov: Yeah, yeah, yeah. So, for example, like, if you put, like, transaction type 2 and bloep hashes.
+
+116
+00:16:16.430 --> 00:16:23.729
+Nikita Meshcheriakov: gas will treat this as a blob transaction, and Nethermind will treat this as 15598P transaction.
+
+117
+00:16:24.270 --> 00:16:24.990
+keri: Okay.
+
+118
+00:16:28.720 --> 00:16:37.099
+keri: Yeah, I think, unfortunately, yeah, I think the channel would be the best place to bring that up.
+
+119
+00:16:37.350 --> 00:16:44.670
+keri: with the get devs. One of my longer-term goals is to get, get off of the…
+
+120
+00:16:44.770 --> 00:16:49.869
+keri: As not the spec, and start using the execution specs repo instead.
+
+121
+00:16:50.060 --> 00:16:54.670
+keri: But that's… I don't… that won't happen very soon.
+
+122
+00:16:55.150 --> 00:16:57.209
+keri: But hopefully within the next year.
+
+123
+00:16:58.380 --> 00:17:05.520
+Mercy Boma Naps-Nkari: Yeah, okay, that's actually something else I wanted to discuss, because I think that's where most of the issues come out from, because
+
+124
+00:17:05.770 --> 00:17:11.939
+Mercy Boma Naps-Nkari: Oh… if guest… Get is missing something, and… or maybe he's not complying to something.
+
+125
+00:17:12.369 --> 00:17:15.290
+Mercy Boma Naps-Nkari: The whole test is kind of flaky at the end of the day.
+
+126
+00:17:15.760 --> 00:17:18.599
+Mercy Boma Naps-Nkari: I… I need to share…
+
+127
+00:17:19.510 --> 00:17:32.840
+Mercy Boma Naps-Nkari: Okay, I will share a Notion page on Discord. I did make a draft about, such cases alongside, Robocop. I think that was the first issues we looked at at beginning of this year.
+
+128
+00:17:33.660 --> 00:17:37.310
+Mercy Boma Naps-Nkari: So, we… I'm not sure how we're going to go about it, Paul.
+
+129
+00:17:38.230 --> 00:17:45.020
+Mercy Boma Naps-Nkari: I just wanted to ask, is the spec, is there a test for this, transaction on ROP citation?
+
+130
+00:17:46.830 --> 00:17:49.649
+Nikita Meshcheriakov: no, not really.
+
+131
+00:17:51.360 --> 00:17:52.100
+Mercy Boma Naps-Nkari: Okay.
+
+132
+00:17:55.240 --> 00:18:02.370
+Chase Wright: Maybe you could write the test that works with Nethermine, and then Geth would have to fix it.
+
+133
+00:18:03.740 --> 00:18:05.559
+Nikita Meshcheriakov: Yeah, but,
+
+134
+00:18:05.810 --> 00:18:13.809
+Nikita Meshcheriakov: I'm not sure that we should do, like, never mind. So, maybe Geth is right, maybe no one's right, I don't know.
+
+135
+00:18:13.810 --> 00:18:16.279
+Chase Wright: Yeah, okay, we should answer that question first.
+
+136
+00:18:17.460 --> 00:18:21.840
+keri: Yeah, and Geth, the tricky part is that Geth, is the spec.
+
+137
+00:18:21.840 --> 00:18:26.290
+Chase Wright: Okay, well, you say guest is the spec, but, like, that's not…
+
+138
+00:18:26.460 --> 00:18:32.149
+Chase Wright: true in so much that the specs were written after Geth.
+
+139
+00:18:32.150 --> 00:18:36.959
+keri: Right, but they, return the response values.
+
+140
+00:18:37.500 --> 00:18:40.100
+keri: For any given request. There's a tool that…
+
+141
+00:18:40.200 --> 00:18:45.809
+keri: We… when you put in a JSON IPC request, It goes through GIF.
+
+142
+00:18:45.910 --> 00:18:48.289
+keri: And so whatever comes back is the gap.
+
+143
+00:18:48.850 --> 00:18:51.480
+keri: Response, which then becomes…
+
+144
+00:18:52.180 --> 00:18:57.070
+Chase Wright: Alright, sure, but that's an implementation detail, not getth is the spec.
+
+145
+00:18:57.370 --> 00:18:58.010
+keri: Sure.
+
+146
+00:19:05.240 --> 00:19:12.169
+Mercy Boma Naps-Nkari: Hey, I think we need to continue the discussion on Discord, because I don't think there's any client… get clientele here.
+
+147
+00:19:12.720 --> 00:19:19.250
+Mercy Boma Naps-Nkari: That's… I think that's all for today. See you guys next two weeks, probably.
+
+148
+00:19:22.320 --> 00:19:24.200
+Mercy Boma Naps-Nkari: We're having a con next two weeks, right?
+
+149
+00:19:29.130 --> 00:19:30.220
+Mercy Boma Naps-Nkari: Akira.
+
+150
+00:19:30.450 --> 00:19:31.300
+Mercy Boma Naps-Nkari: Sorry.
+
+151
+00:19:32.060 --> 00:19:34.730
+keri: We should have a… we should have one in two weeks, yeah.
+
+152
+00:19:35.520 --> 00:19:36.850
+Mercy Boma Naps-Nkari: because I was…
+
+153
+00:19:37.130 --> 00:19:42.579
+Mercy Boma Naps-Nkari: I think we're entering the holidays, so I don't want to, like, jump into people's, off-season.
+
+154
+00:19:43.120 --> 00:19:45.909
+Mercy Boma Naps-Nkari: So, thank you very much for joining today's call, and…
+
+155
+00:19:46.520 --> 00:19:50.620
+Mercy Boma Naps-Nkari: We hope to have you all again next two weeks. Thank you.
+
+156
+00:19:54.290 --> 00:19:55.270
+Nikita Meshcheriakov: Yep, bye.
+

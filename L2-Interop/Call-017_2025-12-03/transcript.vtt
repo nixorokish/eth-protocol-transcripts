@@ -1,0 +1,1134 @@
+WEBVTT
+
+1
+00:16:33.880 --> 00:16:36.829
+Joshua Rudolf: Hello, Lou. We'll get started in a minute.
+
+2
+00:17:38.640 --> 00:17:44.999
+Joshua Rudolf: Alrighty, should we do it? I think we got the folks here who will be presenting the first agenda item.
+
+3
+00:17:45.450 --> 00:17:48.419
+Joshua Rudolf: So let's, yeah, kick things off.
+
+4
+00:17:49.930 --> 00:17:53.479
+Joshua Rudolf: Alright, welcome to the L2 Interop Working Group.
+
+5
+00:17:53.740 --> 00:18:06.659
+Joshua Rudolf: We have a few agenda items for today, starting off with updates on interoperable addresses, aka chain-specific addresses. This is ERC7828 and 7930.
+
+6
+00:18:06.750 --> 00:18:21.890
+Joshua Rudolf: Presented by Unruggable in Wonderland. Next up, Open Intense Framework, some updates there, and a demo, presentation, overview of some work from Nethermind on OIF StarkNet. And then last up…
+
+7
+00:18:22.140 --> 00:18:27.900
+Joshua Rudolf: Open discussion, many updates, comments for the…
+
+8
+00:18:28.070 --> 00:18:35.820
+Joshua Rudolf: work happening around the 7-day withdrawal window reductions. This is for optimistic roll-ups and the 7-day windows.
+
+9
+00:18:36.390 --> 00:18:40.470
+Joshua Rudolf: Okay, cool. So that is an overview of the agenda, and I think we can kick things off.
+
+10
+00:18:40.960 --> 00:18:44.949
+Joshua Rudolf: With agenda item number one, whoever wants to start there. Orca?
+
+11
+00:18:45.920 --> 00:18:55.630
+Orca 0x: Hey, yeah, thanks. Thanks so much, Josh. I'll share, some things to look at, I guess, quickly. All sharing's not turned on, if you can help, Josh.
+
+12
+00:18:58.720 --> 00:18:59.820
+Joshua Rudolf: Yeah, one second, sorry.
+
+13
+00:19:01.580 --> 00:19:02.770
+Joshua Rudolf: Okay, good to go.
+
+14
+00:19:03.230 --> 00:19:10.510
+Orca 0x: Yeah, so as Josh mentioned, this is, This is…
+
+15
+00:19:10.700 --> 00:19:16.170
+Orca 0x: interoperable addresses, so this has been, ongoing for a while.
+
+16
+00:19:16.170 --> 00:19:17.640
+Orest Tarasiuk (t1): screen just yet, okay.
+
+17
+00:19:18.130 --> 00:19:20.699
+Orca 0x: Yeah, one second, I'm just getting the permission.
+
+18
+00:19:21.830 --> 00:19:23.580
+Orca 0x: Can you see this guy? No?
+
+19
+00:19:23.580 --> 00:19:25.199
+Orest Tarasiuk (t1): Yeah, works. Thank you.
+
+20
+00:19:25.200 --> 00:19:40.200
+Orca 0x: So this is a site just giving an overview of some of the work which we'll be, publishing. As Josh mentioned, this is, chain-aware addressing for the Ethereum ecosystem. It actually… the standards, allow for addressing, for non-EVM chains as well.
+
+21
+00:19:40.470 --> 00:19:54.789
+Orca 0x: There's been, collaborative effort between a bunch of people. Some of the logos are here. If, your organization has been a part of it and isn't, shown here, then definitely do, give us a shout. In terms of why these addresses are needed,
+
+22
+00:19:55.490 --> 00:20:14.349
+Orca 0x: obviously, getting addresses and chains, joined up in the right way is important. Wrong chain lost funds in some cases, just generally readability typos, and there's also, like, a reliance on a centralized, chain list for a lot of, information in terms of chain IDs, mapping to chain names. Interoperable addresses,
+
+23
+00:20:14.470 --> 00:20:28.119
+Orca 0x: try to address a bunch of these in one fell swoop. So, chain-specific addresses to prevent errors, powered by an on-chain registry, a compact format for use in cross-chain messaging and intent declaration.
+
+24
+00:20:28.120 --> 00:20:45.859
+Orca 0x: Thinking about things like human readability, and yeah, as I mentioned, universal compatibility. How does it work? Essentially, there are these two ERCs, two layers, there's 7930, which is the, the binary representation, a simple human reader format, and 7828 wraps that in,
+
+25
+00:20:46.140 --> 00:21:00.580
+Orca 0x: ENS for both, address resolution, but then also chain name resolution, so you can put in alis.ETH at base. These specifications are, approaching finalization, so I think Thomas from Honorable will talk a little bit more about
+
+26
+00:21:00.580 --> 00:21:12.999
+Orca 0x: Where we're at with those, and the state of the chain registry. And yeah, we're working on essentially tooling, stuff to make this a bit more accessible and digestible, so, essentially, if you look at metallic.eth, the ETH,
+
+27
+00:21:13.210 --> 00:21:29.389
+Orca 0x: This is a demo site powered by the, addresses module of the Interop SDK. It essentially breaks down and makes it easy to see, okay, when you've got… if you go from this human readable address, how then that gets turned into the binary format, what the different parts are, you can see the representation there.
+
+28
+00:21:29.390 --> 00:21:34.050
+Orca 0x: And all this is available in the Wonderland, introp,
+
+29
+00:21:34.050 --> 00:21:40.339
+Orca 0x: SDK, and specifically the interop addresses module. There's some FAQs there as well,
+
+30
+00:21:40.610 --> 00:21:43.629
+Orca 0x: But, as I mentioned,
+
+31
+00:21:43.630 --> 00:22:00.910
+Orca 0x: we've made a lot of progress, there's still a few things remaining, which I think Thomas, will talk about, and generally we're working with… we're talking to wallets about, integration. We're seeing this being integrated into more and more standards, so even, today, clear signing, the clear signing effort, I think 7730,
+
+32
+00:22:01.230 --> 00:22:07.549
+Orca 0x: we were talking about this, so, excited to see it, I guess, approaching production,
+
+33
+00:22:07.650 --> 00:22:09.540
+Orca 0x: And I'll hand it over to Thomas.
+
+34
+00:22:11.450 --> 00:22:28.469
+Thomas Clowes | Unruggable - ENS: Perfect, thank you, Walker. I'm Thomas from Unruggable, we work for the ENS DAO, and we've been working extensively with the team at Wonderland on these specs, so I'm just gonna give a brief update from the ENS end and from the spec end.
+
+35
+00:22:28.610 --> 00:22:35.420
+Thomas Clowes | Unruggable - ENS: In terms of 7930, which is the binary format, we've been iterating
+
+36
+00:22:35.420 --> 00:22:59.860
+Thomas Clowes | Unruggable - ENS: on the exact terminology and semantics of that specification to make it as accessible as possible. We're very close to, kind of, completion on that, and then we're going to be, creating a pull request to get that into the actual Ethereum ERC's repo. The 7828 one adds the ENS-specific functionality, which is a chain
+
+37
+00:22:59.860 --> 00:23:08.790
+Thomas Clowes | Unruggable - ENS: registry resolver, that is the resolver for the on.eth, second-level ENS name.
+
+38
+00:23:08.970 --> 00:23:26.490
+Thomas Clowes | Unruggable - ENS: There was a temperature check posted by Josh on the ENS forum to get a read of the room if the ENS community were happy to assign ownership of on.eth to the multi-sig that will be leading that effort.
+
+39
+00:23:26.570 --> 00:23:40.470
+Thomas Clowes | Unruggable - ENS: I've posted that link in the chat. The general consensus from the ENS DAO was a positive one. I say the general consensus, it was completely positive, no one disagreed, everyone was very happy with it.
+
+40
+00:23:40.880 --> 00:23:51.199
+Thomas Clowes | Unruggable - ENS: So, in terms of next steps, I will be putting together the call data to, propose an executable proposal to the ENS DAO to have that assigned.
+
+41
+00:23:51.200 --> 00:24:09.699
+Thomas Clowes | Unruggable - ENS: to a multisig, which will then allow us to set the chain resolver as the resolver for that ENS name, which is the resolver through which all of this, chain metadata discovery
+
+42
+00:24:09.730 --> 00:24:11.670
+Thomas Clowes | Unruggable - ENS: occurs.
+
+43
+00:24:12.180 --> 00:24:14.939
+Thomas Clowes | Unruggable - ENS: In terms of the state of that chain resolver.
+
+44
+00:24:14.940 --> 00:24:34.749
+Thomas Clowes | Unruggable - ENS: that repo is complete and ready to go. We had a discussion today between myself and the Wonderland team. We're just working to add some final touches, including aliases, whereby chains go by multiple identifiers in different contexts.
+
+45
+00:24:34.750 --> 00:24:49.479
+Thomas Clowes | Unruggable - ENS: The obvious ones being OP and Optimism, or ARB and ARB1, such that we kind of have the functionality that those can all resolve to the same ERC7930 identifier.
+
+46
+00:24:49.770 --> 00:25:00.670
+Thomas Clowes | Unruggable - ENS: Orca is piecing together, kind of, a finalized list of chains, their labels, and the metadata associated
+
+47
+00:25:00.680 --> 00:25:19.689
+Thomas Clowes | Unruggable - ENS: with those chains, the intention was that we would post that on the ENS forum, as well as on ETH Magicians, and we would circulate that through social media to kind of get the eyes of chain operators on that list to make sure that everything is correct and in order.
+
+48
+00:25:19.860 --> 00:25:34.200
+Thomas Clowes | Unruggable - ENS: Initially, we're intending to have the administration of the resolver controlled by a multisig that will have representatives of Wonderland, Unruggable, the Ethereum Foundation, the ENSDAO, etc.
+
+49
+00:25:34.200 --> 00:25:52.250
+Thomas Clowes | Unruggable - ENS: And then, over time, once this is kind of solidified and everyone's happy with the state of things, we will assign authoritative ownership to the people and representatives of the chains in question, and, we will kind of…
+
+50
+00:25:52.250 --> 00:26:06.420
+Thomas Clowes | Unruggable - ENS: remove any administrative control from that multisig. So at that point, the chain will own all of their metadata and all of the information associated with it.
+
+51
+00:26:06.620 --> 00:26:12.659
+Thomas Clowes | Unruggable - ENS: I think that that is, everything.
+
+52
+00:26:13.380 --> 00:26:25.349
+Thomas Clowes | Unruggable - ENS: Yeah, once the executable proposal is passed, we're just doing final testing of these contracts, we'll kind of test it in production on the on.eth
+
+53
+00:26:25.480 --> 00:26:43.150
+Thomas Clowes | Unruggable - ENS: name, and make sure everything is working. Then the intention is to create pull requests to established frameworks like VM and EFAS, such that we can get this integrated into clients, wallets, dApps, etc.
+
+54
+00:26:54.270 --> 00:26:57.229
+Thomas Clowes | Unruggable - ENS: That is all from my end, happy to answer any questions.
+
+55
+00:26:59.740 --> 00:27:07.239
+Christian Montoya: Hi, this is a great update. There's just a couple questions in the chat for links to the SDK and the website for interoperable addresses.
+
+56
+00:27:07.470 --> 00:27:08.360
+Christian Montoya: Thank you.
+
+57
+00:27:10.030 --> 00:27:15.159
+Joshua Rudolf: Yeah, Orca, do you want to drop a link? I think the website is not quite ready to be live yet, is that correct?
+
+58
+00:27:18.680 --> 00:27:22.590
+Orca 0x: Yep, that's right. We'll, we'll definitely share it, I guess, with this group when it's…
+
+59
+00:27:22.730 --> 00:27:25.090
+Orca 0x: But I shared the link to the NPM.
+
+60
+00:27:25.420 --> 00:27:26.270
+Orca 0x: Package.
+
+61
+00:27:27.810 --> 00:27:28.510
+Joshua Rudolf: Perfect.
+
+62
+00:27:29.520 --> 00:27:31.070
+Joshua Rudolf: Any other questions?
+
+63
+00:27:36.590 --> 00:27:42.609
+Joshua Rudolf: Cool. We can move on then. Next up on the agenda, OIF updates.
+
+64
+00:27:42.920 --> 00:27:44.540
+Joshua Rudolf: Maybe we can start off…
+
+65
+00:27:44.660 --> 00:27:48.499
+Joshua Rudolf: Let's see, is Barnabe here? Are you available to chat, to talk?
+
+66
+00:27:49.590 --> 00:27:50.230
+Barnabé Monnot: Hey.
+
+67
+00:27:50.350 --> 00:27:51.790
+Joshua Rudolf: Yep, can you hear me?
+
+68
+00:27:52.010 --> 00:27:52.660
+Joshua Rudolf: We can.
+
+69
+00:27:53.870 --> 00:27:54.530
+Barnabé Monnot: Nice.
+
+70
+00:27:55.260 --> 00:27:58.839
+Barnabé Monnot: And… And show…
+
+71
+00:27:58.950 --> 00:28:06.030
+Barnabé Monnot: some slides just quickly, and then I let, I know there's other people in the room who were also part of this, so…
+
+72
+00:28:06.140 --> 00:28:16.800
+Barnabé Monnot: like, briefly, what happened, just before DevConnect is we… a bunch of us went to HCT, from Ethereum Foundation, OpenZeppelin, Wonderland.
+
+73
+00:28:17.210 --> 00:28:21.860
+Barnabé Monnot: and many, many other teams, LeFi and other teams that are…
+
+74
+00:28:22.020 --> 00:28:25.319
+Barnabé Monnot: now dipping their toes into the Open Intents Framework.
+
+75
+00:28:25.650 --> 00:28:31.280
+Barnabé Monnot: The idea of this week that we spent together in Patagonia was to try to accelerate
+
+76
+00:28:31.400 --> 00:28:48.400
+Barnabé Monnot: some of the integrations or components of OIF towards having an end-to-end demo of an intent that was secure and propagated through the OIF layers.
+
+77
+00:28:49.080 --> 00:28:49.940
+Barnabé Monnot: End.
+
+78
+00:28:50.140 --> 00:28:59.070
+Barnabé Monnot: I think we made, actually, a lot of progress. Maybe some people will discuss some of those, but I just want to show an overview of what was built.
+
+79
+00:28:59.540 --> 00:29:07.480
+Barnabé Monnot: One of the first things was a payment request demo that was actually using the interoperable addresses.
+
+80
+00:29:07.650 --> 00:29:12.759
+Barnabé Monnot: And OIF at the back to, to settle the intent.
+
+81
+00:29:13.340 --> 00:29:29.649
+Barnabé Monnot: Ms. Love from Bike Economy and Kaimi, they worked on, cross-chain deposits using composable batching, so that apps have access to a toolbox that allows them to just very easily provide interoperability tools to their users.
+
+82
+00:29:31.480 --> 00:29:46.740
+Barnabé Monnot: We had some work on a compliant resolver, so using 7683, make the solver understand the orders so that, yeah, you can create deeper markets with more solvers that all follow the same standard.
+
+83
+00:29:47.110 --> 00:29:57.319
+Barnabé Monnot: We wanted to harden also the oracles, so propose, like, an optimistic game that secures an intent, so the solver wants to settle.
+
+84
+00:29:57.730 --> 00:30:06.010
+Barnabé Monnot: Somebody can challenge that settlement, and this is eventually reserved using the broadcaster, which is this trust-minimized proof
+
+85
+00:30:06.210 --> 00:30:09.000
+Barnabé Monnot: Going over the canonical bridges.
+
+86
+00:30:09.140 --> 00:30:16.150
+Barnabé Monnot: someone worked on, proving the fields, so instead of storage proof, using, ZK proofs, which I think was really cool.
+
+87
+00:30:16.330 --> 00:30:21.700
+Barnabé Monnot: And then we had another project that was mixing, together AI agents,
+
+88
+00:30:22.060 --> 00:30:31.330
+Barnabé Monnot: resource logs, TEs, and other, like, tools in one beautiful, mix of all of this.
+
+89
+00:30:31.500 --> 00:30:39.449
+Barnabé Monnot: Yeah, I think that that's it, but we had a lot of fun, and I think it was also very productive to show the…
+
+90
+00:30:40.380 --> 00:30:51.000
+Barnabé Monnot: like, the promise of OAF and already what's available, which was quite a lot, like, definitely sufficient for us to make a lot of progress in 3 days.
+
+91
+00:30:55.090 --> 00:30:56.150
+Joshua Rudolf: Awesome, thanks.
+
+92
+00:30:56.580 --> 00:30:59.069
+Joshua Rudolf: Pepe, do you want to share anything next?
+
+93
+00:30:59.780 --> 00:31:11.919
+Pepe Blasco: Yeah, sure. So, I just want to reiterate what Barnabe just said, like, we had a very nice time in Patagonia. I appreciate everyone who attended and everyone who supported.
+
+94
+00:31:12.110 --> 00:31:26.769
+Pepe Blasco: since then, or, like, around those days, a couple of updates regarding IF and often settling. So, the main outlet of the IF Settlement Contracts was released. You can find it on the IF Contracts repo.
+
+95
+00:31:26.770 --> 00:31:41.659
+Pepe Blasco: We've also audited the first part of the broadcaster protocol, so, like, the core contracts in Broadcaster have been audited. I believe that audit is not still fully public, but will be shared relatively soon.
+
+96
+00:31:41.660 --> 00:31:45.610
+Pepe Blasco: An upcoming audit will take care of
+
+97
+00:31:45.810 --> 00:31:49.230
+Pepe Blasco: All the provers for each different network type.
+
+98
+00:31:49.620 --> 00:31:53.100
+Pepe Blasco: One of the points that was raised, or was…
+
+99
+00:31:53.230 --> 00:32:03.959
+Pepe Blasco: identified during the Patagonia event, it was, like, the fact that the solver could not support arbitrary callbacks, and could not, kind of, support
+
+100
+00:32:04.420 --> 00:32:20.609
+Pepe Blasco: basically random actions on top of just moving tokens. There is already basically a solution for that in the solver repo, so if anyone is interested in following up, you can go and take a look.
+
+101
+00:32:20.750 --> 00:32:31.719
+Pepe Blasco: Now, what's happening? Like, what are we now focusing on? We are focusing on a broadcaster and evolving the provers and making sure we have
+
+102
+00:32:32.450 --> 00:32:50.560
+Pepe Blasco: like, secure and compatible provers for everything, and we are focusing on onboarding the long tail of edges. So, we will be able to share much more information on how we are feeling about it, but generally speaking, we've identified the biggest
+
+103
+00:32:51.010 --> 00:32:59.330
+Pepe Blasco: requirement is basically having a solver or a solver network that supports your specific new L2, and…
+
+104
+00:32:59.400 --> 00:33:02.840
+Pepe Blasco: The solver will basically be able to do self…
+
+105
+00:33:02.890 --> 00:33:17.560
+Pepe Blasco: onboarding, but a lot of networks doesn't want to run that infrastructure themselves. So, we are looking at ways on how to facilitate this, on how to play around with liquidity management, so…
+
+106
+00:33:17.560 --> 00:33:32.849
+Pepe Blasco: Yeah, it's… it's an active point of conversation, so if any of you are interested in participating in these debates, if you know of an L2 that wants to get onboarded and is having issues with other intent providers.
+
+107
+00:33:32.870 --> 00:33:41.420
+Pepe Blasco: happy to… to get in that. And then for the big question of what's being printed, it's, deer, like,
+
+108
+00:33:41.840 --> 00:33:45.360
+Pepe Blasco: Wine bottle holder beer.
+
+109
+00:33:45.490 --> 00:33:48.759
+Pepe Blasco: I will send you a picture, Horace.
+
+110
+00:33:49.750 --> 00:34:01.640
+Orest Tarasiuk (t1): Nice, please do. I actually also have one remark that is OIF-related, not just the printer behind Pepper, and that is, a few days ago, on the OIF driver's call.
+
+111
+00:34:01.790 --> 00:34:11.909
+Orest Tarasiuk (t1): To some people's surprise, we kinda identified a potential obstacle for OYF, which is that the, even
+
+112
+00:34:12.480 --> 00:34:22.950
+Orest Tarasiuk (t1): I would have thought negligible gas cost increase of something like an OIF wrapper of 10K might actually be a big showstop.
+
+113
+00:34:22.989 --> 00:34:39.759
+Orest Tarasiuk (t1): for some solvers and even aggregators. And so I was wondering if anyone in this call had additional input on what it would take for a standard that is slightly less gas efficient to actually be more attractive to them.
+
+114
+00:34:48.520 --> 00:34:55.260
+Pepe Blasco: I mean, my thoughts, just to share with the rest, is obviously, much more, kind of.
+
+115
+00:34:55.420 --> 00:35:02.820
+Pepe Blasco: Streamlined contrast will allow for optimized gas use utility, having a standardized
+
+116
+00:35:02.990 --> 00:35:20.449
+Pepe Blasco: wrapper or layer on top of that may increase the gas cost, but will definitely increase the compatibility surface. So, I think it's also worth checking, like, if anyone on this call or checking the recording does have specific concerns.
+
+117
+00:35:21.180 --> 00:35:28.059
+Pepe Blasco: worth mentioning, we've been talking with LeFi and across teams for this, and they also have their own
+
+118
+00:35:28.190 --> 00:35:31.119
+Pepe Blasco: Thoughts on different approaches for this?
+
+119
+00:35:40.860 --> 00:35:45.759
+Joshua Rudolf: Cool. I think we have a few more updates on OIF. Mislav, do you want to hop in next?
+
+120
+00:35:48.500 --> 00:36:06.230
+Mislav Javor: Yeah, sure. Hi, everyone. Mislav here from Biconomy. Yeah, I actually wanted to share some slides as well, but I joined over the web, web Zoom, so it's not allowing me. Anyways, what we were working on, I give a shout out to,
+
+121
+00:36:06.320 --> 00:36:21.520
+Mislav Javor: Vaults, FYI, and Kaimi, who is Anon, so we'll stop there. So the idea was that, we combined the OIF7683 with 4337,
+
+122
+00:36:21.520 --> 00:36:34.270
+Mislav Javor: with 7579, and with a few non-ERC things, which is Biconomy supertransactions and Vault's FYI call data generation, to achieve something that's kind of a…
+
+123
+00:36:34.410 --> 00:36:41.580
+Mislav Javor: big deal in DeFi is rebalancing volts from one chain to another without any dust
+
+124
+00:36:41.640 --> 00:36:55.510
+Mislav Javor: in between. So, like, the problem that you had, the problem space that you had before was if you, like, go from a USDC vault to a USDT vault, from, like, Arbitrum to base, the problem is that
+
+125
+00:36:55.960 --> 00:37:09.370
+Mislav Javor: when you unwind, maybe at that point you still have information exactly how much you're gonna get from the vault. Sometimes you don't, because, like, linear calculations, like, for curves, for calculating interest rates, can mess up with you.
+
+126
+00:37:09.370 --> 00:37:28.800
+Mislav Javor: But if you, like, withdraw from a vault, then you swap to another token, then you call a bridge, then you, you know, supply… approve and supply to another… a vault on another chain, the idea is that this should all be done in a single signature. Now, this uses… for the single signature stuff, we use the Biconomy MerkleTree ERC7579.
+
+127
+00:37:28.800 --> 00:37:43.349
+Mislav Javor: validator module, which enables, basically, single-click execution across multiple chains. It's very, very similar in design to the MerkleTree validator from EIL, Ethereum Interoperability Layer. Essentially, I think it's…
+
+128
+00:37:43.350 --> 00:38:01.040
+Mislav Javor: it's part of our codebase that's being referenced there as well. So that's… I'm assuming that's also something that's gonna get standardized quite soon. And then we used this composable batching module, and then we used basically one of the features that I'm the happiest that OIF currently has.
+
+129
+00:38:01.040 --> 00:38:05.810
+Mislav Javor: Which is the fact that with OIF, You don't have to…
+
+130
+00:38:06.160 --> 00:38:21.569
+Mislav Javor: provide the exact same value to the function call that you quoted. For example, you quote, an Ethereum, like, you quote moving USDC from one chain to WETH on another chain.
+
+131
+00:38:21.570 --> 00:38:32.609
+Mislav Javor: And then you get, basically, a quote that says, like, for $3,100 USDC, I'll give you 1W ETH, or something like that. If you are essentially
+
+132
+00:38:33.100 --> 00:38:39.090
+Mislav Javor: In a lot of, like, other bridges, you would have to provide the exact same value that you quoted before.
+
+133
+00:38:39.100 --> 00:38:54.069
+Mislav Javor: But this… you quoted this before you started execution, so before slippages were incurred on-chain, you didn't know exactly where in the block your transaction is gonna get set. Maybe you get, like, some better, some worse execution. So you could get very, very precise. You could get within, like.
+
+134
+00:38:54.190 --> 00:39:05.199
+Mislav Javor: half a percent of precision, but you would always leave some dust. And this would incur, compounding execution inefficiencies. If you had
+
+135
+00:39:05.240 --> 00:39:18.909
+Mislav Javor: 0.3% in efficiency on every step. You would have 5 steps, it would escalate to 1.5%, and suddenly your solver or multi-chain execution aggregator is no longer competitive with anything on the market.
+
+136
+00:39:18.910 --> 00:39:32.449
+Mislav Javor: This has made it so that right now, how these multi-chain, vault optimizations are done is that solvers actually hold inventory of vault tokens, often, and they will quote you for this.
+
+137
+00:39:32.750 --> 00:39:36.439
+Mislav Javor: Oftentimes, for smaller vaults, this will result in, like.
+
+138
+00:39:36.810 --> 00:39:47.079
+Mislav Javor: immense slippages, like 60%, 70%, something like that. So, in this case, the only slippage we incur is the, like, USDC to WETH.
+
+139
+00:39:47.170 --> 00:40:03.770
+Mislav Javor: open intense framework slippage, which, you know, with the modular nature and the capital that's gonna accrue there with all the big solvers, I assume that's gonna be an extremely competitive rate. And all the withdrawal from Vault, swaps, and then supply to another vault.
+
+140
+00:40:03.770 --> 00:40:08.690
+Mislav Javor: is done through this composable batching, so it's essentially a zero-slippage operation, so…
+
+141
+00:40:08.690 --> 00:40:17.280
+Mislav Javor: Yeah, that's been, coded in the 3 days, that we were there. We did a live demo, it worked really nicely. I mean, it's…
+
+142
+00:40:17.440 --> 00:40:33.599
+Mislav Javor: demo is kind of janky, to be honest. It was lucky that it worked, but it demonstrated the point across. And yeah, so the idea here is also, if anyone is interested, I would like to propose… we already have the code audited, ready to go, but
+
+143
+00:40:34.470 --> 00:40:50.840
+Mislav Javor: for people to comment and maybe make composable batching into an ERC, I would love to see it being an essential part of the Ethereum stack, to be honest. It's shown itself to be immensely useful for us and our clients when used. Yeah, that's it from my end.
+
+144
+00:40:54.600 --> 00:40:55.430
+Joshua Rudolf: Thanks, Gustav.
+
+145
+00:40:56.490 --> 00:40:59.490
+Joshua Rudolf: Anyone else with any updates on OIS stuff?
+
+146
+00:41:09.040 --> 00:41:13.099
+Joshua Rudolf: Cool. If not, John, I think you're up next then.
+
+147
+00:41:13.940 --> 00:41:29.680
+John Church: Okay, hey everybody, it's John Church, NetherMind, product lead for, our, for our institutional and DeFi, and also our, our StarkNet division. But I just wanted to showcase, you know, we…
+
+148
+00:41:30.030 --> 00:41:36.990
+John Church: we were really excited about building an extension of the OIF on StarkNet, and so, we've…
+
+149
+00:41:37.930 --> 00:41:39.759
+John Church: I'll share my screen…
+
+150
+00:41:40.310 --> 00:41:59.400
+John Church: We've built this out, a Cairo implementation of the Solidity contracts, as well as a solver in Go, instead of the Open Intense Rust solver. So, you know, if anybody's interested in checking this out, I'm gonna share this in the chat, and…
+
+151
+00:41:59.620 --> 00:42:04.010
+John Church: You know, we have, we have the tests spilled out, we have,
+
+152
+00:42:04.730 --> 00:42:21.860
+John Church: you know, everything flushed out for anybody to get started, and of course, a template solver, so, you know, anybody would want to take this and customize it to different strategies, or whatever your competitive analysis is. So…
+
+153
+00:42:21.860 --> 00:42:34.759
+John Church: And we also liked it so much that our, our, lead dev on it decided, took it and built a, a hackathon project with it, and implemented it. So, Matt, if you wanna…
+
+154
+00:42:35.450 --> 00:42:37.119
+John Church: Share off what you built.
+
+155
+00:42:37.770 --> 00:42:47.839
+Matt | Nethermind: Sure, yeah, hey everybody, my name's Matt, also from Netherlands, yep. I can share my screen here. I'm new to Zoom, so excuse, let's see…
+
+156
+00:42:50.770 --> 00:42:52.860
+Matt | Nethermind: Set permissions real quick.
+
+157
+00:42:58.440 --> 00:43:02.820
+Matt | Nethermind: In order to scrub the quit and reopen, is that fine, or would… should we just skip this?
+
+158
+00:43:03.230 --> 00:43:07.899
+Orest Tarasiuk (t1): Maybe try. Usually you don't need to actually restart, just try.
+
+159
+00:43:08.220 --> 00:43:09.810
+Orest Tarasiuk (t1): No, that you've granted.
+
+160
+00:43:09.870 --> 00:43:10.680
+Matt | Nethermind: Gotcha.
+
+161
+00:43:11.840 --> 00:43:13.420
+Matt | Nethermind: Oh, yeah, I think you're right.
+
+162
+00:43:14.550 --> 00:43:16.920
+Matt | Nethermind: Cool, so you guys can see my screen now?
+
+163
+00:43:16.920 --> 00:43:18.089
+Orest Tarasiuk (t1): Yep, we can.
+
+164
+00:43:19.600 --> 00:43:38.720
+Matt | Nethermind: So yeah, here is the project we built for the hackathon. The only difference between this and the one that we built for Nethermind is that we added support for the new network, like a proof-of-concept network called ZarkNet. Darknet? It's kind of hard to pronounce. But essentially, this all runs off of that, so I've already connected an EVM wallet and a Starknet wallet, so…
+
+165
+00:43:39.250 --> 00:43:48.490
+Matt | Nethermind: Here, I'll open up this, and then if we open up… we're also running a solver for the hackathon, so if I pull that up, now we can see the logs for that.
+
+166
+00:43:48.810 --> 00:43:51.890
+Matt | Nethermind: Okay.
+
+167
+00:43:52.500 --> 00:43:54.499
+Matt | Nethermind: Cool, so if we pick a chain…
+
+168
+00:43:55.570 --> 00:44:02.359
+Matt | Nethermind: We can just show off, go to StarkNet, keep it simple. For this demo, we're using just an ERC20 that we deployed
+
+169
+00:44:03.280 --> 00:44:04.110
+Matt | Nethermind: Sorry.
+
+170
+00:44:15.530 --> 00:44:18.770
+Matt | Nethermind: Transaction, bridging those tokens.
+
+171
+00:44:19.980 --> 00:44:23.710
+Matt | Nethermind: And then we'll see over here, we'll see the solver pick up the order.
+
+172
+00:44:26.070 --> 00:44:28.200
+Matt | Nethermind: And start to fill it.
+
+173
+00:44:34.690 --> 00:44:40.829
+Matt | Nethermind: And with that, I mean, I can share transaction hashes, but with that, you will see that the $1 coin is now…
+
+174
+00:44:41.170 --> 00:44:43.490
+Matt | Nethermind: sent to the StarkNet address.
+
+175
+00:44:44.410 --> 00:44:44.950
+John Church: So…
+
+176
+00:44:45.630 --> 00:44:54.929
+John Church: So that's it. We just wanted to celebrate a win, share off how we built an implementation and the like, so, you know, it's,
+
+177
+00:44:55.370 --> 00:45:05.370
+John Church: you know, no major protocol updates or anything like that, but we're extending OIF to StarkNet, and yeah, the UI was pretty cool. I thought they did a good job at that.
+
+178
+00:45:08.610 --> 00:45:09.560
+John Church: Thanks, Matt.
+
+179
+00:45:10.220 --> 00:45:11.100
+Matt | Nethermind: No problem.
+
+180
+00:45:11.640 --> 00:45:15.800
+Matt | Nethermind: How do I stop shit? Or is it already? Oh, right here. Oh, cool.
+
+181
+00:45:16.120 --> 00:45:18.179
+Joshua Rudolf: Super cool. Thanks, John and Matt.
+
+182
+00:45:18.330 --> 00:45:19.719
+John Church: Yeah. Thanks, guys.
+
+183
+00:45:20.180 --> 00:45:27.999
+Joshua Rudolf: I think it's great to see progress is progress, and it's great to see continued adoption of shared infrastructure. So, yeah, thanks for coming on and…
+
+184
+00:45:28.110 --> 00:45:29.090
+Joshua Rudolf: sharing that.
+
+185
+00:45:30.940 --> 00:45:33.940
+Joshua Rudolf: Any questions on any of that?
+
+186
+00:45:39.600 --> 00:45:40.270
+Joshua Rudolf: Hmm.
+
+187
+00:45:40.520 --> 00:45:46.600
+Joshua Rudolf: If not, we can move on. I think we are at the final agenda item for today, which is…
+
+188
+00:45:47.250 --> 00:45:55.960
+Joshua Rudolf: discussion on… a continued discussion of what we touched on on the last call, which is the 7-day window reduction.
+
+189
+00:45:56.110 --> 00:46:03.990
+Joshua Rudolf: And maybe just to set a bit of context for folks who are not familiar, I think most everyone here is, but just in case…
+
+190
+00:46:04.430 --> 00:46:08.330
+Joshua Rudolf: What is this? Why do we have 7-day windows? Just really quickly, well…
+
+191
+00:46:08.510 --> 00:46:24.679
+Joshua Rudolf: And actually, Dono has a great post on this, I'll link it in the chat in a second, recommend reading for anyone interested. TLDR was originally set to allow enough time for a social response in case of any sort of attack from, let's say, malicious nodes or builders, and to prevent
+
+192
+00:46:24.800 --> 00:46:39.100
+Joshua Rudolf: funds from being stolen. Downside, of course, of the 7-day window is that it's a bottleneck on UX, liquidity, assets, and just generally users' ability to seamlessly do what they want to do across chains.
+
+193
+00:46:39.240 --> 00:46:52.939
+Joshua Rudolf: So there's been a bunch of discussion and renewed interest. This is not the first time this has come up, of course. It's not a sort of new piece of information. This was by design, with an understanding of some of the sort of limitations.
+
+194
+00:46:53.420 --> 00:47:11.010
+Joshua Rudolf: And I think there's been a bit of, or there's definitely been a bit of renewed interest in seeing what we can do, given what we've learned, and given what we now know around, paths to reducing this to something like 1 or 2 days. I think there's fairly broad agreement that there are significant benefits. There's no…
+
+195
+00:47:11.090 --> 00:47:14.450
+Joshua Rudolf: Disagreement that the benefits are meaningful.
+
+196
+00:47:14.460 --> 00:47:28.810
+Joshua Rudolf: But at the same time, this is, of course, a sensitive area. We want to be mindful in how we approach this, and not just sort of YOLO it. So, yes, we've had discussions with folks from Arbitrum, Optimism, Uniswap.
+
+197
+00:47:28.810 --> 00:47:40.240
+Joshua Rudolf: L2Beat around what is the right way to do this, what sort of data do we need to gather, and how can we do this in a way that, of course, doesn't take months and months, but allows us to get
+
+198
+00:47:40.270 --> 00:47:43.100
+Joshua Rudolf: Sufficient confidence in what we're doing here.
+
+199
+00:47:43.290 --> 00:47:49.859
+Joshua Rudolf: So maybe that's just, yeah, a bit of context. I see we have Ed here, do you want to jump in with anything?
+
+200
+00:47:52.080 --> 00:48:08.330
+Ed Felten: Sure, yeah. So, from my point of view, and I think our team's point of view, what we would need to justify reducing the inclusion time assumption would be some kind of analysis
+
+201
+00:48:08.330 --> 00:48:25.779
+Ed Felten: that shows that doing so would be safe. That is, against an adversary who is very highly motivated and capable. Can we really guarantee that a party who wants to get a transaction included on L1 Ethereum can do so within 24 hours?
+
+202
+00:48:25.880 --> 00:48:32.939
+Ed Felten: And in order to establish that, we need to think about, sort of, what assumptions can we make about a theory?
+
+203
+00:48:33.380 --> 00:48:38.429
+Ed Felten: Because I think it's easy to get to a one-day delay if you make unrealistic assumptions.
+
+204
+00:48:38.550 --> 00:48:53.899
+Ed Felten: Right? Like, an unrealistic assumption would be to assume that if I want to submit a transaction at time zero, that at time zero, it will be in the mempool of every… local mempool of every builder, and will stay there.
+
+205
+00:48:53.900 --> 00:49:11.990
+Ed Felten: Even if a highly motivated and capable adversary is trying to prevent that, right? That would not be a realistic assumption to make, because we know that adversaries can, in fact, mess with mempool propagation, try to destabilize the P2P network, and so on. So in order to… anyway, in order to get to,
+
+206
+00:49:12.210 --> 00:49:29.560
+Ed Felten: in order to get to any confidence in an assumption about inclusion time, which I think is what this really is about, really requires, like, careful analysis of all the different ways that an attacker could try to prevent inclusion of transactions. And I don't think we have anything like
+
+207
+00:49:29.560 --> 00:49:43.470
+Ed Felten: that kind of analysis that's been done, to my knowledge, by anybody at this point. And that's really… I think that's really the missing piece, that would be needed to justify making a particular change.
+
+208
+00:49:44.300 --> 00:49:54.650
+Joshua Rudolf: Right, and just to highlight for the group, what we need to understand is what is the maximum cost to guarantee a single transaction can get in within a certain amount of time, in this case, 24 hours?
+
+209
+00:49:56.290 --> 00:49:59.700
+Ed Felten: Well, the question is, can we even guarantee that at any cost?
+
+210
+00:49:59.700 --> 00:50:02.020
+Joshua Rudolf: Because that… even that is not established.
+
+211
+00:50:02.770 --> 00:50:03.320
+Joshua Rudolf: Right.
+
+212
+00:50:06.090 --> 00:50:10.810
+Ed Felten: Right, there are some… just to expand a little bit on what Josh said, there…
+
+213
+00:50:10.920 --> 00:50:28.300
+Ed Felten: there are some kinds of attacks that are economic in nature, and there may be economic responses to those attacks, where honest parties could spend some money to try to sort of somehow outbid an adversary who's, let's say, bribing block builders. But there are other attacks that are not economic in nature.
+
+214
+00:50:28.310 --> 00:50:37.549
+Ed Felten: And, you know, this being a security property, we need to reason from a set of assumptions about what Ethereum
+
+215
+00:50:37.550 --> 00:50:53.739
+Ed Felten: what guarantees Ethereum can provide us, and then figure out, okay, given those assumptions about what Ethereum can provide, here's a procedure that we can embed in our code that would guarantee inclusion within 24 hours, or 48, or whatever number
+
+216
+00:50:53.890 --> 00:50:57.659
+Ed Felten: Whatever number, we might pick.
+
+217
+00:50:58.800 --> 00:50:59.470
+Joshua Rudolf: Right.
+
+218
+00:50:59.470 --> 00:51:10.630
+Ed Felten: And that's kind of, to me, that's the missing piece, is, you know, what are the assumptions about L1, and then what procedure from those assumptions can get us to a guarantee of inclusion?
+
+219
+00:51:17.080 --> 00:51:18.810
+Joshua Rudolf: So I shared in the chat some…
+
+220
+00:51:19.680 --> 00:51:22.480
+Joshua Rudolf: Not a full answer to this question, but,
+
+221
+00:51:22.600 --> 00:51:33.590
+Joshua Rudolf: some analysis that Dono from L2Beat has put together. I think, Ed, you've pointed out that this doesn't quite fully cover some of the more, sort of, adversarial… Yeah. Yeah.
+
+222
+00:51:33.790 --> 00:51:43.720
+Ed Felten: Yeah, this, this, as I understand it, Dono's formula is based on a paper that our team published, that analyzes one type of economic attack.
+
+223
+00:51:43.940 --> 00:51:53.959
+Ed Felten: But, it's only one of the tactics that an adversary could use, and combining that tactic with other tactics,
+
+224
+00:51:54.730 --> 00:51:57.390
+Ed Felten: would,
+
+225
+00:51:58.380 --> 00:52:03.400
+Ed Felten: means that the results of the paper don't give you any guarantee that would apply to Ethereum.
+
+226
+00:52:04.600 --> 00:52:17.030
+Ed Felten: Right. It's… so it's… it's maybe a piece of the analysis that might be needed, but, it doesn't, it doesn't cover, some of the really significant, potential avenues of attack.
+
+227
+00:52:18.930 --> 00:52:19.500
+Joshua Rudolf: Right.
+
+228
+00:52:20.850 --> 00:52:30.939
+Joshua Rudolf: And if anyone else wants to jump into the discussion, feel free. Ed, how is your team sort of approaching next steps here, then, potentially? Are we… are there folks on your side that are looking at
+
+229
+00:52:31.360 --> 00:52:32.979
+Joshua Rudolf: A more thorough analysis?
+
+230
+00:52:33.220 --> 00:52:47.060
+Ed Felten: The really tough part is, there's a bunch of tough pieces of this. One of them is how to analyze the possibility of old-school denial-of-service attacks, like, say, network flooding attacks against the
+
+231
+00:52:47.060 --> 00:52:55.970
+Ed Felten: Against the party who's trying to get a transaction included. What kind of assumptions can we safely make about ordinary parties' ability to
+
+232
+00:52:55.970 --> 00:53:14.409
+Ed Felten: let's say, reestablish connectivity to Ethereum if they're subject to such an attack from a highly motivated adversary. That's one piece that I think is hard to model. Another piece that I think is hard to model is P2P propagation and mempool management in clients, because
+
+233
+00:53:14.510 --> 00:53:22.700
+Ed Felten: Clients tend to use client-specific heuristics to decide how to manage their mempool, what to keep, what to throw out when it gets full, and so on.
+
+234
+00:53:22.780 --> 00:53:30.029
+Ed Felten: And so, if we're going to make an assumption that an honest party can keep their transaction in the mempool of
+
+235
+00:53:30.110 --> 00:53:40.539
+Ed Felten: all of the block builders, for an extended period of time against a hostile adversary trying to prevent that. Then we need to have some way of reasoning about, say, mempool maintenance
+
+236
+00:53:40.550 --> 00:53:56.049
+Ed Felten: policies of clients and how resistant they are to manipulative behavior by other clients. So, we don't really even have a handhold on that problem, I think.
+
+237
+00:53:58.410 --> 00:53:59.559
+Joshua Rudolf: Right, got it.
+
+238
+00:54:09.500 --> 00:54:16.390
+Joshua Rudolf: Yeah, I guess I'm trying to think through, then, what is the, sort of, best path forward at this point? It might be taking it back to the group.
+
+239
+00:54:17.690 --> 00:54:29.880
+Joshua Rudolf: I know, yeah, Optimism is also interested in running their own analysis on this, as well as Uniswap and potentially others. Pepe, you mentioned potentially OpenZeppelin might want to jump in and help if…
+
+240
+00:54:30.030 --> 00:54:31.110
+Joshua Rudolf: If helpful.
+
+241
+00:54:32.850 --> 00:54:47.290
+Ed Felten: Yeah, I mean, if people… if people have, analyses about, say, the impact, or what we can assume about, let's call them old-school denial-of-service attacks, or what we can,
+
+242
+00:54:48.050 --> 00:55:00.150
+Ed Felten: what we can assume about attacks on P2P propagation or mempool management, that would be really helpful. I think those are missing pieces, and if anybody can figure out, like.
+
+243
+00:55:00.450 --> 00:55:11.070
+Ed Felten: how to reason about the security of properties of that against an active, motivated adversary. I think that would help to fill in the… fill in the gaps.
+
+244
+00:55:12.920 --> 00:55:14.420
+Joshua Rudolf: Okay, cool, that's helpful, got it.
+
+245
+00:55:16.400 --> 00:55:20.489
+Joshua Rudolf: And Ed, I'm not sure if you're the right person, from your side to answer this question, but…
+
+246
+00:55:20.660 --> 00:55:28.490
+Joshua Rudolf: Maybe helpful to share, sort of, the latest on how your team is thinking about the alternative, or another approach around
+
+247
+00:55:28.600 --> 00:55:35.540
+Joshua Rudolf: accelerating something like a 2 of 3 system? I think Metallica called it Pragmatic Fast Finality in the past.
+
+248
+00:55:36.000 --> 00:55:40.300
+Ed Felten: Right, so, yeah, there's things you can do if you,
+
+249
+00:55:40.770 --> 00:55:49.989
+Ed Felten: where you have, like, a ZK proving and optimistic proving, as well as some kind of, say, Security Council,
+
+250
+00:55:50.060 --> 00:56:05.049
+Ed Felten: veto, type of situation, and where you want 2 or 3 of those to happen. Now one thing to note is that Security Council affirmative secure… or, let's see, so a Security Council response
+
+251
+00:56:05.340 --> 00:56:25.040
+Ed Felten: also relies on non-censorship, or an assumption about the Security Council's ability to include a transaction. The other thing to note is that ZK-based proving is also subject to censorship attacks. The difference is that censorship of posting a ZK proof
+
+252
+00:56:25.090 --> 00:56:34.230
+Ed Felten: Doesn't allow an… doesn't, harm the safety of the chain, but it does, prevent… it does delay settlement.
+
+253
+00:56:34.420 --> 00:56:50.249
+Ed Felten: And there are realistic scenarios where a motivated adversary can delay the posting, temporarily censor the posting of ZK proof in order to delay, settlement and cross-chain interop for whatever reasons they might have.
+
+254
+00:56:50.250 --> 00:56:57.769
+Ed Felten: And that's another area that I think is under-analyzed, is, basically,
+
+255
+00:56:58.610 --> 00:57:05.349
+Ed Felten: attacks that aim to delay settlement, as opposed to defeat it.
+
+256
+00:57:11.340 --> 00:57:12.370
+Joshua Rudolf: Right, got it.
+
+257
+00:57:12.570 --> 00:57:19.630
+Ed Felten: Right, so I think even with the 2 out of 3 system, you're still subject to some censorship considerations.
+
+258
+00:57:19.880 --> 00:57:37.339
+Ed Felten: As well as the obvious ones around cost, the cost of posting frequently, and so on. But yeah, we're absolutely working. We, the off-chain team in R&D, are working toward a system that would be in the spirit of that tier of three.
+
+259
+00:57:38.610 --> 00:57:46.840
+Joshua Rudolf: And not to, like, hold you to any sort of specific data, of course, but how are you thinking about, sort of, the roadmap here, and is this, like, a 2026 goal, further out?
+
+260
+00:57:47.340 --> 00:57:49.199
+Ed Felten: We're not talking about dates.
+
+261
+00:57:49.410 --> 00:57:55.439
+Ed Felten: And I'm being a little cautious here, because I'm not sure what we said publicly.
+
+262
+00:57:55.440 --> 00:57:55.940
+Joshua Rudolf: Sure, sure.
+
+263
+00:57:55.940 --> 00:58:14.699
+Ed Felten: But, it's been… it's been a tough… maybe one of my teammates on the calls, on the call, knows this more clearly, what's been announced and what's not been announced, and if so, please do speak up. But it's an effort that's been underway for a considerable length of time.
+
+264
+00:58:14.730 --> 00:58:26.129
+Ed Felten: And I gave a talk, a public talk about a year ago about, a scheme for, this sort of, two, two of three, or, style of, of proving.
+
+265
+00:58:26.420 --> 00:58:32.229
+Ed Felten: So it's something we've been working on for a long time, as well as the underlying, sort of, ZK proving piece.
+
+266
+00:58:34.070 --> 00:58:37.250
+Allan | Offchain Labs: Yeah, no public timeloads have been communicated on this yet.
+
+267
+00:58:38.880 --> 00:58:39.630
+Ed Felten: Thanks, Alan.
+
+268
+00:58:40.000 --> 00:58:41.170
+Joshua Rudolf: Got it. Thanks, Ellen.
+
+269
+00:58:43.370 --> 00:58:59.029
+Joshua Rudolf: All right, well, yeah, I'm not sure that there's much else to say on the topic at the moment. If there's anyone else here, I think some of the other folks that are more active in this discussion were not able to make today's call. I appreciate Ed, thank you for making the time to come on today's call.
+
+270
+00:59:00.200 --> 00:59:09.889
+Joshua Rudolf: if anyone has anything to share here, we can keep going. Otherwise, maybe we can wrap the call up here, and I'm sure this won't be the end of the 7-day discussion, so…
+
+271
+00:59:10.050 --> 00:59:15.000
+Joshua Rudolf: can continue it async, and we'll have more to share on that, I'm sure, in the coming weeks.
+
+272
+00:59:18.600 --> 00:59:35.999
+Allan | Offchain Labs: Yeah, I'll just add quickly, Josh, I'm happy to work with you on trying to pull in the right people from other teams to try and check some of those boxes that I listed. There's a few that we're working on internally, there's others that I think we need a little bit more support and expertise on, if we want to try and,
+
+273
+00:59:36.050 --> 00:59:48.330
+Allan | Offchain Labs: you know, make those assumptions clear, and then, you know, raise any sort of disputes we need to about those assumptions, and get to a point where we could feel comfortable, changing that period. So,
+
+274
+00:59:48.330 --> 00:59:56.560
+Allan | Offchain Labs: just let me or let me know if there's anything we can do to help, herd cats outside of, this group, or just OCL broadly.
+
+275
+00:59:57.890 --> 01:00:11.369
+Joshua Rudolf: That's great, yeah, I will definitely hit you up about that. Yeah, I think right now we're in a bit of a position where we're all sort of, like, standing around, pointing at each other a little bit, everyone's busy, and no one is, like, really has the bandwidth, I think, to jump in and…
+
+276
+01:00:11.370 --> 01:00:19.410
+Joshua Rudolf: spend the necessary time to do the proper analysis here, but I think with maybe a bit of thoughtful herding, we can get it done in the coming weeks.
+
+277
+01:00:19.570 --> 01:00:22.190
+Joshua Rudolf: Or at least make some progress in this direction.
+
+278
+01:00:23.450 --> 01:00:31.310
+Joshua Rudolf: So yes, and if anyone else has interest, comments, anything around this, feel free to message me or anyone else here, drop a message in the chat.
+
+279
+01:00:37.410 --> 01:00:38.180
+Joshua Rudolf: Cool.
+
+280
+01:00:39.370 --> 01:00:43.400
+Joshua Rudolf: Okay, awesome. Thank you all so much for joining. See you all next time.
+
+281
+01:00:44.620 --> 01:00:45.430
+Mislav Javor: Thank you, bye.
+
+282
+01:00:45.430 --> 01:00:46.819
+Orest Tarasiuk (t1): Thank you, bye guys.
+
+283
+01:00:46.820 --> 01:00:47.450
+noahpravecek: Thanks.
+

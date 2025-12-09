@@ -1,0 +1,13 @@
+00:04:43	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pull/704
+00:08:34	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pulls?q=is%3Apr+is%3Aopen+label%3Atriage
+00:08:59	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pull/673
+00:09:33	Mercy Boma Naps-Nkari:	github.com/ethereum/execution-apis/pull/650
+00:09:55	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pull/701
+00:11:46	Mercy Boma Naps-Nkari:	https://discord.com/channels/595666850260713488/1443940871509905539
+00:13:23	Katya:	nope
+00:13:44	Mercy Boma Naps-Nkari:	Reacted to "nope" with 👍🏿
+00:18:00	Katya:	@Chase Wright how to find you in discord or anywhere else?
+00:19:17	Chase Wright:	@MysticRyuujin
+00:19:51	Katya:	Replying to "@MysticRyuujin"
+
+Discord?
