@@ -4,6 +4,7 @@ Raw chat & transcript files from core development calls facilitated by the EF zo
 
 | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| 11 Dec 2025 | ACDC | 171 | [#1825](https://github.com/ethereum/pm/issues/1825) | [forkcast](https://forkcast.org/calls/acdc/171) | [EthMag](https://ethereum-magicians.org/t/26782) | [video](https://youtu.be/LcDW43G82bA) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDC/Call-171_2025-12-11) |
 | 08 Dec 2025 | ACDT | 63 | [#1834](https://github.com/ethereum/pm/issues/1834) | [forkcast](https://forkcast.org/calls/acdt/063) | [EthMag](https://ethereum-magicians.org/t/26875) | [video](https://youtu.be/tcANELFmOjU) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDT/Call-063_2025-12-08) |
 | 04 Dec 2025 | ACDE | 225 | [#1808](https://github.com/ethereum/pm/issues/1808) | [forkcast](https://forkcast.org/calls/acde/225) | [EthMag](https://ethereum-magicians.org/t/26515) | [video](https://youtu.be/2KU93ZHf-ww) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDE/Call-225_2025-12-04) |
 | 01 Dec 2025 | ACDT | 62 | [#1820](https://github.com/ethereum/pm/issues/1820) | [forkcast](https://forkcast.org/calls/acdt/062) | [EthMag](https://ethereum-magicians.org/t/26739) | [video](https://youtu.be/J4tWSYe_nWQ) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDT/Call-062_2025-12-01) |
