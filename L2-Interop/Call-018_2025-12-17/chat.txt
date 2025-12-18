@@ -1,0 +1,138 @@
+00:03:02	read.ai meeting notes:	Isha and Parthasarathy added read.ai meeting notes to the meeting.
+
+Read provides AI generated meeting summaries to make meetings more effective and efficient. View our Privacy Policy at https://www.read.ai/pp
+
+Type "read stop" to disable, or "opt out" to delete meeting data.
+00:03:26	Blockscout assistant:	Recording permission was denied, leaving the meeting.
+00:03:27	Blockscout assistant:	Recording permission was denied, leaving the meeting.
+00:07:01	Orest Tarasiuk (t1):	2035
+00:07:32	Joshua Rudolf:	agenda: https://github.com/ethereum/pm/issues/1838
+00:09:59	Marissa Posner:	Can you send some info on the testnet?
+00:11:51	Pepe Blasco:	https://github.com/openintentsframework/broadcaster/pull/50/changes#diff-cbedf88334bbbbdb43ee6a6a59b847032080653351c824904d00e905e8f17dc9
+00:12:17	Barnabé Monnot:	🤯
+00:12:25	Orest Tarasiuk (t1):	Zoom...
+00:14:32	Joshua Rudolf:	FYI going to save some time at the end of the call for open discussion on the topic of full sync composability :)
+00:14:40	John Church:	Reacted to "FYI going to save so..." with 👍
+00:14:57	Alon Muroch | SSVLabs:	Reacted to "FYI going to save so..." with 👍
+00:16:34	Alon Muroch | SSVLabs:	Airbender is awesome🙂
+00:17:11	Orest Tarasiuk (t1):	Reacted to "FYI going to save so..." with 🙀
+00:20:36	@incompleteloop - Spire Labs:	Reacted to "FYI going to save ..." with 👍
+00:20:59	Lumi | Offchain Labs:	Do the chains settle via ZK Gateway? So chains need to wait for ZK Gateway to settle before the funds can be withdrawn and then executed on?
+00:22:10	frangio:	how many of these prividiums are there in prod currently? or coming soon?
+00:26:08	Lumi | Offchain Labs:	Chain operators still see data, other users don’t see each others transactions
+00:33:03	Joshua Rudolf:	Would love more eyes on 7828 and 7930
+00:34:15	Thomas Clowes | Unruggable - ENS:	Latest on 7930: https://eips.ethereum.org/EIPS/eip-7930 
+
+7828 still a WIP
+00:34:15	teddy:	https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365/15
+forum thread for 7930
+00:34:17	Joshua Rudolf:	Anyone want to weigh in on the question from Orca? (Interoperable address and interoperable name both existing inside 7930)
+00:35:47	Joshua Rudolf:	Or should “interoperable name” move to e.g. ERC-7828 (which currently is about ENS interoperable addresses)
+00:36:12	Joshua Rudolf:	7930 = binary format interop addresses
+7828 = human-readable interop addresses
+00:36:57	teddy:	pls let's take the discussion to the forum: https://ethereum-magicians.org/t/erc-7930-interoperable-addresses/23365/15✨
+00:39:23	Alon Muroch | SSVLabs:	https://ethresear.ch/t/synchronous-composability-vs-intents-two-paths-to-ethereum-wide-interop/23426/7
+00:42:04	frangio:	Replying to "pls let's take the d…"
+@Premm.eth have you shared your take in any forum post?
+00:43:47	Joshua Rudolf:	https://ethresear.ch/t/scope-synchronous-composability-protocol-for-ethereum/22978
+00:48:41	Premm.eth:	voting
+00:49:19	Joshua Rudolf:	We could get fast async though
+00:49:45	Alon Muroch | SSVLabs:	Async is a step by step solution (not great UX) and lacks atomicity
+00:49:48	jesus:	bc i might need an auth root for example in case of identity
+00:49:49	Alon Muroch | SSVLabs:	Which is critical
+00:49:49	Premm.eth:	An identity can be verified in advance using a zk proof.
+00:49:52	jim:	how can synchronisity be achieved if chains have different rate - like arbitrum sub-second and ethereum's 12 second
+and hypothetical MegaETH becoming an L2 ...
+00:50:44	Alon Muroch | SSVLabs:	Replying to "how can synchronisit..."
+
+Depends on the solution, specifically we use mailboxes that validate against each other so no need to sync block production
+00:53:00	Premm.eth:	Consuming a nonce on a L2 on another chain. So a PoP airdrop, you need to consume the nonce from worldChain to use on another chain.
+00:53:49	Orest Tarasiuk (t1):	Replying to "We could get fast as..."
+
+yap
+00:53:57	noahpravecek:	Replying to "We could get fast as..."
+
+yep
+00:54:31	noahpravecek:	Arc and Tempo have repeatedly said their reasoning for L1s was fast finality. Also with fast async L1 intro you won’t need app developers to deploy on 20+ chains.
+00:55:12	Barnabé Monnot:	thoughts on the value of sync composability as more apps start doing “app-controlled execution”? (fka app specific sequencing)
+orthogonal questions?
+00:55:28	Orest Tarasiuk (t1):	How can you do flashloans asynchronously, though?
+00:55:46	jesus:	Replying to "How can you do fla..."
+
+i don't think so!
+00:55:46	noahpravecek:	Replying to "thoughts on the valu..."
+
+It ends up being shared sequencing basically but it would just be 1 shared sequencer for a vertically integrated app so at that point why not use an app chain?
+00:55:52	jesus:	Reacted to "How can you do fla..." with 👍
+00:55:52	Orest Tarasiuk (t1):	Reacted to "i don't think so!" with 💯
+00:55:57	Orest Tarasiuk (t1):	Replying to "How can you do flash..."
+
+@Lumi | Offchain Labs
+00:56:07	Barnabé Monnot:	Reacted to "It ends up being sha..." with 🙏
+00:56:33	noahpravecek:	Replying to "How can you do flash..."
+
+Potentially. I think you could design one for it
+00:56:44	noahpravecek:	Replying to "How can you do flash..."
+
+https://ethresear.ch/t/unlocking-pbs-with-cl-verification-of-block-coinbase-e-g-multi-tx-flashloans/17955
+00:57:29	noahpravecek:	Replying to "How can you do flash..."
+
+Ive looked at this post in the past as a reference for this. You basically just need to allow a borrow to open and close with a proof or the whole bundle fails.
+00:58:23	Orest Tarasiuk (t1):	Reacted to "Ive looked at this p..." with 👀
+00:58:40	Orest Tarasiuk (t1):	You dont need SC for that either
+00:58:46	jesus:	Reacted to "Ive looked at this..." with 👀
+00:58:47	Lumi | Offchain Labs:	You can abstract swaps to lower liquidity tokens. Also low liquidity tokens would be concentrated in one place anyways
+00:58:57	noahpravecek:	We will end up having 1000s of rollups because institutions are using them as better ledgers. L2 #50 could be on a shared settlement solution and most of the new chains will find MMs if they build something of value.
+00:59:42	Joshua Rudolf:	Shared vision = ethereum feels like a single chain
+Open question: is sync composability necessary ingredient to accomplish this
+00:59:45	Premm.eth:	Then the contracts will have to be designed very differently. SC will make existing contracts just work as is?
+00:59:55	Lumi | Offchain Labs:	Reacted to "Shared vision = ethe..." with 👍
+01:00:00	noahpravecek:	Reacted to "Shared vision = ethe..." with 👍
+01:00:44	Joshua Rudolf:	Single slot finality L1 might not be all that far away
+01:00:52	Lumi | Offchain Labs:	Reacted to "Then the contracts w..." with ➕
+01:00:55	Lumi | Offchain Labs:	Reacted to "Single slot finality..." with ➕
+01:01:08	Thodoris Karakostas:	Reacted to "Shared vision = ethe..." with 👍
+01:01:11	noahpravecek:	You won’t have long latency tho for settlement. ZK proofs are getting faster than ever before.
+01:01:40	noahpravecek:	You can have fast settlement
+01:01:48	@incompleteloop - Spire Labs:	Replying to "You won’t have lo..."
+
+fast is relative
+01:02:14	noahpravecek:	If we had cheaper ZK verification on L1 then you could have ZK rollups settling basically every 30 seconds relatively soon
+01:02:23	noahpravecek:	Replying to "You won’t have long ..."
+
+Sub 1 minute settlement?
+01:02:26	Orest Tarasiuk (t1):	Replying to "You won’t have long ..."
+
+TEE 🙂
+01:02:40	Orest Tarasiuk (t1):	Yap - or with TEEs
+01:02:57	@incompleteloop - Spire Labs:	Replying to "You won’t have lo..."
+
+try debugging in a TEE 😉
+01:03:44	Orest Tarasiuk (t1):	Replying to "You won’t have long ..."
+
+tried
+01:03:56	Orest Tarasiuk (t1):	Replying to "You won’t have long ..."
+
+https://status.t1protocol.com/  :P
+01:04:03	Orest Tarasiuk (t1):	Replying to "You won’t have long ..."
+
+trying* 😄 😄
+01:04:28	Orest Tarasiuk (t1):	Replying to "You won’t have long ..."
+
+But srsly: modern TEEs are way better in terms of DevEx
+01:04:35	Joshua Rudolf:	Think we prob still need to better define the things that are truly only possible with synchronous
+01:04:47	Orest Tarasiuk (t1):	Reacted to "Think we prob still ..." with 💯
+01:04:49	noahpravecek:	Reacted to "Think we prob still ..." with 💯
+01:04:52	@incompleteloop - Spire Labs:	Replying to "You won’t have lo..."
+
+agreed but "shoving in a tee" is a meme
+
+def appreciate the trying, we are too
+01:05:17	@incompleteloop - Spire Labs:	Reacted to "Think we prob stil..." with 💯
+01:05:44	Alon Muroch | SSVLabs:	❤️
+01:06:00	Orest Tarasiuk (t1):	(we shouldn’t have any quick final thoughts ;) )
+01:06:06	jesus:	Replying to "How can you do fla..."
+
+so, after some reading, my conlusion is:
+You need changes on consensus layer ( ok)
+But you cannot close ablock, until somehting happens, meaning that, even if you ahve better latancy, you need synch communication
