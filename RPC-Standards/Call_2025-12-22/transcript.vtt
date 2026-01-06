@@ -1,0 +1,762 @@
+WEBVTT
+
+1
+00:00:12.430 --> 00:00:13.730
+nixo: Hi, Mercy.
+
+2
+00:00:13.930 --> 00:00:14.860
+nixo: Morning.
+
+3
+00:00:15.920 --> 00:00:17.320
+Mercy Boma Naps-Nkari: Hello, good evening.
+
+4
+00:00:17.980 --> 00:00:19.880
+nixo: I'm gonna make you host.
+
+5
+00:00:20.950 --> 00:00:22.070
+Mercy Boma Naps-Nkari: Okay, thank you.
+
+6
+00:00:25.350 --> 00:00:27.710
+nixo: And now I'm taking back off.
+
+7
+00:03:24.490 --> 00:03:25.210
+Mercy Boma Naps-Nkari: Hello?
+
+8
+00:03:39.260 --> 00:03:40.010
+Chase Wright: Hello.
+
+9
+00:03:42.960 --> 00:03:45.010
+Mercy Boma Naps-Nkari: Hi, hello.
+
+10
+00:03:45.120 --> 00:03:50.659
+Mercy Boma Naps-Nkari: We just have to, like, wait about the next two minutes, then we can start. If no one joins, then…
+
+11
+00:03:51.940 --> 00:03:54.130
+Mercy Boma Naps-Nkari: Let me send a message on the group chat.
+
+12
+00:03:57.430 --> 00:04:02.680
+Chase Wright: I know the all-core dev testing call was canceled, so… Maybe people.
+
+13
+00:04:02.680 --> 00:04:03.160
+Mercy Boma Naps-Nkari: Yeah.
+
+14
+00:04:03.160 --> 00:04:04.010
+Chase Wright: canceled, too.
+
+15
+00:04:05.250 --> 00:04:10.479
+Mercy Boma Naps-Nkari: I asked during our last call, and everybody supported it, so…
+
+16
+00:04:11.160 --> 00:04:12.699
+Chase Wright: Yes, there's no problem.
+
+17
+00:04:12.990 --> 00:04:17.519
+Mercy Boma Naps-Nkari: Let me just start. If they won't be able to join, it's fine also.
+
+18
+00:04:43.410 --> 00:04:44.670
+Mercy Boma Naps-Nkari: Hey, Zane.
+
+19
+00:04:45.420 --> 00:04:46.910
+Zane Starr | OpenRPC: Hey, how's it going?
+
+20
+00:04:47.670 --> 00:04:49.090
+Mercy Boma Naps-Nkari: Fine, welcome.
+
+21
+00:04:49.260 --> 00:04:50.380
+Zane Starr | OpenRPC: Oh, thanks, thanks.
+
+22
+00:04:51.170 --> 00:04:57.909
+Mercy Boma Naps-Nkari: I think we can start. I'm not sure if others are joining, because it's probably,
+
+23
+00:04:58.500 --> 00:05:01.679
+Mercy Boma Naps-Nkari: Holiday season, so we'll understand that.
+
+24
+00:05:02.320 --> 00:05:10.460
+Mercy Boma Naps-Nkari: Although we don't have any much on the agenda, so good afternoon, everybody. Welcome to… ROPC Standard call.
+
+25
+00:05:10.870 --> 00:05:12.200
+Mercy Boma Naps-Nkari: 17.
+
+26
+00:05:12.710 --> 00:05:21.470
+Mercy Boma Naps-Nkari: Okay, on agenda, we have… wanted us to discuss about renaming the SRO, codes categories.
+
+27
+00:05:21.640 --> 00:05:25.790
+Mercy Boma Naps-Nkari: Well, I don't think… seems to be joining us today.
+
+28
+00:05:26.890 --> 00:05:32.160
+Mercy Boma Naps-Nkari: That brings us using. You did mention about…
+
+29
+00:05:33.260 --> 00:05:36.230
+Mercy Boma Naps-Nkari: adding this to the agenda, so I don't even know what it's about.
+
+30
+00:05:37.020 --> 00:05:41.899
+Zane Starr | OpenRPC: About the… what? Did you repeat that? It was the last…
+
+31
+00:05:43.790 --> 00:05:45.250
+Mercy Boma Naps-Nkari: So, I was saying…
+
+32
+00:05:45.910 --> 00:05:54.420
+Mercy Boma Naps-Nkari: Sims is not here, because we wanted to talk about the error codes, but since Sims is not here, we can move over to your own agenda, what you dropped on the agenda for today.
+
+33
+00:05:54.420 --> 00:05:59.629
+Zane Starr | OpenRPC: Oh, yeah, sure. Do you mind if I, like, share a screen and just… Yeah, no problem.
+
+34
+00:05:59.850 --> 00:06:00.630
+Mercy Boma Naps-Nkari: Yeah.
+
+35
+00:06:02.380 --> 00:06:06.600
+Zane Starr | OpenRPC: Doo-do-do… Let's do…
+
+36
+00:06:11.890 --> 00:06:17.260
+Zane Starr | OpenRPC: Hey, let me switch this around…
+
+37
+00:06:22.330 --> 00:06:23.659
+Zane Starr | OpenRPC: Let's go here…
+
+38
+00:06:27.720 --> 00:06:30.079
+Zane Starr | OpenRPC: So… Sims is here!
+
+39
+00:06:33.360 --> 00:06:34.199
+Simsonraj Easvarasakthi: Hey, guys.
+
+40
+00:06:37.910 --> 00:06:44.770
+Zane Starr | OpenRPC: And… That, and open up one more tab, and then we'll be on our way.
+
+41
+00:06:48.100 --> 00:06:51.990
+Zane Starr | OpenRPC: Fusion APIs… Yeah.
+
+42
+00:06:54.850 --> 00:06:56.270
+Zane Starr | OpenRPC: We'll look at the issue first.
+
+43
+00:07:01.200 --> 00:07:02.880
+Zane Starr | OpenRPC: Alright, so…
+
+44
+00:07:03.400 --> 00:07:22.759
+Zane Starr | OpenRPC: The OpenRPC team has been, sort of just overhauling the Execution APIs, repository, so just kind of taking in all the feedback over the past couple years, not even years, but, like, recently in the past couple of months, like, moved from Gatsby.
+
+45
+00:07:23.120 --> 00:07:25.340
+Zane Starr | OpenRPC: the Docuosaurus, back to Gadsby.
+
+46
+00:07:25.720 --> 00:07:31.840
+Zane Starr | OpenRPC: Now back to Docuosaurus, but in a much more sustainable and, like, generic way.
+
+47
+00:07:32.080 --> 00:07:40.500
+Zane Starr | OpenRPC: So… I found this issue, which just talks about the overall improved, DevEx.
+
+48
+00:07:40.810 --> 00:07:52.150
+Zane Starr | OpenRPC: So, things to note, it's a standardized DocuSource build, so all the stuff that you use for DocuSource, you could use here. There's minimal configuration, with the DocuSource plugin.
+
+49
+00:07:52.210 --> 00:08:08.900
+Zane Starr | OpenRPC: There's in-repo documentation for, like, dev visibility, so the docs, when they're rendered, will go to, like, a sort of rendered page on disk, so that way, like, let's say there's typos, or let's say that there's a part of…
+
+50
+00:08:09.610 --> 00:08:15.670
+Zane Starr | OpenRPC: Some method that's marked down, that's not being rendered properly, you can, like, pretty easily address that.
+
+51
+00:08:15.810 --> 00:08:24.819
+Zane Starr | OpenRPC: There's searchable documentation now, so you can search for keywords and things like that, or just, like, your regular docs.
+
+52
+00:08:25.070 --> 00:08:33.719
+Zane Starr | OpenRPC: And then it supports, Sims's Air Group extension as well. It also adds support for the X category stuff.
+
+53
+00:08:34.000 --> 00:08:40.950
+Zane Starr | OpenRPC: There's taggable methods, so you can tag things that belong to a fork or a particular group, so…
+
+54
+00:08:41.090 --> 00:08:45.610
+Zane Starr | OpenRPC: I think we have things, like, split up between, like, execution, etc.
+
+55
+00:08:46.030 --> 00:09:05.969
+Zane Starr | OpenRPC: And that becomes a little, like, tagable thing, so either on the page you can click on it, or on the index, which you'll see, shortly, that works. You can copy as markdown functionality for each page, and then, it's improved live development and speed. It's just much faster.
+
+56
+00:09:06.220 --> 00:09:13.770
+Zane Starr | OpenRPC: So I put together a quick demo page, which is this, which is, like, the new site.
+
+57
+00:09:14.260 --> 00:09:23.180
+Zane Starr | OpenRPC: As you can see… One of the big things, was talking about, Having the,
+
+58
+00:09:23.540 --> 00:09:32.780
+Zane Starr | OpenRPC: docs and the methods in the side. So if we go here… To… And these,
+
+59
+00:09:33.380 --> 00:09:34.770
+Zane Starr | OpenRPC: Eve chain ID?
+
+60
+00:09:35.350 --> 00:09:43.820
+Zane Starr | OpenRPC: We'll see that we have, Eve's chain ID. It tells us, like, what the results are. We have a nice little example.
+
+61
+00:09:43.990 --> 00:09:47.179
+Zane Starr | OpenRPC: And then we can, like, send requests live?
+
+62
+00:09:47.780 --> 00:09:50.949
+Zane Starr | OpenRPC: And then you can also copy as curl or fetch.
+
+63
+00:09:51.400 --> 00:09:59.050
+Zane Starr | OpenRPC: Which makes things, like, way easier, to just copy as curl, and then pop it into a browser, and then…
+
+64
+00:09:59.450 --> 00:10:02.139
+Zane Starr | OpenRPC: Or your terminal, and then make the request.
+
+65
+00:10:02.320 --> 00:10:07.980
+Zane Starr | OpenRPC: There's search, so if I look for, bug.
+
+66
+00:10:09.700 --> 00:10:15.390
+Zane Starr | OpenRPC: This… It can take you to any of the documents as well.
+
+67
+00:10:15.780 --> 00:10:28.229
+Zane Starr | OpenRPC: So, under guides is where I moved all of the docs that we have currently, but this could easily expand in the sidebar. I think there's, like, a bunch of engine stuff,
+
+68
+00:10:28.280 --> 00:10:37.650
+Zane Starr | OpenRPC: that is often in Markdown, that are engine specifications, so we can always, like, add more subcategories underneath, or someone can.
+
+69
+00:10:37.780 --> 00:10:42.179
+Zane Starr | OpenRPC: And then this can be styled however, anyone likes.
+
+70
+00:10:42.660 --> 00:10:47.290
+Zane Starr | OpenRPC: And that's pretty much so, it.
+
+71
+00:10:47.440 --> 00:10:48.130
+Zane Starr | OpenRPC: Yeah.
+
+72
+00:10:49.400 --> 00:10:55.300
+Mercy Boma Naps-Nkari: Sorry, I just have, like, the… Oh, okay, you're clear.
+
+73
+00:10:55.450 --> 00:11:00.079
+Mercy Boma Naps-Nkari: Are we back to the CSRS for good, or we are still going back to Gatsby?
+
+74
+00:11:00.080 --> 00:11:19.600
+Zane Starr | OpenRPC: No, this is, DocuSaurus for good. Backing this is a more generic, Markdown generator, so if EF feels like DocuSource isn't working for them, they want to use Nextra or README docs, this will translate all of the OpenRPC Markdown…
+
+75
+00:11:19.900 --> 00:11:33.949
+Zane Starr | OpenRPC: all of the OpenRPC documents into either NDX, depending on what you want, or Markdown. This is also customizable, so if you're in an ecosystem where it's difficult to write a plugin.
+
+76
+00:11:34.260 --> 00:11:43.650
+Zane Starr | OpenRPC: you can, instead of writing a plugin, you can specify a JSON, a JavaScript interface that will shim in
+
+77
+00:11:43.770 --> 00:11:46.710
+Zane Starr | OpenRPC: Interactive components.
+
+78
+00:11:46.880 --> 00:11:50.420
+Zane Starr | OpenRPC: So, if you look at…
+
+79
+00:11:51.070 --> 00:11:54.229
+Zane Starr | OpenRPC: Let's say, get bad blocks, for instance.
+
+80
+00:11:54.590 --> 00:11:58.920
+Zane Starr | OpenRPC: This is, like, an interactive component, which is MDX.
+
+81
+00:11:59.450 --> 00:12:03.820
+Zane Starr | OpenRPC: But you can customize what this MDX does.
+
+82
+00:12:04.580 --> 00:12:11.210
+Zane Starr | OpenRPC: Either through, like, changes to the DocuSource plugin, or you can do your own thing with a CLI.
+
+83
+00:12:11.360 --> 00:12:18.889
+Zane Starr | OpenRPC: So, let's take a look at how this works. I can do it really quickly, and then I will…
+
+84
+00:12:19.500 --> 00:12:24.720
+Zane Starr | OpenRPC: Seed the floor of The Sims, because I think he has, the bigger… Stuff to talk about.
+
+85
+00:12:24.940 --> 00:12:34.480
+Zane Starr | OpenRPC: Let's go here, and… 725…
+
+86
+00:12:37.860 --> 00:12:44.980
+Zane Starr | OpenRPC: And… Let's see… you'll see here… maybe I'll go to two commits, it's easier to see.
+
+87
+00:12:45.360 --> 00:12:49.749
+Zane Starr | OpenRPC: Because, again, documents… So, here's the one commit.
+
+88
+00:12:50.340 --> 00:12:51.810
+Zane Starr | OpenRPC: This is… this…
+
+89
+00:12:55.330 --> 00:12:56.170
+Zane Starr | OpenRPC: Alright.
+
+90
+00:12:56.650 --> 00:13:04.799
+Zane Starr | OpenRPC: So, commit changes… it still deploys on DocuSource,
+
+91
+00:13:04.950 --> 00:13:11.260
+Zane Starr | OpenRPC: There's the watch command stuff, which is slightly different, but that's, like, documented.
+
+92
+00:13:14.410 --> 00:13:18.080
+Zane Starr | OpenRPC: And the changes to make this work in the DocuSource config…
+
+93
+00:13:18.280 --> 00:13:25.169
+Zane Starr | OpenRPC: there is this. So here, you specify where the OpenRPZ document's gonna be.
+
+94
+00:13:25.500 --> 00:13:42.170
+Zane Starr | OpenRPC: Here you specify where you want to output the docs that are generated, and this index slug, allows for you to go directly to the documents, which was a complaint on other people's, like, systems as well, which is, like, when you go to the execution APIs.
+
+95
+00:13:42.320 --> 00:13:51.669
+Zane Starr | OpenRPC: It doesn't automatically, it wouldn't automatically route you to the reference documents, so now that, like, actually happens.
+
+96
+00:13:52.020 --> 00:13:53.450
+Zane Starr | OpenRPC: Yeah.
+
+97
+00:13:53.890 --> 00:13:59.850
+Zane Starr | OpenRPC: So, that's, like, pretty much so the world, tour. Yeah.
+
+98
+00:14:01.180 --> 00:14:14.669
+Mercy Boma Naps-Nkari: Yeah, I don't know, but I think I did remember during, the refactoring before, the main reason for us trying to switch to Gatsby was because the gas storage wasn't maintained. Has that issue been solved? I don't know if I'm…
+
+99
+00:14:14.670 --> 00:14:21.590
+Zane Starr | OpenRPC: Yeah, yeah, like, this is, like, the new thing, as in it is, like, fully maintained.
+
+100
+00:14:22.720 --> 00:14:24.950
+Mercy Boma Naps-Nkari: Okay. An update just happened…
+
+101
+00:14:26.090 --> 00:14:29.749
+Zane Starr | OpenRPC: Friday, it was, like, sort of completed end-to-end.
+
+102
+00:14:30.720 --> 00:14:35.000
+Zane Starr | OpenRPC: But yeah, as you can see, it's only 2 months old.
+
+103
+00:14:36.970 --> 00:14:38.220
+Mercy Boma Naps-Nkari: Okay. Yeah.
+
+104
+00:14:41.290 --> 00:14:44.200
+Zane Starr | OpenRPC: Yeah, that's, that's pretty much it.
+
+105
+00:14:44.410 --> 00:14:48.189
+Mercy Boma Naps-Nkari: Another question is,
+
+106
+00:14:48.720 --> 00:14:56.180
+Mercy Boma Naps-Nkari: I'm not sure how the… okay, Carrie is not here, because I can see the code file is, like, almost 36,000 to…
+
+107
+00:14:56.750 --> 00:14:58.140
+Mercy Boma Naps-Nkari: lines of code.
+
+108
+00:14:58.260 --> 00:14:59.210
+Mercy Boma Naps-Nkari: So…
+
+109
+00:14:59.360 --> 00:15:00.830
+Zane Starr | OpenRPC: I'm trying to figure out how…
+
+110
+00:15:01.110 --> 00:15:12.689
+Zane Starr | OpenRPC: Actually, so, the code change is split into two commits. So this is actually not, like, 82 files changed, it's just that you have to commit the docs.
+
+111
+00:15:13.110 --> 00:15:20.810
+Zane Starr | OpenRPC: And so I split this into two PRs. So the actual change, if you were to look at this, is one…
+
+112
+00:15:21.690 --> 00:15:26.710
+Zane Starr | OpenRPC: A README, a getignore, 3…
+
+113
+00:15:28.320 --> 00:15:34.269
+Zane Starr | OpenRPC: more MDX stuff, which is just the moving of files, for the markdown.
+
+114
+00:15:34.400 --> 00:15:41.960
+Zane Starr | OpenRPC: and then a custom CSS, and a DocuSource config, the deletion of Gatsby,
+
+115
+00:15:42.500 --> 00:15:45.729
+Zane Starr | OpenRPC: And… the removal of the old generator.
+
+116
+00:15:47.090 --> 00:15:49.970
+Zane Starr | OpenRPC: So it's like… 4 files?
+
+117
+00:15:50.970 --> 00:15:53.409
+Mercy Boma Naps-Nkari: Okay. And then, if you look at the overcommit.
+
+118
+00:15:54.130 --> 00:15:59.000
+Zane Starr | OpenRPC: You'll see the 82, but that's all just marked down documents being generated.
+
+119
+00:16:00.340 --> 00:16:03.079
+Zane Starr | OpenRPC: So, it should be pretty easy to, like.
+
+120
+00:16:03.820 --> 00:16:06.279
+Zane Starr | OpenRPC: Like, verify, like, what's going on.
+
+121
+00:16:07.700 --> 00:16:10.829
+Zane Starr | OpenRPC: So, if you look here, they're all in the methods.
+
+122
+00:16:12.870 --> 00:16:15.490
+Zane Starr | OpenRPC: It's literally the stuff that got generated.
+
+123
+00:16:20.010 --> 00:16:22.279
+Zane Starr | OpenRPC: Does that answer everything?
+
+124
+00:16:23.060 --> 00:16:27.320
+Mercy Boma Naps-Nkari: Yeah, it's on my end. I don't know if someone else has any questions regarding this.
+
+125
+00:16:28.240 --> 00:16:29.510
+Zane Starr | OpenRPC: Okay.
+
+126
+00:16:31.590 --> 00:16:37.490
+Zane Starr | OpenRPC: Okay, alright, so I'm gonna cede the floor to, Sims, I think.
+
+127
+00:16:40.780 --> 00:16:44.210
+Simsonraj Easvarasakthi: Yeah, thanks, Zane. This is great.
+
+128
+00:16:45.120 --> 00:16:56.490
+Simsonraj Easvarasakthi: Sorry for not having too many updates from my side. I've been traveling for the last one month, and I've been out of office, just literally locked in today.
+
+129
+00:16:57.160 --> 00:17:02.709
+Simsonraj Easvarasakthi: Thanks for creating the thread, Mercy. I saw some feedback.
+
+130
+00:17:03.290 --> 00:17:07.449
+Simsonraj Easvarasakthi: Most of it is not actionable, except few
+
+131
+00:17:08.390 --> 00:17:12.299
+Simsonraj Easvarasakthi: variable change, I guess, but other than that.
+
+132
+00:17:13.000 --> 00:17:16.319
+Simsonraj Easvarasakthi: I think we should… we're still waiting for reviews from people.
+
+133
+00:17:17.410 --> 00:17:22.270
+Simsonraj Easvarasakthi: If there's any, we can work on it and try and merge this.
+
+134
+00:17:24.010 --> 00:17:31.569
+Mercy Boma Naps-Nkari: Okay, about the review, I think, we are kind of, like, too late for this year, so…
+
+135
+00:17:31.800 --> 00:17:39.650
+Mercy Boma Naps-Nkari: I… like I said earlier, I wanted to take it over to ACDT. I think the next ACDT should be around…
+
+136
+00:17:39.770 --> 00:17:46.519
+Mercy Boma Naps-Nkari: I'm not sure, but it's sometime, I think, second week of, january, I'm guessing.
+
+137
+00:17:46.800 --> 00:18:02.300
+Mercy Boma Naps-Nkari: So we can move it over there so that we can get more eyes on it. Then for the reviews that is actionable, we can actually, like, implement it, and then next year, we can take it over to ACDT, get Mario, and
+
+138
+00:18:02.540 --> 00:18:05.639
+Mercy Boma Naps-Nkari: Other core devs to also have an input on it.
+
+139
+00:18:06.280 --> 00:18:15.770
+Simsonraj Easvarasakthi: Yeah, yeah, that works. Yeah, I can spend, some time before the next ACDC meeting and address some of the,
+
+140
+00:18:15.970 --> 00:18:19.510
+Simsonraj Easvarasakthi: points that was raised. But yeah, those are really minor ones.
+
+141
+00:18:19.650 --> 00:18:22.730
+Simsonraj Easvarasakthi: Nothing, big that it has to be changed.
+
+142
+00:18:23.290 --> 00:18:28.069
+Simsonraj Easvarasakthi: So it should be easy. Yeah, I can be ready for the next, SADC.
+
+143
+00:18:29.920 --> 00:18:45.009
+Mercy Boma Naps-Nkari: Okay, so I just shared the link on the chat. I can see someone from Aragon's team here. If you can also take a look at it and drop us a feedback, that would be really helpful. Anyone else who also have an input on this can also do that. Thank you.
+
+144
+00:18:46.050 --> 00:18:47.289
+Tullio | Erigon: Sure, sure, I'll do.
+
+145
+00:18:50.560 --> 00:18:55.329
+Mercy Boma Naps-Nkari: So, I don't know if you have any other thing we want to discuss.
+
+146
+00:19:01.930 --> 00:19:06.620
+Mercy Boma Naps-Nkari: And sorry, thank you, Zane. The website looks much more better and usable now.
+
+147
+00:19:09.490 --> 00:19:10.549
+Zane Starr | OpenRPC: I'm cool, I'm cool.
+
+148
+00:19:11.080 --> 00:19:13.760
+Zane Starr | OpenRPC: Yeah, I'm hoping that people are able to, like.
+
+149
+00:19:14.490 --> 00:19:20.700
+Zane Starr | OpenRPC: jump in, add docs wherever they want, or style it however they want as well. It's just standard DocuSource.
+
+150
+00:19:21.110 --> 00:19:23.329
+Zane Starr | OpenRPC: With, a little extra.
+
+151
+00:19:24.110 --> 00:19:25.740
+Zane Starr | OpenRPC: In terms of plugins, so…
+
+152
+00:19:27.040 --> 00:19:30.319
+Mercy Boma Naps-Nkari: Yeah, we can also, like, I don't know…
+
+153
+00:19:30.420 --> 00:19:35.030
+Mercy Boma Naps-Nkari: Next SCDE, the execution layer called, we can…
+
+154
+00:19:35.480 --> 00:19:39.770
+Mercy Boma Naps-Nkari: Also, make an intro about the new docu… the website.
+
+155
+00:19:40.610 --> 00:19:44.609
+Mercy Boma Naps-Nkari: Because it's a lot more usable currently, unlike before.
+
+156
+00:19:44.610 --> 00:19:47.079
+Zane Starr | OpenRPC: Yeah, I'm hoping for it.
+
+157
+00:19:47.510 --> 00:19:52.290
+Zane Starr | OpenRPC: Okay. You think that, like, when is the next ACDC? Just…
+
+158
+00:19:53.510 --> 00:19:57.779
+Mercy Boma Naps-Nkari: I need to check… Just hold on.
+
+159
+00:20:02.120 --> 00:20:05.829
+Mercy Boma Naps-Nkari: There is no time for it yet.
+
+160
+00:20:06.460 --> 00:20:07.589
+Mercy Boma Naps-Nkari: Hold on, sorry.
+
+161
+00:20:21.510 --> 00:20:23.060
+Mercy Boma Naps-Nkari: ACDP.
+
+162
+00:20:26.410 --> 00:20:32.059
+Mercy Boma Naps-Nkari: I think… I'm seeing… I don't know what this means, let me just share the link.
+
+163
+00:20:39.780 --> 00:20:44.040
+Mercy Boma Naps-Nkari: I see it's supposed to be on, 5th of January, according to what I'm seeing here.
+
+164
+00:20:49.720 --> 00:20:53.460
+Zane Starr | OpenRPC: Okay, cool. I'll keep a, I.
+
+165
+00:20:53.460 --> 00:20:54.070
+Mercy Boma Naps-Nkari: Okay.
+
+166
+00:20:54.200 --> 00:21:00.389
+Mercy Boma Naps-Nkari: I would… I'll just keep an update, I'll keep an eye for it, then if I see an issue created for it, I will tag it to the…
+
+167
+00:21:02.050 --> 00:21:03.739
+Mercy Boma Naps-Nkari: I don't know if that sounds okay.
+
+168
+00:21:06.480 --> 00:21:07.730
+Zane Starr | OpenRPC: Yep, sounds good.
+
+169
+00:21:09.110 --> 00:21:15.520
+Mercy Boma Naps-Nkari: Okay, in that regard, do we have any other thing we want to discuss concerning, executions?
+
+170
+00:21:15.950 --> 00:21:17.110
+Mercy Boma Naps-Nkari: RPC.
+
+171
+00:21:25.330 --> 00:21:33.659
+Mercy Boma Naps-Nkari: Alright then, I think that's all for today. And, okay, one more last thing. I think our next call should happen on…
+
+172
+00:21:35.420 --> 00:21:38.780
+Mercy Boma Naps-Nkari: 12th of January. Does that sound okay?
+
+173
+00:21:42.340 --> 00:21:44.130
+Zane Starr | OpenRPC: Yep, that sounds good to me.
+
+174
+00:21:45.750 --> 00:21:46.460
+Mercy Boma Naps-Nkari: Okay.
+
+175
+00:21:46.630 --> 00:21:52.159
+Mercy Boma Naps-Nkari: Thank you, everybody. Thank you for joining us. Happy holidays, Merry Christmas, and Happy New Year.
+
+176
+00:21:52.160 --> 00:21:52.640
+Zane Starr | OpenRPC: Ugh.
+
+177
+00:21:52.640 --> 00:21:53.470
+Mercy Boma Naps-Nkari: Thank you, Will.
+
+178
+00:21:53.840 --> 00:21:54.610
+Zane Starr | OpenRPC: Thanks.
+
+179
+00:21:54.610 --> 00:22:00.410
+Mercy Boma Naps-Nkari: CEO or next year, we're hoping to have more participation next year, and also to…
+
+180
+00:22:00.520 --> 00:22:02.810
+Mercy Boma Naps-Nkari: More better ways to improve our code.
+
+181
+00:22:05.530 --> 00:22:06.370
+Tullio | Erigon: Thank you very much.
+
+182
+00:22:06.370 --> 00:22:07.329
+Simsonraj Easvarasakthi: Thank you, Mercy.
+
+183
+00:22:07.330 --> 00:22:07.930
+Tullio | Erigon: Who knows?
+
+184
+00:22:08.490 --> 00:22:09.010
+Mercy Boma Naps-Nkari: Bye.
+
+185
+00:22:09.340 --> 00:22:09.740
+Simsonraj Easvarasakthi: We're fine.
+
+186
+00:22:09.740 --> 00:22:12.209
+Tullio | Erigon: My superior to you all. Bye.
+
+187
+00:22:12.610 --> 00:22:13.390
+Simsonraj Easvarasakthi: Happy holidays.
+
+188
+00:22:13.390 --> 00:22:14.050
+Mercy Boma Naps-Nkari: Bye.
+
+189
+00:22:14.720 --> 00:22:15.770
+Zane Starr | OpenRPC: Happy holidays.
+
+190
+00:22:15.930 --> 00:22:16.690
+Zane Starr | OpenRPC: Right.
+
