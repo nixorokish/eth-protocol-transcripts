@@ -1,0 +1,14 @@
+{
+  "meeting_id": "850 6282 9915",
+  "topic": "EIP-7732 Breakout Room Call #29, December 19, 2025",
+  "meeting_type": "ePBS",
+  "meeting_number": "29",
+  "start_time": "2025-12-19T13:50:25Z",
+  "duration_minutes": 52,
+  "recording_count": 6,
+  "downloaded_at": "2026-01-07T15:44:44.898252",
+  "files": [
+    "transcript.vtt",
+    "chat.txt"
+  ]
+}
