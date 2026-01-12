@@ -1,0 +1,2082 @@
+WEBVTT
+
+1
+00:00:16.370 --> 00:00:17.430
+Mercy Boma Naps-Nkari: Hello?
+
+2
+00:00:19.920 --> 00:00:21.170
+EF Zoom Bot: Hello, I'm a sec.
+
+3
+00:00:21.370 --> 00:00:22.980
+EF Zoom Bot: I'm making you the host now.
+
+4
+00:00:26.000 --> 00:00:26.750
+Mercy Boma Naps-Nkari: Okay.
+
+5
+00:00:28.720 --> 00:00:29.600
+Mercy Boma Naps-Nkari: Thank you.
+
+6
+00:00:38.160 --> 00:00:38.840
+Mercy Boma Naps-Nkari: Hello.
+
+7
+00:00:39.050 --> 00:00:39.760
+Tullio | Erigon: Hello.
+
+8
+00:01:02.220 --> 00:01:02.960
+Mercy Boma Naps-Nkari: Mmm.
+
+9
+00:01:19.420 --> 00:01:23.429
+Felix (Geth): So, was anything decided in ACDT regarding the error codes?
+
+10
+00:01:24.970 --> 00:01:30.760
+Mercy Boma Naps-Nkari: No, it's kind of like, an async, decision.
+
+11
+00:01:32.300 --> 00:01:35.659
+Felix (Geth): Okay, alright, so they… but you guys talked about it?
+
+12
+00:01:37.090 --> 00:01:43.060
+Mercy Boma Naps-Nkari: Yeah, we did, Sims did make a presentation. I don't know if Simi can just talk a little about… yeah?
+
+13
+00:01:43.290 --> 00:01:54.900
+Simsonraj Easvarasakthi: Yeah, yeah, yeah. So, yeah, I just presented, I told them where we are at, and, the, the outcome was, the other clients, everyone will take a look at this, and,
+
+14
+00:01:55.110 --> 00:01:57.560
+Simsonraj Easvarasakthi: Leave some feedback, so we can match it.
+
+15
+00:02:00.450 --> 00:02:05.489
+Felix (Geth): Okay, that's good, that sounds good. Sounds like there's more exposure to it.
+
+16
+00:02:06.040 --> 00:02:06.830
+Simsonraj Easvarasakthi: Yeah…
+
+17
+00:02:06.950 --> 00:02:16.120
+Simsonraj Easvarasakthi: The thing is, we only got 4 minutes, so couldn't talk too much or gather any feedbacks on… on call. Hopefully they'll leave some on the PR.
+
+18
+00:02:21.280 --> 00:02:33.140
+Mercy Boma Naps-Nkari: Yeah, I think, we just have to wait for them to give us a feedback, and then we can start writing the test. But I wanted to ask, do you have, like, any test plan
+
+19
+00:02:33.850 --> 00:02:36.800
+Mercy Boma Naps-Nkari: Like, you've already mapped out, for this.
+
+20
+00:02:38.100 --> 00:02:47.869
+Simsonraj Easvarasakthi: I can actually port over the test suit that I wrote into the RPC test. The only thing is we cannot cover every…
+
+21
+00:02:47.990 --> 00:03:00.719
+Simsonraj Easvarasakthi: error codes, because as I mentioned, the client setup, the local Docker setup, or client setup, doesn't allow you to specify all the limits. They have, differences.
+
+22
+00:03:00.780 --> 00:03:09.629
+Simsonraj Easvarasakthi: So we cannot simulate all negative conditions, but we can do for half of them, at least. But we still have to decide
+
+23
+00:03:10.190 --> 00:03:15.070
+Simsonraj Easvarasakthi: On, on verbal communication on, we agreed to implement the rest of them.
+
+24
+00:03:15.520 --> 00:03:21.039
+Simsonraj Easvarasakthi: or at least, enable the clients to specify some limits. For example.
+
+25
+00:03:21.190 --> 00:03:39.400
+Simsonraj Easvarasakthi: I'm not sure if I'm saying this right, but maybe Nethermine doesn't allow you to set the, transaction gas limit, but it probably does the block gas limit. And some of these clients behave slightly differently when you want to simulate non-stu high ed, or
+
+26
+00:03:39.490 --> 00:03:47.510
+Simsonraj Easvarasakthi: So it's very hard to use the same test case across different clients to produce the same negative outcome.
+
+27
+00:03:51.850 --> 00:03:54.290
+Simsonraj Easvarasakthi: Well, yeah, I can do some of them, though.
+
+28
+00:03:55.910 --> 00:03:59.990
+Mercy Boma Naps-Nkari: Okay, if you just… when you do,
+
+29
+00:04:00.120 --> 00:04:03.979
+Mercy Boma Naps-Nkari: Can you signal in the group? And also, I wanted to understand if…
+
+30
+00:04:04.660 --> 00:04:10.859
+Mercy Boma Naps-Nkari: The test you're talking about, you used, ROPC test gene for it.
+
+31
+00:04:11.230 --> 00:04:27.590
+Simsonraj Easvarasakthi: Not yet, no. I wanted to try, before touching the RPC test gen, I wanted to try it as a separate group, because RPC test gen is a little complicated for me to set up and spend time on at the moment. I just want to get a sense of how different clients are behaving.
+
+32
+00:04:27.630 --> 00:04:43.269
+Simsonraj Easvarasakthi: Because this… this means I have to touch the Genesis file, set the limits to replicate these error… error codes, which the RPC test gen doesn't do at the moment. So I… I wrote my own, own, test suit.
+
+33
+00:04:43.870 --> 00:04:53.129
+Felix (Geth): I'm happy to work with you on this. So there is, we have the… we are in control of the test chain, so if there's some setting in the test chain that you need.
+
+34
+00:04:53.150 --> 00:05:03.889
+Felix (Geth): we can… we can definitely get it. And you can… the way we use it… the way we do this in the RPTC test gen, usually, is that we do load the…
+
+35
+00:05:04.520 --> 00:05:08.670
+Felix (Geth): we do load the JSON files which are related to the test chain.
+
+36
+00:05:08.950 --> 00:05:10.509
+Simsonraj Easvarasakthi: Okay. And then we…
+
+37
+00:05:10.510 --> 00:05:22.440
+Felix (Geth): basically, we have access to the numbers that were used for the configuration. And so then, for example, if the Genesis specifies a certain gas limit, or if the latest block has a certain gas limit.
+
+38
+00:05:22.440 --> 00:05:30.630
+Felix (Geth): Then you can… you have access to that from within the test generator, and then you can send a transaction that is, for example, larger than this limit.
+
+39
+00:05:30.960 --> 00:05:36.899
+Felix (Geth): just by… but… but it is still… it has to be done this way, so that
+
+40
+00:05:36.900 --> 00:05:54.709
+Felix (Geth): when we change the test chain, for example, when there's a new fork, we want to have it in the test chain, then the test generation needs to react to these changes as well. So that's why we always have to parameterize it this way, like, we basically take the test chain as given, and then generate the test according to the configuration of that chain.
+
+41
+00:05:55.580 --> 00:06:04.159
+Simsonraj Easvarasakthi: Understood. No, that makes sense. Yeah, definitely, we'll reach out to you. Just one concern is that, certain clients,
+
+42
+00:06:04.750 --> 00:06:20.359
+Simsonraj Easvarasakthi: doesn't have all the limits set by get. I've noticed I had trouble generating the same error that I got with get on other clients, which means they have a different… probably different setting name or a variable name.
+
+43
+00:06:20.580 --> 00:06:26.829
+Simsonraj Easvarasakthi: as part of the Genesis config, or maybe as part of, while spinning up the, client itself.
+
+44
+00:06:26.890 --> 00:06:31.910
+Simsonraj Easvarasakthi: Doesn't respect those configs, especially when you think about it's a… it's a local…
+
+45
+00:06:31.910 --> 00:06:50.059
+Simsonraj Easvarasakthi: dev mode, right, for most of these, test setups that we spin up the client notice. It's not a full P2P network, so they don't respect all these settings, so I have trouble replicating the same test scenario across different, client implementations.
+
+46
+00:06:50.060 --> 00:07:06.200
+Felix (Geth): So in Hive, it's a bit different. So in Hive, we do spin up the client in its default configuration, but we also make some settings. So, for example, the RPC each call gas limit, for example, there's a specific one that we use in Hive, so if you want to make a call that goes over that, then it gets…
+
+47
+00:07:07.080 --> 00:07:22.309
+Felix (Geth): So we are… we are in some… we are in control in Hive, in terms of the… how the client gets launched and what settings get applied. That said, I would also say it's not the goal to have a completely exhaustive…
+
+48
+00:07:22.970 --> 00:07:27.759
+Felix (Geth): Coverage of all error codes in the test, because it's just gonna be impossible.
+
+49
+00:07:27.760 --> 00:07:30.530
+Simsonraj Easvarasakthi: Yeah, we want to cover some of them, but…
+
+50
+00:07:31.240 --> 00:07:34.159
+Felix (Geth): For all of them, that's gonna be quite hard, and this.
+
+51
+00:07:34.160 --> 00:07:34.820
+Simsonraj Easvarasakthi: I agree.
+
+52
+00:07:34.820 --> 00:07:46.660
+Felix (Geth): the appeal of your proposal, that it gives clients the option to have these errors, but it doesn't mean they have to have these errors. It's just more that if they have the error, they have to agree on the code.
+
+53
+00:07:47.250 --> 00:07:50.239
+Simsonraj Easvarasakthi: Correct. I agree, yeah, that's the goal, too.
+
+54
+00:07:50.380 --> 00:07:58.379
+Simsonraj Easvarasakthi: I'm in with you there. So yeah, I'll start looking at, implementing this in Hive. I'll reach out to you, Felix. Thanks very much.
+
+55
+00:08:05.880 --> 00:08:10.770
+Mercy Boma Naps-Nkari: Okay, thank you very much. I wanted to go on the next agenda, which is,
+
+56
+00:08:11.320 --> 00:08:15.730
+Mercy Boma Naps-Nkari: to add the bug traces and execution API, chase.
+
+57
+00:08:16.520 --> 00:08:17.470
+Mercy Boma Naps-Nkari: Oh, God.
+
+58
+00:08:20.450 --> 00:08:30.499
+Chase Wright: Yeah, I know Felix and I talked about this a little bit internally. I do have some PRs, to look at some of the
+
+59
+00:08:30.610 --> 00:08:45.889
+Chase Wright: to add, you know, debug trace block my number, debug trace call, things like that. I know that, it's gonna be difficult to get, the clients to agree, but I do think there are some low-hanging fruits,
+
+60
+00:08:46.080 --> 00:08:49.750
+Chase Wright: Especially in, like, debug trace call.
+
+61
+00:08:50.040 --> 00:08:56.760
+Chase Wright: And so, I mean, I have PRs open, I just… I'm not sure what the next steps would be to…
+
+62
+00:08:57.440 --> 00:09:02.419
+Chase Wright: Get those merged, or get them approved, or… or even just reviewed.
+
+63
+00:09:03.180 --> 00:09:16.390
+Felix (Geth): So I think it's quite good that you opened this, and that it has a smaller scope, so the scope is very small in your PR. It's only about trace call, and then it's about the trace block by number, right?
+
+64
+00:09:16.930 --> 00:09:36.350
+Chase Wright: Yeah, so I have one for trace block by number that is specifically to trace block zero, that way that the error code can be standardized across clients, which was, you know, part of the last discussion around error codes, because the clients don't send the same message or error for that. And then I do have one for trace call that
+
+65
+00:09:36.410 --> 00:09:51.499
+Chase Wright: I've used in the past, which clients are generating different outputs on, and so I figured it'd be… be good for that. And yes, my intention was to start extremely small on just these two little things, and then try to expand from there. After…
+
+66
+00:09:51.500 --> 00:10:01.850
+Chase Wright: After it was put into the specs, right? Because the debug trace anything is just not in any of the specs, not in any of the generators, so I figured I'd just start there.
+
+67
+00:10:02.310 --> 00:10:09.510
+Felix (Geth): Yeah, I think that's good. We might even go a step further and try to split it, so we have basically just the addition of debug trace calls.
+
+68
+00:10:09.660 --> 00:10:18.669
+Felix (Geth): First, and then also in parallel, you can pursue this, like, debug, trace, block by number. They are very similar, though, like, the output format, I think, is the same.
+
+69
+00:10:18.930 --> 00:10:24.290
+Felix (Geth): So it's kind of… these two tracers have the same general output.
+
+70
+00:10:24.550 --> 00:10:27.289
+Felix (Geth): So, it's… it's good.
+
+71
+00:10:27.740 --> 00:10:32.869
+Felix (Geth): I'm just wondering, okay, so trace block by number, so here you're using the…
+
+72
+00:10:34.230 --> 00:10:41.240
+Felix (Geth): GoEthereum type of input with the tracer name and the tracer config in the test.
+
+73
+00:10:41.380 --> 00:10:44.279
+Felix (Geth): So this is something which is kind of…
+
+74
+00:10:44.750 --> 00:10:49.070
+Felix (Geth): I'm actually not sure if this is universal or not. I know that there is…
+
+75
+00:10:52.900 --> 00:11:06.280
+Chase Wright: I mean, it's not… it's not perfectly universal, and I think that's… that's part of the… the problem, right? So, like, all of the clients do support, you know, Call Tracer, except I think, Besu doesn't support Call Tracer, which…
+
+76
+00:11:06.280 --> 00:11:24.640
+Chase Wright: You know, like, maybe they should, but whatever. And then, you know, all of the options that are in the, the call tracer, or not call tracer, but the native tracer, additional parameters, most of the clients do support most of them. It's, it's not perfect, it's not universal.
+
+77
+00:11:24.640 --> 00:11:27.730
+Chase Wright: But that's really why I'm starting at, you know.
+
+78
+00:11:27.780 --> 00:11:33.720
+Chase Wright: just, hey, what's the error code when you try and trace the Genesis, right? Like, I'm just starting there.
+
+79
+00:11:36.480 --> 00:11:41.530
+Felix (Geth): Okay, it's just about the error. I thought it's more about the… it's more about the tracer output.
+
+80
+00:11:41.660 --> 00:11:57.330
+Chase Wright: So, Trace Call… Trace Call does, do one opcode trace, and the clients return different outputs, so even Nethermine and Geth are returning different outputs, and I figured, well, hey, if that's the case, you know, then…
+
+81
+00:11:57.930 --> 00:12:00.160
+Chase Wright: Then maybe that should be fixed, too.
+
+82
+00:12:03.330 --> 00:12:04.879
+Mercy Boma Naps-Nkari: Yeah. Please go ahead today.
+
+83
+00:12:10.970 --> 00:12:13.329
+Mercy Boma Naps-Nkari: You raised your hand, sorry, I can't pronounce your name.
+
+84
+00:12:13.330 --> 00:12:30.609
+Tullio | Erigon: Yeah, okay, yeah. Hi, everyone. Yeah, wanted to say that, yeah, I appreciated this PR on the BuckTrace call as well. I think that we… maybe we should try to be…
+
+85
+00:12:30.720 --> 00:12:41.010
+Tullio | Erigon: a little more ambitious, and, trying… it would be valuable, I've left a comment on the PR to… to try to fully specify
+
+86
+00:12:41.160 --> 00:12:44.510
+Tullio | Erigon: the… mmm…
+
+87
+00:12:44.630 --> 00:13:01.560
+Tullio | Erigon: the tracer names, for example, I mean, which tracer must be supported by an implementation in order to be called compliant. And, but especially on the schema for the expected output, for the result.
+
+88
+00:13:01.560 --> 00:13:04.950
+Tullio | Erigon: We should try to enforce it.
+
+89
+00:13:04.990 --> 00:13:14.760
+Tullio | Erigon: More, and, fully specify which fields with which structure, depending on which tracer.
+
+90
+00:13:14.990 --> 00:13:22.819
+Tullio | Erigon: Because… If we want to… push for a standardization. I think that…
+
+91
+00:13:22.940 --> 00:13:36.230
+Tullio | Erigon: that's what we should try to do. Even if it's painful and it's a bit of work, I can try to contribute on it.
+
+92
+00:13:36.690 --> 00:13:42.430
+Tullio | Erigon: If it's… if you're okay with it, but I think we should try to be more ambitious.
+
+93
+00:13:43.880 --> 00:13:48.880
+Chase Wright: Yeah, I'm definitely open to more collaboration and input.
+
+94
+00:13:49.620 --> 00:14:08.529
+Chase Wright: My… my only thing was, I just… I really… I was trying to figure out how the RPC test gen stuff works, and how… how the spec works, and… and get something, minimal that… that was workable, and that, you know, I didn't want perfection to be the enemy of progress, right?
+
+95
+00:14:08.760 --> 00:14:12.360
+Chase Wright: But, yeah, I'm open to… to more,
+
+96
+00:14:12.560 --> 00:14:16.609
+Chase Wright: to more ambitious specification here.
+
+97
+00:14:17.480 --> 00:14:24.639
+Chase Wright: Or, like… like Felix said, like, we could remove debug trace block by number for right now, and just…
+
+98
+00:14:24.920 --> 00:14:32.519
+Chase Wright: do the debug trace call, but I think that's gonna have the exact same problem, probably, because debug trace call…
+
+99
+00:14:32.940 --> 00:14:34.679
+Chase Wright: specify a tracer, right? So…
+
+100
+00:14:34.680 --> 00:14:35.750
+Tullio | Erigon: Yeah, yeah, yeah, exactly.
+
+101
+00:14:42.160 --> 00:14:48.940
+Chase Wright: So yeah, I'm not 100% sure how to… how to move forward with that, but if you have ideas, then…
+
+102
+00:14:49.060 --> 00:14:50.979
+Chase Wright: I'm all ears.
+
+103
+00:14:53.120 --> 00:14:53.730
+Felix (Geth): I think one…
+
+104
+00:14:53.730 --> 00:14:54.120
+Tullio | Erigon: Maybe…
+
+105
+00:14:54.860 --> 00:14:55.890
+Felix (Geth): Sorry, sorry.
+
+106
+00:14:56.210 --> 00:14:57.600
+Tullio | Erigon: Yeah, sorry if Felic's gone.
+
+107
+00:15:00.710 --> 00:15:07.560
+Felix (Geth): Yeah, so I wanted to say that with debug trace call specifically, it's kind of like ETHC call with tracing.
+
+108
+00:15:07.680 --> 00:15:17.389
+Felix (Geth): And the last parameter of it, in get at least, is this trace call config object that contains the, like, tracer name and things like that, but
+
+109
+00:15:18.260 --> 00:15:25.060
+Felix (Geth): we don't even need to do that. We could just try to make a test that doesn't have this last argument, and it's only about
+
+110
+00:15:25.080 --> 00:15:28.699
+Felix (Geth): Tracing a single call at the head block of the test chain.
+
+111
+00:15:28.720 --> 00:15:46.550
+Felix (Geth): and then see what are the differences in the output across the clients. One of the problems that we have is adding tests right now into the main test suit means they will fail on all the clients, so we will basically add test failures to the clients. It's okay for me, but I just already know that
+
+112
+00:15:46.900 --> 00:16:02.739
+Felix (Geth): there are already too many failures. But anyway, I would say let's start very small and just add a test for only this, and then see how far we… how far we get, because the differences which are in opcode tracing are really deep sometimes in some of the clients. They have these, like…
+
+113
+00:16:03.150 --> 00:16:13.559
+Felix (Geth): different ways of accounting and different output fields and so on, so we have to standardize this part first. And once we can agree on a shared trace format, there's also, I think, an EIP for it.
+
+114
+00:16:13.690 --> 00:16:17.049
+Felix (Geth): Then we can actually go to the next…
+
+115
+00:16:17.280 --> 00:16:22.500
+Felix (Geth): step. So there is, for example, EIP3155.
+
+116
+00:16:23.910 --> 00:16:29.810
+Felix (Geth): which is about this. I can quickly try to post that here to the… to the chat.
+
+117
+00:16:30.210 --> 00:16:32.619
+Felix (Geth): So this EIP is about this.
+
+118
+00:16:33.550 --> 00:16:38.390
+Felix (Geth): It's about the… It's about standardizing the trace format.
+
+119
+00:16:38.490 --> 00:16:41.540
+Felix (Geth): And, it is currently in last call.
+
+120
+00:16:42.410 --> 00:16:49.600
+Felix (Geth): But it's been… it was… the last call deadline was mid-March last year, so I guess, yeah. And this EIP is,
+
+121
+00:16:50.090 --> 00:17:04.650
+Felix (Geth): 5 years old, just for you guys to be aware of the prehistory of this particular problem. So, yes, it would be nice to agree, but we have to start small here, because this… other people have tried, and this is not super easy.
+
+122
+00:17:04.910 --> 00:17:12.109
+Felix (Geth): So if we go in it with the big ambition, I am just afraid that it's gonna be overwhelming, because the basics are not…
+
+123
+00:17:12.420 --> 00:17:13.150
+Felix (Geth): Right.
+
+124
+00:17:15.770 --> 00:17:19.239
+Tullio | Erigon: Okay, I… I agree. So, in… in that sense, I think…
+
+125
+00:17:19.810 --> 00:17:29.569
+Tullio | Erigon: I agree we should split the PR into… in two, and have a separate one for the bug trace call, and another one for the bug…
+
+126
+00:17:29.840 --> 00:17:32.790
+Tullio | Erigon: trace block by number. This… the smaller…
+
+127
+00:17:34.370 --> 00:17:37.489
+Tullio | Erigon: There's… there's more or less the context than the easiest.
+
+128
+00:17:41.670 --> 00:17:46.390
+Felix (Geth): So it is valuable, I think, to arrive at a place eventually where
+
+129
+00:17:46.580 --> 00:18:03.119
+Felix (Geth): we can do basic opcode tracing in the same way across the clients. And, I do also want to say that, like, the Geth way of handling it, where we added another parameter to trace call to allow you to specify another tracer, things like that, this
+
+130
+00:18:03.400 --> 00:18:20.980
+Felix (Geth): it was kind of done, like, a long time ago, and I would say maybe today we wouldn't really do it this way anymore, or… and I feel like if we now go ahead and try to standardize this, maybe it is already supported, like you say, Chase. I'm not… I wasn't actually aware of it, but if all the clients can accept this, I'm happy with it, because I feel like, yeah, we…
+
+131
+00:18:21.270 --> 00:18:26.729
+Felix (Geth): Obviously, people want different… they don't always want the opcode trace, they may want another one, but…
+
+132
+00:18:27.080 --> 00:18:34.989
+Felix (Geth): Maybe, for the purposes of standardization, is gonna create a lot of tension when all of a sudden all clients are forced to have this…
+
+133
+00:18:35.130 --> 00:18:35.910
+Felix (Geth): this…
+
+134
+00:18:36.300 --> 00:18:44.189
+Felix (Geth): this parameter, or I don't know, that's why I was saying, let's maybe just remove this parameter for now and focus on the very basic opcode trace, because
+
+135
+00:18:44.450 --> 00:18:47.720
+Felix (Geth): If we can make any progress in standardizing that, it's a huge win.
+
+136
+00:18:47.940 --> 00:18:49.620
+Felix (Geth): So, that's what I would…
+
+137
+00:18:50.420 --> 00:19:02.859
+Chase Wright: Yeah, so, from my perspective, the primary reason why I included and went with the call tracer is, you know, from a JSON RPC perspective, like.
+
+138
+00:19:03.820 --> 00:19:11.189
+Chase Wright: the… that is the call that, like, 99% of all of the dApps use. They… they all use Call Tracer, right?
+
+139
+00:19:11.190 --> 00:19:11.970
+Felix (Geth): Yeah, yeah, yeah.
+
+140
+00:19:11.970 --> 00:19:13.350
+Chase Wright: And it's the default.
+
+141
+00:19:13.350 --> 00:19:23.729
+Felix (Geth): It is the default, so if you leave out the last parameter to debug trace call and getth, for example, if you don't specify it, it will still do this trace by default. At least, I think that's what it will do.
+
+142
+00:19:24.040 --> 00:19:32.599
+Felix (Geth): So it has this, like, by default, it's the call trace. It's just that if you specify this, like, object that contains, like, the tracer name and tracer config and stuff.
+
+143
+00:19:32.910 --> 00:19:38.499
+Felix (Geth): maybe with some clients, it's gonna not work, but… or maybe it will, I don't know. I'm just…
+
+144
+00:19:38.760 --> 00:19:46.970
+Felix (Geth): Trying to be careful here and say that, like, yeah, the original debug trace call didn't have this configurability, it was only about the call traces.
+
+145
+00:19:49.650 --> 00:19:53.630
+Felix (Geth): Sorry, maybe it was just a misunderstanding. Never mind, I think we can also move on. Anyway…
+
+146
+00:19:59.730 --> 00:20:02.560
+Mercy Boma Naps-Nkari: Okay, Abamura… oh, sorry.
+
+147
+00:20:03.000 --> 00:20:09.749
+Chase Wright: No, I was just gonna say, like, yeah, we can move on, I guess, but, like, I don't… I'm not 100% clear on the actual…
+
+148
+00:20:10.250 --> 00:20:11.540
+Chase Wright: Next steps.
+
+149
+00:20:12.400 --> 00:20:13.760
+Felix (Geth): So…
+
+150
+00:20:13.760 --> 00:20:17.759
+Chase Wright: Do you want me to refactor this into multiple PRs, or…
+
+151
+00:20:18.170 --> 00:20:22.790
+Felix (Geth): So I would say, let's have a… let's have one PR that is about adding debug trace call only.
+
+152
+00:20:23.150 --> 00:20:27.670
+Felix (Geth): Okay. We have another PR in parallel that's about adding debug trace block by number.
+
+153
+00:20:28.330 --> 00:20:45.059
+Felix (Geth): And with the tests, yeah, with the tests, we have to see, like, it's good if we have one or more, like, if we have multiple tests. For example, one thing we have to add is also a test, where it calls, like, multiple contracts, like, one contract calls another one, so we can set that up.
+
+154
+00:20:45.380 --> 00:20:58.129
+Felix (Geth): And then, like, so we have to put some contract in the test chain that, like, makes another call, like a sub-call, because for tracing, the sub calls is really the important stuff, right? So it… then it has, like, a non-zero depth.
+
+155
+00:20:58.580 --> 00:21:09.379
+Felix (Geth): And there's gonna be, like, the return data and stuff like that. That has to be in the trace as well. If we don't… if the call doesn't actually perform, like, a multi-contract interaction, then there isn't gonna be any return data.
+
+156
+00:21:09.860 --> 00:21:11.200
+Felix (Geth): Inside of the…
+
+157
+00:21:12.240 --> 00:21:21.150
+Felix (Geth): Inside of the trace. So, let's just try to get to a point where we have, like, 2-3 tests for the tracing, and it's just about the call trace, and then we can see
+
+158
+00:21:21.920 --> 00:21:29.749
+Felix (Geth): how far we get with the clients on that. So we do have to eventually get the clients in this call, or we have to bring it up on ACDT.
+
+159
+00:21:29.980 --> 00:21:32.319
+Felix (Geth): That this has to be standardized.
+
+160
+00:21:35.920 --> 00:21:45.920
+Tullio | Erigon: Okay, I agree, but then I would say, okay, let's do two separate PRs, and in the PR for the bug trace call, we can remove the trace config.
+
+161
+00:21:46.070 --> 00:21:49.969
+Tullio | Erigon: parameter, as Felix suggested, because it's valuable to
+
+162
+00:21:50.120 --> 00:21:58.260
+Tullio | Erigon: focus on the pole tracer. But then, let's specify
+
+163
+00:21:58.460 --> 00:22:03.419
+Tullio | Erigon: the… the output for the result in the case of the code tracer.
+
+164
+00:22:04.020 --> 00:22:05.819
+Tullio | Erigon: That's what I would suggest.
+
+165
+00:22:09.600 --> 00:22:11.650
+Chase Wright: Sorry, can you repeat that last part? I was…
+
+166
+00:22:11.950 --> 00:22:16.169
+Tullio | Erigon: Yeah, I would… I would add,
+
+167
+00:22:16.600 --> 00:22:21.840
+Tullio | Erigon: A full specification of the schema for the result in the case of the call tracer.
+
+168
+00:22:22.370 --> 00:22:24.220
+Tullio | Erigon: For the debug tree school.
+
+169
+00:22:24.910 --> 00:22:30.350
+Tullio | Erigon: Which is basically what's in the IEP, I suppose, but I need to.
+
+170
+00:22:30.700 --> 00:22:32.200
+Tullio | Erigon: I'll read it again.
+
+171
+00:22:38.580 --> 00:22:43.199
+Felix (Geth): Yeah, so basically what… what we're trying to say is that, like, we have to…
+
+172
+00:22:43.790 --> 00:22:49.929
+Felix (Geth): try and make a JSON RPC specification out of this EIP3155.
+
+173
+00:22:50.390 --> 00:22:51.550
+Felix (Geth): And then…
+
+174
+00:22:52.050 --> 00:23:02.689
+Felix (Geth): basically bring it up with the clients. So this part is basically gonna mean, nowadays it's called championing the EAP, so basically, we have to go on one of the calls, like, probably ACDT, and tell them that
+
+175
+00:23:03.360 --> 00:23:07.070
+Felix (Geth): they have to work on EIP3155.
+
+176
+00:23:07.280 --> 00:23:15.749
+Felix (Geth): And this goes for, like, all the clients then, so they all have to… so either they don't support… we don't even know how to handle the optional methods right now, but, like, if we…
+
+177
+00:23:16.740 --> 00:23:17.750
+Felix (Geth): Whatever.
+
+178
+00:23:18.100 --> 00:23:20.579
+Felix (Geth): We just have to make sure that
+
+179
+00:23:22.350 --> 00:23:28.800
+Felix (Geth): we all agree on the trace output format, and the EIP kind of tries to make that happen.
+
+180
+00:23:29.110 --> 00:23:36.889
+Felix (Geth): So there is an existing EIP that tries to fix… that tries to standardize the tracer output format, the call tracer output format, so we have to
+
+181
+00:23:37.120 --> 00:23:41.180
+Felix (Geth): the next step is to push this EIP onto the clients.
+
+182
+00:23:51.890 --> 00:23:55.349
+Mercy Boma Naps-Nkari: Okay, I just have a question, sorry.
+
+183
+00:23:55.550 --> 00:24:04.260
+Mercy Boma Naps-Nkari: Do we have, like, a champion for the EIP, or who is willing to, champion the EIP?
+
+184
+00:24:05.840 --> 00:24:08.960
+Mercy Boma Naps-Nkari: If we… if we intend to move forward with this, that's what I'm asking.
+
+185
+00:24:11.910 --> 00:24:14.719
+Felix (Geth): Yeah, well, so my suggestion was that, like, basically Chase
+
+186
+00:24:15.400 --> 00:24:19.670
+Felix (Geth): since you were bringing it up, what I was trying to say with this, like, bringing up the EAP, that
+
+187
+00:24:20.090 --> 00:24:28.499
+Felix (Geth): you… basically, if you want to make progress on standardizing call trades, you have to champion this EAP, and championing this EAP means raising it in the calls.
+
+188
+00:24:29.090 --> 00:24:31.979
+Felix (Geth): And, bugging the clients about it.
+
+189
+00:24:34.030 --> 00:24:39.960
+Chase Wright: I mean, I can try to do that, but, like, 90% of this stuff is over my head, so…
+
+190
+00:24:40.150 --> 00:24:54.199
+Felix (Geth): Well, it's just about… in the end, it's just about the output fields, so it is basically what you are doing now. It's not, like, any more complicated than that. Mostly, the nice part about this is the EIP is already published and written, so it's already kind of in.
+
+191
+00:24:54.600 --> 00:25:02.700
+Chase Wright: it's not like you have to write a new EIP, it's like, the EIP is there, and the EIP itself is not complicated, it just says, like, the trace has to contain, like.
+
+192
+00:25:02.700 --> 00:25:07.070
+Felix (Geth): PC, op, gas, gas, cost, and stuff like that, like, all these fields, and what they mean.
+
+193
+00:25:07.220 --> 00:25:12.139
+Felix (Geth): So we just have to basically tell everyone again that this is what we want.
+
+194
+00:25:17.590 --> 00:25:18.200
+Chase Wright: Sweet.
+
+195
+00:25:22.140 --> 00:25:29.090
+Mercy Boma Naps-Nkari: So, I can do debugging if, that's okay.
+
+196
+00:25:29.870 --> 00:25:32.540
+Felix (Geth): That's kind of a collective effort, yeah, I mean, you can always.
+
+197
+00:25:32.540 --> 00:25:33.150
+Mercy Boma Naps-Nkari: Is she also…
+
+198
+00:25:33.150 --> 00:25:49.500
+Felix (Geth): be a part of this. Like, this is… it is… it's like an… this is like a shared battle, I would say. Like, I mean, this EIP has been open for 5 years, nobody is really looking at it, because there's no champion of it right now. Martin, who is the author, he used to be a bit of the champion of this.
+
+199
+00:25:49.590 --> 00:26:02.220
+Felix (Geth): because he, wrote a command line tool that used the trace output, and he got annoyed with the clients not having the same output format, so that's why he created this. But it is…
+
+200
+00:26:02.480 --> 00:26:08.729
+Felix (Geth): This… it is, like, an ongoing concern, like, a lot of people, you know, would benefit from having a shared format.
+
+201
+00:26:09.490 --> 00:26:15.199
+Felix (Geth): It's just that it requires someone to take the lead on Actually, making that happen.
+
+202
+00:26:17.030 --> 00:26:26.229
+Tullio | Erigon: Oh, I have an honest question about that. Do we really think that the EIP is the
+
+203
+00:26:27.020 --> 00:26:30.439
+Tullio | Erigon: I mean, most effective mechanism for
+
+204
+00:26:30.750 --> 00:26:33.459
+Tullio | Erigon: Going on with the standardization.
+
+205
+00:26:34.080 --> 00:26:43.760
+Tullio | Erigon: I'm asking because… I've seen in the past that it can be… A bit difficult to…
+
+206
+00:26:43.910 --> 00:26:54.750
+Tullio | Erigon: to have… to reach agreement on… on the IP, and… and various scheduling within forks, and…
+
+207
+00:26:55.150 --> 00:27:03.469
+Tullio | Erigon: In the end of the day, I mean, we… the different client implementations, currently have…
+
+208
+00:27:03.650 --> 00:27:14.949
+Tullio | Erigon: slightly different, or maybe, not so slightly, different, implementations of the RPC layer, but…
+
+209
+00:27:15.060 --> 00:27:18.450
+Tullio | Erigon: It's not a, subject to consensus.
+
+210
+00:27:18.630 --> 00:27:28.170
+Tullio | Erigon: So, I'm… I'm a bit afraid that, if we… I mean, it's okay to…
+
+211
+00:27:28.270 --> 00:27:46.389
+Tullio | Erigon: to go on with this specific IP, but if we establish a precedent, and then we are going to use always the IP mechanism in order to push for standardization at the RPC layer, I'm afraid that it will become a bit…
+
+212
+00:27:46.670 --> 00:27:49.820
+Tullio | Erigon: slow, I used to say.
+
+213
+00:27:51.600 --> 00:28:03.800
+Felix (Geth): Yeah, it's a good question. Honestly, I don't know. I was just mostly pointing to this EIP because it is an existing attempt by someone else from 5 years ago to attack the exact same problem, and the problem has not changed.
+
+214
+00:28:03.900 --> 00:28:19.779
+Felix (Geth): if you want to get a call trace from different clients, they have differences, and it's annoying, and we want to change that. And, I mean, yeah, it would be good if this was eventually done, so the EIP is one way of doing it. It wasn't very successful, just publishing the EIP is not enough.
+
+215
+00:28:20.160 --> 00:28:29.689
+Felix (Geth): we know that, so there has to be more than that. So you can try to push it in another way, but ultimately, these are all means of achieving the same goal, which is the specif…
+
+216
+00:28:29.810 --> 00:28:31.600
+Felix (Geth): Standardizing the call traces.
+
+217
+00:28:32.000 --> 00:28:39.389
+Felix (Geth): the goal is always the same, it's just you have different methods available to you. You can publish an EAP, you can publish a blog post about it, you can…
+
+218
+00:28:39.640 --> 00:28:45.959
+Felix (Geth): Implemented yourself and all the clients, if you prefer, but ultimately, the outcome is gonna be the same.
+
+219
+00:28:52.380 --> 00:29:10.860
+Mercy Boma Naps-Nkari: Sorry, I… I just want a clarification. Is there a way to get, a sort of feedback from the previous authors to understand what really happened, and why, there was no, like, further, progress on this particular EIP, so that we'll know if there's some things we need to put,
+
+220
+00:29:11.200 --> 00:29:14.040
+Mercy Boma Naps-Nkari: Into consideration before moving forward with this?
+
+221
+00:29:14.390 --> 00:29:21.369
+Felix (Geth): So, Martin himself is not available anymore. I mean, I know him personally, and I know that he, I mean, he just basically has…
+
+222
+00:29:21.610 --> 00:29:26.289
+Felix (Geth): He quit his job, so, like, a while ago, like, a year ago, so he's not around.
+
+223
+00:29:26.410 --> 00:29:45.739
+Felix (Geth): If you want to get a written statement from him about this, it would somehow be possible, but I don't think it's gonna change much. Also, I know kind of what happened, so he created this, he brought it up eventually, but Martin was not a good EIP champion in the way that is required. He was… basically, he tried to make a good technical specification of it.
+
+224
+00:29:45.740 --> 00:29:54.779
+Felix (Geth): And he tried to make people understand the rationale of this EAP by explaining it to them, but ultimately, he wasn't able to
+
+225
+00:29:55.410 --> 00:29:57.780
+Felix (Geth): Get a lot of traction for…
+
+226
+00:29:58.480 --> 00:30:04.860
+Felix (Geth): for making this change, and it's maybe simply because he wasn't annoying enough, or…
+
+227
+00:30:05.460 --> 00:30:14.699
+Felix (Geth): I don't know, it wasn't urgent enough for anyone. And, I mean, it still doesn't seem to be particularly urgent for anyone to have a… maybe now it is a bit more, like, I'm pretty sure…
+
+228
+00:30:14.900 --> 00:30:20.050
+Felix (Geth): The client developers also have changed their attitudes a couple of times over the years, and…
+
+229
+00:30:20.610 --> 00:30:23.030
+Felix (Geth): We see it now that the…
+
+230
+00:30:23.880 --> 00:30:32.079
+Felix (Geth): it is much easier to get clients to agree on RPCE than it was maybe 5 years ago. So it is just worth trying again, I think.
+
+231
+00:30:34.770 --> 00:30:35.970
+Mercy Boma Naps-Nkari: Okay, thank you.
+
+232
+00:30:39.270 --> 00:30:48.609
+Mercy Boma Naps-Nkari: So I guess we can, like, try and debate this, I think, and moving forward to the next should be the fashioning.
+
+233
+00:30:49.050 --> 00:30:52.349
+Mercy Boma Naps-Nkari: Which, I don't think Curry is here.
+
+234
+00:30:52.690 --> 00:30:58.810
+Mercy Boma Naps-Nkari: But I just wanted to point out this PR, if it's okay to be meshed, although I don't know why the CI is failing.
+
+235
+00:31:00.190 --> 00:31:03.580
+Mercy Boma Naps-Nkari: This year is filling on so many PRs, I'm not sure why.
+
+236
+00:31:04.270 --> 00:31:05.450
+Felix (Geth): On the specs?
+
+237
+00:31:06.870 --> 00:31:08.559
+Mercy Boma Naps-Nkari: the, yeah, API.
+
+238
+00:31:09.090 --> 00:31:23.810
+Felix (Geth): Yes, so I can speak about this. First of all, I can speak about maybe the problem of why it's, failing, but let's… so, can we first, just quickly go over what is the next action item? Sorry, sorry, sorry, I'm trying…
+
+239
+00:31:24.590 --> 00:31:31.370
+Felix (Geth): Check the… The next thing in the agenda is the, versioning, and then also.
+
+240
+00:31:31.370 --> 00:31:36.460
+Mercy Boma Naps-Nkari: first take a look at this open PR for the Ducosaris, websites.
+
+241
+00:31:36.800 --> 00:31:37.130
+Felix (Geth): Oh, yeah.
+
+242
+00:31:37.130 --> 00:31:38.269
+Mercy Boma Naps-Nkari: I'll share the link.
+
+243
+00:31:38.520 --> 00:31:45.020
+Felix (Geth): Hmm… Okay, yeah, that's a pretty big item.
+
+244
+00:31:46.940 --> 00:31:55.689
+Mercy Boma Naps-Nkari: I… yes, I saw it, I asked, he said it's not everything that is going to be merged, so… but I don't understand…
+
+245
+00:31:56.280 --> 00:32:01.799
+Mercy Boma Naps-Nkari: Exactly, because I asked him why we had, like, over 34,000 lines of code.
+
+246
+00:32:02.930 --> 00:32:06.839
+Felix (Geth): Oh, you mean for the… for the website now? You're talking about this, like, DocuSaurus?
+
+247
+00:32:07.410 --> 00:32:08.150
+Mercy Boma Naps-Nkari: Yeah.
+
+248
+00:32:08.150 --> 00:32:19.870
+Felix (Geth): Yeah, so this, I mean, this does change a lot, because… basically… Changes the generator.
+
+249
+00:32:20.130 --> 00:32:27.450
+Felix (Geth): this PR is… Require someone to just… Try it out.
+
+250
+00:32:27.730 --> 00:32:38.559
+Felix (Geth): And then just go for… I mean, we basically just have to decide if we want this or not. I mean, I… I looked at… we can just look at it together now, honestly. Let me just, one second…
+
+251
+00:32:39.080 --> 00:32:42.370
+Felix (Geth): Let me just, do this.
+
+252
+00:32:42.680 --> 00:32:50.450
+Felix (Geth): Okay, so now we just have to… one sec… Sorry?
+
+253
+00:32:50.870 --> 00:33:02.630
+Felix (Geth): Goddamn, this is not super easy now, because I have this window shared, and then this has the tab. Okay, so now you guys should all be seeing this website.
+
+254
+00:33:03.920 --> 00:33:05.229
+Felix (Geth): Can you see it?
+
+255
+00:33:06.700 --> 00:33:07.170
+Mercy Boma Naps-Nkari: Yeah.
+
+256
+00:33:08.340 --> 00:33:10.840
+Felix (Geth): So this is the output of this PR.
+
+257
+00:33:11.710 --> 00:33:18.320
+Felix (Geth): And just to give a quick reference, so… if you…
+
+258
+00:33:19.340 --> 00:33:22.390
+Felix (Geth): Go to the current website, it looks like this.
+
+259
+00:33:23.500 --> 00:33:29.980
+Felix (Geth): So, the difference is that in the old website, you have a menu here.
+
+260
+00:33:30.740 --> 00:33:40.959
+Felix (Geth): that links to some Markdown documents, and then you have the main specification, which is here, and then this one is just expandable…
+
+261
+00:33:43.910 --> 00:33:51.210
+Felix (Geth): It's like this thing where you have to keep clicking to expand. Like, it's just always… so this is the method name, this is… these are the parameters.
+
+262
+00:33:51.310 --> 00:34:05.839
+Felix (Geth): And these are the results. I have to say, the typography in this page is pretty horrible, because the method name is kind of small, the description is the same size as the method name, and these headings, which are just… these headings are bigger than everything else, basically
+
+263
+00:34:06.070 --> 00:34:22.030
+Felix (Geth): When I look at this, I get kind of confused, but basically, this is the input to the method, and this is the output. And these are positional parameters, and this is the first parameter, so this method only has one, and it also has some error codes here in the table, as well as an example for each method.
+
+264
+00:34:22.580 --> 00:34:27.659
+Felix (Geth): For example, here in Estimate Gas, you can see it has two parameters, the transaction and the block.
+
+265
+00:34:27.810 --> 00:34:39.759
+Felix (Geth): And then the block here can be specified in one of two ways, the block number or the block tag. So anyway, that's what the specification looks like right now. So we can look at the same method in the new one.
+
+266
+00:34:40.610 --> 00:34:45.409
+Felix (Geth): ETH estimate gas, so it has them all on the side here, which I think is kind of an improvement.
+
+267
+00:34:45.830 --> 00:34:50.090
+Felix (Geth): In some ways, you can click, and then the page itself
+
+268
+00:34:50.690 --> 00:34:55.469
+Felix (Geth): Unfortunately, it's a bit messy, but… It has this…
+
+269
+00:34:55.860 --> 00:35:05.840
+Felix (Geth): Element here on the side is not great, that it takes up so much space, but basically this is supposed to be the area where you can try the method against the server.
+
+270
+00:35:06.180 --> 00:35:09.050
+Felix (Geth): At the moment, it's not available.
+
+271
+00:35:09.790 --> 00:35:15.960
+Felix (Geth): I don't really know what this is supposed to be, like, it's like with opening it in…
+
+272
+00:35:16.420 --> 00:35:21.170
+Felix (Geth): But yeah, whatever, you can open it in the AI, I guess. But then, so here are the parameters.
+
+273
+00:35:21.860 --> 00:35:26.859
+Felix (Geth): M… This is the first parameter, and this is the second parameter.
+
+274
+00:35:27.590 --> 00:35:33.890
+Felix (Geth): Do you guys think this is an improvement over… over this.
+
+275
+00:35:36.160 --> 00:35:42.370
+Felix (Geth): So just if you try to compare it, like, this is… Supposed to be… an improvement.
+
+276
+00:35:43.770 --> 00:35:49.330
+Mercy Boma Naps-Nkari: I see it as an improvement, but I think it needs further refinement. I don't know if what I'm saying makes sense.
+
+277
+00:35:49.770 --> 00:35:56.969
+Felix (Geth): It makes a lot of sense, yeah, so I think also similar, like, it is somehow better, because you can see the methods, and they are not, like.
+
+278
+00:35:57.090 --> 00:36:07.549
+Felix (Geth): to expand, because this page is all about expanding things, I would say. So now we have expanded this method, and we can expand the parameter, and then we have to… you just have to keep
+
+279
+00:36:07.930 --> 00:36:11.809
+Felix (Geth): keep clicking, which I personally find it a bit…
+
+280
+00:36:12.200 --> 00:36:20.740
+Felix (Geth): annoying, but it is how it is. So with this one, for example, we can check this is ETH get code. So if we, go here, for example.
+
+281
+00:36:20.860 --> 00:36:23.719
+Felix (Geth): It's a bit better, because
+
+282
+00:36:24.010 --> 00:36:34.390
+Felix (Geth): First of all, you don't have to expand the method, it has a page, so that's good. The parameters are listed here in this weird way, where it's, like, one, and then they have these separator lines.
+
+283
+00:36:34.630 --> 00:36:48.369
+Felix (Geth): Weirdly enough, there's a line here, but this line is actually a bit misleading, because this… these options refer to this parameter. So this is the parameter, and these are the options for the parameter, but it has a line here, which makes it…
+
+284
+00:36:48.620 --> 00:37:07.619
+Felix (Geth): kind of weird, because it's like, it's another parameter, but it's not. So this could be improved a bit, I would say. And then the result here, I… like, I like it that you don't have to click so much. That's mostly what I like. The content is exactly the same. It is better because it actually renders the markdown inside of this comment, though, so that's good. So you can see here that
+
+285
+00:37:07.620 --> 00:37:11.660
+Felix (Geth): This explains… Kind of a lot more…
+
+286
+00:37:12.130 --> 00:37:14.750
+Felix (Geth): about it. It's a bit weird that it explains
+
+287
+00:37:15.120 --> 00:37:18.000
+Felix (Geth): so much, but I think it is honestly better.
+
+288
+00:37:18.300 --> 00:37:25.590
+Felix (Geth): Whereas here, if you check, for example, here, the block tag, it has the description, which contains markdown, but the markdown is not rendered.
+
+289
+00:37:26.090 --> 00:37:29.909
+Felix (Geth): So, yeah. And then here also with the enum, it's kind of like…
+
+290
+00:37:30.870 --> 00:37:37.300
+Felix (Geth): I mean, yeah, it's good. If you know what this is, it… this is good, but if you don't know, then it… it has…
+
+291
+00:37:37.650 --> 00:37:39.240
+Felix (Geth): It's not very helpful.
+
+292
+00:37:39.240 --> 00:37:46.799
+Mercy Boma Naps-Nkari: Yeah, I understand what you're saying, but the reason for that is that in the other websites, I think they were using Gatsby.
+
+293
+00:37:47.170 --> 00:37:53.650
+Mercy Boma Naps-Nkari: So there was kind of, like, a build issue. They didn't have to, like, move back to the CSRS again.
+
+294
+00:37:54.310 --> 00:37:58.690
+Mercy Boma Naps-Nkari: Because we moved from Dugoseras to Gatsby, Gatsby to Dagasarus again.
+
+295
+00:37:59.800 --> 00:38:00.450
+Felix (Geth): Yeah.
+
+296
+00:38:00.860 --> 00:38:03.350
+Felix (Geth): Well, so…
+
+297
+00:38:08.340 --> 00:38:11.560
+Felix (Geth): So, I think it's an improvement.
+
+298
+00:38:11.820 --> 00:38:20.580
+Mercy Boma Naps-Nkari: Yeah, it's an improvement, but we need… we need some things to be refined. Like, the… sorry, can you go back to the other website?
+
+299
+00:38:21.340 --> 00:38:30.330
+Mercy Boma Naps-Nkari: Yes, which one? The new one, yes? Yeah, the new one. This, request, I don't know if it is working, because it's… it's meant to work, I guess so.
+
+300
+00:38:30.330 --> 00:38:34.820
+Felix (Geth): I mean, it doesn't work because it talks to local hosts. I don't have anything running on there.
+
+301
+00:38:34.820 --> 00:38:35.920
+Mercy Boma Naps-Nkari: Oh, oh, okay.
+
+302
+00:38:35.920 --> 00:38:40.989
+Felix (Geth): So if I go to this, like, I don't know what's it called, like, publicnote.com or something, then this will work.
+
+303
+00:38:42.220 --> 00:38:43.020
+Felix (Geth): Right?
+
+304
+00:38:43.250 --> 00:38:45.930
+Felix (Geth): I don't know what's the… if there's, like, a…
+
+305
+00:38:49.940 --> 00:38:56.700
+Mercy Boma Naps-Nkari: Okay, I don't have any objection on this. I don't know if anyone has an opinion on if we should merge this, or…
+
+306
+00:38:56.870 --> 00:38:57.829
+Felix (Geth): So if we go…
+
+307
+00:38:57.830 --> 00:38:58.560
+Mercy Boma Naps-Nkari: movement.
+
+308
+00:38:58.930 --> 00:39:05.130
+Felix (Geth): If we input this here… And then we send it, then you see that it works. Like, here.
+
+309
+00:39:06.530 --> 00:39:12.880
+Felix (Geth): So you can just… if… depending what you enter here, it does totally work. So this is… this is working.
+
+310
+00:39:13.760 --> 00:39:28.260
+Chase Wright: I think we all agree that this is an improvement, it's just, should we go back to the PR author and ask them to fix the parameters so that it's more obvious what's a parameter? Or should we just merge it and then…
+
+311
+00:39:28.670 --> 00:39:30.099
+Chase Wright: Fix it later.
+
+312
+00:39:30.100 --> 00:39:37.350
+Felix (Geth): I think we should, at this point, because the previous thing also isn't very, very good, like, this is honestly not very good.
+
+313
+00:39:37.880 --> 00:39:41.880
+Felix (Geth): It does have this thing going for it where this… we have this inspector here.
+
+314
+00:39:42.550 --> 00:39:47.260
+Felix (Geth): And then, so the whole idea with the inspector is that you can somehow…
+
+315
+00:39:47.860 --> 00:39:54.779
+Felix (Geth): I don't fully know how this works, but there is a way… I think, of somehow pre-filling
+
+316
+00:39:56.100 --> 00:40:07.040
+Felix (Geth): Yeah, here. So there's this Try It Now button under each method, and I kind of like this, because then it will… Okay, now, this is a bit annoying, because it…
+
+317
+00:40:07.950 --> 00:40:10.970
+Felix (Geth): kind of scrolls. This has some issues.
+
+318
+00:40:10.980 --> 00:40:14.440
+Chase Wright: But all of the methods on the other one have examples, too. Like.
+
+319
+00:40:14.440 --> 00:40:14.879
+Felix (Geth): Yeah, yeah, yeah
+
+320
+00:40:16.180 --> 00:40:35.299
+Felix (Geth): But what I'm trying to say is, like, it's a bit annoying that this thing is… takes up so much space. Like, I'm just opening this in, like, a normal font size, and basically half of the screen is just this thing, which, yeah, it's useful, but when you're looking at the specs, it might not be the first thing you want to do is send this request. You maybe just want to read about it.
+
+321
+00:40:35.380 --> 00:40:53.879
+Felix (Geth): So, would be good if this was, like, minimized or something, like… but these are detailed changes, we don't actually have to make this change right now. I'm happy to just merge it, it's the same, and then we can just make another PR that, like, minimizes this by default or so, so you don't always have to have this example open all the time.
+
+322
+00:40:54.030 --> 00:41:02.100
+Felix (Geth): And then also, maybe we can make yet another PR, like, we can basically make incremental improvements. I do think it's an improvement, so let's just merge it and then be done with it.
+
+323
+00:41:04.400 --> 00:41:06.269
+Felix (Geth): You… are you okay with that?
+
+324
+00:41:14.310 --> 00:41:25.629
+Felix (Geth): Everyone's giving thumbs up, so I think so. Okay, sorry, sorry, I didn't see. I didn't see. Okay, yeah, it's fine, it's fine. So let me just uncheck… oh, there's a lot of thumbs up.
+
+325
+00:41:25.760 --> 00:41:31.069
+Felix (Geth): Okay, sorry, wait, what, how… I think my… is my screen still shared? No, it's not.
+
+326
+00:41:31.230 --> 00:41:32.010
+Felix (Geth): Okay.
+
+327
+00:41:32.330 --> 00:41:39.780
+Felix (Geth): Okay, so I can, I will… I will merge this PR, so then we have it.
+
+328
+00:41:41.300 --> 00:41:50.600
+Felix (Geth): Okay. And then we can maybe talk a bit about, we can talk about,
+
+329
+00:41:52.100 --> 00:41:56.030
+Felix (Geth): why the CI is failing, maybe? Or do we have another topic on the agenda?
+
+330
+00:41:56.810 --> 00:42:00.450
+Mercy Boma Naps-Nkari: Yeah, we have, about the versioning.
+
+331
+00:42:02.060 --> 00:42:03.739
+Felix (Geth): Yeah, right. So with the versioning…
+
+332
+00:42:03.740 --> 00:42:04.520
+Mercy Boma Naps-Nkari: ready.
+
+333
+00:42:05.060 --> 00:42:18.989
+Felix (Geth): It's ready, yes, but the versioning there is just… it's more like there's just some documentation. So actually, Chase and I, we talked about this quite a bit, as well as with, another guy, an EF, patches.
+
+334
+00:42:19.100 --> 00:42:31.379
+Felix (Geth): who had also expressed some interest in working on this, so we had another idea about the versioning, so one of the things we should probably do is we should actually start creating releases of the API,
+
+335
+00:42:31.460 --> 00:42:43.259
+Felix (Geth): and then also release the tests alongside it, so basically create, like, a release workflow. Because at the moment, it's a bit like… there's no versioning, so the latest spec is the latest, and that's it.
+
+336
+00:42:43.340 --> 00:42:54.019
+Felix (Geth): And… but I do think that adding versioning to this is more than just adding the README file. Like, in this… in the existing PR about the versioning.
+
+337
+00:42:54.270 --> 00:42:58.800
+Felix (Geth): it just adds some text in README that says, yeah, there are versions.
+
+338
+00:42:59.060 --> 00:43:02.760
+Felix (Geth): But it doesn't really make the actual versions.
+
+339
+00:43:04.470 --> 00:43:10.489
+Felix (Geth): So, we have to… there's more work required to get the versioning scheme into action.
+
+340
+00:43:13.490 --> 00:43:17.390
+Mercy Boma Naps-Nkari: Okay, so I wasn't aware of any further discussion. I was thinking this…
+
+341
+00:43:19.330 --> 00:43:19.729
+Felix (Geth): I mean, yeah.
+
+342
+00:43:19.730 --> 00:43:20.980
+Mercy Boma Naps-Nkari: to end this point.
+
+343
+00:43:22.560 --> 00:43:26.880
+Felix (Geth): Bro, I mean, this is… This is 100%,
+
+344
+00:43:27.200 --> 00:43:38.919
+Felix (Geth): good, I would say. Like, we can also just merge this in, but then there has to be more work, because we have to actually create a 1.0 release, and Carrie is now on parental leave, so she's not gonna do that.
+
+345
+00:43:39.980 --> 00:43:42.860
+Felix (Geth): And then also we have to…
+
+346
+00:43:44.970 --> 00:43:59.290
+Felix (Geth): Yeah, well, I mean, we have to kind of establish this release workflow by actually creating the releases and making sure that the latest tests are attached to the release as an artifact and things like that. So these things have to basically
+
+347
+00:44:00.690 --> 00:44:05.939
+Felix (Geth): actually happen, like, we can merge the PR, but that's not the end, right? That's just, what we want.
+
+348
+00:44:06.140 --> 00:44:08.279
+Felix (Geth): It's just a description of what we want.
+
+349
+00:44:11.240 --> 00:44:18.940
+Felix (Geth): I do agree with what's in the README, so we can just merge this, but it has no meaning if we don't actually follow up, that's what I'm trying to say.
+
+350
+00:44:19.870 --> 00:44:30.869
+Mercy Boma Naps-Nkari: Yeah, we can merge it, and then we'll do a follow-up. I don't know how we plan on doing the follow-up, but the releases has to be done by someone that has a merging right to the repo.
+
+351
+00:44:31.300 --> 00:44:44.149
+Felix (Geth): Yes, so we can… with the merging rights, we have to also kind of figure it out in the long term, because Carrie was one of the people with the merge access, but she is not there right now. I mean, Carrie will come back in…
+
+352
+00:44:44.690 --> 00:44:54.810
+Felix (Geth): a few months when her baby is a bit older, but for now, she cannot come. So, that's why, yeah, we have to figure out how to actually…
+
+353
+00:44:55.250 --> 00:45:00.240
+Felix (Geth): who's gonna be in charge of that. For now, I can just,
+
+354
+00:45:00.410 --> 00:45:10.290
+Felix (Geth): merge this PR in. It does require some updates, because there were some updates to the README in the meantime, but I will quickly…
+
+355
+00:45:10.790 --> 00:45:12.090
+Felix (Geth): make these…
+
+356
+00:45:12.320 --> 00:45:21.909
+Felix (Geth): updates after the call, and then merge this. But it… yeah, it's not the… the merging is not the end. You have to figure out the… the real… the real strategy.
+
+357
+00:45:24.790 --> 00:45:32.430
+Mercy Boma Naps-Nkari: Okay, I guess I'll have to, like, add, a further up discussion on this in our next call, next two weeks.
+
+358
+00:45:35.480 --> 00:45:49.539
+Chase Wright: Yeah, that's fine. I can talk to Patches internally, too, and I can hook… I can link you up with Patches, in Discord, because I think Patches wants to do the work around, merging the…
+
+359
+00:45:49.950 --> 00:45:53.310
+Chase Wright: The test generator into the specs.
+
+360
+00:45:53.310 --> 00:46:08.619
+Felix (Geth): Yeah, yeah, we should actually mention this. This might be a good time to mention this. So, we have decided internally that the next step forward actually will be to move the RPC testgen into this repository as well, into the execution APIs repository. And the reason for that is mostly that
+
+361
+00:46:09.240 --> 00:46:10.180
+Felix (Geth): we…
+
+362
+00:46:10.470 --> 00:46:18.809
+Felix (Geth): When we make changes to the test, it's not obvious that they have to be made in the generator, and also the generator and the test output is kind of…
+
+363
+00:46:19.030 --> 00:46:28.549
+Felix (Geth): similar, and in the long run, we don't actually need to keep the generated tests as part of the repository, they are just in the repository right now, because
+
+364
+00:46:29.400 --> 00:46:35.680
+Felix (Geth): It's easier, but, in the long run, we can also just keep the generator there, and then the
+
+365
+00:46:35.680 --> 00:46:49.499
+Felix (Geth): generate the test for each release of the specification, and then attach them as an artifact, or things like that. We have to figure out the precise details, but that's kind of what I meant. It's like, yes, we want the versioning, but there is more to this, and Patches agreed to work on this, so he will…
+
+366
+00:46:50.040 --> 00:46:54.649
+Felix (Geth): Perform these changes, and also figure out the build process a bit better, and things like that.
+
+367
+00:46:54.800 --> 00:47:00.270
+Felix (Geth): So it's just… there's gonna be some ongoing work in the repository regard… related with this…
+
+368
+00:47:04.210 --> 00:47:05.980
+Mercy Boma Naps-Nkari: Okay, that sounds good.
+
+369
+00:47:06.140 --> 00:47:14.530
+Mercy Boma Naps-Nkari: Moving on to the agenda post, like, we are running out of time. We have some open issues on call to standardize, debug my thoughts, and then…
+
+370
+00:47:14.910 --> 00:47:22.939
+Mercy Boma Naps-Nkari: add block timestamp to each cat's transaction by hash, and then to fully implement EIP1898.
+
+371
+00:47:23.870 --> 00:47:25.880
+Mercy Boma Naps-Nkari: Let me share the links…
+
+372
+00:47:37.300 --> 00:47:39.079
+Mercy Boma Naps-Nkari: So, I don't know if you have any…
+
+373
+00:47:39.440 --> 00:47:44.949
+Mercy Boma Naps-Nkari: Further discussion on this. Although, I'm not seeing a champion for EIP1898.
+
+374
+00:47:50.330 --> 00:47:52.690
+Felix (Geth): What?
+
+375
+00:47:56.770 --> 00:48:04.929
+Felix (Geth): Oh yeah, okay, so this is about adding the block timestamp. Yes, so, regarding the issue number 729,
+
+376
+00:48:05.710 --> 00:48:12.489
+Felix (Geth): The way this happened is that we had a user request this feature in Geth.
+
+377
+00:48:12.520 --> 00:48:28.280
+Felix (Geth): And as usual, when people request features in RPC, we directed him to this repository, so now he is here in Execution APIs, and then I added the triage tag so that we would look at this. The thing is that…
+
+378
+00:48:29.320 --> 00:48:30.470
+Felix (Geth): we…
+
+379
+00:48:31.670 --> 00:48:37.609
+Felix (Geth): I don't know, like, this is just something we have to decide on. We made the same change for ETH get logs.
+
+380
+00:48:38.520 --> 00:48:46.180
+Felix (Geth): So EthgetLogs now returns the block timestamp in each log, and we did that because people requested it.
+
+381
+00:48:47.070 --> 00:48:54.450
+Felix (Geth): it's hard to say if this is useful or not, I just wanted to bring it up here in case anyone has an opinion about it.
+
+382
+00:48:56.310 --> 00:48:57.949
+Felix (Geth): It's a new feature.
+
+383
+00:48:58.360 --> 00:49:01.209
+Felix (Geth): In the API, so we have to judge it somehow.
+
+384
+00:49:05.600 --> 00:49:10.339
+Felix (Geth): Just to make it short, you guys know, I'm talking about issue number 729.
+
+385
+00:49:12.110 --> 00:49:13.729
+Felix (Geth): Which is called…
+
+386
+00:49:14.760 --> 00:49:24.500
+Felix (Geth): add block timestamp to ETH get transaction by hash. So inside of the output of each transaction, they want to know what was the block timestamp containing this transaction.
+
+387
+00:49:27.130 --> 00:49:28.790
+Felix (Geth): Why they want that?
+
+388
+00:49:29.180 --> 00:49:30.289
+Felix (Geth): Hard to say.
+
+389
+00:49:31.580 --> 00:49:36.000
+Felix (Geth): They're saying here that it decreases latency in the access.
+
+390
+00:49:36.260 --> 00:49:38.219
+Felix (Geth): In certain use cases.
+
+391
+00:49:39.540 --> 00:49:46.939
+Chase Wright: Yeah, I think they're just… they're complaining that, basically, they need to make two calls, right? If they want to know.
+
+392
+00:49:47.150 --> 00:49:49.019
+Chase Wright: The timestamp of the block.
+
+393
+00:49:49.030 --> 00:49:50.130
+Tullio | Erigon: Yeah, yeah, exactly.
+
+394
+00:49:50.130 --> 00:49:52.710
+Chase Wright: Then they have to make another call, so it's…
+
+395
+00:49:53.170 --> 00:50:00.569
+Chase Wright: it's in increased latency, and, you know, from an RPC perspective, it's another call, API credit, whatever they…
+
+396
+00:50:01.520 --> 00:50:02.860
+Chase Wright: complaining about.
+
+397
+00:50:03.370 --> 00:50:03.920
+Felix (Geth): Yo.
+
+398
+00:50:08.210 --> 00:50:12.199
+Chase Wright: I'm not opposed to it, I think it's fine.
+
+399
+00:50:12.200 --> 00:50:14.390
+Tullio | Erigon: Yeah, I think it's fine as well, I'm not opposed.
+
+400
+00:50:15.580 --> 00:50:21.119
+Felix (Geth): Okay, in that case, please add your input to this issue. If you can, just say that
+
+401
+00:50:21.280 --> 00:50:40.809
+Felix (Geth): make a statement there that, you support it, and for Tulio, you can also add that you are the Aragon developer, it will definitely help with this. I do think we need to get more input from other clients, so we have to either wait until they come on this call, or somehow solicit it from them in another way.
+
+402
+00:50:40.880 --> 00:50:49.850
+Felix (Geth): But basically, it… currently, I would say this issue is in the input-gathering stage. And I will also add my comment here, saying that
+
+403
+00:50:51.640 --> 00:50:53.769
+Felix (Geth): That there are no objections.
+
+404
+00:50:56.690 --> 00:51:03.149
+Felix (Geth): to adding it from Geth. So that's… I think this is about as much as we can do for this right now.
+
+405
+00:51:03.880 --> 00:51:05.700
+Mercy Boma Naps-Nkari: So, I'm not…
+
+406
+00:51:06.060 --> 00:51:14.800
+Mercy Boma Naps-Nkari: I don't have the technical details of the issue, but, like, does it have, like, an adverse technical effect? Because that's another thing…
+
+407
+00:51:15.100 --> 00:51:23.529
+Mercy Boma Naps-Nkari: we need to keep in mind. So I'm not sure if it has any ambiguity to it that will make, other client teams not so want to implement it.
+
+408
+00:51:23.920 --> 00:51:29.990
+Felix (Geth): I don't think so, because in practice, it's like, they… I mean, depends how they have implemented get transaction by hatch, it's actually a good point.
+
+409
+00:51:30.310 --> 00:51:43.489
+Felix (Geth): In GoEthereum, it's quite easy to add it, because in order to service the ETH get transaction by hash, we load anyway the block header. So it's like, we have the block header available while we are serving this.
+
+410
+00:51:43.490 --> 00:52:00.109
+Felix (Geth): And so this means we will always be able to return the timestamp of the block quite easily. However, there are other clients that may implement this thing very differently, and they might not actually have access to the block timestamp. They would have an extra database load internally to serve this
+
+411
+00:52:00.400 --> 00:52:10.219
+Felix (Geth): information. And yeah, that is something that they would have to then bring up as an argument, where they're saying, yeah, this will slow down ETH get transaction by hash.
+
+412
+00:52:10.610 --> 00:52:15.370
+Felix (Geth): In Geth, it's like, we have to load this anyway, so for us, it's free.
+
+413
+00:52:17.510 --> 00:52:25.089
+Tullio | Erigon: Or as it is not, but… Yeah, that's… I mean,
+
+414
+00:52:25.970 --> 00:52:35.040
+Tullio | Erigon: I see some value from the user point of view, so I think that that should be taken into consideration.
+
+415
+00:52:40.850 --> 00:52:47.129
+Mercy Boma Naps-Nkari: So, okay, I think I'll have to, like, drop a link for this to ACDE, if that is okay.
+
+416
+00:52:54.510 --> 00:52:55.140
+Chase Wright: Yeah.
+
+417
+00:52:55.140 --> 00:52:55.840
+Mercy Boma Naps-Nkari: Hello?
+
+418
+00:52:57.970 --> 00:53:02.430
+Chase Wright: Yeah, we can ask in the next, testing for? Excuse me.
+
+419
+00:53:02.430 --> 00:53:03.120
+Felix (Geth): Okay.
+
+420
+00:53:03.270 --> 00:53:05.969
+Felix (Geth): Yeah, well, let's do this. Sounds great.
+
+421
+00:53:06.090 --> 00:53:14.500
+Felix (Geth): then we can make some progress. The other… we… I… we can quickly discuss the other issues. So there is, issue number 713.
+
+422
+00:53:14.770 --> 00:53:20.699
+Felix (Geth): 713 is about the EIP 1898.
+
+423
+00:53:21.510 --> 00:53:22.819
+Felix (Geth): And,
+
+424
+00:53:23.380 --> 00:53:34.880
+Felix (Geth): EIP… this… we discovered this recently, so I discovered this issue in December 5th, and that's when I opened it, in the… in the specs. So, it just turns out that…
+
+425
+00:53:36.650 --> 00:53:47.290
+Felix (Geth): we… this… EIP is final, and it says that for certain methods, you can… supply…
+
+426
+00:53:47.560 --> 00:53:53.529
+Felix (Geth): Basically, for most methods where you can right now supply the block number, you can also give
+
+427
+00:53:53.700 --> 00:54:00.529
+Felix (Geth): an object containing the field block hash, and another field called require canonical.
+
+428
+00:54:00.850 --> 00:54:10.409
+Felix (Geth): I wasn't even aware of this feature, but then we found out that Geth does support this, because it was originally implemented in Geth.
+
+429
+00:54:10.700 --> 00:54:19.909
+Felix (Geth): Around the time when this was added, and this was in 2019. So this… at this point, it is more than 6 years ago.
+
+430
+00:54:22.480 --> 00:54:29.749
+Felix (Geth): So, yeah, I don't know, how to move forward. I guess I could just create some tests, but I was just…
+
+431
+00:54:29.930 --> 00:54:46.909
+Felix (Geth): wondering if this is supported at all in clients, or if everyone is aware of this EIP, because honestly, it was kind of a bit… like, I was surprised myself to see this, so I'm pretty sure not a lot of people are aware this feature even exists right now. And it's not in the spec.
+
+432
+00:54:48.160 --> 00:54:56.260
+Felix (Geth): So what's the action here? Like, should we just add it to the spec? Because this EIP is final, so, like, from a process point of view, we have to have this.
+
+433
+00:54:56.970 --> 00:55:07.449
+Felix (Geth): Yeah. On the other hand, it seems kind of like following the EIPs religiously was never really our thing in RPC, so… it's hard to say…
+
+434
+00:55:07.990 --> 00:55:12.480
+Felix (Geth): I'm pretty sure if we add a test for this, then some clients are gonna fail that test.
+
+435
+00:55:15.390 --> 00:55:33.630
+Tullio | Erigon: Yeah, probably, but on the other hand, I think we have this lock number or hash or tag in some endpoints, or already. I cannot recall them off top of my head, but for sure, some endpoints already do support this
+
+436
+00:55:34.480 --> 00:55:40.019
+Tullio | Erigon: block number, or hash, or tag. Probably if get logs, or…
+
+437
+00:55:41.570 --> 00:55:57.769
+Felix (Geth): That's kind of a good point. So the thing is that they also… they… this EIP also specifies an error code, which is pretty interesting. So it has this… it has a recommended error code minus 32,001, which is supposed to be raised if
+
+438
+00:56:00.330 --> 00:56:08.850
+Felix (Geth): It's supposed to be raised if you specify require canonical, but the block which is given is non-canonical.
+
+439
+00:56:09.330 --> 00:56:10.480
+Felix (Geth): And…
+
+440
+00:56:11.010 --> 00:56:24.470
+Felix (Geth): I mean, this is… this is, like, too clever by half, I would say. Like, yes, it's a good feature, but I am doubtful any app uses this, because it's just too clever right now. I mean, I'm not aware anyone's using this, honestly.
+
+441
+00:56:24.810 --> 00:56:30.790
+Felix (Geth): And they want it everywhere you can give the block number, so, like, ETH getBalance, ETH…
+
+442
+00:56:31.330 --> 00:56:41.389
+Felix (Geth): getStorage at, and things like that. And the intention behind this is that when you are querying for historical storage or balances.
+
+443
+00:56:42.210 --> 00:56:58.320
+Felix (Geth): you can… the idea is that you would first resolve the block number that you want to a hash, and then you can make all your further queries with this hash, but you can be sure that the block is still canonical while you're making the request. So…
+
+444
+00:56:59.690 --> 00:57:05.810
+Felix (Geth): I… honestly, I'm just not sure if this… I mean, okay, yeah, having the ability to specify a block hash is good.
+
+445
+00:57:05.990 --> 00:57:09.260
+Felix (Geth): But this require canonical thing, honestly.
+
+446
+00:57:10.210 --> 00:57:14.779
+Felix (Geth): I'm not sure if this is really… we can… I mean, I can add the test and check, but just want
+
+447
+00:57:15.110 --> 00:57:15.929
+Felix (Geth): your heads updated.
+
+448
+00:57:15.930 --> 00:57:28.550
+Chase Wright: So I can give you some insight as to why that this is a good feature, and that is when you… so, historically, when, like, at QuickNode, when we ran…
+
+449
+00:57:28.930 --> 00:57:37.029
+Chase Wright: you know, super fast chains like Matic, where they would have large and regular reoccurring reorgs.
+
+450
+00:57:37.160 --> 00:57:46.499
+Chase Wright: clients like Aragon, would be able to return the forked blocks very easily. So, you know.
+
+451
+00:57:46.500 --> 00:57:54.670
+Chase Wright: A lot of, like, people would be asking for blocks by hash all the time, and then there'd be a reorg that would occur.
+
+452
+00:57:54.670 --> 00:58:06.940
+Chase Wright: And if the clients didn't catch it, then we would be returning those… we would be returning those blocks from… from Aragon or whatever, and the client wouldn't know, like, oh, hey, this is a fork. So…
+
+453
+00:58:06.990 --> 00:58:10.410
+Chase Wright: By having required canonical true.
+
+454
+00:58:10.860 --> 00:58:25.320
+Chase Wright: if it was working, and Aragon, you know, understood that, then even though that block had been forked out and been reorged, Aragon would then just not return it. So I think it is a good feature, it has use cases,
+
+455
+00:58:25.320 --> 00:58:31.000
+Felix (Geth): It definitely has use cases, I fully agree. This… it's… I mean, I think it's an amazing feature, it's just…
+
+456
+00:58:31.220 --> 00:58:43.249
+Felix (Geth): is this supported by client libraries? I have no idea. Is it supported by the clients themselves? I have no idea. This is just a good idea that basically just ended up… someone implemented it, I guess has it, but…
+
+457
+00:58:44.070 --> 00:58:44.940
+Felix (Geth): I…
+
+458
+00:58:45.450 --> 00:58:52.109
+Felix (Geth): I wasn't aware Geth has this, and I'm supposed to know, so it's kind of… it's a very deep…
+
+459
+00:58:52.390 --> 00:59:04.779
+Felix (Geth): I just wanted to bring this up here in this call, because I think it's perfect for this call, but I don't think we're gonna make a decision. So I can… I think we can all agree, would be nice to have some tests for this, and that's really all I wanted to say here, is that…
+
+460
+00:59:05.510 --> 00:59:06.559
+Felix (Geth): Yeah, but…
+
+461
+00:59:06.560 --> 00:59:06.880
+Tullio | Erigon: Yeah.
+
+462
+00:59:06.880 --> 00:59:13.820
+Chase Wright: To your point, there's the… like, we don't… the generator, it doesn't even support, like, uncles and stuff, does it?
+
+463
+00:59:15.590 --> 00:59:22.200
+Felix (Geth): I mean, that's something we can add, so that's the thing, we can add it in a way where, like, we can have…
+
+464
+00:59:22.930 --> 00:59:32.960
+Felix (Geth): This is something we have to figure out independently in our testing setup, how to add side chains in a deterministic way, so we can make this query happen.
+
+465
+00:59:32.960 --> 00:59:46.970
+Felix (Geth): But either way, what I mostly meant is, like, even passing this information to the client is half the battle, right? If we would just pass them this parameter and see if they can even parse it on all the methods where it is supposed to apply.
+
+466
+00:59:47.440 --> 00:59:52.530
+Felix (Geth): I think that would be the first step, because I'm pretty sure they might not be able to handle it right now.
+
+467
+00:59:56.310 --> 01:00:04.910
+Felix (Geth): So that's the thing, it's like, first step would be just add some tests where this parameter is present, like, doesn't really matter if it's required, canonical, true, or false.
+
+468
+01:00:05.110 --> 01:00:09.820
+Felix (Geth): The… the clients might… not… accept this input.
+
+469
+01:00:10.050 --> 01:00:16.079
+Felix (Geth): And then, somehow, we also have to figure out how to make the client have a sidechain.
+
+470
+01:00:16.850 --> 01:00:27.060
+Felix (Geth): and store that sideshade. But that is not trivial… like, that's a different kind of thing, like, we have to change the Hive Runner for this, and…
+
+471
+01:00:28.330 --> 01:00:30.939
+Felix (Geth): Yeah, well, we have to figure that out, but it's…
+
+472
+01:00:31.380 --> 01:00:34.049
+Felix (Geth): like, I see this more, like, as the next step.
+
+473
+01:00:36.380 --> 01:00:38.890
+Chase Wright: Sounds like a backlog item.
+
+474
+01:00:39.660 --> 01:00:46.750
+Felix (Geth): Yeah, that's more like a backlog item, yes, that's correct. It's just more that, like, ultimately we have to… I was more thinking we should add some tests.
+
+475
+01:00:46.990 --> 01:00:47.910
+Felix (Geth): that…
+
+476
+01:00:48.310 --> 01:00:56.690
+Felix (Geth): We'll call it with this input, and then see if they even parse it, or if they will fail and say that it's an invalid parameter or something.
+
+477
+01:00:58.210 --> 01:01:10.480
+Chase Wright: Yeah, I mean, we… it wouldn't really… I mean, it would tell us if they are strictly enforcing the keys in the object, but it wouldn't tell us if they are parsing it or not.
+
+478
+01:01:11.900 --> 01:01:19.540
+Chase Wright: Because they're either gonna return an error saying, like, I don't know what that key is, or they're gonna ignore it, and if they ignore it, we wouldn't know anyway.
+
+479
+01:01:19.940 --> 01:01:35.460
+Felix (Geth): Yeah, that's true, that's true. We wouldn't catch that, but I'm pretty sure since this… one of the things about it is that, in order to even pass this, you have to pass a JSON object in place where you usually pass a string. So I'm pretty sure that if they support a JSON object in that place.
+
+480
+01:01:36.240 --> 01:01:42.229
+Felix (Geth): They have to have some handling for this, because the only reason why you would pass an object is because of this field.
+
+481
+01:01:42.780 --> 01:01:50.339
+Felix (Geth): it's… yeah, I mean, we have to re… it just… it requires some research. I just wanted to bring it up for us to have a, you know.
+
+482
+01:01:50.550 --> 01:01:52.629
+Felix (Geth): We wouldn't necessarily have talked about it.
+
+483
+01:01:58.320 --> 01:02:09.550
+Felix (Geth): Okay, and then… do we have another item here? 651, standardized debug methods. So, I think…
+
+484
+01:02:13.340 --> 01:02:20.240
+Felix (Geth): Yeah, this is just a survey of the different error behaviors of, the debug methods.
+
+485
+01:02:20.610 --> 01:02:24.800
+Felix (Geth): I think we just have to check if the tests cover this.
+
+486
+01:02:25.110 --> 01:02:26.630
+Felix (Geth): And,
+
+487
+01:02:27.510 --> 01:02:40.620
+Felix (Geth): If the… if the RPC Compact tests do cover this, then we're fine, and this issue can be closed. It's just more about… they are basically… they basically surveyed how the clients behave in the case of certain inputs.
+
+488
+01:02:44.060 --> 01:02:45.999
+Felix (Geth): In Issue 651.
+
+489
+01:02:50.240 --> 01:02:54.770
+Mercy Boma Naps-Nkari: Okay, I think I'll check that out and then get back to you.
+
+490
+01:02:55.810 --> 01:02:56.440
+Felix (Geth): Okay.
+
+491
+01:02:56.860 --> 01:03:02.860
+Felix (Geth): Okay, maybe… I know we are out of time, but I quickly wanted to add…
+
+492
+01:03:03.990 --> 01:03:08.990
+Felix (Geth): There is also, pull request 707.
+
+493
+01:03:09.530 --> 01:03:11.840
+Felix (Geth): I will drop the link.
+
+494
+01:03:13.250 --> 01:03:24.250
+Felix (Geth): which I wanted to just ask if we can merge. So, the, I have already created the tests for this pull request and updated it.
+
+495
+01:03:24.360 --> 01:03:29.240
+Felix (Geth): The pull request 707 adds… the method NETVERSION
+
+496
+01:03:29.660 --> 01:03:36.810
+Felix (Geth): into the specification, and this is a very widely supported method, so I think it should be fine to add it.
+
+497
+01:03:38.960 --> 01:03:39.769
+Chase Wright: I agree.
+
+498
+01:03:40.250 --> 01:03:40.960
+Mercy Boma Naps-Nkari: So… Okay.
+
+499
+01:03:40.960 --> 01:03:44.369
+Felix (Geth): So… This is… this is something that is always
+
+500
+01:03:44.710 --> 01:03:46.470
+Felix (Geth): Yeah, and people are using it, yeah.
+
+501
+01:03:46.770 --> 01:03:47.160
+Tullio | Erigon: January.
+
+502
+01:03:47.160 --> 01:03:47.770
+Felix (Geth): book.
+
+503
+01:03:49.220 --> 01:03:50.060
+Felix (Geth): Cool.
+
+504
+01:03:50.430 --> 01:03:56.280
+Felix (Geth): So, I will just… the tests are already created, so this is very easy, so I will just merge it.
+
+505
+01:03:56.490 --> 01:03:58.969
+Felix (Geth): Thank you, guys, this was interesting.
+
+506
+01:04:00.910 --> 01:04:05.970
+Mercy Boma Naps-Nkari: Okay, thank you, everyone. I guess our next call will be on…
+
+507
+01:04:06.410 --> 01:04:09.880
+Mercy Boma Naps-Nkari: Next two weeks from now, and we can, like,
+
+508
+01:04:10.830 --> 01:04:17.100
+Mercy Boma Naps-Nkari: Go back to the, versioning issue and also the debug.
+
+509
+01:04:17.630 --> 01:04:20.940
+Mercy Boma Naps-Nkari: Plus, I also have some tests I wanted to,
+
+510
+01:04:21.060 --> 01:04:25.990
+Mercy Boma Naps-Nkari: point out, but that will be next two weeks. I will do it on the Discord.
+
+511
+01:04:26.100 --> 01:04:28.430
+Mercy Boma Naps-Nkari: See you guys next week, thanks for joining.
+
+512
+01:04:28.430 --> 01:04:35.979
+Chase Wright: I have… I have RPC standards on my calendar for the 19th, which is next Monday. Do we need to get the calendar fixed?
+
+513
+01:04:37.750 --> 01:04:46.039
+Mercy Boma Naps-Nkari: it's always… like, this is the first call of the month… of the year we are having, so I think there's a misop. We're supposed to have it,
+
+514
+01:04:46.790 --> 01:04:54.389
+Mercy Boma Naps-Nkari: This call was supposed to happen last Monday, but since it was too early, it was this Monday, so I think that's where the mess-up started.
+
+515
+01:04:55.130 --> 01:05:01.130
+Chase Wright: Alright, I'll bug Nixo or something, because my calendar says it's next week.
+
+516
+01:05:01.130 --> 01:05:02.589
+Mercy Boma Naps-Nkari: Yeah, we have to… Okay.
+
+517
+01:05:02.720 --> 01:05:03.330
+Chase Wright: Alright.
+
+518
+01:05:03.330 --> 01:05:04.729
+Mercy Boma Naps-Nkari: Oh, sorry about that.
+
+519
+01:05:05.780 --> 01:05:08.069
+Mercy Boma Naps-Nkari: Alright, thank you for joining. Thank you very much.
+
+520
+01:05:08.070 --> 01:05:10.319
+Tullio | Erigon: Okay. Thank you all. Goodbye.
+

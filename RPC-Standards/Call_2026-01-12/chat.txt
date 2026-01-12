@@ -1,0 +1,12 @@
+00:02:11	Mercy Boma Naps-Nkari:	https://github.com/ethereum/pm/issues/1871
+00:08:32	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pull/728
+00:16:30	Felix (Geth):	https://eips.ethereum.org/EIPS/eip-3155
+00:30:57	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pull/725
+00:31:45	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pull/725
+00:47:28	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/issues/651
+00:47:38	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/issues/729
+00:47:48	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/issues/713
+00:49:24	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/issues/729
+01:03:16	Felix (Geth):	https://github.com/ethereum/execution-apis/pull/707
+01:03:31	Chase Wright:	Reacted to "https://github.com/e..." with 👍
+01:03:40	Simsonraj Easvarasakthi:	sorry have to drop, ty all
