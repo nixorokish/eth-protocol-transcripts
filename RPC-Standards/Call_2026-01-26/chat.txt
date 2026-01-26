@@ -1,0 +1,12 @@
+00:01:51	Mercy Boma Naps-Nkari:	https://github.com/ethereum/pm/issues/1881
+00:04:31	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pull/738
+00:09:53	Mercy Boma Naps-Nkari:	https://ethereum.github.io/execution-apis/api/methods/engine_forkchoiceUpdatedV3
+00:14:10	Chase Wright:	https://github.com/ethereum/execution-apis/pull/733
+00:14:46	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/issues/729
+00:17:18	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/issues/737
+00:18:08	FLCL:	null or omitted for pending transactionsShould be stricter imho. Let's omit?
+00:22:41	Simsonraj Easvarasakthi:	https://github.com/ethereum/execution-apis/pull/650
+00:26:41	Mercy Boma Naps-Nkari:	https://github.com/ethereum/execution-apis/pull/704
+00:28:27	Zane Starr:	line breaks should be an easy fix , the interactive widget might take a bit more thought to do the hiding
+00:32:25	Mercy Boma Naps-Nkari:	Reacted to "line breaks should b..." with ❤️
+00:35:59	Chase Wright:	Reacted to "line breaks should b..." with ❤️

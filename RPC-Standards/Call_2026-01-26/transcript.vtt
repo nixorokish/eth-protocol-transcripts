@@ -1,0 +1,1338 @@
+WEBVTT
+
+1
+00:00:51.930 --> 00:00:52.640
+Mercy Boma Naps-Nkari: Hello?
+
+2
+00:00:58.320 --> 00:00:59.040
+Chase Wright: Hello.
+
+3
+00:01:15.660 --> 00:01:18.669
+Chase Wright: I think the, testing call is going long.
+
+4
+00:01:24.480 --> 00:01:29.060
+Mercy Boma Naps-Nkari: Okay, we can just start, and then if anyone joins within…
+
+5
+00:01:30.280 --> 00:01:33.800
+Mercy Boma Naps-Nkari: Later, then that would be it. Good afternoon, everybody.
+
+6
+00:01:35.280 --> 00:01:38.050
+Mercy Boma Naps-Nkari: Sorry, am I audible? I'm gonna shove on my mic.
+
+7
+00:01:39.340 --> 00:01:39.910
+Mercy Boma Naps-Nkari: Okay.
+
+8
+00:01:39.910 --> 00:01:40.370
+Chase Wright: Yo.
+
+9
+00:01:40.370 --> 00:01:48.059
+Mercy Boma Naps-Nkari: Thank you Okay, welcome to RPC Standard Call 19, today being 26th January 2026.
+
+10
+00:01:48.170 --> 00:01:52.259
+Mercy Boma Naps-Nkari: We don't have a lot of things. Let me share the agenda.
+
+11
+00:01:52.570 --> 00:01:57.049
+Mercy Boma Naps-Nkari: what's today's call, but… I don't know if…
+
+12
+00:01:58.120 --> 00:02:02.400
+Mercy Boma Naps-Nkari: Pacha is online. I can't… I'm not sure if I'm pronouncing the name correctly.
+
+13
+00:02:02.480 --> 00:02:08.240
+Chase Wright: I don't think patches is… Even invited to this call.
+
+14
+00:02:08.590 --> 00:02:10.990
+Mercy Boma Naps-Nkari: Oh, okay, so… I could talk to him.
+
+15
+00:02:10.990 --> 00:02:15.270
+Chase Wright: and I can invite him, but I'm not sure if he's gonna… Join me now.
+
+16
+00:02:16.500 --> 00:02:20.099
+Chase Wright: He probably won't join today. He can join future calls, maybe.
+
+17
+00:02:21.050 --> 00:02:26.529
+Mercy Boma Naps-Nkari: That would be really great, because as of right now, I'm not sure if I understand how the two repos work.
+
+18
+00:02:27.410 --> 00:02:36.229
+Mercy Boma Naps-Nkari: So you can just, like, walk us through on how to import the .io files to… if… I don't know how to say it, but, like.
+
+19
+00:02:37.270 --> 00:02:44.859
+Mercy Boma Naps-Nkari: since there is a match, I'm not sure how we're going to, like, do further PRs from now on, so it would be really nice if he…
+
+20
+00:02:45.530 --> 00:02:57.300
+Mercy Boma Naps-Nkari: will come and then explain a little things, and then if you have any questions, he can clarify us on that, because it's more like a… Yeah, well, it's not really that much different than how it works today, like.
+
+21
+00:02:57.300 --> 00:03:02.730
+Chase Wright: RPC Testion lived in LightClient's repo, and so it wasn't in…
+
+22
+00:03:03.080 --> 00:03:15.150
+Chase Wright: like, an Ethereum-owned repo, and it wasn't in this particular repo. And so, RPC Testion is what we use to build the Hive test chain, and then it generates
+
+23
+00:03:15.500 --> 00:03:17.460
+Chase Wright: those .io files?
+
+24
+00:03:17.700 --> 00:03:28.859
+Chase Wright: And so his PR is mostly just moving that generator into this repo so that the RPC test generator
+
+25
+00:03:28.940 --> 00:03:38.920
+Chase Wright: which generates from the Hive chain the tests and the requests and responses into those test files. They're moving it into this repo.
+
+26
+00:03:39.010 --> 00:03:41.490
+Chase Wright: So that the test generator
+
+27
+00:03:41.730 --> 00:03:46.800
+Chase Wright: And the tests will live in the same… in the same repo, if that makes sense.
+
+28
+00:03:49.280 --> 00:04:00.019
+Mercy Boma Naps-Nkari: Yeah, okay, I understand. What I'm saying is, before now, we do this, we run this command of output directory, and then kind of, like, clone the two ripples, like.
+
+29
+00:04:00.170 --> 00:04:12.229
+Mercy Boma Naps-Nkari: in line with each other to do the article directory to put the .io files. So I want to understand if it's still that same way, or we are going to run a different command. Like, I'm not sure if I understand how…
+
+30
+00:04:12.880 --> 00:04:22.739
+Chase Wright: I think you're gonna run the same command, but you're gonna run it from inside the execution API's test generator, and it's gonna just automatically regenerate the tests.
+
+31
+00:04:23.500 --> 00:04:25.959
+Mercy Boma Naps-Nkari: Oh, okay. Okay, that makes sense.
+
+32
+00:04:26.230 --> 00:04:27.280
+Mercy Boma Naps-Nkari: Thank you.
+
+33
+00:04:27.710 --> 00:04:32.229
+Mercy Boma Naps-Nkari: I don't know if you have merging rights yet.
+
+34
+00:04:32.230 --> 00:04:32.730
+Chase Wright: I do not.
+
+35
+00:04:32.730 --> 00:04:39.680
+Mercy Boma Naps-Nkari: We usually need, this PR to be merged. There is a broken link on our README.
+
+36
+00:04:40.370 --> 00:04:40.860
+Zane Starr: Yep.
+
+37
+00:04:40.860 --> 00:04:45.310
+Chase Wright: That… it is merged. I just clicked on it, and it's 738? It's merged.
+
+38
+00:04:46.410 --> 00:04:48.310
+Mercy Boma Naps-Nkari: Oh, okay. It is.
+
+39
+00:04:48.310 --> 00:04:53.309
+Chase Wright: The one that we need to get merged is 733, which is still patches.
+
+40
+00:04:53.590 --> 00:05:00.900
+Chase Wright: PR, but it's to fix all of the CI and linter issues that are in the repo.
+
+41
+00:05:01.060 --> 00:05:02.449
+Chase Wright: Due to the merge?
+
+42
+00:05:03.860 --> 00:05:09.650
+Chase Wright: But your… your playground README is… Merged.
+
+43
+00:05:10.560 --> 00:05:11.510
+Mercy Boma Naps-Nkari: Okay.
+
+44
+00:05:12.020 --> 00:05:21.040
+Mercy Boma Naps-Nkari: And also, this is not yet in the agenda, but we… on our last call, we discussed about some changes on the website.
+
+45
+00:05:21.310 --> 00:05:26.750
+Mercy Boma Naps-Nkari: Thank God Zenny's here. Z?
+
+46
+00:05:27.530 --> 00:05:28.240
+Zane Starr: Yeah.
+
+47
+00:05:28.450 --> 00:05:29.260
+Zane Starr: I'm here.
+
+48
+00:05:29.260 --> 00:05:37.809
+Mercy Boma Naps-Nkari: Okay, during the last call, we had a discussion on making some changes in the website, although I couldn't get the entire details, but…
+
+49
+00:05:38.310 --> 00:05:42.719
+Mercy Boma Naps-Nkari: I don't know if Chase might have something to say in regards to this.
+
+50
+00:05:45.570 --> 00:05:58.490
+Chase Wright: I know what you're talking about, but I don't remember the specific changes. I know one of the changes that, that Felix wanted to see is that the,
+
+51
+00:05:59.760 --> 00:06:14.179
+Chase Wright: The example generator, it is always visible, and it is always consuming space on the… I think it was the right-hand side of the screen, and one of the requests is if we could make that…
+
+52
+00:06:14.390 --> 00:06:21.690
+Chase Wright: Either, like, a… a pull-out, like, a column that we could pull out and hide.
+
+53
+00:06:21.890 --> 00:06:25.239
+Chase Wright: That was one of them. The… the other…
+
+54
+00:06:25.240 --> 00:06:30.709
+Zane Starr: generator? I'm a little bit confused by what you mean by example generator.
+
+55
+00:06:31.140 --> 00:06:36.070
+Chase Wright: Yeah, I don't… I don't… can we just pull up the website? It's… I don't…
+
+56
+00:06:36.620 --> 00:06:42.390
+Chase Wright: Yeah, there we go. Yeah, this thing on the right, see the request with server URL in the example?
+
+57
+00:06:43.380 --> 00:06:49.059
+Chase Wright: We… We kind of feel like that consumes… Too much of the…
+
+58
+00:06:50.640 --> 00:06:52.680
+Chase Wright: The real estate, if you will.
+
+59
+00:06:54.170 --> 00:06:57.339
+Zane Starr: Oh, you mean the actual interactive…
+
+60
+00:06:57.340 --> 00:06:58.640
+Chase Wright: Yes, that thing.
+
+61
+00:06:58.640 --> 00:07:01.239
+Zane Starr: sites. So, like, that's how you make requests?
+
+62
+00:07:01.430 --> 00:07:01.830
+Chase Wright: Yeah.
+
+63
+00:07:01.830 --> 00:07:06.950
+Zane Starr: So, like, otherwise, like, users aren't gonna be able to, like, sort of test requests?
+
+64
+00:07:07.640 --> 00:07:13.600
+Zane Starr: So, like, if you call to send right now, it would send a request out to any RPC endpoint.
+
+65
+00:07:13.780 --> 00:07:18.950
+Zane Starr: So, like, in the past, there's always been a way for people to… Mike.
+
+66
+00:07:20.000 --> 00:07:23.379
+Zane Starr: make interactive requests, so…
+
+67
+00:07:24.500 --> 00:07:29.710
+Chase Wright: Yeah, no, I'm not saying we want to get rid of it, I'm just saying, like, if you look at her screen right now.
+
+68
+00:07:29.720 --> 00:07:30.750
+Zane Starr: Like…
+
+69
+00:07:30.750 --> 00:07:35.480
+Chase Wright: The, the important content that is in the center. It is…
+
+70
+00:07:35.900 --> 00:07:40.520
+Chase Wright: too confined. The request thing takes up too much real estate.
+
+71
+00:07:40.660 --> 00:07:47.070
+Chase Wright: I don't even know if… I don't know if it's actually possible, but, like, could the… could that be a hidden…
+
+72
+00:07:47.380 --> 00:07:50.370
+Chase Wright: Column that expands out, or…
+
+73
+00:07:50.860 --> 00:07:53.219
+Chase Wright: Can we… can it be moved?
+
+74
+00:07:53.910 --> 00:08:01.690
+Zane Starr: Yeah, I don't know, we'll… we'll, like, have to think about it a little bit, cause…
+
+75
+00:08:01.690 --> 00:08:02.469
+Chase Wright: Yeah, that's fine.
+
+76
+00:08:02.470 --> 00:08:03.720
+Zane Starr: The,
+
+77
+00:08:04.320 --> 00:08:16.750
+Zane Starr: The issue is, is that, like, okay, so there's the DocuSource plugin, and then that would imply we need, like, some sort of configurable thing, so that way everybody else that consumes the docs generation.
+
+78
+00:08:16.920 --> 00:08:20.349
+Zane Starr: is then able to do it, but I'll make a note of it.
+
+79
+00:08:21.010 --> 00:08:22.729
+Zane Starr: And see what's up.
+
+80
+00:08:22.730 --> 00:08:42.039
+Chase Wright: Yeah, I mean, it's just… it's just a feature request. Like, we already merged it, because we all agreed this is… this is better, right? Like, we… we agreed this is better, we want this, so we merged it. It's just, like, a kind of a feature request of, like, hey, can we hide this or move it? Because it just consumes so much of the real estate. It makes reading the content in the middle
+
+81
+00:08:42.039 --> 00:08:43.099
+Chase Wright: more difficult.
+
+82
+00:08:43.900 --> 00:08:44.680
+Zane Starr: Very good.
+
+83
+00:08:44.680 --> 00:08:52.389
+Chase Wright: And then, Mercy, can you go to one of the other APIs that has, like, multiple parameters for inputs? Like…
+
+84
+00:08:52.490 --> 00:08:54.850
+Chase Wright: Maybe go to ETH Call or something?
+
+85
+00:08:59.580 --> 00:09:01.149
+Chase Wright: Is it even in there? I don't know
+
+86
+00:09:03.250 --> 00:09:05.510
+Chase Wright: Go to… go to one of the… yeah.
+
+87
+00:09:06.230 --> 00:09:07.450
+Chase Wright: Yeah, go to ETHC call.
+
+88
+00:09:09.110 --> 00:09:14.480
+Chase Wright: No, that just requires… No.
+
+89
+00:09:17.220 --> 00:09:19.980
+Chase Wright: I don't remember which one we were… we were looking at.
+
+90
+00:09:36.530 --> 00:09:39.749
+Chase Wright: Can you share the link to this page in the chat?
+
+91
+00:09:40.170 --> 00:09:43.840
+Chase Wright: So… I don't have any of my bookmarks.
+
+92
+00:09:54.230 --> 00:09:55.119
+Chase Wright: Thank you.
+
+93
+00:10:14.720 --> 00:10:20.609
+Chase Wright: I can't remember… what the other complaint was. It had something to do with the parameters.
+
+94
+00:10:22.910 --> 00:10:28.899
+Zane Starr: I can make one comment on the parameters.
+
+95
+00:10:29.180 --> 00:10:37.540
+Zane Starr: So, actually, there are a few bugs within the spec itself. I think, like, EF Simulate, for instance, doesn't actually have
+
+96
+00:10:38.050 --> 00:10:39.780
+Zane Starr: proper JSON schema.
+
+97
+00:10:40.290 --> 00:10:40.810
+Chase Wright: Okay.
+
+98
+00:10:40.810 --> 00:10:44.150
+Zane Starr: it actually violates JSON schema?
+
+99
+00:10:45.010 --> 00:10:57.079
+Zane Starr: So, there are a couple RPC endpoints in which things won't render properly, so, like, I would keep that in mind. So, OpenRPC team is also working on a linter.
+
+100
+00:10:57.310 --> 00:11:03.599
+Zane Starr: That we're planning to, like, integrate into the repo, which should help catch all of these different, like…
+
+101
+00:11:03.850 --> 00:11:08.389
+Zane Starr: smaller JSON schema issues that then, like, sort of manifest.
+
+102
+00:11:08.590 --> 00:11:12.670
+Zane Starr: So you see how it says, like, payload undefined required?
+
+103
+00:11:12.930 --> 00:11:19.110
+Zane Starr: That's because there's a bug with eSimulate that doesn't specify, like, arrayed items properly.
+
+104
+00:11:19.380 --> 00:11:22.690
+Zane Starr: So it's just literally not JSON schema.
+
+105
+00:11:22.920 --> 00:11:33.970
+Chase Wright: Okay, yeah, I think that the complaint that I think Felix brought up was that… so, like, this is parameters, but then, like, this line right here doesn't…
+
+106
+00:11:34.090 --> 00:11:36.400
+Chase Wright: It's kind of awkward, because, like.
+
+107
+00:11:37.460 --> 00:11:52.139
+Chase Wright: the line doesn't mean OR, you know what I mean? Like, this doesn't mean OR. So, like, you're saying, like, payload is required, and then block tag, but, like, is this an AND? Is this an OR? Like, I don't…
+
+108
+00:11:52.350 --> 00:11:53.550
+Chase Wright: I can't tell.
+
+109
+00:11:54.740 --> 00:11:57.550
+Zane Starr: So there's some confusion around.
+
+110
+00:11:57.550 --> 00:11:59.150
+Chase Wright: Just the, just the formatting?
+
+111
+00:11:59.150 --> 00:12:00.480
+Zane Starr: begin and end?
+
+112
+00:12:00.800 --> 00:12:05.320
+Chase Wright: Yeah, well, like, here's parameters, and then obviously there's a result, but then, like.
+
+113
+00:12:06.080 --> 00:12:08.740
+Chase Wright: There are 3 options, but then…
+
+114
+00:12:09.810 --> 00:12:12.600
+Chase Wright: Like, block number, block tag, block hash…
+
+115
+00:12:13.200 --> 00:12:21.949
+Chase Wright: it's kind of… but then it's just, like, payload, and then a line, and then block tag, and then align. I don't know, it's just… it's not…
+
+116
+00:12:22.450 --> 00:12:29.539
+Chase Wright: overly obvious to someone coming in, looking at it, and being like, wait, what are the… what are these parameters? What does this line mean?
+
+117
+00:12:29.740 --> 00:12:42.399
+Zane Starr: Maybe, get transaction by block hash and index is easier to, like, view that by? Because, like, Eve Simulate, like I said, has, like, a weird bug, so there could be multiple rendering issues with that.
+
+118
+00:12:42.930 --> 00:12:43.960
+Chase Wright: Sorry, which one?
+
+119
+00:12:44.530 --> 00:12:53.339
+Zane Starr: Maybe try get transaction by block hash and index? Just something that has multiple parameters,
+
+120
+00:12:54.580 --> 00:12:57.379
+Zane Starr: That, I think, is not, cooked.
+
+121
+00:12:57.820 --> 00:12:58.730
+Zane Starr: Okay.
+
+122
+00:12:59.500 --> 00:13:04.290
+Zane Starr: So… da-da-da… Sure.
+
+123
+00:13:04.290 --> 00:13:05.850
+Chase Wright: So it requires a block.
+
+124
+00:13:06.210 --> 00:13:09.889
+Chase Wright: And then there's a line, and then it requires transaction.
+
+125
+00:13:10.570 --> 00:13:11.410
+Zane Starr: Yeah.
+
+126
+00:13:11.410 --> 00:13:12.310
+Chase Wright: Index.
+
+127
+00:13:15.330 --> 00:13:16.250
+Chase Wright: I mean…
+
+128
+00:13:16.330 --> 00:13:19.240
+Zane Starr: It's not a huge deal, it's just a weird…
+
+129
+00:13:19.240 --> 00:13:25.360
+Chase Wright: Yeah. It's just a… it's just a weird formatting, you know, and it's kind of confusing.
+
+130
+00:13:25.490 --> 00:13:31.859
+Chase Wright: when… You look at it, but it's… I mean, it's not a huge deal.
+
+131
+00:13:33.220 --> 00:13:34.050
+Zane Starr: Okay.
+
+132
+00:13:35.790 --> 00:13:45.710
+Zane Starr: And then, like, I think I might have missed this in the earlier call, you were talking about doing a merge of the RPC testgen into…
+
+133
+00:13:47.140 --> 00:13:50.620
+Zane Starr: the execution APIs, Rebo?
+
+134
+00:13:50.860 --> 00:14:02.829
+Chase Wright: Yes, yes, that's correct. So it's already been merged, but merging it introduced some weird, like, linter and CI failures. So there's a PR733,
+
+135
+00:14:03.320 --> 00:14:08.630
+Chase Wright: For… for that, but we need someone who can actually,
+
+136
+00:14:09.510 --> 00:14:12.810
+Chase Wright: review and merge, because I can't do that.
+
+137
+00:14:13.290 --> 00:14:16.280
+Chase Wright: So yeah, the RPC test generator.
+
+138
+00:14:16.390 --> 00:14:29.649
+Chase Wright: which used to live out in LightClient's repo. That has been merged into execution APIs now. So, it's under, tools, so Execution APIs Tools. We now have the spec check tool.
+
+139
+00:14:29.900 --> 00:14:32.760
+Chase Wright: And, and the generator?
+
+140
+00:14:35.390 --> 00:14:37.100
+Zane Starr: Okay, cool, cool.
+
+141
+00:14:42.220 --> 00:14:50.910
+Mercy Boma Naps-Nkari: Okay, thank you. Moving forward, I want to also point this out. If there's any other clients in there that hasn't signaled on this.
+
+142
+00:14:51.030 --> 00:14:52.010
+Mercy Boma Naps-Nkari: Issue.
+
+143
+00:14:52.210 --> 00:15:00.469
+Mercy Boma Naps-Nkari: Think Besu, Aragon, and GET has signaled, so if NetherMind and any other clients
+
+144
+00:15:00.790 --> 00:15:02.239
+Mercy Boma Naps-Nkari: I would also like to…
+
+145
+00:15:02.960 --> 00:15:12.779
+Mercy Boma Naps-Nkari: look, I would also want to encourage us to look at this issue in case there's something that is off, or we need to be aware of, or it's a go-ahead from every person.
+
+146
+00:15:15.080 --> 00:15:20.169
+Mercy Boma Naps-Nkari: that issue… 7 to 9. I shared the link on the chat.
+
+147
+00:15:23.280 --> 00:15:28.330
+Chase Wright: Yeah, I don't… I don't think anyone is probably gonna object, I think.
+
+148
+00:15:29.080 --> 00:15:37.349
+Chase Wright: And… Geth has the, an open PR for it. Once…
+
+149
+00:15:37.500 --> 00:15:43.329
+Chase Wright: Once that gets merged, then the RPC test gen would then…
+
+150
+00:15:44.460 --> 00:15:51.339
+Chase Wright: pull from that and would add it to all of the logs for RPC compat testing, so…
+
+151
+00:15:52.550 --> 00:15:54.440
+Chase Wright: Yeah, I think we just need to get…
+
+152
+00:15:56.670 --> 00:16:02.330
+Chase Wright: We just need to get it merged, and then get the test regenerated, and then… and get the other clients
+
+153
+00:16:02.830 --> 00:16:04.640
+Chase Wright: To also implement it.
+
+154
+00:16:09.840 --> 00:16:14.270
+Mercy Boma Naps-Nkari: Okay, but that should be on hold because of the lint issue we are currently having.
+
+155
+00:16:15.270 --> 00:16:16.570
+Mercy Boma Naps-Nkari: If I'm not mistaken.
+
+156
+00:16:17.330 --> 00:16:24.059
+Chase Wright: Yeah, yeah. Yeah, we need to get the linter thing fixed, but, I mean, we can work on all this in parallel.
+
+157
+00:16:25.680 --> 00:16:38.760
+Mercy Boma Naps-Nkari: So, in… in regards to the linked PR, it's… it's just, like, a way to fast-forward it, because I think, getting hold of all clients would be a difficult task, and I'm not sure of…
+
+158
+00:16:40.760 --> 00:16:52.800
+Mercy Boma Naps-Nkari: Anyone else we can tag to the PR? Or can you get, let's say, imagine rights to the PR? It would be, like, a lot easier for us to match PRs if you have emerging rights.
+
+159
+00:16:57.780 --> 00:17:01.370
+Chase Wright: Yeah, I mean, I can… It can bug some people.
+
+160
+00:17:03.540 --> 00:17:04.940
+Mercy Boma Naps-Nkari: Okay, thank you.
+
+161
+00:17:06.119 --> 00:17:14.690
+Mercy Boma Naps-Nkari: So, I also have an issue that I created, because I noticed that, some of the Tests.
+
+162
+00:17:15.569 --> 00:17:27.749
+Mercy Boma Naps-Nkari: Some of the methods are missing out on some tests, this is it. But I still think this is blocked by the links PR, and also, I wanted to ask if…
+
+163
+00:17:28.730 --> 00:17:37.879
+Mercy Boma Naps-Nkari: writing this test will be a good idea. I'm trying to seek out opinions, if I can go ahead and write the test for this.
+
+164
+00:17:38.820 --> 00:17:40.090
+Chase Wright: So…
+
+165
+00:17:41.510 --> 00:17:58.840
+Chase Wright: A lot of these methods are gonna require filters, and there's actually another issue in the execution APIs, where someone was asking for this, but the current problem is that all of the clients return filter IDs.
+
+166
+00:17:59.030 --> 00:18:09.309
+Chase Wright: that are non-deterministic and even random, and the current test generator, or the current RPC compat thingy.
+
+167
+00:18:09.520 --> 00:18:15.270
+Chase Wright: Doesn't have, a way to deal with non-deterministic
+
+168
+00:18:16.160 --> 00:18:22.389
+Chase Wright: Fields, so we need to work on… Being able to support that.
+
+169
+00:18:24.260 --> 00:18:32.800
+Chase Wright: I don't know if debug get bad blocks can even be tested via Ive at this point. I'd have to get with
+
+170
+00:18:33.000 --> 00:18:36.050
+Chase Wright: Felix and… and look at that.
+
+171
+00:18:36.190 --> 00:18:44.290
+Chase Wright: Max priority fee per gas, maybe, and ETH gas price, certainly, we can probably… Write tests for those?
+
+172
+00:18:44.550 --> 00:18:49.800
+Chase Wright: But the rest of them, anything with a filter in it is gonna require…
+
+173
+00:18:50.340 --> 00:18:52.570
+Chase Wright: a lot more work, I think.
+
+174
+00:18:53.230 --> 00:18:58.539
+Chase Wright: Well, maybe not a lot, but we need to account for the fact that all of the clients will return
+
+175
+00:18:58.680 --> 00:19:02.259
+Chase Wright: different ID numbers in a non-deterministic way.
+
+176
+00:19:08.060 --> 00:19:18.379
+Mercy Boma Naps-Nkari: Okay, sorry, but I'm so sorry if I can't pronounce your name, or, F-L-C-L, you said something in the chat, can you please unmute? Thank you.
+
+177
+00:19:21.930 --> 00:19:23.380
+FLCL: Hello, Survey.
+
+178
+00:19:24.030 --> 00:19:28.900
+FLCL: You are asking about my, comment, right?
+
+179
+00:19:29.410 --> 00:19:30.260
+Mercy Boma Naps-Nkari: Yeah.
+
+180
+00:19:30.260 --> 00:19:31.979
+Chase Wright: Yeah, which one are you talking about?
+
+181
+00:19:32.540 --> 00:19:39.580
+FLCL: Yeah, it's related to that, additional field you want to add to… Get transaction by hash.
+
+182
+00:19:40.290 --> 00:19:50.910
+FLCL: Yeah, I'm just, I just think that we need to be stricter and have less options.
+
+183
+00:19:51.060 --> 00:19:57.709
+FLCL: In what can be… Like, field radio. I mean.
+
+184
+00:19:58.090 --> 00:20:03.779
+Chase Wright: Yeah, that's a good point. If you want to leave a message, leave a comment on the…
+
+185
+00:20:04.790 --> 00:20:11.040
+Chase Wright: on that issue, that would… that would be fine. That is a good point, though. Like…
+
+186
+00:20:11.560 --> 00:20:15.229
+Chase Wright: It's… we should pick one, because that does make…
+
+187
+00:20:15.560 --> 00:20:24.680
+Chase Wright: testing a little bit harder. If one client returns a null and the other client just leaves it out, then that makes it more challenging. So, that's a good point.
+
+188
+00:20:29.210 --> 00:20:38.549
+Mercy Boma Naps-Nkari: Okay, thank you. I would also, want us to, in case we have any other comments on this, we can leave, some comments on the issue, then we can move forward from there.
+
+189
+00:20:38.700 --> 00:20:46.689
+Mercy Boma Naps-Nkari: And also, Sims, I… I don't know if you have any updates in regards to the error code standardization you want to share with us today.
+
+190
+00:20:48.470 --> 00:20:57.460
+Simsonraj Easvarasakthi: Yeah, hi. Not much, haven't gotten any response, even after posting it in the, All Core Devs channel.
+
+191
+00:20:57.770 --> 00:21:02.210
+Simsonraj Easvarasakthi: But I started working on the, hype test,
+
+192
+00:21:02.730 --> 00:21:05.650
+Simsonraj Easvarasakthi: Yeah, don't have a ton of progress, but…
+
+193
+00:21:05.790 --> 00:21:11.759
+Simsonraj Easvarasakthi: I think we should still get the original PR merged, because it doesn't have any impact on validations, or…
+
+194
+00:21:12.040 --> 00:21:14.020
+Simsonraj Easvarasakthi: generations, etc.
+
+195
+00:21:14.550 --> 00:21:21.169
+Simsonraj Easvarasakthi: If everyone agrees, at least we should get them merged, and then I can start working on the test, separately.
+
+196
+00:21:22.860 --> 00:21:33.350
+Mercy Boma Naps-Nkari: Yeah, about merging it, we kind of, like, have a little blocker, because, there was a merge, in the repo, so they're trying to fix the lint issue.
+
+197
+00:21:33.560 --> 00:21:35.599
+Mercy Boma Naps-Nkari: Then, after that, we can stop…
+
+198
+00:21:35.760 --> 00:21:43.190
+Mercy Boma Naps-Nkari: comfortably start making PRs, but I think we can tag, Felix Cheers.
+
+199
+00:21:43.310 --> 00:21:47.690
+Mercy Boma Naps-Nkari: Ace, and then… I don't know who else has measuring rights.
+
+200
+00:21:51.480 --> 00:21:52.030
+Mercy Boma Naps-Nkari: But…
+
+201
+00:21:52.030 --> 00:21:52.450
+Simsonraj Easvarasakthi: Sounds good.
+
+202
+00:21:52.450 --> 00:21:52.900
+Mercy Boma Naps-Nkari: Oh…
+
+203
+00:21:52.900 --> 00:21:57.310
+Simsonraj Easvarasakthi: Once the linting issue is, fixed?
+
+204
+00:21:58.070 --> 00:22:03.549
+Simsonraj Easvarasakthi: Sorry, someone else have to fix it, or… because I don't see it in my…
+
+205
+00:22:03.670 --> 00:22:05.830
+Simsonraj Easvarasakthi: Beer that it's complaining.
+
+206
+00:22:07.530 --> 00:22:12.029
+Mercy Boma Naps-Nkari: Have you put… have you by any chance pulled the latest changes to your local?
+
+207
+00:22:14.350 --> 00:22:18.139
+Simsonraj Easvarasakthi: I… I did. I even pulled the latest one today.
+
+208
+00:22:18.400 --> 00:22:20.869
+Simsonraj Easvarasakthi: And, fix some conflicts.
+
+209
+00:22:22.140 --> 00:22:29.069
+Simsonraj Easvarasakthi: For me… oh, it says all the workflows are awaiting approval, so I think maybe after someone approves…
+
+210
+00:22:29.260 --> 00:22:31.370
+Simsonraj Easvarasakthi: I might complain?
+
+211
+00:22:32.280 --> 00:22:36.610
+Mercy Boma Naps-Nkari: Okay, because, I'm not sure,
+
+212
+00:22:38.310 --> 00:22:43.560
+Mercy Boma Naps-Nkari: I don't know if it's going to complain or not, but we kind of, like, have APR on.
+
+213
+00:22:43.700 --> 00:22:46.609
+Mercy Boma Naps-Nkari: To fix length issues due to the merge we had.
+
+214
+00:22:46.810 --> 00:22:52.210
+Mercy Boma Naps-Nkari: So, like, if that is done, then we can now move over to this. And also.
+
+215
+00:22:52.560 --> 00:22:59.830
+Mercy Boma Naps-Nkari: For us to continue with, other core devs, we need to write tests and show them, then we can now start poking them about it.
+
+216
+00:23:00.440 --> 00:23:07.430
+Simsonraj Easvarasakthi: Oh, no, of course, I agree. I don't suppose anyone will start implementing it until we have the tests on.
+
+217
+00:23:07.720 --> 00:23:11.599
+Simsonraj Easvarasakthi: But yeah, this has been open for a while.
+
+218
+00:23:11.950 --> 00:23:24.660
+Simsonraj Easvarasakthi: The problem with the test is also the RPC test gen currently generates the test input and output based on GET, but GET hasn't implemented these error codes, so…
+
+219
+00:23:24.660 --> 00:23:32.129
+Simsonraj Easvarasakthi: We may have to write the generation logic slightly differently for this. I cannot reuse the existing ones, because, again, it uses GET.
+
+220
+00:23:32.490 --> 00:23:35.570
+Simsonraj Easvarasakthi: So I'm looking into it currently,
+
+221
+00:23:35.720 --> 00:23:42.840
+Simsonraj Easvarasakthi: But I don't suppose it's going to be straightforward, or reuse the existing test gen as it is.
+
+222
+00:23:45.170 --> 00:23:46.050
+Chase Wright: Yeah, you're…
+
+223
+00:23:46.050 --> 00:23:46.850
+Mercy Boma Naps-Nkari: Just to be clear.
+
+224
+00:23:46.850 --> 00:23:56.039
+Chase Wright: right there, because, I was having some of those issues with RPC Test Gen and, GATH not having the right
+
+225
+00:23:56.550 --> 00:24:01.009
+Chase Wright: thing. So in RPC TestGen, you can write
+
+226
+00:24:01.240 --> 00:24:06.939
+Chase Wright: In… in the test generator, you can write checks to make sure that
+
+227
+00:24:07.340 --> 00:24:14.340
+Chase Wright: That Go Ethereum is right, but the problem doing that is then it's just gonna fail, and the test generator is gonna say, like.
+
+228
+00:24:14.510 --> 00:24:26.250
+Chase Wright: you know, hey, this test… I can't generate tests for this test because your checks are failing, and then we have to go to the Geth team and be like, you know, hey, fix the library, basically, right?
+
+229
+00:24:26.250 --> 00:24:27.620
+Simsonraj Easvarasakthi: Exactly.
+
+230
+00:24:27.620 --> 00:24:28.370
+Chase Wright: It's a pain.
+
+231
+00:24:28.590 --> 00:24:29.090
+Chase Wright: Yeah.
+
+232
+00:24:29.090 --> 00:24:37.120
+Simsonraj Easvarasakthi: Yeah, yeah, that's exactly what I'm facing, too. So, maybe we… before I start implementing the test, maybe we should talk to Kath team and,
+
+233
+00:24:37.310 --> 00:24:47.759
+Simsonraj Easvarasakthi: get an opinion, if they want us to write custom tests in our PC testgen, and then they'll implement, or they implement, and we use that to generate the custom test.
+
+234
+00:24:47.850 --> 00:24:54.829
+Simsonraj Easvarasakthi: It's not a blocker, but it's good to get their opinion before I do a ton of work.
+
+235
+00:24:54.880 --> 00:25:11.939
+Simsonraj Easvarasakthi: But I'm still exploring some POC, to see how that will plan out. But yeah, regardless, I still do think if most of them agree, because it has been silent for a while, haven't gotten any negative reviews or anything that we want to fix at this point too much.
+
+236
+00:25:12.110 --> 00:25:21.280
+Simsonraj Easvarasakthi: And if it doesn't impact anything, I think we should merge it, and then slowly proceed to getting it implemented one by one.
+
+237
+00:25:24.130 --> 00:25:25.380
+Mercy Boma Naps-Nkari: Okay.
+
+238
+00:25:25.690 --> 00:25:36.549
+Mercy Boma Naps-Nkari: So, I don't know if… do you mind, sharing a little bit about this, so that I can, like, CC, Sina, or anyone from the GetSim?
+
+239
+00:25:38.270 --> 00:25:48.919
+Simsonraj Easvarasakthi: Sure, yeah, I can… I can repost this in, the, all core devs, and, ask for some reviews, and also explain this issue.
+
+240
+00:25:49.290 --> 00:26:03.230
+Simsonraj Easvarasakthi: Maybe by next meeting, we can pull in someone from GetTeam. I think… is that Felix from GetTeam? I remember talking to someone at the last, meeting, and he said he could help me out.
+
+241
+00:26:03.380 --> 00:26:06.580
+Simsonraj Easvarasakthi: But yeah, I can, I can put this in the group chat. Okay, okay.
+
+242
+00:26:06.830 --> 00:26:08.829
+Simsonraj Easvarasakthi: Yeah, I'll reach out to him too. Thank you.
+
+243
+00:26:10.470 --> 00:26:17.490
+Mercy Boma Naps-Nkari: Okay, I think that's all from the agenda. I don't know if someone or if anyone has anything else.
+
+244
+00:26:28.630 --> 00:26:29.630
+Mercy Boma Naps-Nkari: Chase?
+
+245
+00:26:32.590 --> 00:26:33.739
+Chase Wright: I got nothing else.
+
+246
+00:26:35.670 --> 00:26:36.909
+Mercy Boma Naps-Nkari: Okay.
+
+247
+00:26:37.040 --> 00:26:39.250
+FLCL: About the questioning…
+
+248
+00:26:39.250 --> 00:26:47.140
+Mercy Boma Naps-Nkari: I'm not sure if… We have, or we're planning on anything in regards to how to fashion,
+
+249
+00:26:50.990 --> 00:26:52.220
+Mercy Boma Naps-Nkari: the specs.
+
+250
+00:26:53.300 --> 00:27:06.640
+Chase Wright: So I think once, once Patch's stuff is merged in, then the generator and everything will be in one repo. It'll be a little bit easier for us to…
+
+251
+00:27:07.490 --> 00:27:15.920
+Chase Wright: to create a versioned release. I think we need to just go through all the current pRs…
+
+252
+00:27:16.030 --> 00:27:18.450
+Chase Wright: And maybe, maybe some of the issues…
+
+253
+00:27:18.720 --> 00:27:22.740
+Chase Wright: And see what we want to knock out before… for them?
+
+254
+00:27:25.130 --> 00:27:30.169
+Mercy Boma Naps-Nkari: Okay, so how do we, like, collectively do that, like…
+
+255
+00:27:30.910 --> 00:27:38.859
+Mercy Boma Naps-Nkari: do I make a list and then post on the chat, then we can now, like, say, okay, we want this in the first version, we want this… this can come in later, this…
+
+256
+00:27:39.050 --> 00:27:42.719
+Chase Wright: Yeah, I think that would… that would be fine. We can probably do it in Discord.
+
+257
+00:27:43.940 --> 00:27:45.610
+Mercy Boma Naps-Nkari: Okay, okay.
+
+258
+00:27:45.890 --> 00:27:49.169
+Mercy Boma Naps-Nkari: I'll probably make a list and then create a trend.
+
+259
+00:27:49.330 --> 00:27:56.200
+Mercy Boma Naps-Nkari: It's just that the… on the chat, we hardly, have, we… I think there's a communication gap. I'm not sure if I'm…
+
+260
+00:27:56.660 --> 00:28:03.430
+Mercy Boma Naps-Nkari: I'm wrong, but, like… How do we get everybody to have an input? Because the more…
+
+261
+00:28:03.700 --> 00:28:07.960
+Mercy Boma Naps-Nkari: The more people we have to reach a consensus, the better and the faster we
+
+262
+00:28:08.360 --> 00:28:10.520
+Mercy Boma Naps-Nkari: We can actually, like, get,
+
+263
+00:28:11.160 --> 00:28:14.829
+Mercy Boma Naps-Nkari: Goals you can actually achieve on things around this.
+
+264
+00:28:25.190 --> 00:28:29.970
+Mercy Boma Naps-Nkari: But, okay, I'll try and make the… I'll kind of, like, list,
+
+265
+00:28:34.940 --> 00:28:37.099
+Mercy Boma Naps-Nkari: Sorry, Zane, can you add on…
+
+266
+00:28:39.980 --> 00:28:48.269
+Zane Starr: Oh, I was just talking about the parameters thing. I was just dropping a note saying that the line breaks should be somewhat of an easy fix.
+
+267
+00:28:48.530 --> 00:28:57.110
+Zane Starr: But the interactive widget may be a little bit more complicated, so it's just something we'll have to look at. That's all I was adding that update.
+
+268
+00:29:00.960 --> 00:29:01.840
+Mercy Boma Naps-Nkari: He's gone.
+
+269
+00:29:03.480 --> 00:29:04.190
+Zane Starr: Huh?
+
+270
+00:29:06.130 --> 00:29:09.820
+Mercy Boma Naps-Nkari: My phone raised their hand, so I'm trying to let the person have the floor.
+
+271
+00:29:09.820 --> 00:29:20.920
+Tullio | Erigon: Oh, yeah, it's me. Hi, everyone. About the diversioning thing that we are discussing, I think…
+
+272
+00:29:21.060 --> 00:29:30.899
+Tullio | Erigon: there are… two different, topics. One is… The one that Chase introduced.
+
+273
+00:29:31.040 --> 00:29:42.640
+Tullio | Erigon: Which is… Having a version for Execution API, which… clearly…
+
+274
+00:29:42.670 --> 00:30:01.809
+Tullio | Erigon: states, which generator is used to generate which tests, so, okay, having them in the same repo is obviously very good, and we can have, then, a proper versioning for the execution APIs.
+
+275
+00:30:02.110 --> 00:30:14.590
+Tullio | Erigon: repo, but then another topic which I think we should discuss sooner or later, is versioning of
+
+276
+00:30:15.150 --> 00:30:20.900
+Tullio | Erigon: API endpoints, towards… the application layer.
+
+277
+00:30:21.040 --> 00:30:30.670
+Tullio | Erigon: So towards the customer who are using the JSON RPC endpoints for doing their stuff,
+
+278
+00:30:32.250 --> 00:30:38.079
+Tullio | Erigon: Just to be clear, something like… the engine API already has.
+
+279
+00:30:38.380 --> 00:30:49.099
+Tullio | Erigon: so, introducing some… Version number, maybe, in the… within the… the endpoint name, or…
+
+280
+00:30:49.360 --> 00:30:57.649
+Tullio | Erigon: Or, okay, we can come up with many different ways, but I think we will need also to do
+
+281
+00:30:57.860 --> 00:31:07.220
+Tullio | Erigon: To… to… Introduce a proper versioning scheme also towards the endpoint users.
+
+282
+00:31:11.510 --> 00:31:14.120
+Mercy Boma Naps-Nkari: Okay, I have a question, because…
+
+283
+00:31:14.640 --> 00:31:20.810
+Mercy Boma Naps-Nkari: And the whole idea is, okay, but, like, how do we actually, like, cater for application,
+
+284
+00:31:21.170 --> 00:31:27.100
+Mercy Boma Naps-Nkari: users, the endpoint users, because we don't have them here. How do we get them to…
+
+285
+00:31:27.370 --> 00:31:30.910
+Mercy Boma Naps-Nkari: At least make, an opinion of this.
+
+286
+00:31:32.700 --> 00:31:35.749
+Mercy Boma Naps-Nkari: Because getting an opinion from them will be much more better.
+
+287
+00:31:37.110 --> 00:31:38.000
+Tullio | Erigon: Yeah.
+
+288
+00:31:38.000 --> 00:31:40.650
+Mercy Boma Naps-Nkari: And on the best ways to go about this.
+
+289
+00:31:42.310 --> 00:31:46.749
+Tullio | Erigon: Yeah. I agree on that.
+
+290
+00:31:47.250 --> 00:31:59.020
+Tullio | Erigon: yeah, I don't know, maybe on… some ACD call is a…
+
+291
+00:32:00.280 --> 00:32:03.700
+Tullio | Erigon: A good place where to ask for this, because…
+
+292
+00:32:04.160 --> 00:32:08.389
+Tullio | Erigon: Maybe some of them are joining such calls?
+
+293
+00:32:09.180 --> 00:32:10.090
+Tullio | Erigon: I don't know.
+
+294
+00:32:14.220 --> 00:32:15.899
+Mercy Boma Naps-Nkari: Okay, I think I just recalled…
+
+295
+00:32:16.330 --> 00:32:19.950
+Tullio | Erigon: Maybe Chase has some experience on that to share?
+
+296
+00:32:21.250 --> 00:32:26.750
+Chase Wright: I mean, not really, like… Just getting at… getting the…
+
+297
+00:32:26.980 --> 00:32:32.650
+Chase Wright: The, like, app developers involved in a lot of this stuff has…
+
+298
+00:32:32.930 --> 00:32:37.960
+Chase Wright: always been fairly challenging. They don't… They don't typically,
+
+299
+00:32:39.060 --> 00:32:45.829
+Chase Wright: They don't typically participate, they just… right around Most of the issues.
+
+300
+00:32:46.130 --> 00:32:48.690
+Chase Wright: Yeah, I don't know.
+
+301
+00:32:48.690 --> 00:32:55.890
+Tullio | Erigon: Yeah, yeah, I can understand. But, okay, we could do another thing in… Which is…
+
+302
+00:32:57.570 --> 00:33:00.350
+Tullio | Erigon: I think that if we devise a…
+
+303
+00:33:00.700 --> 00:33:09.460
+Tullio | Erigon: A reasonable way to introduce versioning, which doesn't completely break the…
+
+304
+00:33:10.060 --> 00:33:12.660
+Tullio | Erigon: The existing stuff, but it's…
+
+305
+00:33:13.120 --> 00:33:17.400
+Tullio | Erigon: If there is a migration plan or something like that.
+
+306
+00:33:17.600 --> 00:33:24.319
+Tullio | Erigon: And we do it in a backward-compatible way, then… It can be opt-in.
+
+307
+00:33:25.340 --> 00:33:36.990
+Chase Wright: I mean, I don't think us adding versioning is gonna break anything backwards compatible, because everything that exists today just pulls from main, because releases don't exist, so…
+
+308
+00:33:37.240 --> 00:33:37.770
+Chase Wright: Would be alright.
+
+309
+00:33:37.770 --> 00:33:39.310
+Tullio | Erigon: Yes, yes, it could talk.
+
+310
+00:33:42.620 --> 00:33:46.460
+Mercy Boma Naps-Nkari: Okay, I just had, a sort of, thought.
+
+311
+00:33:47.630 --> 00:33:48.729
+Mercy Boma Naps-Nkari: Sorry, go on.
+
+312
+00:33:49.460 --> 00:33:54.559
+Zane Starr: Sorry, just before we move on from versioning, I think,
+
+313
+00:33:54.730 --> 00:34:02.139
+Zane Starr: There's a PR out for, adding back the built assets of the…
+
+314
+00:34:02.830 --> 00:34:10.130
+Zane Starr: Spec. So, at some update in between, versions, I think…
+
+315
+00:34:10.610 --> 00:34:20.040
+Zane Starr: there is a repo that will have the built OpenRPC JSON. I know, like, FlashBots and maybe a few others were relying on that.
+
+316
+00:34:20.280 --> 00:34:24.340
+Zane Starr: So, it might be something that you also want to do.
+
+317
+00:34:24.830 --> 00:34:26.489
+Zane Starr: When the versioning happens.
+
+318
+00:34:49.350 --> 00:34:52.489
+Mercy Boma Naps-Nkari: I can think of to get, endpoint users.
+
+319
+00:34:52.989 --> 00:34:54.030
+Mercy Boma Naps-Nkari: Literally.
+
+320
+00:34:54.900 --> 00:35:01.060
+Mercy Boma Naps-Nkari: I can do that and then get back to us on this, and we'll move on from there, if that is okay.
+
+321
+00:35:07.260 --> 00:35:10.110
+Chase Wright: Yeah, I don't think we're gonna solve it on this call, so…
+
+322
+00:35:13.300 --> 00:35:19.399
+Mercy Boma Naps-Nkari: Okay, so I will reach out to them, and then… I'll reach out to Sam, then see what he says about it.
+
+323
+00:35:19.670 --> 00:35:24.929
+Mercy Boma Naps-Nkari: So I think that's all from my end, or what we have on the agenda. I don't know if…
+
+324
+00:35:26.080 --> 00:35:32.940
+Mercy Boma Naps-Nkari: Anything else you want to talk about, or discussions? I think someone from Nethermine team brought out, an issue, but…
+
+325
+00:35:33.180 --> 00:35:37.529
+Mercy Boma Naps-Nkari: the issue sort of died out, and I can't even remember what it was exactly.
+
+326
+00:35:38.510 --> 00:35:39.460
+Mercy Boma Naps-Nkari: those.
+
+327
+00:35:39.640 --> 00:35:41.189
+Mercy Boma Naps-Nkari: Ending of last year.
+
+328
+00:35:50.570 --> 00:35:51.840
+Mercy Boma Naps-Nkari: Oh, okay.
+
+329
+00:35:53.770 --> 00:36:01.440
+Mercy Boma Naps-Nkari: All right then, thank you all for joining today's call, and it was really a pleasure having you guys here. Thank you very much.
+
+330
+00:36:02.330 --> 00:36:02.950
+Chase Wright: Hey, you…
+
+331
+00:36:03.540 --> 00:36:04.310
+Tullio | Erigon: Thank you.
+
+332
+00:36:05.250 --> 00:36:05.840
+Mercy Boma Naps-Nkari: Bye.
+
+333
+00:36:06.770 --> 00:36:07.480
+Zane Starr: Thanks.
+
+334
+00:36:07.800 --> 00:36:08.540
+Zane Starr: Right.
+
