@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Generate ACD calls table for README"""
+"""
+Generate ACD calls table for README (append-only approach).
+
+This script only ADDS new rows for new meetings. It does not modify existing rows.
+Historical data is preserved as-is in the README.
+"""
 import json
 import os
 import re
@@ -10,110 +15,6 @@ from pathlib import Path
 
 load_dotenv()
 
-def parse_date_from_pm_format(date_str):
-    """Parse date from ethereum/pm format like '03 Jul 2025, 14:00 UTC' or '03 Jul 2025'"""
-    # Remove time and timezone if present
-    date_str = date_str.split(',')[0].strip()
-    try:
-        # Try format: "03 Jul 2025"
-        date_obj = datetime.strptime(date_str, '%d %b %Y')
-        return date_obj.strftime('%Y-%m-%d')
-    except:
-        try:
-            # Try format: "03 Jul 2025"
-            date_obj = datetime.strptime(date_str, '%d %B %Y')
-            return date_obj.strftime('%Y-%m-%d')
-        except:
-            return None
-
-def extract_issue_number_from_agenda(agenda_text):
-    """Extract issue number from agenda link like [agenda](https://github.com/ethereum/pm/issues/1601)"""
-    match = re.search(r'issues/(\d+)', agenda_text)
-    if match:
-        return match.group(1)
-    return None
-
-def fetch_links_from_issues(issue_numbers):
-    """Fetch YouTube and Ethereum Magicians links from GitHub issue comments posted by github-actions user
-    
-    Args:
-        issue_numbers: List of issue numbers to check
-    
-    Returns:
-        tuple: (youtube_links_dict, discussion_links_dict)
-            - youtube_links_dict: {issue_num: youtube_url} mapping
-            - discussion_links_dict: {issue_num: ethmag_url} mapping
-    """
-    youtube_links = {}
-    discussion_links = {}
-    
-    token = os.getenv("GITHUB_TOKEN")
-    if not token:
-        print("Warning: GITHUB_TOKEN not set, cannot fetch links from issues")
-        return youtube_links, discussion_links
-    
-    headers = {
-        "Authorization": f"token {token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    
-    # YouTube URL patterns (case-insensitive)
-    youtube_patterns = [
-        r'https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)([a-zA-Z0-9_-]+)',
-        r'https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9_-]+)',
-        r'youtube\.com/watch\?v=([a-zA-Z0-9_-]+)',  # Also match without https://
-    ]
-    
-    # Ethereum Magicians URL pattern
-    ethmag_pattern = r'https?://(?:www\.)?ethereum-magicians\.org/t/[^\s\)]+'
-    
-    for issue_num in issue_numbers:
-        if not issue_num:
-            continue
-        
-        # Fetch comments for this issue
-        comments_url = f"https://api.github.com/repos/ethereum/pm/issues/{issue_num}/comments"
-        
-        try:
-            response = requests.get(comments_url, headers=headers, timeout=10)
-            if response.status_code != 200:
-                continue
-            
-            comments = response.json()
-            
-            # Look for comments by github-actions[bot] user
-            for comment in comments:
-                user = comment.get('user', {})
-                login = user.get('login', '')
-                # Check for both 'github-actions' and 'github-actions[bot]'
-                if login in ['github-actions', 'github-actions[bot]']:
-                    body = comment.get('body', '')
-                    
-                    # Search for YouTube links
-                    if issue_num not in youtube_links:
-                        for pattern in youtube_patterns:
-                            match = re.search(pattern, body, re.IGNORECASE)
-                            if match:
-                                video_id = match.group(1)
-                                youtube_url = f"https://youtu.be/{video_id}"
-                                youtube_links[issue_num] = youtube_url
-                                break
-                    
-                    # Search for Ethereum Magicians discussion links
-                    if issue_num not in discussion_links:
-                        match = re.search(ethmag_pattern, body, re.IGNORECASE)
-                        if match:
-                            ethmag_url = match.group(0)
-                            discussion_links[issue_num] = ethmag_url
-                    
-                    # If we found both, no need to check more comments
-                    if issue_num in youtube_links and issue_num in discussion_links:
-                        break
-        except Exception as e:
-            # Silently continue if we can't fetch comments for this issue
-            continue
-    
-    return youtube_links, discussion_links
 
 def fetch_forkcast_calls():
     """Fetch and parse forkcast calls data
@@ -128,26 +29,19 @@ def fetch_forkcast_calls():
         }
     """
     try:
-        # Fetch calls.ts from forkcast
         url = "https://raw.githubusercontent.com/ethereum/forkcast/main/src/data/calls.ts"
         response = requests.get(url, timeout=10)
         response.raise_for_status()
         content = response.text
         
-        # Dictionary to store call data: (type, num) -> {date, path, url}
         forkcast_calls = {}
-        
-        # Parse the calls array
-        # Pattern: { type: 'acdc', date: '2025-04-03', number: '154', path: 'acdc/154' },
         pattern = r"\{\s*type:\s*['\"](acdc|acde|acdt)['\"],\s*date:\s*['\"](\d{4}-\d{2}-\d{2})['\"],\s*number:\s*['\"](\d+)['\"],\s*path:\s*['\"]([^'\"]+)['\"]\s*\}"
         
         for match in re.finditer(pattern, content):
-            call_type = match.group(1).upper()  # Convert to ACDC, ACDE, ACDT
+            call_type = match.group(1).upper()
             date = match.group(2)
             number = match.group(3)
             path = match.group(4)
-            
-            # Build full URL
             url = f'https://forkcast.org/calls/{path}'
             
             forkcast_calls[(call_type, number)] = {
@@ -161,358 +55,157 @@ def fetch_forkcast_calls():
         print(f"Warning: Could not fetch forkcast calls: {e}")
         return {}
 
-def fetch_ethereum_pm_data():
-    """Fetch and parse ethereum/pm README to extract meeting data
+
+def fetch_links_from_issue(issue_num):
+    """Fetch YouTube and Ethereum Magicians links from a single GitHub issue
     
     Returns:
-        dict: {
-            (type, num): {
-                'date': 'YYYY-MM-DD',
-                'issue_num': '123',
-                'notes': '...',
-                'discussion': '...',
-                'recording': '...'
-            }
-        }
+        tuple: (youtube_url or None, ethmag_url or None)
     """
+    token = os.getenv("GITHUB_TOKEN")
+    if not token or not issue_num:
+        return None, None
+    
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    
+    youtube_patterns = [
+        r'https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)([a-zA-Z0-9_-]+)',
+        r'https?://(?:www\.)?youtube\.com/embed/([a-zA-Z0-9_-]+)',
+    ]
+    ethmag_pattern = r'https?://(?:www\.)?ethereum-magicians\.org/t/[^\s\)]+'
+    
+    youtube_url = None
+    ethmag_url = None
+    
     try:
-        # Fetch README from ethereum/pm (try master branch first, then main)
-        for branch in ['master', 'main']:
-            url = f"https://raw.githubusercontent.com/ethereum/pm/{branch}/README.md"
-            try:
-                response = requests.get(url, timeout=10)
-                response.raise_for_status()
-                break
-            except requests.exceptions.HTTPError:
-                continue
-        else:
-            raise Exception("Could not fetch README from master or main branch")
-        response.raise_for_status()
-        content = response.text
+        comments_url = f"https://api.github.com/repos/ethereum/pm/issues/{issue_num}/comments"
+        response = requests.get(comments_url, headers=headers, timeout=10)
+        if response.status_code != 200:
+            return None, None
         
-        # Dictionary to store meeting data: (type, num) -> {date, issue_num, notes, discussion, recording}
-        meeting_data = {}
+        comments = response.json()
         
-        # Parse the unified table format: | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
-        # Find the table after "## Previous AllCoreDevs Meetings"
-        table_pattern = r'## Previous AllCoreDevs Meetings\s*\n\n\|[^\n]+\|\n\| ---[^\n]+\|\n((?:\|[^\n]+\|\n)*)'
-        table_match = re.search(table_pattern, content)
-        
-        if table_match:
-            table_content = table_match.group(1)
-            for line in table_content.split('\n'):
-                if not line.strip().startswith('|'):
-                    continue
-                parts = [p.strip() for p in line.split('|')]
-                # Format: | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
-                # parts[0] is empty (before first |), parts[1] is Date, etc.
-                if len(parts) >= 8:
-                    try:
-                        date_str = parts[1].strip()  # e.g., "22 Jan 2026"
-                        meeting_type = parts[2].strip()  # e.g., "ACDC", "ACDE", "ACDT"
-                        num = parts[3].strip()  # e.g., "173"
-                        issue_link = parts[4].strip()  # e.g., "[#1874](...)"
-                        summary = parts[5].strip()
-                        discussion = parts[6].strip()
-                        recording = parts[7].strip()
-                        
-                        if not num.isdigit():
-                            continue
-                        if meeting_type not in ['ACDE', 'ACDC', 'ACDT']:
-                            continue
-                        
-                        # Parse date (format: "22 Jan 2026")
-                        parsed_date = parse_date_from_pm_format(date_str)
-                        
-                        # Extract issue number from issue link
-                        issue_match = re.search(r'#(\d+)', issue_link)
-                        issue_num = issue_match.group(1) if issue_match else None
-                        
-                        meeting_data[(meeting_type, num)] = {
-                            'date': parsed_date,
-                            'issue_num': issue_num,
-                            'notes': summary if summary and summary != '-' else '',
-                            'discussion': discussion if discussion and discussion != '-' else '',
-                            'recording': recording if recording and recording != '-' else ''
-                        }
-                    except (IndexError, ValueError):
-                        continue
-        
-        return meeting_data
-    except Exception as e:
-        print(f"Warning: Could not fetch ethereum/pm data: {e}")
-        return {}
+        for comment in comments:
+            user = comment.get('user', {})
+            login = user.get('login', '')
+            if login in ['github-actions', 'github-actions[bot]']:
+                body = comment.get('body', '')
+                
+                if not youtube_url:
+                    for pattern in youtube_patterns:
+                        match = re.search(pattern, body, re.IGNORECASE)
+                        if match:
+                            video_id = match.group(1)
+                            youtube_url = f"https://youtu.be/{video_id}"
+                            break
+                
+                if not ethmag_url:
+                    match = re.search(ethmag_pattern, body, re.IGNORECASE)
+                    if match:
+                        ethmag_url = match.group(0)
+                
+                if youtube_url and ethmag_url:
+                    break
+    except Exception:
+        pass
+    
+    return youtube_url, ethmag_url
 
-def generate_table_string():
-    """Generate the ACD calls table as a string
+
+def parse_existing_meetings(readme_content):
+    """Parse existing README to find which meetings are already in the table.
     
     Returns:
-        tuple: (table_string, flagged_calls_list)
-            - table_string: The markdown table
-            - flagged_calls_list: List of calls that have both notes and forkcast
+        set: Set of (type, num) tuples for existing meetings
     """
-    # Fetch data from ethereum/pm README
-    pm_data = fetch_ethereum_pm_data()
+    existing = set()
     
-    # Fetch forkcast calls data
-    forkcast_calls = fetch_forkcast_calls()
+    # Find the table after "# ACD calls"
+    pattern = r'# ACD calls\s*\n\n\|[^\n]+\|\n\| ---[^\n]+\|\n((?:\|[^\n]+\|\n)*)'
+    match = re.search(pattern, readme_content)
     
-    # Track calls with both summary and forkcast
-    flagged_calls = []
-    
-    # Load processed meetings (ones we have logs for)
-    with open('processed_meetings.json', 'r') as f:
-        meetings = json.load(f)
-
-    # Track which meetings we have logs for
-    meetings_with_logs = {}
-    for key, data in meetings.items():
-        meeting_type = data.get('meeting_type', '')
-        if meeting_type in ['ACDE', 'ACDT', 'ACDC']:
-            meeting_num = data.get('meeting_num')
-            if meeting_num:
-                meetings_with_logs[(meeting_type, str(meeting_num))] = {
-                    'type': meeting_type,
-                    'num': meeting_num,
-                    'date': data.get('date'),
-                    'issue_num': key.split('_')[0]  # Extract issue number from key
-                }
-
-    # Build combined list of all meetings
-    acd_meetings = []
-    
-    # Add meetings from ethereum/pm README (includes ones we don't have logs for)
-    pm_meeting_keys = set()
-    for (mtype, num), data in pm_data.items():
-        if mtype in ['ACDE', 'ACDC']:  # ACDT not in pm README
-            # Skip ACDE 0 - it's duplicate data from ACDE 1
-            if mtype == 'ACDE' and num == '0':
+    if match:
+        table_content = match.group(1)
+        for line in table_content.split('\n'):
+            if not line.strip().startswith('|'):
                 continue
-            
-            pm_meeting_keys.add((mtype, num))
-            
-            # Fix ACDC 80 date to January 27, 2022
-            date = data.get('date')
-            if mtype == 'ACDC' and num == '80' and not date:
-                date = '2022-01-27'
-            
-            acd_meetings.append({
-                'type': mtype,
-                'num': num,
-                'date': date,
-                'issue_num': data.get('issue_num'),
-                'has_logs': (mtype, num) in meetings_with_logs,
-                'pm_data': data
-            })
+            parts = [p.strip() for p in line.split('|')]
+            # Format: | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
+            if len(parts) >= 4:
+                meeting_type = parts[2].strip()
+                num = parts[3].strip()
+                if meeting_type in ['ACDE', 'ACDC', 'ACDT'] and num.isdigit():
+                    existing.add((meeting_type, num))
     
-    # Add ACDE/ACDC/ACDT meetings from our processed meetings that aren't in pm README
-    for (mtype, num), data in meetings_with_logs.items():
-        # Skip if already added from pm_data
-        if (mtype, num) not in pm_meeting_keys:
-            acd_meetings.append({
-                'type': mtype,
-                'num': data['num'],
-                'date': data['date'],
-                'issue_num': data['issue_num'],
-                'has_logs': True,
-                'pm_data': {}  # Not in pm README yet
-            })
-    
-    # Collect all issue numbers to fetch YouTube and discussion links for
-    issue_numbers = set()
-    for (mtype, num), data in pm_data.items():
-        issue_num = data.get('issue_num')
-        if issue_num:
-            issue_numbers.add(issue_num)
-    
-    # Also collect from meetings_with_logs
-    for (mtype, num), data in meetings_with_logs.items():
-        issue_num = data.get('issue_num')
-        if issue_num:
-            issue_numbers.add(issue_num)
-    
-    # Fetch YouTube and discussion links from issue comments (only for issues from July 2025 onwards)
-    # We'll filter by date when using the links
-    youtube_links, discussion_links = fetch_links_from_issues(list(issue_numbers))
+    return existing
 
-    # Sort by date (newest first), then by type, then by number
-    def sort_key(x):
-        # Parse date for sorting (YYYY-MM-DD format)
-        date_str = x.get('date', '0000-00-00')
+
+def generate_row(meeting_type, num, date, issue_num, forkcast_calls, repo_owner, repo_name):
+    """Generate a single table row for a new meeting."""
+    
+    # Format date
+    if date:
         try:
-            date_obj = datetime.strptime(date_str, '%Y-%m-%d')
-            date_sort = date_obj.timestamp()
+            date_obj = datetime.strptime(date, '%Y-%m-%d')
+            formatted_date = date_obj.strftime('%d %b %Y')
         except:
-            date_sort = 0
-        
-        type_order = {'ACDE': 0, 'ACDT': 1, 'ACDC': 2}
-        num = int(x['num']) if x['num'] else 0
-        # Negative date_sort for descending (newest first)
-        return (-date_sort, type_order.get(x['type'], 99), -num)
-
-    acd_meetings.sort(key=sort_key)
-
-    # Get repo info
-    repo_owner = os.getenv('GITHUB_UPLOAD_OWNER', 'ethereum')
-    repo_name = os.getenv('GITHUB_UPLOAD_REPO', 'pm')
-
-    # Generate table
-    table_lines = []
-    table_lines.append('| Date | Type | № | Issue | Summary | Discussion | Recording | Logs |')
-    table_lines.append('| --- | --- | --- | --- | --- | --- | --- | --- |')
-
-    for m in acd_meetings:
-        num = m['num'] or '-'
-        mtype = m['type']
-        date_str = m['date']
-        if date_str:
-            try:
-                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
-                # Format: "03 Jul 2025" (no time since we don't have it)
-                formatted_date = date_obj.strftime('%d %b %Y')
-            except:
-                formatted_date = date_str
-        else:
-            formatted_date = '-'
-        
-        # Build issue link
-        issue_num = m.get('issue_num')
-        if issue_num:
-            issue_link = f'[#{issue_num}](https://github.com/ethereum/pm/issues/{issue_num})'
-        else:
-            issue_link = '-'
-        
-        # Get data from ethereum/pm README
-        summary = '-'
-        discussion = '-'
-        recording = '-'
-        has_existing_summary = False
-        has_forkcast = False
-        
-        pm_data_entry = m.get('pm_data', {})
-        if pm_data_entry:
-            # Use notes as summary if it's a GitHub link
-            if pm_data_entry.get('notes'):
-                notes_text = pm_data_entry['notes']
-                # Convert relative path to full GitHub URL
-                if '[notes](' in notes_text:
-                    # Extract the path from [notes](path)
-                    path_match = re.search(r'\[notes\]\(([^)]+)\)', notes_text)
-                    if path_match:
-                        rel_path = path_match.group(1)
-                        # If it's not already a full URL, convert it
-                        if 'github.com' not in rel_path:
-                            full_url = f'https://github.com/ethereum/pm/blob/master/{rel_path}'
-                            notes_text = f'[notes]({full_url})'
-                        else:
-                            # Already a full URL, keep as is
-                            notes_text = f'[notes]({rel_path})'
-                
-                # Only use as summary if it's a GitHub link (after conversion)
-                if 'github.com' in notes_text:
-                    summary = notes_text
-                    has_existing_summary = True
-                else:
-                    summary = '-'
-            else:
-                summary = '-'
-            
-            discussion = pm_data_entry.get('discussion', '-') if pm_data_entry.get('discussion') else '-'
-            recording = pm_data_entry.get('recording', '-') if pm_data_entry.get('recording') else '-'
-        
-        # If discussion is still empty and we have an issue number, check for Ethereum Magicians link from comments
-        # Only for calls from July 2025 onwards (approximately issue #1600+)
-        if discussion == '-' and issue_num:
-            try:
-                issue_num_int = int(issue_num)
-                # Check if this issue is from July 2025 onwards (roughly issue #1600+)
-                # Also check if we have a discussion link for this issue
-                if issue_num_int >= 1600 and issue_num in discussion_links:
-                    ethmag_url = discussion_links[issue_num]
-                    discussion = f'[EthMag]({ethmag_url})'
-            except (ValueError, TypeError):
-                pass
-        
-        # If recording is still empty and we have an issue number, check for YouTube link from comments
-        # Only for calls from July 2025 onwards (approximately issue #1600+)
-        if recording == '-' and issue_num:
-            try:
-                issue_num_int = int(issue_num)
-                # Check if this issue is from July 2025 onwards (roughly issue #1600+)
-                # Also check if we have a YouTube link for this issue
-                if issue_num_int >= 1600 and issue_num in youtube_links:
-                    youtube_url = youtube_links[issue_num]
-                    recording = f'[video]({youtube_url})'
-            except (ValueError, TypeError):
-                pass
-        
-        # Check for forkcast call page
-        # Handle zero-padding: forkcast uses '040', '048' for ACDT but our data uses '40', '48'
-        forkcast_key = None
-        forkcast_url = None
-        
-        if m['num']:
-            num_str = str(m['num'])
-            # Try exact match first
-            forkcast_key = (mtype, num_str)
-            if forkcast_key in forkcast_calls:
-                forkcast_url = forkcast_calls[forkcast_key]['url']
-            else:
-                # Try zero-padded version (for ACDT: '48' -> '048')
-                if mtype == 'ACDT' and len(num_str) < 3:
-                    padded_num = num_str.zfill(3)
-                    forkcast_key = (mtype, padded_num)
-                    if forkcast_key in forkcast_calls:
-                        forkcast_url = forkcast_calls[forkcast_key]['url']
-                # Also try without zero-padding (for other types that might have padding)
-                elif len(num_str) == 3 and num_str.startswith('0'):
-                    unpadded_num = str(int(num_str))  # Remove leading zeros
-                    forkcast_key = (mtype, unpadded_num)
-                    if forkcast_key in forkcast_calls:
-                        forkcast_url = forkcast_calls[forkcast_key]['url']
-        
-        if forkcast_url:
-            has_forkcast = True
-            
-            # If there's already a summary, flag it but don't change
-            if has_existing_summary:
-                # Flag: both exist (we'll track this but not change the summary)
-                flagged_calls.append({
-                    'type': mtype,
-                    'num': m['num'],
-                    'date': formatted_date,
-                    'summary': summary,
-                    'forkcast': forkcast_url
-                })
-            else:
-                # Add forkcast link to summary
-                summary = f'[forkcast]({forkcast_url})'
-        
-        # Build logs link (after summary is determined)
-        logs_link = '-'
-        
-        # Check if we have our own logs
-        if m.get('has_logs') and m['date']:
-            if m['num']:
-                folder_name = f'Call-{int(m["num"]):03d}_{m["date"]}'
-            else:
-                folder_name = f'Call_{m["date"]}'
-            logs_link = f'[logs](https://github.com/{repo_owner}/{repo_name}/tree/main/{mtype}/{folder_name})'
-        # Check if summary has a notes link to AllCoreDevs-EL-Meetings or AllCoreDevs-CL-Meetings
-        # (those contain both notes and transcripts, so duplicate the link to logs)
-        elif summary != '-' and ('AllCoreDevs-EL-Meetings' in summary or 'AllCoreDevs-CL-Meetings' in summary):
-            # Extract the link from summary and use it for logs (but label it as "logs")
-            link_match = re.search(r'\[notes\]\(([^)]+)\)', summary)
-            if link_match:
-                notes_url = link_match.group(1)
-                logs_link = f'[logs]({notes_url})'
-        
-        table_lines.append(f'| {formatted_date} | {mtype} | {num} | {issue_link} | {summary} | {discussion} | {recording} | {logs_link} |')
+            formatted_date = date
+    else:
+        formatted_date = '-'
     
-    return '\n'.join(table_lines), flagged_calls
+    # Issue link
+    if issue_num:
+        issue_link = f'[#{issue_num}](https://github.com/ethereum/pm/issues/{issue_num})'
+    else:
+        issue_link = '-'
+    
+    # Fetch links from GitHub issue
+    youtube_url, ethmag_url = fetch_links_from_issue(issue_num)
+    
+    # Summary (prefer forkcast)
+    summary = '-'
+    num_str = str(num)
+    
+    # Try to find forkcast link
+    forkcast_key = (meeting_type, num_str)
+    if forkcast_key in forkcast_calls:
+        summary = f'[forkcast]({forkcast_calls[forkcast_key]["url"]})'
+    else:
+        # Try zero-padded version for ACDT
+        if meeting_type == 'ACDT' and len(num_str) < 3:
+            padded_num = num_str.zfill(3)
+            forkcast_key = (meeting_type, padded_num)
+            if forkcast_key in forkcast_calls:
+                summary = f'[forkcast]({forkcast_calls[forkcast_key]["url"]})'
+    
+    # Discussion
+    if ethmag_url:
+        discussion = f'[EthMag]({ethmag_url})'
+    else:
+        discussion = '-'
+    
+    # Recording
+    if youtube_url:
+        recording = f'[video]({youtube_url})'
+    else:
+        recording = '-'
+    
+    # Logs link
+    folder_name = f'Call-{int(num):03d}_{date}'
+    logs_link = f'[logs](https://github.com/{repo_owner}/{repo_name}/tree/main/{meeting_type}/{folder_name})'
+    
+    return f'| {formatted_date} | {meeting_type} | {num} | {issue_link} | {summary} | {discussion} | {recording} | {logs_link} |'
+
 
 def update_readme_table():
-    """Update the README.md file with the latest table"""
+    """Update the README.md file by prepending new meetings only.
+    
+    Returns:
+        bool: True if changes were made, False otherwise
+    """
     readme_path = Path('README.md')
     
     if not readme_path.exists():
@@ -523,42 +216,90 @@ def update_readme_table():
     with open(readme_path, 'r') as f:
         readme_content = f.read()
     
-    # Generate new table
-    new_table, flagged_calls = generate_table_string()
+    # Parse existing meetings
+    existing_meetings = parse_existing_meetings(readme_content)
+    print(f"Found {len(existing_meetings)} existing meetings in README")
     
-    # Report flagged calls (both summary and forkcast exist)
-    if flagged_calls:
-        print(f"\n⚠ Found {len(flagged_calls)} calls with both notes and forkcast (not changed):")
-        for call in flagged_calls:
-            print(f"  {call['type']} {call['num']} ({call['date']}): has notes summary AND forkcast page")
+    # Load processed meetings (ones we have logs for)
+    with open('processed_meetings.json', 'r') as f:
+        processed = json.load(f)
     
-    # Find the table section: # ACD calls\n\nTABLE_CONTENT\n\n
-    pattern = r'(# ACD calls\s*\n\n)(.*?)(\n\n(?:#|\Z))'
-    
-    if re.search(pattern, readme_content, re.DOTALL):
-        replacement = r'\1' + new_table + r'\3'
-        updated_content = re.sub(pattern, replacement, readme_content, flags=re.DOTALL)
+    # Find new ACD meetings
+    new_meetings = []
+    for key, data in processed.items():
+        meeting_type = data.get('meeting_type', '')
+        if meeting_type not in ['ACDE', 'ACDT', 'ACDC']:
+            continue
         
-        # Write updated README
-        with open(readme_path, 'w', encoding='utf-8') as f:
-            f.write(updated_content)
-            f.flush()  # Ensure content is written to disk
-            if hasattr(os, 'fsync'):
-                try:
-                    os.fsync(f.fileno())  # Force sync to disk
-                except:
-                    pass
+        meeting_num = data.get('meeting_num')
+        if not meeting_num:
+            continue
         
-        return True
-    else:
-        print("Could not find table section in README.md")
-        print("Expected: # ACD calls\n\n...TABLE...")
+        if (meeting_type, str(meeting_num)) not in existing_meetings:
+            new_meetings.append({
+                'type': meeting_type,
+                'num': str(meeting_num),
+                'date': data.get('date'),
+                'issue_num': key.split('_')[0]  # Extract issue number from key
+            })
+    
+    if not new_meetings:
+        print("No new meetings to add")
         return False
+    
+    print(f"Found {len(new_meetings)} new meetings to add")
+    
+    # Fetch forkcast data
+    forkcast_calls = fetch_forkcast_calls()
+    
+    # Get repo info
+    repo_owner = os.getenv('GITHUB_UPLOAD_OWNER', 'nixorokish')
+    repo_name = os.getenv('GITHUB_UPLOAD_REPO', 'eth-protocol-transcripts')
+    
+    # Sort new meetings by date (newest first)
+    def sort_key(x):
+        try:
+            date_obj = datetime.strptime(x['date'], '%Y-%m-%d')
+            return -date_obj.timestamp()
+        except:
+            return 0
+    
+    new_meetings.sort(key=sort_key)
+    
+    # Generate rows for new meetings
+    new_rows = []
+    for m in new_meetings:
+        row = generate_row(
+            m['type'], m['num'], m['date'], m['issue_num'],
+            forkcast_calls, repo_owner, repo_name
+        )
+        new_rows.append(row)
+        print(f"  Adding: {m['type']} {m['num']} ({m['date']})")
+    
+    # Find the table header and insert new rows after it
+    # Pattern: # ACD calls\n\n| Date | Type | ... |\n| --- | --- | ... |\n
+    pattern = r'(# ACD calls\s*\n\n\|[^\n]+\|\n\| ---[^\n]+\|\n)'
+    
+    match = re.search(pattern, readme_content)
+    if not match:
+        print("Could not find table header in README.md")
+        return False
+    
+    # Insert new rows after the header
+    header_end = match.end()
+    new_content = (
+        readme_content[:header_end] +
+        '\n'.join(new_rows) + '\n' +
+        readme_content[header_end:]
+    )
+    
+    # Write updated README
+    with open(readme_path, 'w', encoding='utf-8') as f:
+        f.write(new_content)
+    
+    print(f"README.md updated with {len(new_rows)} new rows")
+    return True
+
 
 if __name__ == '__main__':
-    # If run as script, print table (for manual use)
-    table, flagged = generate_table_string()
-    print(table)
-    if flagged:
-        print(f"\n⚠ Found {len(flagged)} calls with both notes and forkcast")
-
+    update_readme_table()
