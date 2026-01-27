@@ -193,73 +193,48 @@ def fetch_ethereum_pm_data():
         # Dictionary to store meeting data: (type, num) -> {date, issue_num, notes, discussion, recording}
         meeting_data = {}
         
-        # Parse Execution Layer table (ACDE)
-        el_pattern = r'<summary>\s*Execution Layer\s*</summary>.*?\| № \| Date \| Agenda \| Notes \| Discussion \| Recording \|\s*\n\|[^|]+\|(.*?)(?=\n</details>|\n<details>)'
-        el_match = re.search(el_pattern, content, re.DOTALL)
-        if el_match:
-            table_content = el_match.group(1)
-            for line in table_content.split('\n'):
-                if not line.strip().startswith('|'):
-                    continue
-                parts = [p.strip() for p in line.split('|')]
-                if len(parts) >= 7:  # | № | Date | Agenda | Notes | Discussion | Recording |
-                    try:
-                        num = parts[1].strip()
-                        if num.isdigit():
-                            date_str = parts[2].strip()
-                            agenda = parts[3].strip()
-                            notes = parts[4].strip()
-                            discussion = parts[5].strip()
-                            recording = parts[6].strip()
-                            
-                            # Parse date
-                            parsed_date = parse_date_from_pm_format(date_str)
-                            
-                            # Extract issue number from agenda link
-                            issue_num = extract_issue_number_from_agenda(agenda)
-                            
-                            meeting_data[('ACDE', num)] = {
-                                'date': parsed_date,
-                                'issue_num': issue_num,
-                                'notes': notes if notes and notes != '-' else '',
-                                'discussion': discussion if discussion and discussion != '-' else '',
-                                'recording': recording if recording and recording != '-' else ''
-                            }
-                    except (IndexError, ValueError) as e:
-                        continue
+        # Parse the unified table format: | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
+        # Find the table after "## Previous AllCoreDevs Meetings"
+        table_pattern = r'## Previous AllCoreDevs Meetings\s*\n\n\|[^\n]+\|\n\| ---[^\n]+\|\n((?:\|[^\n]+\|\n)*)'
+        table_match = re.search(table_pattern, content)
         
-        # Parse Consensus Layer table (ACDC)
-        cl_pattern = r'<summary>\s*Consensus Layer\s*</summary>.*?\| № \| Date \| Agenda \| Notes \| Discussion \| Recording \|\s*\n\|[^|]+\|(.*?)(?=\n</details>|\n<details>)'
-        cl_match = re.search(cl_pattern, content, re.DOTALL)
-        if cl_match:
-            table_content = cl_match.group(1)
+        if table_match:
+            table_content = table_match.group(1)
             for line in table_content.split('\n'):
                 if not line.strip().startswith('|'):
                     continue
                 parts = [p.strip() for p in line.split('|')]
-                if len(parts) >= 7:
+                # Format: | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
+                # parts[0] is empty (before first |), parts[1] is Date, etc.
+                if len(parts) >= 8:
                     try:
-                        num = parts[1].strip()
-                        if num.isdigit():
-                            date_str = parts[2].strip()
-                            agenda = parts[3].strip()
-                            notes = parts[4].strip()
-                            discussion = parts[5].strip()
-                            recording = parts[6].strip()
-                            
-                            # Parse date
-                            parsed_date = parse_date_from_pm_format(date_str)
-                            
-                            # Extract issue number from agenda link
-                            issue_num = extract_issue_number_from_agenda(agenda)
-                            
-                            meeting_data[('ACDC', num)] = {
-                                'date': parsed_date,
-                                'issue_num': issue_num,
-                                'notes': notes if notes and notes != '-' else '',
-                                'discussion': discussion if discussion and discussion != '-' else '',
-                                'recording': recording if recording and recording != '-' else ''
-                            }
+                        date_str = parts[1].strip()  # e.g., "22 Jan 2026"
+                        meeting_type = parts[2].strip()  # e.g., "ACDC", "ACDE", "ACDT"
+                        num = parts[3].strip()  # e.g., "173"
+                        issue_link = parts[4].strip()  # e.g., "[#1874](...)"
+                        summary = parts[5].strip()
+                        discussion = parts[6].strip()
+                        recording = parts[7].strip()
+                        
+                        if not num.isdigit():
+                            continue
+                        if meeting_type not in ['ACDE', 'ACDC', 'ACDT']:
+                            continue
+                        
+                        # Parse date (format: "22 Jan 2026")
+                        parsed_date = parse_date_from_pm_format(date_str)
+                        
+                        # Extract issue number from issue link
+                        issue_match = re.search(r'#(\d+)', issue_link)
+                        issue_num = issue_match.group(1) if issue_match else None
+                        
+                        meeting_data[(meeting_type, num)] = {
+                            'date': parsed_date,
+                            'issue_num': issue_num,
+                            'notes': summary if summary and summary != '-' else '',
+                            'discussion': discussion if discussion and discussion != '-' else '',
+                            'recording': recording if recording and recording != '-' else ''
+                        }
                     except (IndexError, ValueError):
                         continue
         
