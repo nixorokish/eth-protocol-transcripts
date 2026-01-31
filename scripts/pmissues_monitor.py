@@ -115,7 +115,33 @@ def parse_issue_for_meeting_info(issue):
     
     return None
 
+def parse_meeting_datetime(date_str):
+    """Parse date string to datetime. Assumes meetings are ~14:00 UTC if no time given."""
+    if not date_str:
+        return None
+    
+    formats = [
+        '%B %d, %Y', '%B %d %Y', '%b %d, %Y', '%b %d %Y',
+        '%d %B %Y', '%d %b %Y', '%Y-%m-%d', '%m/%d/%Y',
+        '%m-%d-%Y', '%m-%d-%y'
+    ]
+    
+    # Clean up the date string
+    date_str_clean = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_str)
+    date_str_clean = re.sub(r'\s+', ' ', date_str_clean).strip()
+    
+    for fmt in formats:
+        try:
+            dt = datetime.strptime(date_str_clean, fmt)
+            # Assume 14:00 UTC meeting time if not specified
+            return dt.replace(hour=14, minute=0)
+        except:
+            continue
+    return None
+
+
 def get_recently_closed_issues(days_back=7):
+    """Legacy function - fetches only closed issues. Use get_meetings_ready_to_process() instead."""
     token = os.getenv("GITHUB_TOKEN")
     
     url = "https://api.github.com/repos/ethereum/pm/issues"
@@ -169,19 +195,135 @@ def get_recently_closed_issues(days_back=7):
     print(f"  ✓ Found {len(all_closed_issues)} closed issues in date range")
     return all_closed_issues
 
+
+def get_meetings_ready_to_process(days_back=7, buffer_hours=2):
+    """Get meetings where the scheduled time has passed.
+    
+    Instead of requiring issues to be closed, this checks if the meeting's
+    scheduled date/time + buffer has passed. This allows processing meetings
+    even if someone forgets to close the issue.
+    
+    Args:
+        days_back: How far back to look for meetings
+        buffer_hours: Hours after meeting time before we try to process
+    
+    Returns:
+        List of issues that are ready to process
+    """
+    token = os.getenv("GITHUB_TOKEN")
+    url = "https://api.github.com/repos/ethereum/pm/issues"
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    
+    now = datetime.now()
+    cutoff_date = now - timedelta(days=days_back)
+    ready_threshold = now - timedelta(hours=buffer_hours)
+    
+    print(f"  Looking for meetings from {cutoff_date.strftime('%Y-%m-%d')} to {ready_threshold.strftime('%Y-%m-%d %H:%M')}")
+    
+    all_issues = []
+    
+    # Fetch both open and closed issues
+    for state in ["open", "closed"]:
+        page = 1
+        max_pages = 10
+        while page <= max_pages:
+            params = {
+                "state": state,
+                "per_page": 100,
+                "page": page,
+                "sort": "created",
+                "direction": "desc"
+            }
+            
+            print(f"  Fetching {state} issues page {page}...", end=" ")
+            response = requests.get(url, headers=headers, params=params)
+            
+            if response.status_code != 200:
+                print(f"\n✗ GitHub API error: {response.status_code}")
+                break
+            
+            issues = response.json()
+            print(f"got {len(issues)} issues")
+            
+            if not issues:
+                break
+            
+            all_issues.extend(issues)
+            
+            # Stop if we're getting issues older than our cutoff
+            # (they're sorted by created desc)
+            oldest_in_batch = issues[-1]
+            created_at = oldest_in_batch.get("created_at", "")
+            if created_at:
+                try:
+                    created_date = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
+                    if created_date.replace(tzinfo=None) < cutoff_date:
+                        print(f"  Reached issues older than cutoff, stopping {state} fetch")
+                        break
+                except:
+                    pass
+            
+            page += 1
+    
+    print(f"  Fetched {len(all_issues)} total issues, filtering by meeting date...")
+    
+    # Filter to meetings where time has passed
+    ready_issues = []
+    skipped_no_date = 0
+    skipped_future = 0
+    skipped_too_old = 0
+    
+    for issue in all_issues:
+        # First check if this matches a whitelisted meeting
+        meeting_info = parse_issue_for_meeting_info(issue)
+        if not meeting_info:
+            continue
+        
+        date_str = meeting_info.get('date_str')
+        if not date_str:
+            skipped_no_date += 1
+            continue
+        
+        # Parse the meeting date
+        meeting_date = parse_meeting_datetime(date_str)
+        if not meeting_date:
+            skipped_no_date += 1
+            continue
+        
+        # Check if meeting is too old
+        if meeting_date < cutoff_date:
+            skipped_too_old += 1
+            continue
+        
+        # Check if meeting time + buffer has passed
+        if meeting_date > ready_threshold:
+            skipped_future += 1
+            continue
+        
+        ready_issues.append(issue)
+    
+    print(f"  ✓ Found {len(ready_issues)} meetings ready to process")
+    print(f"    (skipped: {skipped_no_date} no date, {skipped_future} future, {skipped_too_old} too old)")
+    
+    return ready_issues
+
 # Test it
 if __name__ == "__main__":
-    closed_issues = get_recently_closed_issues(days_back=30)
-    print(f"Found {len(closed_issues)} recently closed issues\n")
+    print("=== Testing new time-based function ===\n")
+    ready_issues = get_meetings_ready_to_process(days_back=30, buffer_hours=2)
+    print(f"\nFound {len(ready_issues)} meetings ready to process\n")
 
-    matched_meetings = []
-    for issue in closed_issues:
+    for issue in ready_issues:
         meeting_info = parse_issue_for_meeting_info(issue)
         if meeting_info:
-            matched_meetings.append(meeting_info)
-            print(f"✓ Matched: {meeting_info['issue_title']}")
-            print(f"  Possible Meeting IDs: {', '.join(meeting_info['possible_meeting_ids'])}")
-            print(f"  Owners: {', '.join(meeting_info['owners'])}")
-            print(f"  Date: {meeting_info['date_str'] or 'No date found'}\n")
+            print(f"✓ Ready: {meeting_info['issue_title']}")
+            print(f"  Meeting IDs: {', '.join(meeting_info['possible_meeting_ids'])}")
+            print(f"  Date: {meeting_info['date_str'] or 'No date found'}")
+            print(f"  Issue state: {issue.get('state')}\n")
 
-    print(f"\nTotal matched meetings from whitelist: {len(matched_meetings)}")
+    print("\n=== Comparing with old closed-issues function ===\n")
+    closed_issues = get_recently_closed_issues(days_back=30)
+    print(f"Old method found {len(closed_issues)} closed issues")

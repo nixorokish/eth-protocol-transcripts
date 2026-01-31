@@ -11,7 +11,7 @@ from pathlib import Path
 # Add parent directory to path so we can import from scripts
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.pmissues_monitor import get_recently_closed_issues, parse_issue_for_meeting_info
+from scripts.pmissues_monitor import get_recently_closed_issues, get_meetings_ready_to_process, parse_issue_for_meeting_info
 from scripts.zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
 from scripts.download_transcripts import download_meeting_artifacts, extract_meeting_info
 
@@ -176,9 +176,9 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
         log("✗ Please set GITHUB_UPLOAD_OWNER and GITHUB_UPLOAD_REPO in .env")
         return
     
-    # Step 1: Get recently closed issues
-    log("Step 1: Fetching closed GitHub issues...")
-    closed_issues = get_recently_closed_issues(days_back=days_back)
+    # Step 1: Get meetings ready to process (meeting time has passed)
+    log("Step 1: Fetching meetings ready to process...")
+    closed_issues = get_meetings_ready_to_process(days_back=days_back, buffer_hours=2)
     
     matched_meetings = []
     unmatched_issues = []
