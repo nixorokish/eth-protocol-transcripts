@@ -29,25 +29,25 @@ def fetch_forkcast_calls():
         }
     """
     try:
-        url = "https://raw.githubusercontent.com/ethereum/forkcast/main/src/data/calls.ts"
+        url = "https://raw.githubusercontent.com/ethereum/forkcast/main/src/data/protocol-calls.generated.json"
         response = requests.get(url, timeout=10)
         response.raise_for_status()
-        content = response.text
+        calls_data = response.json()
         
         forkcast_calls = {}
-        pattern = r"\{\s*type:\s*['\"](acdc|acde|acdt)['\"],\s*date:\s*['\"](\d{4}-\d{2}-\d{2})['\"],\s*number:\s*['\"](\d+)['\"],\s*path:\s*['\"]([^'\"]+)['\"]\s*\}"
-        
-        for match in re.finditer(pattern, content):
-            call_type = match.group(1).upper()
-            date = match.group(2)
-            number = match.group(3)
-            path = match.group(4)
-            url = f'https://forkcast.org/calls/{path}'
+        for call in calls_data:
+            call_type = call.get('type', '').upper()
+            if call_type not in ['ACDC', 'ACDE', 'ACDT']:
+                continue
+            date = call.get('date', '')
+            number = call.get('number', '')
+            path = call.get('path', '')
+            call_url = f'https://forkcast.org/calls/{path}'
             
             forkcast_calls[(call_type, number)] = {
                 'date': date,
                 'path': path,
-                'url': url
+                'url': call_url
             }
         
         return forkcast_calls
