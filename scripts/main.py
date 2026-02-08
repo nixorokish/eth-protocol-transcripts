@@ -292,7 +292,8 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
             folder_path = download_meeting_artifacts(
                 recording, 
                 zoom_token,
-                override_meeting_num=meeting.get('meeting_number')  # Add this parameter
+                output_dir="downloads",  # Download to downloads/ folder, not root
+                override_meeting_num=meeting.get('meeting_number')
             )
             processed_folders.append(folder_path)
             processed_count += 1
