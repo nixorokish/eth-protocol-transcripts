@@ -8,6 +8,7 @@ meetings_config.py
 scripts/zoom_fetcher.py
 scripts/meetings_config.py
 scripts/test_zoom_token.py
+scripts/notifications.py
 
 # Root-level duplicate scripts (not part of repo)
 debug_github.py
