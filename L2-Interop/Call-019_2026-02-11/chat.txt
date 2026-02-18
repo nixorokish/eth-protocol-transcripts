@@ -1,0 +1,115 @@
+00:03:25	Jude's MeetGeek Notetaker:	I’m recording this meeting with MeetGeek.ai for note taking purposes.
+00:03:34	Rostislav's Fellow Note Taker:	This meeting cannot be recorded because of the Zoom hosts’s settings.
+If you are the host, please enable the “Record to computer files” in your Zoom recording settings.
+00:05:11	Joshua Rudolf:	agenda: https://github.com/ethereum/pm/issues/1899
+00:05:18	Dominik and Rohan's Circleback:	Dominik and Rohan are using Circleback (https://circleback.ai) to record and generate AI meeting notes for this meeting.
+00:05:19	James Beck:	Hi, jamesbeck.eth from ENS Labs — here because I’m excited by the on.eth proposal vote going live soon
+00:06:09	Joshua Rudolf:	Reacted to "Hi, jamesbeck.eth fr..." with 🙏
+00:07:21	Joshua Rudolf:	Agenda for today’s call: https://github.com/ethereum/pm/issues/1899
+00:08:07	Joshua Rudolf:	This will allow interop addresses such as josh.eth@arbitrum or 0x1234…@base
+00:08:20	Kevin | ENS Labs:	Reacted to "This will allow inte..." with 🎉
+00:08:29	Ellie Davidson:	Reacted to "This will allow inte..." with 🎉
+00:08:42	validator.eth:	Reacted to "Hi, jamesbeck.eth ..." with 🙏
+00:08:47	validator.eth:	Reacted to "This will allow in..." with 🎉
+00:09:18	Joshua Rudolf:	https://cid.eth.limo
+00:09:18	Simon Emanuel ses.eth | ENS Labs:	Reacted to "This will allow inte..." with 🔥
+00:10:01	Joshua Rudolf:	Also quick plug for https://interopaddress.com/
+00:11:05	Barnabé Monnot:	Reacted to "This will allow inte..." with 🎉
+00:13:52	Ellie Davidson:	Replying to "Also quick plug for ..."
+
+Wow this website is awesome.
+00:14:45	Ahmad Bitar | Nethermind:	Reacted to "Also quick plug for ..." with 🔥
+00:14:49	Ellie Davidson:	Reacted to "Also quick plug for ..." with 🔥
+00:15:28	Joshua Rudolf:	Definitely a priority for me personally and others at EF… starting off with wallets
+00:15:36	Ellie Davidson:	Reacted to "Definitely a priorit..." with 🎉
+00:15:45	James Beck:	Reacted to "Definitely a priorit..." with 🎉
+00:15:47	Joshua Rudolf:	Reacted to "Wow this website is ..." with ❤️
+00:15:50	Orca 0x:	Reacted to "Definitely a priorit..." with 🎉
+00:16:49	Ahmad Bitar | Nethermind:	Reacted to "Definitely a priorit..." with 👏
+00:17:07	Joshua Rudolf:	Been a long time coming, and super appreciative to Unruggable + Wonderland for jumping in over past couple months
+00:17:12	Ellie Davidson:	Reacted to "Been a long time com..." with ❤️
+00:17:19	Simon Emanuel ses.eth | ENS Labs:	Reacted to "Been a long time com..." with 🔥
+00:17:26	Ahmad Bitar | Nethermind:	Reacted to "Been a long time com..." with 💯
+00:17:39	Ndeto:	Reacted to Been a long time com... with "🔥"
+00:17:43	Ndeto:	Reacted to Definitely a priorit... with "🎉"
+00:18:17	Joshua Rudolf:	ZKsync and others: some stuff seems good, some concerns, but doesn’t matter just ship this finally plz :)
+00:18:42	Orca 0x:	Reacted to "Been a long time com..." with ❤️
+00:19:51	Thomas Clowes:	Related Links:
+
+https://github.com/unruggable-labs/chain-resolver 
+https://discuss.ens.domains/t/executable-register-on-eth-to-the-ens-dao-wallet-and-set-the-resolver/21894 
+https://cid.eth.limo/ 
+https://interopaddress.com/ 
+https://github.com/defi-wonderland/interop-sdk/pull/157 
+https://eips.ethereum.org/EIPS/eip-7930 
+https://ethereum-magicians.org/t/erc-7828-chain-specific-addresses-using-ens/21930
+00:19:53	Barnabé Monnot:	Reacted to "Been a long time com..." with ❤️
+00:20:03	Ahmad Bitar | Nethermind:	Reacted to "Related Links:
+
+http..." with 🔥
+00:20:11	Joshua Rudolf:	Reacted to "Related Links:
+
+http..." with 🔥
+00:20:18	Thomas Clowes:	Reacted to "Related Links:
+
+http..." with 🔥
+00:20:43	Orca 0x:	Reacted to "Related Links:
+
+http..." with 🔥
+00:24:05	Ahmad Bitar | Nethermind:	So the L2 will act as a mempool?
+00:26:21	Orca 0x:	can you link to the whitepaper?
+00:34:10	Ellie Davidson:	What the difference between 7888 and Arbitrum’s cross chain broadcaster?
+00:37:24	Ellie Davidson:	Which TG chat for this?
+00:37:30	Ellie Davidson:	The Intents and Resource locks chat?
+00:39:02	Alon Muroch | SSVLabs:	❤️
+00:45:15	Ellie Davidson:	This seems very similar to CIRC / SCOPE.  What is the difference between this design and those designs?  :)
+00:46:44	Alon Muroch | SSVLabs:	Is the sequencer doing the simulation? And then validity is enforced when they submit a ST?
+00:47:56	Orca 0x:	Replying to "What the difference ..."
+
+it’s the same ERC https://github.com/ethereum/ERCs/pull/897
+00:48:08	Ellie Davidson:	Reacted to "it’s the same ERC ht..." with ❤️
+00:48:18	Ellie Davidson:	Replying to "What the difference ..."
+
+Thanks!
+00:48:25	Jude's MeetGeek Notetaker:	You have a few minutes left for this meeting, as per your calendar. Learn more about what I can do at https://go.meetgeek.ai/learn
+00:48:34	Friederike Ernst:	@Ellie Davidson It is similar to SCOPE! We only saw it today — Martin looked at it in detail I think, he may be able to comment.
+00:48:52	Friederike Ernst:	@Alon Muroch | SSVLabs yes, the block builder does!
+00:49:09	Alon Muroch | SSVLabs:	Block builder needs to be shared between the rollup and L1?
+00:49:20	Ellie Davidson:	Here’s CIRC! Fwiw (admittedly something I worked on, so I’m bias!) https://hackmd.io/uJjk12ltQkO60duUYJtBEQ
+00:49:21	Friederike Ernst:	Yes @Alon Muroch | SSVLabs — should be easy for EVM chains, but might be slightly trickier for non-EVM (which could also compose, because it’s all call based)
+00:49:26	Alon Muroch | SSVLabs:	Reacted to "Yes" with ❤️
+00:49:42	Ellie Davidson:	But it functions the same, the execution table is essentially the mailbox in CIRC.  I actually think SCOPE is better than CIRC, though!
+00:50:15	Ellie Davidson:	All of them work with real-time proving or after the fact the proving.  The proving systems is orthogonal to the protocol design, really.
+00:50:37	Joshua Rudolf:	Reacted to "But it functions the..." with 🙏
+00:50:37	Friederike Ernst:	We’ll check out CIRC as well @Ellie Davidson !
+00:50:41	Ellie Davidson:	Reacted to "We’ll check out CIRC..." with ❤️
+00:51:00	Alon Muroch | SSVLabs:	Awesome!
+00:52:24	Joshua Rudolf:	Reacted to "We’ll check out CIRC..." with ❤️
+00:54:57	Ellie Davidson:	I don’t think real time proving is actually necessary. It improve the UX, but it isn’t fundamentally required if a rollup is willing to have shared settlement.
+00:55:14	Ellie Davidson:	The proving is orthogonal, imo.
+00:55:34	Ellie Davidson:	Real time proving removes reorgs, which is a big benefit.
+00:55:49	Alon Muroch | SSVLabs:	Reacted to "Real time proving re..." with 👍
+00:55:50	Ahmad Bitar | Nethermind:	ZkCloud can prove L1 Blocks for 0.02$ which is quite cheap
+00:56:22	Ellie Davidson:	I think projects like Lighter and Lighter EVM, though, are a good example where you can get SC without realtime proving, since it is reasonable they have shared settlement.
+00:56:34	Ahmad Bitar | Nethermind:	if you are producing blocks as fast and as big as L1, you would be only paying around 50K per year for proving, which is considered very cheap
+00:56:40	Ellie Davidson:	(Though I’d argue Lighter shouldn’t have full SC, but that’s another tangent :) )
+00:56:58	Ahmad Bitar | Nethermind:	Normally, cost is not the Offchain proofs, but the verification of the proof on chain
+00:57:02	Alon Muroch | SSVLabs:	🙏
+00:57:07	Ellie Davidson:	Reacted to "Normally, cost is no..." with ❤️
+00:57:17	Ellie Davidson:	Reacted to "Normally, cost is no..." with 💯
+00:58:38	Joshua Rudolf:	Reacted to "I don’t think real t..." with 👍
+01:00:48	Ahmad Bitar | Nethermind:	here we are talking about the L2 builder (sequencer/preconfer) and not the L1 builder. there is no dependency on L1 builder here at all
+01:02:45	Alon Muroch | SSVLabs:	Great SC progress everyone!
+01:02:51	Ellie Davidson:	Reacted to "Great SC progress ev..." with 💯
+01:02:58	Friederike Ernst:	Reacted to "Great SC progress ev..." with ❤️
+01:03:07	Ellie Davidson:	Replying to "Great SC progress ev..."
+
+SC is making a comeback!
+01:03:16	Joshua Rudolf:	Reacted to "Great SC progress ev..." with 💯
+01:03:18	Joshua Rudolf:	Reacted to "Great SC progress ev..." with ❤️
+01:03:23	Ahmad Bitar | Nethermind:	Reacted to "Great SC progress ev..." with 🙏
+01:03:28	Joshua Rudolf:	Reacted to "SC is making a comeb..." with 😅
+01:03:32	Ahmad Bitar | Nethermind:	Reacted to "SC is making a comeb..." with 💯
+01:04:07	Friederike Ernst:	Reacted to "SC is making a comeb..." with 🚀
+01:05:59	Ahmad Bitar | Nethermind:	To clarify another point here, there no point in this process that the sequencer/preconfer or anyone but the user have custody of the funds. this is done fully truslessly. the role of the preconfer/sequencer here is to facilitate all this in a single L1 transaction. this facilitation is not a requirement and can be done directly by the user himself.
+01:07:15	Fateme Heidari:	Thanks

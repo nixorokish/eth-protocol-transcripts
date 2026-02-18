@@ -1,0 +1,1758 @@
+WEBVTT
+
+1
+00:03:06.230 --> 00:03:07.730
+Joshua Rudolf: Hey, Lou. Hey, everybody.
+
+2
+00:03:55.170 --> 00:03:57.769
+Joshua Rudolf: We'll get started in a minute or two.
+
+3
+00:04:28.450 --> 00:04:33.339
+Joshua Rudolf: Give folks one more minute, and then we'll… Kick things off.
+
+4
+00:04:39.830 --> 00:04:43.039
+Joshua Rudolf: Good to see some faces and names I haven't seen in a while.
+
+5
+00:05:15.450 --> 00:05:31.070
+Joshua Rudolf: All right, I think we can get started. Welcome to the L2 Interop Working Group. This is call number 19 in the series, and it is issue 1899 in the PM repo for anyone watching the recording.
+
+6
+00:05:31.690 --> 00:05:41.129
+Joshua Rudolf: Cool. We can kick things off. I've dropped the agenda in the chat, also in the Telegram group. Agenda has shifted a little bit. We will start off with…
+
+7
+00:05:41.130 --> 00:05:52.089
+Joshua Rudolf: An update on the on-chain registry for chain IDs using on.eth. We have the Unruggable team and Thomas whenever you are ready.
+
+8
+00:05:54.160 --> 00:05:58.809
+Thomas Clowes: Perfect, thank you. I've just requested screen sharing, if that's possible.
+
+9
+00:05:58.810 --> 00:06:00.140
+Joshua Rudolf: Yeah, try one more time now.
+
+10
+00:06:00.580 --> 00:06:01.630
+Thomas Clowes: Good.
+
+11
+00:06:07.660 --> 00:06:14.870
+Thomas Clowes: Okay… Perfect. Is that working? Can everyone see that?
+
+12
+00:06:14.870 --> 00:06:15.560
+Joshua Rudolf: Perfect.
+
+13
+00:06:16.430 --> 00:06:41.350
+Thomas Clowes: Perfect. Yeah, I'm Tom from, Unruggable. We're ENS service providers, and we've been working with the team, at Wonderland, and Josh and, Barnaby at the EF on this, chain registry resolver, and the associated specifications, 7930 for the binary interoperable address, and 7828
+
+14
+00:06:41.350 --> 00:06:44.370
+Thomas Clowes: It's for a more human-readable form.
+
+15
+00:06:44.910 --> 00:06:58.249
+Thomas Clowes: This update is, I'll keep it brief. We have momentum at the moment, things are moving forward. There's been a lot of conversations going on behind the scenes, and finally, it looks like this is all coming together.
+
+16
+00:06:58.500 --> 00:07:23.420
+Thomas Clowes: So the chain resolver code is complete and finalized. I can share a link to that on the chat. I'll do that afterwards. If I change my tabs, I'm assuming that people can see the changes as well. The executable proposal, to register the on.eth's ense name and to
+
+17
+00:07:23.420 --> 00:07:37.269
+Thomas Clowes: the resolver to the on-chain registry resolver is in motion, so I'm hoping that within the next 24 hours or so, we will have that up for an executable proposal.
+
+18
+00:07:37.380 --> 00:08:01.980
+Thomas Clowes: the timelines for those are 7 days, essentially, and there has been complete support from the ENS community, so I don't anticipate there being any issues in terms of getting that passed. I will additionally share that link, such that if anyone wants to join the ENS forum and share their
+
+19
+00:08:01.980 --> 00:08:05.240
+Thomas Clowes: Insights and opinions, please, please do so.
+
+20
+00:08:05.570 --> 00:08:20.699
+Thomas Clowes: There is also, a companion associated post on the related specs on ETH Magicians. Again, I will get that link and share that if anyone wants to comment there.
+
+21
+00:08:21.130 --> 00:08:44.639
+Thomas Clowes: In addition to that, we've been, kind of, to get to this point, we have set up an experimental registry resolver on mainnet on cid.eth, and we've been playing around with that and testing that that is fully functional, and we… the few issues that we did encounter have obviously been fixed.
+
+22
+00:08:44.640 --> 00:08:48.160
+Thomas Clowes: And now everything, is in…
+
+23
+00:08:48.160 --> 00:09:11.539
+Thomas Clowes: a good state, hence why we're moving this forward to the productionized setup on the on.eth second-level domain. So, if people want to just have a play around with the fun little additional user interface that we set up, you can visit cid.eth.limo.
+
+24
+00:09:11.540 --> 00:09:30.360
+Thomas Clowes: And you can have a play. That pulls data from that experimental registry and displays it in line, and that is simply a friendly user interface to allow people to visualize what is contained within that registry.
+
+25
+00:09:30.830 --> 00:09:37.309
+Thomas Clowes: In practice, we anticipate that people will be using the registry for
+
+26
+00:09:37.310 --> 00:09:59.530
+Thomas Clowes: chain-specific address resolution, so that's, example.eth at base, whereby that base label gets resolved to a 7930 interoperable address, which is this binary address here, and then you can utilize that, to, resolve
+
+27
+00:09:59.530 --> 00:10:05.789
+Thomas Clowes: the ENS name, which is the… the first portion of that address.
+
+28
+00:10:06.150 --> 00:10:09.540
+Thomas Clowes: Because it's been queried, a few times.
+
+29
+00:10:09.540 --> 00:10:29.970
+Thomas Clowes: some points of notes in terms of, kind of, how we architected that registry. There will also be aliases, so if there are multiple labels by which a chain is represented, OP and Optimism, for example, they will all point to the same canonical underlying metadata.
+
+30
+00:10:30.260 --> 00:10:47.839
+Thomas Clowes: We, are still in the process and conversing about exactly the process behind how we're going to allocate these names, but, the kind of anticipated plan is a multi-sig made up of industry participants,
+
+31
+00:10:47.840 --> 00:11:08.909
+Thomas Clowes: probably people from the ES, people from ENS, and if you are interested, we're open to kind of having that conversation and making sure that, kind of, everyone's needs are met in that regard, because I appreciate that if people are relying on this for their chain metadata, it needs to be appropriately secured.
+
+32
+00:11:09.870 --> 00:11:25.379
+Thomas Clowes: I imagine that Orca from Wonderland is on the call. We've been working closely with them, and they've been doing fantastic work as well. I think he's talking about open intents after this, but I'll briefly mention
+
+33
+00:11:25.460 --> 00:11:38.429
+Thomas Clowes: is interopaddress.com, which is a website that they've set up that looks super cool and, additionally provides a lot of, kind of, context and insight into how this works.
+
+34
+00:11:38.430 --> 00:11:49.759
+Thomas Clowes: But this animation at the top, Vitalik.eth at, followed by the chain label, which will resolve the metadata from that chain registry, is
+
+35
+00:11:49.760 --> 00:11:51.919
+Thomas Clowes: Particularly cool to me.
+
+36
+00:11:52.170 --> 00:11:53.880
+Thomas Clowes: And,
+
+37
+00:11:53.890 --> 00:12:17.000
+Thomas Clowes: Orca recently told me that their SDK, which is linked from here, now has experimental support for that experimental chain registry. So, if you want to kind of begin integrating this into your products, you can now kind of play around with that experimental registry by setting a flag and,
+
+38
+00:12:17.200 --> 00:12:29.299
+Thomas Clowes: in 7 days or so, we'll be in a position to add the functionality to use the real productionized, on-chain registry.
+
+39
+00:12:32.070 --> 00:12:43.219
+Thomas Clowes: Another question that I've been asked, the on-chain registry is a registry for all metadata related to a blockchain.
+
+40
+00:12:43.220 --> 00:13:07.929
+Thomas Clowes: The intention is that ownership would be handed over to control the metadata associated with a particular chain identifier to the multisig or equivalent associated with that chain operator. Again, we're working on defining the process to make sure that we actually do hand off that ownership to the correct people and teams.
+
+41
+00:13:08.120 --> 00:13:18.800
+Thomas Clowes: But ultimately, as well as the 7930 identifier, which we're pushing as, hopefully the future,
+
+42
+00:13:18.800 --> 00:13:40.619
+Thomas Clowes: way of kind of representing chain-specific addresses, this registry resolver will be able to be utilized to share any and all metadata associated with a chain. So, this is the experimental registry, which just has some example data to demonstrate that.
+
+43
+00:13:41.150 --> 00:13:51.980
+Thomas Clowes: That was quite quick. I'm happy to answer any questions, and I will share any links that I just outlined on the chat.
+
+44
+00:13:55.600 --> 00:13:59.080
+Joshua Rudolf: Thanks so much. Any questions for Tom?
+
+45
+00:14:05.360 --> 00:14:07.429
+Joshua Rudolf: Super clear, no questions?
+
+46
+00:14:07.430 --> 00:14:09.829
+James Beck: I… I guess I have a question, so…
+
+47
+00:14:10.230 --> 00:14:23.700
+James Beck: Thomas, I saw the interopaddress.com Wonderland site, and I think it's really interesting. I like that little demo showing you… you could put jamesbeck.eth and put chain base, and then it shows you what the interoperable name format is.
+
+48
+00:14:24.390 --> 00:14:28.439
+James Beck: Help me just understand next steps for this to be something that
+
+49
+00:14:28.570 --> 00:14:31.219
+James Beck: everyday Ethereum users can take advantage of.
+
+50
+00:14:31.450 --> 00:14:36.680
+James Beck: Is it required that… People, you know, wallet companies.
+
+51
+00:14:36.870 --> 00:14:52.100
+James Beck: implement the Interop SDK? Is this something that the Ethereum Foundation, Josh, is, like, really pushing as a wallet standard? Oftentimes, ENS is only as powerful as its implementation, and…
+
+52
+00:14:52.340 --> 00:15:03.440
+James Beck: not all wallets are implementing ENS the same way, so I'm curious, kind of, like, how this goes from research to idea to now executable to then actually useful for people.
+
+53
+00:15:05.120 --> 00:15:18.009
+Thomas Clowes: Yeah, absolutely. I'm sure that Josh and Orca can potentially add context from their side, but in terms of my side, and obviously your side, coming from ENS,
+
+54
+00:15:18.650 --> 00:15:30.080
+Thomas Clowes: I think, ultimately, with specification development and the tooling that supports those specifications, Yeah, getting,
+
+55
+00:15:30.080 --> 00:15:52.960
+Thomas Clowes: a specification complete and signed off and merged in is the first step of the puzzle, and then, getting people to want to use it is the next stage. And in many respects, that's why, kind of, this has taken longer than we originally anticipated, because ourselves and the Wonderland team and the team at the EF have been
+
+56
+00:15:52.960 --> 00:16:05.700
+Thomas Clowes: Debating and discussing exactly how we can, kind of, format these, specs so they're accessible whilst also being useful to, the widest audience possible.
+
+57
+00:16:05.740 --> 00:16:27.120
+Thomas Clowes: Ultimately, we think that we've got there, and we've been conversing with the people that will be utilizing, well, this, and if there's anyone considering utilizing this, we're happy to kind of converse with them and discuss implementation, but at the end of the day, yeah, it does come down to,
+
+58
+00:16:27.440 --> 00:16:45.019
+Thomas Clowes: wallet teams and DAP teams, implementing these specifications and taking advantage of the, the on-chain registry resolver. And in that regard, I spent the past week, writing up, kind of.
+
+59
+00:16:45.020 --> 00:17:00.669
+Thomas Clowes: Some fairly complete and thorough documentation for all of its functionality, and we're hopeful that, kind of, by providing, really in-depth specifications and documentation, and additionally supporting with integrations.
+
+60
+00:17:00.670 --> 00:17:09.319
+Thomas Clowes: Hopefully, kind of, the pitch sells itself, and people will want to, and then it will just grow naturally, we're hoping.
+
+61
+00:17:14.630 --> 00:17:15.520
+Joshua Rudolf: Yeah, Prem?
+
+62
+00:17:16.700 --> 00:17:21.419
+premm.eth: But yes, I just wanted to, say, it was good to see you last week, Josh.
+
+63
+00:17:21.579 --> 00:17:37.869
+premm.eth: We were in, in Malaysia together at the L2 event, and I was able to have a conversation, or a presentation of 79307828 in the on-chain registry, and I'd generally say that the feedback was very positive.
+
+64
+00:17:37.950 --> 00:17:42.340
+premm.eth: I think, from ZkSync, they said, you know, just ship.
+
+65
+00:17:42.450 --> 00:17:47.790
+premm.eth: And, they were, they were very supportive, and, there were some other L2s there as well that, that,
+
+66
+00:17:48.060 --> 00:17:59.860
+premm.eth: we're supportive, so I'd say that the feedback is good, and the idea at this point that I've talked with Josh about is the idea that we just need to ship, and we have a kind of a short,
+
+67
+00:18:00.120 --> 00:18:13.559
+premm.eth: window, I think, to get the most bang for our buck in getting the news out, so if we can all coordinate and work together, I think it would be great to ship something and see how far this project can go, and hopefully it can be successful if we all work together.
+
+68
+00:18:23.360 --> 00:18:24.050
+Joshua Rudolf: Awesome.
+
+69
+00:18:24.520 --> 00:18:34.440
+Joshua Rudolf: Cool, and anyone, feel free, please, to, I think, Thomas and Prem and myself would love to hear from more people. So yes, please, please reach out.
+
+70
+00:18:36.790 --> 00:18:37.470
+Joshua Rudolf: Cool.
+
+71
+00:18:38.180 --> 00:18:40.989
+Joshua Rudolf: Let's, keep going, then.
+
+72
+00:18:43.270 --> 00:19:02.340
+Joshua Rudolf: Thank you, yeah, thank you, Thomas. Next up on the agenda, we have, Palace here to share some work they have underway on 7702, combining 7702 and 5792 to execute multi-step cross-chain actions.
+
+73
+00:19:10.040 --> 00:19:15.029
+Palis: Hey guys, I'll request screen share here.
+
+74
+00:19:19.160 --> 00:19:20.930
+Joshua Rudolf: Okay, there you go.
+
+75
+00:19:22.490 --> 00:19:23.820
+Palis: Alright, so…
+
+76
+00:19:24.520 --> 00:19:36.959
+Palis: We have a light paper, and if anyone is curious to dive into more of the technicals here, feel free to reach out to me on Telegram. You can scroll up a bit, I'm in the interop group.
+
+77
+00:19:37.160 --> 00:19:41.760
+Palis: But I'll just briefly present the,
+
+78
+00:19:42.210 --> 00:19:46.269
+Palis: deck to give you an overview of what we've been working on here at Effortless.
+
+79
+00:19:46.820 --> 00:19:49.740
+Palis: Just confirming everyone can see my screen still.
+
+80
+00:19:51.170 --> 00:19:52.110
+Joshua Rudolf: Yeah, we can.
+
+81
+00:19:52.880 --> 00:19:53.810
+Palis: Okay.
+
+82
+00:19:54.190 --> 00:20:05.109
+Palis: So, what we're looking to tackle is, the high-friction UX for… cross L2… L1 to L2,
+
+83
+00:20:05.230 --> 00:20:18.110
+Palis: User experience for retail users, specifically for new users who are not as familiar, and haven't been as involved with crypto over the years.
+
+84
+00:20:18.330 --> 00:20:22.020
+Palis: So we had an example flow,
+
+85
+00:20:22.190 --> 00:20:28.619
+Palis: someone searching for how to bridge to base on Google, and how they would actually get there.
+
+86
+00:20:28.750 --> 00:20:38.570
+Palis: And we're looking to reduce that friction drastically, so that while maintaining self-custody, and trustlessness.
+
+87
+00:20:39.270 --> 00:20:43.010
+Palis: so that… Decentralized self-custody.
+
+88
+00:20:43.660 --> 00:20:54.850
+Palis: can compete on UX with the centralized solutions that are coming out for cross-chain experience for retail users.
+
+89
+00:20:55.240 --> 00:21:02.270
+Palis: The way that we do this, and here you can see that, we allow…
+
+90
+00:21:02.600 --> 00:21:07.850
+Palis: Complex, multi-step actions, and, with…
+
+91
+00:21:08.020 --> 00:21:14.920
+Palis: single-click approvals. That is the goal here, and…
+
+92
+00:21:15.820 --> 00:21:22.920
+Palis: The way we do that is leveraging 7702 and then also, 5792.
+
+93
+00:21:23.010 --> 00:21:35.869
+Palis: To make it user-friendly, to allow existing wallets, also applications that want to build on top of this standard, or any cross-chain aggregators.
+
+94
+00:21:36.460 --> 00:21:38.000
+Palis: To be able to…
+
+95
+00:21:38.110 --> 00:21:55.280
+Palis: provide an experience to users with their existing EOA wallets that users currently use, that is more in line with the experience that centralized, providers are now providing retail users, which are starting to see adoption.
+
+96
+00:21:55.690 --> 00:22:05.580
+Palis: So… we're using the two EIPs to allow
+
+97
+00:22:06.180 --> 00:22:20.669
+Palis: these users to execute complex multi-step actions, so you can bridge to an L2 and then do a swap, or bridge to an L2, do a swap, and then put it into a staking
+
+98
+00:22:20.790 --> 00:22:35.710
+Palis: contract or a lending contract, all in a single transaction. We ourselves will be building a product on top of this for retail in order to leverage the technology, but we also wanted to provide it as
+
+99
+00:22:36.100 --> 00:22:38.110
+Palis: Basically, an open standard.
+
+100
+00:22:38.590 --> 00:22:49.730
+Palis: That, is separate from the monetized product that anyone can use to improve the decentralized, trustless, self-custody experience.
+
+101
+00:22:50.120 --> 00:22:58.790
+Palis: The architecture we're using, in addition to the EIP7702 and 59… 5792, is…
+
+102
+00:22:58.980 --> 00:23:03.950
+Palis: we are going to have an L2 for purely record keeping, so…
+
+103
+00:23:04.390 --> 00:23:12.540
+Palis: the L2 that we are going to have is not intended to have anything on it, outside of record keeping of
+
+104
+00:23:12.890 --> 00:23:16.699
+Palis: Cross-chain… chain transactions, so that there is a…
+
+105
+00:23:17.060 --> 00:23:26.610
+Palis: proof in one place, outside of the various chains involved, or L2s involved.
+
+106
+00:23:26.930 --> 00:23:29.460
+Palis: And then we believe this is going to…
+
+107
+00:23:29.710 --> 00:23:39.980
+Palis: support, various applications on top of it, various use cases on top of it. We will be building on top of it ourselves.
+
+108
+00:23:40.110 --> 00:23:53.520
+Palis: But yeah, that's… that's the introduction. We're… we are going to be using solvers to optimize certain parts of transactions, and using an array of Intents for…
+
+109
+00:23:53.880 --> 00:24:04.290
+Palis: other parts of transactions. We've been working with, Banarbe, and also I spoke with Alex a bit on this, and, yeah, we'll be…
+
+110
+00:24:04.400 --> 00:24:09.020
+Palis: Sourcing feedback as we, build this out.
+
+111
+00:24:09.330 --> 00:24:16.920
+Palis: We're currently working on the architecture to make sure it makes the most sense in terms of how we are,
+
+112
+00:24:17.120 --> 00:24:26.709
+Palis: creating the logic for building out these transactions. But we want to, you know, create an experience where retail users can
+
+113
+00:24:27.100 --> 00:24:29.710
+Palis: express in…
+
+114
+00:24:30.010 --> 00:24:39.279
+Palis: layman terms, what they want, potentially in our product to an AI agent, and that AI agent will create a
+
+115
+00:24:39.380 --> 00:24:42.449
+Palis: Complex transaction for them, where they need to…
+
+116
+00:24:42.950 --> 00:24:58.850
+Palis: Usually do one signature, and then are able to execute that transaction themselves from their self-custody wallet, rather than transferring their funds to a third-party smart wallet, or
+
+117
+00:24:58.910 --> 00:25:09.259
+Palis: a third-party AI agent, where the agent is managing their money. In this solution, they will completely maintain self-custody.
+
+118
+00:25:09.480 --> 00:25:13.350
+Palis: Yeah, so that's… that's what we're working on.
+
+119
+00:25:13.460 --> 00:25:18.939
+Palis: If you're interested in learning more, feel free to reach out. We would love to…
+
+120
+00:25:19.290 --> 00:25:21.020
+Palis: You know, walk you through…
+
+121
+00:25:21.140 --> 00:25:30.170
+Palis: What we're building more in depth, and get feedback, and, see if this makes the most sense for who we're building it for.
+
+122
+00:25:30.280 --> 00:25:43.620
+Palis: our plans is not to make this protocol competitive with any existing L2, any existing wallets, or applications, so that it's a value add to the ecosystem that
+
+123
+00:25:43.960 --> 00:25:52.639
+Palis: You know, other… other applications can build on top of, wallets can potentially, integrate for their users, etc.
+
+124
+00:25:53.220 --> 00:25:58.220
+Palis: And happy to answer any questions if anyone has any, here.
+
+125
+00:26:01.880 --> 00:26:03.529
+Joshua Rudolf: Any questions for Palace?
+
+126
+00:26:07.060 --> 00:26:13.080
+Ahmad Bitar | Nethermind: I added one in the chat. I asked about, will the L2 act, like, as a mempool?
+
+127
+00:26:15.240 --> 00:26:23.240
+Palis: So the L2 will act purely for, record keeping, so we have…
+
+128
+00:26:23.570 --> 00:26:38.590
+Palis: Atomic intent protocol, which is where the solvers will bid for a transaction and, try to provide the most efficient path to solving the transaction.
+
+129
+00:26:38.690 --> 00:26:44.160
+Palis: So that would be, separate from VL2, which was purely for…
+
+130
+00:26:44.470 --> 00:26:50.900
+Palis: You know, record keeping the various transactions, the confirmations, as they happen on the various chains.
+
+131
+00:26:54.730 --> 00:27:00.580
+Ellie Davidson: So, I… I still don't quite understand. So, is the L2 kind of used for, like, the settlement of the intents?
+
+132
+00:27:03.220 --> 00:27:13.970
+Palis: The L2 is used as a place where all of the various confirmations of transactions on the various L2s is,
+
+133
+00:27:14.320 --> 00:27:21.460
+Palis: Like, kept so that, you know, because there's going to be the confirmations of…
+
+134
+00:27:21.580 --> 00:27:35.640
+Palis: a transaction on Ethereum, on Base, or whatever L2, and those are all in different places, and so the L2 seeks to be a place, to represent all of those
+
+135
+00:27:36.010 --> 00:27:41.709
+Palis: so that… It, you know, tracks the finality across the various chains, and so…
+
+136
+00:27:41.950 --> 00:27:45.829
+Palis: That's… that's what… in one place, you know.
+
+137
+00:27:47.280 --> 00:27:53.950
+Ellie Davidson: I see, so it's like, you're kind of, like, mirroring the transactions on all of these other L2s to the effortless L2.
+
+138
+00:27:54.810 --> 00:27:55.510
+Palis: Yes.
+
+139
+00:27:55.960 --> 00:28:01.810
+Palis: Yeah, so it's a pretty simple purpose chain, it's purely for record keeping, yeah.
+
+140
+00:28:12.200 --> 00:28:15.240
+Palis: Thank you guys for… Mind me present here.
+
+141
+00:28:15.480 --> 00:28:17.500
+Joshua Rudolf: Awesome, yeah, thank you, Pallas, for coming on.
+
+142
+00:28:18.590 --> 00:28:21.929
+Joshua Rudolf: Cool, and anyone, yeah, reach out on Telegram to Palace.
+
+143
+00:28:23.510 --> 00:28:32.369
+Joshua Rudolf: Cool, up next, we have a quick round of updates on the Open Intents Framework from Orca and the Wonderland team.
+
+144
+00:28:32.570 --> 00:28:33.350
+Joshua Rudolf: Okay.
+
+145
+00:28:35.890 --> 00:28:36.660
+Orca 0x: Hello.
+
+146
+00:28:36.850 --> 00:28:44.440
+Orca 0x: Yeah, let me share… Firstly, can you see… This guy…
+
+147
+00:28:44.440 --> 00:28:45.110
+Joshua Rudolf: Yes.
+
+148
+00:28:45.900 --> 00:28:55.430
+Orca 0x: Perfect. So, let me see… The slang… outside this.
+
+149
+00:28:57.780 --> 00:29:02.480
+Orca 0x: Perfect. So, quick update, I guess, on the IF,
+
+150
+00:29:03.900 --> 00:29:14.309
+Orca 0x: I guess it goes without saying, DRF is, like, collective work from many, many teams. I think there are, lots here. I guess I'd specifically call out OpenZeppelin, Lifi,
+
+151
+00:29:14.310 --> 00:29:25.099
+Orca 0x: and Uniswap, for some of this, recent work, as well as, of course, the, EF, but lots of people have been involved, and mainly just presenting,
+
+152
+00:29:25.370 --> 00:29:43.679
+Orca 0x: the collective effort. That being said, the Open Intents framework, I will, quick overview, so it's a full-stack framework for intent-based cross-chain interop, focused, obviously, on L2s. The idea is to bring Intents to all of Ethereum as a best-in-class technology stack, and an open-source public good,
+
+153
+00:29:43.730 --> 00:29:48.370
+Orca 0x: What does that actually mean? It means making it really simple to set up,
+
+154
+00:29:48.370 --> 00:30:12.089
+Orca 0x: set up intents on a chain, and to run ongoing operations. We want to avoid vendor lock-in, want to have this open, open interfaces where, folks aren't having to pick one particular vendor. Overall, we want to reduce fragmentation and deepen liquidity, while giving people modular settlement options, and in particular, we want to highlight trust-minimized options as well, so…
+
+155
+00:30:13.000 --> 00:30:22.539
+Orca 0x: there's quite a lot going on there, and I guess we wanted to go into what that means in practice, and I guess there's a mixture between, sort of, standards and specifications and useful software.
+
+156
+00:30:22.690 --> 00:30:41.769
+Orca 0x: So just to orient, and this isn't a description of every type of OIF flow, but it's certainly, indicative. You start on the left with the user, they'll request a quote, those quotes will go to solvers who'll return quotes, the best quote will be selected, that intent will be submitted, and then the solver will
+
+157
+00:30:41.830 --> 00:30:59.249
+Orca 0x: fill that quote, and then they'll prove that they've done what they were required to do, that proof will be validated, and the assets will be released. And that essentially is the full, sort of, life cycle of an intent. From a user's perspective, it's quite interesting. Obviously, they're mostly just interested in submitting their intent and then getting their output assets.
+
+158
+00:30:59.460 --> 00:31:17.519
+Orca 0x: But there's obviously all this other stuff that happens under the hood that, lots of people here will be aware of. So I thought it would be interesting just to break down the different parts and progress across this flow. So, starting with, I guess, with the RC7683. So this is an interface, a standardized interface for cross-chain trade execution systems.
+
+159
+00:31:17.520 --> 00:31:34.040
+Orca 0x: And people will be familiar, I guess, with the standardized event, which was initially defined, and, people may not be aware of the, recent, or actually, quite ongoing effort to essentially revisit this standard to move away from,
+
+160
+00:31:34.040 --> 00:31:41.159
+Orca 0x: standardized events, and you can look into the details of why that wasn't the best fit to standardize on-chain resolvers.
+
+161
+00:31:41.340 --> 00:31:48.319
+Orca 0x: And so, this essentially takes a standard which caught, the popular imagination or collective imagination quite a lot,
+
+162
+00:31:48.330 --> 00:32:10.420
+Orca 0x: but which hasn't gained the traction that we might have hoped, so I'd encourage people to review the ETH Magician's post and provide feedback and engage with that, because we think that it's a new pattern. This resolver-based pattern is a great way for lots of protocols to be supported in a way that the event-based approach didn't manage to accomplish. So, that's essentially the representation.
+
+163
+00:32:11.540 --> 00:32:19.700
+Orca 0x: part of the flow. We've then got this big chunk over here, which is the OIF contracts. So this is an open source repository, so these are modular smart contracts for
+
+164
+00:32:19.700 --> 00:32:33.119
+Orca 0x: Intent settlement consisting of settlers, and oracles, essentially, managing all of this part, which says, okay, was the intent filled? Did they do what they said they were going to do? And repaying the solvers.
+
+165
+00:32:33.200 --> 00:32:44.839
+Orca 0x: And so these contracts have been audited, and they're ready for use that's worked on by OpenZeppelin through a large part of last year, and these are largely good to go. There are still, opportunities to add additional types of oracles and,
+
+166
+00:32:45.080 --> 00:33:02.149
+Orca 0x: And there's still some iteration in terms of making these support more, like, essentially, more things, maybe multiple inputs, multiple outputs, but the contracts are good to go. The broadcaster is one specific contract which is, underway at the moment, or being worked on at the moment.
+
+167
+00:33:02.150 --> 00:33:14.990
+Orca 0x: So this is a reference implementation for ELC7888, which is essentially a storage-proof-based way to pass messages from one chain to another, where they share common ancestors. This is really the roll-up.
+
+168
+00:33:15.090 --> 00:33:38.029
+Orca 0x: Like, in the rollout context, and this is a callback that we want oracles, and we want, ideally, to have trust-minimized oracles, so the broadcaster is a trust-minimized option, and these contracts are currently being ordered, again, this work by the OpenZeppelin team. Next steps for this would be integrating the broadcaster into the OIF deployment process, so new networks don't need to depend on any external oracles to get started with the OIF.
+
+169
+00:33:38.500 --> 00:33:45.350
+Orca 0x: The OIF specs, so again, coming up for here, this is at the other end of the, life cycle, so…
+
+170
+00:33:45.770 --> 00:33:57.239
+Orca 0x: This is essentially standardizing the interface between the user when they're requesting a quote, and then also when they're maybe broadcasting a quote, if they're doing that off-chain. So again, this is a,
+
+171
+00:33:57.850 --> 00:34:06.130
+Orca 0x: An open… an open repository, which standardized quote and quoting, intent submission, and asset discovery.
+
+172
+00:34:06.650 --> 00:34:25.119
+Orca 0x: we're currently implementing these, both on the client side and on the solver side, which we'll see in a second, and we're testing and hardening them for robustness and usability. We'd encourage more and more folks to review the specs, so if you're an interop provider, be interested in your take, particularly to weigh in on some recent changes, so…
+
+173
+00:34:25.120 --> 00:34:32.220
+Orca 0x: We've moved away from some of the binary representations that Thomas mentioned, so the 7930, to the more human-legible
+
+174
+00:34:32.219 --> 00:34:42.589
+Orca 0x: text identifiers, at the API level, rather than… the smart contracts are still, 7930 addresses, but, again, this was based on feedback that it was quite hard to integrate,
+
+175
+00:34:42.840 --> 00:34:47.199
+Orca 0x: Hard, hard to integrate when you didn't have slightly readable,
+
+176
+00:34:47.300 --> 00:34:57.980
+Orca 0x: essentially addresses and chain identifiers. So, we'd encourage folks, who, who are interested in this, part of the life cycle, to take a look and familiarise themselves.
+
+177
+00:34:57.980 --> 00:35:09.970
+Orca 0x: Finally, or not quite finally, but the solver. So this is essentially the reference implementation of the OIF specs, and it's also an out-of-the-box solver that can be used to provide intent-based liquidity.
+
+178
+00:35:09.970 --> 00:35:26.490
+Orca 0x: This is available for testing, it's on Arbitrum Base and OP with mock USDC tokens, and OpenZeppelin are also working on a user-friendly onboarding flow for L2s to set up an OIF solver for their network, so that's the current, current priority, so essentially making it work out the box with,
+
+179
+00:35:26.650 --> 00:35:32.429
+Orca 0x: With minimal configuration, obviously people could run solvers today, but this is trying to make things more user-friendly.
+
+180
+00:35:32.580 --> 00:35:49.900
+Orca 0x: And finally, we come to the user end of the spectrum, which is the interop SDK, so this is an interoperability toolkit for wallet and app developers. Thomas mentioned the addresses module, so this supports interoperable addresses, but, here we're most interested in the
+
+181
+00:35:50.070 --> 00:36:00.719
+Orca 0x: The cross-chain module, which essentially implements the OIF specs interface, allows you to interact with OIF-compliant protocols and also some others. We're really interested, now that,
+
+182
+00:36:01.360 --> 00:36:14.789
+Orca 0x: we've got, like, the initial functionality in place to talk to wallet apps and other teams interested in adding cross-chain capabilities, so, this is, and we'll also be releasing some demos and the initial version and documentation of this, imminently.
+
+183
+00:36:16.410 --> 00:36:30.719
+Orca 0x: And so that was a whistle-stop tour, there was quite a lot there. Overall, we're at a point where we've got a lot of really great stuff we want to talk to people, whether those are L2s and roll-up as a service providers, in terms of getting the OIF up and running on
+
+184
+00:36:30.720 --> 00:36:38.920
+Orca 0x: your chains, solvers, we're interested in talking to them about getting started with filling OIF intents and starting to think about these interfaces and, how to integrate with, whether it's at the
+
+185
+00:36:38.920 --> 00:36:47.879
+Orca 0x: 7683 level, or, at the API interface level. Interop protocols and infra providers, how to leverage the OIF, how to think about it,
+
+186
+00:36:48.000 --> 00:37:08.860
+Orca 0x: We're obviously interested in folks maybe applying or building in line with the specs, but also just interested in having discussions about how the OIF can fit in, and then, as I said, wallets and apps, we're interested in, talking to people who might integrate the OIF or other interop providers, just to understand your pain points. So, I know lots of those kinds of people on the call today,
+
+187
+00:37:09.200 --> 00:37:15.379
+Orca 0x: And so, yeah, encourage you to reach out, we're all in the… Telegram is probably the best place to start.
+
+188
+00:37:20.840 --> 00:37:21.910
+Joshua Rudolf: Thanks so much, Orca.
+
+189
+00:37:23.320 --> 00:37:30.850
+Joshua Rudolf: Do you wanna, yeah, take Ellie's question on the difference between a 7888 and the cross-chain broadcaster?
+
+190
+00:37:33.280 --> 00:37:38.849
+Orca 0x: So the… so I think Arbitrum's cross-chain broadcaster
+
+191
+00:37:39.020 --> 00:37:47.149
+Orca 0x: I know that the Arbitrum team were working a lot on this initial broadcaster. I actually don't know the difference between that, but I can, follow up with the…
+
+192
+00:37:47.530 --> 00:37:50.739
+Orca 0x: With the Open Zeppelin team.
+
+193
+00:37:51.010 --> 00:37:57.619
+Orca 0x: I do know that the Arvin Trim team have been providing a lot of feedback on the broadcaster design, so I don't know if any of them are here.
+
+194
+00:38:00.180 --> 00:38:02.030
+Joshua Rudolf: Yeah, I don't see them here.
+
+195
+00:38:03.610 --> 00:38:07.740
+Joshua Rudolf: But yes, we should, we can ask one of them to chime into the Telegram group.
+
+196
+00:38:09.090 --> 00:38:14.970
+Orca 0x: And in the… in terms of the telegram group, it's the L2 Interop… what's the title of it, Josh? It's the…
+
+197
+00:38:14.970 --> 00:38:16.519
+Ellie Davidson: Okay, just the base groove.
+
+198
+00:38:16.840 --> 00:38:20.049
+Orca 0x: Yeah, yeah, I think, and we can, yeah.
+
+199
+00:38:20.220 --> 00:38:21.110
+Orca 0x: Fork off.
+
+200
+00:38:23.060 --> 00:38:25.199
+Orca 0x: Has to be… as required.
+
+201
+00:38:30.150 --> 00:38:30.940
+Orca 0x: Cool.
+
+202
+00:38:33.750 --> 00:38:34.340
+Joshua Rudolf: Awesome.
+
+203
+00:38:34.450 --> 00:38:35.539
+Joshua Rudolf: Thank you, Orca.
+
+204
+00:38:35.780 --> 00:38:36.659
+Orca 0x: Thanks so much.
+
+205
+00:38:38.740 --> 00:38:39.670
+Joshua Rudolf: Already.
+
+206
+00:38:39.820 --> 00:38:48.970
+Joshua Rudolf: Next up, we have Jordy, I believe, here to share some of his latest work and research on synchronous composability.
+
+207
+00:38:49.180 --> 00:38:50.040
+Joshua Rudolf: Geordie.
+
+208
+00:39:04.420 --> 00:39:06.839
+Joshua Rudolf: Can see some of your screen, but yeah.
+
+209
+00:39:07.180 --> 00:39:11.690
+Jordi - ZisK: I was sharing the screen, but I need to unmute first. Sure.
+
+210
+00:39:12.020 --> 00:39:13.070
+Jordi - ZisK: Sure.
+
+211
+00:39:14.310 --> 00:39:15.950
+Jordi - ZisK: You can see the screen, right?
+
+212
+00:39:15.950 --> 00:39:16.590
+Joshua Rudolf: Perfect.
+
+213
+00:39:17.840 --> 00:39:19.490
+Jordi - ZisK: Okay.
+
+214
+00:39:19.630 --> 00:39:38.310
+Jordi - ZisK: Well, let me explain a little bit the proposal that I met in the research. So the idea is about, who I see the inter-roll-up composability, especially the synchronous composability. First of all, I'm very quick. I mean, this idea of separating data and,
+
+215
+00:39:38.510 --> 00:39:54.759
+Jordi - ZisK: data and proofs. I mean, the idea is, if you have all the transactions, imagine just a transaction of an L1, or you have a transaction of an L2, you can… that's the only thing you need. The idea is that you can have the data, you can have queries, these queries generate the proof.
+
+216
+00:39:55.260 --> 00:40:12.439
+Jordi - ZisK: and you can have the state. I mean, the query maybe is the result of a state, but just having all the data is enough to reconstruct the state and proving that that state is correct, okay? In the idea of the… when you have multiple roll-ups, let's forget about Layer 1 for a moment.
+
+217
+00:40:12.440 --> 00:40:23.670
+Jordi - ZisK: when you have multiple roll-ups, the idea is that you can have very easily cross-roll-up composability. The idea is that you put all the transactions in that availability, and this by itself, it gives,
+
+218
+00:40:24.010 --> 00:40:41.579
+Jordi - ZisK: it already… you can already do calls between one roll-up and the other. I mean, synchronous calls. For me, when I'm talking about synchronous calls, it's making a call. I mean, the idea is that you should be able, from one roll-up, to do a call, I mean, an EVM call, to a roll-up that's in another
+
+219
+00:40:41.930 --> 00:40:49.839
+Jordi - ZisK: EBM, and the other way around, and a call in a roll-up 2, then it should call to roll up one, or even to…
+
+220
+00:40:50.430 --> 00:40:52.350
+Jordi - ZisK: To, to, to Layer 1.
+
+221
+00:40:52.410 --> 00:41:08.249
+Jordi - ZisK: Okay, so this is the… I mean, this is the idea of the concept, so for when you have only roll-ups, then that's quite easy. I mean, you just put data there, these transactions can talk with each other, and you just generate the proof that actually aggregates all these roll-ups, okay?
+
+222
+00:41:08.260 --> 00:41:12.570
+Jordi - ZisK: But, in the interesting part, the interesting part.
+
+223
+00:41:13.680 --> 00:41:25.329
+Jordi - ZisK: The interesting part is when you go from L1 to L2 composability, and the idea of the proposal is that without even forking L1, you should be able to, from L1 to call
+
+224
+00:41:25.450 --> 00:41:33.859
+Jordi - ZisK: roll-ups on, Layer 2s, and, even from Layer 2s, call roll-ups on Layer 1, even without having to redeploy,
+
+225
+00:41:33.870 --> 00:41:48.920
+Jordi - ZisK: I mean, keeping all the… so you have to redeploy the contracts in L1, I mean, they just… I mean, if you want to do a Uniswap exchange from an L2, you just call to L1, and you just do the… you just do the swap, like, if you were in the same,
+
+226
+00:41:48.970 --> 00:41:49.980
+Jordi - ZisK: L1.
+
+227
+00:41:50.100 --> 00:41:55.099
+Jordi - ZisK: Okay, so how we do that? And let's go too deep a little bit. Well, the first thing is this idea of
+
+228
+00:41:55.210 --> 00:42:09.759
+Jordi - ZisK: address, I mean, proxy addresses. I mean, when you are doing a call, if you are doing a call, how do you say that you are calling to a roll-up to? I mean, you can do a specific interface for that, but then you would lose, compatibility with that. So the idea…
+
+229
+00:42:09.770 --> 00:42:15.699
+Jordi - ZisK: that we propose here is to work with what we call proxy roll-ups. I mean, these proxy rollups are
+
+230
+00:42:15.700 --> 00:42:31.260
+Jordi - ZisK: well, just are special smart contracts, that's how, they emulate, what you would do in the, in the other roll-up, and these, proxies are, create two, roll-ups. I mean, counterfactual contracts that, are.
+
+231
+00:42:31.260 --> 00:42:33.359
+Jordi - ZisK: Already representing,
+
+232
+00:42:33.510 --> 00:42:51.770
+Jordi - ZisK: this, okay? So, in this example, for example, when we have a… we have a user, okay, a user is calling to a DAO, and the DAO maybe is checking in L1 again if it's in a whitelist or not, and then it allows you to vote or not, okay? So, it's a double call. I mean, you're calling from L1 to an L2, and from L2 to L1.
+
+233
+00:42:51.770 --> 00:42:55.900
+Jordi - ZisK: Okay, well, the idea is that you, the user, would call to this proxy contract.
+
+234
+00:42:55.900 --> 00:43:04.399
+Jordi - ZisK: Okay? And this proxy contract, would, do the call, this proxy contract will do the call to the whitelist, and then will return back
+
+235
+00:43:04.800 --> 00:43:23.069
+Jordi - ZisK: result to here, okay? So you don't have to cross there, too, because this, proxy would emulate what you would do, actually, is executing that, okay? And how we do that? Well, the idea, I mean, the main idea is building what we call this execution… execution list, okay? So the idea is execution list is, okay,
+
+236
+00:43:23.410 --> 00:43:45.540
+Jordi - ZisK: So, the idea what we say is in this, what happens if in row up one I'm in this state, and I execute a call to a vote? Well, then you go to this state, okay? And in this case, the result, in this case, the result, it would not be… it could be a return, okay, so the result is this, but in this case, it's just another call that happened in L… in L1.
+
+237
+00:43:45.540 --> 00:43:46.370
+Jordi - ZisK: Okay?
+
+238
+00:43:48.090 --> 00:44:07.870
+Jordi - ZisK: we have another execution, is what happened if in L1, actually, I'm returning, so I'm going from the alt state in L1, I'm returning from the whitelist, I'm returning whatever, that is, this is true, and, well, what happened is that the rollout will go to this new state, and then will return,
+
+239
+00:44:08.200 --> 00:44:11.070
+Jordi - ZisK: vote to 1 to 2. So the idea is that
+
+240
+00:44:11.270 --> 00:44:18.559
+Jordi - ZisK: Of course, this table can be in the storage and can be, put it beforehand by,
+
+241
+00:44:20.080 --> 00:44:33.449
+Jordi - ZisK: the sequencer, and then the idea how it works. Well, the idea is that when you are doing this call to this proxy call, actually, instead of… so in order to execute, what you do is you look
+
+242
+00:44:33.500 --> 00:44:35.890
+Jordi - ZisK: In this execution table, what happened?
+
+243
+00:44:35.890 --> 00:44:58.269
+Jordi - ZisK: you update the state, so this execution texture, actually, you update the state on the rollout, too, so this is… updating this state means that this execution actually happened, and you emulate a return back to here, okay? But the idea is that, I mean, the cool thing of this is that, from the Layer 1, you just see normal calls, okay? The only thing is that they are to this proxy, or from this proxy.
+
+244
+00:44:58.270 --> 00:45:01.560
+Jordi - ZisK: Okay? But other… even if you have nested calls.
+
+245
+00:45:01.610 --> 00:45:16.289
+Jordi - ZisK: L1, L2, L2, L1, L1, L2, or even with, even with rollbacks or so, you can emulate exactly the same things. When you do a rollback, then you can do… you execute that with a nested place, and then you remove from the… from the…
+
+246
+00:45:16.610 --> 00:45:20.870
+Jordi - ZisK: I mean, you can do a rollback also in the L1, so…
+
+247
+00:45:20.870 --> 00:45:38.180
+Jordi - ZisK: The idea of this, at the end is that you are very much, working with many roll-ups. It's like working… it's like if you were in the same space, it's where you were in the, in the Layer 1, okay? And the good thing of this is that you don't need to do, you don't need to do.
+
+248
+00:45:39.160 --> 00:45:51.529
+Jordi - ZisK: any fork, and the other thing is that roll-ups, they don't need to be even EVM. Of course, they can be EVM, and they can be a standard and fixed, and they can be, like, native roll-ups, but you can…
+
+249
+00:45:51.530 --> 00:46:04.870
+Jordi - ZisK: It's very… it's easily… you can define your own roll-up. It's good enough to have your own roll-up. The only thing is that the roll-up, the state transition function that you define, should be able to accept or make calls.
+
+250
+00:46:04.950 --> 00:46:06.439
+Jordi - ZisK: On that, okay?
+
+251
+00:46:06.640 --> 00:46:15.820
+Jordi - ZisK: So, I think this is quite, flexible. I mean, you can… maybe you can go to the… we have, some links.
+
+252
+00:46:16.560 --> 00:46:19.679
+Jordi - ZisK: We have some links, some references, links.
+
+253
+00:46:20.080 --> 00:46:24.239
+Jordi - ZisK: They are all them in the search, but you can, you can check there.
+
+254
+00:46:24.480 --> 00:46:30.999
+Jordi - ZisK: We made a demo, I don't know if Martin is here. We did a demo of how this would work.
+
+255
+00:46:31.420 --> 00:46:34.900
+Jordi - ZisK: So, Mark, I mean, I can just pass through if you want.
+
+256
+00:46:35.940 --> 00:46:43.310
+Martin Köppelmann: Sure, I'm… I'm happy to try to make this more, hopefully even more concrete. Let me…
+
+257
+00:46:43.780 --> 00:46:45.790
+Martin Köppelmann: Try to share my screen.
+
+258
+00:46:47.420 --> 00:46:52.710
+Martin Köppelmann: I have, I have also a recording,
+
+259
+00:46:52.930 --> 00:46:59.169
+Martin Köppelmann: So in case my demo fails, I'll share the link of the recording. But,
+
+260
+00:47:00.000 --> 00:47:02.360
+Martin Köppelmann: You can see my screen?
+
+261
+00:47:02.500 --> 00:47:03.700
+Martin Köppelmann: Yes, right?
+
+262
+00:47:05.560 --> 00:47:06.120
+Jordi - ZisK: Yes, yes.
+
+263
+00:47:06.710 --> 00:47:10.440
+Martin Köppelmann: Okay, so, so here is,
+
+264
+00:47:10.630 --> 00:47:22.100
+Martin Köppelmann: Yeah, the roll-up, and on the roll-up, there is a very simple contract, this counter-contract, that just has,
+
+265
+00:47:22.310 --> 00:47:31.820
+Martin Köppelmann: yeah, that you can just… you can call it with get, and if you call it with GET, it will return the current, the current value, but it will also increase the counter by one.
+
+266
+00:47:32.010 --> 00:47:38.660
+Martin Köppelmann: But I'm just copying here the address, and what I want to demonstrate now here is,
+
+267
+00:47:39.880 --> 00:47:44.109
+Martin Köppelmann: the concept that Jolie just mentioned, so,
+
+268
+00:47:45.210 --> 00:47:59.779
+Martin Köppelmann: I am now on the layer 1, and in this case it's actually a live deployment on Gnosis, let's see if it works, and I just copy in this target address. And now I specify that this target is not an address
+
+269
+00:47:59.870 --> 00:48:13.079
+Martin Köppelmann: well, on no system in this case, on the layer 1, but instead, it's a target address on the layer 2, and if I do this, I get this… yeah, this proxy address, and this is deterministic.
+
+270
+00:48:14.100 --> 00:48:22.500
+Martin Köppelmann: Now I can call this proxy address, and let's… let's… let's see if this works. And that proxy address should
+
+271
+00:48:22.730 --> 00:48:24.160
+Martin Köppelmann: return…
+
+272
+00:48:26.010 --> 00:48:39.330
+Martin Köppelmann: the car… I mean, basically what this other contract on the Layer 2 would return in a synchronous call. And of course, that is only possible, by a builder,
+
+273
+00:48:39.650 --> 00:48:41.929
+Martin Köppelmann: Anticipating this,
+
+274
+00:48:42.030 --> 00:49:00.690
+Martin Köppelmann: call… yeah, let me just show it to you. So, this is a simple contract that just allows me to do a call to a target address, and I'm using now this proxy address with call data, and this is just the encoding for the get function.
+
+275
+00:49:01.290 --> 00:49:09.229
+Martin Köppelmann: And let me… let… let me do this. So this is now a real transaction, on Gnosis Chain from… from my regular,
+
+276
+00:49:09.610 --> 00:49:17.890
+Martin Köppelmann: from regular EOA to… First to this logger contract, and from this logger, then to this proxy contract.
+
+277
+00:49:18.130 --> 00:49:25.030
+Martin Köppelmann: And let's see… I will look here at the,
+
+278
+00:49:25.660 --> 00:49:33.899
+Martin Köppelmann: command line, and there's a builder running, so… so yeah, I would… I should also say this transaction is now sent,
+
+279
+00:49:34.320 --> 00:49:45.980
+Martin Köppelmann: to the builder, and not to the general Gnosis mempool, because now the builder should detect that this transaction is touching such a proxy contract, so essentially a contract on the Layer 2,
+
+280
+00:49:46.160 --> 00:49:47.120
+Martin Köppelmann: And…
+
+281
+00:49:47.280 --> 00:50:00.229
+Martin Köppelmann: now the builder needs to prepare the layer 1 by, by, yeah, by registering this call, what, Jordy calls this… Jordy, what was your name again? This, lookup,
+
+282
+00:50:00.530 --> 00:50:01.810
+Martin Köppelmann: I agree.
+
+283
+00:50:01.810 --> 00:50:03.909
+Jordi - ZisK: execution table, I mean, it's proven.
+
+284
+00:50:03.910 --> 00:50:09.600
+Martin Köppelmann: Execution table, exactly, exactly. So, let's see, if that happened.
+
+285
+00:50:12.590 --> 00:50:29.219
+Martin Köppelmann: Yes, so it did happen, so 40… 44 seconds ago, this builder prepared this, this proxy contract by doing register incoming call, where it basically… where it basically told this
+
+286
+00:50:29.660 --> 00:50:46.229
+Martin Köppelmann: Or where it basically prepared the, yeah, this roll-up contract in a way that it said… that the role… that the proxy contract could now look up the result of this call in this registry.
+
+287
+00:50:46.560 --> 00:50:48.869
+Martin Köppelmann: Let's see, decode…
+
+288
+00:50:50.770 --> 00:51:01.259
+Martin Köppelmann: Yeah, so… so here, it basically says, if the L2 is in this specific state, and then this specific call comes, then the
+
+289
+00:51:01.430 --> 00:51:14.030
+Martin Köppelmann: this, this, this call will return, in that specific value. And what we should see now is that, first, the logger here.
+
+290
+00:51:16.070 --> 00:51:31.379
+Martin Köppelmann: Right, so, so call 5, previously did, did nothing, and yes, here it, it, it, it, it got the return, and it logged this return, and we should see furthermore that,
+
+291
+00:51:31.640 --> 00:51:41.319
+Martin Köppelmann: that this counter… Right, exactly. So this counter is, is now,
+
+292
+00:51:42.540 --> 00:51:45.580
+Martin Köppelmann: Wha, let me see…
+
+293
+00:51:46.210 --> 00:51:53.510
+Martin Köppelmann: Right, so… so here we see… exactly, so this is the, the call…
+
+294
+00:51:54.840 --> 00:52:07.199
+Martin Köppelmann: Yeah, that now increased the counter one more on the layer 2, but also immediately synchronously, got this result of the call available in the Layer 1.
+
+295
+00:52:07.830 --> 00:52:19.109
+Martin Köppelmann: Yeah, so, so… Stop sharing, I saw… I saw one question, so yeah,
+
+296
+00:52:23.780 --> 00:52:26.559
+Martin Köppelmann: Cirque. Yeah, I think it's…
+
+297
+00:52:29.360 --> 00:52:32.189
+Martin Köppelmann: Okay, yeah, maybe I just… just pause here and…
+
+298
+00:52:32.630 --> 00:52:35.109
+Martin Köppelmann: Yeah, once it draw the end.
+
+299
+00:52:35.830 --> 00:52:40.109
+Martin Köppelmann: Happy to… Answer questions or comments, or…
+
+300
+00:52:45.810 --> 00:52:47.770
+Joshua Rudolf: Any other questions for Martin or Doherty?
+
+301
+00:52:56.080 --> 00:52:57.189
+Joshua Rudolf: Cool. Well, thanks.
+
+302
+00:52:57.190 --> 00:52:58.630
+Alon Muroch | SSVLabs: Super cool, guys.
+
+303
+00:52:59.720 --> 00:53:14.780
+Jordi - ZisK: It's important to mention that all this is possible. Thank you for… to real-time proving, actually. What enables this is being able to generate proofs in very, very, very low latency.
+
+304
+00:53:15.540 --> 00:53:29.670
+Martin Köppelmann: Right, I, I should, I should, I should say, so the demo you just saw had no real-time proving that, that was mocked, it was, but, but yeah, I mean, so, so that, but, but, but yeah, we, we know it is possible,
+
+305
+00:53:30.070 --> 00:53:39.330
+Martin Köppelmann: to generate those real-time proofs, so yeah, it's… so… so I think our… our thinking now was really about, how can we…
+
+306
+00:53:40.060 --> 00:53:50.220
+Martin Köppelmann: How can we, yeah, provide the synchronous composability as backwards compatible as possible, so that existing contracts that don't
+
+307
+00:53:50.370 --> 00:54:07.589
+Martin Köppelmann: that basically just know a 2 address, and it doesn't have a chain identifier, for example, then it still works with existing contracts that just have a 2 address, and therefore we need this proxy… this proxy design, to essentially,
+
+308
+00:54:08.020 --> 00:54:12.520
+Martin Köppelmann: Implicitly put the target chain into the… into the regular address.
+
+309
+00:54:12.650 --> 00:54:16.629
+Martin Köppelmann: And then we need this lookup table and all those things.
+
+310
+00:54:19.140 --> 00:54:21.059
+Martin Köppelmann: Ellen? Ellen, please.
+
+311
+00:54:22.670 --> 00:54:29.499
+Alon Muroch | SSVLabs: Yeah, I just wanted to ask if you guys have started to experiment with real-time proving, maybe even for smaller blocks,
+
+312
+00:54:29.750 --> 00:54:34.510
+Alon Muroch | SSVLabs: Just as a benchmark, see how much it's gonna cost, latency, stuff like that.
+
+313
+00:54:35.140 --> 00:54:43.720
+Jordi - ZisK: Yeah, in this, actually, we are proving real-time Ethereum blocks. Actually, the average time is about less than 7 seconds.
+
+314
+00:54:43.930 --> 00:54:56.180
+Jordi - ZisK: We presented that in Argentina. We were at 16 GPUs, currently, in the next version, it's gonna be around 12 GPUs.
+
+315
+00:54:57.320 --> 00:55:11.190
+Jordi - ZisK: But the cool thing is that this scales very well, and the work, the main work that we are doing right now is, try to pipeline the proving with the block generation, is that even while you are building the block, you can
+
+316
+00:55:11.190 --> 00:55:18.699
+Jordi - ZisK: start, proving so that the final latency is when you finish to build a block. You had the proof available.
+
+317
+00:55:18.710 --> 00:55:20.849
+Jordi - ZisK: And, here…
+
+318
+00:55:20.940 --> 00:55:35.209
+Jordi - ZisK: Right now, we… at this point, could be maybe 4 or 5 seconds, but we believe that this can be below, 1-2 seconds for sure, so that's where we are working on this.
+
+319
+00:55:35.260 --> 00:55:51.220
+Jordi - ZisK: real time, I mean, is lowering the latency, so that we can pipeline, two things, okay? And also parallelites. The nice thing is that when you have roll-ups, that they don't do join each other, UW dot this proofs in parallel and then aggregate. Aggregation.
+
+320
+00:55:51.220 --> 00:55:57.180
+Jordi - ZisK: It's quite fast, I mean, aggregating two proofs currently is around 80 milliseconds, or something like that.
+
+321
+00:55:57.180 --> 00:56:05.700
+Jordi - ZisK: Which is, is what allows you to, scale very well. I mean, still, it's a technology that's evolving, we are improving day by day.
+
+322
+00:56:06.150 --> 00:56:13.379
+Jordi - ZisK: But, Yeah, we believe that, I mean, talking about…
+
+323
+00:56:13.890 --> 00:56:18.279
+Jordi - ZisK: 1 second, 2 seconds, proving time, the latency time.
+
+324
+00:56:18.540 --> 00:56:24.860
+Jordi - ZisK: This is, doable in with, Unskiens.
+
+325
+00:56:27.360 --> 00:56:31.880
+Jordi - ZisK: Of course, proving is, I mean, it's expensive, but,
+
+326
+00:56:32.170 --> 00:56:37.830
+Jordi - ZisK: It's not that expensive compared to a transaction fee, so it should be, marginal,
+
+327
+00:56:38.290 --> 00:56:40.829
+Jordi - ZisK: The cost of proving with the cost of a transaction fee.
+
+328
+00:56:44.620 --> 00:56:51.409
+Joshua Rudolf: So we have a few minutes left. I want to make sure we can get to the final presentation here. And thank you again, Jordy and Martin.
+
+329
+00:56:51.520 --> 00:56:55.700
+Joshua Rudolf: Anshu and Nethermine team, do you want to jump in?
+
+330
+00:56:56.480 --> 00:56:58.310
+Anshu Jalan | Nethermind: Yeah, I'll share my screen.
+
+331
+00:57:11.140 --> 00:57:12.840
+Anshu Jalan | Nethermind: Can you see my screen?
+
+332
+00:57:13.080 --> 00:57:14.560
+Joshua Rudolf: We can… yes.
+
+333
+00:57:16.090 --> 00:57:16.870
+Anshu Jalan | Nethermind: Okay.
+
+334
+00:57:17.590 --> 00:57:26.269
+Anshu Jalan | Nethermind: So, Jordy and Martin really simplified my life, because they just gave a very good primer on synchronous composability, so I guess I can skip that part.
+
+335
+00:57:26.690 --> 00:57:34.239
+Anshu Jalan | Nethermind: So, our solution is also focused on L1 to L2 synchronous composability, and today for this,
+
+336
+00:57:34.530 --> 00:57:38.500
+Anshu Jalan | Nethermind: a presentation, we would like to focus on one half of it, where
+
+337
+00:57:38.610 --> 00:57:45.670
+Anshu Jalan | Nethermind: If you are on L1, you can call any L2 contract and get a return call back to L1.
+
+338
+00:57:46.100 --> 00:57:49.659
+Anshu Jalan | Nethermind: Exactly as if you're calling a contract on L1 itself.
+
+339
+00:57:49.970 --> 00:57:58.080
+Anshu Jalan | Nethermind: So let's say for this demonstration, I would like to show you a cross-chain DEX, wherein you have liquidity on L2,
+
+340
+00:57:58.380 --> 00:58:07.959
+Anshu Jalan | Nethermind: And on L1s, you just have your input token, and you basically swap it using the L2 liquidity, as if the entire liquidity was on L1 itself.
+
+341
+00:58:08.370 --> 00:58:12.139
+Anshu Jalan | Nethermind: So I'll give a quick demo, and then I'll demonstrate, like, run you through the
+
+342
+00:58:12.420 --> 00:58:15.640
+Anshu Jalan | Nethermind: architecture of what's really happening internally.
+
+343
+00:58:16.000 --> 00:58:25.060
+Anshu Jalan | Nethermind: So let's say I… I want to swap ETH, and I have ETH on L1, not on L2. At no point will the user himself touch the L2.
+
+344
+00:58:26.050 --> 00:58:28.540
+Anshu Jalan | Nethermind: So here, I'm swapping ETH for USDC.
+
+345
+00:58:30.570 --> 00:58:35.049
+Anshu Jalan | Nethermind: And I have ETH on L1, the DEX is on L2, I'll get back USDC on L1 itself.
+
+346
+00:58:35.310 --> 00:58:36.620
+Anshu Jalan | Nethermind: If I click on swap.
+
+347
+00:58:42.530 --> 00:58:44.320
+Anshu Jalan | Nethermind: I signed this,
+
+348
+00:58:44.690 --> 00:58:54.270
+Anshu Jalan | Nethermind: user op, and I'll get back to what's… what this user op is. Now, this user op is basically being sent to a builder slash sequencer, who is now sequencing
+
+349
+00:58:54.450 --> 00:58:57.179
+Anshu Jalan | Nethermind: The transaction, and the swap is done.
+
+350
+00:58:57.520 --> 00:59:00.740
+Anshu Jalan | Nethermind: And you can see I get… I got my USDC.
+
+351
+00:59:00.980 --> 00:59:08.370
+Anshu Jalan | Nethermind: Back on L1, and this was pretty fast. Of course, the assumption is that I have real-time provings enabled.
+
+352
+00:59:08.900 --> 00:59:11.150
+Anshu Jalan | Nethermind: But yeah, right now it's just a mock proof.
+
+353
+00:59:11.690 --> 00:59:14.190
+Anshu Jalan | Nethermind: So, what's really happening here?
+
+354
+00:59:16.020 --> 00:59:16.870
+Anshu Jalan | Nethermind: So…
+
+355
+00:59:17.120 --> 00:59:26.810
+Anshu Jalan | Nethermind: This is based upon our same-slot L12L2 message passing research that was published by Lynn from NetherMind about a year ago.
+
+356
+00:59:27.990 --> 00:59:37.060
+Anshu Jalan | Nethermind: So, in this design, The builder slash sequencer is essentially concerned about 3 separate transactions.
+
+357
+00:59:37.820 --> 00:59:42.249
+Anshu Jalan | Nethermind: Firstly, the L2 call transaction, which is a call to an L2 contract.
+
+358
+00:59:42.880 --> 00:59:45.999
+Anshu Jalan | Nethermind: And then the actual L2 block proposal.
+
+359
+00:59:46.210 --> 00:59:54.599
+Anshu Jalan | Nethermind: And this L2 block needs to have the L2 call transaction in it, plus this thing called L… hot L1 state, I'll get to what it is.
+
+360
+00:59:55.080 --> 01:00:04.720
+Anshu Jalan | Nethermind: And then, eventually, the L1 call transaction itself, which is, like, the return data that is passed from the L2 call transaction processing on the,
+
+361
+01:00:04.830 --> 01:00:06.830
+Anshu Jalan | Nethermind: on the L2 state, basically.
+
+362
+01:00:07.330 --> 01:00:21.290
+Anshu Jalan | Nethermind: And the builder's primary job is to sequence these transactions correctly as a multi-call batch in this design. And of course, the builder also needs to put the correct hot L1 state within the L2 block proposal.
+
+363
+01:00:21.760 --> 01:00:23.500
+Anshu Jalan | Nethermind: And… and that's it from…
+
+364
+01:00:23.660 --> 01:00:31.719
+Anshu Jalan | Nethermind: the perspective of the sequencer. Once they sequence these three transactions correctly as a multi-call batch, they push it into,
+
+365
+01:00:31.850 --> 01:00:33.850
+Anshu Jalan | Nethermind: DL1, and that's it.
+
+366
+01:00:34.230 --> 01:00:37.660
+Anshu Jalan | Nethermind: You basically get this demo once you do that.
+
+367
+01:00:38.100 --> 01:00:40.180
+Anshu Jalan | Nethermind: But what's really happening internally?
+
+368
+01:00:41.150 --> 01:00:49.699
+Anshu Jalan | Nethermind: So… starting with… when I… When I start the swap, this thing that I'm signing.
+
+369
+01:00:49.940 --> 01:00:51.670
+Anshu Jalan | Nethermind: This is a user op.
+
+370
+01:00:52.460 --> 01:00:55.170
+Anshu Jalan | Nethermind: Now, we don't really have a particular
+
+371
+01:00:55.960 --> 01:01:04.849
+Anshu Jalan | Nethermind: standard that we are advocating for, for this user op. This could be, like, a safe wallet op, it could be an intent, or it could be any related ERC.
+
+372
+01:01:05.130 --> 01:01:07.620
+Anshu Jalan | Nethermind: It's completely agnostic of what this is.
+
+373
+01:01:09.830 --> 01:01:15.840
+Anshu Jalan | Nethermind: By default, a user op will obviously have, like, a target, a value, and of course, some call data.
+
+374
+01:01:16.010 --> 01:01:20.210
+Anshu Jalan | Nethermind: And a smart wallet that executes it, or a smart account.
+
+375
+01:01:20.390 --> 01:01:23.990
+Anshu Jalan | Nethermind: So, in this case, The user op simply
+
+376
+01:01:24.630 --> 01:01:30.440
+Anshu Jalan | Nethermind: Cents, or one of the tokens, depending upon which one they are swapping, and the swap direction.
+
+377
+01:01:30.790 --> 01:01:32.969
+Anshu Jalan | Nethermind: over to an L1 handler contract.
+
+378
+01:01:33.730 --> 01:01:38.449
+Anshu Jalan | Nethermind: And this L1 handling contract starts talking to the L1 bridge.
+
+379
+01:01:39.150 --> 01:01:52.310
+Anshu Jalan | Nethermind: Now, we have not really made any modifications to the default L1 bridge that is offered in Tyco stack, and again, an important disclaimer here, that we are using the default Tyco slash surge stack.
+
+380
+01:01:52.550 --> 01:01:58.439
+Anshu Jalan | Nethermind: And we are using that bridge, and we have not made any major modifications to that bridge. Rather.
+
+381
+01:01:58.730 --> 01:02:06.520
+Anshu Jalan | Nethermind: We have… made this entire system as, like, a plugin for the existing bridge that Tyco-based rollup offers.
+
+382
+01:02:07.510 --> 01:02:11.670
+Anshu Jalan | Nethermind: So this L1 handler contract, it communicates with the L1 bridge.
+
+383
+01:02:11.910 --> 01:02:19.929
+Anshu Jalan | Nethermind: And it basically constructs the call data that enables the swap on the L2, on the L2 state.
+
+384
+01:02:20.730 --> 01:02:28.710
+Anshu Jalan | Nethermind: Now, for the user, it's nothing diff… not the user, but more like the L1 contract. It's absolutely
+
+385
+01:02:28.850 --> 01:02:33.659
+Anshu Jalan | Nethermind: indifferent from just calling, let's say, as if the L2
+
+386
+01:02:34.260 --> 01:02:37.149
+Anshu Jalan | Nethermind: handler contract was on L1 itself.
+
+387
+01:02:38.130 --> 01:02:42.629
+Anshu Jalan | Nethermind: So it passes in the token and some call data over to the bridge.
+
+388
+01:02:42.980 --> 01:02:47.929
+Anshu Jalan | Nethermind: And then the bridge communicates with the L2 bridge. The L1 bridge communicates with the L2 bridge.
+
+389
+01:02:48.760 --> 01:02:54.069
+Anshu Jalan | Nethermind: And it just continues the trail of passing the call data over to another handler contract.
+
+390
+01:02:54.190 --> 01:02:56.370
+Anshu Jalan | Nethermind: Which then conducts the swap.
+
+391
+01:02:56.520 --> 01:03:00.349
+Anshu Jalan | Nethermind: within Uniswap or whatever DEX we have deployed on the L2.
+
+392
+01:03:01.610 --> 01:03:06.010
+Anshu Jalan | Nethermind: And then the same trail repeats, but now on the L1 side.
+
+393
+01:03:07.320 --> 01:03:16.140
+Anshu Jalan | Nethermind: So, the tokens are returned over to L1, then the L1 handler contract is called back again, and the tokens are finally returned to the smart wallet.
+
+394
+01:03:17.790 --> 01:03:19.919
+Anshu Jalan | Nethermind: Now, what's the caveat here?
+
+395
+01:03:20.430 --> 01:03:22.760
+Anshu Jalan | Nethermind: The caveat is this, the hot state.
+
+396
+01:03:22.990 --> 01:03:24.959
+Anshu Jalan | Nethermind: So what is exactly this hot state?
+
+397
+01:03:25.470 --> 01:03:30.429
+Anshu Jalan | Nethermind: So… In the usual case, like asynchronous composability.
+
+398
+01:03:31.010 --> 01:03:34.699
+Anshu Jalan | Nethermind: When you have… when you are posting a block on L1,
+
+399
+01:03:35.050 --> 01:03:38.960
+Anshu Jalan | Nethermind: There's always a hot state, and this hot state is
+
+400
+01:03:39.310 --> 01:03:47.139
+Anshu Jalan | Nethermind: at best, the state of the previous L1 block, right? This is the state that you can sync with the current L2 block.
+
+401
+01:03:47.650 --> 01:03:54.950
+Anshu Jalan | Nethermind: Because in EVM execution, you obviously don't have the state of the current block with you, right? You obviously have the state of the last block.
+
+402
+01:03:55.370 --> 01:04:02.839
+Anshu Jalan | Nethermind: So there is no way to get synchronous composability using the hot state, or the hot EVM state, like the state root.
+
+403
+01:04:03.290 --> 01:04:06.930
+Anshu Jalan | Nethermind: But what we can do is… what we can do is we can get
+
+404
+01:04:07.100 --> 01:04:11.109
+Anshu Jalan | Nethermind: the hot state of a single EVM storage slot.
+
+405
+01:04:11.640 --> 01:04:13.790
+Anshu Jalan | Nethermind: And that is what we take the advantage of.
+
+406
+01:04:14.500 --> 01:04:19.299
+Anshu Jalan | Nethermind: So whenever this, Call data that we have here.
+
+407
+01:04:21.050 --> 01:04:24.090
+Anshu Jalan | Nethermind: whenever this is sent to the L1 bridge.
+
+408
+01:04:24.410 --> 01:04:26.620
+Anshu Jalan | Nethermind: We basically, like, let's say, hash it.
+
+409
+01:04:28.400 --> 01:04:31.119
+Anshu Jalan | Nethermind: And we store it in a certain EVM slot.
+
+410
+01:04:31.830 --> 01:04:48.290
+Anshu Jalan | Nethermind: And we basically get the state of that slot, right? And that won't be changing. Irrespective of what happens to the rest of the EVM state, the state of this slot, or the value of this EVM slot, won't be changing, because we have already set it via this internal transaction.
+
+411
+01:04:48.950 --> 01:04:51.179
+Anshu Jalan | Nethermind: And what the builder now needs to do is.
+
+412
+01:04:51.290 --> 01:04:54.589
+Anshu Jalan | Nethermind: The builder needs to record this hot state.
+
+413
+01:04:55.280 --> 01:04:58.789
+Anshu Jalan | Nethermind: And push it within the block that it's proposing.
+
+414
+01:04:59.410 --> 01:05:08.699
+Anshu Jalan | Nethermind: If some of you who are familiar with the Tyco stack, you might know that this is done via the Anchor transaction, which is like a system transaction that has to be
+
+415
+01:05:09.120 --> 01:05:11.459
+Anshu Jalan | Nethermind: The first transaction in a block.
+
+416
+01:05:11.840 --> 01:05:16.909
+Anshu Jalan | Nethermind: So you can pass this hot state, which is just a 32-byte hash.
+
+417
+01:05:17.100 --> 01:05:19.340
+Anshu Jalan | Nethermind: In that anchor transaction itself.
+
+418
+01:05:19.990 --> 01:05:23.670
+Anshu Jalan | Nethermind: Now, once you pass this, All you need to do is…
+
+419
+01:05:24.340 --> 01:05:41.120
+Anshu Jalan | Nethermind: just go ahead with your proposal, that's it. And automatically, these extra plugins that we have created on top of it, it checks that this hot state is matching the call data that you intend to execute, and it processes the L2 state accordingly.
+
+420
+01:05:41.320 --> 01:05:42.360
+Anshu Jalan | Nethermind: And that's it.
+
+421
+01:05:42.950 --> 01:05:45.690
+Anshu Jalan | Nethermind: And then, once the L2 state has been processed.
+
+422
+01:05:45.830 --> 01:05:52.339
+Anshu Jalan | Nethermind: All the… the only thing that the builder has to do is, push the L1 call.
+
+423
+01:05:52.550 --> 01:05:53.370
+Anshu Jalan | Nethermind: So…
+
+424
+01:05:53.490 --> 01:06:00.680
+Anshu Jalan | Nethermind: When the L2 processing is done, the L1 call that is initiated also has to be pushed in by the sequencer.
+
+425
+01:06:01.070 --> 01:06:05.560
+Anshu Jalan | Nethermind: The sequencer might as well, you know, just… Not do this.
+
+426
+01:06:05.710 --> 01:06:08.969
+Anshu Jalan | Nethermind: And ignore this, we don't really have a control on that.
+
+427
+01:06:09.090 --> 01:06:10.210
+Anshu Jalan | Nethermind: But then…
+
+428
+01:06:10.440 --> 01:06:20.840
+Anshu Jalan | Nethermind: from the user's perspective, that's not a big issue. Yeah, it's a user experience issue, but the user can also manually, like, sequence this transaction, because this entire
+
+429
+01:06:21.050 --> 01:06:24.780
+Anshu Jalan | Nethermind: Process is completely permissionless, and at no point
+
+430
+01:06:24.940 --> 01:06:32.029
+Anshu Jalan | Nethermind: The builder has control over your funds, or can mess up your funds in any way.
+
+431
+01:06:32.690 --> 01:06:38.300
+Anshu Jalan | Nethermind: So… Yeah, that's, the overall architecture that,
+
+432
+01:06:38.860 --> 01:06:41.809
+Anshu Jalan | Nethermind: We have created here for synchronous composability.
+
+433
+01:06:45.390 --> 01:06:46.520
+Joshua Rudolf: Thanks so much, Anshu.
+
+434
+01:06:47.160 --> 01:06:53.550
+Joshua Rudolf: We're a few minutes over, but, any closing thoughts on your side, or any quick questions before we end?
+
+435
+01:07:00.060 --> 01:07:03.750
+Martin Köppelmann: Otherwise, we can… Thank you.
+
+436
+01:07:04.410 --> 01:07:07.940
+Joshua Rudolf: Cool. Awesome. Sorry we went a little bit over. Thanks, everybody, for joining.
+
+437
+01:07:08.270 --> 01:07:09.350
+Joshua Rudolf: See you next time.
+
+438
+01:07:10.010 --> 01:07:11.090
+Ahmad Bitar | Nethermind: Thank you, everyone.
+
+439
+01:07:12.680 --> 01:07:13.390
+Anshu Jalan | Nethermind: M.A.
+
