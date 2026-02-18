@@ -11,7 +11,7 @@ from pathlib import Path
 # Add parent directory to path so we can import from scripts
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.pmissues_monitor import get_recently_closed_issues, get_meetings_ready_to_process, parse_issue_for_meeting_info
+from scripts.pmissues_monitor import get_recently_closed_issues, get_meetings_ready_to_process, parse_issue_for_meeting_info, parse_meeting_datetime
 from scripts.zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
 from scripts.download_transcripts import download_meeting_artifacts, extract_meeting_info
 
@@ -26,10 +26,26 @@ def sync_local_git_repo(log_func=None):
             print(msg)
     
     try:
-        # Get the repo root directory (parent of scripts/)
         repo_root = Path(__file__).parent.parent
         
-        # Run git pull with rebase to handle divergent branches
+        # Check for uncommitted changes (e.g. newly downloaded transcripts)
+        status_result = subprocess.run(
+            ['git', 'status', '--porcelain'],
+            cwd=repo_root,
+            capture_output=True, text=True, timeout=10
+        )
+        has_uncommitted = bool(status_result.stdout.strip())
+
+        if has_uncommitted:
+            log(f"  Stashing uncommitted changes before pull...")
+            stash_result = subprocess.run(
+                ['git', 'stash', 'push', '--include-untracked', '-m', 'Auto-stash before sync'],
+                cwd=repo_root, capture_output=True, text=True, timeout=10
+            )
+            if stash_result.returncode != 0:
+                log(f"⚠ Could not stash changes, skipping git pull")
+                return
+
         result = subprocess.run(
             ['git', 'pull', '--rebase', 'origin', 'main'],
             cwd=repo_root,
@@ -37,6 +53,9 @@ def sync_local_git_repo(log_func=None):
             text=True,
             timeout=30
         )
+
+        if has_uncommitted:
+            subprocess.run(['git', 'stash', 'pop'], cwd=repo_root, capture_output=True, text=True, timeout=10)
         
         if result.returncode == 0:
             log(f"✓ Synced local git repository with remote")
@@ -44,16 +63,16 @@ def sync_local_git_repo(log_func=None):
                 log(f"  {result.stdout.strip()}")
         else:
             log(f"⚠ Failed to sync local git repository: {result.stderr.strip()}")
-            # Don't fail the whole process if git pull fails
     except subprocess.TimeoutExpired:
         log(f"⚠ Git pull timed out (this is non-critical)")
     except Exception as e:
         log(f"⚠ Error syncing local git repository: {e}")
-        # Don't fail the whole process if git pull fails
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 def get_processed_meetings_cache():
     """Load cache of already processed meetings"""
-    cache_file = Path("processed_meetings.json")
+    cache_file = REPO_ROOT / "processed_meetings.json"
     if cache_file.exists():
         with open(cache_file, 'r') as f:
             return json.load(f)
@@ -61,13 +80,19 @@ def get_processed_meetings_cache():
 
 def save_processed_meetings_cache(cache):
     """Save cache of processed meetings"""
-    with open("processed_meetings.json", 'w') as f:
+    with open(REPO_ROOT / "processed_meetings.json", 'w') as f:
         json.dump(cache, f, indent=2)
 
 def get_meeting_key(meeting_info):
-    """Generate unique key for a meeting"""
-    # Use issue number and closed date as unique identifier
-    return f"{meeting_info.get('issue_number')}_{meeting_info.get('closed_at', '')[:10]}"
+    """Generate unique key for a meeting (by issue + meeting date, not close date)"""
+    issue_num = meeting_info.get('issue_number', '')
+    date_str = meeting_info.get('date_str')
+    if date_str:
+        dt = parse_meeting_datetime(date_str)
+        date_part = dt.strftime('%Y-%m-%d') if dt else (date_str or '')
+    else:
+        date_part = ''
+    return f"{issue_num}_{date_part}"
 
 def check_if_exists_on_github(repo_owner, repo_name, meeting_type, meeting_num, date):
     """Check if meeting already exists in GitHub repo"""
@@ -108,7 +133,7 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
     # Check if we've already run in the last 6 hours (to avoid duplicate runs when computer boots)
     # This allows for twice-daily runs (10 AM and 10 PM) while preventing rapid re-runs
     if check_daily_run and not force_reprocess:
-        log_dir = Path("logs")
+        log_dir = REPO_ROOT / "logs"
         log_dir.mkdir(exist_ok=True)
         now = datetime.now()
         
@@ -143,7 +168,7 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
                     pass
     
     # Set up logging
-    log_dir = Path("logs")
+    log_dir = REPO_ROOT / "logs"
     log_dir.mkdir(exist_ok=True)
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -289,10 +314,11 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
         log(f"  Recording found: {recording.get('duration')} minutes")
         try:
             # Pass the meeting number from the GitHub issue if available
+            repo_root = str(Path(__file__).parent.parent)
             folder_path = download_meeting_artifacts(
                 recording, 
                 zoom_token,
-                output_dir="downloads",  # Download to downloads/ folder, not root
+                output_dir=repo_root,
                 override_meeting_num=meeting.get('meeting_number')
             )
             processed_folders.append(folder_path)
@@ -349,6 +375,9 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
                     try:
                         from scripts.generate_readme_table import update_readme_table
                         from scripts.github_uploader import upload_readme_to_github
+                        
+                        # Flush cache to disk so update_readme_table reads current data
+                        save_processed_meetings_cache(processed_cache)
                         
                         if update_readme_table():
                             log(f"✓ Updated README table with new ACD calls")

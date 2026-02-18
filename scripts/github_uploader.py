@@ -105,35 +105,20 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
     tree_items = []
     uploaded_files = []
     
+    # Resolve repo root from this script's location (parent of scripts/)
+    repo_root = Path(__file__).resolve().parent.parent
+    
     for folder_path in folders_to_upload:
-        folder_path = Path(folder_path)
-        
-        # Get the absolute path to determine repo root
-        # folder_path will be like "ACDE/Call-XXX" relative to repo root
-        # We need to make it relative to current working directory (repo root)
-        try:
-            # If folder_path is absolute, get relative to cwd
-            if folder_path.is_absolute():
-                repo_root = Path.cwd()
-                relative_folder = folder_path.relative_to(repo_root)
-            else:
-                # Already relative to cwd
-                relative_folder = folder_path
-        except ValueError:
-            # If relative_to fails, use folder_path as-is
-            relative_folder = folder_path
+        folder_path = Path(folder_path).resolve()
         
         for file_path in folder_path.rglob("*"):
             if file_path.is_file():
-                # Get path relative to repo root
+                # GitHub path must be relative to repo root (e.g. ACDT/Call-069_2026-02-09/chat.txt)
                 try:
-                    if file_path.is_absolute():
-                        github_path = str(file_path.relative_to(Path.cwd())).replace('\\', '/')
-                    else:
-                        github_path = str(file_path).replace('\\', '/')
+                    github_path = str(file_path.relative_to(repo_root)).replace('\\', '/')
                 except ValueError:
-                    # Fallback: use path relative to folder
-                    github_path = str(file_path.relative_to(relative_folder.parent)).replace('\\', '/')
+                    log(f"    ⚠ Skipping {file_path} (not under repo root)")
+                    continue
                 
                 # Read file content
                 try:
@@ -273,7 +258,8 @@ def upload_readme_to_github(repo_owner, repo_name, branch="main", log_func=None)
         log(f"    ✗ GITHUB_TOKEN not set in environment")
         return False
     
-    readme_path = Path('README.md')
+    repo_root = Path(__file__).resolve().parent.parent
+    readme_path = repo_root / 'README.md'
     if not readme_path.exists():
         log(f"    ✗ README.md not found")
         return False

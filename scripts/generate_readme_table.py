@@ -206,14 +206,17 @@ def update_readme_table():
     Returns:
         bool: True if changes were made, False otherwise
     """
-    readme_path = Path('README.md')
+    # Resolve paths relative to repo root (parent of scripts/) so we don't depend on cwd
+    repo_root = Path(__file__).resolve().parent.parent
+    readme_path = repo_root / 'README.md'
+    processed_path = repo_root / 'processed_meetings.json'
     
     if not readme_path.exists():
         print("README.md not found, skipping update")
         return False
     
     # Read current README
-    with open(readme_path, 'r') as f:
+    with open(readme_path, 'r', encoding='utf-8') as f:
         readme_content = f.read()
     
     # Parse existing meetings
@@ -221,7 +224,7 @@ def update_readme_table():
     print(f"Found {len(existing_meetings)} existing meetings in README")
     
     # Load processed meetings (ones we have logs for)
-    with open('processed_meetings.json', 'r') as f:
+    with open(processed_path, 'r', encoding='utf-8') as f:
         processed = json.load(f)
     
     # Find new ACD meetings

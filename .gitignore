@@ -1,17 +1,41 @@
+# Secrets / credentials — NEVER upload
 .env
+*.plist
+
+# Sensitive scripts (contain or reference credentials/config)
+zoom_fetcher.py
+meetings_config.py
+scripts/zoom_fetcher.py
+scripts/meetings_config.py
+scripts/test_zoom_token.py
+
+# Root-level duplicate scripts (not part of repo)
+debug_github.py
+download_transcripts.py
+github_uploader.py
+pmissues_monitor.py
+test_upload.py
+
+# Python / venv
 .venv/
 venv/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.tmp_*.DS_Store
-downloads/.DS_Store
+
+# OS
 **/.DS_Store
-scripts/meetings_config.py
-scripts/zoom_fetcher.py
+
+# Runtime artifacts
 run.sh
 logs/
 downloads/
 processed_meetings.json
 requirements.txt
+
+# Local-only outputs (never upload)
+acd_participants.md
+scripts/export_acd_participants.py
+EIP-7907_*.md
+context.html
