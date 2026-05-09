@@ -1,0 +1,7 @@
+00:05:34	Fireflies.ai Notetaker Koko:	Koko invited Fireflies.ai here to record & take notes.  By continuing, you agree to https://fireflies.ai/privacy.
+
+Type:
+'/ff pause' - pause recording
+'/ff leave' - to stop recording
+
+View Realtime notes here: https://app.fireflies.ai/live/01KPK66PHH6N8K72VHVMK2B8EC?ref=live_chat
