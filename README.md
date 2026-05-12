@@ -4,6 +4,7 @@ Raw chat & transcript files from core development calls facilitated by the EF zo
 
 | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| 11 May 2026 | ACDT | 79 | [#2038](https://github.com/ethereum/pm/issues/2038) | [forkcast](https://forkcast.org/calls/acdt/079) | [EthMag](https://ethereum-magicians.org/t/28438) | [video](https://youtu.be/2MouT9NiGS8) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDT/Call-079_2026-05-11) |
 | 07 May 2026 | ACDE | 236 | [#2033](https://github.com/ethereum/pm/issues/2033) | [forkcast](https://forkcast.org/calls/acde/236) | [EthMag](https://ethereum-magicians.org/t/28353) | [video](https://youtu.be/19Hi3SbT6tc) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDE/Call-236_2026-05-07) |
 | 23 Apr 2026 | ACDE | 235 | [#2015](https://github.com/ethereum/pm/issues/2015) | [forkcast](https://forkcast.org/calls/acde/235) | [EthMag](https://ethereum-magicians.org/t/28203) | [video](https://youtu.be/eSN27EDNdp8) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDE/Call-235_2026-04-23) |
 | 20 Apr 2026 | ACDT | 78 | [#2019](https://github.com/ethereum/pm/issues/2019) | [forkcast](https://forkcast.org/calls/acdt/078) | [EthMag](https://ethereum-magicians.org/t/28229) | [video](https://youtu.be/ZvG3OkEt8_o) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDT/Call-078_2026-04-20) |
