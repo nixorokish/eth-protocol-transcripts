@@ -1,0 +1,218 @@
+{
+  "2185_2026-08-10": {
+    "processed_at": "2026-08-11T01:23:52.248084",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": null,
+    "date": "2026-08-10",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980233"
+  },
+  "2181_2026-08-10": {
+    "processed_at": "2026-08-11T01:23:54.546503",
+    "meeting_type": "ACDT",
+    "meeting_num": "91",
+    "date": "2026-08-10",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980237"
+  },
+  "2179_2026-08-04": {
+    "processed_at": "2026-08-11T01:23:58.640732",
+    "meeting_type": "FOCIL",
+    "meeting_num": "39",
+    "date": "2026-08-04",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980240"
+  },
+  "2177_2026-08-06": {
+    "processed_at": "2026-08-11T01:24:02.232316",
+    "meeting_type": "ACDC",
+    "meeting_num": "184",
+    "date": "2026-08-06",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980242"
+  },
+  "2174_2026-08-03": {
+    "processed_at": "2026-08-11T01:24:05.272153",
+    "meeting_type": "ACDT",
+    "meeting_num": "90",
+    "date": "2026-08-03",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980244"
+  },
+  "2172_2026-07-27": {
+    "processed_at": "2026-08-11T01:24:09.560523",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": null,
+    "date": "2026-07-27",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980246"
+  },
+  "2170_2026-07-27": {
+    "processed_at": "2026-08-11T01:24:12.726804",
+    "meeting_type": "ACDT",
+    "meeting_num": "89",
+    "date": "2026-07-27",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980248"
+  },
+  "2166_2026-07-30": {
+    "processed_at": "2026-08-11T01:24:16.190831",
+    "meeting_type": "ACDE",
+    "meeting_num": "242",
+    "date": "2026-07-30",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980250"
+  },
+  "2162_2026-07-20": {
+    "processed_at": "2026-08-11T01:24:19.167731",
+    "meeting_type": "ACDT",
+    "meeting_num": "88",
+    "date": "2026-07-20",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980252"
+  },
+  "2158_2026-07-23": {
+    "processed_at": "2026-08-11T01:24:23.516009",
+    "meeting_type": "ACDC",
+    "meeting_num": "183",
+    "date": "2026-07-23",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980254"
+  },
+  "2157_2026-07-16": {
+    "processed_at": "2026-08-11T01:24:26.413904",
+    "meeting_type": "ACDE",
+    "meeting_num": "241",
+    "date": "2026-07-16",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980256"
+  },
+  "2154_2026-07-13": {
+    "processed_at": "2026-08-11T01:24:30.778809",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": null,
+    "date": "2026-07-13",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980258"
+  },
+  "2152_2026-07-09": {
+    "processed_at": "2026-08-11T01:24:33.871359",
+    "meeting_type": "ACDC",
+    "meeting_num": "182",
+    "date": "2026-07-09",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980260"
+  },
+  "2151_2026-07-13": {
+    "processed_at": "2026-08-11T01:24:36.842581",
+    "meeting_type": "ACDT",
+    "meeting_num": "87",
+    "date": "2026-07-13",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980262"
+  },
+  "2146_2026-07-21": {
+    "processed_at": "2026-08-11T01:24:41.201842",
+    "meeting_type": "FOCIL",
+    "meeting_num": "38",
+    "date": "2026-07-21",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980264"
+  },
+  "2144_2026-07-06": {
+    "processed_at": "2026-08-11T01:24:44.345078",
+    "meeting_type": "ACDT",
+    "meeting_num": "86",
+    "date": "2026-07-06",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980265"
+  },
+  "2142_2026-06-30": {
+    "processed_at": "2026-08-11T01:24:48.804430",
+    "meeting_type": "FOCIL",
+    "meeting_num": "37",
+    "date": "2026-06-30",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980267"
+  },
+  "2141_2026-06-29": {
+    "processed_at": "2026-08-11T01:24:51.930220",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": null,
+    "date": "2026-06-29",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980269"
+  },
+  "2140_2026-07-02": {
+    "processed_at": "2026-08-11T01:24:55.277141",
+    "meeting_type": "ACDE",
+    "meeting_num": "240",
+    "date": "2026-07-02",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980270"
+  },
+  "2138_2026-06-25": {
+    "processed_at": "2026-08-11T01:24:59.605883",
+    "meeting_type": "ACDC",
+    "meeting_num": "181",
+    "date": "2026-06-25",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980272"
+  },
+  "2133_2026-06-29": {
+    "processed_at": "2026-08-11T01:25:04.015259",
+    "meeting_type": "ACDT",
+    "meeting_num": "85",
+    "date": "2026-06-29",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980274"
+  },
+  "2126_2026-06-22": {
+    "processed_at": "2026-08-11T01:25:06.996375",
+    "meeting_type": "ACDT",
+    "meeting_num": "84",
+    "date": "2026-06-22",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980275"
+  },
+  "2121_2026-06-16": {
+    "processed_at": "2026-08-11T01:25:11.429199",
+    "meeting_type": "FOCIL",
+    "meeting_num": "36",
+    "date": "2026-06-16",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980277"
+  },
+  "2120_2026-06-15": {
+    "processed_at": "2026-08-11T01:25:14.465345",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": null,
+    "date": "2026-06-15",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980279"
+  },
+  "2119_2026-06-15": {
+    "processed_at": "2026-08-11T01:25:17.286108",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": null,
+    "date": "2026-06-15",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980281"
+  },
+  "2116_2026-06-15": {
+    "processed_at": "2026-08-11T01:25:20.592032",
+    "meeting_type": "ACDT",
+    "meeting_num": "83",
+    "date": "2026-06-15",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980283"
+  },
+  "2115_2026-06-18": {
+    "processed_at": "2026-08-11T01:25:23.719614",
+    "meeting_type": "ACDE",
+    "meeting_num": "239",
+    "date": "2026-06-18",
+    "status": "uploaded",
+    "uploaded_at": "2026-08-11T01:25:27.980285"
+  }
+}
