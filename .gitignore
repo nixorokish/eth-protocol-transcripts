@@ -2,20 +2,21 @@
 .env
 *.plist
 
-# Sensitive scripts (contain or reference credentials/config)
-zoom_fetcher.py
-meetings_config.py
-scripts/zoom_fetcher.py
-scripts/meetings_config.py
+# Dev/helper scripts kept out of the repo (main pipeline scripts are tracked;
+# pipeline secrets live in GitHub Actions secrets, never in code)
+# Bare names anchored to / so they only ignore root-level copies, not scripts/
+/zoom_fetcher.py
+/meetings_config.py
 scripts/test_zoom_token.py
 scripts/notifications.py
 
-# Root-level duplicate scripts (not part of repo)
-debug_github.py
-download_transcripts.py
-github_uploader.py
-pmissues_monitor.py
-test_upload.py
+# Root-level duplicate scripts (not part of repo; anchored to / so the
+# tracked copies under scripts/ are not affected)
+/debug_github.py
+/download_transcripts.py
+/github_uploader.py
+/pmissues_monitor.py
+/test_upload.py
 
 # Python / venv
 .venv/
@@ -32,8 +33,6 @@ __pycache__/
 run.sh
 logs/
 downloads/
-processed_meetings.json
-requirements.txt
 
 # Local-only outputs (never upload)
 acd_participants.md

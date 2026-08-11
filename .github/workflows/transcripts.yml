@@ -1,0 +1,85 @@
+name: Process meeting transcripts
+
+on:
+  schedule:
+    - cron: '0 16 * * *'  # 16:00 UTC
+    - cron: '0 0 * * *'   # 00:00 UTC (8h later)
+  workflow_dispatch:
+    inputs:
+      days_back:
+        description: 'How many days back to look for meetings'
+        required: false
+        default: '30'
+      force:
+        description: 'Force reprocess (ignore processed-meetings cache)'
+        required: false
+        type: boolean
+        default: false
+
+# Only Zoom credentials are user secrets. The built-in GITHUB_TOKEN handles
+# all repo reads/writes (transcript upload, README update, state commit-back).
+permissions:
+  contents: write
+
+concurrency:
+  group: transcripts
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run transcript pipeline
+        env:
+          ZOOM_ACCOUNT_ID: ${{ secrets.ZOOM_ACCOUNT_ID }}
+          ZOOM_CLIENT_ID: ${{ secrets.ZOOM_CLIENT_ID }}
+          ZOOM_CLIENT_SECRET: ${{ secrets.ZOOM_CLIENT_SECRET }}
+          ZOOM_ACCOUNT_EMAILS: ${{ secrets.ZOOM_ACCOUNT_EMAILS }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_UPLOAD_OWNER: nixorokish
+          GITHUB_UPLOAD_REPO: eth-protocol-transcripts
+        run: |
+          if [ "${{ inputs.force }}" = "true" ]; then
+            python scripts/main.py --force ${{ inputs.days_back || '30' }}
+          else
+            python scripts/main.py ${{ inputs.days_back || '30' }}
+          fi
+
+      - name: Persist processed-meetings state
+        if: success()
+        run: |
+          set -e
+          git config user.name "nixorokish"
+          git config user.email "23272494+nixorokish@users.noreply.github.com"
+          cp processed_meetings.json "$RUNNER_TEMP/processed_meetings.json"
+          git fetch origin main
+          git reset --hard origin/main
+          cp "$RUNNER_TEMP/processed_meetings.json" processed_meetings.json
+          git add processed_meetings.json
+          if git diff --cached --quiet; then
+            echo "No state changes to persist"
+            exit 0
+          fi
+          git commit -m "Update processed meetings state"
+          git push origin HEAD:main
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pipeline-logs
+          path: logs/
+          retention-days: 14
