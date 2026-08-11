@@ -267,53 +267,51 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
             })
             continue
         
-        # Step 3: Find Zoom recording
-        log(f"  Meeting IDs: {', '.join(meeting['possible_meeting_ids'])}")
-        log(f"  Date: {meeting['date_str']}")
-        
-        recording = get_recordings_for_meeting_ids(
-            zoom_token, 
-            meeting['possible_meeting_ids'], 
-            meeting['date_str']
-        )
-        
-        if not recording:
-            log("  ⚠ No recording found")
-            skipped_no_recording += 1
-            failed_matches.append({
-                'issue': meeting['issue_title'],
-                'reason': 'No Zoom recording found',
-                'meeting_ids': meeting['possible_meeting_ids'],
-                'date': meeting['date_str']
-            })
-            continue
-        
-        if recording.get('duration', 0) < 10:
-            log(f"  ⚠ Skipping short recording ({recording.get('duration')} min)")
-            skipped_short += 1
-            continue
-        
-        # Extract meeting info for GitHub check
-        meeting_type, meeting_num = extract_meeting_info(recording.get('topic', ''))
-        meeting_date = recording.get('start_time', '').split('T')[0]
-        
-        # Check if already exists on GitHub
-        if check_if_exists_on_github(repo_owner, repo_name, meeting_type, meeting_num, meeting_date):
-            log(f"  ⏭ Already exists on GitHub")
-            # Add to cache so we don't check again
-            processed_cache[meeting_key] = {
-                'processed_at': datetime.now().isoformat(),
-                'meeting_type': meeting_type,
-                'meeting_num': meeting_num,
-                'date': meeting_date
-            }
-            skipped_cached += 1
-            continue
-        
-        # Step 4: Download artifacts (but don't upload yet)
-        log(f"  Recording found: {recording.get('duration')} minutes")
         try:
-            # Pass the meeting number from the GitHub issue if available
+            # Step 3: Find Zoom recording
+            log(f"  Meeting IDs: {', '.join(meeting['possible_meeting_ids'])}")
+            log(f"  Date: {meeting['date_str']}")
+            
+            recording = get_recordings_for_meeting_ids(
+                zoom_token, 
+                meeting['possible_meeting_ids'], 
+                meeting['date_str']
+            )
+            
+            if not recording:
+                log("  ⚠ No recording found")
+                skipped_no_recording += 1
+                failed_matches.append({
+                    'issue': meeting['issue_title'],
+                    'reason': 'No Zoom recording found',
+                    'meeting_ids': meeting['possible_meeting_ids'],
+                    'date': meeting['date_str']
+                })
+                continue
+            
+            if recording.get('duration', 0) < 10:
+                log(f"  ⚠ Skipping short recording ({recording.get('duration')} min)")
+                skipped_short += 1
+                continue
+            
+            # Extract meeting info for GitHub check
+            meeting_type, meeting_num = extract_meeting_info(recording.get('topic', ''))
+            meeting_date = recording.get('start_time', '').split('T')[0]
+            
+            # Check if already exists on GitHub
+            if check_if_exists_on_github(repo_owner, repo_name, meeting_type, meeting_num, meeting_date):
+                log(f"  ⏭ Already exists on GitHub")
+                processed_cache[meeting_key] = {
+                    'processed_at': datetime.now().isoformat(),
+                    'meeting_type': meeting_type,
+                    'meeting_num': meeting_num,
+                    'date': meeting_date
+                }
+                skipped_cached += 1
+                continue
+            
+            # Step 4: Download artifacts (but don't upload yet)
+            log(f"  Recording found: {recording.get('duration')} minutes")
             repo_root = str(Path(__file__).parent.parent)
             folder_path = download_meeting_artifacts(
                 recording, 
@@ -324,7 +322,6 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
             processed_folders.append(folder_path)
             processed_count += 1
             
-            # Add to cache (mark as downloaded, not uploaded yet)
             processed_cache[meeting_key] = {
                 'processed_at': datetime.now().isoformat(),
                 'meeting_type': meeting_type,
@@ -333,11 +330,13 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
                 'status': 'downloaded'
             }
         except Exception as e:
-            log(f"  ✗ Failed to download: {e}")
+            import traceback
+            log(f"  ✗ Failed to process: {e}")
+            log(f"    {traceback.format_exc()}", also_print=False)
             failed_matches.append({
                 'issue': meeting['issue_title'],
-                'reason': f'Download failed: {e}',
-                'meeting_ids': meeting['possible_meeting_ids']
+                'reason': f'Processing failed: {e}',
+                'meeting_ids': meeting.get('possible_meeting_ids', [])
             })
             continue
     
@@ -432,39 +431,48 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
 
 if __name__ == "__main__":
     import sys
+    import traceback
     
-    if len(sys.argv) > 1:
-        if sys.argv[1] == "--dry-run":
-            days = int(sys.argv[2]) if len(sys.argv) > 2 else 7
-            process_recent_meetings(days_back=days, dry_run=True)
-        elif sys.argv[1] == "--force":
-            # Force reprocess, ignoring cache
-            days = int(sys.argv[2]) if len(sys.argv) > 2 else 7
-            process_recent_meetings(days_back=days, force_reprocess=True)
-        elif sys.argv[1] == "--test":
-            # Test mode: fetch and download a single meeting
-            from scripts.zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
-            from scripts.download_transcripts import download_meeting_artifacts
-            
-            token = get_zoom_access_token()
-            if not token:
-                print("✗ Failed to get Zoom access token")
-                sys.exit(1)
-            
-            test_meeting_ids = ["884 7930 8162"]
-            test_date = "Oct 6, 2025"
-            
-            print(f"Testing: Fetching recording for {test_meeting_ids} on {test_date}")
-            recording = get_recordings_for_meeting_ids(token, test_meeting_ids, test_date)
-            
-            if recording:
-                print(f"✓ Found recording: {recording.get('topic')}")
-                folder_path = download_meeting_artifacts(recording, token)
-                print(f"✓ Downloaded to: {folder_path}")
+    try:
+        if len(sys.argv) > 1:
+            if sys.argv[1] == "--dry-run":
+                days = int(sys.argv[2]) if len(sys.argv) > 2 else 7
+                process_recent_meetings(days_back=days, dry_run=True)
+            elif sys.argv[1] == "--force":
+                days = int(sys.argv[2]) if len(sys.argv) > 2 else 7
+                process_recent_meetings(days_back=days, force_reprocess=True)
+            elif sys.argv[1] == "--test":
+                from scripts.zoom_fetcher import get_zoom_access_token, get_recordings_for_meeting_ids
+                from scripts.download_transcripts import download_meeting_artifacts
+                
+                token = get_zoom_access_token()
+                if not token:
+                    print("✗ Failed to get Zoom access token")
+                    sys.exit(1)
+                
+                test_meeting_ids = ["884 7930 8162"]
+                test_date = "Oct 6, 2025"
+                
+                print(f"Testing: Fetching recording for {test_meeting_ids} on {test_date}")
+                recording = get_recordings_for_meeting_ids(token, test_meeting_ids, test_date)
+                
+                if recording:
+                    print(f"✓ Found recording: {recording.get('topic')}")
+                    folder_path = download_meeting_artifacts(recording, token)
+                    print(f"✓ Downloaded to: {folder_path}")
+                else:
+                    print("✗ No recording found")
             else:
-                print("✗ No recording found")
+                days = int(sys.argv[1])
+                process_recent_meetings(days_back=days)
         else:
-            days = int(sys.argv[1])
-            process_recent_meetings(days_back=days)
-    else:
-        process_recent_meetings(days_back=7)
+            process_recent_meetings(days_back=7)
+    except Exception as e:
+        error_msg = f"✗ FATAL: Unhandled exception in main: {e}\n{traceback.format_exc()}"
+        print(error_msg)
+        log_dir = REPO_ROOT / "logs"
+        log_dir.mkdir(exist_ok=True)
+        crash_file = log_dir / f"crash_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+        with open(crash_file, 'w') as f:
+            f.write(error_msg)
+        sys.exit(1)  # Nonzero exit so the scheduler (CI) marks the run failed
