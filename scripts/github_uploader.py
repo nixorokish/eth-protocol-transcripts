@@ -182,10 +182,14 @@ def batch_upload_to_github(folders_to_upload, repo_owner, repo_name, branch="mai
     # Create the commit
     commit_message = f"Add {len(uploaded_files)} transcript files from {datetime.now().strftime('%Y-%m-%d %H:%M')}"
     
+    # Set author/committer explicitly: the built-in GITHUB_TOKEN would
+    # otherwise default to github-actions[bot].
     commit_data = {
         "message": commit_message,
         "tree": new_tree_sha,
-        "parents": [last_commit_sha]
+        "parents": [last_commit_sha],
+        "author": {"name": "nixorokish", "email": "23272494+nixorokish@users.noreply.github.com"},
+        "committer": {"name": "nixorokish", "email": "23272494+nixorokish@users.noreply.github.com"},
     }
     
     commit_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/commits"
@@ -349,10 +353,14 @@ def upload_readme_to_github(repo_owner, repo_name, branch="main", log_func=None)
     # Create a new commit
     commit_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/git/commits"
     commit_message = "Update README table with latest ACD calls"
+    # Set author/committer explicitly: the built-in GITHUB_TOKEN would
+    # otherwise default to github-actions[bot].
     commit_data = {
         "message": commit_message,
         "tree": new_tree_sha,
-        "parents": [base_commit_sha]
+        "parents": [base_commit_sha],
+        "author": {"name": "nixorokish", "email": "23272494+nixorokish@users.noreply.github.com"},
+        "committer": {"name": "nixorokish", "email": "23272494+nixorokish@users.noreply.github.com"},
     }
     
     try:
