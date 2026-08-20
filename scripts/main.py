@@ -356,44 +356,12 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
                 # Sync local git repo with remote after successful upload
                 sync_local_git_repo(log_func=log)
                 
-                # Check if any ACD calls were uploaded in this batch
-                uploaded_acd = False
-                for key, value in processed_cache.items():
-                    if value.get('status') == 'downloaded' and value.get('meeting_type') in ['ACDE', 'ACDT', 'ACDC']:
-                        uploaded_acd = True
-                        break
-                
                 # Update cache to mark as uploaded
                 for key, value in processed_cache.items():
                     if value.get('status') == 'downloaded':
                         value['status'] = 'uploaded'
                         value['uploaded_at'] = datetime.now().isoformat()
                 
-                # Update README table if any ACD calls were uploaded
-                if uploaded_acd:
-                    try:
-                        from scripts.generate_readme_table import update_readme_table
-                        from scripts.github_uploader import upload_readme_to_github
-                        
-                        # Flush cache to disk so update_readme_table reads current data
-                        save_processed_meetings_cache(processed_cache)
-                        
-                        if update_readme_table():
-                            log(f"✓ Updated README table with new ACD calls")
-                            # Small delay to ensure file is fully written
-                            import time
-                            time.sleep(0.1)
-                            # Upload README to GitHub
-                            if upload_readme_to_github(repo_owner, repo_name, log_func=log):
-                                log(f"✓ Uploaded README.md to GitHub")
-                                # Sync local git repo after README upload
-                                sync_local_git_repo(log_func=log)
-                            else:
-                                log(f"⚠ Could not upload README.md to GitHub (check manually)")
-                        else:
-                            log(f"⚠ Could not update README table (check manually)")
-                    except Exception as e:
-                        log(f"⚠ Failed to update README table: {e}")
             else:
                 log(f"✗ Failed to batch upload - batch_upload_to_github returned empty list")
                 log(f"  This could indicate an API error, authentication issue, or network problem")
@@ -407,8 +375,26 @@ def process_recent_meetings(days_back=7, dry_run=False, force_reprocess=False, c
     else:
         log("\nNo new meetings to upload")
     
-    # Save updated cache
+    # Save updated cache before README generation, which uses it for new rows.
     save_processed_meetings_cache(processed_cache)
+
+    # Refresh the README on every run. This lets late Forkcast summaries be
+    # backfilled even when no new transcript folder was uploaded.
+    try:
+        from scripts.generate_readme_table import update_readme_table
+        from scripts.github_uploader import upload_readme_to_github
+
+        if update_readme_table():
+            log("✓ Updated README table")
+            if upload_readme_to_github(repo_owner, repo_name, log_func=log):
+                log("✓ Uploaded README.md to GitHub")
+                sync_local_git_repo(log_func=log)
+            else:
+                log("⚠ Could not upload README.md to GitHub (check manually)")
+        else:
+            log("  README table already up to date")
+    except Exception as e:
+        log(f"⚠ Failed to update README table: {e}")
     
     # Save failed matches for debugging
     if failed_matches:

@@ -1,19 +1,23 @@
 #!/usr/bin/env python3
 """
-Generate ACD calls table for README (append-only approach).
+Generate and conservatively refresh the ACD calls table in README.
 
-This script only ADDS new rows for new meetings. It does not modify existing rows.
-Historical data is preserved as-is in the README.
+This script adds new rows and backfills only missing Forkcast summary links.
+All other existing table content is preserved as-is.
 """
 import json
 import os
 import re
 import requests
 from datetime import datetime
-from dotenv import load_dotenv
 from pathlib import Path
 
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    # GitHub Actions installs python-dotenv; pure helper tests do not need it.
+    pass
 
 
 def fetch_forkcast_calls():
@@ -143,6 +147,57 @@ def parse_existing_meetings(readme_content):
     return existing
 
 
+def get_forkcast_call(forkcast_calls, meeting_type, num):
+    """Find a Forkcast call, accounting for zero-padded call numbers."""
+    num_str = str(num)
+    direct = forkcast_calls.get((meeting_type, num_str))
+    if direct:
+        return direct
+
+    padded = forkcast_calls.get((meeting_type, num_str.zfill(3)))
+    if padded:
+        return padded
+
+    return None
+
+
+def backfill_missing_forkcast_summaries(readme_content, forkcast_calls):
+    """Fill Summary cells that are exactly '-' when Forkcast now has the call.
+
+    Existing summary links and every other column are left untouched.
+    Returns the updated content and the number of rows changed.
+    """
+    updated_lines = []
+    changed = 0
+
+    for line in readme_content.splitlines(keepends=True):
+        if not line.lstrip().startswith('|'):
+            updated_lines.append(line)
+            continue
+
+        newline = '\n' if line.endswith('\n') else ''
+        columns = [column.strip() for column in line.rstrip('\n').split('|')[1:-1]]
+        if len(columns) != 8:
+            updated_lines.append(line)
+            continue
+
+        meeting_type, num, summary = columns[1], columns[2], columns[4]
+        if meeting_type not in ['ACDE', 'ACDC', 'ACDT'] or not num.isdigit() or summary != '-':
+            updated_lines.append(line)
+            continue
+
+        forkcast_call = get_forkcast_call(forkcast_calls, meeting_type, num)
+        if not forkcast_call:
+            updated_lines.append(line)
+            continue
+
+        columns[4] = f'[forkcast]({forkcast_call["url"]})'
+        updated_lines.append('| ' + ' | '.join(columns) + ' |' + newline)
+        changed += 1
+
+    return ''.join(updated_lines), changed
+
+
 def generate_row(meeting_type, num, date, issue_num, forkcast_calls, repo_owner, repo_name):
     """Generate a single table row for a new meeting."""
     
@@ -170,16 +225,9 @@ def generate_row(meeting_type, num, date, issue_num, forkcast_calls, repo_owner,
     num_str = str(num)
     
     # Try to find forkcast link
-    forkcast_key = (meeting_type, num_str)
-    if forkcast_key in forkcast_calls:
-        summary = f'[forkcast]({forkcast_calls[forkcast_key]["url"]})'
-    else:
-        # Try zero-padded version for ACDT
-        if meeting_type == 'ACDT' and len(num_str) < 3:
-            padded_num = num_str.zfill(3)
-            forkcast_key = (meeting_type, padded_num)
-            if forkcast_key in forkcast_calls:
-                summary = f'[forkcast]({forkcast_calls[forkcast_key]["url"]})'
+    forkcast_call = get_forkcast_call(forkcast_calls, meeting_type, num_str)
+    if forkcast_call:
+        summary = f'[forkcast]({forkcast_call["url"]})'
     
     # Discussion
     if ethmag_url:
@@ -201,7 +249,7 @@ def generate_row(meeting_type, num, date, issue_num, forkcast_calls, repo_owner,
 
 
 def update_readme_table():
-    """Update the README.md file by prepending new meetings only.
+    """Add new meetings and backfill newly available Forkcast summaries.
     
     Returns:
         bool: True if changes were made, False otherwise
@@ -219,6 +267,14 @@ def update_readme_table():
     with open(readme_path, 'r', encoding='utf-8') as f:
         readme_content = f.read()
     
+    # Fetch Forkcast before looking for new meetings so existing rows can be refreshed.
+    forkcast_calls = fetch_forkcast_calls()
+    readme_content, backfilled_count = backfill_missing_forkcast_summaries(
+        readme_content, forkcast_calls
+    )
+    if backfilled_count:
+        print(f"Backfilled {backfilled_count} missing Forkcast summary link(s)")
+
     # Parse existing meetings
     existing_meetings = parse_existing_meetings(readme_content)
     print(f"Found {len(existing_meetings)} existing meetings in README")
@@ -247,13 +303,15 @@ def update_readme_table():
             })
     
     if not new_meetings:
-        print("No new meetings to add")
-        return False
+        if not backfilled_count:
+            print("No new meetings or missing Forkcast summaries to update")
+            return False
+
+        with open(readme_path, 'w', encoding='utf-8') as f:
+            f.write(readme_content)
+        return True
     
     print(f"Found {len(new_meetings)} new meetings to add")
-    
-    # Fetch forkcast data
-    forkcast_calls = fetch_forkcast_calls()
     
     # Get repo info
     repo_owner = os.getenv('GITHUB_UPLOAD_OWNER', 'nixorokish')
@@ -300,7 +358,10 @@ def update_readme_table():
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
-    print(f"README.md updated with {len(new_rows)} new rows")
+    print(
+        f"README.md updated with {len(new_rows)} new row(s)"
+        f" and {backfilled_count} backfilled summary link(s)"
+    )
     return True
 
 
