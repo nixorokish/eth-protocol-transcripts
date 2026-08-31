@@ -161,6 +161,11 @@ def get_forkcast_call(forkcast_calls, meeting_type, num):
     return None
 
 
+def eipsinsight_url(meeting_type, num):
+    """EIPsInsight call page URL, derived only from the meeting type + number."""
+    return f'https://eipsinsight.com/calls/{meeting_type.lower()}/{num}'
+
+
 def backfill_missing_forkcast_summaries(readme_content, forkcast_calls):
     """Fill Summary cells that are exactly '-' when Forkcast now has the call.
 
@@ -182,16 +187,29 @@ def backfill_missing_forkcast_summaries(readme_content, forkcast_calls):
             continue
 
         meeting_type, num, summary = columns[1], columns[2], columns[4]
-        if meeting_type not in ['ACDE', 'ACDC', 'ACDT'] or not num.isdigit() or summary != '-':
+        if meeting_type not in ['ACDE', 'ACDC', 'ACDT'] or not num.isdigit():
             updated_lines.append(line)
             continue
 
-        forkcast_call = get_forkcast_call(forkcast_calls, meeting_type, num)
-        if not forkcast_call:
+        new_summary = summary
+        # Preserve the existing behaviour: fill a bare '-' Summary with the
+        # Forkcast link when it becomes available (Forkcast is not used for
+        # anything else here).
+        if new_summary == '-':
+            forkcast_call = get_forkcast_call(forkcast_calls, meeting_type, num)
+            if forkcast_call:
+                new_summary = f'[forkcast]({forkcast_call["url"]})'
+        # Ensure the EIPsInsight call page is linked. The URL depends only on
+        # the meeting type + number, never on Forkcast.
+        if 'eipsinsight.com/calls' not in new_summary:
+            eip = f'[EIPsInsight]({eipsinsight_url(meeting_type, num)})'
+            new_summary = eip if new_summary == '-' else f'{new_summary} · {eip}'
+
+        if new_summary == summary:
             updated_lines.append(line)
             continue
 
-        columns[4] = f'[forkcast]({forkcast_call["url"]})'
+        columns[4] = new_summary
         updated_lines.append('| ' + ' | '.join(columns) + ' |' + newline)
         changed += 1
 
@@ -220,15 +238,16 @@ def generate_row(meeting_type, num, date, issue_num, forkcast_calls, repo_owner,
     # Fetch links from GitHub issue
     youtube_url, ethmag_url = fetch_links_from_issue(issue_num)
     
-    # Summary (prefer forkcast)
-    summary = '-'
+    # Summary: the EIPsInsight call page (derived only from type + number), plus
+    # the existing Forkcast link when one is available.
     num_str = str(num)
-    
-    # Try to find forkcast link
+    links = []
     forkcast_call = get_forkcast_call(forkcast_calls, meeting_type, num_str)
     if forkcast_call:
-        summary = f'[forkcast]({forkcast_call["url"]})'
-    
+        links.append(f'[forkcast]({forkcast_call["url"]})')
+    links.append(f'[EIPsInsight]({eipsinsight_url(meeting_type, num_str)})')
+    summary = ' · '.join(links)
+
     # Discussion
     if ethmag_url:
         discussion = f'[EthMag]({ethmag_url})'
