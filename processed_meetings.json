@@ -278,5 +278,13 @@
     "date": "2026-08-31",
     "status": "uploaded",
     "uploaded_at": "2026-08-31T21:22:44.645087"
+  },
+  "2208_2026-09-01": {
+    "processed_at": "2026-09-01T19:17:09.589167",
+    "meeting_type": "FOCIL",
+    "meeting_num": "41",
+    "date": "2026-09-01",
+    "status": "uploaded",
+    "uploaded_at": "2026-09-01T19:17:15.475474"
   }
 }
