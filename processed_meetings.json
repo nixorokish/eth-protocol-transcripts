@@ -318,5 +318,13 @@
     "date": "2026-09-10",
     "status": "uploaded",
     "uploaded_at": "2026-09-10T19:01:06.302946"
+  },
+  "2217_2026-09-14": {
+    "processed_at": "2026-09-14T20:12:45.647691",
+    "meeting_type": "ACDT",
+    "meeting_num": "96",
+    "date": "2026-09-14",
+    "status": "uploaded",
+    "uploaded_at": "2026-09-14T20:12:52.514335"
   }
 }
