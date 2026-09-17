@@ -334,5 +334,13 @@
     "date": "2026-09-15",
     "status": "uploaded",
     "uploaded_at": "2026-09-15T19:35:41.386913"
+  },
+  "2222_2026-09-17": {
+    "processed_at": "2026-09-17T19:37:21.992909",
+    "meeting_type": "ACDC",
+    "meeting_num": "187",
+    "date": "2026-09-17",
+    "status": "uploaded",
+    "uploaded_at": "2026-09-17T19:37:27.341469"
   }
 }
