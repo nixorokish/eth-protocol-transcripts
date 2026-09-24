@@ -350,5 +350,13 @@
     "date": "2026-09-21",
     "status": "uploaded",
     "uploaded_at": "2026-09-21T20:19:20.461986"
+  },
+  "2223_2026-09-24": {
+    "processed_at": "2026-09-24T19:53:16.738334",
+    "meeting_type": "ACDE",
+    "meeting_num": "246",
+    "date": "2026-09-24",
+    "status": "uploaded",
+    "uploaded_at": "2026-09-24T19:53:23.004167"
   }
 }
