@@ -430,5 +430,21 @@
     "date": "2026-10-15",
     "status": "uploaded",
     "uploaded_at": "2026-10-15T19:46:10.320240"
+  },
+  "2277_2026-10-19": {
+    "processed_at": "2026-10-19T20:55:14.759236",
+    "meeting_type": "RPC-Standards",
+    "meeting_num": null,
+    "date": "2026-10-19",
+    "status": "uploaded",
+    "uploaded_at": "2026-10-19T20:55:24.132497"
+  },
+  "2271_2026-10-19": {
+    "processed_at": "2026-10-19T20:55:17.279133",
+    "meeting_type": "ACDT",
+    "meeting_num": "101",
+    "date": "2026-10-19",
+    "status": "uploaded",
+    "uploaded_at": "2026-10-19T20:55:24.132502"
   }
 }
