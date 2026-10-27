@@ -462,5 +462,13 @@
     "date": "2026-10-26",
     "status": "uploaded",
     "uploaded_at": "2026-10-26T20:56:12.973495"
+  },
+  "2286_2026-10-27": {
+    "processed_at": "2026-10-27T20:30:37.071191",
+    "meeting_type": "FOCIL",
+    "meeting_num": "45",
+    "date": "2026-10-27",
+    "status": "uploaded",
+    "uploaded_at": "2026-10-27T20:30:45.106005"
   }
 }
