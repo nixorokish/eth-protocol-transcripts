@@ -4,7 +4,7 @@ Raw chat & transcript files from core development calls facilitated by the EF zo
 
 | Date | Type | № | Issue | Summary | Discussion | Recording | Logs |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 26 Nov 2026 | ACDC | 192 | [#2305](https://github.com/ethereum/pm/issues/2305) | - | [EthMag](https://ethereum-magicians.org/t/30388) | [video](https://youtu.be/Y7VyFz_YOm8) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDC/Call-192_2026-11-26) |
+| 26 Nov 2026 | ACDC | 192 | [#2305](https://github.com/ethereum/pm/issues/2305) | [forkcast](https://forkcast.org/calls/acdc/192) | [EthMag](https://ethereum-magicians.org/t/30388) | [video](https://youtu.be/Y7VyFz_YOm8) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDC/Call-192_2026-11-26) |
 | 23 Nov 2026 | ACDT | 104 | [#2306](https://github.com/ethereum/pm/issues/2306) | [forkcast](https://forkcast.org/calls/acdt/104) | [EthMag](https://ethereum-magicians.org/t/30411) | - | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDT/Call-104_2026-11-23) |
 | 19 Nov 2026 | ACDE | 249 | [#2285](https://github.com/ethereum/pm/issues/2285) | [forkcast](https://forkcast.org/calls/acde/249) | [EthMag](https://ethereum-magicians.org/t/30071) | [video](https://youtu.be/_1vhi09peLA) | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDE/Call-249_2026-11-19) |
 | 16 Nov 2026 | ACDT | 103 | [#2299](https://github.com/ethereum/pm/issues/2299) | [forkcast](https://forkcast.org/calls/acdt/103) | [EthMag](https://ethereum-magicians.org/t/30326) | - | [logs](https://github.com/nixorokish/eth-protocol-transcripts/tree/main/ACDT/Call-103_2026-11-16) |
